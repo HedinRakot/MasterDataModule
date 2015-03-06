@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A61D4577-F99E-4516-8E15-0B63F6894F53}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TuevSued.V1.IT.FE.MasterDataModule.Lib</RootNamespace>
+    <AssemblyName>MasterDataModule.Lib</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\NPOI.Excel.2.1.1\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\packages\NPOI.Excel.2.1.1\lib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\packages\NPOI.Excel.2.1.1\lib\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\packages\NPOI.Excel.2.1.1\lib\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\packages\NPOI.Excel.2.1.1\lib\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\ASProEntitiesConfiguration.cs" />
+    <Compile Include="Data\ASProEntities.cs" />
+    <Compile Include="Data\Common\EmpEmployeeMapping.cs" />
+    <Compile Include="Data\Common\EmpEmployeeSysRoleRspMapping.cs" />
+    <Compile Include="Data\Common\OrgOrganizationalUnitMapping.cs" />
+    <Compile Include="Data\Custom.ASProEntities.cs" />
+    <Compile Include="Data\Custom.IASProEntities.cs" />
+    <Compile Include="Data\DriverLicenceMasterData\CoreDataProductClassBasisMapping.cs" />
+    <Compile Include="Data\DriverLicenceMasterData\CoreDataProductLocalizationMapping.cs" />
+    <Compile Include="Data\DriverLicenceMasterData\CoreDataProductMapping.cs" />
+    <Compile Include="Data\Custom.FeEntities.cs" />
+    <Compile Include="Data\Custom.IFeEntities.cs" />
+    <Compile Include="Data\DriverLicenceMasterData\ExamClassInclusiveClassMapping.cs" />
+    <Compile Include="Data\DriverLicenceMasterData\ExamClassRequiredClassMapping.cs" />
+    <Compile Include="Data\DriverLicenceMasterData\ExamRecognitionTypeMapping.cs" />
+    <Compile Include="Data\FeEntities.cs" />
+    <Compile Include="Data\FeEntitiesConfiguration.cs" />
+    <Compile Include="Data\Common\InsCoreDataProductLocalizationMapping.cs" />
+    <Compile Include="Data\Common\InsCoreDataProductMapping.cs" />
+    <Compile Include="Data\DriverLicenceMasterData\LanguageMapping.cs" />
+    <Compile Include="Data\DriverLicenceMasterData\LegalBasisMapping.cs" />
+    <Compile Include="Data\DriverLicenceMasterData\ReturnReasonMapping.cs" />
+    <Compile Include="Data\Common\SysLanguageMapping.cs" />
+    <Compile Include="Managers\Base\EntityManager.cs" />
+    <Compile Include="Managers\Common\EmpEmployeeSysRoleRspManager.cs" />
+    <Compile Include="Managers\Common\EmpEmployeeManager.cs" />
+    <Compile Include="Managers\Common\InsCoreDataProductManager.cs" />
+    <Compile Include="Managers\Common\InsCoreDataProductLocalizationManager.cs" />
+    <Compile Include="Managers\Common\OrgOrganizationalUnitManager.cs" />
+    <Compile Include="Managers\Common\SysLanguageManager.cs" />
+    <Compile Include="Managers\DriverLicenceMasterData\CoreDataProductClassBasisManager.cs" />
+    <Compile Include="Managers\DriverLicenceMasterData\CoreDataProductLocalizationManager.cs" />
+    <Compile Include="Managers\DriverLicenceMasterData\CoreDataProductManager.cs" />
+    <Compile Include="Managers\DriverLicenceMasterData\ExamRecognitionTypeManager.cs" />
+    <Compile Include="Managers\DriverLicenceMasterData\ReturnReasonManager.cs" />
+    <Compile Include="Managers\DriverLicenceMasterData\LegalBasisManager.cs" />
+    <Compile Include="Managers\DriverLicenceMasterData\ExamClassManager.cs" />
+    <Compile Include="Data\DriverLicenceMasterData\ExamClassMapping.cs" />
+    <Compile Include="Managers\DriverLicenceMasterData\InclusiveExamClassManager.cs" />
+    <Compile Include="Managers\Base\Manager.cs" />
+    <Compile Include="Managers\Base\ManagerBase.cs" />
+    <Compile Include="Managers\Settings\PermissionManager.cs" />
+    <Compile Include="Data\DriverLicenceMasterData\PermissionMapping.cs" />
+    <Compile Include="Managers\Base\ReadOnlyEntityManager.cs" />
+    <Compile Include="Managers\Base\ReadOnlyManagerBase.cs" />
+    <Compile Include="Managers\DriverLicenceMasterData\RequiredExamClassManager.cs" />
+    <Compile Include="Managers\Settings\RoleManager.cs" />
+    <Compile Include="Data\DriverLicenceMasterData\RoleMapping.cs" />
+    <Compile Include="Managers\Settings\SysColumnManager.cs" />
+    <Compile Include="Data\DriverLicenceMasterData\SysColumnMapping.cs" />
+    <Compile Include="Managers\Settings\SysTableManager.cs" />
+    <Compile Include="Data\DriverLicenceMasterData\SysTableMapping.cs" />
+    <Compile Include="Managers\Settings\UserManager.cs" />
+    <Compile Include="Data\DriverLicenceMasterData\UserMapping.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CoreBase\CoreBase\CoreBase.csproj">
+      <Project>{c8295c9a-6d2c-4034-8880-bc05b7d83c4f}</Project>
+      <Name>CoreBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess.Interfaces\DataAccess.Interfaces.csproj">
+      <Project>{016ed372-b2b7-4ab9-934e-8703b7d63e30}</Project>
+      <Name>DataAccess.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\Enums\" />
+    <Folder Include="Data\Scripts\" />
+    <Folder Include="Data\TechnicalInspection\" />
+    <Folder Include="Managers\TechnicalInspection\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\TuevSued.FE.DataAccess.Interfaces.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\..\CodeAnalysis\AS1313.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\TuevSued.FE.DataAccess.Interfaces.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\..\CodeAnalysis\AS1313.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{016ED372-B2B7-4AB9-934E-8703B7D63E30}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TuevSued.V1.IT.FE.DataAccess.Interfaces</RootNamespace>
+    <AssemblyName>TuevSued.FE.DataAccess.Interfaces</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IDbCommiter.cs" />
+    <Compile Include="ISaveManager.cs" />
+    <Compile Include="MasterDataModule\ASProDataContextRequestManager.cs" />
+    <Compile Include="MasterDataModule\Common\IEmpEmployeeSysRoleRspManager.cs" />
+    <Compile Include="MasterDataModule\Common\IEmpEmployeeManager.cs" />
+    <Compile Include="MasterDataModule\Common\IInsCoreDataProductLocalizationManager.cs" />
+    <Compile Include="MasterDataModule\Common\IInsCoreDataProductManager.cs" />
+    <Compile Include="MasterDataModule\Common\IOrgOrganizationalUnitManager.cs" />
+    <Compile Include="MasterDataModule\DriverLicenceMasterData\IExamRecognitionTypeManager.cs" />
+    <Compile Include="MasterDataModule\FeDataContextRequestManager.cs" />
+    <Compile Include="MasterDataModule\DriverLicenceMasterData\IReturnReasonManager.cs" />
+    <Compile Include="MasterDataModule\DriverLicenceMasterData\ICoreDataProductClassBasisManager.cs" />
+    <Compile Include="MasterDataModule\DriverLicenceMasterData\ICoreDataProductLocalizationManager.cs" />
+    <Compile Include="MasterDataModule\DriverLicenceMasterData\ICoreDataProductManager.cs" />
+    <Compile Include="MasterDataModule\DriverLicenceMasterData\ILegalBasisManager.cs" />
+    <Compile Include="MasterDataModule\DriverLicenceMasterData\ILanguageManager.cs" />
+    <Compile Include="MasterDataModule\Common\ISysLanguageManager.cs" />
+    <Compile Include="MasterDataModule\Settings\ISysColumnManager.cs" />
+    <Compile Include="MasterDataModule\Settings\ISysTableManager.cs" />
+    <Compile Include="MasterDataModule\DriverLicenceMasterData\IInclusiveExamClassManager.cs" />
+    <Compile Include="MasterDataModule\DriverLicenceMasterData\IRequiredExamClassManager.cs" />
+    <Compile Include="MasterDataModule\Base\IManager.cs" />
+    <Compile Include="MasterDataModule\Base\IReadOnlyManagerBase.cs" />
+    <Compile Include="MasterDataModule\Base\IEntityManager.cs" />
+    <Compile Include="MasterDataModule\DriverLicenceMasterData\IExamClassManager.cs" />
+    <Compile Include="MasterDataModule\Base\IManagerBase.cs" />
+    <Compile Include="MasterDataModule\Settings\IPermissionManager.cs" />
+    <Compile Include="MasterDataModule\Base\IReadOnlyEntityManager.cs" />
+    <Compile Include="MasterDataModule\Settings\IRoleManager.cs" />
+    <Compile Include="MasterDataModule\Settings\IUserManager.cs" />
+    <Compile Include="IEntities.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TODO_Delete_ISessionService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CoreBase\CoreBase\CoreBase.csproj">
+      <Project>{c8295c9a-6d2c-4034-8880-bc05b7d83c4f}</Project>
+      <Name>CoreBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MasterDataModule\TechnicalInspection\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
