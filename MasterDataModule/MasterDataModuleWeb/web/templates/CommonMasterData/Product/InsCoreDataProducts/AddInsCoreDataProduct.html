@@ -1,0 +1,62 @@
+﻿<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#CommonMasterData" data-localized="commonMasterData"></a> / <a href="#InsCoreDataProducts" data-localized="insCoreDataProducts"></a> / <%= title %></span>
+
+<!--<h2><%= title %></h2>-->
+<form method="post" class="add-model">
+    <div class="inline-block name-container" style="width: 520px;">
+        <div class="editor-label">
+            <label for="name" data-localized="name"></label>
+        </div>
+        <div class="editor-field">
+            <input type="text" id="name" name="name" class="k-textbox" style="width: 362px" />
+        </div>
+        <div class="editor-label">
+            <label for="description" data-localized="description"></label>
+        </div>
+        <div class="editor-field">
+            <textarea id="description" name="description" class="k-textbox" style="width: 362px" />
+        </div>
+        <div>
+            <div class="inline-block">
+                <div class="editor-label">
+                    <label for="fromDate" data-localized="fromDate"></label>
+                </div>
+                <div class="editor-field">
+                    <input type="text" id="fromDate" name="fromDate" data-role="datepicker">
+                </div>
+            </div>
+            <div class="inline-block">
+                <div class="editor-label">
+                    <label for="toDate" data-localized="toDate"></label>
+                </div>
+                <div class="editor-field">
+                    <input type="text" id="toDate" name="toDate" data-role="datepicker">
+                </div>
+            </div>        
+        </div>
+        <div class="editor-label">
+            <label for="productNumber" data-localized="productNumber"></label>
+        </div>
+        <div class="editor-field">
+            <input type="text" id="productNumber" name="productNumber" class="k-textbox" style="width: 362px" />
+        </div>
+    </div>
+
+    <div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>

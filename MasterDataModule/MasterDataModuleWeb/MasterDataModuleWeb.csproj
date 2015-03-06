@@ -1,0 +1,777 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F05F68E-3474-4053-A64E-3CAB99759A5D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TuevSued.V1.IT.FE</RootNamespace>
+    <AssemblyName>MasterDataModuleWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Mvc, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Unity.Mvc.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.0\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.0\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.0\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\images\admin_290x200-inaktiv.png" />
+    <Content Include="css\images\Auftrag_290x200-inaktiv.png" />
+    <Content Include="css\images\Einstellungen_290x200-inaktiv.png" />
+    <Content Include="css\images\Fahrerlaubnis_290x200-inaktiv.png" />
+    <Content Include="css\images\Kostenstellenverantw_290x200-inaktiv.png" />
+    <Content Include="css\images\Techpruefung_290x200-inaktiv.png" />
+    <Content Include="css\images\tuevsuedlogo.png" />
+    <Content Include="css\jquery-ui\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="css\jquery-ui\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="css\jquery-ui\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="css\jquery-ui\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="css\jquery-ui\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="css\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\jquery-ui\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="css\jquery-ui\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="css\jquery-ui\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="css\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\jquery-ui\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="css\jquery-ui\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="css\jquery-ui\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="css\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\jquery-ui\jquery-ui.css" />
+    <Content Include="css\kendo\default\editor.png" />
+    <Content Include="css\kendo\default\imagebrowser.png" />
+    <Content Include="css\kendo\default\indeterminate.gif" />
+    <Content Include="css\kendo\default\loading-image.gif" />
+    <Content Include="css\kendo\default\loading.gif" />
+    <Content Include="css\kendo\default\loading_2x.gif" />
+    <Content Include="css\kendo\default\slider-h.gif" />
+    <Content Include="css\kendo\default\slider-v.gif" />
+    <Content Include="css\kendo\default\sprite.png" />
+    <Content Include="css\kendo\default\sprite_2x.png" />
+    <Content Include="css\kendo\default\sprite_kpi.png" />
+    <Content Include="css\kendo\default\sprite_kpi_2x.png" />
+    <Content Include="css\kendo\kendo.common.core.css" />
+    <Content Include="css\kendo\kendo.common.css" />
+    <Content Include="css\kendo\kendo.default.css" />
+    <Content Include="css\kendo\textures\brushed-metal.png" />
+    <Content Include="css\kendo\textures\dots1.png" />
+    <Content Include="css\kendo\textures\dots10.png" />
+    <Content Include="css\kendo\textures\dots11.png" />
+    <Content Include="css\kendo\textures\dots12.png" />
+    <Content Include="css\kendo\textures\dots13.png" />
+    <Content Include="css\kendo\textures\dots2.png" />
+    <Content Include="css\kendo\textures\dots3.png" />
+    <Content Include="css\kendo\textures\dots4.png" />
+    <Content Include="css\kendo\textures\dots5.png" />
+    <Content Include="css\kendo\textures\dots6.png" />
+    <Content Include="css\kendo\textures\dots7.png" />
+    <Content Include="css\kendo\textures\dots8.png" />
+    <Content Include="css\kendo\textures\dots9.png" />
+    <Content Include="css\kendo\textures\glass-lighter.png" />
+    <Content Include="css\kendo\textures\glass.png" />
+    <Content Include="css\kendo\textures\highlight.png" />
+    <Content Include="css\kendo\textures\hsv-gradient.png" />
+    <Content Include="css\kendo\textures\hue.png" />
+    <Content Include="css\kendo\textures\leather1.png" />
+    <Content Include="css\kendo\textures\leather2.png" />
+    <Content Include="css\kendo\textures\noise.png" />
+    <Content Include="css\kendo\textures\stripe1.png" />
+    <Content Include="css\kendo\textures\stripe2.png" />
+    <Content Include="css\kendo\textures\stripe3.png" />
+    <Content Include="css\kendo\textures\stripe4.png" />
+    <Content Include="css\kendo\textures\stripe5.png" />
+    <Content Include="css\kendo\textures\stripe6.png" />
+    <Content Include="css\kendo\textures\transparency.png" />
+    <Content Include="css\kendo\textures\transtexture.png" />
+    <Content Include="css\select-box.css" />
+    <Content Include="css\kendo\images\back.png" />
+    <Content Include="css\kendo\images\kendoui.svg" />
+    <Content Include="css\kendo\images\wp8_icons.png" />
+    <Content Include="css\kendo\images\wp8_inverseicons.png" />
+    <Content Include="css\site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="web.components\base\base-filter-view.js" />
+    <Content Include="web.components\base\confirmation-view.js" />
+    <Content Include="web.components\base\base-edit-model-view.js" />
+    <Content Include="web.components\base\base-object-add-view.js" />
+    <Content Include="web.components\base\base-object-filter-view.js" />
+    <Content Include="web.components\base\base-object-tab-view.js" />
+    <Content Include="web.components\base\related-object-grid-view.js" />
+    <Content Include="web.components\base\resources\base-add-model-view.de.js" />
+    <Content Include="web.components\base\resources\base-add-model-view.en.js" />
+    <Content Include="web.components\base\resources\confirmation-view.de.js" />
+    <Content Include="web.components\base\resources\confirmation-view.en.js" />
+    <Content Include="web.components\base\templates\confirmation-view.html" />
+    <Content Include="web.components\kendo.backbone\backbone.client.transport.js" />
+    <Content Include="web.components\kendo.editors\dropdownlist.js" />
+    <Content Include="web.components\kendo.filters\resources\select-box.de.js" />
+    <Content Include="web.components\kendo.filters\resources\select-box.en.js" />
+    <Content Include="web.components\kendo.filters\resources\multiselect.de.js" />
+    <Content Include="web.components\kendo.filters\resources\multiselect.en.js" />
+    <Content Include="web.components\kendo\cultures\kendo.culture.en-US.js" />
+    <Content Include="web.components\kendo\messages\kendo.messages.en.js" />
+    <Content Include="web.components\mixins\bound-form.js" />
+    <Content Include="web.libs\globalize\cultures\globalize.culture.de.js" />
+    <Content Include="web.libs\globalize\globalize.js" />
+    <Content Include="web.components\base\resources\base-edit-model-view.en.js" />
+    <Content Include="web.components\base\resources\base-grid-view.en.js" />
+    <Content Include="web.components\base\resources\base-grid-view.de.js" />
+    <Content Include="web.components\kendo.editors\select-box.js" />
+    <Content Include="web.components\kendo.filters\select-box.js" />
+    <Content Include="web.components\kendo\cultures\kendo.culture.de-DE.js" />
+    <Content Include="web.components\kendo\kendo.all.js" />
+    <Content Include="web.components\kendo\kendo.angular.js" />
+    <Content Include="web.components\kendo\kendo.autocomplete.js" />
+    <Content Include="web.components\kendo\kendo.binder.js" />
+    <Content Include="web.components\kendo\kendo.button.js" />
+    <Content Include="web.components\kendo\kendo.calendar.js" />
+    <Content Include="web.components\kendo\kendo.color.js" />
+    <Content Include="web.components\kendo\kendo.colorpicker.js" />
+    <Content Include="web.components\kendo\kendo.columnmenu.js" />
+    <Content Include="web.components\kendo\kendo.columnsorter.js" />
+    <Content Include="web.components\kendo\kendo.combobox.js" />
+    <Content Include="web.components\kendo\kendo.core.js" />
+    <Content Include="web.components\kendo\kendo.data.js" />
+    <Content Include="web.components\kendo\kendo.data.odata.js" />
+    <Content Include="web.components\kendo\kendo.data.signalr.js" />
+    <Content Include="web.components\kendo\kendo.data.xml.js" />
+    <Content Include="web.components\kendo\kendo.dataviz.barcode.js" />
+    <Content Include="web.components\kendo\kendo.dataviz.chart.funnel.js" />
+    <Content Include="web.components\kendo\kendo.dataviz.chart.js" />
+    <Content Include="web.components\kendo\kendo.dataviz.chart.polar.js" />
+    <Content Include="web.components\kendo\kendo.dataviz.core.js" />
+    <Content Include="web.components\kendo\kendo.dataviz.diagram.js" />
+    <Content Include="web.components\kendo\kendo.dataviz.gauge.js" />
+    <Content Include="web.components\kendo\kendo.dataviz.js" />
+    <Content Include="web.components\kendo\kendo.dataviz.map.js" />
+    <Content Include="web.components\kendo\kendo.dataviz.mobile.js" />
+    <Content Include="web.components\kendo\kendo.dataviz.qrcode.js" />
+    <Content Include="web.components\kendo\kendo.dataviz.sparkline.js" />
+    <Content Include="web.components\kendo\kendo.dataviz.stock.js" />
+    <Content Include="web.components\kendo\kendo.dataviz.themes.js" />
+    <Content Include="web.components\kendo\kendo.dataviz.treemap.js" />
+    <Content Include="web.components\kendo\kendo.datepicker.js" />
+    <Content Include="web.components\kendo\kendo.datetimepicker.js" />
+    <Content Include="web.components\kendo\kendo.dom.js" />
+    <Content Include="web.components\kendo\kendo.draganddrop.js" />
+    <Content Include="web.components\kendo\kendo.drawing.js" />
+    <Content Include="web.components\kendo\kendo.dropdownlist.js" />
+    <Content Include="web.components\kendo\kendo.editable.js" />
+    <Content Include="web.components\kendo\kendo.editor.js" />
+    <Content Include="web.components\kendo\kendo.excel.js" />
+    <Content Include="web.components\kendo\kendo.filebrowser.js" />
+    <Content Include="web.components\kendo\kendo.filtercell.js" />
+    <Content Include="web.components\kendo\kendo.filtermenu.js" />
+    <Content Include="web.components\kendo\kendo.fx.js" />
+    <Content Include="web.components\kendo\kendo.gantt.js" />
+    <Content Include="web.components\kendo\kendo.gantt.list.js" />
+    <Content Include="web.components\kendo\kendo.gantt.timeline.js" />
+    <Content Include="web.components\kendo\kendo.grid.js" />
+    <Content Include="web.components\kendo\kendo.groupable.js" />
+    <Content Include="web.components\kendo\kendo.imagebrowser.js" />
+    <Content Include="web.components\kendo\kendo.list.js" />
+    <Content Include="web.components\kendo\kendo.listview.js" />
+    <Content Include="web.components\kendo\kendo.maskedtextbox.js" />
+    <Content Include="web.components\kendo\kendo.menu.js" />
+    <Content Include="web.components\kendo\kendo.mobile.actionsheet.js" />
+    <Content Include="web.components\kendo\kendo.mobile.application.js" />
+    <Content Include="web.components\kendo\kendo.mobile.button.js" />
+    <Content Include="web.components\kendo\kendo.mobile.buttongroup.js" />
+    <Content Include="web.components\kendo\kendo.mobile.drawer.js" />
+    <Content Include="web.components\kendo\kendo.mobile.js" />
+    <Content Include="web.components\kendo\kendo.mobile.listview.js" />
+    <Content Include="web.components\kendo\kendo.mobile.loader.js" />
+    <Content Include="web.components\kendo\kendo.mobile.modalview.js" />
+    <Content Include="web.components\kendo\kendo.mobile.navbar.js" />
+    <Content Include="web.components\kendo\kendo.mobile.pane.js" />
+    <Content Include="web.components\kendo\kendo.mobile.popover.js" />
+    <Content Include="web.components\kendo\kendo.mobile.scroller.js" />
+    <Content Include="web.components\kendo\kendo.mobile.scrollview.js" />
+    <Content Include="web.components\kendo\kendo.mobile.shim.js" />
+    <Content Include="web.components\kendo\kendo.mobile.splitview.js" />
+    <Content Include="web.components\kendo\kendo.mobile.switch.js" />
+    <Content Include="web.components\kendo\kendo.mobile.tabstrip.js" />
+    <Content Include="web.components\kendo\kendo.mobile.view.js" />
+    <Content Include="web.components\kendo\kendo.multiselect.js" />
+    <Content Include="web.components\kendo\kendo.notification.js" />
+    <Content Include="web.components\kendo\kendo.numerictextbox.js" />
+    <Content Include="web.components\kendo\kendo.ooxml.js" />
+    <Content Include="web.components\kendo\kendo.pager.js" />
+    <Content Include="web.components\kendo\kendo.panelbar.js" />
+    <Content Include="web.components\kendo\kendo.pdf.js" />
+    <Content Include="web.components\kendo\kendo.pivot.configurator.js" />
+    <Content Include="web.components\kendo\kendo.pivot.fieldmenu.js" />
+    <Content Include="web.components\kendo\kendo.pivotgrid.js" />
+    <Content Include="web.components\kendo\kendo.popup.js" />
+    <Content Include="web.components\kendo\kendo.progressbar.js" />
+    <Content Include="web.components\kendo\kendo.reorderable.js" />
+    <Content Include="web.components\kendo\kendo.resizable.js" />
+    <Content Include="web.components\kendo\kendo.router.js" />
+    <Content Include="web.components\kendo\kendo.scheduler.agendaview.js" />
+    <Content Include="web.components\kendo\kendo.scheduler.dayview.js" />
+    <Content Include="web.components\kendo\kendo.scheduler.js" />
+    <Content Include="web.components\kendo\kendo.scheduler.monthview.js" />
+    <Content Include="web.components\kendo\kendo.scheduler.recurrence.js" />
+    <Content Include="web.components\kendo\kendo.scheduler.timelineview.js" />
+    <Content Include="web.components\kendo\kendo.scheduler.view.js" />
+    <Content Include="web.components\kendo\kendo.selectable.js" />
+    <Content Include="web.components\kendo\kendo.slider.js" />
+    <Content Include="web.components\kendo\kendo.sortable.js" />
+    <Content Include="web.components\kendo\kendo.splitter.js" />
+    <Content Include="web.components\kendo\kendo.tabstrip.js" />
+    <Content Include="web.components\kendo\kendo.timepicker.js" />
+    <Content Include="web.components\kendo\kendo.timezones.js" />
+    <Content Include="web.components\kendo\kendo.toolbar.js" />
+    <Content Include="web.components\kendo\kendo.tooltip.js" />
+    <Content Include="web.components\kendo\kendo.touch.js" />
+    <Content Include="web.components\kendo\kendo.treelist.js" />
+    <Content Include="web.components\kendo\kendo.treeview.js" />
+    <Content Include="web.components\kendo\kendo.upload.js" />
+    <Content Include="web.components\kendo\kendo.userevents.js" />
+    <Content Include="web.components\kendo\kendo.validator.js" />
+    <Content Include="web.components\kendo\kendo.view.js" />
+    <Content Include="web.components\kendo\kendo.web.js" />
+    <Content Include="web.components\kendo\kendo.window.js" />
+    <Content Include="web.components\kendo\messages\kendo.messages.de.js" />
+    <Content Include="web.components\mixins\localized-view.js" />
+    <Content Include="web.components\widgets\kendo-select-box.js" />
+    <Content Include="web.components\widgets\resources\select-box.de.js" />
+    <Content Include="web.components\widgets\resources\select-box.en.js" />
+    <Content Include="web.components\widgets\select-box.js" />
+    <Content Include="web.components\widgets\templates\select-box.html" />
+    <Content Include="web.libs\jquery-ui.js" />
+    <Content Include="web.libs\jquery-ui.min.js" />
+    <Content Include="web.libs\require.localized.kendo.widget.js" />
+    <Content Include="web\application-start.js" />
+    <Content Include="web.components\base\base-grid-view.js" />
+    <Content Include="web.components\base\base-add-model-view.js" />
+    <Content Include="web.components\base\base-collection.js" />
+    <Content Include="web.components\base\base-window-view.js" />
+    <Content Include="web.components\base\base-view.js" />
+    <Content Include="web\collections\CommonMasterData\EmpEmployeeSysRoleRsps.js" />
+    <Content Include="web\collections\CommonMasterData\EmpEmployees.js" />
+    <Content Include="web\collections\CommonMasterData\InsCoreDataProductLocalizations.js" />
+    <Content Include="web\collections\CommonMasterData\InsCoreDataProducts.js" />
+    <Content Include="web\collections\DriverLicenceMasterData\CoreDataProductClassBasises.js" />
+    <Content Include="web\collections\DriverLicenceMasterData\InsCoreDataProducts.js" />
+    <Content Include="web\collections\DriverLicenceMasterData\CoreDataProductLocalizations.js" />
+    <Content Include="web\collections\DriverLicenceMasterData\CoreDataProducts.js" />
+    <Content Include="web\collections\DriverLicenceMasterData\ExamRecognitionTypes.js" />
+    <Content Include="web\collections\DriverLicenceMasterData\ReturnReasons.js" />
+    <Content Include="web\collections\DriverLicenceMasterData\LegalBasises.js" />
+    <Content Include="web\collections\Settings\SysTables.js" />
+    <Content Include="web\collections\Settings\SysColumns.js" />
+    <Content Include="web\collections\DriverLicenceMasterData\InclusiveExamClasses.js" />
+    <Content Include="web\collections\DriverLicenceMasterData\RequiredExamClasses.js" />
+    <Content Include="web\collections\DriverLicenceMasterData\ExamClasses.js" />
+    <Content Include="web\collections\Settings\SystemLog.js" />
+    <Content Include="web\collections\Settings\Users.js" />
+    <Content Include="web.components\kendo.editors\multiselect.js" />
+    <Content Include="web.components\kendo.filters\multiselect.js" />
+    <Content Include="web.components\kendo.filters\filter-factory.js" />
+    <Content Include="web.components\kendo.editors\editor-factory.js" />
+    <Content Include="web.libs\backbone.stickit.js" />
+    <Content Include="web.libs\require.localized.resource.js" />
+    <Content Include="web.libs\require.localized.view.js" />
+    <Content Include="web.libs\require.templated.view.js" />
+    <Content Include="web\master-footer.js" />
+    <Content Include="web.components\mixins\kendo-validator-form.js" />
+    <Content Include="web.components\mixins\kendo-widget-form.js" />
+    <Content Include="web.components\mixins\resources\kendo-validator-form.en.js" />
+    <Content Include="web\models\CommonMasterData\Employee\EmpEmployeeSysRoleRsp.js" />
+    <Content Include="web\models\CommonMasterData\Employee\FilterEmpEmployee.js" />
+    <Content Include="web\models\CommonMasterData\Employee\EmpEmployee.js" />
+    <Content Include="web\models\CommonMasterData\Product\InsCoreDataProduct.js" />
+    <Content Include="web\models\CommonMasterData\Product\InsCoreDataProductLocalization.js" />
+    <Content Include="web\models\CommonMasterData\Product\FilterInsCoreDataProduct.js" />
+    <Content Include="web\models\DriverLicenceMasterData\CoreDataProducts\FilterInsCoreDataProduct.js" />
+    <Content Include="web\models\DriverLicenceMasterData\CoreDataProducts\CoreDataProductClassBasis.js" />
+    <Content Include="web\models\DriverLicenceMasterData\CoreDataProducts\InsCoreDataProduct.js" />
+    <Content Include="web\models\DriverLicenceMasterData\CoreDataProducts\CoreDataProduct.js" />
+    <Content Include="web\models\DriverLicenceMasterData\CoreDataProducts\FilterCoreDataProduct.js" />
+    <Content Include="web\models\DriverLicenceMasterData\CoreDataProducts\CoreDataProductLocalization.js" />
+    <Content Include="web\models\DriverLicenceMasterData\ExamRecognitionTypes\FilterExamRecognitionType.js" />
+    <Content Include="web\models\DriverLicenceMasterData\ExamRecognitionTypes\ExamRecognitionType.js" />
+    <Content Include="web\models\DriverLicenceMasterData\LegalBasises\FilterLegalBasis.js" />
+    <Content Include="web\models\DriverLicenceMasterData\LegalBasises\LegalBasis.js" />
+    <Content Include="web\models\DriverLicenceMasterData\ExamClasses\FilterExamClass.js" />
+    <Content Include="web\models\DriverLicenceMasterData\ReturnReasons\FilterReturnReason.js" />
+    <Content Include="web\models\DriverLicenceMasterData\ReturnReasons\ReturnReason.js" />
+    <Content Include="web\models\Settings\FilterSysTable.js" />
+    <Content Include="web\models\Settings\SysTable.js" />
+    <Content Include="web\models\Settings\SysColumn.js" />
+    <Content Include="web\models\DriverLicenceMasterData\ExamClasses\InclusiveExamClass.js" />
+    <Content Include="web\models\DriverLicenceMasterData\ExamClasses\RequiredExamClass.js" />
+    <Content Include="web\models\DriverLicenceMasterData\ExamClasses\ExamClass.js" />
+    <Content Include="web\models\Login.js" />
+    <Content Include="web\models\Settings\SystemLogRecord.js" />
+    <Content Include="web\models\Settings\User.js" />
+    <Content Include="web\models\view-collection.js" />
+    <Content Include="web\resources\CommonMasterData\Employee\EmpEmployeeSysRoleRsps\EmpEmployeeSysRoleRsps.de.js" />
+    <Content Include="web\resources\CommonMasterData\Employee\EmpEmployeeSysRoleRsps\EmpEmployeeSysRoleRsps.en.js" />
+    <Content Include="web\resources\CommonMasterData\Employee\EmpEmployees\AddEmpEmployee.de.js" />
+    <Content Include="web\resources\CommonMasterData\Employee\EmpEmployees\AddEmpEmployee.en.js" />
+    <Content Include="web\resources\CommonMasterData\Employee\EmpEmployees\FilterEmpEmployees.de.js" />
+    <Content Include="web\resources\CommonMasterData\Employee\EmpEmployees\FilterEmpEmployees.en.js" />
+    <Content Include="web\resources\CommonMasterData\Employee\EmpEmployees\EmpEmployees.de.js" />
+    <Content Include="web\resources\CommonMasterData\Employee\EmpEmployees\EmpEmployees.en.js" />
+    <Content Include="web\resources\CommonMasterData\Employee\EmpEmployees\EmpEmployeesRelationships.de.js" />
+    <Content Include="web\resources\CommonMasterData\Employee\EmpEmployees\EmpEmployeesRelationships.en.js" />
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProductLocalizations\AddInsCoreDataProductLoсalization.de.js" />
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProductLocalizations\AddInsCoreDataProductLoсalization.en.js" />
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProductLocalizations\InsCoreDataProductLocalizations.de.js" />
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProductLocalizations\InsCoreDataProductLocalizations.en.js" />
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProducts\AddInsCoreDataProduct.de.js" />
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProducts\AddInsCoreDataProduct.en.js" />
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProducts\InsCoreDataProducts.de.js" />
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProducts\InsCoreDataProducts.en.js" />
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProducts\InsCoreDataProductsRelationships.de.js" />
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProducts\InsCoreDataProductsRelationships.en.js" />
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProducts\FilterInsCoreDataProducts.de.js" />
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProducts\FilterInsCoreDataProducts.en.js" />
+    <Content Include="web\resources\CommonMasterData\CommonMasterData.de.js" />
+    <Content Include="web\resources\CommonMasterData\CommonMasterData.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductClassBasises\CoreDataProductClassBasises.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductClassBasises\CoreDataProductClassBasises.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductLocalizations\AddCoreDataProductLoсalization.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductLocalizations\AddCoreDataProductLoсalization.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductLocalizations\CoreDataProductLocalizations.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductLocalizations\CoreDataProductLocalizations.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProducts\AddCoreDataProduct.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProducts\AddCoreDataProduct.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProducts\FilterInsCoreDataProducts.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProducts\FilterInsCoreDataProducts.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProducts\InsCoreDataProducts.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProducts\InsCoreDataProducts.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProducts\SelectProduct.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProducts\SelectProduct.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProducts\CoreDataProducts.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProducts\CoreDataProducts.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProducts\CoreDataProductsRelationships.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProducts\CoreDataProductsRelationships.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProducts\FilterCoreDataProducts.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProducts\FilterCoreDataProducts.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamClasses\CoreDataProducts.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamClasses\CoreDataProducts.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamRecognitionTypes\AddExamRecognitionType.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamRecognitionTypes\AddExamRecognitionType.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamRecognitionTypes\FilterExamRecognitionTypes.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamRecognitionTypes\FilterExamRecognitionTypes.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamRecognitionTypes\ExamRecognitionTypes.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamRecognitionTypes\ExamRecognitionTypes.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamRecognitionTypes\ExamRecognitionTypesRelationships.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamRecognitionTypes\ExamRecognitionTypesRelationships.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ReturnReasons\AddReturnReason.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ReturnReasons\AddReturnReason.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ReturnReasons\FilterReturnReasons.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ReturnReasons\FilterReturnReasons.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ReturnReasons\ReturnReasons.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ReturnReasons\ReturnReasons.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ReturnReasons\ReturnReasonsRelationships.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ReturnReasons\ReturnReasonsRelationships.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\LegalBasises\AddLegalBasis.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\LegalBasises\AddLegalBasis.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamClasses\AddExamClass.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamClasses\AddExamClass.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\LegalBasises\FilterLegalBasises.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\LegalBasises\FilterLegalBasises.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\LegalBasises\LegalBasisesRelationships.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\LegalBasises\LegalBasisesRelationships.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\LegalBasises\LegalBasises.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\LegalBasises\LegalBasises.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamClasses\FilterExamClasses.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamClasses\FilterExamClasses.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamClasses\ExamClassesRelationships.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamClasses\ExamClassesRelationships.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\InclusiveExamClasses\AddInclusiveExamClass.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\InclusiveExamClasses\AddInclusiveExamClass.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\InclusiveExamClasses\InclusiveExamClasses.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\InclusiveExamClasses\InclusiveExamClasses.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamClasses\ExamClasses.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamClasses\ExamClasses.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\DriverLicenceMasterData.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\DriverLicenceMasterData.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\RequiredExamClasses\AddRequiredExamClass.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\RequiredExamClasses\AddRequiredExamClass.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\RequiredExamClasses\RequiredExamClasses.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\RequiredExamClasses\RequiredExamClasses.en.js" />
+    <Content Include="web\resources\Errors\Forbidden.en.js" />
+    <Content Include="web\resources\Errors\Forbidden.de.js" />
+    <Content Include="web\resources\Home\Login.en.js" />
+    <Content Include="web\resources\Home\Login.de.js" />
+    <Content Include="web\resources\master.en.js" />
+    <Content Include="web\resources\master.de.js" />
+    <Content Include="web\resources\Settings\FilterSysTables.de.js" />
+    <Content Include="web\resources\Settings\FilterSysTables.en.js" />
+    <Content Include="web\resources\Settings\SysTables.de.js" />
+    <Content Include="web\resources\Settings\SysTables.en.js" />
+    <Content Include="web\resources\Settings\SysColumns.de.js" />
+    <Content Include="web\resources\Settings\SysColumns.en.js" />
+    <Content Include="web\resources\Settings\Users.en.js" />
+    <Content Include="web\resources\Settings\Roles.en.js" />
+    <Content Include="web\resources\Settings\Permissions.en.js" />
+    <Content Include="web\resources\Settings\Users.de.js" />
+    <Content Include="web\resources\Settings\Roles.de.js" />
+    <Content Include="web\resources\Settings\Settings.en.js" />
+    <Content Include="web\resources\Settings\Permissions.de.js" />
+    <Content Include="web\resources\Settings\Settings.de.js" />
+    <Content Include="web\router.js" />
+    <Content Include="web\collections\Settings\Roles.js" />
+    <Content Include="web\collections\Settings\Permissions.js" />
+    <Content Include="web.components\kendo.backbone\backbone.datasource.js" />
+    <Content Include="web.components\kendo.backbone\backbone.transport.js" />
+    <Content Include="web.components\kendo.backbone\collection.adapter.js" />
+    <Content Include="web.components\kendo.backbone\kendo.backbone.collection.js" />
+    <Content Include="web.components\kendo.backbone\kendo.backbone.model.js" />
+    <Content Include="web.components\kendo.backbone\kendo.backbone.viewevents.js" />
+    <Content Include="web.libs\backbone.js" />
+    <Content Include="web.libs\backbone.min.js" />
+    <Content Include="web.libs\jquery-2.1.1.js" />
+    <Content Include="web.libs\jquery-2.1.1.min.js" />
+    <Content Include="web.libs\require.text.js" />
+    <Content Include="web.libs\underscore.js" />
+    <Content Include="web.libs\underscore.min.js" />
+    <Content Include="web.libs\require.js" />
+    <Content Include="web\master.js" />
+    <Content Include="web\models\Settings\Role.js" />
+    <Content Include="web\models\Settings\Permission.js" />
+    <Content Include="web\templates\CommonMasterData\Employee\EmpEmployees\AddEmpEmployee.html" />
+    <Content Include="web\templates\CommonMasterData\Employee\EmpEmployees\FilterEmpEmployees.html" />
+    <Content Include="web\templates\CommonMasterData\Employee\EmpEmployees\EmpEmployees.html" />
+    <Content Include="web\templates\CommonMasterData\Employee\EmpEmployees\EmpEmployeesRelationships.html" />
+    <Content Include="web\templates\CommonMasterData\Product\InsCoreDataProductLocalizations\AddInsCoreDataProductLoсalization.html" />
+    <Content Include="web\templates\CommonMasterData\Product\InsCoreDataProductLocalizations\InsCoreDataProductLocalizations.html" />
+    <Content Include="web\templates\CommonMasterData\Product\InsCoreDataProducts\AddInsCoreDataProduct.html" />
+    <Content Include="web\templates\CommonMasterData\Product\InsCoreDataProducts\InsCoreDataProducts.html" />
+    <Content Include="web\templates\CommonMasterData\Product\InsCoreDataProducts\InsCoreDataProductsRelationships.html" />
+    <Content Include="web\templates\CommonMasterData\Product\InsCoreDataProducts\FilterInsCoreDataProducts.html" />
+    <Content Include="web\templates\CommonMasterData\CommonMasterData.html" />
+    <Content Include="web\templates\CommonMasterData\Employee\EmpEmployeeSysRoleRsps\EmpEmployeeSysRoleRsps.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProductClassBasises\CoreDataProductClassBasises.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProductLocalizations\AddCoreDataProductLoсalization.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProductLocalizations\CoreDataProductLocalizations.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProducts\AddCoreDataProduct.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProducts\FilterInsCoreDataProducts.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProducts\InsCoreDataProducts.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProducts\SelectProduct.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProducts\CoreDataProducts.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProducts\CoreDataProductsRelationships.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProducts\FilterCoreDataProducts.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\ExamClasses\AddExamClass.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\ExamClasses\CoreDataProducts.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\ExamRecognitionTypes\AddExamRecognitionType.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\ExamRecognitionTypes\FilterExamRecognitionTypes.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\ExamRecognitionTypes\ExamRecognitionTypes.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\ExamRecognitionTypes\ExamRecognitionTypesRelationships.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\ReturnReasons\AddReturnReason.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\ReturnReasons\FilterReturnReasons.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\ReturnReasons\ReturnReasonsRelationships.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\ReturnReasons\ReturnReasons.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\LegalBasises\LegalBasises.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\LegalBasises\LegalBasisesRelationships.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\LegalBasises\FilterLegalBasises.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\ExamClasses\FilterExamClasses.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\ExamClasses\ExamClassesRelationships.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\InclusiveExamClasses\AddInclusiveExamClass.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\InclusiveExamClasses\InclusiveExamClasses.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\RequiredExamClasses\AddRequiredExamClass.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\LegalBasises\AddLegalBasis.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\RequiredExamClasses\RequiredExamClasses.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\ExamClasses\ExamClasses.html" />
+    <Content Include="web\templates\DriverLicenceMasterData\DriverLicenceMasterData.html" />
+    <Content Include="web\templates\Errors\Forbidden.html" />
+    <Content Include="web\templates\Settings\ChangePassword.html" />
+    <Content Include="web\templates\Settings\FilterSysTables.html" />
+    <Content Include="web\templates\Settings\SysTables.html" />
+    <Content Include="web\templates\Settings\SysColumns.html" />
+    <Content Include="web\templates\Settings\SystemLog.html" />
+    <Content Include="web\view-factories\CommonMasterDataViewFactory.js" />
+    <Content Include="web\view-factories\DriverLicenceMasterDataViewFactory.js" />
+    <Content Include="web.components\base\base-object-grid-view.js" />
+    <Content Include="web\views\CommonMasterData\Employee\EmpEmployees\AddEmpEmployee.js" />
+    <Content Include="web\views\CommonMasterData\Employee\EmpEmployees\FilterEmpEmployees.js" />
+    <Content Include="web\views\CommonMasterData\Employee\EmpEmployees\EmpEmployees.js" />
+    <Content Include="web\views\CommonMasterData\Employee\EmpEmployees\EmpEmployeesRelationships.js" />
+    <Content Include="web\views\CommonMasterData\Product\InsCoreDataProductLocalizations\AddInsCoreDataProductLocalization.js" />
+    <Content Include="web\views\CommonMasterData\Product\InsCoreDataProductLocalizations\InsCoreDataProductLocalizations.js" />
+    <Content Include="web\views\CommonMasterData\Product\InsCoreDataProducts\AddInsCoreDataProduct.js" />
+    <Content Include="web\views\CommonMasterData\Product\InsCoreDataProducts\InsCoreDataProducts.js" />
+    <Content Include="web\views\CommonMasterData\Product\InsCoreDataProducts\InsCoreDataProductsRelationships.js" />
+    <Content Include="web\views\CommonMasterData\Product\InsCoreDataProducts\FilterInsCoreDataProducts.js" />
+    <Content Include="web\views\CommonMasterData\CommonMasterData.js" />
+    <Content Include="web\views\CommonMasterData\Employee\EmpEmployeeSysRoleRsps\EmpEmployeeSysRoleRsps.js" />
+    <Content Include="web\views\DriverLicenceMasterData\CoreDataProductClassBasises\CoreDataProductClassBasises.js" />
+    <Content Include="web\views\DriverLicenceMasterData\CoreDataProductLocalizations\AddCoreDataProductLocalization.js" />
+    <Content Include="web\views\DriverLicenceMasterData\CoreDataProductLocalizations\CoreDataProductLocalizations.js" />
+    <Content Include="web\views\DriverLicenceMasterData\CoreDataProducts\AddCoreDataProduct.js" />
+    <Content Include="web\views\DriverLicenceMasterData\CoreDataProducts\FilterInsCoreDataProducts.js" />
+    <Content Include="web\views\DriverLicenceMasterData\CoreDataProducts\InsCoreDataProducts.js" />
+    <Content Include="web\views\DriverLicenceMasterData\CoreDataProducts\SelectProduct.js" />
+    <Content Include="web\views\DriverLicenceMasterData\CoreDataProducts\CoreDataProducts.js" />
+    <Content Include="web\views\DriverLicenceMasterData\CoreDataProducts\CoreDataProductsRelationships.js" />
+    <Content Include="web\views\DriverLicenceMasterData\CoreDataProducts\FilterCoreDataProducts.js" />
+    <Content Include="web\views\DriverLicenceMasterData\ExamClasses\CoreDataProducts.js" />
+    <Content Include="web\views\DriverLicenceMasterData\ExamRecognitionTypes\AddExamRecognitionType.js" />
+    <Content Include="web\views\DriverLicenceMasterData\ExamRecognitionTypes\FilterExamRecognitionTypes.js" />
+    <Content Include="web\views\DriverLicenceMasterData\ExamRecognitionTypes\ExamRecognitionTypes.js" />
+    <Content Include="web\views\DriverLicenceMasterData\ExamRecognitionTypes\ExamRecognitionTypesRelationships.js" />
+    <Content Include="web\views\DriverLicenceMasterData\ReturnReasons\AddReturnReason.js" />
+    <Content Include="web\views\DriverLicenceMasterData\ReturnReasons\FilterReturnReasons.js" />
+    <Content Include="web\views\DriverLicenceMasterData\ReturnReasons\ReturnReasons.js" />
+    <Content Include="web\views\DriverLicenceMasterData\ReturnReasons\ReturnReasonsRelationships.js" />
+    <Content Include="web\views\DriverLicenceMasterData\LegalBasises\AddLegalBasis.js" />
+    <Content Include="web\views\DriverLicenceMasterData\LegalBasises\LegalBasises.js" />
+    <Content Include="web\views\DriverLicenceMasterData\LegalBasises\LegalBasisesRelationships.js" />
+    <Content Include="web\views\DriverLicenceMasterData\LegalBasises\FilterLegalBasises.js" />
+    <Content Include="web\views\DriverLicenceMasterData\ExamClasses\FilterExamClasses.js" />
+    <Content Include="web\views\DriverLicenceMasterData\ExamClasses\ExamClassesRelationships.js" />
+    <Content Include="web\views\DriverLicenceMasterData\InclusiveExamClasses\AddInclusiveExamClass.js" />
+    <Content Include="web\views\DriverLicenceMasterData\InclusiveExamClasses\InclusiveExamClasses.js" />
+    <Content Include="web\views\DriverLicenceMasterData\RequiredExamClasses\AddRequiredExamClass.js" />
+    <Content Include="web\views\DriverLicenceMasterData\ExamClasses\AddExamClass.js" />
+    <Content Include="web\views\DriverLicenceMasterData\RequiredExamClasses\RequiredExamClasses.js" />
+    <Content Include="web\views\DriverLicenceMasterData\ExamClasses\ExamClasses.js" />
+    <Content Include="web\views\DriverLicenceMasterData\DriverLicenceMasterData.js" />
+    <Content Include="web\views\Errors\Forbidden.js" />
+    <Content Include="web\views\Home\Login.js" />
+    <Content Include="web\views\Home\Home.js" />
+    <Content Include="web\resources\Home\Home.en.js" />
+    <Content Include="web\resources\Home\Home.de.js" />
+    <Content Include="web\views\Settings\AddUser.js" />
+    <Content Include="web\views\Settings\AddRole.js" />
+    <Content Include="web\views\Settings\ChangePassword.js" />
+    <Content Include="web\views\Settings\FilterSysTables.js" />
+    <Content Include="web\views\Settings\SysTables.js" />
+    <Content Include="web\views\Settings\SysColumns.js" />
+    <Content Include="web\views\Settings\SystemLog.js" />
+    <Content Include="web\views\Settings\Users.js" />
+    <Content Include="web\views\Settings\Roles.js" />
+    <Content Include="web\views\Settings\Permissions.js" />
+    <Content Include="web\views\Settings\Settings.js" />
+    <Content Include="web.libs\json2.js" />
+    <Content Include="web.libs\json2.min.js" />
+    <Content Include="web\templates\Home\Home.html" />
+    <Content Include="web\templates\Home\Login.html" />
+    <Content Include="web\templates\master.html" />
+    <Content Include="web\templates\Settings\AddUser.html" />
+    <Content Include="web\templates\Settings\AddRole.html" />
+    <Content Include="web\templates\master-footer.html" />
+    <Content Include="web\templates\Settings\Users.html" />
+    <Content Include="web\templates\Settings\Roles.html" />
+    <Content Include="web\templates\Settings\Permissions.html" />
+    <Content Include="web\templates\Settings\Settings.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="default.cshtml" />
+    <Content Include="css\kendo\images\kendoui.ttf" />
+    <Content Include="css\kendo\images\kendoui.woff" />
+    <Content Include="web.components\mixins\resources\kendo-validator-form.de.js" />
+    <Content Include="web.components\base\resources\base-edit-model-view.de.js" />
+    <None Include="Properties\PublishProfiles\MasterData.pubxml" />
+    <None Include="Properties\PublishProfiles\RTNU.deploy.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Configuration\Configuration.csproj">
+      <Project>{07b1a6b8-bc39-4477-8164-22b79a8e2145}</Project>
+      <Name>Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess.Interfaces\DataAccess.Interfaces.csproj">
+      <Project>{016ed372-b2b7-4ab9-934e-8703b7d63e30}</Project>
+      <Name>DataAccess.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterDataModule.API\MasterDataModule.API.csproj">
+      <Project>{3da064a2-e4c1-423a-b4d9-ac51792943ae}</Project>
+      <Name>MasterDataModule.API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterDataModule.Lib\MasterDataModule.Lib.csproj">
+      <Project>{a61d4577-f99e-4516-8e15-0b63f6894f53}</Project>
+      <Name>MasterDataModule.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="web\models\CommonMasterData\Customer\" />
+    <Folder Include="web\models\CommonMasterData\Org\" />
+    <Folder Include="web\models\CommonMasterData\System\" />
+    <Folder Include="web\resources\CommonMasterData\Customer\" />
+    <Folder Include="web\resources\CommonMasterData\Org\" />
+    <Folder Include="web\resources\CommonMasterData\System\" />
+    <Folder Include="web\templates\CommonMasterData\Customer\" />
+    <Folder Include="web\templates\CommonMasterData\Org\" />
+    <Folder Include="web\templates\CommonMasterData\System\" />
+    <Folder Include="web\views\CommonMasterData\Customer\" />
+    <Folder Include="web\views\CommonMasterData\Org\" />
+    <Folder Include="web\views\CommonMasterData\System\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>40909</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:41909/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
