@@ -71,6 +71,7 @@
     <Compile Include="Entities\EntityPropertiesHelper.cs" />
     <Compile Include="Entities\MasterDataModule\Common\EmpEmployee.cs" />
     <Compile Include="Entities\MasterDataModule\Common\EmpEmployeeSysRoleRsp.cs" />
+    <Compile Include="Entities\MasterDataModule\Common\OrgAccountingArea.cs" />
     <Compile Include="Entities\MasterDataModule\Common\OrgOrganizationalUnit.cs" />
     <Compile Include="Entities\MasterDataModule\DriverLicenceMasterData\Assignation.cs" />
     <Compile Include="Entities\MasterDataModule\DriverLicenceMasterData\CoreDataProduct.cs" />

@@ -159,18 +159,18 @@ namespace TuevSued.V1.IT.CoreBase.Entities.MasterDataModule.Common
         /// Abbreviation. Original table: ORG_ORGANIZATIONAL_UNIT, Column: ABBR  
         /// </summary>
         public string Abbr {  get;  set; }
-        /// <summary>
-        /// Accaunting area. Original table: ORG_ORGANIZATIONAL_UNIT, Column: ACCOUNTING_AREA  
-        /// </summary>
-        public string AccountingArea {  get;  set; }
-        /// <summary>
-        /// Country flag. Original table: ORG_ORGANIZATIONAL_UNIT, Column: LAND_TAG  
-        /// </summary>
-        public int? LandTag {  get;  set; }
-        /// <summary>
-        /// Id of superordinated organizational unit. Original table: ORG_ORGANIZATIONAL_UNIT, Column: ORG_TOP_ID  
-        /// </summary>
-        public int? OrgTopId {  get;  set; }
+        ///// <summary>
+        ///// Accaunting area. Original table: ORG_ORGANIZATIONAL_UNIT, Column: ACCOUNTING_AREA  
+        ///// </summary>
+        //public string AccountingArea {  get;  set; }
+        ///// <summary>
+        ///// Country flag. Original table: ORG_ORGANIZATIONAL_UNIT, Column: LAND_TAG  
+        ///// </summary>
+        //public int? LandTag {  get;  set; }
+        ///// <summary>
+        ///// Id of superordinated organizational unit. Original table: ORG_ORGANIZATIONAL_UNIT, Column: ORG_TOP_ID  
+        ///// </summary>
+        //public int? OrgTopId {  get;  set; }
         /// <summary>
         /// Abbreviation of location. Original table: ORG_ORGANIZATIONAL_UNIT, Column: LOCATION_ABBR  
         /// </summary>
@@ -179,18 +179,18 @@ namespace TuevSued.V1.IT.CoreBase.Entities.MasterDataModule.Common
         /// Location. Original table: ORG_ORGANIZATIONAL_UNIT, Column: SYS_LOCATION_ID  
         /// </summary>
         public int? SysLocationId {  get;  set; }
-        /// <summary>
-        /// Account type. Original table: ORG_ORGANIZATIONAL_UNIT, Column: ORG_ACCOUNT_TYPE_ID  
-        /// </summary>
-        public int? OrgAccountTypeId {  get;  set; }
+        ///// <summary>
+        ///// Account type. Original table: ORG_ORGANIZATIONAL_UNIT, Column: ORG_ACCOUNT_TYPE_ID  
+        ///// </summary>
+        //public int? OrgAccountTypeId {  get;  set; }
         /// <summary>
         /// Type. Original table: ORG_ORGANIZATIONAL_UNIT, Column: ORG_TYPE_ID  
         /// </summary>
         public int OrgTypeId {  get;  set; }
-        /// <summary>
-        /// Reference to inspection location id. Original table: ORG_ORGANIZATIONAL_UNIT, Column: ORD_INSPECTION_LOCATION_ID  
-        /// </summary>
-        public int? OrdInspectionLocationId {  get;  set; }
+        ///// <summary>
+        ///// Reference to inspection location id. Original table: ORG_ORGANIZATIONAL_UNIT, Column: ORD_INSPECTION_LOCATION_ID  
+        ///// </summary>
+        //public int? OrdInspectionLocationId {  get;  set; }
         /// <summary>
         /// To send info about new user. Original table: ORG_ORGANIZATIONAL_UNIT, Column: EMAIL_FROM  
         /// </summary>
@@ -281,14 +281,14 @@ namespace TuevSued.V1.IT.CoreBase.Entities.MasterDataModule.Common
                                            OrgNumber = this.OrgNumber,
                                            Name = this.Name,
                                            Abbr = this.Abbr,
-                                           AccountingArea = this.AccountingArea,
-                                           LandTag = this.LandTag,
-                                           OrgTopId = this.OrgTopId,
+                                           //AccountingArea = this.AccountingArea,
+                                           //LandTag = this.LandTag,
+                                           //OrgTopId = this.OrgTopId,
                                            LocationAbbr = this.LocationAbbr,
                                            SysLocationId = this.SysLocationId,
-                                           OrgAccountTypeId = this.OrgAccountTypeId,
+                                           //OrgAccountTypeId = this.OrgAccountTypeId,
                                            OrgTypeId = this.OrgTypeId,
-                                           OrdInspectionLocationId = this.OrdInspectionLocationId,
+                                           //OrdInspectionLocationId = this.OrdInspectionLocationId,
                                            EmailFrom = this.EmailFrom,
                                            EmailTo = this.EmailTo,
                                            IsEgdokPrintAlways = this.IsEgdokPrintAlways,

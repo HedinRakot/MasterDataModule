@@ -19,7 +19,8 @@
     <script src="/web.libs/require.js"></script>
     <script>
     require.config({
-        urlArgs: 'v=@typeof(TuevSued.V1.IT.FE.MasterDataModuleWeb.MasterDataModuleWebApplication).Assembly.GetName().Version.ToString().Replace(".", "")',
+        //urlArgs: 'v=@typeof(TuevSued.V1.IT.FE.MasterDataModuleWeb.MasterDataModuleWebApplication).Assembly.GetName().Version.ToString().Replace(".", "")',
+        urlArgs: "bust=" + (new Date()).getTime(),
         baseUrl: 'web',
         paths: {
             underscore: '../web.libs/underscore',
@@ -74,15 +75,15 @@
             german: localStorage.getItem('language') === 'true',
             user: new Backbone.Model(@Html.Raw(TuevSued.V1.IT.FE.MasterDataModule.API.JsonHelper.GetCurrentUserJson(GlobalConfiguration.Configuration.DependencyResolver))),
             tables: new Backbone.Model(@Html.Raw(TuevSued.V1.IT.FE.MasterDataModule.API.JsonHelper.GetSystemTablesJson(GlobalConfiguration.Configuration.DependencyResolver))),
-            canTableItemBeEdit: function (tableName){
+            canTableItemBeEdit: function (tableName) {
 
                 var self = this,
                 itemEditMode = new Backbone.Model(self.tables.get('tableNames')).get(tableName);
-                result = !itemEditMode || itemEditMode.editMode  >= 1;
+                result = !itemEditMode || itemEditMode.editMode >= 1;
 
                 return result;
             },
-            canTableItemBeCreated: function (tableName){
+            canTableItemBeCreated: function (tableName) {
 
                 var self = this,
                 itemEditMode = new Backbone.Model(self.tables.get('tableNames')).get(tableName);
@@ -90,7 +91,7 @@
 
                 return result;
             },
-            canTableItemBeDeleted: function (tableName){
+            canTableItemBeDeleted: function (tableName) {
 
                 var self = this,
                 itemEditMode = new Backbone.Model(self.tables.get('tableNames')).get(tableName);
@@ -98,13 +99,13 @@
 
                 return result;
             },
-            canTableItemBeEdit: function (tableName, columnName){
+            canTableItemBeEdit: function (tableName, columnName) {
 
                 var self = this,
                 itemEditMode = new Backbone.Model(self.tables.get('tableNames')).get(tableName);
                 result = !itemEditMode || itemEditMode.editMode >= 1;
 
-                if(itemEditMode && result){
+                if (itemEditMode && result) {
                     var isColumnReadOnly = _.contains(itemEditMode.readOnlyColumns, columnName);
                     result = !isColumnReadOnly;
                 }
@@ -113,7 +114,7 @@
             }
         };
         require(['application-start']);
-        });
+    });
     </script>
 </body>
 </html>

@@ -67,6 +67,7 @@
     <Compile Include="Data\ASProEntities.cs" />
     <Compile Include="Data\Common\EmpEmployeeMapping.cs" />
     <Compile Include="Data\Common\EmpEmployeeSysRoleRspMapping.cs" />
+    <Compile Include="Data\Common\OrgAccountingAreaMapping.cs" />
     <Compile Include="Data\Common\OrgOrganizationalUnitMapping.cs" />
     <Compile Include="Data\Custom.ASProEntities.cs" />
     <Compile Include="Data\Custom.IASProEntities.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Managers\Common\EmpEmployeeManager.cs" />
     <Compile Include="Managers\Common\InsCoreDataProductManager.cs" />
     <Compile Include="Managers\Common\InsCoreDataProductLocalizationManager.cs" />
+    <Compile Include="Managers\Common\OrgAccountingAreaManager.cs" />
     <Compile Include="Managers\Common\OrgOrganizationalUnitManager.cs" />
     <Compile Include="Managers\Common\SysLanguageManager.cs" />
     <Compile Include="Managers\DriverLicenceMasterData\CoreDataProductClassBasisManager.cs" />

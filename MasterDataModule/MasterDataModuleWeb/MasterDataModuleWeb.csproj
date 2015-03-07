@@ -356,6 +356,8 @@
     <Content Include="web\collections\CommonMasterData\EmpEmployees.js" />
     <Content Include="web\collections\CommonMasterData\InsCoreDataProductLocalizations.js" />
     <Content Include="web\collections\CommonMasterData\InsCoreDataProducts.js" />
+    <Content Include="web\collections\CommonMasterData\OrgAccountingAreas.js" />
+    <Content Include="web\collections\CommonMasterData\OrganizationalUnits.js" />
     <Content Include="web\collections\DriverLicenceMasterData\CoreDataProductClassBasises.js" />
     <Content Include="web\collections\DriverLicenceMasterData\InsCoreDataProducts.js" />
     <Content Include="web\collections\DriverLicenceMasterData\CoreDataProductLocalizations.js" />
@@ -385,6 +387,9 @@
     <Content Include="web\models\CommonMasterData\Employee\EmpEmployeeSysRoleRsp.js" />
     <Content Include="web\models\CommonMasterData\Employee\FilterEmpEmployee.js" />
     <Content Include="web\models\CommonMasterData\Employee\EmpEmployee.js" />
+    <Content Include="web\models\CommonMasterData\Org\AccountingAreas\AccountingArea.js" />
+    <Content Include="web\models\CommonMasterData\Org\OrganizationalUnits\FilterOrgOrganizationalUnit.js" />
+    <Content Include="web\models\CommonMasterData\Org\OrganizationalUnits\OrganizationalUnit.js" />
     <Content Include="web\models\CommonMasterData\Product\InsCoreDataProduct.js" />
     <Content Include="web\models\CommonMasterData\Product\InsCoreDataProductLocalization.js" />
     <Content Include="web\models\CommonMasterData\Product\FilterInsCoreDataProduct.js" />
@@ -421,6 +426,12 @@
     <Content Include="web\resources\CommonMasterData\Employee\EmpEmployees\EmpEmployees.en.js" />
     <Content Include="web\resources\CommonMasterData\Employee\EmpEmployees\EmpEmployeesRelationships.de.js" />
     <Content Include="web\resources\CommonMasterData\Employee\EmpEmployees\EmpEmployeesRelationships.en.js" />
+    <Content Include="web\resources\CommonMasterData\Org\OrganizationalUnits\AddOrganizationalUnit.de.js" />
+    <Content Include="web\resources\CommonMasterData\Org\OrganizationalUnits\AddOrganizationalUnit.en.js" />
+    <Content Include="web\resources\CommonMasterData\Org\OrganizationalUnits\FilterOrganizationalUnits.de.js" />
+    <Content Include="web\resources\CommonMasterData\Org\OrganizationalUnits\FilterOrganizationalUnits.en.js" />
+    <Content Include="web\resources\CommonMasterData\Org\OrganizationalUnits\OrganizationalUnits.de.js" />
+    <Content Include="web\resources\CommonMasterData\Org\OrganizationalUnits\OrganizationalUnits.en.js" />
     <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProductLocalizations\AddInsCoreDataProductLoсalization.de.js" />
     <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProductLocalizations\AddInsCoreDataProductLoсalization.en.js" />
     <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProductLocalizations\InsCoreDataProductLocalizations.de.js" />
@@ -543,6 +554,9 @@
     <Content Include="web\templates\CommonMasterData\Employee\EmpEmployees\FilterEmpEmployees.html" />
     <Content Include="web\templates\CommonMasterData\Employee\EmpEmployees\EmpEmployees.html" />
     <Content Include="web\templates\CommonMasterData\Employee\EmpEmployees\EmpEmployeesRelationships.html" />
+    <Content Include="web\templates\CommonMasterData\Org\OrganizationalUnits\AddOrganizationalUnit.html" />
+    <Content Include="web\templates\CommonMasterData\Org\OrganizationalUnits\FilterOrganizationalUnits.html" />
+    <Content Include="web\templates\CommonMasterData\Org\OrganizationalUnits\OrganizationalUnits.html" />
     <Content Include="web\templates\CommonMasterData\Product\InsCoreDataProductLocalizations\AddInsCoreDataProductLoсalization.html" />
     <Content Include="web\templates\CommonMasterData\Product\InsCoreDataProductLocalizations\InsCoreDataProductLocalizations.html" />
     <Content Include="web\templates\CommonMasterData\Product\InsCoreDataProducts\AddInsCoreDataProduct.html" />
@@ -596,6 +610,9 @@
     <Content Include="web\views\CommonMasterData\Employee\EmpEmployees\FilterEmpEmployees.js" />
     <Content Include="web\views\CommonMasterData\Employee\EmpEmployees\EmpEmployees.js" />
     <Content Include="web\views\CommonMasterData\Employee\EmpEmployees\EmpEmployeesRelationships.js" />
+    <Content Include="web\views\CommonMasterData\Org\OrganizationalUnits\AddOrganizationalUnit.js" />
+    <Content Include="web\views\CommonMasterData\Org\OrganizationalUnits\FilterOrganizationalUnits.js" />
+    <Content Include="web\views\CommonMasterData\Org\OrganizationalUnits\OrganizationalUnits.js" />
     <Content Include="web\views\CommonMasterData\Product\InsCoreDataProductLocalizations\AddInsCoreDataProductLocalization.js" />
     <Content Include="web\views\CommonMasterData\Product\InsCoreDataProductLocalizations\InsCoreDataProductLocalizations.js" />
     <Content Include="web\views\CommonMasterData\Product\InsCoreDataProducts\AddInsCoreDataProduct.js" />
@@ -712,16 +729,12 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="web\models\CommonMasterData\Customer\" />
-    <Folder Include="web\models\CommonMasterData\Org\" />
     <Folder Include="web\models\CommonMasterData\System\" />
     <Folder Include="web\resources\CommonMasterData\Customer\" />
-    <Folder Include="web\resources\CommonMasterData\Org\" />
     <Folder Include="web\resources\CommonMasterData\System\" />
     <Folder Include="web\templates\CommonMasterData\Customer\" />
-    <Folder Include="web\templates\CommonMasterData\Org\" />
     <Folder Include="web\templates\CommonMasterData\System\" />
     <Folder Include="web\views\CommonMasterData\Customer\" />
-    <Folder Include="web\views\CommonMasterData\Org\" />
     <Folder Include="web\views\CommonMasterData\System\" />
   </ItemGroup>
   <PropertyGroup>

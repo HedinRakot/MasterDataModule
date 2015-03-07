@@ -5,6 +5,7 @@
         title: 'Common Masterdata',
         InsCoreDataProducts: 'Products',
         EmpEmployees: 'Employees',
+        OrgOrganizationalUnit: 'TSC'
 	};
 
 	return resources;

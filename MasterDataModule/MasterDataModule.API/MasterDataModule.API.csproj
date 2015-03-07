@@ -120,6 +120,8 @@
     <Compile Include="Controllers\CommonMasterData\InsCoreDataProductLocalizationsController.cs" />
     <Compile Include="Controllers\CommonMasterData\Custom\Custom.InsCoreDataProductLocalizationsController.cs" />
     <Compile Include="Controllers\CommonMasterData\Custom\Custom.InsCoreDataProductsController.cs" />
+    <Compile Include="Controllers\CommonMasterData\OrgAccountingAreaController.cs" />
+    <Compile Include="Controllers\CommonMasterData\OrgOrganizationalUnitController.cs" />
     <Compile Include="Controllers\DriverLicenceMasterData\CoreDataProductClassBasisesController.cs" />
     <Compile Include="Controllers\DriverLicenceMasterData\Custom\Custom.CoreDataProductClassBasisesController.cs" />
     <Compile Include="Controllers\CommonMasterData\InsCoreDataProductsController.cs" />
@@ -145,6 +147,8 @@
     <Compile Include="Models\CommonMasterData\EmpEmployeeSysRoleRspModel.cs" />
     <Compile Include="Models\CommonMasterData\EmpEmployeeModel.cs" />
     <Compile Include="Models\CommonMasterData\InsCoreDataProductLocalizationModel.cs" />
+    <Compile Include="Models\CommonMasterData\OrgAccountingAreaModel.cs" />
+    <Compile Include="Models\CommonMasterData\OrgOrganizationalUnitModel.cs" />
     <Compile Include="Models\DriverLicenceMasterData\CoreDataProductClassBasisModel.cs" />
     <Compile Include="Models\CommonMasterData\InsCoreDataProductModel.cs" />
     <Compile Include="Models\DriverLicenceMasterData\ExamRecognitionTypeModel.cs" />

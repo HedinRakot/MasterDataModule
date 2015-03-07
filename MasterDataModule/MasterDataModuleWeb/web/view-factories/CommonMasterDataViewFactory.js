@@ -50,6 +50,30 @@
 
 	    return d.promise();
 	},
+            getOrgUnitEditView = function() {
+	        var d = new $.Deferred();
+
+	        require([
+	            'l!t!CommonMasterData/Org/OrganizationalUnits/AddOrganizationalUnit',
+	            'models/CommonMasterData/Org/OrganizationalUnits/OrganizationalUnit',
+	            'models/view-collection'
+	        ], function(View, Model, ViewCollection) {
+	            var model = new Model(),
+	                options = _.extend({}, {
+	                    model: model
+	                });
+
+	            ViewCollection.load({
+	                accountingAreas: true
+	            }).done(function(viewCollection) {
+	                options = _.extend(options, viewCollection.toJSON());
+
+	                d.resolve(new View(options));
+	            });
+	        });
+
+	        return d.promise();
+	    },
     
 	factory = {
 	    
@@ -78,6 +102,22 @@
 	            
 	            view.model.set({ 'id': id });
                 
+	            view.model.fetch().done(function () {
+	                d.resolve(view);
+	            });
+	        });
+
+	        return d.promise();
+	    },
+	    getOrgUnitCreateView: function () {
+	        return getOrgUnitEditView();
+	    },
+	    getOrgUnitEditView: function (id) {
+	        var d = new $.Deferred();
+	        getOrgUnitEditView().done(function (view) {
+
+	            view.model.set({ 'id': id });
+
 	            view.model.fetch().done(function () {
 	                d.resolve(view);
 	            });

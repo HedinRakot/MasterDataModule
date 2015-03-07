@@ -28,17 +28,13 @@ namespace TuevSued.V1.IT.FE.DataAccess.Entities
     
                 // Properties
                 this.Property(t => t.Id)
-                    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+                    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
     
                 this.Property(t => t.Name)
                     .HasMaxLength(50);
     
                 this.Property(t => t.Abbr)
                     .HasMaxLength(50);
-    
-                this.Property(t => t.AccountingArea)
-                    .IsFixedLength()
-                    .HasMaxLength(4);
     
                 this.Property(t => t.LocationAbbr)
                     .HasMaxLength(50);
@@ -56,19 +52,14 @@ namespace TuevSued.V1.IT.FE.DataAccess.Entities
                     .HasMaxLength(4);
     
                 // Table & Column Mappings
-                this.ToTable("ORG_ORGANIZATIONAL_UNIT", "ASPRO");
+                this.ToTable("ORG_ORGANIZATIONAL_UNIT");
                 this.Property(t => t.Id).HasColumnName(OrgOrganizationalUnit.Fields.Id);
                 this.Property(t => t.OrgNumber).HasColumnName(OrgOrganizationalUnit.Fields.OrgNumber);
                 this.Property(t => t.Name).HasColumnName(OrgOrganizationalUnit.Fields.Name);
                 this.Property(t => t.Abbr).HasColumnName(OrgOrganizationalUnit.Fields.Abbr);
-                this.Property(t => t.AccountingArea).HasColumnName(OrgOrganizationalUnit.Fields.AccountingArea);
-                this.Property(t => t.LandTag).HasColumnName(OrgOrganizationalUnit.Fields.LandTag);
-                this.Property(t => t.OrgTopId).HasColumnName(OrgOrganizationalUnit.Fields.OrgTopId);
                 this.Property(t => t.LocationAbbr).HasColumnName(OrgOrganizationalUnit.Fields.LocationAbbr);
                 this.Property(t => t.SysLocationId).HasColumnName(OrgOrganizationalUnit.Fields.SysLocationId);
-                this.Property(t => t.OrgAccountTypeId).HasColumnName(OrgOrganizationalUnit.Fields.OrgAccountTypeId);
                 this.Property(t => t.OrgTypeId).HasColumnName(OrgOrganizationalUnit.Fields.OrgTypeId);
-                this.Property(t => t.OrdInspectionLocationId).HasColumnName(OrgOrganizationalUnit.Fields.OrdInspectionLocationId);
                 this.Property(t => t.EmailFrom).HasColumnName(OrgOrganizationalUnit.Fields.EmailFrom);
                 this.Property(t => t.EmailTo).HasColumnName(OrgOrganizationalUnit.Fields.EmailTo);
                 this.Property(t => t.IsEgdokPrintAlways).HasColumnName(OrgOrganizationalUnit.Fields.IsEgdokPrintAlways);

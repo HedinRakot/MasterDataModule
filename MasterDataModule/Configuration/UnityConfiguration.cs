@@ -42,6 +42,7 @@ namespace TuevSued.V1.IT.Configuration
             container.RegisterType<IInsCoreDataProductLocalizationManager, InsCoreDataProductLocalizationManager>();
             container.RegisterType<IInsCoreDataProductManager, InsCoreDataProductManager>();
             container.RegisterType<IOrgOrganizationalUnitManager, OrgOrganizationalUnitManager>();
+            container.RegisterType<IOrgAccountingAreaManager, OrgAccountingAreaManager>();
             container.RegisterType<IEmpEmployeeManager, EmpEmployeeManager>();
             container.RegisterType<IEmpEmployeeSysRoleRspManager, EmpEmployeeSysRoleRspManager>();
         }

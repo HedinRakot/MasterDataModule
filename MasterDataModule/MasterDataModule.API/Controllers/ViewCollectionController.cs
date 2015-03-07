@@ -11,6 +11,8 @@ using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule.Base;
 using TuevSued.V1.IT.CoreBase.Entities.MasterDataModule;
 using TuevSued.V1.IT.CoreBase.Entities.MasterDataModule.DriverLicenceMasterData;
 using TuevSued.V1.IT.CoreBase.Entities.MasterDataModule.Common;
+using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule.Common;
+using TuevSued.V1.IT.FE.Entities.MasterDataModule.Common;
 
 namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
 {
@@ -26,6 +28,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
         public bool legalBasises { get; set; }
         public bool sysLanguages { get; set; }
         public bool coreDataProducts { get; set; }
+        public bool accountingAreas { get; set; }
     }
 
     public class IdNameModel<TId>
@@ -45,13 +48,15 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
         private readonly ILegalBasisManager legalBasisManager;
         private readonly ISysLanguageManager sysLanguageManager;
         private readonly ICoreDataProductManager coreDataProductManager;
+        private IOrgAccountingAreaManager accountingAreaManager;
 
         //TODO create Factory
         public ViewCollectionController(IPermissionManager permissionManager, IRoleManager roleManager,
             IExamClassManager examClassManager, ISysTableManager sysTableManager, IReturnReasonManager returnReasonManager,
             ILegalBasisManager legalBasisManager, ISysLanguageManager sysLanguageManager,
-            ICoreDataProductManager coreDataProductManager)
+            ICoreDataProductManager coreDataProductManager, IOrgAccountingAreaManager accountingAreaManager)
         {
+            this.accountingAreaManager = accountingAreaManager;
             this.permissionManager = permissionManager;
             this.roleManager = roleManager;
             this.examClassManager = examClassManager;
@@ -93,6 +98,9 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
 
             if (model.coreDataProducts)
                 result.Add("coreDataProducts", GetViewCollection<CoreDataProduct, int, ICoreDataProductManager>(coreDataProductManager));
+
+            if (model.accountingAreas)
+                result.Add("accountingAreas", GetViewCollection<OrgAccountingArea, int, IOrgAccountingAreaManager>(accountingAreaManager));
 
             //TODO localize
             if (model.editModeTypes)

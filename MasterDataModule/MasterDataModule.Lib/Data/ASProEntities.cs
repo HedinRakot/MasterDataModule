@@ -24,6 +24,9 @@ using System.Linq;
 using System.Data.SqlClient;
 using TuevSued.V1.IT.FE.DataAccess.Interfaces;
 using TuevSued.V1.IT.CoreBase.Entities.MasterDataModule.Common;
+using TuevSued.V1.IT.FE.DataAccess.Entities;
+using TuevSued.V1.IT.FE.MasterDataModule.Lib.Data.Common;
+using TuevSued.V1.IT.FE.MasterDataModule.Lib.Managers.Common;
 using TuevSued.V1.IT.MasterDataModule.Lib.Data.Common;
 namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Data
 {
@@ -110,6 +113,8 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Data
             modelBuilder.Configurations.Add(InsCoreDataProductMapping.Instance);
             modelBuilder.Configurations.Add(EmpEmployeeMapping.Instance);
             modelBuilder.Configurations.Add(EmpEmployeeSysRoleRspMapping.Instance);
+            modelBuilder.Configurations.Add(OrgAccountingAreaMapping.Instance);
+            modelBuilder.Configurations.Add(OrgOrganizationalUnitMapping.Instance);
         }
 
         /// <summary>
@@ -138,5 +143,8 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Data
         /// 
         /// </summary>
         public DbSet<EmpEmployeeSysRoleRsp> EmpEmployeeSysRoleRsps { get; set; }
+
+        public DbSet<OrgOrganizationalUnit> OrgOrganizationalUnits { get; set; }
+
     }
 }

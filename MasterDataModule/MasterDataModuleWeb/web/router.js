@@ -122,6 +122,12 @@
 			'EmpEmployees/:id': function (id) {
 			    showView.call(this, 'l!t!CommonMasterData/Employee/EmpEmployees/AddEmpEmployee', _.partial(CommonMasterDataViewFactory.getEmpEmployeeEditView, id));
 			},
+
+			'OrgOrganizationalUnits': _.partial(showView, 'l!t!CommonMasterData/Org/OrganizationalUnits/OrganizationalUnits'),
+			'OrgOrganizationalUnits/create': _.partial(showView, 'l!t!CommonMasterData/Org/OrgOrganizationalUnits/AddOrgOrganizationalUnit', CommonMasterDataViewFactory.getOrgUnitCreateView),
+			'OrgOrganizationalUnits/:id': function (id) {
+			    showView.call(this, 'l!t!CommonMasterData/Org/OrgOrganizationalUnits/AddOrganizationalUnit', _.partial(CommonMasterDataViewFactory.getOrgUnitEditView, id));
+			}
 		}		
 	});
 

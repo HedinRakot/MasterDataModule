@@ -4,7 +4,8 @@
 	var resources = {
         title: 'Allgemeine Stammdaten',
         InsCoreDataProducts: 'Produkte',
-	    EmpEmployees: 'Mitarbeiter',
+        EmpEmployees: 'Mitarbeiter',
+        OrgOrganizationalUnit: 'TSC'
 	};
 
 	return resources;

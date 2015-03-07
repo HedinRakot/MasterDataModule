@@ -65,6 +65,7 @@
     <Compile Include="MasterDataModule\Common\IEmpEmployeeManager.cs" />
     <Compile Include="MasterDataModule\Common\IInsCoreDataProductLocalizationManager.cs" />
     <Compile Include="MasterDataModule\Common\IInsCoreDataProductManager.cs" />
+    <Compile Include="MasterDataModule\Common\IOrgAccountingAreaManager.cs" />
     <Compile Include="MasterDataModule\Common\IOrgOrganizationalUnitManager.cs" />
     <Compile Include="MasterDataModule\DriverLicenceMasterData\IExamRecognitionTypeManager.cs" />
     <Compile Include="MasterDataModule\FeDataContextRequestManager.cs" />
