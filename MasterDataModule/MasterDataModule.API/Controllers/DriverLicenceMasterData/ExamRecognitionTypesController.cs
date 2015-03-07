@@ -27,6 +27,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.DriverLicenceMaster
             model.description = entity.Description;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
+            model.ChangeDate = entity.ChangeDate;
         }
     }
 }

@@ -24,6 +24,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.DriverLicenceMaster
             model.isFsClass = entity.IsFsClass;
             model.isMofa = entity.IsMofa;
             model.sortOrder = entity.SortOrder;
+            model.ChangeDate = entity.ChangeDate;
         }
 
         protected override void ModelToEntity(ExamClassModel model, ExamClass entity, ActionTypes actionType)

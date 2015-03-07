@@ -71,6 +71,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.Settings
             model.role = entity.RoleId;
             model.login = entity.Login;
             model.name = entity.Name;
+            model.ChangeDate = entity.ChangeDate;
         }
 
 		protected override void ModelToEntity(UserModel model, User entity, ActionTypes actionType)

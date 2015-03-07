@@ -1,10 +1,5 @@
 ﻿using TuevSued.V1.IT.FE.MasterDataModule.API.SystemLog;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule.Base;
 using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule.Settings;
@@ -19,7 +14,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
         where TModel : class, IHasId<TId>, new()
         where TEntity : class, IHasId<TId>
     {
-        public ReadOnlyClientApiController(TManager manager)
+        protected ReadOnlyClientApiController(TManager manager)
             : base(manager)
 		{
 		}
@@ -31,7 +26,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
         where TModel : class, IHasId<TId>, new()
         where TEntity : class, IHasId<TId>, IRemovable
     {
-        public ClientApiWithoutDeleteController(TManager manager)
+        protected ClientApiWithoutDeleteController(TManager manager)
             : base(manager)
 		{
 		}        

@@ -1,109 +1,129 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Http;
-using System.Linq.Dynamic;
-using System.Reflection;
-using System.Globalization;
-using System.Runtime.Serialization;
 using TuevSued.V1.IT.FE.MasterDataModule.API.Models;
 using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule.Base;
 using TuevSued.V1.IT.CoreBase.Entities.MasterDataModule;
 
 namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
 {
-    public abstract class ClientBaseWithoutDeleteController<TModel, TEntity, TId, TManager> : 
+    public abstract class ClientBaseWithoutDeleteController<TModel, TEntity, TId, TManager> :
         ReadOnlyClientBaseController<TModel, TEntity, TId, TManager>
-		where TManager : IManagerBase<TEntity, TId>
-		where TModel : class, IHasId<TId>, new()
-		where TEntity : class, IHasId<TId>, IRemovable
-	{
-        public ClientBaseWithoutDeleteController(TManager manager)
-            :base(manager)
+        where TManager : IManagerBase<TEntity, TId>
+        where TModel : class, IHasId<TId>, new()
+        where TEntity : class, IHasId<TId>, IRemovable
+    {
+        protected ClientBaseWithoutDeleteController(TManager manager)
+            : base(manager)
         {
 
         }
 
-		public event EventHandler<ActionSuccessEventArgs<TEntity, TId>> ActionSuccess;
-		
-		protected void OnActionSuccess(TEntity entity, ActionTypes actionType)
-		{
-			if (ActionSuccess != null)
-				ActionSuccess(this, new ActionSuccessEventArgs<TEntity, TId> { 
-					ActionType = actionType,
-					Entity = entity
-				});
-		}
+        public event EventHandler<ActionSuccessEventArgs<TEntity, TId>> ActionSuccess;
 
-		protected abstract void ModelToEntity(TModel model, TEntity entity, ActionTypes actionType);
-		
-		protected virtual void Validate(TModel model, TEntity entity, ActionTypes actionType)
-		{
-		}
+        protected void OnActionSuccess(TEntity entity, ActionTypes actionType)
+        {
+            if (ActionSuccess != null)
+                ActionSuccess(this, new ActionSuccessEventArgs<TEntity, TId>
+                {
+                    ActionType = actionType,
+                    Entity = entity
+                });
+        }
 
-		public virtual IHttpActionResult Put([FromBody]TModel model)
-		{
-			var entity = Manager.GetByID(model.Id);
-			if (entity != null)
-			{
-				Validate(model, entity, ActionTypes.Update);
+        protected abstract void ModelToEntity(TModel model, TEntity entity, ActionTypes actionType);
 
-				if (ModelState.IsValid)
-				{
-					ModelToEntity(model, entity, ActionTypes.Update);
+        protected virtual void Validate(TModel model, TEntity entity, ActionTypes actionType)
+        {
+        }
 
-                    // TODO we should save FROM_DATE as "FROM_DATE 00:00:00"
-                    // TO_DATE as "TO_DATE 23:59:59"
-                    if (typeof(ISystemFields).IsAssignableFrom(typeof(TEntity)) &&
-                        typeof(ISystemModelFields).IsAssignableFrom(typeof(TModel)))
-                    {
-                        var sysModel = (ISystemModelFields)model;
-                        var sysEntity = (ISystemFields)entity;
+        public virtual IHttpActionResult Put([FromBody] TModel model)
+        {
+            var entity = Manager.GetByID(model.Id);
+            if (entity == null) //nothing found
+            {
+                return NotFound();
+            }
+            if (HasConcurrency(entity as ICommonSystemFields, model as ISystemModelFields))
+            {
+                //TODO: put proper processor for concurrency
+                return Conflict();
+            }
 
-                        sysEntity.ToDate = sysModel.toDate.Date.AddHours(23).AddMinutes(59).AddSeconds(59);
-                    }
+            Validate(model, entity, ActionTypes.Update);
 
-					Manager.SaveChanges();
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
-					OnActionSuccess(entity, ActionTypes.Update);
+            SetChangeDate(entity as ICommonSystemFields);
+            ModelToEntity(model, entity, ActionTypes.Update);
 
-					EntityToModel(entity, model);
+            // TODO we should save FROM_DATE as "FROM_DATE 00:00:00"
+            // TO_DATE as "TO_DATE 23:59:59"
+            if (typeof (ISystemFields).IsAssignableFrom(typeof (TEntity)) &&
+                typeof (ISystemModelFields).IsAssignableFrom(typeof (TModel)))
+            {
+                var sysModel = (ISystemModelFields) model;
+                var sysEntity = (ISystemFields) entity;
 
-					return Ok(model);
-				}
+                sysEntity.ToDate = sysModel.toDate.Date.AddHours(23).AddMinutes(59).AddSeconds(59);
+            }
 
-				return BadRequest(ModelState);
-			}
+            Manager.SaveChanges();
 
-			return NotFound();
-		}
-                
-		public virtual IHttpActionResult Post([FromBody]TModel model)
-		{
-			var entity = Manager.DataContext.CreateObject<TEntity>();
-			Validate(model, entity, ActionTypes.Add);
-			if (ModelState.IsValid)
-			{
-				ModelToEntity(model, entity, ActionTypes.Add);
+            OnActionSuccess(entity, ActionTypes.Update);
 
-				Manager.AddEntity(entity);
-				Manager.SaveChanges();
+            EntityToModel(entity, model);
 
-				model = new TModel
-				{
-					Id = entity.Id
-				};
+            return Ok(model);
+        }
 
-				OnActionSuccess(entity, ActionTypes.Add);
+        public virtual IHttpActionResult Post([FromBody] TModel model)
+        {
+            var entity = Manager.DataContext.CreateObject<TEntity>();
+            Validate(model, entity, ActionTypes.Add);
+            if (ModelState.IsValid)
+            {
+                SetChangeDate(entity as ICommonSystemFields);
+                ModelToEntity(model, entity, ActionTypes.Add);
 
-				EntityToModel(entity, model);
+                Manager.AddEntity(entity);
+                Manager.SaveChanges();
 
-				return Ok(model);
-			}
+                model = new TModel
+                {
+                    Id = entity.Id
+                };
 
-			return BadRequest(ModelState);
-		}			
-	}
+                OnActionSuccess(entity, ActionTypes.Add);
+
+                EntityToModel(entity, model);
+
+                return Ok(model);
+            }
+
+            return BadRequest(ModelState);
+        }
+
+
+        private static void SetChangeDate(ICommonSystemFields entity)
+        {
+            if (entity != null)
+            {
+                entity.ChangeDate = DateTime.Now;
+            }
+        }
+
+        private bool HasConcurrency(ICommonSystemFields entity, ISystemModelFields model)
+        {
+            if (entity == null || model == null)
+            {
+                return false;
+            }
+            return entity.ChangeDate != model.ChangeDate;
+        }
+
+
+    }
 }

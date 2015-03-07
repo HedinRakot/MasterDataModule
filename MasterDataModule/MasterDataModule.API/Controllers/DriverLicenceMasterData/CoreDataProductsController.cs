@@ -42,6 +42,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.DriverLicenceMaster
             model.isAdditionalProduct = entity.IsAdditionalProduct;
             model.isPrepaymentRequired = entity.IsPrepaymentRequired;
             model.isMandatory = entity.IsMandatory;
+            model.ChangeDate = entity.ChangeDate;
 
             var insCoreDataProduct = insCoreDataProductManager.GetByID(entity.InsCoreDataProductId);
             if (insCoreDataProduct != null)

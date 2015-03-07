@@ -52,7 +52,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
         where TModel : class, IHasId<TId>, new()
         where TEntity : class, IHasId<TId>
     {
-        public ReadOnlyClientBaseController(TManager manager)
+        protected ReadOnlyClientBaseController(TManager manager)
 		{
 			Manager = manager;
 		}

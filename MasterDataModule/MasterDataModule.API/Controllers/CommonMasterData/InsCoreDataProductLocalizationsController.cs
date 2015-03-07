@@ -25,6 +25,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.CommonMasterData
             model.sysLanguageId = entity.SysLanguageId;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
+            model.ChangeDate = entity.ChangeDate?? DateTime.Now;
         }
 
         protected override void ModelToEntity(InsCoreDataProductLocalizationModel model, InsCoreDataProductLocalization entity, ActionTypes actionType)

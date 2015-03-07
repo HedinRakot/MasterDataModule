@@ -25,6 +25,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.DriverLicenceMaster
             model.text2 = entity.Text2;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
+            model.ChangeDate = entity.ChangeDate;
         }
 
         protected override void ModelToEntity(ReturnReasonModel model, ReturnReason entity, ActionTypes actionType)

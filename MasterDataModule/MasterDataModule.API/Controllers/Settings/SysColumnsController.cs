@@ -39,6 +39,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.Settings
             model.description = String.Format("{0} ({1})", description, entity.Name);
             model.tableId = entity.SysTableId;
             model.ReadOnly = entity.ReadOnly;
+           
         }
 
         protected override IQueryable<SysColumn> GetEntities()

@@ -25,6 +25,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.Settings
         {
             model.name = entity.Name;
             model.systemName = entity.SystemName;
+            model.ChangeDate = entity.ChangeDate;
         }
 
         protected override void ModelToEntity(PermissionModel model, Permission entity, ActionTypes actionType)

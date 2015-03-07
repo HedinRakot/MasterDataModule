@@ -21,7 +21,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.CommonMasterData
         {
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
-
+            model.ChangeDate = entity.ChangeDate?? DateTime.Now;
             model.name = entity.EntityTitle;
 
             //TODO

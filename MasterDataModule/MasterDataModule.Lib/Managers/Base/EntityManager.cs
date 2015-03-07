@@ -48,8 +48,10 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Managers.Base
 		{
 			DataContext.AddObject(entity);
 
-			if(SaveChangesAutomatically)
-				DataContext.SaveChanges();
+            if (SaveChangesAutomatically)
+            {
+                DataContext.SaveChanges();
+            }
 		}
 
         /// <summary>
@@ -61,6 +63,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Managers.Base
 		{
 			if (entity != null)
 			{
+                DoUpdate(entity);
 				DoRemove(entity);
 
 				if (SaveChangesAutomatically)
@@ -70,6 +73,19 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Managers.Base
 
 			return false;
 		}
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="entity"></param>
+        protected virtual void DoUpdate (TEntity entity)
+        {
+            var temp = entity as ICommonSystemFields;
+            if (temp != null)
+            {
+                temp.ChangeDate = DateTime.Now;
+            }
+        }
 
         /// <summary>
         /// 
@@ -115,7 +131,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Managers.Base
         /// 
         /// </summary>
         /// <param name="context"></param>
-        public EntityManager(IEntities context) :
+        protected EntityManager(IEntities context) :
             base(context)
         {
         }

@@ -22,10 +22,12 @@ namespace TuevSued.V1.IT.CoreBase.Entities.MasterDataModule
         /// Entity create date 
         /// </summary>
         DateTime? CreateDate { get;set; }
+
         /// <summary>
         /// Last changed date 
         /// </summary>
-        DateTime? ChangeDate { get;set; }
+        DateTime? ChangeDate { get; set; }
+        
         /// <summary>
         /// OWNER (SCHLUESSEL EINER ORGANISATIONSEINHEIT, WELCHE FUER DIE PFLEGE EINES DATENSATZES 
         /// </summary>

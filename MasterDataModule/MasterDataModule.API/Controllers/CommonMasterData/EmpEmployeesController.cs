@@ -36,6 +36,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.CommonMasterData
             model.birthDate = entity.Birthdate;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
+            model.ChangeDate = entity.ChangeDate;
         }
 
         protected override void ModelToEntity(EmpEmployeeModel model, EmpEmployee entity, ActionTypes actionType)

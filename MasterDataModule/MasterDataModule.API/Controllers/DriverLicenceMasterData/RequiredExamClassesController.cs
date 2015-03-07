@@ -24,6 +24,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.DriverLicenceMaster
             model.requiredExamClassId = entity.ExamClassIdRequired;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
+            model.ChangeDate = entity.ChangeDate;
         }
 
         protected override void ModelToEntity(RequiredExamClassModel model, ExamClassRequiredClass entity, ActionTypes actionType)

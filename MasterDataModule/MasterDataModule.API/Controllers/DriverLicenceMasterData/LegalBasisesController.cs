@@ -28,6 +28,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.DriverLicenceMaster
             model.printName = entity.PrintName;
             model.replacementId = entity.ReplacementId;
             model.isFirstAssignation = (int)entity.FirstAssignation;
+            model.ChangeDate = entity.ChangeDate;
         }
 
         protected override void ModelToEntity(LegalBasisModel model, LegalBasis entity, ActionTypes actionType)
