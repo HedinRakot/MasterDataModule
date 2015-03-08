@@ -1,35 +1,56 @@
 ﻿using System;
+using System.Runtime.Serialization;
 using TuevSued.V1.IT.CoreBase.Entities.MasterDataModule;
 
 namespace TuevSued.V1.IT.FE.MasterDataModule.API.Models.CommonMasterData
 {
-    public class OrgOrganizationalUnitModel : BaseModel
+    [DataContract]
+    public class OrgOrganizationalUnitModel : BaseModel,  ISystemModelFields
     {
-        public int OrgNumber { get; set; }
-        public string Name { get; set; }
-        public string Abbr { get; set; }
-        public string AccountingArea { get; set; }
-        public int? LandTag { get; set; }
-        public int? OrgTopId { get; set; }
-        public string LocationAbbr { get; set; }
-        public int? SysLocationId { get; set; }
-        public int? OrgAccountTypeId { get; set; }
-        public int OrgTypeId { get; set; }
-        public int? OrdInspectionLocationId { get; set; }
-        public string EmailFrom { get; set; }
-        public string EmailTo { get; set; }
-        public bool IsEgdokPrintAlways { get; set; }
-        public DateTime? DeleteDate { get; set; }
-        public string Source { get; set; }
-        public int? OrgAccountingAreaId { get; set; }
+        [DataMember]
+        public int orgNumber { get; set; }
+        [DataMember]
+        public string name { get; set; }
+        [DataMember]
+        public string abbr { get; set; }
+        [DataMember]
+        public string accountingArea { get; set; }
+        [DataMember]
+        public int? landTag { get; set; }
+        [DataMember]
+        public int? orgTopId { get; set; }
+        [DataMember]
+        public string locationAbbr { get; set; }
+        [DataMember]
+        public int? sysLocationId { get; set; }
+        [DataMember]
+        public int? orgAccountTypeId { get; set; }
+        [DataMember]
+        public int orgTypeId { get; set; }
+        [DataMember]
+        public int? ordInspectionLocationId { get; set; }
+        [DataMember]
+        public string emailFrom { get; set; }
+        [DataMember]
+        public string emailTo { get; set; }
+        [DataMember]
+        public bool isEgdokPrintAlways { get; set; }
+        [DataMember]
+        public DateTime? deleteDate { get; set; }
+        [DataMember]
+        public string source { get; set; }
+        [DataMember]
+        public int? orgAccountingAreaId { get; set; }
         /// <summary>
         /// Validity start date. Original table: ORG_ORGANIZATIONAL_UNIT, Column: FROM_DATE  
         /// </summary>
-        public System.DateTime FromDate { get; set; }
+        [DataMember]
+        public System.DateTime fromDate { get; set; }
         /// <summary>
         /// Validity end date. Original table: ORG_ORGANIZATIONAL_UNIT, Column: TO_DATE  
         /// </summary>
-        public System.DateTime ToDate { get; set; }
+        [DataMember]
+        public System.DateTime toDate { get; set; }
         
     }
 }

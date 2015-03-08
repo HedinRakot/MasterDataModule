@@ -13,47 +13,49 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.CommonMasterData
         protected override void EntityToModel(OrgOrganizationalUnit entity, OrgOrganizationalUnitModel model)
         {
             //model.Id = entity.Id;
-            model.OrgNumber = entity.OrgNumber;
-            model.Name = entity.Name;
-            model.Abbr = entity.Abbr;
+            model.orgNumber = entity.OrgNumber;
+            model.name = entity.Name;
+            model.abbr = entity.Abbr;
             //model.AccountingArea = entity.AccountingArea;
             //model.LandTag = entity.LandTag;
             //model.OrgTopId = entity.OrgTopId;
-            model.LocationAbbr = entity.LocationAbbr;
-            model.SysLocationId = entity.SysLocationId;
+            model.locationAbbr = entity.LocationAbbr;
+            model.sysLocationId = entity.SysLocationId;
             //model.OrgAccountTypeId = entity.OrgAccountTypeId;
-            model.OrgTypeId = entity.OrgTypeId;
+            model.orgTypeId = entity.OrgTypeId;
             //model.OrdInspectionLocationId = entity.OrdInspectionLocationId;
-            model.EmailFrom = entity.EmailFrom;
-            model.EmailTo = entity.EmailTo;
-            model.IsEgdokPrintAlways = entity.IsEgdokPrintAlways;
-            model.DeleteDate = entity.DeleteDate;
-            model.Source = entity.Source;
-            model.OrgAccountingAreaId = entity.OrgAccountingAreaId;
-            model.FromDate = entity.FromDate;
-            model.ToDate = entity.ToDate;
+            model.emailFrom = entity.EmailFrom;
+            model.emailTo = entity.EmailTo;
+            model.isEgdokPrintAlways = entity.IsEgdokPrintAlways;
+            model.deleteDate = entity.DeleteDate;
+            model.source = entity.Source;
+            model.orgAccountingAreaId = entity.OrgAccountingAreaId;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
 
         protected override void ModelToEntity(OrgOrganizationalUnitModel model, OrgOrganizationalUnit entity, ActionTypes actionType)
         {
             //entity.Id = entity.Id;
-            entity.OrgNumber = model.OrgNumber;
-            entity.Name = model.Name;
-            entity.Abbr = model.Abbr;
+            entity.OrgNumber = model.orgNumber;
+            entity.Name = model.name;
+            entity.Abbr = model.abbr;
             //entity.AccountingArea = model.AccountingArea;
             //entity.LandTag = model.LandTag;
             //entity.OrgTopId = model.OrgTopId;
-            entity.LocationAbbr = model.LocationAbbr;
-            entity.SysLocationId = model.SysLocationId;
+            entity.LocationAbbr = model.locationAbbr;
+            entity.SysLocationId = model.sysLocationId;
             //entity.OrgAccountTypeId = model.OrgAccountTypeId;
-            entity.OrgTypeId = model.OrgTypeId;
+            entity.OrgTypeId = model.orgTypeId;
             //entity.OrdInspectionLocationId = model.OrdInspectionLocationId;
-            entity.EmailFrom = model.EmailFrom;
-            entity.EmailTo = model.EmailTo;
-            entity.IsEgdokPrintAlways = model.IsEgdokPrintAlways;
-            entity.DeleteDate = model.DeleteDate;
-            entity.Source = model.Source;
-            entity.OrgAccountingAreaId = model.OrgAccountingAreaId;
+            entity.EmailFrom = model.emailFrom;
+            entity.EmailTo = model.emailTo;
+            entity.IsEgdokPrintAlways = model.isEgdokPrintAlways;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
+            entity.DeleteDate = model.deleteDate;
+            entity.Source = model.source;
+            entity.OrgAccountingAreaId = model.orgAccountingAreaId;
         }
     }
 }
