@@ -29,6 +29,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
         public bool sysLanguages { get; set; }
         public bool coreDataProducts { get; set; }
         public bool accountingAreas { get; set; }
+        public bool orgTypes { get; set; }
     }
 
     public class IdNameModel<TId>
@@ -100,7 +101,23 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
                 result.Add("coreDataProducts", GetViewCollection<CoreDataProduct, int, ICoreDataProductManager>(coreDataProductManager));
 
             if (model.accountingAreas)
-                result.Add("accountingAreas", GetViewCollection<OrgAccountingArea, int, IOrgAccountingAreaManager>(accountingAreaManager));
+                //result.Add("accountingAreas", GetViewCollection<OrgAccountingArea, int, IOrgAccountingAreaManager>(accountingAreaManager));
+            {
+                result.Add("accountingAreas", new[]
+                {
+                    new {id = 0, accountingArea="accountArea1"},
+                    new {id = 0, accountingArea="accountArea2"}
+                });
+            }
+
+            if (model.orgTypes)
+            {
+                result.Add("orgTypes", new[]
+                {
+                    new {id = 0, name="orgTypes1"},
+                    new {id = 0, name="orgType2"}
+                });
+            }
 
             //TODO localize
             if (model.editModeTypes)

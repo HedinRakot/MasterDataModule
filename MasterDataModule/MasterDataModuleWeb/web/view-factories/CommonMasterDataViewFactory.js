@@ -64,7 +64,8 @@
 	                });
 
 	            ViewCollection.load({
-	                accountingAreas: true
+	                accountingAreas: true,
+                    orgTypes: true
 	            }).done(function(viewCollection) {
 	                options = _.extend(options, viewCollection.toJSON());
 
