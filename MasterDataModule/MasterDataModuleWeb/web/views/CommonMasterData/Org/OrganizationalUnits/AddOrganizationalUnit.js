@@ -4,10 +4,9 @@
     'use strict';
 
     var view = BaseView.extend({
-
         tabView: TabView,
         tableName: 'orgOrganizationalUnit',
-        editUrl: '#OrgOrganizationalUnit',
+        actionUrl: '#OrgOrganizationalUnits',
 
         bindings: {
             '#name': 'name',

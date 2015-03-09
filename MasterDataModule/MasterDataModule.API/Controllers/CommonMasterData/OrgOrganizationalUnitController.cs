@@ -32,6 +32,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.CommonMasterData
             model.orgAccountingAreaId = entity.OrgAccountingAreaId;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
+            if (entity.ChangeDate != null) model.ChangeDate = entity.ChangeDate.Value;
         }
 
         protected override void ModelToEntity(OrgOrganizationalUnitModel model, OrgOrganizationalUnit entity, ActionTypes actionType)
