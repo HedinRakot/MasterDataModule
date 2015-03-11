@@ -1,0 +1,55 @@
+<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#technicalInspectionMasterData" data-localized="technicalInspectionMasterData"></a> / 
+	<a href="#InsNextSpIntervals" data-localized="InsNextSpIntervals"></a> / <%= title %></span>
+
+<form method="post" class="add-model">
+    <div class="inline-block" style="width: 520px;">
+		<div class="editor-label">
+			<label for="insProductObjectTypeId" data-localized="insProductObjectTypeId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="insProductObjectTypeId" name="insProductObjectTypeId" />
+		</div>   
+		<div class="editor-label">
+			<label for="insProductObjectClassId" data-localized="insProductObjectClassId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="insProductObjectClassId" name="insProductObjectClassId" />
+		</div>   
+		<div class="editor-label">
+			<label for="ageMonthFrom" data-localized="ageMonthFrom"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="ageMonthFrom" name="ageMonthFrom" />
+		</div>   
+		<div class="editor-label">
+			<label for="ageMonthTo" data-localized="ageMonthTo"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="ageMonthTo" name="ageMonthTo" />
+		</div>   
+		<div class="editor-label">
+			<label for="spInterval" data-localized="spInterval"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="spInterval" name="spInterval" />
+		</div>   
+	</div>
+	<div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>

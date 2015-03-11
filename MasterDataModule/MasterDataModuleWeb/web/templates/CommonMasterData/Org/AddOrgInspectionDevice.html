@@ -1,0 +1,97 @@
+<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#commonMasterData" data-localized="commonMasterData"></a> / 
+	<a href="#OrgInspectionDevices" data-localized="OrgInspectionDevices"></a> / <%= title %></span>
+
+<form method="post" class="add-model">
+    <div class="inline-block" style="width: 520px;">
+		<div class="editor-label">
+			<label for="debitorCustomerNumber" data-localized="debitorCustomerNumber"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="debitorCustomerNumber" name="debitorCustomerNumber" />
+		</div>   
+		<div class="editor-label">
+			<label for="identification" data-localized="identification"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="identification" name="identification" />
+		</div>   
+		<div class="editor-label">
+			<label for="newIdentification" data-localized="newIdentification"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="newIdentification" name="newIdentification" />
+		</div>   
+		<div class="editor-label">
+			<label for="oldIdentification" data-localized="oldIdentification"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="oldIdentification" name="oldIdentification" />
+		</div>   
+		<div class="editor-label">
+			<label for="type" data-localized="type"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="type" name="type" />
+		</div>   
+		<div class="editor-label">
+			<label for="serialNumber" data-localized="serialNumber"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="serialNumber" name="serialNumber" />
+		</div>   
+		<div class="editor-label">
+			<label for="name" data-localized="name"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="name" name="name" />
+		</div>   
+		<div class="editor-label">
+			<label for="description" data-localized="description"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="description" name="description" />
+		</div>   
+		<div class="editor-label">
+			<label for="lastInspectionDate" data-localized="lastInspectionDate"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="datepicker" id="lastInspectionDate" name="lastInspectionDate" />
+		</div>   
+		<div class="editor-label">
+			<label for="lastInspectionResult" data-localized="lastInspectionResult"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="lastInspectionResult" name="lastInspectionResult" />
+		</div>   
+		<div class="editor-label">
+			<label for="inspectionDate" data-localized="inspectionDate"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="datepicker" id="inspectionDate" name="inspectionDate" />
+		</div>   
+		<div class="editor-label">
+			<label for="inspectionInterval" data-localized="inspectionInterval"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="inspectionInterval" name="inspectionInterval" />
+		</div>   
+	</div>
+	<div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>

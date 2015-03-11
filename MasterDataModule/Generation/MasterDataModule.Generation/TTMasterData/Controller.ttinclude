@@ -1,0 +1,84 @@
+﻿<#@ import namespace="System.Text" #>
+<#@ include file="MasterData.GenerationContext.ttinclude"  once="true" #>
+<#
+    IModelGenerationContext context = generationContext;
+    var code = context.Code;
+
+    foreach (var model in context.Models)
+    {
+        //if (model.Content.SkipController)
+        //{
+        //    continue;
+        //}
+
+        var controllerType = new ClassInfo
+        {
+            IsPartial = true,
+            Name = string.Format("{0}Controller", model.Content.CodeNamePlural),
+			Description = string.Format("Controller for <see cref=\"{0}\"/> entity", model.Entity.Name)
+        };
+		//ClientApiController<EmpEmployeeModel, EmpEmployee, int, IEmpEmployeeManager>
+		var baseType = TypeUsageInfo.CreateClass("ClientApiController", "", new[]
+        {
+            model.GetTypeUsage(),
+			model.Entity.GetTypeUsage(),
+            typeof (int).ToUsageInfo(),
+			TypeUsageInfo.CreateInterface(String.Format("I{0}Manager",model.Entity.Name),"MasterDataModule.Contracts.Managers")
+        });
+        
+		controllerType.InheritsFrom(baseType);
+        
+        context.FileManager.StartNewFile(controllerType.Name + ".cs");
+        
+		context.WriteAllUsings(new[]
+        {
+            "MasterDataModule.API.Models", 
+			"MasterDataModule.Contracts.Entities",
+            "MasterDataModule.Contracts.Managers"
+        }, controllerType);
+
+        code.WriteLine();
+        code.WriteNamespace(); //Area: Namespace
+        code.WriteClassDeclaration(controllerType); //Area: Type
+		code.WriteLine();
+
+		if (!model.Content.SkipControllerConstructor)
+        {
+
+            code.WriteLine("public {0}(I{1}Manager manager): base(manager){{}}",controllerType.Name, model.Entity.Name);
+            code.WriteLine();
+        }
+
+		code.WriteLine("protected override void EntityToModel({0} entity, {1} model)",model.Entity.Name, model.Name);
+        code.StartArea(); // Area: Method
+        foreach (var property in model.ModelProperties)
+        {
+            code.WriteLine("model.{0} = entity.{1};", property.Name, property.Property.Name);
+        }
+        if (model.Content.ExtraEntityToModel)
+        {
+		    code.WriteLine();
+            code.WriteLine("ExtraEntityToModel(entity, model);");
+        }
+		code.EndArea(); // End Area: Method
+
+
+		code.WriteLine("protected override void ModelToEntity({1} model, {0} entity, ActionTypes actionType)",model.Entity.Name, model.Name);
+        code.StartArea(); // Area: Method
+        foreach (var property in model.ModelProperties)
+        {
+            code.WriteLine("entity.{1} = model.{0};", property.Name, property.Property.Name);
+        }
+        if (model.Content.ExtraEntityToModel)
+        {
+		    code.WriteLine();
+            code.WriteLine("ExtraModelToEntity(entity, model, actionType);");
+        }
+		code.EndArea(); // End Area: Method
+		
+        code.EndArea(); //End Area:  Type
+        code.EndArea(); //End Area:  Namespace
+        context.FileManager.EndBlock();
+    }
+    context.FileManager.Process();
+#>

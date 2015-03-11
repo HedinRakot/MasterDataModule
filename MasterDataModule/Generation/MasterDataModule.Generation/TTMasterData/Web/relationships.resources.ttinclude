@@ -1,0 +1,40 @@
+﻿<#@ import namespace="System.Text" #>
+<#@ import namespace="MetadataLoader.Contracts.Generation" #>
+<#@ include file="..\MasterData.GenerationContext.ttinclude"  once="true" #>
+<#
+    IWebGenerationContext context = generationContext;
+    foreach (var model in context.WebModels)
+    {
+        var entityContent = model.Table.Content;
+        context.FileManager.StartNewFile(entityContent.CodeName + "Relationships.de.js");
+		//Model de
+#>
+define(function () {
+	'use strict';
+
+	var resources = {
+	    title: 'Zuordnungen',
+	};
+
+	return resources;
+});
+<#
+		context.FileManager.EndBlock();
+
+		context.FileManager.StartNewFile(entityContent.CodeName + "Relationships.en.js");
+		//Model en
+#>
+define(function () {
+	'use strict';
+
+	var resources = {
+	     title: 'Relationships',
+	};
+
+	return resources;
+});
+<#
+	context.FileManager.EndBlock();
+    }
+    context.FileManager.Process();
+#>

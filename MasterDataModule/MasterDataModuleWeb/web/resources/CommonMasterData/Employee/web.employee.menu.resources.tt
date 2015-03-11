@@ -1,0 +1,11 @@
+﻿<#@ template language="C#" debug="true" hostspecific="true" linePragmas="true"#>
+<#@ output extension=".txt"#>
+<#@ include file="..\..\..\..\..\Generation\MasterDataModule.Generation\TTMasterData\ASPro.Settings.ttinclude" once="true"#>
+<#
+	var menuResourcesFileName = "EmployeeMasterData";
+	tableGroup = "Common";
+	tableSubGroup = "Employee";
+    const string filesDir = @"..\..\..\..\..\Generation\MasterDataModule.Generation\Declarations\";
+#>
+<#@ include file="..\..\..\..\..\Generation\MasterDataModule.Generation\TTMasterData\MasterData.GenerationContext.ttinclude" once="true"#>
+<#@ include file="..\..\..\..\..\Generation\MasterDataModule.Generation\TTMasterData\Web\menu.resources.ttinclude"  once="true"#>

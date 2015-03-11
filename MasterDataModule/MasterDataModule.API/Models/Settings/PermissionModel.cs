@@ -1,7 +1,7 @@
-﻿using TuevSued.V1.IT.FE.MasterDataModule.API.Validation;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
+using MasterDataModule.API.Validation;
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.API.Models.Settings
+namespace MasterDataModule.API.Models.Settings
 {
     [DataContract]
 	public class PermissionModel: BaseModel

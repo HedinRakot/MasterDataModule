@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TuevSued.V1.IT.FE.MasterDataModule.API.SystemLog
+﻿namespace MasterDataModule.API.SystemLog
 {
 	public enum EntityGender
 	{

@@ -1,0 +1,49 @@
+<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#commonMasterData" data-localized="commonMasterData"></a> / 
+	<a href="#SysLocations" data-localized="SysLocations"></a> / <%= title %></span>
+
+<form method="post" class="add-model">
+    <div class="inline-block" style="width: 520px;">
+		<div class="editor-label">
+			<label for="locationCode" data-localized="locationCode"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="locationCode" name="locationCode" />
+		</div>   
+		<div class="editor-label">
+			<label for="locationName" data-localized="locationName"></label>
+		</div>
+		<div class="editor-field">
+            <textarea type="text" class="k-textbox" style="width: 362px" id="locationName" name="locationName" />
+		</div>   
+		<div class="editor-label">
+			<label for="sysCountryId" data-localized="sysCountryId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="sysCountryId" name="sysCountryId" />
+		</div>   
+		<div class="editor-label">
+			<label for="ordFederalStateId" data-localized="ordFederalStateId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="ordFederalStateId" name="ordFederalStateId" />
+		</div>   
+	</div>
+	<div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>

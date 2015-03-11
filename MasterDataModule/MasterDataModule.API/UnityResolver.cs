@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Web.Http.Dependencies;
 using Microsoft.Practices.Unity;
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.API
+namespace MasterDataModule.API
 {
     public class UnityResolver : IDependencyResolver
     {
-        private readonly IUnityContainer container;
+        private readonly IUnityContainer _container;
 
         public UnityResolver(IUnityContainer container)
         {
@@ -15,14 +15,14 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API
             {
                 throw new ArgumentNullException("container");
             }
-            this.container = container;
+            this._container = container;
         }
 
         public object GetService(Type serviceType)
         {
             try
             {
-                return container.Resolve(serviceType);
+                return _container.Resolve(serviceType);
             }
             catch (ResolutionFailedException)
             {
@@ -34,7 +34,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API
         {
             try
             {
-                return container.ResolveAll(serviceType);
+                return _container.ResolveAll(serviceType);
             }
             catch (ResolutionFailedException)
             {
@@ -44,13 +44,13 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API
 
         public IDependencyScope BeginScope()
         {
-            var child = container.CreateChildContainer();
+            var child = _container.CreateChildContainer();
             return new UnityResolver(child);
         }
 
         public void Dispose()
         {
-            container.Dispose();
+            _container.Dispose();
         }
     }
 }

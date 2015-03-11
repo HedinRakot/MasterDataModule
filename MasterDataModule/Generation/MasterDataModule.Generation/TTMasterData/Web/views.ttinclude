@@ -1,0 +1,104 @@
+﻿<#@ import namespace="System.Text" #>
+<#@ import namespace="MetadataLoader.Contracts.Generation" #>
+<#@ include file="..\MasterData.GenerationContext.ttinclude"  once="true" #>
+<#
+    IWebGenerationContext context = generationContext;
+    foreach (var model in context.WebModels)
+    {
+        var entityContent = model.Table.Content;
+        context.FileManager.StartNewFile(entityContent.CodeNamePlural + ".js");
+		//Model
+#>
+define([
+	'base/base-object-grid-view',
+    'collections/<#=context.CurrentRelatedWebPath #>/<#=entityContent.CodeNamePlural#>',
+    'l!t!<#=context.CurrentRelatedWebPath #>/<#= "Filter" + entityContent.CodeName #>',
+    'l!t!<#=context.CurrentRelatedWebPath #>/<#= entityContent.CodeName + "Relationships" #>'
+], function (BaseView, Collection, FilterView, DetailView) {
+	'use strict';
+
+	var view = BaseView.extend({
+
+        collectionType: Collection,
+        detailView: DetailView,
+        filterView: FilterView,
+        tableName: '<#=entityContent.CodeName#>',
+        editUrl: '#<#=entityContent.CodeNamePlural#>',
+
+	    editItemTitle: function () {
+	        return this.resources.edit
+	    },
+
+		columns: function () {
+		    return [
+<#
+        foreach (var property in model.ModelProperties)
+        {
+            var propContent = property.Column.Content;
+            var columnInfo = GetColumnInfo(context, property);
+#>
+				{ field: '<#=property.Name#>', title: this.resources.<#=property.Name#> <#=columnInfo#>},
+<#
+        }
+#>
+			];
+		}
+	});
+
+	return view;
+});
+<#
+		context.FileManager.EndBlock();
+
+		context.FileManager.StartNewFile("Filter" + entityContent.CodeName + ".js");
+#>
+define([
+	'base/base-object-filter-view',
+	'models/<#= context.CurrentRelatedWebPath #>/<#= "Filter" + entityContent.CodeName #>'
+], function (BaseFilterView, Filter) {
+    'use strict'
+
+    var view = BaseFilterView.extend({
+
+        filter: Filter
+    });
+
+    return view;
+});
+<#
+		context.FileManager.EndBlock();
+    }
+    context.FileManager.Process();
+#>
+<#+
+    private string GetColumnInfo(IWebGenerationContext context, PropertyModelInfo property, bool forValidation = false)
+    {
+        var shortName = property.Type.ShortName;
+        if (string.IsNullOrEmpty(shortName))
+        {
+            shortName = property.Type.Name.ToLower();
+        }
+
+        switch (shortName)
+        {
+            case "bool":
+                return ", headerTitle: this.resources." + property.Name + ", checkbox: true";
+            case "byte":
+            case "short":
+            case "int":
+            case "long":
+            case "sbyte":
+            case "ushort":
+            case "uint":
+            case "ulong":
+            case "decimal":
+            case "float":
+            case "double":
+                return "";
+            case "datetime":
+                return ", format: '{0:d}'";
+            default:
+				return "";
+        }
+    }
+#>

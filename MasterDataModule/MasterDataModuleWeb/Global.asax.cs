@@ -7,17 +7,13 @@ using System.Web.Http;
 using System.Web.Http.Dispatcher;
 using System.Web.Mvc;
 using System.Web.Routing;
+using MasterDataModule.API;
+using MasterDataModule.Configuration;
 using Microsoft.Practices.Unity;
-using TuevSued.V1.IT.Configuration;
-using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule;
-using TuevSued.V1.IT.FE.MasterDataModule.API;
-using TuevSued.V1.IT.FE.MasterDataModule.API.Controllers;
-using TuevSued.V1.IT.FE.DataAccess.Interfaces;
-using TuevSued.V1.IT.FE.MasterDataModule.Lib.Data;
 
 namespace TuevSued.V1.IT.FE.MasterDataModuleWeb
 {
-    public class MasterDataModuleWebApplication : System.Web.HttpApplication
+    public class MasterDataModuleWebApplication : HttpApplication
     {
         protected void Application_Start()
         {

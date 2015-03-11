@@ -1,0 +1,37 @@
+<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#technicalInspectionMasterData" data-localized="technicalInspectionMasterData"></a> / 
+	<a href="#InsAvailableInspectionSteps" data-localized="InsAvailableInspectionSteps"></a> / <%= title %></span>
+
+<form method="post" class="add-model">
+    <div class="inline-block" style="width: 520px;">
+		<div class="editor-label">
+			<label for="insInspectionStepId" data-localized="insInspectionStepId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="insInspectionStepId" name="insInspectionStepId" />
+		</div>   
+		<div class="editor-label">
+			<label for="isMandatory" data-localized="isMandatory"></label>
+		</div>
+		<div class="editor-field">
+            <input type="checkbox" id="isMandatory" name="isMandatory" />
+		</div>   
+	</div>
+	<div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>

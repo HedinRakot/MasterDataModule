@@ -1,28 +1,26 @@
-﻿using TuevSued.V1.IT.FE.MasterDataModule.API.Models.Settings;
-using System.Linq;
+﻿using System.Linq;
 using System.Web.Http;
 using System.Web.Security;
-using System.Web;
-using System;
-using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule.Settings;
+using MasterDataModule.API.Models;
+using MasterDataModule.Contracts.Managers;
 using TuevSued.V1.IT.FE.CoreBase;
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
+namespace MasterDataModule.API.Controllers
 {
 	public class LoginController : ApiController
 	{
-	    private readonly IUserManager userManager;
+	    private readonly IUserManager _userManager;
 
 	    public LoginController(IUserManager userManager)
 	    {
-	        this.userManager = userManager;
+	        this._userManager = userManager;
 	    }
 
 	    public IHttpActionResult Post([FromBody]LoginModel loginModel)
 		{
 			if (ModelState.IsValid)
 			{
-                var user = userManager.GetByLogin(loginModel.Login);
+                var user = _userManager.GetByLogin(loginModel.Login);
 				if (user != null && user.Password == StringHelper.GetMD5Hash(loginModel.Password))
 				{
 					FormsAuthentication.SetAuthCookie(loginModel.Login, loginModel.RememberMe);

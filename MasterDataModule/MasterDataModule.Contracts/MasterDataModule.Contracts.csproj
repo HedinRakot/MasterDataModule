@@ -1,0 +1,729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E9C34F0-651A-4B2F-9A9A-0C6C6EC11F4B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MasterDataModule.Contracts</RootNamespace>
+    <AssemblyName>MasterDataModule.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsPro.Context.Interface.cs">
+      <DependentUpon>AsPro.Context.Interface.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Drl.Context.Interface.Custom.cs" />
+    <Compile Include="Drl.Context.Interface.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Drl.Context.Interface.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\EmpCashPermissionType.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\EmpEmployee.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\EmpEmployeeOrgCostCenterRsp.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\EmpEmployeeOrgOrganizationalUnitRsp.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\EmpEmployeeSysRoleRsp.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\EmpEmployeeTopEmployeeRsp.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\EmpOrgAssociationType.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\ExpPassengersType.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\InsCoreDataProductGroup.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\InsProductCombinationType.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\InsProductMaterialGroup.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\InsProductObjectClass.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\InsProductObjectType.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\InsProductType.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\InsStatisticGroup.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\InsTaxClass.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\InsTaxCode.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\InsVatType.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\KssExpenseGround.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrdAreaOfWork.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrdBillingParameter.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrdContactPersonFunction.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrdCustomerInfo.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrdFederalGroup.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrdFederalState.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrdOrderCancelationReason.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrdPartnerRole.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrdRecognition.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrdRecognitionAreaOfWorkRsp.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrdRecognitionType.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrgAccountingArea.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrgAccountType.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrgBankInformation.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrgCostCenter.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrgCostCenterPrice.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrgCostCenterResponsibleEmployeeRsp.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrgInformation.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrgInspectionDevice.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrgRelationshipType.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\OrgType.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\SysCountry.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\SysLanguage.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\SysLocation.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\SysPostCode.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\SysRole.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\SysRoleSysPermissionRsp.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\TechnicalInspection\InsAvailableInspectionStep.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\TechnicalInspection\InsAvailableInspectionText.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\TechnicalInspection\InsAvailableInspectionTextValue.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\TechnicalInspection\InsInspectionStep.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\TechnicalInspection\InsNextInspection.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\TechnicalInspection\InsNextSpInterval.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\TechnicalInspection\InsObdStatus.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\TechnicalInspection\InsOpticalDefect.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\TechnicalInspection\InsPfpInspectionTypePfpPositionRsp.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\TechnicalInspection\InsPfpPosition.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\TechnicalInspection\InsPfpVehicleType.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\TechnicalInspection\InsProductClassGroup.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\TechnicalInspection\InsSeverityType.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\TechnicalInspection\InsSummaryField.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\TechnicalInspection\InsUnitCode.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\TechnicalInspection\InsValidPeriod.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\ArgeVersion.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\Authority.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\Community.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\ExamClass.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\ExamClassArgeMap.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\ExamClassInclusiveClass.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\ExamClassMap.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\ExamClassRequiredClass.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\ExamClassRestrictedClass.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\ExamConstraint.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\ExamConstraintExamClass.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\ExamPossibleResult.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\ExamRecognitionType.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\ExamRecognitionTypeExamClass.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\ExamRoom.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\ExamStation.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\ExamStationExamRecognitionType.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\Holiday.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\HolidayOrdFederalState.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\Language.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\LegalBasis.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\MeetingPoint.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\MeetingPointOrganizationalUnit.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\MessageLocalization.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\Permission.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\ReturnReason.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\Role.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\Role.Custom.cs" />
+    <Compile Include="Entities\Drl\SchoolInfo.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AsPro.Context.Interface.Custom.cs" />
+    <Compile Include="Entities\Drl\SysColumn.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\SysTable.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\User.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityExtensions.cs" />
+    <Compile Include="Enums\EditModeType.cs" />
+    <Compile Include="IDbCommiter.cs" />
+    <Compile Include="IEntities.cs" />
+    <Compile Include="IHasId.cs" />
+    <Compile Include="IHasTitle.cs" />
+    <Compile Include="IRemovable.cs" />
+    <Compile Include="ISaveManager.cs" />
+    <Compile Include="IIntervalFields.cs" />
+    <Compile Include="Managers\ASProDataContextRequestManager.cs" />
+    <Compile Include="Managers\AsPro\Common\IEmpCashPermissionTypeManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IEmpEmployeeManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IEmpEmployeeOrgCostCenterRspManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IEmpEmployeeOrgOrganizationalUnitRspManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IEmpEmployeeSysRoleRspManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IEmpEmployeeTopEmployeeRspManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IEmpOrgAssociationTypeManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IExpPassengersTypeManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IInsCoreDataProductGroupManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IInsProductCombinationTypeManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IInsProductMaterialGroupManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IInsProductObjectClassManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IInsProductObjectTypeManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IInsProductTypeManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IInsStatisticGroupManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IInsTaxClassManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IInsTaxCodeManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IInsVatTypeManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IKssExpenseGroundManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrdAreaOfWorkManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrdBillingParameterManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrdContactPersonFunctionManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrdCustomerInfoManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrdFederalGroupManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrdFederalStateManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrdOrderCancelationReasonManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrdPartnerRoleManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrdRecognitionAreaOfWorkRspManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrdRecognitionManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrdRecognitionTypeManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrgAccountingAreaManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrgAccountTypeManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrgBankInformationManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrgCostCenterManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrgCostCenterPriceManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrgCostCenterResponsibleEmployeeRspManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrgInformationManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrgInspectionDeviceManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrgRelationshipTypeManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrgTypeManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\ISysCountryManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\ISysLanguageManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\ISysLocationManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\ISysPostCodeManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\ISysRoleManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\ISysRoleSysPermissionRspManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\IInsAvailableInspectionStepManager.cs">
+      <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\IInsAvailableInspectionTextManager.cs">
+      <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\IInsAvailableInspectionTextValueManager.cs">
+      <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\IInsInspectionStepManager.cs">
+      <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\IInsNextInspectionManager.cs">
+      <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\IInsNextSpIntervalManager.cs">
+      <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\IInsObdStatusManager.cs">
+      <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\IInsOpticalDefectManager.cs">
+      <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\IInsPfpInspectionTypePfpPositionRspManager.cs">
+      <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\IInsPfpPositionManager.cs">
+      <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\IInsPfpVehicleTypeManager.cs">
+      <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\IInsProductClassGroupManager.cs">
+      <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\IInsSeverityTypeManager.cs">
+      <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\IInsSummaryFieldManager.cs">
+      <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\IInsUnitCodeManager.cs">
+      <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\IInsValidPeriodManager.cs">
+      <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Base\IEntityManager.cs" />
+    <Compile Include="Managers\Base\IManager.cs" />
+    <Compile Include="Managers\Base\IManagerBase.cs" />
+    <Compile Include="Managers\Base\IReadOnlyEntityManager.cs" />
+    <Compile Include="Managers\Base\IReadOnlyManagerBase.cs" />
+    <Compile Include="Managers\Drl\IArgeVersionManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IAuthorityManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ICommunityManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IExamClassArgeMapManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IExamClassInclusiveClassManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IExamClassManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IExamClassMapManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IExamClassRequiredClassManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IExamClassRestrictedClassManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IExamConstraintExamClassManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IExamConstraintManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IExamPossibleResultManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IExamRecognitionTypeExamClassManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IExamRecognitionTypeManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IExamRoomManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IExamStationExamRecognitionTypeManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IExamStationManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IHolidayManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IHolidayOrdFederalStateManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ILanguageManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ILegalBasisManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IMeetingPointManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IMeetingPointOrganizationalUnitManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IMessageLocalizationManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IPermissionManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IReturnReasonManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IRoleManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IRoleManager.Custom.cs" />
+    <Compile Include="Managers\Drl\ISchoolInfoManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ISysColumnManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ISysTableManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IUserManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IUserManager.Custom.cs" />
+    <Compile Include="Managers\FeDataContextRequestManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="AsPro.Context.Interface.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AsPro.Context.Interface.cs</LastGenOutput>
+    </None>
+    <None Include="Drl.Context.Interface.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Drl.Context.Interface.cs</LastGenOutput>
+    </None>
+    <None Include="Entities\AsPro\Common\Common.Entities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Common.Entities.txt</LastGenOutput>
+    </None>
+    <None Include="Entities\AsPro\TechnicalInspection\Common.Entities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Common.Entities.txt</LastGenOutput>
+    </None>
+    <None Include="Entities\Drl\Drl.Entities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Drl.Entities.txt</LastGenOutput>
+    </None>
+    <None Include="Managers\AsPro\Common\Common.IManagers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Common.IManagers.txt</LastGenOutput>
+    </None>
+    <None Include="Managers\AsPro\TechnicalInspection\TP.IManagers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TP.IManagers.txt</LastGenOutput>
+    </None>
+    <None Include="Managers\Drl\Drl.IManagers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Drl.IManagers.txt</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entities\AsPro\Common\Common.Entities.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Content>
+    <Content Include="Entities\AsPro\TechnicalInspection\Common.Entities.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Content>
+    <Content Include="Entities\Drl\Drl.Entities.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Content>
+    <Content Include="Managers\AsPro\Common\Common.IManagers.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Content>
+    <Content Include="Managers\AsPro\TechnicalInspection\TP.IManagers.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Content>
+    <Content Include="Managers\Drl\Drl.IManagers.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

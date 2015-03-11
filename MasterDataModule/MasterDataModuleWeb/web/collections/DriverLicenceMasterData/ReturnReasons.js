@@ -1,6 +1,6 @@
-﻿define([
+define([
 	'base/base-collection',
-	'models/DriverLicenceMasterData/ReturnReasons/ReturnReason'
+	'models/DriverLicenceMasterData/ReturnReason'
 ], function (BaseCollection, Model) {
 	'use strict';
 

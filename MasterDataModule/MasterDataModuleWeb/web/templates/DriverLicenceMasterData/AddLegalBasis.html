@@ -1,0 +1,73 @@
+<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#driverLicenceMasterData" data-localized="driverLicenceMasterData"></a> / 
+	<a href="#LegalBases" data-localized="LegalBases"></a> / <%= title %></span>
+
+<form method="post" class="add-model">
+    <div class="inline-block" style="width: 520px;">
+		<div class="editor-label">
+			<label for="name" data-localized="name"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="name" name="name" />
+		</div>   
+		<div class="editor-label">
+			<label for="description" data-localized="description"></label>
+		</div>
+		<div class="editor-field">
+            <textarea type="text" class="k-textbox" style="width: 362px" id="description" name="description" />
+		</div>   
+		<div class="editor-label">
+			<label for="educationCertificateRequired" data-localized="educationCertificateRequired"></label>
+		</div>
+		<div class="editor-field">
+            <input type="checkbox" id="educationCertificateRequired" name="educationCertificateRequired" />
+		</div>   
+		<div class="editor-label">
+			<label for="firstAssignation" data-localized="firstAssignation"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="firstAssignation" name="firstAssignation" />
+		</div>   
+		<div class="editor-label">
+			<label for="messageReason" data-localized="messageReason"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="messageReason" name="messageReason" />
+		</div>   
+		<div class="editor-label">
+			<label for="messageReasonStyle" data-localized="messageReasonStyle"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="messageReasonStyle" name="messageReasonStyle" />
+		</div>   
+		<div class="editor-label">
+			<label for="replacementId" data-localized="replacementId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="replacementId" name="replacementId" />
+		</div>   
+		<div class="editor-label">
+			<label for="printName" data-localized="printName"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="printName" name="printName" />
+		</div>   
+	</div>
+	<div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>

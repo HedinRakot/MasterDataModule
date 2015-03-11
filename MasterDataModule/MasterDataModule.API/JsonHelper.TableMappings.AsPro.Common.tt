@@ -1,0 +1,9 @@
+﻿<#@ template language="C#" debug="true" hostspecific="true" linePragmas="true"#>
+<#@ output extension=".cs"#>
+<#@ include file="..\Generation\MasterDataModule.Generation\TTMasterData\AsPro.Settings.ttinclude" once="true"#>
+<# 
+    const string filesDir = @"..\Generation\MasterDataModule.Generation\Declarations\";
+    tableGroup = "Common";
+#>
+<#@ include file="..\Generation\MasterDataModule.Generation\TTMasterData\MasterData.GenerationContext.ttinclude" once="true"#>
+<#@ include file="..\Generation\MasterDataModule.Generation\TTMasterData\JsonHelper.TableMapping.ttinclude"  once="true"#>

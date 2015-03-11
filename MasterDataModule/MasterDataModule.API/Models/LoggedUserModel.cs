@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Web;
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.API.Models.Settings
+namespace MasterDataModule.API.Models
 {
     [DataContract]
 	public class LoggedUserModel

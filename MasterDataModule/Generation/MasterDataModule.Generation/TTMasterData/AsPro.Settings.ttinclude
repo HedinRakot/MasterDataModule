@@ -1,0 +1,9 @@
+﻿<#
+    const string conn = @"Data Source=SPBNB-PRC199\SQL2012;Initial Catalog=CommonMasterData;Integrated Security=True;MultipleActiveResultSets=True";
+    const string contextName = "AsPro";
+	const string tableContext = "AsPro";
+	var tableGroup = "";
+	var tableSubGroup = "";
+    string defaultNamespace = null;
+    var extraUsages = new string[0];
+#>

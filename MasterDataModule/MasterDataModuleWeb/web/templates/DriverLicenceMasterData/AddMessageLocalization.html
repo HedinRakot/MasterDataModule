@@ -1,0 +1,43 @@
+<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#driverLicenceMasterData" data-localized="driverLicenceMasterData"></a> / 
+	<a href="#MessageLocalizations" data-localized="MessageLocalizations"></a> / <%= title %></span>
+
+<form method="post" class="add-model">
+    <div class="inline-block" style="width: 520px;">
+		<div class="editor-label">
+			<label for="validationErrorNumber" data-localized="validationErrorNumber"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="validationErrorNumber" name="validationErrorNumber" />
+		</div>   
+		<div class="editor-label">
+			<label for="sysLanguageId" data-localized="sysLanguageId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="sysLanguageId" name="sysLanguageId" />
+		</div>   
+		<div class="editor-label">
+			<label for="message" data-localized="message"></label>
+		</div>
+		<div class="editor-field">
+            <textarea type="text" class="k-textbox" style="width: 362px" id="message" name="message" />
+		</div>   
+	</div>
+	<div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>

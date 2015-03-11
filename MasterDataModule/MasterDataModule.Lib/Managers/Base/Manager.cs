@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using TuevSued.V1.IT.FE.DataAccess.Interfaces;
-using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule;
-using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule.Base;
+using MasterDataModule.Contracts;
+using MasterDataModule.Contracts.Managers.Base;
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Managers.Base
+namespace MasterDataModule.Lib.Managers.Base
 {
     /// <summary>
     /// 
@@ -20,11 +16,10 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Managers.Base
         /// </summary>
         /// <param name="context"></param>
 		protected Manager(IEntities context)
-			:base()
-		{
+        {
 			if (context == null)
 			{
-				throw new ArgumentNullException();
+				throw new ArgumentNullException("context");
 			}
 
 			DataContext = context;

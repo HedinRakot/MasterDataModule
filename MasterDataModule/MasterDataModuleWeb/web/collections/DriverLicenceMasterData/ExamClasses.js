@@ -1,6 +1,6 @@
-﻿define([
+define([
 	'base/base-collection',
-	'models/DriverLicenceMasterData/ExamClasses/ExamClass'
+	'models/DriverLicenceMasterData/ExamClass'
 ], function (BaseCollection, Model) {
 	'use strict';
 

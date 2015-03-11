@@ -1,27 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Http.Controllers;
 using System.Web.Http.Dispatcher;
 using Microsoft.Practices.Unity;
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.API
+namespace MasterDataModule.API
 {
     public class UnityHttpControllerActivator : IHttpControllerActivator
     {
-        private readonly IUnityContainer container;
+        private readonly IUnityContainer _container;
 
         public UnityHttpControllerActivator(IUnityContainer container)
         {
-            this.container = container;
+            _container = container;
         }
 
         public IHttpController Create(HttpRequestMessage request, HttpControllerDescriptor controllerDescriptor, Type controllerType)
         {
-            return (IHttpController)container.Resolve(controllerType);
+            return (IHttpController)_container.Resolve(controllerType);
         }
     }
 }

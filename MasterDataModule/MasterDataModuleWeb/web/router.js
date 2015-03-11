@@ -1,48 +1,70 @@
 ﻿define([
-    'view-factories/CommonMasterDataViewFactory',
-    'view-factories/DriverLicenceMasterDataViewFactory'
-], function (CommonMasterDataViewFactory, DriverLicenceMasterDataViewFactory) {
+], function () {
 	'use strict';
 
-    var getDefaultViewConstructor = function (viewPath, collectionTypes) {
-        return function () {
-            var d = $.Deferred();
-            require([viewPath], function (View) {
-            	if (collectionTypes) {
-            		require(['models/view-collection'], function (ViewCollection) {
-            			ViewCollection.load(collectionTypes).done(function (viewCollection) {
-            				d.resolve(new View(viewCollection.toJSON()));
-            			});
-            		});
-            	}
-				else
-					d.resolve(new View());
-            });
+	var createView = function (viewPath, collectionTypes, options) {
+	    var d = $.Deferred();
+	    require([viewPath], function (View) {
+	        if (!!collectionTypes) {
+	            require(['models/view-collection'], function (ViewCollection) {
+	                ViewCollection.load(collectionTypes).done(function (viewCollection) {
+	                    options = _.extend({}, options, viewCollection.toJSON());
+	                    d.resolve(new View(options));
+	                });
+	            });
+	        }
+	        else
+	            d.resolve(new View(options));
+	    });
 
-            return d.promise();
-        };
-    },
-	showView = function (viewPath, viewConstructor) {
-	    var masterView = this.masterView;
-
-	    if (!_.isFunction(viewConstructor))
-	    	viewConstructor = getDefaultViewConstructor(viewPath, viewConstructor);
-
-	    var index = viewPath.lastIndexOf('!') + 1;
-	    masterView.select(viewPath.substring(index).split('/')[0]);
-
-	    if (Application.user.get('isAuthenticated')) {
-	        viewConstructor().done(function (view) {
-	            masterView.showView(view, '.content');
-	        });
-	    }
-	    else {
-	        require(['t!l!home/login'], function (View) {
-	            masterView.showView(new View(), '.content');
-	        });
-	    }
+	    return d.promise();
 	},
-	view = Backbone.Router.extend({
+	createViewWithModel = function (viewPath, modelPath, collectionTypes, id) {
+	    var d = $.Deferred();
+	    require([modelPath], function (Model) {
+
+	        var model = new Model();
+	        if (_.isUndefined(id) || _.isNull(id)) {
+	            createView(viewPath, collectionTypes, { model: model }).done(function (view) {
+	                d.resolve(view);
+	            });
+	        }
+	        else {
+	            model.set(model.idAttribute, id);
+	            model.fetch().done(function () {
+	                createView(viewPath, collectionTypes, { model: model }).done(function (view) {
+	                    d.resolve(view);
+	                });
+	            });
+	        }
+	    });
+
+	    return d.promise();
+	},
+	showView = function (viewPath, collectionTypes, options) {
+	    var self = this;
+	    if (Application.user.get('isAuthenticated'))
+	        createView(viewPath, collectionTypes, options).done(function (view) { self.trigger('router:view-created', view); });
+	    else
+	        showNotAuthenticated.call(self);
+	},
+
+	showViewWithModel = function (viewPath, modelPath, collectionTypes, id) {
+	    var self = this;
+	    if (Application.user.get('isAuthenticated'))
+	        createViewWithModel(viewPath, modelPath, collectionTypes, id).done(function (view) { self.trigger('router:view-created', view); });
+	    else
+	        showNotAuthenticated.call(self);
+	},
+
+	showNotAuthenticated = function () {
+	    var self = this;
+	    require(['t!l!home/login'], function (View) {
+	        self.trigger('router:view-created', new View);
+	    });
+	},
+
+	router = Backbone.Router.extend({
 		initialize: function (options) {
 			var self = this;
 			this.masterView = options.masterView;
@@ -70,66 +92,54 @@
 
 			'CommonMasterData': _.partial(showView, 'l!t!CommonMasterData/CommonMasterData'),
 			'DriverLicenceMasterData': _.partial(showView, 'l!t!DriverLicenceMasterData/DriverLicenceMasterData'),
+			'TechnicalInspectionMasterData': _.partial(showView, 'l!t!TechnicalInspectionMasterData/TechnicalInspectionMasterData'),
+			'CustomerMasterData': _.partial(showView, 'l!t!CommonMasterData/Customer/CustomerMasterData'),
+			'EmployeeMasterData': _.partial(showView, 'l!t!CommonMasterData/Employee/EmployeeMasterData'),
+			'OrgMasterData': _.partial(showView, 'l!t!CommonMasterData/Org/OrgMasterData'),
+			'ProductMasterData': _.partial(showView, 'l!t!CommonMasterData/Product/ProductMasterData'),
+			'SystemMasterData': _.partial(showView, 'l!t!CommonMasterData/System/SystemMasterData'),
 
-			'ExamClasses': _.partial(showView, 'l!t!DriverLicenceMasterData/ExamClasses/ExamClasses', { 
-			    examClasses: true,
-			    legalBasises: true,
-			    coreDataProducts: true }),
-			'ExamClasses/create': _.partial(showView, 'l!t!DriverLicenceMasterData/ExamClasses/AddExamClass', DriverLicenceMasterDataViewFactory.getExamClassCreateView),
-			'ExamClasses/:id': function (id) {
-			    showView.call(this, 'l!t!DriverLicenceMasterData/ExamClasses/AddExamClass', _.partial(DriverLicenceMasterDataViewFactory.getExamClassEditView, id));
-			},
+			'ExamClasses': _.partial(showView, 'l!t!DriverLicenceMasterData/ExamClasses'),
+			'ExamClasses/create': _.partial(showViewWithModel, 'l!t!DriverLicenceMasterData/AddExamClass', 'models/DriverLicenceMasterData/ExamClass', false),
+			'ExamClasses/:id': _.partial(showViewWithModel, 'l!t!DriverLicenceMasterData/AddExamClass', 'models/DriverLicenceMasterData/ExamClass', false),
 
-			'LegalBasises': _.partial(showView, 'l!t!DriverLicenceMasterData/LegalBasises/LegalBasises', { examClasses: true }),
-			'LegalBasises/create': _.partial(showView, 'l!t!DriverLicenceMasterData/LegalBasises/AddLegalBasis', DriverLicenceMasterDataViewFactory.getLegalBasisCreateView),
-			'LegalBasises/:id': function (id) {
-			    showView.call(this, 'l!t!DriverLicenceMasterData/LegalBasises/AddLegalBasis', _.partial(DriverLicenceMasterDataViewFactory.getLegalBasisEditView, id));
-			},
+			//'LegalBasises': _.partial(showViewWithModel, 'l!t!DriverLicenceMasterData/LegalBasises/LegalBasises', { examClasses: true }),
+			//'LegalBasises/create': _.partial(showViewWithModel, 'l!t!DriverLicenceMasterData/LegalBasises/AddLegalBasis'),
+			//'LegalBasises/:id': _.partial(showViewWithModel,  'l!t!DriverLicenceMasterData/LegalBasises/AddLegalBasis', ''),
 
-			'ExamRecognitionTypes': _.partial(showView, 'l!t!DriverLicenceMasterData/ExamRecognitionTypes/ExamRecognitionTypes', { examClasses: true }),
-			'ExamRecognitionTypes/create': _.partial(showView, 'l!t!DriverLicenceMasterData/ExamRecognitionTypes/AddExamRecognitionType', DriverLicenceMasterDataViewFactory.getExamRecognitionTypeCreateView),
-			'ExamRecognitionTypes/:id': function (id) {
-			    showView.call(this, 'l!t!DriverLicenceMasterData/ExamRecognitionTypes/AddExamRecognitionType', _.partial(DriverLicenceMasterDataViewFactory.getExamRecognitionTypeEditView, id));
-			},
+			//'ExamRecognitionTypes': _.partial(showViewWithModel, 'l!t!DriverLicenceMasterData/ExamRecognitionTypes/ExamRecognitionTypes', { examClasses: true }),
+			//'ExamRecognitionTypes/create': _.partial(showViewWithModel, 'l!t!DriverLicenceMasterData/ExamRecognitionTypes/AddExamRecognitionType'),
+			//'ExamRecognitionTypes/:id': _.partial(showViewWithModel, 'l!t!DriverLicenceMasterData/ExamRecognitionTypes/AddExamRecognitionType', ''),
 
-			'ReturnReasons': _.partial(showView, 'l!t!DriverLicenceMasterData/ReturnReasons/ReturnReasons'),
-			'ReturnReasons/create': _.partial(showView, 'l!t!DriverLicenceMasterData/ReturnReasons/AddReturnReason', DriverLicenceMasterDataViewFactory.getReturnReasonCreateView),
-			'ReturnReasons/:id': function (id) {
-			    showView.call(this, 'l!t!DriverLicenceMasterData/ReturnReason/AddReturnReason', _.partial(DriverLicenceMasterDataViewFactory.getReturnReasonEditView, id));
-			},
+			//'ReturnReasons': _.partial(showViewWithModel, 'l!t!DriverLicenceMasterData/ReturnReasons/ReturnReasons'),
+			//'ReturnReasons/create': _.partial(showViewWithModel, 'l!t!DriverLicenceMasterData/ReturnReasons/AddReturnReason'),
+			//'ReturnReasons/:id': _.partial(showViewWithModel, 'l!t!DriverLicenceMasterData/ReturnReason/AddReturnReason', ''),
 
 
-			'CoreDataProducts': _.partial(showView, 'l!t!DriverLicenceMasterData/CoreDataProducts/CoreDataProducts', {
-			    sysLanguages: true,
-			    legalBasises: true,
-			    examClasses: true,
-			}),
-			'CoreDataProducts/create': _.partial(showView, 'l!t!DriverLicenceMasterData/CoreDataProducts/AddCoreDataProduct', DriverLicenceMasterDataViewFactory.getCoreDataProductCreateView),
-			'CoreDataProducts/:id': function (id) {
-			    showView.call(this, 'l!t!DriverLicenceMasterData/CoreDataProducts/AddCoreDataProduct', _.partial(DriverLicenceMasterDataViewFactory.getCoreDataProductEditView, id));
-			},
+			//'CoreDataProducts': _.partial(showViewWithModel, 'l!t!DriverLicenceMasterData/CoreDataProducts/CoreDataProducts', {
+			//    sysLanguages: true,
+			//    legalBasises: true,
+			//    examClasses: true,
+			//}),
+			//'CoreDataProducts/create': _.partial(showViewWithModel, 'l!t!DriverLicenceMasterData/CoreDataProducts/AddCoreDataProduct'),
+			//'CoreDataProducts/:id': _.partial(showViewWithModel, 'l!t!DriverLicenceMasterData/CoreDataProducts/AddCoreDataProduct', ''),
 
-			'InsCoreDataProducts': _.partial(showView, 'l!t!CommonMasterData/Product/InsCoreDataProducts/InsCoreDataProducts', {
-			    sysLanguages: true,
-			}),
-			'InsCoreDataProducts/create': _.partial(showView, 'l!t!CommonMasterData/Product/InsCoreDataProducts/AddInsCoreDataProduct', CommonMasterDataViewFactory.getInsCoreDataProductCreateView),
-			'InsCoreDataProducts/:id': function (id) {
-			    showView.call(this, 'l!t!CommonMasterData/Product/InsCoreDataProducts/AddInsCoreDataProduct', _.partial(CommonMasterDataViewFactory.getInsCoreDataProductEditView, id));
-			},
 
-			'EmpEmployees': _.partial(showView, 'l!t!CommonMasterData/Employee/EmpEmployees/EmpEmployees'),
-			'EmpEmployees/create': _.partial(showView, 'l!t!CommonMasterData/Employee/EmpEmployees/AddEmpEmployee', CommonMasterDataViewFactory.getEmpEmployeeCreateView),
-			'EmpEmployees/:id': function (id) {
-			    showView.call(this, 'l!t!CommonMasterData/Employee/EmpEmployees/AddEmpEmployee', _.partial(CommonMasterDataViewFactory.getEmpEmployeeEditView, id));
-			},
+			//'InsCoreDataProducts': _.partial(showViewWithModel, 'l!t!CommonMasterData/Product/InsCoreDataProducts/InsCoreDataProducts', {
+			//    sysLanguages: true,
+			//}),
+			//'InsCoreDataProducts/create': _.partial(showViewWithModel, 'l!t!CommonMasterData/Product/InsCoreDataProducts/AddInsCoreDataProduct'),
+			//'InsCoreDataProducts/:id': _.partial(showViewWithModel, 'l!t!CommonMasterData/Product/InsCoreDataProducts/AddInsCoreDataProduct', 'models/document', false),
 
-			'OrgOrganizationalUnits': _.partial(showView, 'l!t!CommonMasterData/Org/OrganizationalUnits/OrganizationalUnits'),
-			'OrgOrganizationalUnits/create': _.partial(showView, 'l!t!CommonMasterData/Org/OrgOrganizationalUnits/AddOrgOrganizationalUnit', CommonMasterDataViewFactory.getOrgUnitCreateView),
-			'OrgOrganizationalUnits/:id': function (id) {
-			    showView.call(this, 'l!t!CommonMasterData/Org/OrgOrganizationalUnits/AddOrganizationalUnit', _.partial(CommonMasterDataViewFactory.getOrgUnitEditView, id));
-			}
+			//'OrgOrganizationalUnits': _.partial(showViewWithModel, 'l!t!CommonMasterData/Org/OrganizationalUnits/OrganizationalUnits'),
+			//'OrgOrganizationalUnits/create': _.partial(showViewWithModel, 'l!t!CommonMasterData/Org/OrgOrganizationalUnits/AddOrgOrganizationalUnit'),
+			//'OrgOrganizationalUnits/:id': _.partial(showViewWithModel, 'l!t!CommonMasterData/Org/OrgOrganizationalUnits/AddOrganizationalUnit', 'models/document', false),
+
+			//'EmpEmployees': _.partial(showViewWithModel, 'l!t!CommonMasterData/Employee/EmpEmployees/EmpEmployees'),
+			//'EmpEmployees/create': _.partial(showViewWithModel, 'l!t!CommonMasterData/Employee/EmpEmployees/AddEmpEmployee'),
+			//'EmpEmployees/:id': _.partial(showViewWithModel, 'l!t!CommonMasterData/Employee/EmpEmployees/AddEmpEmployee', 'models/document', false),
 		}		
 	});
 
-	return view;
+	return router;
 });

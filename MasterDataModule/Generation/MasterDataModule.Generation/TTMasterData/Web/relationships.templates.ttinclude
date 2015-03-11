@@ -1,0 +1,17 @@
+﻿<#@ import namespace="System.Text" #>
+<#@ import namespace="MetadataLoader.Contracts.Generation" #>
+<#@ include file="..\MasterData.GenerationContext.ttinclude"  once="true" #>
+<#
+    IWebGenerationContext context = generationContext;
+    foreach (var model in context.WebModels)
+    {
+        var entityContent = model.Table.Content;
+        context.FileManager.StartNewFile(entityContent.CodeName + "Relationships.html");
+		//Model
+#>
+
+<#
+		context.FileManager.EndBlock();
+    }
+    context.FileManager.Process();
+#>

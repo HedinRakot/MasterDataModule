@@ -1,0 +1,43 @@
+<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#commonMasterData" data-localized="commonMasterData"></a> / 
+	<a href="#SysPostCodes" data-localized="SysPostCodes"></a> / <%= title %></span>
+
+<form method="post" class="add-model">
+    <div class="inline-block" style="width: 520px;">
+		<div class="editor-label">
+			<label for="postCode" data-localized="postCode"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="postCode" name="postCode" />
+		</div>   
+		<div class="editor-label">
+			<label for="city" data-localized="city"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="city" name="city" />
+		</div>   
+		<div class="editor-label">
+			<label for="street" data-localized="street"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="street" name="street" />
+		</div>   
+	</div>
+	<div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>

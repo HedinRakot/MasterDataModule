@@ -1,0 +1,49 @@
+<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#driverLicenceMasterData" data-localized="driverLicenceMasterData"></a> / 
+	<a href="#ExamStations" data-localized="ExamStations"></a> / <%= title %></span>
+
+<form method="post" class="add-model">
+    <div class="inline-block" style="width: 520px;">
+		<div class="editor-label">
+			<label for="ordFederalStateId" data-localized="ordFederalStateId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="ordFederalStateId" name="ordFederalStateId" />
+		</div>   
+		<div class="editor-label">
+			<label for="place" data-localized="place"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="place" name="place" />
+		</div>   
+		<div class="editor-label">
+			<label for="description" data-localized="description"></label>
+		</div>
+		<div class="editor-field">
+            <textarea type="text" class="k-textbox" style="width: 362px" id="description" name="description" />
+		</div>   
+		<div class="editor-label">
+			<label for="sortOrder" data-localized="sortOrder"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="sortOrder" name="sortOrder" />
+		</div>   
+	</div>
+	<div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>

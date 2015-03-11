@@ -1,0 +1,52 @@
+﻿<#@ import namespace="System.Text" #>
+<#@ import namespace="MetadataLoader.Contracts.Generation" #>
+<#@ include file="..\MasterData.GenerationContext.ttinclude"  once="true" #>
+<#
+    IWebGenerationContext context = generationContext;
+	
+    foreach (var model in context.WebModels)
+    {
+        var entityContent = model.Table.Content;
+        context.FileManager.StartNewFile("Filter" + entityContent.CodeName + ".de.js");
+		//resources de
+#>
+define(function () {
+	'use strict';
+
+	var resources = {
+
+		name: 'Name',
+	    fromDate: 'Von Datum',
+	    toDate: 'Bis Datum',
+	    searchTitle: 'erweiterte Suche',
+	    apply: 'Suchen',
+	    cancel: 'Abbruch'
+	};
+
+	return resources;
+});
+<#
+		context.FileManager.EndBlock();
+		context.FileManager.StartNewFile("Filter" + entityContent.CodeNamePlural + ".en.js");
+		//resources en
+#>
+define(function () {
+	'use strict';
+
+	var resources = {
+
+		name: 'Name',
+	    fromDate: 'From Date',
+	    toDate: 'To Date',
+	    searchTitle: 'Advanced search',
+	    apply: 'Apply',
+        cancel: 'Cancel'
+	};
+
+	return resources;
+});
+<#
+		context.FileManager.EndBlock();
+    }
+    context.FileManager.Process();
+#>

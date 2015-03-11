@@ -1,16 +1,14 @@
-﻿using TuevSued.V1.IT.FE.MasterDataModule.API.Models.Settings;
-using TuevSued.V1.IT.FE.MasterDataModule.API.Security;
-using TuevSued.V1.IT.FE.MasterDataModule.API.SystemLog;
-using System;
-using System.Web.Http;
+﻿using System;
 using System.Linq;
-using System.Linq.Dynamic;
-using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule.Settings;
+using System.Web.Http;
+using MasterDataModule.API.Models;
+using MasterDataModule.API.Security;
+using MasterDataModule.Contracts.Entities;
+using MasterDataModule.Contracts.Managers;
 using TuevSued.V1.IT.FE.CoreBase;
 using TuevSued.V1.IT.FE.CoreBase.Localization;
-using TuevSued.V1.IT.CoreBase.Entities.MasterDataModule.DriverLicenceMasterData;
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.Settings
+namespace MasterDataModule.API.Controllers.Settings
 {
     [AuthorizeByPermissions(PermissionTypes = new[] { PermissionTypes.SysTables })]
     public class SysColumnsController : ClientApiWithoutDeleteController<SysColumnModel, SysColumn, int, ISysColumnManager>
@@ -28,7 +26,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.Settings
 
         protected override void ModelToEntity(SysColumnModel model, SysColumn entity, ActionTypes actionType)
         {
-            entity.ReadOnly = model.ReadOnly;
+            entity.ReadOnly = model.readOnly;
         }
 
         protected override void EntityToModel(SysColumn entity, SysColumnModel model)
@@ -37,9 +35,8 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.Settings
                 CultureManager.Current.CurrentCulture);
 
             model.description = String.Format("{0} ({1})", description, entity.Name);
-            model.tableId = entity.SysTableId;
-            model.ReadOnly = entity.ReadOnly;
-           
+            model.sysTableId = entity.SysTableId;
+            model.readOnly = entity.ReadOnly;
         }
 
         protected override IQueryable<SysColumn> GetEntities()

@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using TuevSued.V1.IT.CoreBase.Entities.MasterDataModule;
-using TuevSued.V1.IT.FE.DataAccess.Interfaces;
-using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule.Base;
+using MasterDataModule.Contracts;
+using MasterDataModule.Contracts.Managers.Base;
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Managers.Base
+namespace MasterDataModule.Lib.Managers.Base
 {
     /// <summary>
     /// 
@@ -48,10 +44,8 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Managers.Base
 		{
 			DataContext.AddObject(entity);
 
-            if (SaveChangesAutomatically)
-            {
-                DataContext.SaveChanges();
-            }
+			if(SaveChangesAutomatically)
+				DataContext.SaveChanges();
 		}
 
         /// <summary>
@@ -63,7 +57,6 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Managers.Base
 		{
 			if (entity != null)
 			{
-                DoUpdate(entity);
 				DoRemove(entity);
 
 				if (SaveChangesAutomatically)
@@ -73,19 +66,6 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Managers.Base
 
 			return false;
 		}
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="entity"></param>
-        protected virtual void DoUpdate (TEntity entity)
-        {
-            var temp = entity as ICommonSystemFields;
-            if (temp != null)
-            {
-                temp.ChangeDate = DateTime.Now;
-            }
-        }
 
         /// <summary>
         /// 
@@ -103,7 +83,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Managers.Base
         /// <returns></returns>
 		public bool RemoveEntity(TId id)
 		{
-			var entity = GetByID(id);
+			var entity = GetById(id);
 
 			return RemoveEntity(entity);
 		}
@@ -131,7 +111,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Managers.Base
         /// 
         /// </summary>
         /// <param name="context"></param>
-        protected EntityManager(IEntities context) :
+        public EntityManager(IEntities context) :
             base(context)
         {
         }

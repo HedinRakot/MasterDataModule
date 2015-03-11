@@ -1,11 +1,12 @@
-﻿define(function () {
+define(function () {
 	'use strict';
 
 	var resources = {
-        title: 'Common Masterdata',
-        InsCoreDataProducts: 'Products',
-        EmpEmployees: 'Employees',
-        OrgOrganizationalUnit: 'TSC'
+        CustomerMasterData: 'Customer master data',
+        EmployeeMasterData: 'Employee master data',
+        OrgMasterData: 'Org master data',
+        ProductMasterData: 'Product master data',
+        SystemMasterData: 'System master data',
 	};
 
 	return resources;

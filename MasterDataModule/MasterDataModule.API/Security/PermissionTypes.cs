@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TuevSued.V1.IT.FE.MasterDataModule.API.Security
+﻿namespace MasterDataModule.API.Security
 {
     /// <summary>
     /// 
     /// </summary>
-    public enum PermissionTypes : int
+    public enum PermissionTypes
     {
         /// <summary>
         /// 
@@ -35,6 +29,8 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Security
         /// 
         /// </summary>
         SystemLog = 6,
+
+
         /// <summary>
         /// 
         /// </summary>

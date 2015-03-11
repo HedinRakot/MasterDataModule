@@ -1,12 +1,10 @@
-﻿using TuevSued.V1.IT.FE.MasterDataModule.API.Models.Settings;
-using TuevSued.V1.IT.FE.MasterDataModule.API.Security;
-using TuevSued.V1.IT.FE.MasterDataModule.API.SystemLog;
-using System;
-using System.Web.Http;
-using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule.Settings;
-using TuevSued.V1.IT.CoreBase.Entities.MasterDataModule.DriverLicenceMasterData;
+﻿using System.Web.Http;
+using MasterDataModule.API.Models.Settings;
+using MasterDataModule.API.Security;
+using MasterDataModule.Contracts.Entities;
+using MasterDataModule.Contracts.Managers;
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.Settings
+namespace MasterDataModule.API.Controllers.Settings
 {
     [AuthorizeByPermissions(PermissionTypes = new[] { PermissionTypes.Permissions })]
     public class PermissionsController : ClientApiWithoutDeleteController<PermissionModel, Permission, int, IPermissionManager>
@@ -25,7 +23,6 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers.Settings
         {
             model.name = entity.Name;
             model.systemName = entity.SystemName;
-            model.ChangeDate = entity.ChangeDate;
         }
 
         protected override void ModelToEntity(PermissionModel model, Permission entity, ActionTypes actionType)

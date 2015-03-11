@@ -1,43 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Http;
 using System.Linq.Dynamic;
 using System.Reflection;
-using System.Globalization;
 using System.Runtime.Serialization;
-using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule.Base;
-using TuevSued.V1.IT.CoreBase.Entities.MasterDataModule;
+using System.Text;
+using System.Web.Http;
+using MasterDataModule.Contracts;
+using MasterDataModule.Contracts.Managers.Base;
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
+namespace MasterDataModule.API.Controllers
 {
-	public enum ActionTypes
-	{
-		Add,
-		Update,
-		Delete
-	}
+    public enum ActionTypes
+    {
+        Add,
+        Update,
+        Delete
+    }
 
-	public class ActionSuccessEventArgs<TEntity, TId>: EventArgs
-		where TEntity : IHasId<TId>
-	{
-		public ActionTypes ActionType
-		{
-			get;
-			set;
-		}
+    public class ActionSuccessEventArgs<TEntity, TId> : EventArgs
+        where TEntity : IHasId<TId>
+    {
+        public ActionTypes ActionType { get; set; }
 
-		public TEntity Entity
-		{
-			get;
-			set;
-		}
-	}
+        public TEntity Entity { get; set; }
+    }
 
     [DataContract]
-    public class GridResult<TModel, TId> 
+    public class GridResult<TModel, TId>
         where TModel : IHasId<TId>, new()
     {
         [DataMember]
@@ -52,35 +43,33 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
         where TModel : class, IHasId<TId>, new()
         where TEntity : class, IHasId<TId>
     {
-        protected ReadOnlyClientBaseController(TManager manager)
-		{
-			Manager = manager;
-		}
-        
-        protected abstract void EntityToModel(TEntity entity, TModel model);
-
-        protected TManager Manager
+        public ReadOnlyClientBaseController(TManager manager)
         {
-            get;
-            private set;
+            Manager = manager;
         }
 
-		public virtual IHttpActionResult Get([FromUri]TId id)
+        protected abstract void EntityToModel(TEntity entity, TModel model);
+
+        protected TManager Manager { get; private set; }
+
+        public virtual IHttpActionResult Get([FromUri] TId id)
         {
-			var entity = Manager.GetByID(id);
-			if (entity == null)
-				return NotFound();
+            var entity = Manager.GetById(id);
+            if (entity == null)
+            {
+                return NotFound();
+            }
 
-			var model = new TModel();
-			model.Id = entity.Id;
-			EntityToModel(entity, model);
+            var model = new TModel();
+            model.Id = entity.Id;
+            EntityToModel(entity, model);
 
-			return Ok(model);
-		}		
+            return Ok(model);
+        }
 
-        public virtual IHttpActionResult Get([FromUri]GridArgs args)
+        public virtual IHttpActionResult Get([FromUri] GridArgs args)
         {
-			var entities = GetEntities();
+            var entities = GetEntities();
 
             entities = Sort(entities, args.Sorting);
             entities = Filter(entities, args.Filtering);
@@ -106,15 +95,17 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
             return Ok(result);
         }
 
-		protected virtual IQueryable<TEntity> GetEntities()
-		{
-			return Manager.GetEntities().AsQueryable();
-		}
+        protected virtual IQueryable<TEntity> GetEntities()
+        {
+            return Manager.GetEntities().AsQueryable();
+        }
 
         private static IQueryable<TEntity> Page(IQueryable<TEntity> entities, Paging paging)
         {
             if (paging.Take > 0)
+            {
                 entities = entities.Skip(paging.Skip).Take(paging.Take);
+            }
 
             return entities;
         }
@@ -125,16 +116,22 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
 
             if (!String.IsNullOrEmpty(sorting.Field))
             {
-                var entityType = (typeof(TEntity));
+                var entityType = (typeof (TEntity));
                 var property = entityType.GetProperty(sorting.Field, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);
 
-                if (typeof(IHasId<TId>).IsAssignableFrom(property.PropertyType))
+                if (typeof (IHasId<TId>).IsAssignableFrom(property.PropertyType))
+                {
                     result = entities.OrderBy(sorting.Field + ".ID " + sorting.Direction);
+                }
                 else
+                {
                     result = entities.OrderBy(sorting.Field + " " + sorting.Direction);
+                }
             }
             else
+            {
                 result = entities.OrderBy("ID asc");
+            }
 
             return result;
         }
@@ -151,16 +148,22 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
                     foreach (var filter in compositeFilter.Filters)
                     {
                         if (simpleWhere.Length > 0)
+                        {
                             simpleWhere.Append(" " + ToLinqOperator(compositeFilter.Logic) + " ");
+                        }
 
                         simpleWhere.Append(BuildWhereClause<TEntity>(filter));
                     }
 
                     if (where.Length > 0)
+                    {
                         where.Append(" " + ToLinqOperator(filtering.Logic) + " ");
+                    }
 
                     if (simpleWhere.Length > 0)
-                        where.Append("(" + simpleWhere.ToString() + ")");
+                    {
+                        where.Append("(" + simpleWhere + ")");
+                    }
                 }
 
                 entities = entities.Where(where.ToString());
@@ -171,7 +174,7 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
 
         protected virtual string BuildWhereClause<T>(Filter filter)
         {
-            var entityType = (typeof(T));
+            var entityType = (typeof (T));
             PropertyInfo property;
 
             if (filter.Field.Contains('.'))
@@ -184,9 +187,11 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
                 property = property.PropertyType.GetProperty(childField, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);
             }
             else
+            {
                 property = entityType.GetProperty(filter.Field, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);
+            }
 
-            if (typeof(IEnumerable<IHasId<TId>>).IsAssignableFrom(property.PropertyType))
+            if (typeof (IEnumerable<IHasId<TId>>).IsAssignableFrom(property.PropertyType))
             {
                 switch (filter.Operator.ToLower())
                 {
@@ -196,77 +201,87 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
                         throw new ArgumentException("This operator is not yet supported for this Grid", filter.Operator);
                 }
             }
-            if (typeof(IHasId<TId>).IsAssignableFrom(property.PropertyType))
+            if (typeof (IHasId<TId>).IsAssignableFrom(property.PropertyType))
             {
                 switch (filter.Operator.ToLower())
                 {
                     case "eq":
                     case "neq":
-					    return string.Format("{0}.ID {1} {2}", filter.Field, ToLinqOperator(filter.Operator), filter.Value);
-					case "contains":
-						return string.Format("{0}.ID IN ({1})", filter.Field, filter.Value);
+                        return string.Format("{0}.ID {1} {2}", filter.Field, ToLinqOperator(filter.Operator), filter.Value);
+                    case "contains":
+                        return string.Format("{0}.ID IN ({1})", filter.Field, filter.Value);
                     default:
                         throw new ArgumentException("This operator is not yet supported for this Grid", filter.Operator);
                 }
             }
-            else
+            switch (filter.Operator.ToLower())
             {
-                switch (filter.Operator.ToLower())
-                {
-                    case "eq":
-                    case "neq":
-                    case "gte":
-                    case "gt":
-                    case "lte":
-                    case "lt":
-                        if (typeof(DateTime).IsAssignableFrom(property.PropertyType) ||
-							typeof(DateTime?).IsAssignableFrom(property.PropertyType))
-						{
-							var date = DateTime.Parse(filter.Value, CultureInfo.InvariantCulture).Date;
-							return string.Format(@"{0} {1} DateTime({2}, {3}, {4})",
-								filter.Field, ToLinqOperator(filter.Operator), date.Year, date.Month, date.Day);
-						}
+                case "eq":
+                case "neq":
+                case "gte":
+                case "gt":
+                case "lte":
+                case "lt":
+                    if (typeof (DateTime).IsAssignableFrom(property.PropertyType) ||
+                        typeof (DateTime?).IsAssignableFrom(property.PropertyType))
+                    {
+                        var date = DateTime.Parse(filter.Value, CultureInfo.InvariantCulture).Date;
+                        return string.Format(@"{0} {1} DateTime({2}, {3}, {4})",
+                            filter.Field, ToLinqOperator(filter.Operator), date.Year, date.Month, date.Day);
+                    }
 
-                        if (typeof(int).IsAssignableFrom(property.PropertyType) || typeof(double).IsAssignableFrom(property.PropertyType))
-							return string.Format("{0} {1} {2}", filter.Field, ToLinqOperator(filter.Operator), ToFormattedString(filter.Value));
+                    if (typeof (int).IsAssignableFrom(property.PropertyType) || typeof (double).IsAssignableFrom(property.PropertyType))
+                    {
+                        return string.Format("{0} {1} {2}", filter.Field, ToLinqOperator(filter.Operator), ToFormattedString(filter.Value));
+                    }
 
-						return string.Format("{0} {1} \"{2}\"", filter.Field, ToLinqOperator(filter.Operator), ToFormattedString(filter.Value));
-                    case "startswith":
-						return string.Format("{0}.StartsWith(\"{1}\")", filter.Field, ToFormattedString(filter.Value));
-                    case "endswith":
-						return string.Format("{0}.EndsWith(\"{1}\")", filter.Field, ToFormattedString(filter.Value));
-                    case "contains":
-						return string.Format("{0}.Contains(\"{1}\")", filter.Field, ToFormattedString(filter.Value));
-                    case "doesnotcontain":
-						return string.Format("!{0}.Contains(\"{1}\") OR {0} == NULL", filter.Field, ToFormattedString(filter.Value));
-                    default:
-                        throw new ArgumentException("This operator is not yet supported for this Grid", filter.Operator);
-                }
+                    return string.Format("{0} {1} \"{2}\"", filter.Field, ToLinqOperator(filter.Operator), ToFormattedString(filter.Value));
+                case "startswith":
+                    return string.Format("{0}.StartsWith(\"{1}\")", filter.Field, ToFormattedString(filter.Value));
+                case "endswith":
+                    return string.Format("{0}.EndsWith(\"{1}\")", filter.Field, ToFormattedString(filter.Value));
+                case "contains":
+                    return string.Format("{0}.Contains(\"{1}\")", filter.Field, ToFormattedString(filter.Value));
+                case "doesnotcontain":
+                    return string.Format("!{0}.Contains(\"{1}\") OR {0} == NULL", filter.Field, ToFormattedString(filter.Value));
+                default:
+                    throw new ArgumentException("This operator is not yet supported for this Grid", filter.Operator);
             }
         }
 
-		protected string ToFormattedString(string value)
-		{
-			if (String.IsNullOrWhiteSpace(value))
-				return value;
+        protected string ToFormattedString(string value)
+        {
+            if (String.IsNullOrWhiteSpace(value))
+            {
+                return value;
+            }
 
-			return value.Replace("\"", "\"\"");
-		}
+            return value.Replace("\"", "\"\"");
+        }
 
         private static string ToLinqOperator(string @operator)
         {
             switch (@operator.ToLower())
             {
-                case "eq": return " == ";
-                case "neq": return " != ";
-                case "gte": return " >= ";
-                case "gt": return " > ";
-                case "lte": return " <= ";
-                case "lt": return " < ";
-                case "or": return " || ";
-                case "and": return " && ";
-                default: return null;
+                case "eq":
+                    return " == ";
+                case "neq":
+                    return " != ";
+                case "gte":
+                    return " >= ";
+                case "gt":
+                    return " > ";
+                case "lte":
+                    return " <= ";
+                case "lt":
+                    return " < ";
+                case "or":
+                    return " || ";
+                case "and":
+                    return " && ";
+                default:
+                    return null;
             }
-        }	
+        }
     }
 }

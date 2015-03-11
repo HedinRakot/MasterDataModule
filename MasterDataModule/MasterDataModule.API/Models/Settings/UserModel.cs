@@ -1,8 +1,8 @@
-﻿using TuevSued.V1.IT.FE.MasterDataModule.API.Validation;
-using System.Collections.Generic;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
+using MasterDataModule.API.Validation;
+// ReSharper disable InconsistentNaming
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.API.Models.Settings
+namespace MasterDataModule.API.Models.Settings
 {
     [DataContract]
 	public class UserModel : BaseModel, IPasswordModel

@@ -1,8 +1,8 @@
-﻿using TuevSued.V1.IT.FE.MasterDataModule.API.Models.Settings;
-using System.Web.Http;
+﻿using System.Web.Http;
 using System.Web.Security;
+using MasterDataModule.API.Models;
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
+namespace MasterDataModule.API.Controllers
 {
 	public class LogoutController : ApiController
 	{

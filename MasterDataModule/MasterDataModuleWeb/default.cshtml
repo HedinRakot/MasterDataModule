@@ -1,4 +1,5 @@
 ﻿@using System.Web.Http
+@using MasterDataModule.API
 @{
     Layout = null;
 }
@@ -18,63 +19,58 @@
 <body>
     <script src="/web.libs/require.js"></script>
     <script>
-    require.config({
-        //urlArgs: 'v=@typeof(TuevSued.V1.IT.FE.MasterDataModuleWeb.MasterDataModuleWebApplication).Assembly.GetName().Version.ToString().Replace(".", "")',
-        urlArgs: "bust=" + (new Date()).getTime(),
-        baseUrl: 'web',
-        paths: {
-            underscore: '../web.libs/underscore',
-            jquery: '../web.libs/jquery-2.1.1',
-            jqueryui: '../web.libs/jquery-ui',
-            backbone: '../web.libs/backbone',
-            'backbone.stickit': '../web.libs/backbone.stickit',
-            'globalize': '../web.libs/globalize/globalize',
-            'globalize.de': '../web.libs/globalize/cultures/globalize.culture.de',
-
-            // requirejs modules
-            text: '../web.libs/require.text',
-            lr: '../web.libs/require.localized.resource',
-            t: '../web.libs/require.templated.view',
-            l: '../web.libs/require.localized.view',
-            lk: '../web.libs/require.localized.kendo.widget',
-
-            //short paths
-            base: '../web.components/base',
-            mixins: '../web.components/mixins',
-            kendo: '../web.components/kendo',
-            widgets: '../web.components/widgets',
-            'kendo.backbone': '../web.components/kendo.backbone',
-            'kendo.editors': '../web.components/kendo.editors',
-            'kendo.filters': '../web.components/kendo.filters',
-
-            errors: 'views/errors',
-            home: 'views/home',
-            settings: 'views/settings',
-            DriverLicenceMasterData: 'views/DriverLicenceMasterData',
-            CommonMasterData: 'views/CommonMasterData',
-        },
-        shim: {
-            'backbone': {
-                deps: ['underscore', 'jquery'],
-                exports: 'Backbone'
+        require.config({
+        @*urlArgs: 'v=@typeof(TuevSued.V1.IT.FE.MasterDataModuleWeb.MasterDataModuleWebApplication).Assembly.GetName().Version.ToString().Replace(".", "")',*@
+            urlArgs: "bust=" + (new Date()).getTime(),
+            baseUrl: 'web',
+            paths: {
+                underscore: '../web.libs/underscore',
+                jquery: '../web.libs/jquery-2.1.1',
+                jqueryui: '../web.libs/jquery-ui',
+                backbone: '../web.libs/backbone',
+                'backbone.stickit': '../web.libs/backbone.stickit',
+                'globalize': '../web.libs/globalize/globalize',
+                'globalize.de': '../web.libs/globalize/cultures/globalize.culture.de', // requirejs modules
+                text: '../web.libs/require.text',
+                lr: '../web.libs/require.localized.resource',
+                t: '../web.libs/require.templated.view',
+                l: '../web.libs/require.localized.view',
+                lk: '../web.libs/require.localized.kendo.widget', //short paths
+                base: '../web.components/base',
+                mixins: '../web.components/mixins',
+                kendo: '../web.components/kendo',
+                widgets: '../web.components/widgets',
+                'kendo.backbone': '../web.components/kendo.backbone',
+                'kendo.editors': '../web.components/kendo.editors',
+                'kendo.filters': '../web.components/kendo.filters',
+                errors: 'views/errors',
+                home: 'views/home',
+                settings: 'views/settings',
+                DriverLicenceMasterData: 'views/DriverLicenceMasterData',
+                TechnicalInspectionMasterData: 'views/TechnicalInspectionMasterData',
+                CommonMasterData: 'views/CommonMasterData',
             },
-            'underscore': {
-                exports: '_'
-            },
-            'jquery': {
-                exports: '$'
-            },
-            'jqueryui': {
-                exports: '$'
+            shim: {
+                'backbone': {
+                    deps: ['underscore', 'jquery'],
+                    exports: 'Backbone'
+                },
+                'underscore': {
+                    exports: '_'
+                },
+                'jquery': {
+                    exports: '$'
+                },
+                'jqueryui': {
+                    exports: '$'
+                }
             }
-        }
-    });
-
-    require(['backbone'], function () {
-        Application = {
-            german: localStorage.getItem('language') === 'true',
-            user: new Backbone.Model(@Html.Raw(TuevSued.V1.IT.FE.MasterDataModule.API.JsonHelper.GetCurrentUserJson(GlobalConfiguration.Configuration.DependencyResolver))),
-            tables: new Backbone.Model(@Html.Raw(TuevSued.V1.IT.FE.MasterDataModule.API.JsonHelper.GetSystemTablesJson(GlobalConfiguration.Configuration.DependencyResolver))),
+        });
+        require(['backbone'], function() {
+            Application = {
+                german: localStorage.getItem('language') === 'true',
+                user: new Backbone.Model(@Html.Raw(JsonHelper.GetCurrentUserJson(GlobalConfiguration.Configuration.DependencyResolver))),
+                tables: new Backbone.Model(@Html.Raw(JsonHelper.GetSystemTablesJson(GlobalConfiguration.Configuration.DependencyResolver))),
             canTableItemBeEdit: function (tableName) {
 
                 var self = this,

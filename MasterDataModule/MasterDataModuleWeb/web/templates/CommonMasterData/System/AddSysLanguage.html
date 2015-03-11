@@ -1,0 +1,49 @@
+<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#commonMasterData" data-localized="commonMasterData"></a> / 
+	<a href="#SysLanguages" data-localized="SysLanguages"></a> / <%= title %></span>
+
+<form method="post" class="add-model">
+    <div class="inline-block" style="width: 520px;">
+		<div class="editor-label">
+			<label for="sapId" data-localized="sapId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="sapId" name="sapId" />
+		</div>   
+		<div class="editor-label">
+			<label for="sapIdIso" data-localized="sapIdIso"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="sapIdIso" name="sapIdIso" />
+		</div>   
+		<div class="editor-label">
+			<label for="resourceFileName" data-localized="resourceFileName"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="resourceFileName" name="resourceFileName" />
+		</div>   
+		<div class="editor-label">
+			<label for="isAvailable" data-localized="isAvailable"></label>
+		</div>
+		<div class="editor-field">
+            <input type="checkbox" id="isAvailable" name="isAvailable" />
+		</div>   
+	</div>
+	<div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>

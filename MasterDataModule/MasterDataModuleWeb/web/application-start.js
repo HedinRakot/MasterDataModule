@@ -11,8 +11,9 @@
         else if (xhr.status == 403)
             Backbone.trigger('forbidden');
     });
-
+    
     require(['router', 't!l!master', 'master-footer', 'jqueryui'], function (Router, MasterView, MasterFooterView) {
+
         var masterView = new MasterView({ model: Application.user }),
 			masterFooterView = new MasterFooterView(),
 			router = new Router({ masterView: masterView });
@@ -51,5 +52,10 @@
 
         if (!Backbone.history.fragment)
             router.navigate('home', { replace: true, trigger: true });
+
+        router.on('router:view-created', function (view) {
+            masterView.select(location.hash.split('/')[0]);
+            masterView.showView(view, '.content');
+        });
     });
 });

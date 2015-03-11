@@ -1,8 +1,8 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
+// ReSharper disable InconsistentNaming
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.API.Models.Settings
+namespace MasterDataModule.API.Models.Settings
 {
     [DataContract]
     public class SystemLogRecordModel : BaseModel

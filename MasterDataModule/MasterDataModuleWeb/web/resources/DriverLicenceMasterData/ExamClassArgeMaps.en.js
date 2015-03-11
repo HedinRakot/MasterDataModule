@@ -1,0 +1,15 @@
+define(function () {
+	'use strict';
+
+	var resources = {
+
+		add: 'Add Arge class map',
+	    edit: 'Edit Arge class map',
+	    masterData: 'FE masterdata',
+	    pageTitle: 'Arge class map',
+		examNameArge: 'ARGE exam class',	
+		examClassId: 'Class',	
+	};
+
+	return resources;
+});

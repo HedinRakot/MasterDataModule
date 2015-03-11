@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TuevSued.V1.IT.FE.MasterDataModule.API
+﻿namespace MasterDataModule.API
 {
     public static class Configuration
     {
@@ -16,7 +10,9 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API
                 int result;
 
                 if (!int.TryParse(value, out result))
+                {
                     result = 10;
+                }
 
                 return result;
             }

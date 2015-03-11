@@ -1,13 +1,25 @@
-﻿define(function () {
+define(function () {
 	'use strict';
 
 	var resources = {
-        title: 'FE Masterdata',
-        ExamClasses: 'Exam classes',
-        LegalBasises: 'Legal basises',
-        CoreDataProducts: 'Products',
-        ExamRecognitionTypes: 'Exam recognition types',
-        ReturnReasons: 'Return reasons'
+        MessageLocalizations: 'Error message',
+        ReturnReasons: 'Return reason',
+        ExamPossibleResults: 'Exam result',
+        SchoolInfos: 'Driverschool info',
+        ArgeVersions: 'ARGE-Version',
+        Authorities: 'Authority',
+        Communities: 'Community',
+        ExamRecognitionTypes: 'FE recognition',
+        ExamRooms: 'Exam room',
+        ExamStations: 'FE exam station',
+        Holidays: 'Holiday',
+        ExamClasses: 'Class',
+        Languages: 'FE language',
+        ExamClassArgeMaps: 'Arge class map',
+        LegalBases: 'Legal basis',
+        ExamClassMaps: 'Old class to actual map',
+        ExamConstraints: 'Exam constraints',
+        MeetingPoints: 'Meeting point',
 	};
 
 	return resources;

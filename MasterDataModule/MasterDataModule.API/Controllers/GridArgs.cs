@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http.ModelBinding;
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
+namespace MasterDataModule.API.Controllers
 {
 	public class Paging
 	{

@@ -1,0 +1,103 @@
+<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#commonMasterData" data-localized="commonMasterData"></a> / 
+	<a href="#EmpEmployees" data-localized="EmpEmployees"></a> / <%= title %></span>
+
+<form method="post" class="add-model">
+    <div class="inline-block" style="width: 520px;">
+		<div class="editor-label">
+			<label for="personalNumber" data-localized="personalNumber"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="personalNumber" name="personalNumber" />
+		</div>   
+		<div class="editor-label">
+			<label for="domain" data-localized="domain"></label>
+		</div>
+		<div class="editor-field">
+            <textarea type="text" class="k-textbox" style="width: 362px" id="domain" name="domain" />
+		</div>   
+		<div class="editor-label">
+			<label for="userName" data-localized="userName"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="userName" name="userName" />
+		</div>   
+		<div class="editor-label">
+			<label for="windowsUserName" data-localized="windowsUserName"></label>
+		</div>
+		<div class="editor-field">
+            <textarea type="text" class="k-textbox" style="width: 362px" id="windowsUserName" name="windowsUserName" />
+		</div>   
+		<div class="editor-label">
+			<label for="isSsoAllowed" data-localized="isSsoAllowed"></label>
+		</div>
+		<div class="editor-field">
+            <input type="checkbox" id="isSsoAllowed" name="isSsoAllowed" />
+		</div>   
+		<div class="editor-label">
+			<label for="isEmergencyLoginAllowed" data-localized="isEmergencyLoginAllowed"></label>
+		</div>
+		<div class="editor-field">
+            <input type="checkbox" id="isEmergencyLoginAllowed" name="isEmergencyLoginAllowed" />
+		</div>   
+		<div class="editor-label">
+			<label for="name" data-localized="name"></label>
+		</div>
+		<div class="editor-field">
+            <textarea type="text" class="k-textbox" style="width: 362px" id="name" name="name" />
+		</div>   
+		<div class="editor-label">
+			<label for="middleName" data-localized="middleName"></label>
+		</div>
+		<div class="editor-field">
+            <textarea type="text" class="k-textbox" style="width: 362px" id="middleName" name="middleName" />
+		</div>   
+		<div class="editor-label">
+			<label for="lastName" data-localized="lastName"></label>
+		</div>
+		<div class="editor-field">
+            <textarea type="text" class="k-textbox" style="width: 362px" id="lastName" name="lastName" />
+		</div>   
+		<div class="editor-label">
+			<label for="comment" data-localized="comment"></label>
+		</div>
+		<div class="editor-field">
+            <textarea type="text" class="k-textbox" style="width: 362px" id="comment" name="comment" />
+		</div>   
+		<div class="editor-label">
+			<label for="sexType" data-localized="sexType"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="sexType" name="sexType" />
+		</div>   
+		<div class="editor-label">
+			<label for="title" data-localized="title"></label>
+		</div>
+		<div class="editor-field">
+            <textarea type="text" class="k-textbox" style="width: 362px" id="title" name="title" />
+		</div>   
+		<div class="editor-label">
+			<label for="birthdate" data-localized="birthdate"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="datepicker" id="birthdate" name="birthdate" />
+		</div>   
+	</div>
+	<div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>

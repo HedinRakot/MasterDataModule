@@ -1,0 +1,4 @@
+﻿<#@ template language="C#" debug="false" hostspecific="true" linePragmas="false" #>
+<#@ assembly name="$(SolutionDir)MasterDataModule\Generation\bin\MetadataLoader.Contracts.dll" #>
+<#@ assembly name="$(SolutionDir)MasterDataModule\Generation\bin\MetadataLoader.MSSQL.Contracts.dll" #>
+<#@ assembly name="$(SolutionDir)MasterDataModule\Generation\bin\MetadataLoader.EntityFramework.dll" #>

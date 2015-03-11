@@ -1,0 +1,29 @@
+using MasterDataModule.API.Models;
+using MasterDataModule.Contracts.Entities;
+using MasterDataModule.Contracts.Managers;
+using System;
+
+namespace MasterDataModule.API.Controllers
+{
+    /// <summary>
+    ///     Controller for <see cref="MessageLocalization"/> entity
+    /// </summary>
+    public partial class MessageLocalizationsController: ClientApiController<MessageLocalizationModel, MessageLocalization, int, IMessageLocalizationManager>
+    {
+
+        public MessageLocalizationsController(IMessageLocalizationManager manager): base(manager){}
+
+        protected override void EntityToModel(MessageLocalization entity, MessageLocalizationModel model)
+        {
+            model.validationErrorNumber = entity.ValidationErrorNumber;
+            model.sysLanguageId = entity.SysLanguageId;
+            model.message = entity.Message;
+        }
+        protected override void ModelToEntity(MessageLocalizationModel model, MessageLocalization entity, ActionTypes actionType)
+        {
+            entity.ValidationErrorNumber = model.validationErrorNumber;
+            entity.SysLanguageId = model.sysLanguageId;
+            entity.Message = model.message;
+        }
+    }
+}

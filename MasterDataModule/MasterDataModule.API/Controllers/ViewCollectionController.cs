@@ -1,20 +1,14 @@
-﻿using TuevSued.V1.IT.FE.MasterDataModule.API.Models.Settings;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Http;
-using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule.Settings;
-using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule.DriverLicenceMasterData;
-using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule.Base;
-using TuevSued.V1.IT.CoreBase.Entities.MasterDataModule;
-using TuevSued.V1.IT.CoreBase.Entities.MasterDataModule.DriverLicenceMasterData;
-using TuevSued.V1.IT.CoreBase.Entities.MasterDataModule.Common;
-using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule.Common;
-using TuevSued.V1.IT.FE.Entities.MasterDataModule.Common;
+using MasterDataModule.Contracts;
+using MasterDataModule.Contracts.Entities;
+using MasterDataModule.Contracts.Managers;
+using MasterDataModule.Contracts.Managers.Base;
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
+
+namespace MasterDataModule.API.Controllers
 {
     public class CollectionTypesModel
     {
@@ -29,7 +23,6 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
         public bool sysLanguages { get; set; }
         public bool coreDataProducts { get; set; }
         public bool accountingAreas { get; set; }
-        public bool orgTypes { get; set; }
     }
 
     public class IdNameModel<TId>
@@ -48,16 +41,16 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
         private readonly IReturnReasonManager returnReasonManager;
         private readonly ILegalBasisManager legalBasisManager;
         private readonly ISysLanguageManager sysLanguageManager;
-        private readonly ICoreDataProductManager coreDataProductManager;
+        //private readonly ICoreDataProductManager coreDataProductManager;
         private IOrgAccountingAreaManager accountingAreaManager;
 
         //TODO create Factory
         public ViewCollectionController(IPermissionManager permissionManager, IRoleManager roleManager,
             IExamClassManager examClassManager, ISysTableManager sysTableManager, IReturnReasonManager returnReasonManager,
-            ILegalBasisManager legalBasisManager, ISysLanguageManager sysLanguageManager,
-            ICoreDataProductManager coreDataProductManager, IOrgAccountingAreaManager accountingAreaManager)
+            ILegalBasisManager legalBasisManager, ISysLanguageManager sysLanguageManager, IOrgAccountingAreaManager accountingAreaManager
+            //,ICoreDataProductManager coreDataProductManager
+            )
         {
-            this.accountingAreaManager = accountingAreaManager;
             this.permissionManager = permissionManager;
             this.roleManager = roleManager;
             this.examClassManager = examClassManager;
@@ -65,7 +58,8 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
             this.returnReasonManager = returnReasonManager;
             this.legalBasisManager = legalBasisManager;
             this.sysLanguageManager = sysLanguageManager;
-            this.coreDataProductManager = coreDataProductManager;
+            //this.coreDataProductManager = coreDataProductManager;
+            this.accountingAreaManager = accountingAreaManager;
         }
 
         [Authorize]
@@ -97,27 +91,11 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.API.Controllers
             if (model.sysLanguages)
                 result.Add("sysLanguages", GetViewCollection<SysLanguage, int, ISysLanguageManager>(sysLanguageManager));
 
-            if (model.coreDataProducts)
-                result.Add("coreDataProducts", GetViewCollection<CoreDataProduct, int, ICoreDataProductManager>(coreDataProductManager));
+            //if (model.coreDataProducts)
+            //    result.Add("coreDataProducts", GetViewCollection<CoreDataProduct, int, ICoreDataProductManager>(coreDataProductManager));
 
             if (model.accountingAreas)
-                //result.Add("accountingAreas", GetViewCollection<OrgAccountingArea, int, IOrgAccountingAreaManager>(accountingAreaManager));
-            {
-                result.Add("accountingAreas", new[]
-                {
-                    new {id = 0, accountingArea="accountArea1"},
-                    new {id = 0, accountingArea="accountArea2"}
-                });
-            }
-
-            if (model.orgTypes)
-            {
-                result.Add("orgTypes", new[]
-                {
-                    new {id = 0, name="orgTypes1"},
-                    new {id = 0, name="orgType2"}
-                });
-            }
+                result.Add("accountingAreas", GetViewCollection<OrgAccountingArea, int, IOrgAccountingAreaManager>(accountingAreaManager));
 
             //TODO localize
             if (model.editModeTypes)

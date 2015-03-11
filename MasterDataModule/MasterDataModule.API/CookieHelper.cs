@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web;
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.API
+namespace MasterDataModule.API
 {
 	public static class CookieHelper
     {

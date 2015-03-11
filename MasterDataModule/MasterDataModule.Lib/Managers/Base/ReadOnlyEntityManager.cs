@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
-using TuevSued.V1.IT.FE.DataAccess.Interfaces;
-using TuevSued.V1.IT.FE.DataAccess.Interfaces.MasterDataModule.Base;
-using TuevSued.V1.IT.CoreBase.Entities.MasterDataModule;
+using System.Linq;
+using MasterDataModule.Contracts;
+using MasterDataModule.Contracts.Managers.Base;
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Managers.Base
+namespace MasterDataModule.Lib.Managers.Base
 {
     /// <summary>
-    /// 
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
     /// <typeparam name="TId"></typeparam>
@@ -20,7 +18,6 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Managers.Base
         where TDataContext : class, IEntities
     {
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="context"></param>
         public ReadOnlyEntityManager(TDataContext context)
@@ -29,17 +26,15 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Managers.Base
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public override TEntity GetByID(TId id)
+        public override TEntity GetById(TId id)
         {
             return DataContext.GetSet<TEntity>().SingleOrDefault(o => o.Id.Equals(id));
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <returns></returns>
         public override IEnumerable<TEntity> GetEntities()
@@ -49,21 +44,20 @@ namespace TuevSued.V1.IT.FE.MasterDataModule.Lib.Managers.Base
     }
 
     /// <summary>
-    /// 
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
     /// <typeparam name="TId"></typeparam>
-	public abstract class ReadOnlyEntityManager<TEntity, TId> : ReadOnlyEntityManager<TEntity, TId, IEntities>
+    public abstract class ReadOnlyEntityManager<TEntity, TId> : ReadOnlyEntityManager<TEntity, TId, IEntities>
         where TEntity : class, IHasId<TId>
         where TId : struct, IEquatable<TId>
-	{
+    {
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="context"></param>
-		public ReadOnlyEntityManager(IEntities context) :
-			base(context)
-		{
-		}
-	}
+        public ReadOnlyEntityManager(IEntities context)
+            :
+                base(context)
+        {
+        }
+    }
 }

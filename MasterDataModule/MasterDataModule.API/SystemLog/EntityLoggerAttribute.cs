@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TuevSued.V1.IT.FE.MasterDataModule.API.SystemLog
+namespace MasterDataModule.API.SystemLog
 {
 	public class EntityLoggerAttribute : Attribute
 	{

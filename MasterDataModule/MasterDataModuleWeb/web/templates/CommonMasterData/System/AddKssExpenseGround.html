@@ -1,0 +1,49 @@
+<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#commonMasterData" data-localized="commonMasterData"></a> / 
+	<a href="#KssExpenseGrounds" data-localized="KssExpenseGrounds"></a> / <%= title %></span>
+
+<form method="post" class="add-model">
+    <div class="inline-block" style="width: 520px;">
+		<div class="editor-label">
+			<label for="description" data-localized="description"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="description" name="description" />
+		</div>   
+		<div class="editor-label">
+			<label for="account" data-localized="account"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="account" name="account" />
+		</div>   
+		<div class="editor-label">
+			<label for="insVatTypeId" data-localized="insVatTypeId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="insVatTypeId" name="insVatTypeId" />
+		</div>   
+		<div class="editor-label">
+			<label for="maxAmount" data-localized="maxAmount"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="maxAmount" name="maxAmount" />
+		</div>   
+	</div>
+	<div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>

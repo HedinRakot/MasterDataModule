@@ -7,7 +7,7 @@
     <ProjectGuid>{A61D4577-F99E-4516-8E15-0B63F6894F53}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TuevSued.V1.IT.FE.MasterDataModule.Lib</RootNamespace>
+    <RootNamespace>MasterDataModule.Lib</RootNamespace>
     <AssemblyName>MasterDataModule.Lib</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -29,6 +29,24 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
@@ -63,62 +81,586 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\ASProEntitiesConfiguration.cs" />
-    <Compile Include="Data\ASProEntities.cs" />
-    <Compile Include="Data\Common\EmpEmployeeMapping.cs" />
-    <Compile Include="Data\Common\EmpEmployeeSysRoleRspMapping.cs" />
-    <Compile Include="Data\Common\OrgAccountingAreaMapping.cs" />
-    <Compile Include="Data\Common\OrgOrganizationalUnitMapping.cs" />
-    <Compile Include="Data\Custom.ASProEntities.cs" />
-    <Compile Include="Data\Custom.IASProEntities.cs" />
-    <Compile Include="Data\DriverLicenceMasterData\CoreDataProductClassBasisMapping.cs" />
-    <Compile Include="Data\DriverLicenceMasterData\CoreDataProductLocalizationMapping.cs" />
-    <Compile Include="Data\DriverLicenceMasterData\CoreDataProductMapping.cs" />
-    <Compile Include="Data\Custom.FeEntities.cs" />
-    <Compile Include="Data\Custom.IFeEntities.cs" />
-    <Compile Include="Data\DriverLicenceMasterData\ExamClassInclusiveClassMapping.cs" />
-    <Compile Include="Data\DriverLicenceMasterData\ExamClassRequiredClassMapping.cs" />
-    <Compile Include="Data\DriverLicenceMasterData\ExamRecognitionTypeMapping.cs" />
-    <Compile Include="Data\FeEntities.cs" />
-    <Compile Include="Data\FeEntitiesConfiguration.cs" />
-    <Compile Include="Data\Common\InsCoreDataProductLocalizationMapping.cs" />
-    <Compile Include="Data\Common\InsCoreDataProductMapping.cs" />
-    <Compile Include="Data\DriverLicenceMasterData\LanguageMapping.cs" />
-    <Compile Include="Data\DriverLicenceMasterData\LegalBasisMapping.cs" />
-    <Compile Include="Data\DriverLicenceMasterData\ReturnReasonMapping.cs" />
-    <Compile Include="Data\Common\SysLanguageMapping.cs" />
+    <Compile Include="Data\AsPro.Context.cs">
+      <DependentUpon>AsPro.Context.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\EmpCashPermissionTypeMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\EmpEmployeeMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\EmpEmployeeOrgCostCenterRspMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\EmpEmployeeOrgOrganizationalUnitRspMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\EmpEmployeeSysRoleRspMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\EmpEmployeeTopEmployeeRspMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\EmpOrgAssociationTypeMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\ExpPassengersTypeMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\InsCoreDataProductGroupMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\InsProductCombinationTypeMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\InsProductMaterialGroupMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\InsProductObjectClassMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\InsProductObjectTypeMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\InsProductTypeMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\InsStatisticGroupMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\InsTaxClassMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\InsTaxCodeMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\InsVatTypeMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\KssExpenseGroundMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrdAreaOfWorkMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrdBillingParameterMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrdContactPersonFunctionMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrdCustomerInfoMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrdFederalGroupMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrdFederalStateMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrdOrderCancelationReasonMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrdPartnerRoleMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrdRecognitionAreaOfWorkRspMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrdRecognitionMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrdRecognitionTypeMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrgAccountingAreaMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrgAccountTypeMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrgBankInformationMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrgCostCenterMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrgCostCenterPriceMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrgCostCenterResponsibleEmployeeRspMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrgInformationMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrgInspectionDeviceMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrgRelationshipTypeMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\OrgTypeMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\SysCountryMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\SysLanguageMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\SysLocationMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\SysPostCodeMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\SysRoleMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\Common\SysRoleSysPermissionRspMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\TechnicalInspection\InsAvailableInspectionStepMapping.cs">
+      <DependentUpon>TP.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\TechnicalInspection\InsAvailableInspectionTextMapping.cs">
+      <DependentUpon>TP.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\TechnicalInspection\InsAvailableInspectionTextValueMapping.cs">
+      <DependentUpon>TP.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\TechnicalInspection\InsInspectionStepMapping.cs">
+      <DependentUpon>TP.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\TechnicalInspection\InsNextInspectionMapping.cs">
+      <DependentUpon>TP.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\TechnicalInspection\InsNextSpIntervalMapping.cs">
+      <DependentUpon>TP.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\TechnicalInspection\InsObdStatusMapping.cs">
+      <DependentUpon>TP.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\TechnicalInspection\InsOpticalDefectMapping.cs">
+      <DependentUpon>TP.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\TechnicalInspection\InsPfpInspectionTypePfpPositionRspMapping.cs">
+      <DependentUpon>TP.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\TechnicalInspection\InsPfpPositionMapping.cs">
+      <DependentUpon>TP.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\TechnicalInspection\InsPfpVehicleTypeMapping.cs">
+      <DependentUpon>TP.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\TechnicalInspection\InsProductClassGroupMapping.cs">
+      <DependentUpon>TP.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\TechnicalInspection\InsSeverityTypeMapping.cs">
+      <DependentUpon>TP.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\TechnicalInspection\InsSummaryFieldMapping.cs">
+      <DependentUpon>TP.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\TechnicalInspection\InsUnitCodeMapping.cs">
+      <DependentUpon>TP.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AsPro\TechnicalInspection\InsValidPeriodMapping.cs">
+      <DependentUpon>TP.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl.Context.cs">
+      <DependentUpon>Drl.Context.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Data\Drl\ArgeVersionMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\AuthorityMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\CommunityMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\ExamClassArgeMapMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\ExamClassInclusiveClassMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\ExamClassMapMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\ExamClassMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\ExamClassRequiredClassMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\ExamClassRestrictedClassMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\ExamConstraintExamClassMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\ExamConstraintMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\ExamPossibleResultMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\ExamRecognitionTypeExamClassMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\ExamRecognitionTypeMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\ExamRoomMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\ExamStationExamRecognitionTypeMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\ExamStationMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\HolidayMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\HolidayOrdFederalStateMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\LanguageMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\LegalBasisMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\MeetingPointMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\MeetingPointOrganizationalUnitMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\MessageLocalizationMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\PermissionMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\ReturnReasonMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\RoleMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\SchoolInfoMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\SysColumnMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\SysTableMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\UserMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EntitiesBase.cs" />
+    <Compile Include="Data\AsPro.Context.Configuration.cs" />
+    <Compile Include="Data\AsPro.Context.Custom.cs" />
+    <Compile Include="Data\Drl.Context.Custom.cs" />
+    <Compile Include="Data\Drl.Context.Configuration.cs" />
+    <Compile Include="Managers\AsPro\Common\EmpCashPermissionTypeManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\EmpEmployeeManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\EmpEmployeeOrgCostCenterRspManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\EmpEmployeeOrgOrganizationalUnitRspManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\EmpEmployeeSysRoleRspManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\EmpEmployeeTopEmployeeRspManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\EmpOrgAssociationTypeManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\ExpPassengersTypeManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\InsCoreDataProductGroupManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\InsProductCombinationTypeManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\InsProductMaterialGroupManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\InsProductObjectClassManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\InsProductObjectTypeManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\InsProductTypeManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\InsStatisticGroupManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\InsTaxClassManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\InsTaxCodeManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\InsVatTypeManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\KssExpenseGroundManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrdAreaOfWorkManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrdBillingParameterManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrdContactPersonFunctionManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrdCustomerInfoManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrdFederalGroupManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrdFederalStateManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrdOrderCancelationReasonManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrdPartnerRoleManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrdRecognitionAreaOfWorkRspManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrdRecognitionManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrdRecognitionTypeManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrgAccountingAreaManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrgAccountTypeManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrgBankInformationManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrgCostCenterManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrgCostCenterPriceManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrgCostCenterResponsibleEmployeeRspManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrgInformationManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrgInspectionDeviceManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrgRelationshipTypeManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrgTypeManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\SysCountryManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\SysLanguageManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\SysLocationManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\SysPostCodeManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\SysRoleManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\SysRoleSysPermissionRspManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\InsAvailableInspectionStepManager.cs">
+      <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\InsAvailableInspectionTextManager.cs">
+      <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\InsAvailableInspectionTextValueManager.cs">
+      <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\InsInspectionStepManager.cs">
+      <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\InsNextInspectionManager.cs">
+      <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\InsNextSpIntervalManager.cs">
+      <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\InsObdStatusManager.cs">
+      <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\InsOpticalDefectManager.cs">
+      <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\InsPfpInspectionTypePfpPositionRspManager.cs">
+      <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\InsPfpPositionManager.cs">
+      <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\InsPfpVehicleTypeManager.cs">
+      <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\InsProductClassGroupManager.cs">
+      <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\InsSeverityTypeManager.cs">
+      <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\InsSummaryFieldManager.cs">
+      <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\InsUnitCodeManager.cs">
+      <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\TechnicalInspection\InsValidPeriodManager.cs">
+      <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\Base\EntityManager.cs" />
-    <Compile Include="Managers\Common\EmpEmployeeSysRoleRspManager.cs" />
-    <Compile Include="Managers\Common\EmpEmployeeManager.cs" />
-    <Compile Include="Managers\Common\InsCoreDataProductManager.cs" />
-    <Compile Include="Managers\Common\InsCoreDataProductLocalizationManager.cs" />
-    <Compile Include="Managers\Common\OrgAccountingAreaManager.cs" />
-    <Compile Include="Managers\Common\OrgOrganizationalUnitManager.cs" />
-    <Compile Include="Managers\Common\SysLanguageManager.cs" />
-    <Compile Include="Managers\DriverLicenceMasterData\CoreDataProductClassBasisManager.cs" />
-    <Compile Include="Managers\DriverLicenceMasterData\CoreDataProductLocalizationManager.cs" />
-    <Compile Include="Managers\DriverLicenceMasterData\CoreDataProductManager.cs" />
-    <Compile Include="Managers\DriverLicenceMasterData\ExamRecognitionTypeManager.cs" />
-    <Compile Include="Managers\DriverLicenceMasterData\ReturnReasonManager.cs" />
-    <Compile Include="Managers\DriverLicenceMasterData\LegalBasisManager.cs" />
-    <Compile Include="Managers\DriverLicenceMasterData\ExamClassManager.cs" />
-    <Compile Include="Data\DriverLicenceMasterData\ExamClassMapping.cs" />
-    <Compile Include="Managers\DriverLicenceMasterData\InclusiveExamClassManager.cs" />
     <Compile Include="Managers\Base\Manager.cs" />
     <Compile Include="Managers\Base\ManagerBase.cs" />
-    <Compile Include="Managers\Settings\PermissionManager.cs" />
-    <Compile Include="Data\DriverLicenceMasterData\PermissionMapping.cs" />
     <Compile Include="Managers\Base\ReadOnlyEntityManager.cs" />
     <Compile Include="Managers\Base\ReadOnlyManagerBase.cs" />
-    <Compile Include="Managers\DriverLicenceMasterData\RequiredExamClassManager.cs" />
-    <Compile Include="Managers\Settings\RoleManager.cs" />
-    <Compile Include="Data\DriverLicenceMasterData\RoleMapping.cs" />
-    <Compile Include="Managers\Settings\SysColumnManager.cs" />
-    <Compile Include="Data\DriverLicenceMasterData\SysColumnMapping.cs" />
-    <Compile Include="Managers\Settings\SysTableManager.cs" />
-    <Compile Include="Data\DriverLicenceMasterData\SysTableMapping.cs" />
-    <Compile Include="Managers\Settings\UserManager.cs" />
-    <Compile Include="Data\DriverLicenceMasterData\UserMapping.cs" />
+    <Compile Include="Managers\Drl\ArgeVersionManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\AuthorityManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\CommunityManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ExamClassArgeMapManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ExamClassInclusiveClassManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ExamClassManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ExamClassMapManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ExamClassRequiredClassManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ExamClassRestrictedClassManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ExamConstraintExamClassManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ExamConstraintManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ExamPossibleResultManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ExamRecognitionTypeExamClassManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ExamRecognitionTypeManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ExamRoomManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ExamStationExamRecognitionTypeManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ExamStationManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\HolidayManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\HolidayOrdFederalStateManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\LanguageManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\LegalBasisManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\MeetingPointManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\MeetingPointOrganizationalUnitManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\MessageLocalizationManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\PermissionManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ReturnReasonManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\RoleManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\RoleManager.Custom.cs" />
+    <Compile Include="Managers\Drl\SchoolInfoManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\SysColumnManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\SysTableManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\UserManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\UserManager.Custom.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -126,19 +668,81 @@
       <Project>{c8295c9a-6d2c-4034-8880-bc05b7d83c4f}</Project>
       <Name>CoreBase</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataAccess.Interfaces\DataAccess.Interfaces.csproj">
-      <Project>{016ed372-b2b7-4ab9-934e-8703b7d63e30}</Project>
-      <Name>DataAccess.Interfaces</Name>
+    <ProjectReference Include="..\MasterDataModule.Contracts\MasterDataModule.Contracts.csproj">
+      <Project>{2e9c34f0-651a-4b2f-9a9a-0c6c6ec11f4b}</Project>
+      <Name>MasterDataModule.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Data\AsPro.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AsPro.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Data\AsPro\Common\Common.EntityMapping.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Common.EntityMapping.txt</LastGenOutput>
+    </None>
+    <None Include="Data\AsPro\TechnicalInspection\TP.EntityMapping.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TP.EntityMapping.txt</LastGenOutput>
+    </None>
+    <None Include="Data\Drl.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Drl.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Data\Drl\Drl.EntityMapping.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Drl.EntityMapping.txt</LastGenOutput>
+    </None>
+    <None Include="Managers\AsPro\Common\Common.Managers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Common.Managers.txt</LastGenOutput>
+    </None>
+    <None Include="Managers\AsPro\TechnicalInspection\TP.Managers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TP.Managers.txt</LastGenOutput>
+    </None>
+    <None Include="Managers\Drl\Drl.Managers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Drl.Managers.txt</LastGenOutput>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Data\Enums\" />
-    <Folder Include="Data\Scripts\" />
-    <Folder Include="Data\TechnicalInspection\" />
-    <Folder Include="Managers\TechnicalInspection\" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\AsPro\Common\Common.EntityMapping.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Content>
+    <Content Include="Data\AsPro\TechnicalInspection\TP.EntityMapping.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TP.EntityMapping.tt</DependentUpon>
+    </Content>
+    <Content Include="Data\Drl\Drl.EntityMapping.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Content>
+    <Content Include="Managers\AsPro\Common\Common.Managers.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Content>
+    <Content Include="Managers\AsPro\TechnicalInspection\TP.Managers.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Content>
+    <Content Include="Managers\Drl\Drl.Managers.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
