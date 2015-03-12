@@ -5,7 +5,7 @@ define([
     'l!t!TechnicalInspectionMasterData/InsNextSpIntervalRelationships'
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
-	debugger;
+
 	var view = BaseView.extend({
 
         collectionType: Collection,
