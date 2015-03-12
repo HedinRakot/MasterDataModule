@@ -6,6 +6,7 @@ define(function () {
 		add: 'Add Arge class map',
 	    edit: 'Edit Arge class map',
 	    masterData: 'FE masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Arge class map',
 		examNameArge: 'ARGE exam class',	
 		examClassId: 'Class',	

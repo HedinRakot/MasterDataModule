@@ -60,6 +60,7 @@ define(function () {
 		add: 'Add <#=entityContent.En#>',
 	    edit: 'Edit <#=entityContent.En#>',
 	    masterData: '<#= tableGroupNameEn #>',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: '<#=entityContent.En#>',
 <#
         

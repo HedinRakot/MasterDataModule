@@ -6,6 +6,7 @@ define(function () {
 		add: 'Add Exam result',
 	    edit: 'Edit Exam result',
 	    masterData: 'FE masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Exam result',
 		name: 'Exam Result',	
 		description: 'Description',	

@@ -6,6 +6,7 @@ define(function () {
 		add: 'Add Legal basis',
 	    edit: 'Edit Legal basis',
 	    masterData: 'FE masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Legal basis',
 		name: 'Legal Basis',	
 		description: 'Description',	

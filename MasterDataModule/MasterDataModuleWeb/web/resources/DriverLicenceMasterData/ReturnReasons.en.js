@@ -6,6 +6,7 @@ define(function () {
 		add: 'Add Return reason',
 	    edit: 'Edit Return reason',
 	    masterData: 'FE masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Return reason',
 		name: 'Reason for returning the Driver Licence to Authority',	
 		description: 'Description',	

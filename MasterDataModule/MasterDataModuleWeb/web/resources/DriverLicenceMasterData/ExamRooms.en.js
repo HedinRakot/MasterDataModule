@@ -6,6 +6,7 @@ define(function () {
 		add: 'Add Exam room',
 	    edit: 'Edit Exam room',
 	    masterData: 'FE masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Exam room',
 		roomNumber: 'Exam Room Number',	
 		placeAmount: 'Amount of places',	

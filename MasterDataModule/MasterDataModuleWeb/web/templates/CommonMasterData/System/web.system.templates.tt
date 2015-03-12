@@ -4,7 +4,7 @@
 <#
     tableGroup = "Common";
     tableSubGroup = "System";
-	var masterDataName = "commonMasterData";
+	var masterDataName = "CommonMasterData";
     const string filesDir = @"..\..\..\..\..\Generation\MasterDataModule.Generation\Declarations\";
 #>
 <#@ include file="..\..\..\..\..\Generation\MasterDataModule.Generation\TTMasterData\MasterData.GenerationContext.ttinclude" once="true"#>

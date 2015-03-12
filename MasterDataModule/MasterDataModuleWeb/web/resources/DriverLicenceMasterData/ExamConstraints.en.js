@@ -6,6 +6,7 @@ define(function () {
 		add: 'Add Exam constraints',
 	    edit: 'Edit Exam constraints',
 	    masterData: 'FE masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Exam constraints',
 		name: 'Constraint Name',	
 		description: 'Description',	

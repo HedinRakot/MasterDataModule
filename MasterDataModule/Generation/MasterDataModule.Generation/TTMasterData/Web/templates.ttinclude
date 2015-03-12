@@ -10,7 +10,7 @@
 		//Model
 #>
 <span class="breadcrumbs">
-<a href="#<#=masterDataName#>" data-localized="<#=masterDataName#>"></a> / <label data-localized="title"></label>
+<a href="#<#=masterDataName#>" data-localized="masterData"></a> / <label data-localized="pageTitle"></label>
 </span>
 
 <div class="filter"></div>

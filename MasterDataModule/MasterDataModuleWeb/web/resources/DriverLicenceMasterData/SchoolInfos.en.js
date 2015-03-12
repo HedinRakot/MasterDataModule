@@ -6,6 +6,7 @@ define(function () {
 		add: 'Add Driverschool info',
 	    edit: 'Edit Driverschool info',
 	    masterData: 'FE masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Driverschool info',
 		text: 'Text',	
 	};

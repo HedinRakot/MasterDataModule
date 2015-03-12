@@ -6,6 +6,7 @@ define(function () {
 		add: 'Add Holiday',
 	    edit: 'Edit Holiday',
 	    masterData: 'FE masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Holiday',
 		name: 'Message language',	
 		date: 'Validation error number',	

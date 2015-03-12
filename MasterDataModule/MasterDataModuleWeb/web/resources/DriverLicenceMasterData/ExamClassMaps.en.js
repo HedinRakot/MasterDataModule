@@ -6,6 +6,7 @@ define(function () {
 		add: 'Add Old class to actual map',
 	    edit: 'Edit Old class to actual map',
 	    masterData: 'FE masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Old class to actual map',
 		examClassIdOld: 'Actual class',	
 		examClassIdActual: 'Class old',	

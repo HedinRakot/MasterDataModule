@@ -6,6 +6,7 @@ define(function () {
 		add: 'Add Class',
 	    edit: 'Edit Class',
 	    masterData: 'FE masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Class',
 		name: 'Class',	
 		description: 'Description',	

@@ -2,7 +2,7 @@
 <#@ output extension=".txt"#>
 <#@ include file="..\..\..\..\..\Generation\MasterDataModule.Generation\TTMasterData\ASPro.Settings.ttinclude" once="true"#>
 <#
-	var masterDataName = "commonMasterData";
+	var masterDataName = "CommonMasterData";
 	tableGroup = "Common";
 	tableSubGroup = "Customer";
     const string filesDir = @"..\..\..\..\..\Generation\MasterDataModule.Generation\Declarations\";

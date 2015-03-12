@@ -11,8 +11,8 @@
 #>
 <% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
 
-<span class="breadcrumbs"><a href="#<#=masterDataName#>" data-localized="<#=masterDataName#>"></a> / 
-	<a href="#<#=entityContent.CodeNamePlural#>" data-localized="<#=entityContent.CodeNamePlural#>"></a> / <%= title %></span>
+<span class="breadcrumbs"><a href="#<#=masterDataName#>" data-localized="masterData"></a> / 
+	<a href="#<#=entityContent.CodeNamePlural#>" data-localized="pageTitle"></a> / <%= title %></span>
 
 <form method="post" class="add-model">
     <div class="inline-block" style="width: 520px;">

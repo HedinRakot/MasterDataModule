@@ -6,6 +6,7 @@ define(function () {
 		add: 'Add Authority',
 	    edit: 'Edit Authority',
 	    masterData: 'FE masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Authority',
 		authorityNumber: 'Authority Number',	
 		name: 'Authority Name',	

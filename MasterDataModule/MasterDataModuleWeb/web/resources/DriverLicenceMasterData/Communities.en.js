@@ -6,6 +6,7 @@ define(function () {
 		add: 'Add Community',
 	    edit: 'Edit Community',
 	    masterData: 'FE masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Community',
 		driverSchoolId: 'Leading school',	
 	};

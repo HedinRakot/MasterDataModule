@@ -2906,8 +2906,26 @@
       <DependentUpon>web.tp.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\base-router.js" />
+    <Content Include="web\router-customer-masterdata.js">
+      <DependentUpon>web.customer.router.template.tt</DependentUpon>
+    </Content>
     <Content Include="web\router-drl-masterdata.js">
       <DependentUpon>web.drl.router.template.tt</DependentUpon>
+    </Content>
+    <Content Include="web\router-employee-masterdata.js">
+      <DependentUpon>web.employee.router.template.tt</DependentUpon>
+    </Content>
+    <Content Include="web\router-org-masterdata.js">
+      <DependentUpon>web.org.router.template.tt</DependentUpon>
+    </Content>
+    <Content Include="web\router-product-masterdata.js">
+      <DependentUpon>web.product.router.template.tt</DependentUpon>
+    </Content>
+    <Content Include="web\router-system-masterdata.js">
+      <DependentUpon>web.system.router.template.tt</DependentUpon>
+    </Content>
+    <Content Include="web\router-tp-masterdata.js">
+      <DependentUpon>web.tp.router.template.tt</DependentUpon>
     </Content>
     <Content Include="web\router.js" />
     <Content Include="web\templates\CommonMasterData\CommonMasterData.html" />
@@ -5135,6 +5153,36 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="web\web.employee.router.template.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web.employee.router.template.tt</DependentUpon>
+    </Content>
+    <Content Include="web\web.system.router.template.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web.system.router.template.tt</DependentUpon>
+    </Content>
+    <Content Include="web\web.org.router.template.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web.org.router.template.tt</DependentUpon>
+    </Content>
+    <Content Include="web\web.product.router.template.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web.product.router.template.tt</DependentUpon>
+    </Content>
+    <Content Include="web\web.customer.router.template.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web.customer.router.template.tt</DependentUpon>
+    </Content>
+    <Content Include="web\web.tp.router.template.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web.tp.router.template.tt</DependentUpon>
+    </Content>
     <Content Include="web\web.drl.router.template.txt">
       <DependentUpon>web.drl.router.template.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -5554,6 +5602,30 @@
     <Content Include="web\web.drl.router.template.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>web.drl.router.template.txt</LastGenOutput>
+    </Content>
+    <Content Include="web\web.tp.router.template.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>web.tp.router.template.txt</LastGenOutput>
+    </Content>
+    <Content Include="web\web.customer.router.template.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>web.customer.router.template.txt</LastGenOutput>
+    </Content>
+    <Content Include="web\web.product.router.template.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>web.product.router.template.txt</LastGenOutput>
+    </Content>
+    <Content Include="web\web.org.router.template.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>web.org.router.template.txt</LastGenOutput>
+    </Content>
+    <Content Include="web\web.system.router.template.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>web.system.router.template.txt</LastGenOutput>
+    </Content>
+    <Content Include="web\web.employee.router.template.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>web.employee.router.template.txt</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

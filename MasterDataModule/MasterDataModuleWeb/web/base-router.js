@@ -9,7 +9,7 @@
 	        if (!!collectionTypes) {
 	            require(['models/view-collection'], function (ViewCollection) {
 	                ViewCollection.load(collectionTypes).done(function (viewCollection) {
-	                    debugger;
+
 	                    options = _.extend({}, options, viewCollection.toJSON());
 	                    d.resolve(new View(options));
 	                });

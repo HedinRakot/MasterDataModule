@@ -2,7 +2,7 @@
 <#@ output extension=".txt"#>
 <#@ include file="..\..\..\..\Generation\MasterDataModule.Generation\TTMasterData\Drl.Settings.ttinclude" once="true"#>
 <#
-	var masterDataName = "driverLicenceMasterData";
+	var masterDataName = "DriverLicenceMasterData";
     const string filesDir = @"..\..\..\..\Generation\MasterDataModule.Generation\Declarations\";
 #>
 <#@ include file="..\..\..\..\Generation\MasterDataModule.Generation\TTMasterData\MasterData.GenerationContext.ttinclude" once="true"#>
