@@ -97,6 +97,7 @@
     <None Include="TTMasterData\JsonHelper.TableMapping.ttinclude" />
     <None Include="TTMasterData\UnityConfiguration.Manager.ttinclude" />
     <None Include="TTMasterData\Web\add.view.ttinclude" />
+    <None Include="TTMasterData\Web\router.ttinclude" />
     <None Include="TTMasterData\Web\menu.resources.ttinclude" />
     <None Include="TTMasterData\Web\menu.template.ttinclude" />
     <None Include="TTMasterData\Web\filter.resources.ttinclude" />

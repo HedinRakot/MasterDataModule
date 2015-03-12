@@ -1,16 +1,17 @@
 ﻿define([
-], function () {
+    'base-router'
+], function (BaseRouter) {
 	'use strict';
     
 	var factory = {
 	    
-	    getAllMasterDataRoutes: function()
+	    getAllMasterDataRoutes: function(baseRouter)
 	    {
 	        var routes = {
 
-	            'ExamClasses': _.partial(showView, 'l!t!DriverLicenceMasterData/ExamClasses'),
-	            'ExamClasses/create': _.partial(showViewWithModel, 'l!t!DriverLicenceMasterData/AddExamClass', 'models/DriverLicenceMasterData/ExamClass', false),
-	            'ExamClasses/:id': _.partial(showViewWithModel, 'l!t!DriverLicenceMasterData/AddExamClass', 'models/DriverLicenceMasterData/ExamClass', false),
+	            'ExamClasses': _.partial(BaseRouter.showView, baseRouter, 'l!t!DriverLicenceMasterData/ExamClasses'),
+	            'ExamClasses/create': _.partial(BaseRouter.showViewWithModel, baseRouter, 'l!t!DriverLicenceMasterData/AddExamClass', 'models/DriverLicenceMasterData/ExamClass', false),
+	            'ExamClasses/:id': _.partial(BaseRouter.showViewWithModel, baseRouter, 'l!t!DriverLicenceMasterData/AddExamClass', 'models/DriverLicenceMasterData/ExamClass', false),
 
 	            //'LegalBasises': _.partial(showViewWithModel, 'l!t!DriverLicenceMasterData/LegalBasises/LegalBasises', { examClasses: true }),
 	            //'LegalBasises/create': _.partial(showViewWithModel, 'l!t!DriverLicenceMasterData/LegalBasises/AddLegalBasis'),

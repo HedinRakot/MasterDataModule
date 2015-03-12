@@ -1,0 +1,42 @@
+﻿<#@ import namespace="System.Text" #>
+<#@ import namespace="MetadataLoader.Contracts.Generation" #>
+<#@ include file="..\MasterData.GenerationContext.ttinclude"  once="true" #>
+
+<#
+    IWebGenerationContext context = generationContext;
+    context.FileManager.StartNewFile("router-" + routerName + ".js");
+#>
+define([
+    'base-router'
+], function (BaseRouter) {
+	'use strict';
+    
+	var factory = {
+	    
+	    getAllMasterDataRoutes: function(baseRouter)
+	    {
+	        var routes = {
+<#
+    foreach (var model in context.WebModels)
+    {
+        var entityContent = model.Table.Content;
+		//Model
+#>
+				'<#=entityContent.CodeNamePlural#>': _.partial(BaseRouter.showView, baseRouter, 'l!t!<#=relatedPath #>/<#=entityContent.CodeNamePlural#>'),
+	            '<#=entityContent.CodeNamePlural#>/create': _.partial(BaseRouter.showViewWithModel, baseRouter, 'l!t!<#=relatedPath #>/Add<#=entityContent.CodeName#>', 'models/<#=relatedPath #>/<#=entityContent.CodeName#>', false),
+	            '<#=entityContent.CodeNamePlural#>/:id': _.partial(BaseRouter.showViewWithModel, baseRouter, 'l!t!<#=relatedPath #>/Add<#=entityContent.CodeName#>', 'models/<#=relatedPath #>/<#=entityContent.CodeName#>', false),
+<#
+    }
+#>
+			}
+        
+	        return routes;
+	    }
+	};
+
+	return factory;
+});
+<#	
+	context.FileManager.EndBlock();
+    context.FileManager.Process();
+#>

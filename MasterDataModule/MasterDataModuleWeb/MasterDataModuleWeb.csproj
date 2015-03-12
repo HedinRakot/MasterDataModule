@@ -2905,7 +2905,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>web.tp.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\router.custom.js" />
+    <Content Include="web\base-router.js" />
+    <Content Include="web\router-drl-masterdata.js">
+      <DependentUpon>web.drl.router.template.tt</DependentUpon>
+    </Content>
+    <Content Include="web\router.js" />
     <Content Include="web\templates\CommonMasterData\CommonMasterData.html" />
     <Content Include="web\templates\CommonMasterData\Customer\AddInsTaxClass.html">
       <DependentUpon>web.customer.add.templates.tt</DependentUpon>
@@ -4759,7 +4763,7 @@
     <Content Include="web\views\Home\Login.js" />
     <Content Include="web\master-footer.js" />
     <Content Include="web\master.js" />
-    <Content Include="web\router.js" />
+    <Content Include="web\router-master-data.js" />
     <Content Include="web\views\Settings\AddRole.js" />
     <Content Include="web\views\Settings\AddUser.js" />
     <Content Include="web\views\Settings\ChangePassword.js" />
@@ -5130,6 +5134,11 @@
     <Content Include="web.libs\json2.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
+    </Content>
+    <Content Include="web\web.drl.router.template.txt">
+      <DependentUpon>web.drl.router.template.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -5542,6 +5551,10 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="web\web.drl.router.template.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>web.drl.router.template.txt</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MasterDataModule.API\MasterDataModule.API.csproj">
