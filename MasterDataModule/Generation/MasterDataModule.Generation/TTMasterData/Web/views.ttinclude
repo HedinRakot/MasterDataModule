@@ -36,10 +36,13 @@ define([
         {
             var propContent = property.Column.Content;
             var columnInfo = GetColumnInfo(context, property);
+			if (propContent.ShowInGrid)
+            {
 #>
 				{ field: '<#=property.Name#>', title: this.resources.<#=property.Name#> <#=columnInfo#>},
 <#
-        }
+			}
+		}
 #>
 			];
 		}
