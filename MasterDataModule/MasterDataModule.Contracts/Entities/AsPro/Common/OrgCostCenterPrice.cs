@@ -18,10 +18,6 @@ namespace MasterDataModule.Contracts.Entities
         public static class Fields
         {
             /// <summary>
-            /// Column name 'ID' for property <see cref="OrgCostCenterPrice.Id"/>
-            /// </summary>
-            public static readonly string Id = "ID";
-            /// <summary>
             /// Column name 'INS_CORE_DATA_PRODUCT_ID' for property <see cref="OrgCostCenterPrice.InsCoreDataProductId"/>
             /// </summary>
             public static readonly string InsCoreDataProductId = "INS_CORE_DATA_PRODUCT_ID";
@@ -105,10 +101,13 @@ namespace MasterDataModule.Contracts.Entities
             /// Column name 'ORG_ACCOUNTING_AREA_ID' for property <see cref="OrgCostCenterPrice.OrgAccountingAreaId"/>
             /// </summary>
             public static readonly string OrgAccountingAreaId = "ORG_ACCOUNTING_AREA_ID";
+            /// <summary>
+            /// Column name 'ID' for property <see cref="OrgCostCenterPrice.Id"/>
+            /// </summary>
+            public static readonly string Id = "ID";
           
         }
         #endregion
-        public int Id{ get; set; }
         public int InsCoreDataProductId{ get; set; }
         public string SalesOffice{ get; set; }
         public string SalesGroup{ get; set; }
@@ -130,6 +129,7 @@ namespace MasterDataModule.Contracts.Entities
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
         public int? OrgAccountingAreaId{ get; set; }
+        public int Id{ get; set; }
         DateTime? IIntervalFields.FromDate
         {
             get { return FromDate; }

@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(OrdBillingParameter.Fields.Id)
-                .IsRequired();
-
             Property(t => t.SapId)
                 .HasColumnName(OrdBillingParameter.Fields.SapId)
                 .IsRequired()
@@ -61,6 +57,19 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.Source)
                 .HasColumnName(OrdBillingParameter.Fields.Source)
                 .HasMaxLength(4);
+
+            Property(t => t.Id)
+                .HasColumnName(OrdBillingParameter.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+                .IsRequired();
+
+            Property(t => t.FromDate)
+                .HasColumnName(OrdBillingParameter.Fields.FromDate)
+                .IsRequired();
+
+            Property(t => t.ToDate)
+                .HasColumnName(OrdBillingParameter.Fields.ToDate)
+                .IsRequired();
 
 
             //Relationships

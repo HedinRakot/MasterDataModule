@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(OrgAccountingArea.Fields.Id)
-                .IsRequired();
-
             Property(t => t.AccountingArea)
                 .HasColumnName(OrgAccountingArea.Fields.AccountingArea)
                 .IsRequired()
@@ -61,6 +57,11 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.Source)
                 .HasColumnName(OrgAccountingArea.Fields.Source)
                 .HasMaxLength(4);
+
+            Property(t => t.Id)
+                .HasColumnName(OrgAccountingArea.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+                .IsRequired();
 
 
             //Relationships

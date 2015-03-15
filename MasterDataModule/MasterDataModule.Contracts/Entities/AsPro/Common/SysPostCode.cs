@@ -17,10 +17,6 @@ namespace MasterDataModule.Contracts.Entities
         public static class Fields
         {
             /// <summary>
-            /// Column name 'ID' for property <see cref="SysPostCode.Id"/>
-            /// </summary>
-            public static readonly string Id = "ID";
-            /// <summary>
             /// Column name 'POST_CODE' for property <see cref="SysPostCode.PostCode"/>
             /// </summary>
             public static readonly string PostCode = "POST_CODE";
@@ -64,10 +60,13 @@ namespace MasterDataModule.Contracts.Entities
             /// Column name 'SOURCE' for property <see cref="SysPostCode.Source"/>
             /// </summary>
             public static readonly string Source = "SOURCE";
+            /// <summary>
+            /// Column name 'ID' for property <see cref="SysPostCode.Id"/>
+            /// </summary>
+            public static readonly string Id = "ID";
           
         }
         #endregion
-        public int Id{ get; set; }
         public string PostCode{ get; set; }
         public string City{ get; set; }
         public string Street{ get; set; }
@@ -79,6 +78,7 @@ namespace MasterDataModule.Contracts.Entities
         public int? CreateEmployeeId{ get; set; }
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
+        public int Id{ get; set; }
                 
         
         /// <summary>

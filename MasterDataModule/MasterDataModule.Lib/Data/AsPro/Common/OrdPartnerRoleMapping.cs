@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(OrdPartnerRole.Fields.Id)
-                .IsRequired();
-
             Property(t => t.SapQualifier)
                 .HasColumnName(OrdPartnerRole.Fields.SapQualifier)
                 .IsUnicode()
@@ -56,6 +52,11 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.Source)
                 .HasColumnName(OrdPartnerRole.Fields.Source)
                 .HasMaxLength(4);
+
+            Property(t => t.Id)
+                .HasColumnName(OrdPartnerRole.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+                .IsRequired();
 
 
             //Relationships

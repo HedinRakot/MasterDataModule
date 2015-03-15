@@ -17,10 +17,6 @@ namespace MasterDataModule.Contracts.Entities
         public static class Fields
         {
             /// <summary>
-            /// Column name 'ID' for property <see cref="OrgInspectionDevice.Id"/>
-            /// </summary>
-            public static readonly string Id = "ID";
-            /// <summary>
             /// Column name 'DEBITOR_CUSTOMER_NUMBER' for property <see cref="OrgInspectionDevice.DebitorCustomerNumber"/>
             /// </summary>
             public static readonly string DebitorCustomerNumber = "DEBITOR_CUSTOMER_NUMBER";
@@ -100,10 +96,13 @@ namespace MasterDataModule.Contracts.Entities
             /// Column name 'SOURCE' for property <see cref="OrgInspectionDevice.Source"/>
             /// </summary>
             public static readonly string Source = "SOURCE";
+            /// <summary>
+            /// Column name 'ID' for property <see cref="OrgInspectionDevice.Id"/>
+            /// </summary>
+            public static readonly string Id = "ID";
           
         }
         #endregion
-        public int Id{ get; set; }
         public string DebitorCustomerNumber{ get; set; }
         public string Identification{ get; set; }
         public string NewIdentification{ get; set; }
@@ -124,6 +123,7 @@ namespace MasterDataModule.Contracts.Entities
         public int? CreateEmployeeId{ get; set; }
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
+        public int Id{ get; set; }
                 
         
         /// <summary>

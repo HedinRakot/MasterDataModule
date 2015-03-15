@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Kunde-Rechnungsintervalle',
 		sapId: 'SAP Kennung',	
 		description: 'Beschreibungsfeld',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

@@ -17,10 +17,6 @@ namespace MasterDataModule.Contracts.Entities
         public static class Fields
         {
             /// <summary>
-            /// Column name 'ID' for property <see cref="InsProductMaterialGroup.Id"/>
-            /// </summary>
-            public static readonly string Id = "ID";
-            /// <summary>
             /// Column name 'DESCRIPTION' for property <see cref="InsProductMaterialGroup.Description"/>
             /// </summary>
             public static readonly string Description = "DESCRIPTION";
@@ -60,10 +56,13 @@ namespace MasterDataModule.Contracts.Entities
             /// Column name 'SOURCE' for property <see cref="InsProductMaterialGroup.Source"/>
             /// </summary>
             public static readonly string Source = "SOURCE";
+            /// <summary>
+            /// Column name 'ID' for property <see cref="InsProductMaterialGroup.Id"/>
+            /// </summary>
+            public static readonly string Id = "ID";
           
         }
         #endregion
-        public int Id{ get; set; }
         public string Description{ get; set; }
         public string SapId{ get; set; }
         public DateTime? CreateDate{ get; set; }
@@ -74,6 +73,7 @@ namespace MasterDataModule.Contracts.Entities
         public int? CreateEmployeeId{ get; set; }
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
+        public int Id{ get; set; }
                 
         
         /// <summary>

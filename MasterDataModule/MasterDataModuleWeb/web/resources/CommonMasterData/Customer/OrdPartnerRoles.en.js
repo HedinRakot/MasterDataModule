@@ -6,6 +6,7 @@ define(function () {
 		add: 'Add Parnter role',
 	    edit: 'Edit Parnter role',
 	    masterData: 'Common masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Parnter role',
 		sapQualifier: 'SAP ID',	
 	};

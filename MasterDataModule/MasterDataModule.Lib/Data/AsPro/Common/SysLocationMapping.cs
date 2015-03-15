@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(SysLocation.Fields.Id)
-                .IsRequired();
-
             Property(t => t.LocationCode)
                 .HasColumnName(SysLocation.Fields.LocationCode)
                 .IsRequired()
@@ -76,6 +72,11 @@ namespace MasterDataModule.Lib.Data
 
             Property(t => t.ToDate)
                 .HasColumnName(SysLocation.Fields.ToDate)
+                .IsRequired();
+
+            Property(t => t.Id)
+                .HasColumnName(SysLocation.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
                 .IsRequired();
 
 

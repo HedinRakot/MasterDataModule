@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(InsVatType.Fields.Id)
-                .IsRequired();
-
             Property(t => t.Description)
                 .HasColumnName(InsVatType.Fields.Description)
                 .IsUnicode()
@@ -63,6 +59,11 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.Source)
                 .HasColumnName(InsVatType.Fields.Source)
                 .HasMaxLength(4);
+
+            Property(t => t.Id)
+                .HasColumnName(InsVatType.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+                .IsRequired();
 
 
             //Relationships

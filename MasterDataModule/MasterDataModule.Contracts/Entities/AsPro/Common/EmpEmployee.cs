@@ -18,10 +18,6 @@ namespace MasterDataModule.Contracts.Entities
         public static class Fields
         {
             /// <summary>
-            /// Column name 'ID' for property <see cref="EmpEmployee.Id"/>
-            /// </summary>
-            public static readonly string Id = "ID";
-            /// <summary>
             /// Column name 'PERSONAL_NUMBER' for property <see cref="EmpEmployee.PersonalNumber"/>
             /// </summary>
             public static readonly string PersonalNumber = "PERSONAL_NUMBER";
@@ -121,10 +117,13 @@ namespace MasterDataModule.Contracts.Entities
             /// Column name 'TO_DATE' for property <see cref="EmpEmployee.ToDate"/>
             /// </summary>
             public static readonly string ToDate = "TO_DATE";
+            /// <summary>
+            /// Column name 'ID' for property <see cref="EmpEmployee.Id"/>
+            /// </summary>
+            public static readonly string Id = "ID";
           
         }
         #endregion
-        public int Id{ get; set; }
         public string PersonalNumber{ get; set; }
         public string Domain{ get; set; }
         public string UserName{ get; set; }
@@ -150,6 +149,7 @@ namespace MasterDataModule.Contracts.Entities
         public string Source{ get; set; }
         public DateTime FromDate{ get; set; }
         public DateTime ToDate{ get; set; }
+        public int Id{ get; set; }
         DateTime? IIntervalFields.FromDate
         {
             get { return FromDate; }

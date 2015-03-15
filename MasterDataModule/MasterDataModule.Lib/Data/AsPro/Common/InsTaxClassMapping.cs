@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(InsTaxClass.Fields.Id)
-                .IsRequired();
-
             Property(t => t.TaxClass)
                 .HasColumnName(InsTaxClass.Fields.TaxClass)
                 .IsRequired()
@@ -56,6 +52,11 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.Source)
                 .HasColumnName(InsTaxClass.Fields.Source)
                 .HasMaxLength(4);
+
+            Property(t => t.Id)
+                .HasColumnName(InsTaxClass.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+                .IsRequired();
 
 
             //Relationships

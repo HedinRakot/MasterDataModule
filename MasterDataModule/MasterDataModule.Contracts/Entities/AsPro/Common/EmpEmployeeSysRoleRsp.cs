@@ -18,10 +18,6 @@ namespace MasterDataModule.Contracts.Entities
         public static class Fields
         {
             /// <summary>
-            /// Column name 'ID' for property <see cref="EmpEmployeeSysRoleRsp.Id"/>
-            /// </summary>
-            public static readonly string Id = "ID";
-            /// <summary>
             /// Column name 'EMP_EMPLOYEE_ID' for property <see cref="EmpEmployeeSysRoleRsp.EmpEmployeeId"/>
             /// </summary>
             public static readonly string EmpEmployeeId = "EMP_EMPLOYEE_ID";
@@ -69,10 +65,13 @@ namespace MasterDataModule.Contracts.Entities
             /// Column name 'TO_DATE' for property <see cref="EmpEmployeeSysRoleRsp.ToDate"/>
             /// </summary>
             public static readonly string ToDate = "TO_DATE";
+            /// <summary>
+            /// Column name 'ID' for property <see cref="EmpEmployeeSysRoleRsp.Id"/>
+            /// </summary>
+            public static readonly string Id = "ID";
           
         }
         #endregion
-        public int Id{ get; set; }
         public int EmpEmployeeId{ get; set; }
         public int SysRoleId{ get; set; }
         public DateTime? CreateDate{ get; set; }
@@ -85,6 +84,7 @@ namespace MasterDataModule.Contracts.Entities
         public string Source{ get; set; }
         public DateTime FromDate{ get; set; }
         public DateTime ToDate{ get; set; }
+        public int Id{ get; set; }
         DateTime? IIntervalFields.FromDate
         {
             get { return FromDate; }

@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(OrdOrderCancelationReason.Fields.Id)
-                .IsRequired();
-
             Property(t => t.CancelationReasonText)
                 .HasColumnName(OrdOrderCancelationReason.Fields.CancelationReasonText)
                 .IsUnicode()
@@ -56,6 +52,11 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.Source)
                 .HasColumnName(OrdOrderCancelationReason.Fields.Source)
                 .HasMaxLength(4);
+
+            Property(t => t.Id)
+                .HasColumnName(OrdOrderCancelationReason.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+                .IsRequired();
 
 
             //Relationships

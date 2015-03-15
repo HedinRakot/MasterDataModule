@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(OrgBankInformation.Fields.Id)
-                .IsRequired();
-
             Property(t => t.BankName)
                 .HasColumnName(OrgBankInformation.Fields.BankName)
                 .IsUnicode()
@@ -72,6 +68,11 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.TransferXValue)
                 .HasColumnName(OrgBankInformation.Fields.TransferXValue)
                 .HasMaxLength(4);
+
+            Property(t => t.Id)
+                .HasColumnName(OrgBankInformation.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+                .IsRequired();
 
 
             //Relationships

@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(OrdRecognitionAreaOfWorkRsp.Fields.Id)
-                .IsRequired();
-
             Property(t => t.OrdRecognitionId)
                 .HasColumnName(OrdRecognitionAreaOfWorkRsp.Fields.OrdRecognitionId)
                 .IsRequired();
@@ -70,6 +66,11 @@ namespace MasterDataModule.Lib.Data
 
             Property(t => t.ToDate)
                 .HasColumnName(OrdRecognitionAreaOfWorkRsp.Fields.ToDate)
+                .IsRequired();
+
+            Property(t => t.Id)
+                .HasColumnName(OrdRecognitionAreaOfWorkRsp.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
                 .IsRequired();
 
 

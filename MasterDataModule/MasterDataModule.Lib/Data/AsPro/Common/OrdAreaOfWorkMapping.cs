@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(OrdAreaOfWork.Fields.Id)
-                .IsRequired();
-
             Property(t => t.Name)
                 .HasColumnName(OrdAreaOfWork.Fields.Name)
                 .IsUnicode()
@@ -64,6 +60,11 @@ namespace MasterDataModule.Lib.Data
 
             Property(t => t.IsProvisionCostAllowed)
                 .HasColumnName(OrdAreaOfWork.Fields.IsProvisionCostAllowed)
+                .IsRequired();
+
+            Property(t => t.Id)
+                .HasColumnName(OrdAreaOfWork.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
                 .IsRequired();
 
 

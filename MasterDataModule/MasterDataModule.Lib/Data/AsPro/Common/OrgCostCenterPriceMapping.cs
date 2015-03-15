@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(OrgCostCenterPrice.Fields.Id)
-                .IsRequired();
-
             Property(t => t.InsCoreDataProductId)
                 .HasColumnName(OrgCostCenterPrice.Fields.InsCoreDataProductId)
                 .IsRequired();
@@ -97,6 +93,11 @@ namespace MasterDataModule.Lib.Data
 
             Property(t => t.OrgAccountingAreaId)
                 .HasColumnName(OrgCostCenterPrice.Fields.OrgAccountingAreaId);
+
+            Property(t => t.Id)
+                .HasColumnName(OrgCostCenterPrice.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+                .IsRequired();
 
 
             //Relationships

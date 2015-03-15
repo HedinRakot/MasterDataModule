@@ -17,10 +17,6 @@ namespace MasterDataModule.Contracts.Entities
         public static class Fields
         {
             /// <summary>
-            /// Column name 'ID' for property <see cref="OrdAreaOfWork.Id"/>
-            /// </summary>
-            public static readonly string Id = "ID";
-            /// <summary>
             /// Column name 'NAME' for property <see cref="OrdAreaOfWork.Name"/>
             /// </summary>
             public static readonly string Name = "NAME";
@@ -64,10 +60,13 @@ namespace MasterDataModule.Contracts.Entities
             /// Column name 'IS_PROVISION_COST_ALLOWED' for property <see cref="OrdAreaOfWork.IsProvisionCostAllowed"/>
             /// </summary>
             public static readonly string IsProvisionCostAllowed = "IS_PROVISION_COST_ALLOWED";
+            /// <summary>
+            /// Column name 'ID' for property <see cref="OrdAreaOfWork.Id"/>
+            /// </summary>
+            public static readonly string Id = "ID";
           
         }
         #endregion
-        public int Id{ get; set; }
         public string Name{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -79,6 +78,7 @@ namespace MasterDataModule.Contracts.Entities
         public string Source{ get; set; }
         public string Description{ get; set; }
         public bool IsProvisionCostAllowed{ get; set; }
+        public int Id{ get; set; }
                 
         
         /// <summary>

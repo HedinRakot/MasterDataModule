@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(OrdFederalState.Fields.Id)
-                .IsRequired();
-
             Property(t => t.FederalStateName)
                 .HasColumnName(OrdFederalState.Fields.FederalStateName)
                 .IsRequired()
@@ -74,6 +70,11 @@ namespace MasterDataModule.Lib.Data
 
             Property(t => t.ToDate)
                 .HasColumnName(OrdFederalState.Fields.ToDate)
+                .IsRequired();
+
+            Property(t => t.Id)
+                .HasColumnName(OrdFederalState.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
                 .IsRequired();
 
 

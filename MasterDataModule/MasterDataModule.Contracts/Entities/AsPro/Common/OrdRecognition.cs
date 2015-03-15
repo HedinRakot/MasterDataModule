@@ -18,10 +18,6 @@ namespace MasterDataModule.Contracts.Entities
         public static class Fields
         {
             /// <summary>
-            /// Column name 'ID' for property <see cref="OrdRecognition.Id"/>
-            /// </summary>
-            public static readonly string Id = "ID";
-            /// <summary>
             /// Column name 'ORD_RECOGNITION_TYPE_ID' for property <see cref="OrdRecognition.OrdRecognitionTypeId"/>
             /// </summary>
             public static readonly string OrdRecognitionTypeId = "ORD_RECOGNITION_TYPE_ID";
@@ -69,10 +65,13 @@ namespace MasterDataModule.Contracts.Entities
             /// Column name 'ORG_ACCOUNTING_AREA_ID' for property <see cref="OrdRecognition.OrgAccountingAreaId"/>
             /// </summary>
             public static readonly string OrgAccountingAreaId = "ORG_ACCOUNTING_AREA_ID";
+            /// <summary>
+            /// Column name 'ID' for property <see cref="OrdRecognition.Id"/>
+            /// </summary>
+            public static readonly string Id = "ID";
           
         }
         #endregion
-        public int Id{ get; set; }
         public int? OrdRecognitionTypeId{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -85,6 +84,7 @@ namespace MasterDataModule.Contracts.Entities
         public DateTime FromDate{ get; set; }
         public DateTime ToDate{ get; set; }
         public int? OrgAccountingAreaId{ get; set; }
+        public int Id{ get; set; }
         DateTime? IIntervalFields.FromDate
         {
             get { return FromDate; }

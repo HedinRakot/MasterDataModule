@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(OrgCostCenterResponsibleEmployeeRsp.Fields.Id)
-                .IsRequired();
-
             Property(t => t.OrgCostCenterId)
                 .HasColumnName(OrgCostCenterResponsibleEmployeeRsp.Fields.OrgCostCenterId)
                 .IsRequired();
@@ -67,6 +63,11 @@ namespace MasterDataModule.Lib.Data
 
             Property(t => t.ToDate)
                 .HasColumnName(OrgCostCenterResponsibleEmployeeRsp.Fields.ToDate)
+                .IsRequired();
+
+            Property(t => t.Id)
+                .HasColumnName(OrgCostCenterResponsibleEmployeeRsp.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
                 .IsRequired();
 
 

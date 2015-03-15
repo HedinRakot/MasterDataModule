@@ -17,10 +17,6 @@ namespace MasterDataModule.Contracts.Entities
         public static class Fields
         {
             /// <summary>
-            /// Column name 'ID' for property <see cref="OrgBankInformation.Id"/>
-            /// </summary>
-            public static readonly string Id = "ID";
-            /// <summary>
             /// Column name 'BANK_NAME' for property <see cref="OrgBankInformation.BankName"/>
             /// </summary>
             public static readonly string BankName = "BANK_NAME";
@@ -72,10 +68,13 @@ namespace MasterDataModule.Contracts.Entities
             /// Column name 'TRANSFER_X_VALUE' for property <see cref="OrgBankInformation.TransferXValue"/>
             /// </summary>
             public static readonly string TransferXValue = "TRANSFER_X_VALUE";
+            /// <summary>
+            /// Column name 'ID' for property <see cref="OrgBankInformation.Id"/>
+            /// </summary>
+            public static readonly string Id = "ID";
           
         }
         #endregion
-        public int Id{ get; set; }
         public string BankName{ get; set; }
         public string BankCode{ get; set; }
         public string BankAccount{ get; set; }
@@ -89,6 +88,7 @@ namespace MasterDataModule.Contracts.Entities
         public string Source{ get; set; }
         public string TransferValue{ get; set; }
         public string TransferXValue{ get; set; }
+        public int Id{ get; set; }
                 
         
         /// <summary>

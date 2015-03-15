@@ -17,10 +17,6 @@ namespace MasterDataModule.Contracts.Entities
         public static class Fields
         {
             /// <summary>
-            /// Column name 'ID' for property <see cref="InsProductObjectType.Id"/>
-            /// </summary>
-            public static readonly string Id = "ID";
-            /// <summary>
             /// Column name 'DESCRIPTION' for property <see cref="InsProductObjectType.Description"/>
             /// </summary>
             public static readonly string Description = "DESCRIPTION";
@@ -64,10 +60,13 @@ namespace MasterDataModule.Contracts.Entities
             /// Column name 'IS_AU_NECESSARY' for property <see cref="InsProductObjectType.IsAuNecessary"/>
             /// </summary>
             public static readonly string IsAuNecessary = "IS_AU_NECESSARY";
+            /// <summary>
+            /// Column name 'ID' for property <see cref="InsProductObjectType.Id"/>
+            /// </summary>
+            public static readonly string Id = "ID";
           
         }
         #endregion
-        public int Id{ get; set; }
         public string Description{ get; set; }
         public string SapId{ get; set; }
         public DateTime? CreateDate{ get; set; }
@@ -79,6 +78,7 @@ namespace MasterDataModule.Contracts.Entities
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
         public bool IsAuNecessary{ get; set; }
+        public int Id{ get; set; }
                 
         
         /// <summary>

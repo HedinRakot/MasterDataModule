@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(OrdRecognition.Fields.Id)
-                .IsRequired();
-
             Property(t => t.OrdRecognitionTypeId)
                 .HasColumnName(OrdRecognition.Fields.OrdRecognitionTypeId);
 
@@ -65,6 +61,11 @@ namespace MasterDataModule.Lib.Data
 
             Property(t => t.OrgAccountingAreaId)
                 .HasColumnName(OrdRecognition.Fields.OrgAccountingAreaId);
+
+            Property(t => t.Id)
+                .HasColumnName(OrdRecognition.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+                .IsRequired();
 
 
             //Relationships
