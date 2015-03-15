@@ -60,6 +60,18 @@ namespace MasterDataModule.API.Models
         /// </summary>
         [DataMember]
         public int? changeAbilityType{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="OrgCostCenterPrice.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="OrgCostCenterPrice.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

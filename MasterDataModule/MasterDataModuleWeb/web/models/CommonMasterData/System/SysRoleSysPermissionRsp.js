@@ -11,6 +11,12 @@ define(function () {
 			,sysPermissionId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('sysRoleSysPermissionRsp', 'sysPermissionId'), 
 				                    validation: { required: true } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('sysRoleSysPermissionRsp', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('sysRoleSysPermissionRsp', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

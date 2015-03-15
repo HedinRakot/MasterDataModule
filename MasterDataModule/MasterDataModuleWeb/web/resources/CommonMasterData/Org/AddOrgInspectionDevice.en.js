@@ -19,6 +19,8 @@ define(function () {
 		lastInspectionResult: 'Last inspection result',	
 		inspectionDate: 'Inspection date',	
 		inspectionInterval: 'Inspection interval',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

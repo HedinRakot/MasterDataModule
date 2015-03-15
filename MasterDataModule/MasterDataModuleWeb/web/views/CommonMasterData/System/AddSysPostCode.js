@@ -14,6 +14,8 @@ define([
 			'#postCode': 'postCode',
 			'#city': 'city',
 			'#street': 'street',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -24,6 +26,8 @@ define([
 			this.disableInput(this, 'postCode');
 			this.disableInput(this, 'city');
 			this.disableInput(this, 'street');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

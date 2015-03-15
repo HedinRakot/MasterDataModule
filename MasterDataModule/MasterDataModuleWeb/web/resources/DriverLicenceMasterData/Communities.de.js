@@ -8,6 +8,8 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Fahrschulgemeinschaft',
 		driverSchoolId: 'Führende Fahrschule der Fahrschulgemeinschaft ',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

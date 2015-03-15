@@ -23,6 +23,8 @@ define([
 			'#lastInspectionResult': 'lastInspectionResult',
 			'#inspectionDate': 'inspectionDate',
 			'#inspectionInterval': 'inspectionInterval',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -42,6 +44,8 @@ define([
 			this.disableInput(this, 'lastInspectionResult');
 			this.disableInput(this, 'inspectionDate', 'date');
 			this.disableInput(this, 'inspectionInterval', 'numeric');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

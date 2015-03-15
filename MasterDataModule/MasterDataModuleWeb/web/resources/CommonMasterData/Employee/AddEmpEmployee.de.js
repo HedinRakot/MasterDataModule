@@ -20,6 +20,8 @@ define(function () {
 		sexType: 'Geschlecht ',	
 		title: 'Titel',	
 		birthdate: 'Geburtsdatum',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

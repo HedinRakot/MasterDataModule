@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Produktklasse-Mangelbewertungen',
 		name: 'Schlüsselwert der Mangelbewertung ',	
 		description: 'Beschreibung der Mangelbewertung',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

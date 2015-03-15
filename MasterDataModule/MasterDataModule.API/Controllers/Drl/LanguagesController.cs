@@ -17,11 +17,15 @@ namespace MasterDataModule.API.Controllers
         {
             model.sysLanguageId = entity.SysLanguageId;
             model.oldAbbr = entity.OldAbbr;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(LanguageModel model, Language entity, ActionTypes actionType)
         {
             entity.SysLanguageId = model.sysLanguageId;
             entity.OldAbbr = model.oldAbbr;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

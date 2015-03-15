@@ -21,6 +21,8 @@ define([
 		columns: function () {
 		    return [
 				{ field: 'cancelationReasonText', title: this.resources.cancelationReasonText },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

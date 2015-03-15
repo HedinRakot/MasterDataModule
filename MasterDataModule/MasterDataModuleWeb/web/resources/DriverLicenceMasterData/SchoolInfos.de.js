@@ -8,6 +8,8 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Fahrschulinformationstyp',
 		text: 'Beschreibung des Fahrschulinformationstyps',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

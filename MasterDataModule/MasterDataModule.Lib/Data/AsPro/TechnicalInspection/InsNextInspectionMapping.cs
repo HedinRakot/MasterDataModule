@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(InsNextInspection.Fields.Id)
-                .IsRequired();
-
             Property(t => t.Description)
                 .HasColumnName(InsNextInspection.Fields.Description)
                 .IsUnicode()
@@ -56,6 +52,19 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.Source)
                 .HasColumnName(InsNextInspection.Fields.Source)
                 .HasMaxLength(4);
+
+            Property(t => t.Id)
+                .HasColumnName(InsNextInspection.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+                .IsRequired();
+
+            Property(t => t.FromDate)
+                .HasColumnName(InsNextInspection.Fields.FromDate)
+                .IsRequired();
+
+            Property(t => t.ToDate)
+                .HasColumnName(InsNextInspection.Fields.ToDate)
+                .IsRequired();
 
 
             //Relationships

@@ -9,6 +9,8 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Tax class',
 		taxClass: 'Tax class',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

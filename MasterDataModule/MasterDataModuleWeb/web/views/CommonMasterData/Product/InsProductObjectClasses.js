@@ -22,6 +22,8 @@ define([
 		    return [
 				{ field: 'description', title: this.resources.description },
 				{ field: 'weightFrom', title: this.resources.weightFrom },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

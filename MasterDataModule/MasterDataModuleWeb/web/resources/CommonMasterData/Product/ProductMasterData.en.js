@@ -11,6 +11,7 @@ define(function () {
         InsStatisticGroups: 'Statistic group',
         OrdRecognitionTypes: 'Product recognition type',
         OrdRecognitions: 'Recognition',
+        OrdRecognitionAreaOfWorkRsps: 'Area of work to recognition',
         InsTaxCodes: 'Tax code',
 	};
 

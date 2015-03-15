@@ -21,6 +21,8 @@ namespace MasterDataModule.API.Controllers
             model.examCounterFlag = entity.ExamCounterFlag;
             model.nextExamProductFlag = entity.NextExamProductFlag;
             model.driverLicenceFlag = entity.DriverLicenceFlag;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
             model.isMedicalAttestRequired = entity.IsMedicalAttestRequired;
         }
         protected override void ModelToEntity(ExamPossibleResultModel model, ExamPossibleResult entity, ActionTypes actionType)
@@ -31,6 +33,8 @@ namespace MasterDataModule.API.Controllers
             entity.ExamCounterFlag = model.examCounterFlag;
             entity.NextExamProductFlag = model.nextExamProductFlag;
             entity.DriverLicenceFlag = model.driverLicenceFlag;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
             entity.IsMedicalAttestRequired = model.isMedicalAttestRequired;
         }
     }

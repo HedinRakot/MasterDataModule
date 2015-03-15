@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(InsNextSpInterval.Fields.Id)
-                .IsRequired();
-
             Property(t => t.InsProductObjectTypeId)
                 .HasColumnName(InsNextSpInterval.Fields.InsProductObjectTypeId)
                 .IsRequired();
@@ -70,6 +66,19 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.Source)
                 .HasColumnName(InsNextSpInterval.Fields.Source)
                 .HasMaxLength(4);
+
+            Property(t => t.Id)
+                .HasColumnName(InsNextSpInterval.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+                .IsRequired();
+
+            Property(t => t.FromDate)
+                .HasColumnName(InsNextSpInterval.Fields.FromDate)
+                .IsRequired();
+
+            Property(t => t.ToDate)
+                .HasColumnName(InsNextSpInterval.Fields.ToDate)
+                .IsRequired();
 
 
             //Relationships

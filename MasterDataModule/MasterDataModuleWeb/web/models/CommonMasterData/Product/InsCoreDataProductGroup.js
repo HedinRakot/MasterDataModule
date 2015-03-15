@@ -11,6 +11,12 @@ define(function () {
 			,defaultDuration: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('insCoreDataProductGroup', 'defaultDuration'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insCoreDataProductGroup', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insCoreDataProductGroup', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

@@ -16,11 +16,15 @@ namespace MasterDataModule.API.Controllers
         protected override void EntityToModel(OrdRecognition entity, OrdRecognitionModel model)
         {
             model.ordRecognitionTypeId = entity.OrdRecognitionTypeId;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
             model.orgAccountingAreaId = entity.OrgAccountingAreaId;
         }
         protected override void ModelToEntity(OrdRecognitionModel model, OrdRecognition entity, ActionTypes actionType)
         {
             entity.OrdRecognitionTypeId = model.ordRecognitionTypeId;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
             entity.OrgAccountingAreaId = model.orgAccountingAreaId;
         }
     }

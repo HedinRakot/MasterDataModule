@@ -14,6 +14,8 @@ define(function () {
 		firstAssignation: 'Indication whether it is first assignation of the driver licence',	
 		messageReason: 'Statement regarding Message Reason',	
 		messageReasonStyle: 'Statement regarding ADMI2 (Type of Message)',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 		replacementId: 'Legal basis for replacement First assignation on Extending',	
 		printName: 'Print name',	
 	};

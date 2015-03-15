@@ -15,6 +15,8 @@ define([
 			'#account': 'account',
 			'#insVatTypeId': 'insVatTypeId',
 			'#maxAmount': 'maxAmount',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -26,6 +28,8 @@ define([
 			this.disableInput(this, 'account');
 			this.disableInput(this, 'insVatTypeId', 'numeric');
 			this.disableInput(this, 'maxAmount', 'numeric');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

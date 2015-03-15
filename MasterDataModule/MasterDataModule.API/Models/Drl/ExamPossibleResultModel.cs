@@ -45,6 +45,18 @@ namespace MasterDataModule.API.Models
         [DataMember]
         public bool driverLicenceFlag{ get; set; }
         /// <summary>
+        ///     Model property for <see cref="ExamPossibleResult.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="ExamPossibleResult.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
+        /// <summary>
         ///     Model property for <see cref="ExamPossibleResult.IsMedicalAttestRequired"/> entity
         /// </summary>
         [DataMember]

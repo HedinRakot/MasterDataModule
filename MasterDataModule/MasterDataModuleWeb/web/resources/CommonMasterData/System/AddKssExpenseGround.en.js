@@ -11,6 +11,8 @@ define(function () {
 		account: 'Account',	
 		insVatTypeId: 'Vat type',	
 		maxAmount: 'Max amount',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

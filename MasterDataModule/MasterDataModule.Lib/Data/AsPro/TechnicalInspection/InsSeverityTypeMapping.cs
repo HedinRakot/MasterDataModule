@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(InsSeverityType.Fields.Id)
-                .IsRequired();
-
             Property(t => t.Name)
                 .HasColumnName(InsSeverityType.Fields.Name)
                 .IsUnicode()
@@ -68,6 +64,19 @@ namespace MasterDataModule.Lib.Data
 
             Property(t => t.SpTestMarkPreset)
                 .HasColumnName(InsSeverityType.Fields.SpTestMarkPreset);
+
+            Property(t => t.Id)
+                .HasColumnName(InsSeverityType.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+                .IsRequired();
+
+            Property(t => t.FromDate)
+                .HasColumnName(InsSeverityType.Fields.FromDate)
+                .IsRequired();
+
+            Property(t => t.ToDate)
+                .HasColumnName(InsSeverityType.Fields.ToDate)
+                .IsRequired();
 
 
             //Relationships

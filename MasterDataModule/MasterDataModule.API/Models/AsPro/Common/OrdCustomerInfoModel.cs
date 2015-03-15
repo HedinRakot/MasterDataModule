@@ -29,6 +29,18 @@ namespace MasterDataModule.API.Models
         /// </summary>
         [DataMember]
         public int infoType{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="OrdCustomerInfo.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="OrdCustomerInfo.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

@@ -30,6 +30,18 @@ namespace MasterDataModule.API.Models
         [DataMember]
         public int orgOrganizationalUnitId{ get; set; }
         /// <summary>
+        ///     Model property for <see cref="ExamRoom.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="ExamRoom.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
+        /// <summary>
         ///     Model property for <see cref="ExamRoom.Name1"/> entity
         /// </summary>
         [DataMember]

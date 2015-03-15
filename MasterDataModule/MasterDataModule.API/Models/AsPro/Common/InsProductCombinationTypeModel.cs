@@ -19,6 +19,18 @@ namespace MasterDataModule.API.Models
         [Required]
         [DataMember]
         public string description{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsProductCombinationType.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsProductCombinationType.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

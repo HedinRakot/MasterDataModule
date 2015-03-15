@@ -12,6 +12,8 @@ define(function () {
 		description: 'Description',	
 		isCertificateRequired: 'indication whether Education Certificates should to be sent back prematurely',	
 		returnType: 'way to return information back to Authority(1 - Online, 2 - Paper)',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 		name2: 'Name 2',	
 		streetHouseNumber: 'Street and house number',	
 		zipCode: 'Zip code',	

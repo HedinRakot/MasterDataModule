@@ -15,6 +15,8 @@ define([
 			'#ordFederalStateId': 'ordFederalStateId',
 			'#ordAreaOfWorkId': 'ordAreaOfWorkId',
 			'#unitCode': 'unitCode',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -26,6 +28,8 @@ define([
 			this.disableInput(this, 'ordFederalStateId', 'numeric');
 			this.disableInput(this, 'ordAreaOfWorkId', 'numeric');
 			this.disableInput(this, 'unitCode');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

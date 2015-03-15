@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Hierarchietyp',
 		name: 'Kurzbezeichnung des OE-Hierarchietyps',	
 		description: 'Beschreibung des OE-Hierarchietyps',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

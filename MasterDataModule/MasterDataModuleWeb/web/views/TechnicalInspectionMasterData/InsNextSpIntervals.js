@@ -22,9 +22,8 @@ define([
 		    return [
 				{ field: 'insProductObjectTypeId', title: this.resources.insProductObjectTypeId },
 				{ field: 'insProductObjectClassId', title: this.resources.insProductObjectClassId },
-				{ field: 'ageMonthFrom', title: this.resources.ageMonthFrom },
-				{ field: 'ageMonthTo', title: this.resources.ageMonthTo },
-				{ field: 'spInterval', title: this.resources.spInterval },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

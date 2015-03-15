@@ -21,6 +21,8 @@ define([
 		columns: function () {
 		    return [
 				{ field: 'taxCode', title: this.resources.taxCode },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

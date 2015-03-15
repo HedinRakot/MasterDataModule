@@ -14,6 +14,12 @@ define(function () {
 			,sysCountryId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('ordFederalState', 'sysCountryId'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('ordFederalState', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('ordFederalState', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

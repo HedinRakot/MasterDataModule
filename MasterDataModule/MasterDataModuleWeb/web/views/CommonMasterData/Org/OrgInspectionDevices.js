@@ -20,18 +20,11 @@ define([
 
 		columns: function () {
 		    return [
-				{ field: 'debitorCustomerNumber', title: this.resources.debitorCustomerNumber },
 				{ field: 'identification', title: this.resources.identification },
-				{ field: 'newIdentification', title: this.resources.newIdentification },
-				{ field: 'oldIdentification', title: this.resources.oldIdentification },
-				{ field: 'type', title: this.resources.type },
-				{ field: 'serialNumber', title: this.resources.serialNumber },
 				{ field: 'name', title: this.resources.name },
 				{ field: 'description', title: this.resources.description },
-				{ field: 'lastInspectionDate', title: this.resources.lastInspectionDate , format: '{0:d}'},
-				{ field: 'lastInspectionResult', title: this.resources.lastInspectionResult },
-				{ field: 'inspectionDate', title: this.resources.inspectionDate , format: '{0:d}'},
-				{ field: 'inspectionInterval', title: this.resources.inspectionInterval },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

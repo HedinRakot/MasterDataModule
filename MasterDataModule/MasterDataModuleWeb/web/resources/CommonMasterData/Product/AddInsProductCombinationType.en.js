@@ -8,6 +8,8 @@ define(function () {
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Product combination type',
 		description: 'Description',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

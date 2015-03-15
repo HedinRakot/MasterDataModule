@@ -22,8 +22,8 @@ define([
 		    return [
 				{ field: 'locationCode', title: this.resources.locationCode },
 				{ field: 'locationName', title: this.resources.locationName },
-				{ field: 'sysCountryId', title: this.resources.sysCountryId },
-				{ field: 'ordFederalStateId', title: this.resources.ordFederalStateId },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

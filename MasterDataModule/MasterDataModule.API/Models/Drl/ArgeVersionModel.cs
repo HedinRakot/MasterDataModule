@@ -30,6 +30,18 @@ namespace MasterDataModule.API.Models
         /// </summary>
         [DataMember]
         public DateTime expirationDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="ArgeVersion.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="ArgeVersion.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

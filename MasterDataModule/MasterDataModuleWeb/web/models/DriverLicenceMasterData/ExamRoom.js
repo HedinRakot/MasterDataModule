@@ -14,6 +14,12 @@ define(function () {
 			,orgOrganizationalUnitId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('examRoom', 'orgOrganizationalUnitId'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('examRoom', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('examRoom', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 			,name1: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('examRoom', 'name1'), 
 				                    validation: { required: false, maxLength: 100 } }			

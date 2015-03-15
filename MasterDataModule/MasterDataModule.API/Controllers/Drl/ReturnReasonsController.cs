@@ -19,6 +19,8 @@ namespace MasterDataModule.API.Controllers
             model.description = entity.Description;
             model.text1 = entity.Text1;
             model.text2 = entity.Text2;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(ReturnReasonModel model, ReturnReason entity, ActionTypes actionType)
         {
@@ -26,6 +28,8 @@ namespace MasterDataModule.API.Controllers
             entity.Description = model.description;
             entity.Text1 = model.text1;
             entity.Text2 = model.text2;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

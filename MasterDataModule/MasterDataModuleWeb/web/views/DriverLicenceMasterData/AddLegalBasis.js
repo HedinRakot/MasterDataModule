@@ -17,6 +17,8 @@ define([
 			'#firstAssignation': 'firstAssignation',
 			'#messageReason': 'messageReason',
 			'#messageReasonStyle': 'messageReasonStyle',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 			'#replacementId': 'replacementId',
 			'#printName': 'printName',
 		},
@@ -32,6 +34,8 @@ define([
 			this.disableInput(this, 'firstAssignation', 'numeric');
 			this.disableInput(this, 'messageReason');
 			this.disableInput(this, 'messageReasonStyle');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 			this.disableInput(this, 'replacementId', 'numeric');
 			this.disableInput(this, 'printName');
 

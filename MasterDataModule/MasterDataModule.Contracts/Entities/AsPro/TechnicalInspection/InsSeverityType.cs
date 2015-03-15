@@ -4,6 +4,7 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     public partial class InsSeverityType: IHasId<int>
+        ,IIntervalFields
         ,IRemovable
     {
         /// <summary>
@@ -16,10 +17,6 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public static class Fields
         {
-            /// <summary>
-            /// Column name 'ID' for property <see cref="InsSeverityType.Id"/>
-            /// </summary>
-            public static readonly string Id = "ID";
             /// <summary>
             /// Column name 'NAME' for property <see cref="InsSeverityType.Name"/>
             /// </summary>
@@ -68,10 +65,21 @@ namespace MasterDataModule.Contracts.Entities
             /// Column name 'SP_TEST_MARK_PRESET' for property <see cref="InsSeverityType.SpTestMarkPreset"/>
             /// </summary>
             public static readonly string SpTestMarkPreset = "SP_TEST_MARK_PRESET";
+            /// <summary>
+            /// Column name 'ID' for property <see cref="InsSeverityType.Id"/>
+            /// </summary>
+            public static readonly string Id = "ID";
+            /// <summary>
+            /// Column name 'FROM_DATE' for property <see cref="InsSeverityType.FromDate"/>
+            /// </summary>
+            public static readonly string FromDate = "FROM_DATE";
+            /// <summary>
+            /// Column name 'TO_DATE' for property <see cref="InsSeverityType.ToDate"/>
+            /// </summary>
+            public static readonly string ToDate = "TO_DATE";
           
         }
         #endregion
-        public int Id{ get; set; }
         public string Name{ get; set; }
         public string Description{ get; set; }
         public DateTime? CreateDate{ get; set; }
@@ -84,6 +92,19 @@ namespace MasterDataModule.Contracts.Entities
         public string Source{ get; set; }
         public string SpSeverity{ get; set; }
         public int? SpTestMarkPreset{ get; set; }
+        public int Id{ get; set; }
+        public DateTime FromDate{ get; set; }
+        public DateTime ToDate{ get; set; }
+        DateTime? IIntervalFields.FromDate
+        {
+            get { return FromDate; }
+            set { if(value.HasValue)FromDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        DateTime? IIntervalFields.ToDate
+        {
+            get { return ToDate; }
+            set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
                 
         
         /// <summary>
@@ -104,6 +125,8 @@ namespace MasterDataModule.Contracts.Entities
                        Source = Source,
                        SpSeverity = SpSeverity,
                        SpTestMarkPreset = SpTestMarkPreset,
+                       FromDate = FromDate,
+                       ToDate = ToDate,
         	           };
         }
     }

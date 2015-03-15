@@ -18,12 +18,16 @@ namespace MasterDataModule.API.Controllers
             model.roleNumber = entity.RoleNumber;
             model.name = entity.Name;
             model.description = entity.Description;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(SysRoleModel model, SysRole entity, ActionTypes actionType)
         {
             entity.RoleNumber = model.roleNumber;
             entity.Name = model.name;
             entity.Description = model.description;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

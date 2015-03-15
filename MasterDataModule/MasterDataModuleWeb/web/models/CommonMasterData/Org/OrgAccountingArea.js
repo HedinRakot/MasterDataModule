@@ -11,6 +11,12 @@ define(function () {
 			,maxOrderSum: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('orgAccountingArea', 'maxOrderSum'), 
 				                    validation: { required: true } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('orgAccountingArea', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('orgAccountingArea', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

@@ -10,6 +10,8 @@ define(function () {
 		bankName: 'Bank name',	
 		bankCode: 'Bank code',	
 		bankAccount: 'Account number',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

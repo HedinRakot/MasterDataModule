@@ -11,6 +11,8 @@ define(function () {
 		description: 'Beschreibung des Rückgabegrunds',	
 		text1: 'Zusatztext 1',	
 		text2: 'Zusatztext 2',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

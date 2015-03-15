@@ -11,6 +11,12 @@ define(function () {
 			,code: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('expPassengersType', 'code'), 
 				                    validation: { required: true, maxLength: 2 } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('expPassengersType', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('expPassengersType', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

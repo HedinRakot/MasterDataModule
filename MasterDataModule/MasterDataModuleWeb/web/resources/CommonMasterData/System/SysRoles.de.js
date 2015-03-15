@@ -10,6 +10,8 @@ define(function () {
 		roleNumber: 'Rollenschlüssel',	
 		name: 'Kurzbezeichnung der Rolle',	
 		description: 'Beschreibung der Rolle',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

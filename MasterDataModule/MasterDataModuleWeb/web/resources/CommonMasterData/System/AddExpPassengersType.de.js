@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Mitfahrerart',
 		text: 'Beschreibung der Mitfahrerart',	
 		code: 'Mitfahrerart',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

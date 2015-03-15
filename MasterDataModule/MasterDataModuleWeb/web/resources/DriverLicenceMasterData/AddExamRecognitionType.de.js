@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'FE-Anerkennung',
 		name: 'Beschreibung der Anerkennung',	
 		description: 'Beschreibung der Anerkennung',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

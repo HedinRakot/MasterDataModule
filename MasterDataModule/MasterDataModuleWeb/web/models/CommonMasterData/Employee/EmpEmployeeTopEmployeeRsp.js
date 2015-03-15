@@ -11,6 +11,12 @@ define(function () {
 			,topEmployeeId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('empEmployeeTopEmployeeRsp', 'topEmployeeId'), 
 				                    validation: { required: true } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('empEmployeeTopEmployeeRsp', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('empEmployeeTopEmployeeRsp', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

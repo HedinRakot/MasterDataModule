@@ -8,6 +8,8 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Stornogrund',
 		cancelationReasonText: 'Stornotext, Platzhalter werden mit „#“ angegeben',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

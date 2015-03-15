@@ -10,6 +10,8 @@ define(function () {
 		name: 'Name',	
 		description: 'Description',	
 		isCustom: 'Is custom',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

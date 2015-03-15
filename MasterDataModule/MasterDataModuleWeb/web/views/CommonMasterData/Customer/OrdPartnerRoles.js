@@ -21,6 +21,8 @@ define([
 		columns: function () {
 		    return [
 				{ field: 'sapQualifier', title: this.resources.sapQualifier },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

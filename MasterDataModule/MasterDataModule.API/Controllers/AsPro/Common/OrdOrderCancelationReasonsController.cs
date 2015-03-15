@@ -16,10 +16,14 @@ namespace MasterDataModule.API.Controllers
         protected override void EntityToModel(OrdOrderCancelationReason entity, OrdOrderCancelationReasonModel model)
         {
             model.cancelationReasonText = entity.CancelationReasonText;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(OrdOrderCancelationReasonModel model, OrdOrderCancelationReason entity, ActionTypes actionType)
         {
             entity.CancelationReasonText = model.cancelationReasonText;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

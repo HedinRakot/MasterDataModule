@@ -12,6 +12,8 @@ define(function () {
 		ageMonthFrom: 'Minimales Alter des Fahrzeugs in Monaten',	
 		ageMonthTo: 'Maximales Alter des Fahrzeugs in Monaten',	
 		spInterval: 'Intervall in Monaten',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

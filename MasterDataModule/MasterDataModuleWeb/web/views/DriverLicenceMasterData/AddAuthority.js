@@ -16,6 +16,8 @@ define([
 			'#description': 'description',
 			'#isCertificateRequired': 'isCertificateRequired',
 			'#returnType': 'returnType',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 			'#name2': 'name2',
 			'#streetHouseNumber': 'streetHouseNumber',
 			'#zipCode': 'zipCode',
@@ -36,6 +38,8 @@ define([
 			this.disableInput(this, 'description');
 			this.disableInput(this, 'isCertificateRequired');
 			this.disableInput(this, 'returnType', 'numeric');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 			this.disableInput(this, 'name2');
 			this.disableInput(this, 'streetHouseNumber');
 			this.disableInput(this, 'zipCode');

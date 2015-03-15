@@ -20,6 +20,8 @@ define(function () {
 		sexType: 'Sex',	
 		title: 'Title',	
 		birthdate: 'Birthdate',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

@@ -14,6 +14,12 @@ define(function () {
 			,bankAccount: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('orgBankInformation', 'bankAccount'), 
 				                    validation: { required: true, maxLength: 250 } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('orgBankInformation', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('orgBankInformation', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

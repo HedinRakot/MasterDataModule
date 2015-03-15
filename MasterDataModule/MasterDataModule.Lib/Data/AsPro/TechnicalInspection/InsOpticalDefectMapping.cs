@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(InsOpticalDefect.Fields.Id)
-                .IsRequired();
-
             Property(t => t.Name)
                 .HasColumnName(InsOpticalDefect.Fields.Name)
                 .IsRequired()
@@ -66,6 +62,19 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.Source)
                 .HasColumnName(InsOpticalDefect.Fields.Source)
                 .HasMaxLength(4);
+
+            Property(t => t.Id)
+                .HasColumnName(InsOpticalDefect.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+                .IsRequired();
+
+            Property(t => t.FromDate)
+                .HasColumnName(InsOpticalDefect.Fields.FromDate)
+                .IsRequired();
+
+            Property(t => t.ToDate)
+                .HasColumnName(InsOpticalDefect.Fields.ToDate)
+                .IsRequired();
 
 
             //Relationships

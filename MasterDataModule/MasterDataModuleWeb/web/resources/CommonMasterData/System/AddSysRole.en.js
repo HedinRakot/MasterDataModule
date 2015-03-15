@@ -10,6 +10,8 @@ define(function () {
 		roleNumber: 'Role number',	
 		name: 'Name',	
 		description: 'Description',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

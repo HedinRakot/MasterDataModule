@@ -7,8 +7,10 @@ define(function () {
 	    edit: 'Produkt-Gewichtsklassen editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Produkt-Gewichtsklassen',
-		description: 'Kurz-Beschreibung der Gewichtsklasse (entspricht dem fachlichen Schlüssel aus VF97)',	
+		description: 'Kurz-Beschreibung der Gewichtsklasse',	
 		weightFrom: 'Minimalgewicht',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

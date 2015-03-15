@@ -21,6 +21,8 @@ define([
 		columns: function () {
 		    return [
 				{ field: 'ordRecognitionTypeId', title: this.resources.ordRecognitionTypeId },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 				{ field: 'orgAccountingAreaId', title: this.resources.orgAccountingAreaId },
 			];
 		}

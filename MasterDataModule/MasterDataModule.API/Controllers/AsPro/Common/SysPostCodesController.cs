@@ -18,12 +18,16 @@ namespace MasterDataModule.API.Controllers
             model.postCode = entity.PostCode;
             model.city = entity.City;
             model.street = entity.Street;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(SysPostCodeModel model, SysPostCode entity, ActionTypes actionType)
         {
             entity.PostCode = model.postCode;
             entity.City = model.city;
             entity.Street = model.street;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

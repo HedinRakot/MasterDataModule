@@ -12,6 +12,8 @@ define(function () {
 		description: 'Description',	
 		text1: 'Text 1',	
 		text2: 'Text 2',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

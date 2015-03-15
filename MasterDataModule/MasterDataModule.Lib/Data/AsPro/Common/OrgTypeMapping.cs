@@ -63,6 +63,14 @@ namespace MasterDataModule.Lib.Data
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
                 .IsRequired();
 
+            Property(t => t.FromDate)
+                .HasColumnName(OrgType.Fields.FromDate)
+                .IsRequired();
+
+            Property(t => t.ToDate)
+                .HasColumnName(OrgType.Fields.ToDate)
+                .IsRequired();
+
 
             //Relationships
         }

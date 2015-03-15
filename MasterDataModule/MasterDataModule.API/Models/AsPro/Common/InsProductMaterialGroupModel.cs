@@ -24,6 +24,18 @@ namespace MasterDataModule.API.Models
         [Required]
         [DataMember]
         public string sapId{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsProductMaterialGroup.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsProductMaterialGroup.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

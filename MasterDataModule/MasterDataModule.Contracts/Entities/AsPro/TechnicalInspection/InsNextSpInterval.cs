@@ -4,6 +4,7 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     public partial class InsNextSpInterval: IHasId<int>
+        ,IIntervalFields
         ,IRemovable
     {
         /// <summary>
@@ -16,10 +17,6 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public static class Fields
         {
-            /// <summary>
-            /// Column name 'ID' for property <see cref="InsNextSpInterval.Id"/>
-            /// </summary>
-            public static readonly string Id = "ID";
             /// <summary>
             /// Column name 'INS_PRODUCT_OBJECT_TYPE_ID' for property <see cref="InsNextSpInterval.InsProductObjectTypeId"/>
             /// </summary>
@@ -72,10 +69,21 @@ namespace MasterDataModule.Contracts.Entities
             /// Column name 'SOURCE' for property <see cref="InsNextSpInterval.Source"/>
             /// </summary>
             public static readonly string Source = "SOURCE";
+            /// <summary>
+            /// Column name 'ID' for property <see cref="InsNextSpInterval.Id"/>
+            /// </summary>
+            public static readonly string Id = "ID";
+            /// <summary>
+            /// Column name 'FROM_DATE' for property <see cref="InsNextSpInterval.FromDate"/>
+            /// </summary>
+            public static readonly string FromDate = "FROM_DATE";
+            /// <summary>
+            /// Column name 'TO_DATE' for property <see cref="InsNextSpInterval.ToDate"/>
+            /// </summary>
+            public static readonly string ToDate = "TO_DATE";
           
         }
         #endregion
-        public int Id{ get; set; }
         public int InsProductObjectTypeId{ get; set; }
         public int InsProductObjectClassId{ get; set; }
         public int AgeMonthFrom{ get; set; }
@@ -89,6 +97,19 @@ namespace MasterDataModule.Contracts.Entities
         public int? CreateEmployeeId{ get; set; }
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
+        public int Id{ get; set; }
+        public DateTime FromDate{ get; set; }
+        public DateTime ToDate{ get; set; }
+        DateTime? IIntervalFields.FromDate
+        {
+            get { return FromDate; }
+            set { if(value.HasValue)FromDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        DateTime? IIntervalFields.ToDate
+        {
+            get { return ToDate; }
+            set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
                 
         
         /// <summary>
@@ -110,6 +131,8 @@ namespace MasterDataModule.Contracts.Entities
                        CreateEmployeeId = CreateEmployeeId,
                        ChangeEmployeeId = ChangeEmployeeId,
                        Source = Source,
+                       FromDate = FromDate,
+                       ToDate = ToDate,
         	           };
         }
     }

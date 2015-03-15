@@ -29,6 +29,18 @@ namespace MasterDataModule.API.Models
         /// </summary>
         [DataMember]
         public bool? isNextTerminPossible{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsValidPeriod.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsValidPeriod.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

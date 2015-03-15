@@ -21,6 +21,8 @@ namespace MasterDataModule.API.Controllers
             model.firstAssignation = entity.FirstAssignation;
             model.messageReason = entity.MessageReason;
             model.messageReasonStyle = entity.MessageReasonStyle;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
             model.replacementId = entity.ReplacementId;
             model.printName = entity.PrintName;
         }
@@ -32,6 +34,8 @@ namespace MasterDataModule.API.Controllers
             entity.FirstAssignation = model.firstAssignation;
             entity.MessageReason = model.messageReason;
             entity.MessageReasonStyle = model.messageReasonStyle;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
             entity.ReplacementId = model.replacementId;
             entity.PrintName = model.printName;
         }

@@ -14,6 +14,12 @@ define(function () {
 			,expirationDate: { type: "date", 
 			                        editable: Application.canTableItemBeEdit('argeVersion', 'expirationDate'), 
 				                    validation: { required: false, date: true } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('argeVersion', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('argeVersion', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

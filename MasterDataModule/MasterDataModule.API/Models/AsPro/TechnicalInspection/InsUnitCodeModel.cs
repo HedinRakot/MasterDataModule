@@ -36,6 +36,18 @@ namespace MasterDataModule.API.Models
         /// </summary>
         [DataMember]
         public string unitCode{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsUnitCode.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsUnitCode.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Produkt-Arbeitswerte',
 		name: 'Bezeichnung des Arbeitswerts',	
 		defaultDuration: 'Zeitliche Dauer des Arbeitswerts in Minuten',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

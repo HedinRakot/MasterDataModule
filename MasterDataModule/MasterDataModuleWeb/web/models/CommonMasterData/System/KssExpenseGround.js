@@ -17,6 +17,12 @@ define(function () {
 			,maxAmount: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('kssExpenseGround', 'maxAmount'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('kssExpenseGround', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('kssExpenseGround', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

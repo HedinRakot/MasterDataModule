@@ -6,6 +6,7 @@ define(function () {
         OrgAccountingAreas: 'Buchungskreis',
         OrgBankInformation: 'Bankverbindung',
         OrgCostCenters: 'Kostenstelle',
+        OrgCostCenterResponsibleEmployeeRsps: 'Kostenstellenverantwortlicher ',
         OrgCostCenterPrices: 'Zuordnung Preise zu Kostenstelle',
         OrgRelationshipTypes: 'Hierarchietyp',
         OrgInformation: 'OE-Information',

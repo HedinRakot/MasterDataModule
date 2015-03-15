@@ -19,6 +19,8 @@ namespace MasterDataModule.API.Controllers
             model.locationName = entity.LocationName;
             model.sysCountryId = entity.SysCountryId;
             model.ordFederalStateId = entity.OrdFederalStateId;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(SysLocationModel model, SysLocation entity, ActionTypes actionType)
         {
@@ -26,6 +28,8 @@ namespace MasterDataModule.API.Controllers
             entity.LocationName = model.locationName;
             entity.SysCountryId = model.sysCountryId;
             entity.OrdFederalStateId = model.ordFederalStateId;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

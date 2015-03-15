@@ -16,10 +16,14 @@ namespace MasterDataModule.API.Controllers
         protected override void EntityToModel(Community entity, CommunityModel model)
         {
             model.driverSchoolId = entity.DriverSchoolId;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(CommunityModel model, Community entity, ActionTypes actionType)
         {
             entity.DriverSchoolId = model.driverSchoolId;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

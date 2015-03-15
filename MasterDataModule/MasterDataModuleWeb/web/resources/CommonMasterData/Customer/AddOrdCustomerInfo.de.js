@@ -10,6 +10,8 @@ define(function () {
 		textValue: 'Textuelle Beschreibung',	
 		numberValue: 'Numerischer Wert',	
 		infoType: 'Infotyp',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

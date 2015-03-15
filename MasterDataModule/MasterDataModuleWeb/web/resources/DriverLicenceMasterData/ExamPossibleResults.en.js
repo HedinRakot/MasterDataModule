@@ -14,6 +14,8 @@ define(function () {
 		examCounterFlag: 'Indication whether exam counter increases',	
 		nextExamProductFlag: 'Indication whether next exam product is required',	
 		driverLicenceFlag: 'Indication whether Driver Licence can be handed over',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 		isMedicalAttestRequired: 'Is medical attest required',	
 	};
 

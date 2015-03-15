@@ -6,9 +6,12 @@ define(function () {
 		add: 'Add Organization type',
 	    edit: 'Edit Organization type',
 	    masterData: 'Common masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Organization type',
 		name: 'Name',	
 		description: 'Description',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

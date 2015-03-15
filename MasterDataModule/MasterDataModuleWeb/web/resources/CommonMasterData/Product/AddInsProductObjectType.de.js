@@ -8,8 +8,10 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Produkt-Objekttypen',
 		description: 'Beschreibung des Objekttyps',	
-		sapId: 'Kurzbeschreibung des Objekttyps (entspricht dem fachlichen Schlüssel aus FV97)',	
-		isAuNecessary: 'deleted??',	
+		sapId: 'Kurzbeschreibung des Objekttyps',	
+		isAuNecessary: 'AU erforderlich',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

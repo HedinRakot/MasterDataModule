@@ -11,6 +11,12 @@ define(function () {
 			,weightFrom: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('insProductObjectClass', 'weightFrom'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insProductObjectClass', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insProductObjectClass', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

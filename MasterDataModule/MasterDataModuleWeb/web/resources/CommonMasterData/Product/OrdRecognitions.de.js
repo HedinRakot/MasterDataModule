@@ -8,6 +8,8 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Anerkennung',
 		ordRecognitionTypeId: 'Anerkennungstyp ',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 		orgAccountingAreaId: 'Buchungskreis',	
 	};
 

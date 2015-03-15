@@ -13,6 +13,8 @@ define([
 		bindings: {
 			'#sysRoleId': 'sysRoleId',
 			'#sysPermissionId': 'sysPermissionId',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -22,6 +24,8 @@ define([
 			//TODO foreach model field
 			this.disableInput(this, 'sysRoleId', 'numeric');
 			this.disableInput(this, 'sysPermissionId', 'numeric');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Buchungskreis',
 		accountingArea: 'Nummer des Buchungskreises',	
 		maxOrderSum: 'Maximale Auftragssumme im Buchungskreis',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

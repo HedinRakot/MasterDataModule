@@ -10,6 +10,8 @@ define(function () {
 		federalStateName: 'Name',	
 		description: 'Description',	
 		sysCountryId: 'Country',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

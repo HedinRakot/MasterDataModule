@@ -17,11 +17,15 @@ namespace MasterDataModule.API.Controllers
         {
             model.insInspectionStepId = entity.InsInspectionStepId;
             model.isMandatory = entity.IsMandatory;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(InsAvailableInspectionStepModel model, InsAvailableInspectionStep entity, ActionTypes actionType)
         {
             entity.InsInspectionStepId = model.insInspectionStepId;
             entity.IsMandatory = model.isMandatory;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

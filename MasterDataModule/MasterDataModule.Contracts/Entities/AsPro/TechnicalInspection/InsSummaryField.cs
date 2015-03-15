@@ -4,6 +4,7 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     public partial class InsSummaryField: IHasId<int>
+        ,IIntervalFields
         ,IRemovable
     {
         /// <summary>
@@ -16,10 +17,6 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public static class Fields
         {
-            /// <summary>
-            /// Column name 'ID' for property <see cref="InsSummaryField.Id"/>
-            /// </summary>
-            public static readonly string Id = "ID";
             /// <summary>
             /// Column name 'DESCRIPTION' for property <see cref="InsSummaryField.Description"/>
             /// </summary>
@@ -56,10 +53,21 @@ namespace MasterDataModule.Contracts.Entities
             /// Column name 'SOURCE' for property <see cref="InsSummaryField.Source"/>
             /// </summary>
             public static readonly string Source = "SOURCE";
+            /// <summary>
+            /// Column name 'ID' for property <see cref="InsSummaryField.Id"/>
+            /// </summary>
+            public static readonly string Id = "ID";
+            /// <summary>
+            /// Column name 'FROM_DATE' for property <see cref="InsSummaryField.FromDate"/>
+            /// </summary>
+            public static readonly string FromDate = "FROM_DATE";
+            /// <summary>
+            /// Column name 'TO_DATE' for property <see cref="InsSummaryField.ToDate"/>
+            /// </summary>
+            public static readonly string ToDate = "TO_DATE";
           
         }
         #endregion
-        public int Id{ get; set; }
         public string Description{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -69,6 +77,19 @@ namespace MasterDataModule.Contracts.Entities
         public int? CreateEmployeeId{ get; set; }
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
+        public int Id{ get; set; }
+        public DateTime FromDate{ get; set; }
+        public DateTime ToDate{ get; set; }
+        DateTime? IIntervalFields.FromDate
+        {
+            get { return FromDate; }
+            set { if(value.HasValue)FromDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        DateTime? IIntervalFields.ToDate
+        {
+            get { return ToDate; }
+            set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
                 
         
         /// <summary>
@@ -86,6 +107,8 @@ namespace MasterDataModule.Contracts.Entities
                        CreateEmployeeId = CreateEmployeeId,
                        ChangeEmployeeId = ChangeEmployeeId,
                        Source = Source,
+                       FromDate = FromDate,
+                       ToDate = ToDate,
         	           };
         }
     }

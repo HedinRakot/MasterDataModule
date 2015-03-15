@@ -22,7 +22,8 @@ define([
 		    return [
 				{ field: 'federalStateName', title: this.resources.federalStateName },
 				{ field: 'description', title: this.resources.description },
-				{ field: 'sysCountryId', title: this.resources.sysCountryId },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

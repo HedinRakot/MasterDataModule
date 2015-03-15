@@ -18,12 +18,16 @@ namespace MasterDataModule.API.Controllers
             model.bankName = entity.BankName;
             model.bankCode = entity.BankCode;
             model.bankAccount = entity.BankAccount;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(OrgBankInformationModel model, OrgBankInformation entity, ActionTypes actionType)
         {
             entity.BankName = model.bankName;
             entity.BankCode = model.bankCode;
             entity.BankAccount = model.bankAccount;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

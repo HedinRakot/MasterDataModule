@@ -17,6 +17,12 @@ define(function () {
 			,text2: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('returnReason', 'text2'), 
 				                    validation: { required: false, maxLength: 200 } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('returnReason', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('returnReason', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

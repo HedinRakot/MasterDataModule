@@ -21,7 +21,6 @@ define([
 		columns: function () {
 		    return [
 				{ field: 'examNameArge', title: this.resources.examNameArge },
-				{ field: 'examClassId', title: this.resources.examClassId },
 			];
 		}
 	});

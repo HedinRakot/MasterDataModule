@@ -14,6 +14,8 @@ define([
 			'#textValue': 'textValue',
 			'#numberValue': 'numberValue',
 			'#infoType': 'infoType',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -24,6 +26,8 @@ define([
 			this.disableInput(this, 'textValue');
 			this.disableInput(this, 'numberValue', 'numeric');
 			this.disableInput(this, 'infoType', 'numeric');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

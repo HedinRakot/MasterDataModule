@@ -17,6 +17,12 @@ define(function () {
 			,ordFederalStateId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('sysLocation', 'ordFederalStateId'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('sysLocation', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('sysLocation', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

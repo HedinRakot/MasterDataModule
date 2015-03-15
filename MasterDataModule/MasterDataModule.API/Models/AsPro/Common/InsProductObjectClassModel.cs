@@ -24,6 +24,18 @@ namespace MasterDataModule.API.Models
         /// </summary>
         [DataMember]
         public int? weightFrom{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsProductObjectClass.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsProductObjectClass.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

@@ -14,6 +14,8 @@ define([
 			'#description': 'description',
 			'#taxCode': 'taxCode',
 			'#percent': 'percent',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -24,6 +26,8 @@ define([
 			this.disableInput(this, 'description');
 			this.disableInput(this, 'taxCode');
 			this.disableInput(this, 'percent', 'numeric');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

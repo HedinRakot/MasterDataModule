@@ -20,8 +20,9 @@ define([
 
 		columns: function () {
 		    return [
-				{ field: 'empEmployeeId', title: this.resources.empEmployeeId },
 				{ field: 'topEmployeeId', title: this.resources.topEmployeeId },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

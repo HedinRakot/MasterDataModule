@@ -31,6 +31,18 @@ namespace MasterDataModule.API.Models
         [Required]
         [DataMember]
         public string bankAccount{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="OrgBankInformation.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="OrgBankInformation.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Passenger type',
 		text: 'Text',	
 		code: 'Code',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

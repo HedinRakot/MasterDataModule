@@ -18,12 +18,16 @@ namespace MasterDataModule.API.Controllers
             model.name = entity.Name;
             model.description = entity.Description;
             model.auView = entity.AuView;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(InsObdStatusModel model, InsObdStatus entity, ActionTypes actionType)
         {
             entity.Name = model.name;
             entity.Description = model.description;
             entity.AuView = model.auView;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

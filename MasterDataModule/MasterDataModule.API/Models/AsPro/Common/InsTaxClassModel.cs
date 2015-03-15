@@ -19,6 +19,18 @@ namespace MasterDataModule.API.Models
         [Required]
         [DataMember]
         public string taxClass{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsTaxClass.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsTaxClass.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

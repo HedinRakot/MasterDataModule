@@ -16,7 +16,6 @@ namespace MasterDataModule.API.Models
         /// <summary>
         ///     Model property for <see cref="OrgInspectionDevice.DebitorCustomerNumber"/> entity
         /// </summary>
-        [Required]
         [DataMember]
         public string debitorCustomerNumber{ get; set; }
         /// <summary>
@@ -75,6 +74,18 @@ namespace MasterDataModule.API.Models
         /// </summary>
         [DataMember]
         public int? inspectionInterval{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="OrgInspectionDevice.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="OrgInspectionDevice.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

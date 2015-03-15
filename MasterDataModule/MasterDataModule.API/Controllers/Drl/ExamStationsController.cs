@@ -18,6 +18,8 @@ namespace MasterDataModule.API.Controllers
             model.ordFederalStateId = entity.OrdFederalStateId;
             model.place = entity.Place;
             model.description = entity.Description;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
             model.sortOrder = entity.SortOrder;
         }
         protected override void ModelToEntity(ExamStationModel model, ExamStation entity, ActionTypes actionType)
@@ -25,6 +27,8 @@ namespace MasterDataModule.API.Controllers
             entity.OrdFederalStateId = model.ordFederalStateId;
             entity.Place = model.place;
             entity.Description = model.description;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
             entity.SortOrder = model.sortOrder;
         }
     }

@@ -14,6 +14,8 @@ define([
 			'#roomNumber': 'roomNumber',
 			'#placeAmount': 'placeAmount',
 			'#orgOrganizationalUnitId': 'orgOrganizationalUnitId',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 			'#name1': 'name1',
 			'#name2': 'name2',
 			'#name3': 'name3',
@@ -36,6 +38,8 @@ define([
 			this.disableInput(this, 'roomNumber', 'numeric');
 			this.disableInput(this, 'placeAmount', 'numeric');
 			this.disableInput(this, 'orgOrganizationalUnitId', 'numeric');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 			this.disableInput(this, 'name1');
 			this.disableInput(this, 'name2');
 			this.disableInput(this, 'name3');

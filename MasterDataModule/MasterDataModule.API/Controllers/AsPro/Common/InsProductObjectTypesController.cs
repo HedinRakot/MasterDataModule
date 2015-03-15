@@ -18,12 +18,16 @@ namespace MasterDataModule.API.Controllers
             model.description = entity.Description;
             model.sapId = entity.SapId;
             model.isAuNecessary = entity.IsAuNecessary;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(InsProductObjectTypeModel model, InsProductObjectType entity, ActionTypes actionType)
         {
             entity.Description = model.description;
             entity.SapId = model.sapId;
             entity.IsAuNecessary = model.isAuNecessary;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

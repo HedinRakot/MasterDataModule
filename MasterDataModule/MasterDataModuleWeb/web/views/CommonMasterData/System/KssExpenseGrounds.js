@@ -24,6 +24,8 @@ define([
 				{ field: 'account', title: this.resources.account },
 				{ field: 'insVatTypeId', title: this.resources.insVatTypeId },
 				{ field: 'maxAmount', title: this.resources.maxAmount },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

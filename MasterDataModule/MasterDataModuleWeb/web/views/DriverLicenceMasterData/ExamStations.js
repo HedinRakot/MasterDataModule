@@ -23,6 +23,8 @@ define([
 				{ field: 'ordFederalStateId', title: this.resources.ordFederalStateId },
 				{ field: 'place', title: this.resources.place },
 				{ field: 'description', title: this.resources.description },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 				{ field: 'sortOrder', title: this.resources.sortOrder },
 			];
 		}

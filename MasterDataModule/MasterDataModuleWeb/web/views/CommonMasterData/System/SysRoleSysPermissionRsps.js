@@ -20,8 +20,9 @@ define([
 
 		columns: function () {
 		    return [
-				{ field: 'sysRoleId', title: this.resources.sysRoleId },
 				{ field: 'sysPermissionId', title: this.resources.sysPermissionId },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

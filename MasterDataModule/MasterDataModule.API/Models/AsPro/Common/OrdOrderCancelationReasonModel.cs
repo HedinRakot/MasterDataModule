@@ -19,6 +19,18 @@ namespace MasterDataModule.API.Models
         [Required]
         [DataMember]
         public string cancelationReasonText{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="OrdOrderCancelationReason.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="OrdOrderCancelationReason.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

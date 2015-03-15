@@ -10,6 +10,8 @@ define(function () {
 		bankName: 'Bankname',	
 		bankCode: 'Bankleitzahl bzw. BIC',	
 		bankAccount: 'Kontonummer bzw. IBAN',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

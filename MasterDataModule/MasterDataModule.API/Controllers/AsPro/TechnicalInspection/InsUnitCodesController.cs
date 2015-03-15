@@ -19,6 +19,8 @@ namespace MasterDataModule.API.Controllers
             model.ordFederalStateId = entity.OrdFederalStateId;
             model.ordAreaOfWorkId = entity.OrdAreaOfWorkId;
             model.unitCode = entity.UnitCode;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(InsUnitCodeModel model, InsUnitCode entity, ActionTypes actionType)
         {
@@ -26,6 +28,8 @@ namespace MasterDataModule.API.Controllers
             entity.OrdFederalStateId = model.ordFederalStateId;
             entity.OrdAreaOfWorkId = model.ordAreaOfWorkId;
             entity.UnitCode = model.unitCode;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

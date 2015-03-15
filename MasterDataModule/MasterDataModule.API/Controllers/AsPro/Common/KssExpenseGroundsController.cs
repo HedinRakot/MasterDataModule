@@ -19,6 +19,8 @@ namespace MasterDataModule.API.Controllers
             model.account = entity.Account;
             model.insVatTypeId = entity.InsVatTypeId;
             model.maxAmount = entity.MaxAmount;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(KssExpenseGroundModel model, KssExpenseGround entity, ActionTypes actionType)
         {
@@ -26,6 +28,8 @@ namespace MasterDataModule.API.Controllers
             entity.Account = model.account;
             entity.InsVatTypeId = model.insVatTypeId;
             entity.MaxAmount = model.maxAmount;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

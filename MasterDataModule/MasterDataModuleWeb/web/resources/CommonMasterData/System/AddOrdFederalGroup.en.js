@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Federal state group',
 		name: 'Name',	
 		description: 'Description',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

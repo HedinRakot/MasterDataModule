@@ -8,6 +8,8 @@ define(function () {
 	    masterData: 'TP masterdata',
 	    pageTitle: 'Inspection step',
 		description: 'Description',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

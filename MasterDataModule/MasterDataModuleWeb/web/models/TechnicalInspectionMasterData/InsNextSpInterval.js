@@ -20,6 +20,12 @@ define(function () {
 			,spInterval: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('insNextSpInterval', 'spInterval'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insNextSpInterval', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insNextSpInterval', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

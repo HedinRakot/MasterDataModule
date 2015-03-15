@@ -11,6 +11,8 @@ define(function () {
 		ordFederalStateId: 'Bundesland',	
 		ordAreaOfWorkId: 'Arbeitsgebiet ',	
 		unitCode: 'Code für die berichtende Stellen (mit führenden Nullen)',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

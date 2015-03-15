@@ -21,18 +21,11 @@ define([
 		columns: function () {
 		    return [
 				{ field: 'personalNumber', title: this.resources.personalNumber },
-				{ field: 'domain', title: this.resources.domain },
-				{ field: 'userName', title: this.resources.userName },
-				{ field: 'windowsUserName', title: this.resources.windowsUserName },
-				{ field: 'isSsoAllowed', title: this.resources.isSsoAllowed , headerTitle: this.resources.isSsoAllowed, checkbox: true},
-				{ field: 'isEmergencyLoginAllowed', title: this.resources.isEmergencyLoginAllowed , headerTitle: this.resources.isEmergencyLoginAllowed, checkbox: true},
 				{ field: 'name', title: this.resources.name },
 				{ field: 'middleName', title: this.resources.middleName },
 				{ field: 'lastName', title: this.resources.lastName },
-				{ field: 'comment', title: this.resources.comment },
-				{ field: 'sexType', title: this.resources.sexType },
-				{ field: 'title', title: this.resources.title },
-				{ field: 'birthdate', title: this.resources.birthdate , format: '{0:d}'},
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

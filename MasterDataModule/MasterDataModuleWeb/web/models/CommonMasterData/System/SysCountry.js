@@ -14,6 +14,12 @@ define(function () {
 			,isEu: { type: "boolean", 
 			                        editable: Application.canTableItemBeEdit('sysCountry', 'isEu'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('sysCountry', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('sysCountry', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

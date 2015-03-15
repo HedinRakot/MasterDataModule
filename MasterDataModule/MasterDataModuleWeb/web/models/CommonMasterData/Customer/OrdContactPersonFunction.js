@@ -11,6 +11,12 @@ define(function () {
 			,description: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('ordContactPersonFunction', 'description'), 
 				                    validation: { required: false, maxLength: 50 } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('ordContactPersonFunction', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('ordContactPersonFunction', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

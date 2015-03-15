@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'FE recognition',
 		name: 'Description',	
 		description: 'Description',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

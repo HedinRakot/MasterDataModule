@@ -18,6 +18,8 @@ namespace MasterDataModule.API.Controllers
             model.name = entity.Name;
             model.description = entity.Description;
             model.isMofa = entity.IsMofa;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
             model.isFsClass = entity.IsFsClass;
             model.sortOrder = entity.SortOrder;
         }
@@ -26,6 +28,8 @@ namespace MasterDataModule.API.Controllers
             entity.Name = model.name;
             entity.Description = model.description;
             entity.IsMofa = model.isMofa;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
             entity.IsFsClass = model.isFsClass;
             entity.SortOrder = model.sortOrder;
         }

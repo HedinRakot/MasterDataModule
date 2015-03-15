@@ -18,12 +18,16 @@ namespace MasterDataModule.API.Controllers
             model.description = entity.Description;
             model.validityPeriod = entity.ValidityPeriod;
             model.isNextTerminPossible = entity.IsNextTerminPossible;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(InsValidPeriodModel model, InsValidPeriod entity, ActionTypes actionType)
         {
             entity.Description = model.description;
             entity.ValidityPeriod = model.validityPeriod;
             entity.IsNextTerminPossible = model.isNextTerminPossible;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

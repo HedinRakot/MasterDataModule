@@ -23,6 +23,8 @@ define([
 				{ field: 'postCode', title: this.resources.postCode },
 				{ field: 'city', title: this.resources.city },
 				{ field: 'street', title: this.resources.street },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

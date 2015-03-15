@@ -44,6 +44,12 @@ define(function () {
 			,birthdate: { type: "date", 
 			                        editable: Application.canTableItemBeEdit('empEmployee', 'birthdate'), 
 				                    validation: { required: false, date: true } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('empEmployee', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('empEmployee', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

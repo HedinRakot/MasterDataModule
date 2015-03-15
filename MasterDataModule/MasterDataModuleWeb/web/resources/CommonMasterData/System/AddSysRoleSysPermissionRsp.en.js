@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Role to permission',
 		sysRoleId: 'Role',	
 		sysPermissionId: 'Permission',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

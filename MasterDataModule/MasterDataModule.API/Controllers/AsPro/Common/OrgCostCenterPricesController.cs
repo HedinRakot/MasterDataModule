@@ -24,6 +24,8 @@ namespace MasterDataModule.API.Controllers
             model.unitOfMeasure = entity.UnitOfMeasure;
             model.sysCurrencyId = entity.SysCurrencyId;
             model.changeAbilityType = entity.ChangeAbilityType;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(OrgCostCenterPriceModel model, OrgCostCenterPrice entity, ActionTypes actionType)
         {
@@ -36,6 +38,8 @@ namespace MasterDataModule.API.Controllers
             entity.UnitOfMeasure = model.unitOfMeasure;
             entity.SysCurrencyId = model.sysCurrencyId;
             entity.ChangeAbilityType = model.changeAbilityType;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

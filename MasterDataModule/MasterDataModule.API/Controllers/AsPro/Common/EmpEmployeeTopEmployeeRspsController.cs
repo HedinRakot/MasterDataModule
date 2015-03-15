@@ -17,11 +17,15 @@ namespace MasterDataModule.API.Controllers
         {
             model.empEmployeeId = entity.EmpEmployeeId;
             model.topEmployeeId = entity.TopEmployeeId;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(EmpEmployeeTopEmployeeRspModel model, EmpEmployeeTopEmployeeRsp entity, ActionTypes actionType)
         {
             entity.EmpEmployeeId = model.empEmployeeId;
             entity.TopEmployeeId = model.topEmployeeId;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

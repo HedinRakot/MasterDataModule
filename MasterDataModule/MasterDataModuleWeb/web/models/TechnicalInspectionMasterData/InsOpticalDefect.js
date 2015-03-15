@@ -14,6 +14,12 @@ define(function () {
 			,isCustom: { type: "boolean", 
 			                        editable: Application.canTableItemBeEdit('insOpticalDefect', 'isCustom'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insOpticalDefect', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insOpticalDefect', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

@@ -6,9 +6,12 @@ define(function () {
 		add: 'Add Organization hierarchy type',
 	    edit: 'Edit Organization hierarchy type',
 	    masterData: 'Common masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Organization hierarchy type',
 		name: 'Name',	
 		description: 'Description',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

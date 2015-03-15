@@ -19,6 +19,18 @@ namespace MasterDataModule.API.Models
         [Required]
         [DataMember]
         public string sapQualifier{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="OrdPartnerRole.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="OrdPartnerRole.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

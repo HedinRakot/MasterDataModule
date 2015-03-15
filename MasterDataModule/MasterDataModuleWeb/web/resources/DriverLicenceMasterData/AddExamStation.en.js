@@ -10,6 +10,8 @@ define(function () {
 		ordFederalStateId: 'Federal State',	
 		place: 'Location (Place)',	
 		description: 'Description',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 		sortOrder: 'Sort order',	
 	};
 

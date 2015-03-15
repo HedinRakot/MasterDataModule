@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Cost center',
 		name: 'Name',	
 		description: 'Description',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

@@ -8,6 +8,8 @@ define(function () {
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Recognition',
 		ordRecognitionTypeId: 'Recognition type',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 		orgAccountingAreaId: 'Accounting area',	
 	};
 

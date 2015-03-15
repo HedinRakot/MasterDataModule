@@ -8,6 +8,8 @@ define(function () {
 	    masterData: 'TP Stammdaten',
 	    pageTitle: 'Produktklasse-Prüfschritt',
 		description: 'Beschreibung des Prüfschritts',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

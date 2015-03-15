@@ -27,7 +27,7 @@
 		        field: 'name',
 		        operator: 'contains',
 		        value: this.model.get('name')
-		    });
+		    });		    
             
 		    return result;
 		},
@@ -41,7 +41,7 @@
 		    var bindings = {
 		        '#fromDate': 'fromDate',
 		        '#toDate': 'toDate',
-		        '#name': 'name'
+		        '#name': 'name',
 		    };
 
 		    self.stickit(self.model, bindings);

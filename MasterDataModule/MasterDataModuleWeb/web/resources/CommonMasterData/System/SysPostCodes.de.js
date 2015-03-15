@@ -10,6 +10,8 @@ define(function () {
 		postCode: 'Postleitzahl',	
 		city: 'Ort',	
 		street: 'Straße',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

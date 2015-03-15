@@ -9,6 +9,8 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Driverschool info',
 		text: 'Text',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

@@ -8,6 +8,12 @@ define(function () {
 			,text: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('schoolInfo', 'text'), 
 				                    validation: { required: false, maxLength: 250 } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('schoolInfo', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('schoolInfo', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

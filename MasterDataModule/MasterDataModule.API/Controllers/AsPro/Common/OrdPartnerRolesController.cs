@@ -16,10 +16,14 @@ namespace MasterDataModule.API.Controllers
         protected override void EntityToModel(OrdPartnerRole entity, OrdPartnerRoleModel model)
         {
             model.sapQualifier = entity.SapQualifier;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(OrdPartnerRoleModel model, OrdPartnerRole entity, ActionTypes actionType)
         {
             entity.SapQualifier = model.sapQualifier;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

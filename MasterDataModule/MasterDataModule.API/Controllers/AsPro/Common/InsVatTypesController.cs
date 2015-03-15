@@ -18,12 +18,16 @@ namespace MasterDataModule.API.Controllers
             model.description = entity.Description;
             model.taxCode = entity.TaxCode;
             model.percent = entity.Percent;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(InsVatTypeModel model, InsVatType entity, ActionTypes actionType)
         {
             entity.Description = model.description;
             entity.TaxCode = model.taxCode;
             entity.Percent = model.percent;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

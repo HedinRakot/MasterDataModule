@@ -25,6 +25,18 @@ namespace MasterDataModule.API.Models
         [Required]
         [DataMember]
         public decimal maxOrderSum{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="OrgAccountingArea.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="OrgAccountingArea.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

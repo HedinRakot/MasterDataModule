@@ -23,16 +23,8 @@ define([
 				{ field: 'authorityNumber', title: this.resources.authorityNumber },
 				{ field: 'name', title: this.resources.name },
 				{ field: 'description', title: this.resources.description },
-				{ field: 'isCertificateRequired', title: this.resources.isCertificateRequired , headerTitle: this.resources.isCertificateRequired, checkbox: true},
-				{ field: 'returnType', title: this.resources.returnType },
-				{ field: 'name2', title: this.resources.name2 },
-				{ field: 'streetHouseNumber', title: this.resources.streetHouseNumber },
-				{ field: 'zipCode', title: this.resources.zipCode },
-				{ field: 'city', title: this.resources.city },
-				{ field: 'sysCountryId', title: this.resources.sysCountryId },
-				{ field: 'phone1', title: this.resources.phone1 },
-				{ field: 'phone2', title: this.resources.phone2 },
-				{ field: 'fax', title: this.resources.fax },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

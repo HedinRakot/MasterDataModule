@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Bundeslandgruppe',
 		name: 'Kürzel der Bundeslandgruppe',	
 		description: 'Beschreibung der Bundeslandgruppe',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

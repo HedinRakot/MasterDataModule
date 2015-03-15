@@ -4,6 +4,7 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     public partial class OrdOrderCancelationReason: IHasId<int>
+        ,IIntervalFields
         ,IRemovable
     {
         /// <summary>
@@ -56,6 +57,14 @@ namespace MasterDataModule.Contracts.Entities
             /// Column name 'ID' for property <see cref="OrdOrderCancelationReason.Id"/>
             /// </summary>
             public static readonly string Id = "ID";
+            /// <summary>
+            /// Column name 'FROM_DATE' for property <see cref="OrdOrderCancelationReason.FromDate"/>
+            /// </summary>
+            public static readonly string FromDate = "FROM_DATE";
+            /// <summary>
+            /// Column name 'TO_DATE' for property <see cref="OrdOrderCancelationReason.ToDate"/>
+            /// </summary>
+            public static readonly string ToDate = "TO_DATE";
           
         }
         #endregion
@@ -69,6 +78,18 @@ namespace MasterDataModule.Contracts.Entities
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
         public int Id{ get; set; }
+        public DateTime FromDate{ get; set; }
+        public DateTime ToDate{ get; set; }
+        DateTime? IIntervalFields.FromDate
+        {
+            get { return FromDate; }
+            set { if(value.HasValue)FromDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        DateTime? IIntervalFields.ToDate
+        {
+            get { return ToDate; }
+            set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
                 
         
         /// <summary>
@@ -86,6 +107,8 @@ namespace MasterDataModule.Contracts.Entities
                        CreateEmployeeId = CreateEmployeeId,
                        ChangeEmployeeId = ChangeEmployeeId,
                        Source = Source,
+                       FromDate = FromDate,
+                       ToDate = ToDate,
         	           };
         }
     }

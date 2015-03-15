@@ -22,7 +22,8 @@ define([
 		    return [
 				{ field: 'name', title: this.resources.name },
 				{ field: 'description', title: this.resources.description },
-				{ field: 'isCustom', title: this.resources.isCustom , headerTitle: this.resources.isCustom, checkbox: true},
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

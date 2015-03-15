@@ -8,6 +8,8 @@ define(function () {
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Tax class',
 		taxClass: 'Tax class',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

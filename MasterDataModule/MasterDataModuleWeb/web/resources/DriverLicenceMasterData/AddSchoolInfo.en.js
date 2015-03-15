@@ -8,6 +8,8 @@ define(function () {
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Driverschool info',
 		text: 'Text',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

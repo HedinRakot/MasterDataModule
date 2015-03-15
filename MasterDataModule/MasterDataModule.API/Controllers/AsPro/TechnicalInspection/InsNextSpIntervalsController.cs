@@ -20,6 +20,8 @@ namespace MasterDataModule.API.Controllers
             model.ageMonthFrom = entity.AgeMonthFrom;
             model.ageMonthTo = entity.AgeMonthTo;
             model.spInterval = entity.SpInterval;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(InsNextSpIntervalModel model, InsNextSpInterval entity, ActionTypes actionType)
         {
@@ -28,6 +30,8 @@ namespace MasterDataModule.API.Controllers
             entity.AgeMonthFrom = model.ageMonthFrom;
             entity.AgeMonthTo = model.ageMonthTo;
             entity.SpInterval = model.spInterval;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

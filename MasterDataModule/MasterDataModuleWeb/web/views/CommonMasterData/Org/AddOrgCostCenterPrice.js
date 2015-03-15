@@ -20,6 +20,8 @@ define([
 			'#unitOfMeasure': 'unitOfMeasure',
 			'#sysCurrencyId': 'sysCurrencyId',
 			'#changeAbilityType': 'changeAbilityType',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -36,6 +38,8 @@ define([
 			this.disableInput(this, 'unitOfMeasure');
 			this.disableInput(this, 'sysCurrencyId', 'numeric');
 			this.disableInput(this, 'changeAbilityType', 'numeric');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

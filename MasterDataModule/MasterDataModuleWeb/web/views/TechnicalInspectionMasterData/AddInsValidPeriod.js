@@ -14,6 +14,8 @@ define([
 			'#description': 'description',
 			'#validityPeriod': 'validityPeriod',
 			'#isNextTerminPossible': 'isNextTerminPossible',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -24,6 +26,8 @@ define([
 			this.disableInput(this, 'description');
 			this.disableInput(this, 'validityPeriod', 'numeric');
 			this.disableInput(this, 'isNextTerminPossible');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

@@ -19,6 +19,18 @@ namespace MasterDataModule.API.Models
         [Required]
         [DataMember]
         public int driverSchoolId{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="Community.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="Community.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

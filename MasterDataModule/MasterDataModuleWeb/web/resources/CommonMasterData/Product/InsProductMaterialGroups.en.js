@@ -6,9 +6,12 @@ define(function () {
 		add: 'Add Product material group',
 	    edit: 'Edit Product material group',
 	    masterData: 'Common masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Product material group',
 		description: 'Description',	
 		sapId: 'SAP ID',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

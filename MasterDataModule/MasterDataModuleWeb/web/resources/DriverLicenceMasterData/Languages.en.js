@@ -10,6 +10,8 @@ define(function () {
 	    pageTitle: 'FE language',
 		sysLanguageId: 'Language',	
 		oldAbbr: 'Abbreviation in old System',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

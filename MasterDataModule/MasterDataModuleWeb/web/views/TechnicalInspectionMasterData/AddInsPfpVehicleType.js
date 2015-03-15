@@ -14,6 +14,8 @@ define([
 			'#description': 'description',
 			'#imageFileName': 'imageFileName',
 			'#isPolygonDataValid': 'isPolygonDataValid',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -24,6 +26,8 @@ define([
 			this.disableInput(this, 'description');
 			this.disableInput(this, 'imageFileName');
 			this.disableInput(this, 'isPolygonDataValid');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

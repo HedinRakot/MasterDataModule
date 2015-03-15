@@ -12,6 +12,8 @@ define([
 
 		bindings: {
 			'#ordRecognitionTypeId': 'ordRecognitionTypeId',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 			'#orgAccountingAreaId': 'orgAccountingAreaId',
 		},
 
@@ -21,6 +23,8 @@ define([
 
 			//TODO foreach model field
 			this.disableInput(this, 'ordRecognitionTypeId', 'numeric');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 			this.disableInput(this, 'orgAccountingAreaId', 'numeric');
 
             return this;

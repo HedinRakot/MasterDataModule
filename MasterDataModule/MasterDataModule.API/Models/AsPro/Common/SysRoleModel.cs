@@ -29,6 +29,18 @@ namespace MasterDataModule.API.Models
         /// </summary>
         [DataMember]
         public string description{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="SysRole.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="SysRole.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

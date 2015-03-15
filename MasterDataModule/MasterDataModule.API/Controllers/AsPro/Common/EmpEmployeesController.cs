@@ -28,6 +28,8 @@ namespace MasterDataModule.API.Controllers
             model.sexType = entity.SexType;
             model.title = entity.Title;
             model.birthdate = entity.Birthdate;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(EmpEmployeeModel model, EmpEmployee entity, ActionTypes actionType)
         {
@@ -44,6 +46,8 @@ namespace MasterDataModule.API.Controllers
             entity.SexType = model.sexType;
             entity.Title = model.title;
             entity.Birthdate = model.birthdate;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

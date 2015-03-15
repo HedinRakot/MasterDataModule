@@ -6,6 +6,7 @@ define(function () {
 		add: 'Add Employee',
 	    edit: 'Edit Employee',
 	    masterData: 'Common masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Employee',
 		personalNumber: 'Personal number',	
 		domain: 'Domain',	
@@ -20,6 +21,8 @@ define(function () {
 		sexType: 'Sex',	
 		title: 'Title',	
 		birthdate: 'Birthdate',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(InsPfpInspectionTypePfpPositionRsp.Fields.Id)
-                .IsRequired();
-
             Property(t => t.InsPfpPositionId)
                 .HasColumnName(InsPfpInspectionTypePfpPositionRsp.Fields.InsPfpPositionId)
                 .IsRequired();
@@ -66,6 +62,11 @@ namespace MasterDataModule.Lib.Data
 
             Property(t => t.ToDate)
                 .HasColumnName(InsPfpInspectionTypePfpPositionRsp.Fields.ToDate)
+                .IsRequired();
+
+            Property(t => t.Id)
+                .HasColumnName(InsPfpInspectionTypePfpPositionRsp.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
                 .IsRequired();
 
 

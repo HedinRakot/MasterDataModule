@@ -19,6 +19,8 @@ define(function () {
 		lastInspectionResult: 'Ergebnis der letzten Prüfung',	
 		inspectionDate: 'Prüfungsdatum',	
 		inspectionInterval: 'Prüfungsintervall',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

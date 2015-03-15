@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Zuordnungsarten zwischen Mitarbeiter und OE',
 		name: 'Kurzbezeichnung der Zuordnungsart',	
 		description: 'Beschreibung der Zuordnungsart',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

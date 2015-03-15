@@ -19,6 +19,8 @@ namespace MasterDataModule.API.Controllers
             model.sapIdIso = entity.SapIdIso;
             model.resourceFileName = entity.ResourceFileName;
             model.isAvailable = entity.IsAvailable;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(SysLanguageModel model, SysLanguage entity, ActionTypes actionType)
         {
@@ -26,6 +28,8 @@ namespace MasterDataModule.API.Controllers
             entity.SapIdIso = model.sapIdIso;
             entity.ResourceFileName = model.resourceFileName;
             entity.IsAvailable = model.isAvailable;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

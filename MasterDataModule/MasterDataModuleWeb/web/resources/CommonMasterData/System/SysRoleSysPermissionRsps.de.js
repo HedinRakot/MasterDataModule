@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Zuordnung Rechte zu einer Rolle',
 		sysRoleId: 'Rolle ',	
 		sysPermissionId: 'Recht ',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

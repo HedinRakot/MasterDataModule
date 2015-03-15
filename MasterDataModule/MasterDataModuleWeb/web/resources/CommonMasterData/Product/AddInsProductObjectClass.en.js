@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Product object class',
 		description: 'Description',	
 		weightFrom: 'Weight from',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

@@ -8,6 +8,12 @@ define(function () {
 			,description: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('insSummaryField', 'description'), 
 				                    validation: { required: true, maxLength: 250 } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insSummaryField', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insSummaryField', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

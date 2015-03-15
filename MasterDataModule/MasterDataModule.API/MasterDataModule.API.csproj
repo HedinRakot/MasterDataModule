@@ -110,7 +110,54 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.EmpCashPermissionTypesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.EmpEmployeesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.EmpEmployeeSysRoleRspsController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.EmpEmployeeTopEmployeeRspsController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.EmpOrgAssociationTypesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.ExpPassengersTypesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.InsCoreDataProductGroupsController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.InsProductCombinationTypesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.InsProductMaterialGroupsController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.InsProductObjectClassesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.InsProductObjectTypesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.InsProductTypesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.InsStatisticGroupsController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.InsTaxClassesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.InsTaxCodesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.InsVatTypesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.KssExpenseGroundsController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrdBillingParametersController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrdContactPersonFunctionsController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrdCustomerInfosController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrdFederalGroupsController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrdFederalStatesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrdOrderCancelationReasonsController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrdPartnerRolesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrdRecognitionsController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrdRecognitionTypesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrgAccountingAreasController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrgAccountTypesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrgBankInformationController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrgCostCenterPricesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrgCostCentersController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrgInformationController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrgInspectionDevicesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrgRelationshipTypesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.OrgTypesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.SysCountriesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.SysLanguagesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.SysLocationsController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.SysPostCodesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.SysRolesController.cs" />
+    <Compile Include="Controllers\AsPro\Common\Custom.SysRoleSysPermissionRspsController.cs" />
     <Compile Include="Controllers\AsPro\Common\EmpCashPermissionTypesController.cs">
+      <DependentUpon>Common.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AsPro\Common\EmpEmployeeOrgCostCenterRspsController.cs">
+      <DependentUpon>Common.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AsPro\Common\EmpEmployeeOrgOrganizationalUnitRspsController.cs">
       <DependentUpon>Common.Controllers.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AsPro\Common\EmpEmployeesController.cs">
@@ -182,6 +229,9 @@
     <Compile Include="Controllers\AsPro\Common\OrdPartnerRolesController.cs">
       <DependentUpon>Common.Controllers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AsPro\Common\OrdRecognitionAreaOfWorkRspsController.cs">
+      <DependentUpon>Common.Controllers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AsPro\Common\OrdRecognitionsController.cs">
       <DependentUpon>Common.Controllers.tt</DependentUpon>
     </Compile>
@@ -198,6 +248,9 @@
       <DependentUpon>Common.Controllers.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AsPro\Common\OrgCostCenterPricesController.cs">
+      <DependentUpon>Common.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AsPro\Common\OrgCostCenterResponsibleEmployeeRspsController.cs">
       <DependentUpon>Common.Controllers.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AsPro\Common\OrgCostCentersController.cs">
@@ -233,6 +286,19 @@
     <Compile Include="Controllers\AsPro\Common\SysRoleSysPermissionRspsController.cs">
       <DependentUpon>Common.Controllers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AsPro\TechnicalInspection\Custom.InsAvailableInspectionStepsController.cs" />
+    <Compile Include="Controllers\AsPro\TechnicalInspection\Custom.InsInspectionStepsController.cs" />
+    <Compile Include="Controllers\AsPro\TechnicalInspection\Custom.InsNextInspectionsController.cs" />
+    <Compile Include="Controllers\AsPro\TechnicalInspection\Custom.InsNextSpIntervalsController.cs" />
+    <Compile Include="Controllers\AsPro\TechnicalInspection\Custom.InsObdStatusesController.cs" />
+    <Compile Include="Controllers\AsPro\TechnicalInspection\Custom.InsOpticalDefectsController.cs" />
+    <Compile Include="Controllers\AsPro\TechnicalInspection\Custom.InsPfpPositionsController.cs" />
+    <Compile Include="Controllers\AsPro\TechnicalInspection\Custom.InsPfpVehicleTypesController.cs" />
+    <Compile Include="Controllers\AsPro\TechnicalInspection\Custom.InsProductClassGroupsController.cs" />
+    <Compile Include="Controllers\AsPro\TechnicalInspection\Custom.InsSeverityTypesController.cs" />
+    <Compile Include="Controllers\AsPro\TechnicalInspection\Custom.InsSummaryFieldsController.cs" />
+    <Compile Include="Controllers\AsPro\TechnicalInspection\Custom.InsUnitCodesController.cs" />
+    <Compile Include="Controllers\AsPro\TechnicalInspection\Custom.InsValidPeriodsController.cs" />
     <Compile Include="Controllers\AsPro\TechnicalInspection\InsAvailableInspectionStepsController.cs">
       <DependentUpon>TP.Controllers.tt</DependentUpon>
     </Compile>
@@ -249,6 +315,9 @@
       <DependentUpon>TP.Controllers.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AsPro\TechnicalInspection\InsOpticalDefectsController.cs">
+      <DependentUpon>TP.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AsPro\TechnicalInspection\InsPfpInspectionTypePfpPositionRspsController.cs">
       <DependentUpon>TP.Controllers.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AsPro\TechnicalInspection\InsPfpPositionsController.cs">
@@ -284,13 +353,45 @@
     <Compile Include="Controllers\Drl\CommunitiesController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\Drl\Custom.ArgeVersionsController.cs" />
+    <Compile Include="Controllers\Drl\Custom.AuthoritiesController.cs" />
+    <Compile Include="Controllers\Drl\Custom.CommunitiesController.cs" />
+    <Compile Include="Controllers\Drl\Custom.ExamClassArgeMapsController.cs" />
+    <Compile Include="Controllers\Drl\Custom.ExamClassesController.cs" />
+    <Compile Include="Controllers\Drl\Custom.ExamClassMapsController.cs" />
+    <Compile Include="Controllers\Drl\Custom.ExamConstraintsController.cs" />
+    <Compile Include="Controllers\Drl\Custom.ExamPossibleResultsController.cs" />
+    <Compile Include="Controllers\Drl\Custom.ExamRecognitionTypesController.cs" />
+    <Compile Include="Controllers\Drl\Custom.ExamRoomsController.cs" />
+    <Compile Include="Controllers\Drl\Custom.ExamStationsController.cs" />
+    <Compile Include="Controllers\Drl\Custom.HolidaysController.cs" />
+    <Compile Include="Controllers\Drl\Custom.LanguagesController.cs" />
+    <Compile Include="Controllers\Drl\Custom.LegalBasesController.cs" />
+    <Compile Include="Controllers\Drl\Custom.MeetingPointsController.cs" />
+    <Compile Include="Controllers\Drl\Custom.MessageLocalizationsController.cs" />
+    <Compile Include="Controllers\Drl\Custom.ReturnReasonsController.cs" />
+    <Compile Include="Controllers\Drl\Custom.SchoolInfosController.cs" />
+    <Compile Include="Controllers\Drl\Custom.SysColumnsController.cs" />
+    <Compile Include="Controllers\Drl\Custom.SysTablesController.cs" />
     <Compile Include="Controllers\Drl\ExamClassArgeMapsController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Drl\ExamClassesController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\Drl\ExamClassInclusiveClassesController.cs">
+      <DependentUpon>Drl.Controllers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Drl\ExamClassMapsController.cs">
+      <DependentUpon>Drl.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Drl\ExamClassRequiredClassesController.cs">
+      <DependentUpon>Drl.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Drl\ExamClassRestrictedClassesController.cs">
+      <DependentUpon>Drl.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Drl\ExamConstraintExamClassesController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Drl\ExamConstraintsController.cs">
@@ -299,13 +400,22 @@
     <Compile Include="Controllers\Drl\ExamPossibleResultsController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\Drl\ExamRecognitionTypeExamClassesController.cs">
+      <DependentUpon>Drl.Controllers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Drl\ExamRecognitionTypesController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Drl\ExamRoomsController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\Drl\ExamStationExamRecognitionTypesController.cs">
+      <DependentUpon>Drl.Controllers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Drl\ExamStationsController.cs">
+      <DependentUpon>Drl.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Drl\HolidayOrdFederalStatesController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Drl\HolidaysController.cs">
@@ -315,6 +425,9 @@
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Drl\LegalBasesController.cs">
+      <DependentUpon>Drl.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Drl\MeetingPointOrganizationalUnitsController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Drl\MeetingPointsController.cs">
@@ -347,6 +460,12 @@
       <DependentUpon>Common.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AsPro\Common\EmpEmployeeModel.cs">
+      <DependentUpon>Common.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AsPro\Common\EmpEmployeeOrgCostCenterRspModel.cs">
+      <DependentUpon>Common.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AsPro\Common\EmpEmployeeOrgOrganizationalUnitRspModel.cs">
       <DependentUpon>Common.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AsPro\Common\EmpEmployeeSysRoleRspModel.cs">
@@ -415,6 +534,9 @@
     <Compile Include="Models\AsPro\Common\OrdPartnerRoleModel.cs">
       <DependentUpon>Common.Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\AsPro\Common\OrdRecognitionAreaOfWorkRspModel.cs">
+      <DependentUpon>Common.Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\AsPro\Common\OrdRecognitionModel.cs">
       <DependentUpon>Common.Models.tt</DependentUpon>
     </Compile>
@@ -434,6 +556,9 @@
       <DependentUpon>Common.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AsPro\Common\OrgCostCenterPriceModel.cs">
+      <DependentUpon>Common.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AsPro\Common\OrgCostCenterResponsibleEmployeeRspModel.cs">
       <DependentUpon>Common.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AsPro\Common\OrgInformationModel.cs">
@@ -484,6 +609,9 @@
     <Compile Include="Models\AsPro\TechnicalInspection\InsOpticalDefectModel.cs">
       <DependentUpon>TP.Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\AsPro\TechnicalInspection\InsPfpInspectionTypePfpPositionRspModel.cs">
+      <DependentUpon>TP.Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\AsPro\TechnicalInspection\InsPfpPositionModel.cs">
       <DependentUpon>TP.Models.tt</DependentUpon>
     </Compile>
@@ -517,10 +645,22 @@
     <Compile Include="Models\Drl\ExamClassArgeMapModel.cs">
       <DependentUpon>Drl.Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Drl\ExamClassInclusiveClassModel.cs">
+      <DependentUpon>Drl.Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Drl\ExamClassMapModel.cs">
       <DependentUpon>Drl.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Drl\ExamClassModel.cs">
+      <DependentUpon>Drl.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Drl\ExamClassRequiredClassModel.cs">
+      <DependentUpon>Drl.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Drl\ExamClassRestrictedClassModel.cs">
+      <DependentUpon>Drl.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Drl\ExamConstraintExamClassModel.cs">
       <DependentUpon>Drl.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Drl\ExamConstraintModel.cs">
@@ -529,16 +669,25 @@
     <Compile Include="Models\Drl\ExamPossibleResultModel.cs">
       <DependentUpon>Drl.Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Drl\ExamRecognitionTypeExamClassModel.cs">
+      <DependentUpon>Drl.Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Drl\ExamRecognitionTypeModel.cs">
       <DependentUpon>Drl.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Drl\ExamRoomModel.cs">
       <DependentUpon>Drl.Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Drl\ExamStationExamRecognitionTypeModel.cs">
+      <DependentUpon>Drl.Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Drl\ExamStationModel.cs">
       <DependentUpon>Drl.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Drl\HolidayModel.cs">
+      <DependentUpon>Drl.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Drl\HolidayOrdFederalStateModel.cs">
       <DependentUpon>Drl.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Drl\LanguageModel.cs">
@@ -548,6 +697,9 @@
       <DependentUpon>Drl.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Drl\MeetingPointModel.cs">
+      <DependentUpon>Drl.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Drl\MeetingPointOrganizationalUnitModel.cs">
       <DependentUpon>Drl.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Drl\MessageLocalizationModel.cs">

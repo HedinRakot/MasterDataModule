@@ -25,6 +25,18 @@ namespace MasterDataModule.API.Models
         [Required]
         [DataMember]
         public string code{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="ExpPassengersType.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="ExpPassengersType.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

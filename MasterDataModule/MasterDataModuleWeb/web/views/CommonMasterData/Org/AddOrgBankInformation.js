@@ -14,6 +14,8 @@ define([
 			'#bankName': 'bankName',
 			'#bankCode': 'bankCode',
 			'#bankAccount': 'bankAccount',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -24,6 +26,8 @@ define([
 			this.disableInput(this, 'bankName');
 			this.disableInput(this, 'bankCode');
 			this.disableInput(this, 'bankAccount');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(InsPfpPosition.Fields.Id)
-                .IsRequired();
-
             Property(t => t.Text)
                 .HasColumnName(InsPfpPosition.Fields.Text)
                 .IsUnicode()
@@ -59,6 +55,19 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.Source)
                 .HasColumnName(InsPfpPosition.Fields.Source)
                 .HasMaxLength(4);
+
+            Property(t => t.Id)
+                .HasColumnName(InsPfpPosition.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+                .IsRequired();
+
+            Property(t => t.FromDate)
+                .HasColumnName(InsPfpPosition.Fields.FromDate)
+                .IsRequired();
+
+            Property(t => t.ToDate)
+                .HasColumnName(InsPfpPosition.Fields.ToDate)
+                .IsRequired();
 
 
             //Relationships

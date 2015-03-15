@@ -14,6 +14,12 @@ define(function () {
 			,auView: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('insObdStatus', 'auView'), 
 				                    validation: { required: true, maxLength: 1 } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insObdStatus', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insObdStatus', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

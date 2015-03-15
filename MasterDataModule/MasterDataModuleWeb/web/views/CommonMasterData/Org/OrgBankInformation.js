@@ -23,6 +23,8 @@ define([
 				{ field: 'bankName', title: this.resources.bankName },
 				{ field: 'bankCode', title: this.resources.bankCode },
 				{ field: 'bankAccount', title: this.resources.bankAccount },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

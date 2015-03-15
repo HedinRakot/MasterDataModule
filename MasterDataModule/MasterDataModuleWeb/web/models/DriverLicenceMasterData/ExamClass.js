@@ -14,6 +14,12 @@ define(function () {
 			,isMofa: { type: "boolean", 
 			                        editable: Application.canTableItemBeEdit('examClass', 'isMofa'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('examClass', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('examClass', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 			,isFsClass: { type: "boolean", 
 			                        editable: Application.canTableItemBeEdit('examClass', 'isFsClass'), 
 				                    validation: { required: false } }			

@@ -25,6 +25,18 @@ namespace MasterDataModule.API.Models
         [Required]
         [DataMember]
         public int sysPermissionId{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="SysRoleSysPermissionRsp.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="SysRoleSysPermissionRsp.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

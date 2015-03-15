@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Accounting area',
 		accountingArea: 'Number',	
 		maxOrderSum: 'Max order sum',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

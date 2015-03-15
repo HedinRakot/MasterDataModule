@@ -13,6 +13,8 @@ define([
 		bindings: {
 			'#sysLanguageId': 'sysLanguageId',
 			'#oldAbbr': 'oldAbbr',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -22,6 +24,8 @@ define([
 			//TODO foreach model field
 			this.disableInput(this, 'sysLanguageId', 'numeric');
 			this.disableInput(this, 'oldAbbr');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

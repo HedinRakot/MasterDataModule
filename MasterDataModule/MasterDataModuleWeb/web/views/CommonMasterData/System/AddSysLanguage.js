@@ -15,6 +15,8 @@ define([
 			'#sapIdIso': 'sapIdIso',
 			'#resourceFileName': 'resourceFileName',
 			'#isAvailable': 'isAvailable',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -26,6 +28,8 @@ define([
 			this.disableInput(this, 'sapIdIso');
 			this.disableInput(this, 'resourceFileName');
 			this.disableInput(this, 'isAvailable');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

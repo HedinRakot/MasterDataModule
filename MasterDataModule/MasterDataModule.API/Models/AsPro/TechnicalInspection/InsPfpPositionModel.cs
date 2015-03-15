@@ -19,6 +19,23 @@ namespace MasterDataModule.API.Models
         [Required]
         [DataMember]
         public string text{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsPfpPosition.TopId"/> entity
+        /// </summary>
+        [DataMember]
+        public int? topId{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsPfpPosition.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsPfpPosition.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

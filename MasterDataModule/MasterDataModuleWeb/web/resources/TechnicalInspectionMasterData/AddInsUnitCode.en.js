@@ -11,6 +11,8 @@ define(function () {
 		ordFederalStateId: 'Federal state',	
 		ordAreaOfWorkId: 'Area of work',	
 		unitCode: 'Unit code',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

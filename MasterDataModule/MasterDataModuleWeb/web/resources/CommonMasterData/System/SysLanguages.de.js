@@ -11,6 +11,8 @@ define(function () {
 		sapIdIso: 'ISO-Sprachbezeichnung',	
 		resourceFileName: 'Dateiname mit Oberflächentextenfür die Sprache',	
 		isAvailable: 'Angabe, ob Datei für Oberflächentexte vorhanden ist',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

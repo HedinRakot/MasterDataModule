@@ -5,6 +5,8 @@ define(function () {
         EmpEmployees: 'Employee',
         EmpCashPermissionTypes: 'Cash permission',
         EmpOrgAssociationTypes: 'Association type',
+        EmpEmployeeOrgCostCenterRsps: 'Cost center',
+        EmpEmployeeOrgOrganizationalUnitRsps: 'Org. unit',
         EmpEmployeeTopEmployeeRsps: 'Top employee',
         EmpEmployeeSysRoleRsps: 'Role',
 	};

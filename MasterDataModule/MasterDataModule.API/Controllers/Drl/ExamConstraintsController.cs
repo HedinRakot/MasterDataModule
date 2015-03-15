@@ -18,12 +18,16 @@ namespace MasterDataModule.API.Controllers
             model.name = entity.Name;
             model.description = entity.Description;
             model.constraintType = entity.ConstraintType;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(ExamConstraintModel model, ExamConstraint entity, ActionTypes actionType)
         {
             entity.Name = model.name;
             entity.Description = model.description;
             entity.ConstraintType = model.constraintType;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

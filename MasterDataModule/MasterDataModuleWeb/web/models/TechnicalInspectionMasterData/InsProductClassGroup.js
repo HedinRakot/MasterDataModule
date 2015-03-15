@@ -11,6 +11,12 @@ define(function () {
 			,sapId: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('insProductClassGroup', 'sapId'), 
 				                    validation: { required: true, maxLength: 10 } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insProductClassGroup', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insProductClassGroup', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

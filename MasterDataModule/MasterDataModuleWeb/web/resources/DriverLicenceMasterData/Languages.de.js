@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'FE-Sprache',
 		sysLanguageId: 'Sprachschlüssel ',	
 		oldAbbr: 'Alter Sprachschlüssel aus VF97',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

@@ -32,6 +32,12 @@ define(function () {
 			,changeAbilityType: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('orgCostCenterPrice', 'changeAbilityType'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('orgCostCenterPrice', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('orgCostCenterPrice', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

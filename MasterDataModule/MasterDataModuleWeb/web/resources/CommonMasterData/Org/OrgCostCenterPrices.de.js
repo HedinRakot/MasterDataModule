@@ -16,6 +16,8 @@ define(function () {
 		unitOfMeasure: 'Mengeneinheit (Kombobox) mit folgenden Werten „ST“ = Stück, „H“ = Stunde',	
 		sysCurrencyId: 'Währungskennzeichen',	
 		changeAbilityType: 'Preisänderung (Kombobox mit folgenden Werten 0= “nicht änderbar“, 1= “änderbar mit Begründung“, 2= “änderbar ohne Begründung“)',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

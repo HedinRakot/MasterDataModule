@@ -20,6 +20,12 @@ define(function () {
 			,returnType: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('authority', 'returnType'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('authority', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('authority', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 			,name2: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('authority', 'name2'), 
 				                    validation: { required: false, maxLength: 100 } }			

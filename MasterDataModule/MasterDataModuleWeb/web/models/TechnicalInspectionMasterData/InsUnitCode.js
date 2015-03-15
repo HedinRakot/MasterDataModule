@@ -17,6 +17,12 @@ define(function () {
 			,unitCode: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('insUnitCode', 'unitCode'), 
 				                    validation: { required: false, maxLength: 8 } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insUnitCode', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insUnitCode', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

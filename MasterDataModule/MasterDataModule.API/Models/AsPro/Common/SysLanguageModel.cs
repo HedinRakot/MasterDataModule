@@ -34,6 +34,18 @@ namespace MasterDataModule.API.Models
         /// </summary>
         [DataMember]
         public bool isAvailable{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="SysLanguage.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="SysLanguage.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

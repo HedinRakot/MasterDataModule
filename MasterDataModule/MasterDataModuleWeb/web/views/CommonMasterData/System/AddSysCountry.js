@@ -14,6 +14,8 @@ define([
 			'#sapId': 'sapId',
 			'#name': 'name',
 			'#isEu': 'isEu',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -24,6 +26,8 @@ define([
 			this.disableInput(this, 'sapId');
 			this.disableInput(this, 'name');
 			this.disableInput(this, 'isEu');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

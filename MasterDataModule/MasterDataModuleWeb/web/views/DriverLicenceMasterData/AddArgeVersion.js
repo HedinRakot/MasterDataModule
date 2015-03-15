@@ -14,6 +14,8 @@ define([
 			'#programmName': 'programmName',
 			'#versionSystem': 'versionSystem',
 			'#expirationDate': 'expirationDate',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -24,6 +26,8 @@ define([
 			this.disableInput(this, 'programmName');
 			this.disableInput(this, 'versionSystem');
 			this.disableInput(this, 'expirationDate', 'date');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

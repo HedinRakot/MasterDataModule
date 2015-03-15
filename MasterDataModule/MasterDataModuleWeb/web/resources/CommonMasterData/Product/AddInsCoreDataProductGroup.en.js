@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Product group',
 		name: 'Name',	
 		defaultDuration: 'Default duration',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

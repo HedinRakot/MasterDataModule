@@ -13,6 +13,8 @@ define([
 		bindings: {
 			'#empEmployeeId': 'empEmployeeId',
 			'#topEmployeeId': 'topEmployeeId',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -22,6 +24,8 @@ define([
 			//TODO foreach model field
 			this.disableInput(this, 'empEmployeeId', 'numeric');
 			this.disableInput(this, 'topEmployeeId', 'numeric');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

@@ -11,6 +11,12 @@ define(function () {
 			,description: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('insSeverityType', 'description'), 
 				                    validation: { required: false, maxLength: 250 } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insSeverityType', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insSeverityType', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

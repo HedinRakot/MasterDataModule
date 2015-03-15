@@ -10,6 +10,8 @@ define(function () {
 		roomNumber: 'Exam Room Number',	
 		placeAmount: 'Amount of places',	
 		orgOrganizationalUnitId: 'Organizational Unit',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 		name1: 'Name 1',	
 		name2: 'Name 2',	
 		name3: 'Name 3',	

@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Kostenstelle',
 		name: 'Kostenstelle',	
 		description: 'Bezeichnung der Kostenstelle',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

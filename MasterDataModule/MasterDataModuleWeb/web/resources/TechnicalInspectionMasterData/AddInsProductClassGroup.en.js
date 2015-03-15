@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Product class group',
 		description: 'Description',	
 		sapId: 'SAP ID',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

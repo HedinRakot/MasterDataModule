@@ -11,6 +11,8 @@ define(function () {
 		locationName: 'Ort des Standortcodes',	
 		sysCountryId: 'Land des Standortcodes ',	
 		ordFederalStateId: 'Bundesland des Standortcodes ',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

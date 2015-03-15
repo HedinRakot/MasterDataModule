@@ -27,6 +27,8 @@ namespace MasterDataModule.API.Controllers
             model.lastInspectionResult = entity.LastInspectionResult;
             model.inspectionDate = entity.InspectionDate;
             model.inspectionInterval = entity.InspectionInterval;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(OrgInspectionDeviceModel model, OrgInspectionDevice entity, ActionTypes actionType)
         {
@@ -42,6 +44,8 @@ namespace MasterDataModule.API.Controllers
             entity.LastInspectionResult = model.lastInspectionResult;
             entity.InspectionDate = model.inspectionDate;
             entity.InspectionInterval = model.inspectionInterval;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

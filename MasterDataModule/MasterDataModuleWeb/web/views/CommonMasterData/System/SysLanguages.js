@@ -22,8 +22,8 @@ define([
 		    return [
 				{ field: 'sapId', title: this.resources.sapId },
 				{ field: 'sapIdIso', title: this.resources.sapIdIso },
-				{ field: 'resourceFileName', title: this.resources.resourceFileName },
-				{ field: 'isAvailable', title: this.resources.isAvailable , headerTitle: this.resources.isAvailable, checkbox: true},
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

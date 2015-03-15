@@ -23,6 +23,8 @@ define([
 				{ field: 'textValue', title: this.resources.textValue },
 				{ field: 'numberValue', title: this.resources.numberValue },
 				{ field: 'infoType', title: this.resources.infoType },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

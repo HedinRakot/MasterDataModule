@@ -14,6 +14,12 @@ define(function () {
 			,constraintType: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('examConstraint', 'constraintType'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('examConstraint', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('examConstraint', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

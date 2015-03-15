@@ -8,6 +8,12 @@ define(function () {
 			,cancelationReasonText: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('ordOrderCancelationReason', 'cancelationReasonText'), 
 				                    validation: { required: true, maxLength: 1024 } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('ordOrderCancelationReason', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('ordOrderCancelationReason', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

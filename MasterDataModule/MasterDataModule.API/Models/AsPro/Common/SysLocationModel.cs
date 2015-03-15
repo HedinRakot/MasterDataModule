@@ -34,6 +34,18 @@ namespace MasterDataModule.API.Models
         /// </summary>
         [DataMember]
         public int? ordFederalStateId{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="SysLocation.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="SysLocation.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

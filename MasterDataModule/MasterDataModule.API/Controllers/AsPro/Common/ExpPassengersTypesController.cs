@@ -17,11 +17,15 @@ namespace MasterDataModule.API.Controllers
         {
             model.text = entity.Text;
             model.code = entity.Code;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(ExpPassengersTypeModel model, ExpPassengersType entity, ActionTypes actionType)
         {
             entity.Text = model.text;
             entity.Code = model.code;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

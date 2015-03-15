@@ -30,6 +30,18 @@ namespace MasterDataModule.API.Models
         [DataMember]
         public bool isMofa{ get; set; }
         /// <summary>
+        ///     Model property for <see cref="ExamClass.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="ExamClass.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
+        /// <summary>
         ///     Model property for <see cref="ExamClass.IsFsClass"/> entity
         /// </summary>
         [DataMember]

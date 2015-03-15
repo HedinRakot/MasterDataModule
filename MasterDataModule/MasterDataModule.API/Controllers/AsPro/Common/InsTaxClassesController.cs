@@ -16,10 +16,14 @@ namespace MasterDataModule.API.Controllers
         protected override void EntityToModel(InsTaxClass entity, InsTaxClassModel model)
         {
             model.taxClass = entity.TaxClass;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(InsTaxClassModel model, InsTaxClass entity, ActionTypes actionType)
         {
             entity.TaxClass = model.taxClass;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

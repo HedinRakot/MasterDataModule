@@ -8,6 +8,12 @@ define(function () {
 			,driverSchoolId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('community', 'driverSchoolId'), 
 				                    validation: { required: true } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('community', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('community', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

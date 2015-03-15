@@ -21,8 +21,8 @@ define([
 		columns: function () {
 		    return [
 				{ field: 'description', title: this.resources.description },
-				{ field: 'imageFileName', title: this.resources.imageFileName },
-				{ field: 'isPolygonDataValid', title: this.resources.isPolygonDataValid , headerTitle: this.resources.isPolygonDataValid, checkbox: true},
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

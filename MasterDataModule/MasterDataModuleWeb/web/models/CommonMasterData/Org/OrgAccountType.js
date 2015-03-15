@@ -11,6 +11,12 @@ define(function () {
 			,description: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('orgAccountType', 'description'), 
 				                    validation: { required: false, maxLength: 250 } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('orgAccountType', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('orgAccountType', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

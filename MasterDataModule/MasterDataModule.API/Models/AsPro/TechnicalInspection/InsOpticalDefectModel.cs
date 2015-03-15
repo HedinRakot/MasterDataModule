@@ -29,6 +29,18 @@ namespace MasterDataModule.API.Models
         /// </summary>
         [DataMember]
         public bool isCustom{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsOpticalDefect.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsOpticalDefect.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

@@ -20,6 +20,18 @@ namespace MasterDataModule.API.Models
         [DataMember]
         public int? ordRecognitionTypeId{ get; set; }
         /// <summary>
+        ///     Model property for <see cref="OrdRecognition.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="OrdRecognition.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
+        /// <summary>
         ///     Model property for <see cref="OrdRecognition.OrgAccountingAreaId"/> entity
         /// </summary>
         [Required]

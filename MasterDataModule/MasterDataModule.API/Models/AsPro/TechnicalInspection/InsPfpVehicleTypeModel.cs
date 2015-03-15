@@ -29,6 +29,18 @@ namespace MasterDataModule.API.Models
         /// </summary>
         [DataMember]
         public bool? isPolygonDataValid{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsPfpVehicleType.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsPfpVehicleType.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

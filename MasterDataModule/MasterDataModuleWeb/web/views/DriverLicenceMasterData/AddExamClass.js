@@ -14,6 +14,8 @@ define([
 			'#name': 'name',
 			'#description': 'description',
 			'#isMofa': 'isMofa',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 			'#isFsClass': 'isFsClass',
 			'#sortOrder': 'sortOrder',
 		},
@@ -26,6 +28,8 @@ define([
 			this.disableInput(this, 'name');
 			this.disableInput(this, 'description');
 			this.disableInput(this, 'isMofa');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 			this.disableInput(this, 'isFsClass');
 			this.disableInput(this, 'sortOrder', 'numeric');
 

@@ -18,12 +18,16 @@ namespace MasterDataModule.API.Controllers
             model.textValue = entity.TextValue;
             model.numberValue = entity.NumberValue;
             model.infoType = entity.InfoType;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(OrdCustomerInfoModel model, OrdCustomerInfo entity, ActionTypes actionType)
         {
             entity.TextValue = model.textValue;
             entity.NumberValue = model.numberValue;
             entity.InfoType = model.infoType;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

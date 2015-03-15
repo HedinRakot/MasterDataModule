@@ -13,6 +13,8 @@ define([
 		bindings: {
 			'#text': 'text',
 			'#code': 'code',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -22,6 +24,8 @@ define([
 			//TODO foreach model field
 			this.disableInput(this, 'text');
 			this.disableInput(this, 'code');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

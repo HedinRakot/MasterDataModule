@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Auszahlungsrecht',
 		name: 'Kurzbezeichnung des Auszahlungsgrunds',	
 		description: 'Beschreibung des Auszahlungsgrund',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

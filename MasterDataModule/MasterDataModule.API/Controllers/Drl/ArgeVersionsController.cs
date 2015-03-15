@@ -18,12 +18,16 @@ namespace MasterDataModule.API.Controllers
             model.programmName = entity.ProgrammName;
             model.versionSystem = entity.VersionSystem;
             model.expirationDate = entity.ExpirationDate;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(ArgeVersionModel model, ArgeVersion entity, ActionTypes actionType)
         {
             entity.ProgrammName = model.programmName;
             entity.VersionSystem = model.versionSystem;
             entity.ExpirationDate = model.expirationDate;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

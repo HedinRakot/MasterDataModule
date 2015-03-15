@@ -20,6 +20,8 @@ namespace MasterDataModule.API.Controllers
             model.description = entity.Description;
             model.isCertificateRequired = entity.IsCertificateRequired;
             model.returnType = entity.ReturnType;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
             model.name2 = entity.Name2;
             model.streetHouseNumber = entity.StreetHouseNumber;
             model.zipCode = entity.ZipCode;
@@ -36,6 +38,8 @@ namespace MasterDataModule.API.Controllers
             entity.Description = model.description;
             entity.IsCertificateRequired = model.isCertificateRequired;
             entity.ReturnType = model.returnType;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
             entity.Name2 = model.name2;
             entity.StreetHouseNumber = model.streetHouseNumber;
             entity.ZipCode = model.zipCode;

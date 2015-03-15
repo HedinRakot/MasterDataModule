@@ -17,11 +17,15 @@ namespace MasterDataModule.API.Controllers
         {
             model.name = entity.Name;
             model.defaultDuration = entity.DefaultDuration;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(InsCoreDataProductGroupModel model, InsCoreDataProductGroup entity, ActionTypes actionType)
         {
             entity.Name = model.name;
             entity.DefaultDuration = model.defaultDuration;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

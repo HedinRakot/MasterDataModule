@@ -30,6 +30,18 @@ namespace MasterDataModule.API.Models
         [DataMember]
         public string description{ get; set; }
         /// <summary>
+        ///     Model property for <see cref="ExamStation.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="ExamStation.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
+        /// <summary>
         ///     Model property for <see cref="ExamStation.SortOrder"/> entity
         /// </summary>
         [DataMember]

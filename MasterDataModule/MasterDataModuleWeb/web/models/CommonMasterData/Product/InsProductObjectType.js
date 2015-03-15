@@ -14,6 +14,12 @@ define(function () {
 			,isAuNecessary: { type: "boolean", 
 			                        editable: Application.canTableItemBeEdit('insProductObjectType', 'isAuNecessary'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insProductObjectType', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insProductObjectType', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

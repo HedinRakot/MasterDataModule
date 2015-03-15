@@ -8,6 +8,9 @@ define(function () {
 	    masterData: 'TP Stammdaten',
 	    pageTitle: 'Produktklasse-PFP-Prüfpositionen',
 		text: 'Text der PFP-Prüfposition',	
+		topId: 'Top id',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

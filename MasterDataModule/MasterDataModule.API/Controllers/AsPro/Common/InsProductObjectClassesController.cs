@@ -17,11 +17,15 @@ namespace MasterDataModule.API.Controllers
         {
             model.description = entity.Description;
             model.weightFrom = entity.WeightFrom;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(InsProductObjectClassModel model, InsProductObjectClass entity, ActionTypes actionType)
         {
             entity.Description = model.description;
             entity.WeightFrom = model.weightFrom;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

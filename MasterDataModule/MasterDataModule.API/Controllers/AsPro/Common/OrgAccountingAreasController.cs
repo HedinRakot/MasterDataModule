@@ -17,11 +17,15 @@ namespace MasterDataModule.API.Controllers
         {
             model.accountingArea = entity.AccountingArea;
             model.maxOrderSum = entity.MaxOrderSum;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(OrgAccountingAreaModel model, OrgAccountingArea entity, ActionTypes actionType)
         {
             entity.AccountingArea = model.accountingArea;
             entity.MaxOrderSum = model.maxOrderSum;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

@@ -8,6 +8,8 @@ define(function () {
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Parnter role',
 		sapQualifier: 'SAP ID',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

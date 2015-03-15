@@ -18,6 +18,8 @@ namespace MasterDataModule.API.Controllers
             model.roomNumber = entity.RoomNumber;
             model.placeAmount = entity.PlaceAmount;
             model.orgOrganizationalUnitId = entity.OrgOrganizationalUnitId;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
             model.name1 = entity.Name1;
             model.name2 = entity.Name2;
             model.name3 = entity.Name3;
@@ -36,6 +38,8 @@ namespace MasterDataModule.API.Controllers
             entity.RoomNumber = model.roomNumber;
             entity.PlaceAmount = model.placeAmount;
             entity.OrgOrganizationalUnitId = model.orgOrganizationalUnitId;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
             entity.Name1 = model.name1;
             entity.Name2 = model.name2;
             entity.Name3 = model.name3;

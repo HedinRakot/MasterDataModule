@@ -40,6 +40,18 @@ namespace MasterDataModule.API.Models
         [DataMember]
         public int returnType{ get; set; }
         /// <summary>
+        ///     Model property for <see cref="Authority.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="Authority.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
+        /// <summary>
         ///     Model property for <see cref="Authority.Name2"/> entity
         /// </summary>
         [DataMember]

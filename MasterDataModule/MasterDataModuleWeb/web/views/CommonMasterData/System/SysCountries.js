@@ -23,6 +23,8 @@ define([
 				{ field: 'sapId', title: this.resources.sapId },
 				{ field: 'name', title: this.resources.name },
 				{ field: 'isEu', title: this.resources.isEu , headerTitle: this.resources.isEu, checkbox: true},
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

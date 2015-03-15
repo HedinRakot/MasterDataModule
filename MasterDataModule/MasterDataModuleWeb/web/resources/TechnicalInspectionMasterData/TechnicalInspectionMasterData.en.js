@@ -9,6 +9,7 @@ define(function () {
         InsSeverityTypes: 'Severity type',
         InsValidPeriods: 'Valid period',
         InsPfpPositions: 'PFP position',
+        InsPfpInspectionTypePfpPositionRsps: 'PFP inspection type to position',
         InsPfpVehicleTypes: 'Vehicle type',
         InsUnitCodes: 'Unit code',
         InsInspectionSteps: 'Inspection step',

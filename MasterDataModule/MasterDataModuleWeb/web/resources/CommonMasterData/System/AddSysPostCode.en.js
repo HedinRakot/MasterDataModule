@@ -10,6 +10,8 @@ define(function () {
 		postCode: 'Post code',	
 		city: 'City',	
 		street: 'Street',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

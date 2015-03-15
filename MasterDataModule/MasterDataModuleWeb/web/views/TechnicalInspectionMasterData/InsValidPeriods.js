@@ -22,7 +22,8 @@ define([
 		    return [
 				{ field: 'description', title: this.resources.description },
 				{ field: 'validityPeriod', title: this.resources.validityPeriod },
-				{ field: 'isNextTerminPossible', title: this.resources.isNextTerminPossible , headerTitle: this.resources.isNextTerminPossible, checkbox: true},
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

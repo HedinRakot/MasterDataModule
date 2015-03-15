@@ -79,6 +79,18 @@ namespace MasterDataModule.API.Models
         /// </summary>
         [DataMember]
         public DateTime birthdate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="EmpEmployee.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="EmpEmployee.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

@@ -10,6 +10,8 @@ define(function () {
 		name: 'Name',	
 		description: 'Description',	
 		auView: 'AU View',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

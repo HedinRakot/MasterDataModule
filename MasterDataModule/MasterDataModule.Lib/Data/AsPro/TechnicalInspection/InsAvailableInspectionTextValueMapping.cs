@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(InsAvailableInspectionTextValue.Fields.Id)
-                .IsRequired();
-
             Property(t => t.InsAvailableInspectionTextId)
                 .HasColumnName(InsAvailableInspectionTextValue.Fields.InsAvailableInspectionTextId)
                 .IsRequired();
@@ -72,6 +68,11 @@ namespace MasterDataModule.Lib.Data
 
             Property(t => t.ToDate)
                 .HasColumnName(InsAvailableInspectionTextValue.Fields.ToDate)
+                .IsRequired();
+
+            Property(t => t.Id)
+                .HasColumnName(InsAvailableInspectionTextValue.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
                 .IsRequired();
 
 

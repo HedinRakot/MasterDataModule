@@ -14,6 +14,8 @@ define([
 			'#federalStateName': 'federalStateName',
 			'#description': 'description',
 			'#sysCountryId': 'sysCountryId',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -24,6 +26,8 @@ define([
 			this.disableInput(this, 'federalStateName');
 			this.disableInput(this, 'description');
 			this.disableInput(this, 'sysCountryId', 'numeric');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

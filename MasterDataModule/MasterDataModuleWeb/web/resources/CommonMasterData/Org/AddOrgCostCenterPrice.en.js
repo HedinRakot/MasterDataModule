@@ -16,6 +16,8 @@ define(function () {
 		unitOfMeasure: 'Unit of measure',	
 		sysCurrencyId: 'Currency',	
 		changeAbilityType: 'Change ability type',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

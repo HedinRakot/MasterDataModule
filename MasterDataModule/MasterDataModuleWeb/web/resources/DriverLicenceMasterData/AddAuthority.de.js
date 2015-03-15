@@ -12,6 +12,8 @@ define(function () {
 		description: 'Beschreibung der Behörde',	
 		isCertificateRequired: 'Angabe, ob Ausbildungsbescheinigung von der Behörde gefordert wird ',	
 		returnType: 'Rückmeldeweg von Prüfaufträgen an die Behörde („1“ = „Online“, „2“ = „Papier“)',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 		name2: 'Name 2',	
 		streetHouseNumber: 'Strasse und Hausnummer',	
 		zipCode: 'PLZ',	

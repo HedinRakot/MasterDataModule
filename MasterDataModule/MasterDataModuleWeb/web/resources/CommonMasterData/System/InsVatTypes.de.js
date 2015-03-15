@@ -10,6 +10,8 @@ define(function () {
 		description: 'Beschreibung des Mehrwertsteuersatzes',	
 		taxCode: 'SAP-Steuercode ',	
 		percent: 'Prozentsatz des Mehrwertsteuersatzes',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

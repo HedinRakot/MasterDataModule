@@ -10,6 +10,8 @@ define(function () {
 		programmName: 'Exam-Programm',	
 		versionSystem: 'Version of Exam-Programm',	
 		expirationDate: 'Expiration Date',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

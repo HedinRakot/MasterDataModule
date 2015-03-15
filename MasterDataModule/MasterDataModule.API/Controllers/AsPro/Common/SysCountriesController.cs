@@ -18,12 +18,16 @@ namespace MasterDataModule.API.Controllers
             model.sapId = entity.SapId;
             model.name = entity.Name;
             model.isEu = entity.IsEu;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(SysCountryModel model, SysCountry entity, ActionTypes actionType)
         {
             entity.SapId = model.sapId;
             entity.Name = model.name;
             entity.IsEu = model.isEu;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

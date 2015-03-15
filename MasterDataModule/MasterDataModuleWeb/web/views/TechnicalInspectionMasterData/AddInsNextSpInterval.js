@@ -16,6 +16,8 @@ define([
 			'#ageMonthFrom': 'ageMonthFrom',
 			'#ageMonthTo': 'ageMonthTo',
 			'#spInterval': 'spInterval',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -28,6 +30,8 @@ define([
 			this.disableInput(this, 'ageMonthFrom', 'numeric');
 			this.disableInput(this, 'ageMonthTo', 'numeric');
 			this.disableInput(this, 'spInterval', 'numeric');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

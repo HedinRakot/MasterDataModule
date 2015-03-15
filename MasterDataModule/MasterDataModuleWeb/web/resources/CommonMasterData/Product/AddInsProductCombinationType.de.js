@@ -8,6 +8,8 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Produkt-Kombinationstypen',
 		description: 'Beschreibung des Kombinationstyps',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

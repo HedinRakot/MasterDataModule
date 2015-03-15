@@ -20,7 +20,6 @@ define([
 
 		columns: function () {
 		    return [
-				{ field: 'examClassIdOld', title: this.resources.examClassIdOld },
 				{ field: 'examClassIdActual', title: this.resources.examClassIdActual },
 			];
 		}

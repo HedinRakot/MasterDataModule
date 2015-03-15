@@ -14,6 +14,12 @@ define(function () {
 			,isPolygonDataValid: { type: "boolean", 
 			                        editable: Application.canTableItemBeEdit('insPfpVehicleType', 'isPolygonDataValid'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insPfpVehicleType', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insPfpVehicleType', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

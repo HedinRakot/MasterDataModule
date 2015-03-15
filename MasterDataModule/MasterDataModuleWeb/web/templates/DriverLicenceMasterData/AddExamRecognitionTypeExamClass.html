@@ -1,0 +1,49 @@
+<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#DriverLicenceMasterData" data-localized="masterData"></a> / 
+	<a href="#ExamRecognitionTypeExamClasses" data-localized="pageTitle"></a> / <%= title %></span>
+
+<form method="post" class="add-model">
+    <div class="inline-block" style="width: 520px;">
+		<div class="editor-label">
+			<label for="examRecognitionTypeId" data-localized="examRecognitionTypeId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="examRecognitionTypeId" name="examRecognitionTypeId" />
+		</div>   
+		<div class="editor-label">
+			<label for="examClassId" data-localized="examClassId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="examClassId" name="examClassId" />
+		</div>   
+		<div class="editor-label">
+			<label for="fromDate" data-localized="fromDate"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="datepicker" id="fromDate" name="fromDate" />
+		</div>   
+		<div class="editor-label">
+			<label for="toDate" data-localized="toDate"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="datepicker" id="toDate" name="toDate" />
+		</div>   
+	</div>
+	<div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>

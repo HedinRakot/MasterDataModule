@@ -18,12 +18,16 @@ namespace MasterDataModule.API.Controllers
             model.description = entity.Description;
             model.imageFileName = entity.ImageFileName;
             model.isPolygonDataValid = entity.IsPolygonDataValid;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(InsPfpVehicleTypeModel model, InsPfpVehicleType entity, ActionTypes actionType)
         {
             entity.Description = model.description;
             entity.ImageFileName = model.imageFileName;
             entity.IsPolygonDataValid = model.isPolygonDataValid;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

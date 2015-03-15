@@ -34,6 +34,18 @@ namespace MasterDataModule.API.Models
         /// </summary>
         [DataMember]
         public string text2{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="ReturnReason.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="ReturnReason.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

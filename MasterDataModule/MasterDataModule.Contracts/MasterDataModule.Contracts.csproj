@@ -207,52 +207,52 @@
       <DependentUpon>Common.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\TechnicalInspection\InsAvailableInspectionStep.cs">
-      <DependentUpon>Common.Entities.tt</DependentUpon>
+      <DependentUpon>TP.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\TechnicalInspection\InsAvailableInspectionText.cs">
-      <DependentUpon>Common.Entities.tt</DependentUpon>
+      <DependentUpon>TP.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\TechnicalInspection\InsAvailableInspectionTextValue.cs">
-      <DependentUpon>Common.Entities.tt</DependentUpon>
+      <DependentUpon>TP.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\TechnicalInspection\InsInspectionStep.cs">
-      <DependentUpon>Common.Entities.tt</DependentUpon>
+      <DependentUpon>TP.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\TechnicalInspection\InsNextInspection.cs">
-      <DependentUpon>Common.Entities.tt</DependentUpon>
+      <DependentUpon>TP.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\TechnicalInspection\InsNextSpInterval.cs">
-      <DependentUpon>Common.Entities.tt</DependentUpon>
+      <DependentUpon>TP.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\TechnicalInspection\InsObdStatus.cs">
-      <DependentUpon>Common.Entities.tt</DependentUpon>
+      <DependentUpon>TP.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\TechnicalInspection\InsOpticalDefect.cs">
-      <DependentUpon>Common.Entities.tt</DependentUpon>
+      <DependentUpon>TP.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\TechnicalInspection\InsPfpInspectionTypePfpPositionRsp.cs">
-      <DependentUpon>Common.Entities.tt</DependentUpon>
+      <DependentUpon>TP.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\TechnicalInspection\InsPfpPosition.cs">
-      <DependentUpon>Common.Entities.tt</DependentUpon>
+      <DependentUpon>TP.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\TechnicalInspection\InsPfpVehicleType.cs">
-      <DependentUpon>Common.Entities.tt</DependentUpon>
+      <DependentUpon>TP.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\TechnicalInspection\InsProductClassGroup.cs">
-      <DependentUpon>Common.Entities.tt</DependentUpon>
+      <DependentUpon>TP.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\TechnicalInspection\InsSeverityType.cs">
-      <DependentUpon>Common.Entities.tt</DependentUpon>
+      <DependentUpon>TP.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\TechnicalInspection\InsSummaryField.cs">
-      <DependentUpon>Common.Entities.tt</DependentUpon>
+      <DependentUpon>TP.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\TechnicalInspection\InsUnitCode.cs">
-      <DependentUpon>Common.Entities.tt</DependentUpon>
+      <DependentUpon>TP.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\TechnicalInspection\InsValidPeriod.cs">
-      <DependentUpon>Common.Entities.tt</DependentUpon>
+      <DependentUpon>TP.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Drl\ArgeVersion.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
@@ -662,9 +662,9 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Common.Entities.txt</LastGenOutput>
     </None>
-    <None Include="Entities\AsPro\TechnicalInspection\Common.Entities.tt">
+    <None Include="Entities\AsPro\TechnicalInspection\TP.Entities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Common.Entities.txt</LastGenOutput>
+      <LastGenOutput>TP.Entities.txt</LastGenOutput>
     </None>
     <None Include="Entities\Drl\Drl.Entities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -692,10 +692,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Common.Entities.tt</DependentUpon>
     </Content>
-    <Content Include="Entities\AsPro\TechnicalInspection\Common.Entities.txt">
+    <Content Include="Entities\AsPro\TechnicalInspection\TP.Entities.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Common.Entities.tt</DependentUpon>
+      <DependentUpon>TP.Entities.tt</DependentUpon>
     </Content>
     <Content Include="Entities\Drl\Drl.Entities.txt">
       <AutoGen>True</AutoGen>

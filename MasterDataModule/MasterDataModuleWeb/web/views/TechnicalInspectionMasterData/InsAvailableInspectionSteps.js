@@ -20,8 +20,9 @@ define([
 
 		columns: function () {
 		    return [
-				{ field: 'insInspectionStepId', title: this.resources.insInspectionStepId },
 				{ field: 'isMandatory', title: this.resources.isMandatory , headerTitle: this.resources.isMandatory, checkbox: true},
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

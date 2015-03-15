@@ -11,6 +11,7 @@ define(function () {
         InsStatisticGroups: 'Produkt-Statistikgruppe',
         OrdRecognitionTypes: 'Produkt-Anerkennungstyp',
         OrdRecognitions: 'Anerkennung',
+        OrdRecognitionAreaOfWorkRsps: 'Zuordnung Arbeitsgebiet zu Anerkennung',
         InsTaxCodes: 'Produkt-Steuercode',
 	};
 

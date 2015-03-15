@@ -4,6 +4,7 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     public partial class InsProductObjectType: IHasId<int>
+        ,IIntervalFields
         ,IRemovable
     {
         /// <summary>
@@ -64,6 +65,14 @@ namespace MasterDataModule.Contracts.Entities
             /// Column name 'ID' for property <see cref="InsProductObjectType.Id"/>
             /// </summary>
             public static readonly string Id = "ID";
+            /// <summary>
+            /// Column name 'FROM_DATE' for property <see cref="InsProductObjectType.FromDate"/>
+            /// </summary>
+            public static readonly string FromDate = "FROM_DATE";
+            /// <summary>
+            /// Column name 'TO_DATE' for property <see cref="InsProductObjectType.ToDate"/>
+            /// </summary>
+            public static readonly string ToDate = "TO_DATE";
           
         }
         #endregion
@@ -79,6 +88,18 @@ namespace MasterDataModule.Contracts.Entities
         public string Source{ get; set; }
         public bool IsAuNecessary{ get; set; }
         public int Id{ get; set; }
+        public DateTime FromDate{ get; set; }
+        public DateTime ToDate{ get; set; }
+        DateTime? IIntervalFields.FromDate
+        {
+            get { return FromDate; }
+            set { if(value.HasValue)FromDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        DateTime? IIntervalFields.ToDate
+        {
+            get { return ToDate; }
+            set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
                 
         
         /// <summary>
@@ -98,6 +119,8 @@ namespace MasterDataModule.Contracts.Entities
                        ChangeEmployeeId = ChangeEmployeeId,
                        Source = Source,
                        IsAuNecessary = IsAuNecessary,
+                       FromDate = FromDate,
+                       ToDate = ToDate,
         	           };
         }
     }

@@ -6,8 +6,12 @@ define(function () {
 		add: 'Add PFP position',
 	    edit: 'Edit PFP position',
 	    masterData: 'TP masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'PFP position',
 		text: 'Text',	
+		topId: 'Top id',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

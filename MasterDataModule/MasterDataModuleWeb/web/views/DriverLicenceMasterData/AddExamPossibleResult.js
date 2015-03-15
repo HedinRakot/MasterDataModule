@@ -17,6 +17,8 @@ define([
 			'#examCounterFlag': 'examCounterFlag',
 			'#nextExamProductFlag': 'nextExamProductFlag',
 			'#driverLicenceFlag': 'driverLicenceFlag',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 			'#isMedicalAttestRequired': 'isMedicalAttestRequired',
 		},
 
@@ -31,6 +33,8 @@ define([
 			this.disableInput(this, 'examCounterFlag');
 			this.disableInput(this, 'nextExamProductFlag');
 			this.disableInput(this, 'driverLicenceFlag');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 			this.disableInput(this, 'isMedicalAttestRequired');
 
             return this;

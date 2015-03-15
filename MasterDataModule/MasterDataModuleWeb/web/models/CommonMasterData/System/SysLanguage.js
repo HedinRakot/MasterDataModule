@@ -17,6 +17,12 @@ define(function () {
 			,isAvailable: { type: "boolean", 
 			                        editable: Application.canTableItemBeEdit('sysLanguage', 'isAvailable'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('sysLanguage', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('sysLanguage', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

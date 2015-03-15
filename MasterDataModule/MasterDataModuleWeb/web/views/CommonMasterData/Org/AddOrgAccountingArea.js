@@ -13,6 +13,8 @@ define([
 		bindings: {
 			'#accountingArea': 'accountingArea',
 			'#maxOrderSum': 'maxOrderSum',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -22,6 +24,8 @@ define([
 			//TODO foreach model field
 			this.disableInput(this, 'accountingArea');
 			this.disableInput(this, 'maxOrderSum', 'numeric');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

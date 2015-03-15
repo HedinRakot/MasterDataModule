@@ -11,6 +11,12 @@ define(function () {
 			,description: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('meetingPoint', 'description'), 
 				                    validation: { required: false, maxLength: 250 } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('meetingPoint', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('meetingPoint', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

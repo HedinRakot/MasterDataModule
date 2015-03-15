@@ -23,6 +23,12 @@ define(function () {
 			,driverLicenceFlag: { type: "boolean", 
 			                        editable: Application.canTableItemBeEdit('examPossibleResult', 'driverLicenceFlag'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('examPossibleResult', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('examPossibleResult', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 			,isMedicalAttestRequired: { type: "boolean", 
 			                        editable: Application.canTableItemBeEdit('examPossibleResult', 'isMedicalAttestRequired'), 
 				                    validation: { required: false } }			

@@ -18,12 +18,16 @@ namespace MasterDataModule.API.Controllers
             model.federalStateName = entity.FederalStateName;
             model.description = entity.Description;
             model.sysCountryId = entity.SysCountryId;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(OrdFederalStateModel model, OrdFederalState entity, ActionTypes actionType)
         {
             entity.FederalStateName = model.federalStateName;
             entity.Description = model.description;
             entity.SysCountryId = model.sysCountryId;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

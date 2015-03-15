@@ -14,6 +14,12 @@ define(function () {
 			,isNextTerminPossible: { type: "boolean", 
 			                        editable: Application.canTableItemBeEdit('insValidPeriod', 'isNextTerminPossible'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insValidPeriod', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('insValidPeriod', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

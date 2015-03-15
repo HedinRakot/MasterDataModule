@@ -24,6 +24,8 @@ define([
 				{ field: 'description', title: this.resources.description },
 				{ field: 'text1', title: this.resources.text1 },
 				{ field: 'text2', title: this.resources.text2 },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

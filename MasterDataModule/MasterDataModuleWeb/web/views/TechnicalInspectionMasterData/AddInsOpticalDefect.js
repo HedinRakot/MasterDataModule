@@ -14,6 +14,8 @@ define([
 			'#name': 'name',
 			'#description': 'description',
 			'#isCustom': 'isCustom',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -24,6 +26,8 @@ define([
 			this.disableInput(this, 'name');
 			this.disableInput(this, 'description');
 			this.disableInput(this, 'isCustom');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

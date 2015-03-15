@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Role',
 		empEmployeeId: 'Employee',	
 		sysRoleId: 'Role',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

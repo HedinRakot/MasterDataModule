@@ -9,6 +9,7 @@ define(function () {
         InsSeverityTypes: 'Produktklasse-Mangelbewertungen',
         InsValidPeriods: 'Produktklasse-Zeiträume',
         InsPfpPositions: 'Produktklasse-PFP-Prüfpositionen',
+        InsPfpInspectionTypePfpPositionRsps: 'Zuordnung PFP-Prüfpositionen zu PFP-Baugruppe',
         InsPfpVehicleTypes: 'Produktklasse-PFP-Fahrzeugtypen (Silhouetten)',
         InsUnitCodes: 'berichtende Stellen',
         InsInspectionSteps: 'Produktklasse-Prüfschritt',

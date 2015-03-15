@@ -22,6 +22,8 @@ define([
 		    return [
 				{ field: 'accountingArea', title: this.resources.accountingArea },
 				{ field: 'maxOrderSum', title: this.resources.maxOrderSum },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

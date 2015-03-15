@@ -14,6 +14,8 @@ define([
 			'#ordFederalStateId': 'ordFederalStateId',
 			'#place': 'place',
 			'#description': 'description',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 			'#sortOrder': 'sortOrder',
 		},
 
@@ -25,6 +27,8 @@ define([
 			this.disableInput(this, 'ordFederalStateId', 'numeric');
 			this.disableInput(this, 'place');
 			this.disableInput(this, 'description');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 			this.disableInput(this, 'sortOrder', 'numeric');
 
             return this;

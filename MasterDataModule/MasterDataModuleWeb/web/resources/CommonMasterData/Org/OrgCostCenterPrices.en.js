@@ -6,6 +6,7 @@ define(function () {
 		add: 'Add Cost center price',
 	    edit: 'Edit Cost center price',
 	    masterData: 'Common masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Cost center price',
 		insCoreDataProductId: 'Product',	
 		salesOffice: 'Sales office',	
@@ -16,6 +17,8 @@ define(function () {
 		unitOfMeasure: 'Unit of measure',	
 		sysCurrencyId: 'Currency',	
 		changeAbilityType: 'Change ability type',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

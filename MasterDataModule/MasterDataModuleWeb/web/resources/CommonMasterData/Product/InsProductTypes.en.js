@@ -6,8 +6,11 @@ define(function () {
 		add: 'Add Product type',
 	    edit: 'Edit Product type',
 	    masterData: 'Common masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Product type',
 		name: 'Name',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

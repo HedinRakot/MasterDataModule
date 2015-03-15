@@ -45,6 +45,18 @@ namespace MasterDataModule.API.Models
         [DataMember]
         public string messageReasonStyle{ get; set; }
         /// <summary>
+        ///     Model property for <see cref="LegalBasis.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="LegalBasis.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
+        /// <summary>
         ///     Model property for <see cref="LegalBasis.ReplacementId"/> entity
         /// </summary>
         [DataMember]

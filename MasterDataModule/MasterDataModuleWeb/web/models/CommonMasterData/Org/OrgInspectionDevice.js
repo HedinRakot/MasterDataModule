@@ -7,7 +7,7 @@ define(function () {
 			id: { type: "number", editable: false }
 			,debitorCustomerNumber: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('orgInspectionDevice', 'debitorCustomerNumber'), 
-				                    validation: { required: true, maxLength: 10 } }			
+				                    validation: { required: false, maxLength: 10 } }			
 			,identification: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('orgInspectionDevice', 'identification'), 
 				                    validation: { required: true, maxLength: 15 } }			
@@ -41,6 +41,12 @@ define(function () {
 			,inspectionInterval: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('orgInspectionDevice', 'inspectionInterval'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('orgInspectionDevice', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('orgInspectionDevice', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

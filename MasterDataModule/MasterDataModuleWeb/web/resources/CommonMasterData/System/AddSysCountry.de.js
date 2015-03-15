@@ -10,6 +10,8 @@ define(function () {
 		sapId: 'Länderschlüssel ',	
 		name: 'Landesbezeichnung',	
 		isEu: 'Angabe, ob das Land in der EU liegt ',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

@@ -29,6 +29,8 @@ define([
 				{ field: 'unitOfMeasure', title: this.resources.unitOfMeasure },
 				{ field: 'sysCurrencyId', title: this.resources.sysCurrencyId },
 				{ field: 'changeAbilityType', title: this.resources.changeAbilityType },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

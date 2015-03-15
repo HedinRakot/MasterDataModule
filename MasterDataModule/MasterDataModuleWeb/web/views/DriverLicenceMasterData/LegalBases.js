@@ -22,12 +22,8 @@ define([
 		    return [
 				{ field: 'name', title: this.resources.name },
 				{ field: 'description', title: this.resources.description },
-				{ field: 'educationCertificateRequired', title: this.resources.educationCertificateRequired , headerTitle: this.resources.educationCertificateRequired, checkbox: true},
-				{ field: 'firstAssignation', title: this.resources.firstAssignation },
-				{ field: 'messageReason', title: this.resources.messageReason },
-				{ field: 'messageReasonStyle', title: this.resources.messageReasonStyle },
-				{ field: 'replacementId', title: this.resources.replacementId },
-				{ field: 'printName', title: this.resources.printName },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

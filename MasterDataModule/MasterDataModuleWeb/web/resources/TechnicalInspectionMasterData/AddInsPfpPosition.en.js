@@ -8,6 +8,9 @@ define(function () {
 	    masterData: 'TP masterdata',
 	    pageTitle: 'PFP position',
 		text: 'Text',	
+		topId: 'Top id',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

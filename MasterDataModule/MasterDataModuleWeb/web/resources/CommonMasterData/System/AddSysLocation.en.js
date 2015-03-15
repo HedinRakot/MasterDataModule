@@ -11,6 +11,8 @@ define(function () {
 		locationName: 'Location name',	
 		sysCountryId: 'Country',	
 		ordFederalStateId: 'Federal state',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

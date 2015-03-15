@@ -13,6 +13,8 @@ define([
 		bindings: {
 			'#insInspectionStepId': 'insInspectionStepId',
 			'#isMandatory': 'isMandatory',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 		},
 
         render: function () {
@@ -22,6 +24,8 @@ define([
 			//TODO foreach model field
 			this.disableInput(this, 'insInspectionStepId', 'numeric');
 			this.disableInput(this, 'isMandatory');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

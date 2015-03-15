@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(InsObdStatus.Fields.Id)
-                .IsRequired();
-
             Property(t => t.Name)
                 .HasColumnName(InsObdStatus.Fields.Name)
                 .IsRequired()
@@ -68,6 +64,19 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.Source)
                 .HasColumnName(InsObdStatus.Fields.Source)
                 .HasMaxLength(4);
+
+            Property(t => t.Id)
+                .HasColumnName(InsObdStatus.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+                .IsRequired();
+
+            Property(t => t.FromDate)
+                .HasColumnName(InsObdStatus.Fields.FromDate)
+                .IsRequired();
+
+            Property(t => t.ToDate)
+                .HasColumnName(InsObdStatus.Fields.ToDate)
+                .IsRequired();
 
 
             //Relationships

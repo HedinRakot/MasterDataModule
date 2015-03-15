@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Top employee',
 		empEmployeeId: 'Employee',	
 		topEmployeeId: 'Top employee',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

@@ -14,6 +14,12 @@ define(function () {
 			,street: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('sysPostCode', 'street'), 
 				                    validation: { required: false, maxLength: 50 } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('sysPostCode', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('sysPostCode', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		}
 	});
 	return model;

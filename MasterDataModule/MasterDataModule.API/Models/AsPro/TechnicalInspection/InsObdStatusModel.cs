@@ -30,6 +30,18 @@ namespace MasterDataModule.API.Models
         [Required]
         [DataMember]
         public string auView{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsObdStatus.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="InsObdStatus.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

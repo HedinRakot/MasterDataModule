@@ -9,6 +9,8 @@ define(function () {
 	    pageTitle: 'Produkt-Materialgruppen',
 		description: 'Beschreibung',	
 		sapId: 'SAP-Materialgruppe',	
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;
