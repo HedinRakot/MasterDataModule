@@ -21,5 +21,12 @@ namespace MasterDataModule.Generation
         /// Add execution of ExtraModelToEntity implemented in partial custom part of controller
         /// </summary>
         public bool ExtraModelToEntity { get; set; }
+
+        public bool ShowInMenu { get; set; }
+
+        public string RelationShips { get; set; }
+        public string RelationShipsSelectors { get; set; }
+        public string RelationShipsDe { get; set; }
+        public string RelationShipsEn { get; set; }
     }
 }

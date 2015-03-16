@@ -14,6 +14,23 @@ define(function () {
 
 	var resources = {
 	    title: 'Zuordnungen',
+<#
+		if(!String.IsNullOrEmpty(entityContent.RelationShipsDe) &&
+		   !String.IsNullOrEmpty(entityContent.RelationShipsSelectors))
+		{
+			var textsDe = entityContent.RelationShipsDe.Split(',');
+			var selectors = entityContent.RelationShipsSelectors.Split(',');
+
+			for(int i = 0; i < textsDe.Length; i++)
+			{
+				var textDe = textsDe[i];
+				var selector = selectors[i];		
+#>
+	    <#= selector #>: '<#= textDe #>',
+<#
+			}
+		}
+#>
 	};
 
 	return resources;
@@ -29,6 +46,23 @@ define(function () {
 
 	var resources = {
 	     title: 'Relationships',
+<#
+		if(!String.IsNullOrEmpty(entityContent.RelationShipsEn) &&
+		   !String.IsNullOrEmpty(entityContent.RelationShipsSelectors))
+		{
+			var textsEn = entityContent.RelationShipsEn.Split(',');
+			var selectors = entityContent.RelationShipsSelectors.Split(',');
+
+			for(int i = 0; i < textsEn.Length; i++)
+			{
+				var textEn = textsEn[i];
+				var selector = selectors[i];		
+#>
+	    <#= selector #>: '<#= textEn #>',
+<#
+			}
+		}
+#>
 	};
 
 	return resources;

@@ -14,13 +14,15 @@
 <#
     foreach (var model in context.WebModels)
     {
-
+		if(model.Table.Content.ShowInMenu)
+		{
 #>
                 <li>
                     <a href="#<#=model.Table.Content.CodeNamePlural #>" data-localized="<#=model.Table.Content.CodeNamePlural #>"></a>
                 </li>
 <#        
-    }
+		}
+	}
 #>
 			</ul>
         </td>

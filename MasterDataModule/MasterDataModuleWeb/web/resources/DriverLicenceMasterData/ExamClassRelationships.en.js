@@ -3,6 +3,11 @@ define(function () {
 
 	var resources = {
 	     title: 'Relationships',
+	    requiredExamClasses: 'Required classes',
+	    inclusiveExamClasses: 'Inclusiv classes',
+	    restrictedClasses: 'Restricted classes',
+	    examClassArgeMaps: 'Arge class map',
+	    examClassMaps: 'Old class to actual map',
 	};
 
 	return resources;
