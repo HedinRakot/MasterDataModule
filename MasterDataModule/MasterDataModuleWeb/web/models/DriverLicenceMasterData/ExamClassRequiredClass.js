@@ -8,6 +8,9 @@ define(function () {
 			,examClassId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('examClassRequiredClass', 'examClassId'), 
 				                    validation: { required: true } }			
+			,examClassIdRequired: { type: "number", 
+			                        editable: Application.canTableItemBeEdit('examClassRequiredClass', 'examClassIdRequired'), 
+				                    validation: { required: true } }			
 			,fromDate: { type: "date", 
 			                        editable: Application.canTableItemBeEdit('examClassRequiredClass', 'fromDate'), 
 				                    validation: { required: true, date: true } }			

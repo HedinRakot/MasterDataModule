@@ -7,6 +7,7 @@ namespace MasterDataModule.Contracts.Entities
     ///     EN: 5.2.12.4 Return Reason (Reason for giving back the Driver Licence to the Authority)  DE: 5.2.12.4 Fahrerlaubnis - Rueckgabegruende
     /// </summary>
     public partial class ReturnReason: IHasId<int>
+        ,IHasTitle
         ,IIntervalFields
         ,IRemovable
     {
@@ -152,6 +153,10 @@ namespace MasterDataModule.Contracts.Entities
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        string IHasTitle.EntityTitle
+        {
+            get { return Name; }
         }
                 
         

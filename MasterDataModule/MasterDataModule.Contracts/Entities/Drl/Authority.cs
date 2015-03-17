@@ -7,6 +7,7 @@ namespace MasterDataModule.Contracts.Entities
     ///     EN: 5.1.8 Authority  DE: 5.1.8 FE-Behoerde
     /// </summary>
     public partial class Authority: IHasId<int>
+        ,IHasTitle
         ,IIntervalFields
         ,IRemovable
     {
@@ -232,6 +233,10 @@ namespace MasterDataModule.Contracts.Entities
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        string IHasTitle.EntityTitle
+        {
+            get { return Name; }
         }
                 
         

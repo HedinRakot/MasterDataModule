@@ -1,22 +1,26 @@
 define([
-	'base/base-object-grid-view',
+	'base/related-object-grid-view',
     'collections/DriverLicenceMasterData/ExamStationExamRecognitionTypes',
-    'l!t!DriverLicenceMasterData/FilterExamStationExamRecognitionType',
-    'l!t!DriverLicenceMasterData/ExamStationExamRecognitionTypeRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
+    'l!t!DriverLicenceMasterData/AddExamStationExamRecognitionType'
+], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
 	var view = BaseView.extend({
 
-        collectionType: Collection,
-        detailView: DetailView,
-        filterView: FilterView,
-        tableName: 'ExamStationExamRecognitionType',
-        editUrl: '#ExamStationExamRecognitionTypes',
+		addNewModelView: AddNewModelView,
+		collectionType: Collection,
+		gridSelector: '.grid',
+		tableName: 'ExamStationExamRecognitionTypes',
+        
+        addingInPopup: false,
 
-	    editItemTitle: function () {
-	        return this.resources.edit
-	    },
+		initialize: function() {
+			view.__super__.initialize.apply(this, arguments);
+
+			this.defaultFiltering = { field: 'examStationId', operator: 'eq', value: this.model.id };
+
+			this.collection = new Collection();
+		},
 
 		columns: function () {
 		    return [
@@ -24,6 +28,18 @@ define([
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
+		},
+		
+		render: function () {
+		    var self = this;
+
+		    view.__super__.render.apply(self, arguments);
+
+		    self.grid.bind('edit', function (e) {
+		        e.model.examStationId = self.model.id;
+		    });
+
+		    return self;
 		}
 	});
 

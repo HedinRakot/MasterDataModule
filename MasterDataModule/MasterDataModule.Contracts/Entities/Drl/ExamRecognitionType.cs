@@ -8,6 +8,7 @@ namespace MasterDataModule.Contracts.Entities
     ///     EN: 5.2.2.1 Recognition Type  DE: 5.2.2.1 Fahrschule - Anerkennungsgrad
     /// </summary>
     public partial class ExamRecognitionType: IHasId<int>
+        ,IHasTitle
         ,IIntervalFields
         ,IRemovable
     {
@@ -139,6 +140,10 @@ namespace MasterDataModule.Contracts.Entities
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        string IHasTitle.EntityTitle
+        {
+            get { return Name; }
         }
                 
         

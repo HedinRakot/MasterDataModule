@@ -1,30 +1,46 @@
 define([
-	'base/base-object-grid-view',
+	'base/related-object-grid-view',
     'collections/DriverLicenceMasterData/ExamClassInclusiveClasses',
-    'l!t!DriverLicenceMasterData/FilterExamClassInclusiveClass',
-    'l!t!DriverLicenceMasterData/ExamClassInclusiveClassRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
+    'l!t!DriverLicenceMasterData/AddExamClassInclusiveClass'
+], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
 	var view = BaseView.extend({
 
-        collectionType: Collection,
-        detailView: DetailView,
-        filterView: FilterView,
-        tableName: 'ExamClassInclusiveClass',
-        editUrl: '#ExamClassInclusiveClasses',
+		addNewModelView: AddNewModelView,
+		collectionType: Collection,
+		gridSelector: '.grid',
+		tableName: 'ExamClassInclusiveClasses',
+        
+        addingInPopup: false,
 
-	    editItemTitle: function () {
-	        return this.resources.edit
-	    },
+		initialize: function() {
+			view.__super__.initialize.apply(this, arguments);
+
+			this.defaultFiltering = { field: 'examClassId', operator: 'eq', value: this.model.id };
+
+			this.collection = new Collection();
+		},
 
 		columns: function () {
 		    return [
-				{ field: 'examClassIdInclusive', title: this.resources.examClassIdInclusive },
+				{ field: 'examClassIdInclusive', title: this.resources.examClassIdInclusive , collection: this.options.examClasses, filterable: false},
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 				{ field: 'isConditional', title: this.resources.isConditional , headerTitle: this.resources.isConditional, checkbox: true},
 			];
+		},
+		
+		render: function () {
+		    var self = this;
+
+		    view.__super__.render.apply(self, arguments);
+
+		    self.grid.bind('edit', function (e) {
+		        e.model.examClassId = self.model.id;
+		    });
+
+		    return self;
 		}
 	});
 

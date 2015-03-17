@@ -8,6 +8,7 @@ namespace MasterDataModule.Contracts.Entities
     ///     EN: 5.2.12.5 Class  DE: 5.2.12.5 Fahrerlaubnis - Klassen
     /// </summary>
     public partial class ExamClass: IHasId<int>
+        ,IHasTitle
         ,IIntervalFields
         ,IRemovable
     {
@@ -172,6 +173,10 @@ namespace MasterDataModule.Contracts.Entities
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        string IHasTitle.EntityTitle
+        {
+            get { return Name; }
         }
                 
         

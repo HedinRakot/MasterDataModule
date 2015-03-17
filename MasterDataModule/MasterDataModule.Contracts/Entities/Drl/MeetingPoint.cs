@@ -8,6 +8,7 @@ namespace MasterDataModule.Contracts.Entities
     ///     EN: 5.2.12.12 Meeting Point  DE: 5.2.12.12 Fahrerlaubnis - Treffpunkte
     /// </summary>
     public partial class MeetingPoint: IHasId<int>
+        ,IHasTitle
         ,IIntervalFields
         ,IRemovable
     {
@@ -138,6 +139,10 @@ namespace MasterDataModule.Contracts.Entities
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        string IHasTitle.EntityTitle
+        {
+            get { return Name; }
         }
                 
         

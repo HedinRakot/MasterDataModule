@@ -7,6 +7,7 @@ namespace MasterDataModule.Contracts.Entities
     ///     DE: Zuordnungstabelle fuer die Klassen, die im ARGE verwendet werden EN: Reference table: ASPro exam class - ARGE exam class
     /// </summary>
     public partial class ExamClassArgeMap: IHasId<int>
+        ,IHasTitle
         ,IRemovable
     {
         /// <summary>
@@ -114,6 +115,10 @@ namespace MasterDataModule.Contracts.Entities
         public bool HasExamClass
         {
             get { return !ReferenceEquals(ExamClass, null); }
+        }
+        string IHasTitle.EntityTitle
+        {
+            get { return ExamNameArge; }
         }
                 
         

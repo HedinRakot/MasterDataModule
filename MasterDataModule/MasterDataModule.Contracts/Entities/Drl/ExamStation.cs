@@ -8,6 +8,7 @@ namespace MasterDataModule.Contracts.Entities
     ///     EN: Exam Location5.2.2.4 Theory Exam Location5.2.2.3 Exam Location  DE: Prueforte5.2.2.4 Fahrschule - FE-Theorie-Pruefort5.2.2.3 Fahrschule - FE-Prueforte
     /// </summary>
     public partial class ExamStation: IHasId<int>
+        ,IHasTitle
         ,IIntervalFields
         ,IRemovable
     {
@@ -154,6 +155,10 @@ namespace MasterDataModule.Contracts.Entities
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        string IHasTitle.EntityTitle
+        {
+            get { return Place; }
         }
                 
         

@@ -9,6 +9,7 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Required class',
 		examClassId: 'Class',	
+		examClassIdRequired: 'Required Class',	
 		fromDate: 'From date',	
 		toDate: 'To date',	
 	};

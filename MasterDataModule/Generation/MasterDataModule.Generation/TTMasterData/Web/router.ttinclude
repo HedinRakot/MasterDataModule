@@ -20,11 +20,22 @@ define([
     foreach (var model in context.WebModels)
     {
         var entityContent = model.Table.Content;
-		//Model
+
+		var viewCollections = ", false";
+		if(!String.IsNullOrEmpty(entityContent.ViewCollections))
+		{
+			var parts = entityContent.ViewCollections.Split(',');
+			viewCollections = ", { ";
+			foreach(var part in parts)
+			{
+				viewCollections += String.Format("{0}: true, ", part);
+			}
+			viewCollections += "}";
+		}
 #>
-				'<#=entityContent.CodeNamePlural#>': _.partial(BaseRouter.showView, baseRouter, 'l!t!<#=relatedPath #>/<#=entityContent.CodeNamePlural#>'),
-	            '<#=entityContent.CodeNamePlural#>/create': _.partial(BaseRouter.showViewWithModel, baseRouter, 'l!t!<#=relatedPath #>/Add<#=entityContent.CodeName#>', 'models/<#=relatedPath #>/<#=entityContent.CodeName#>', false),
-	            '<#=entityContent.CodeNamePlural#>/:id': _.partial(BaseRouter.showViewWithModel, baseRouter, 'l!t!<#=relatedPath #>/Add<#=entityContent.CodeName#>', 'models/<#=relatedPath #>/<#=entityContent.CodeName#>', false),
+				'<#=entityContent.CodeNamePlural#>': _.partial(BaseRouter.showView, baseRouter, 'l!t!<#=relatedPath #>/<#=entityContent.CodeNamePlural#>'<#= viewCollections #>),
+	            '<#=entityContent.CodeNamePlural#>/create': _.partial(BaseRouter.showViewWithModel, baseRouter, 'l!t!<#=relatedPath #>/Add<#=entityContent.CodeName#>', 'models/<#=relatedPath #>/<#=entityContent.CodeName#>'<#= viewCollections #>),
+	            '<#=entityContent.CodeNamePlural#>/:id': _.partial(BaseRouter.showViewWithModel, baseRouter, 'l!t!<#=relatedPath #>/Add<#=entityContent.CodeName#>', 'models/<#=relatedPath #>/<#=entityContent.CodeName#>'<#= viewCollections #>),
 <#
     }
 #>

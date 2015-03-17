@@ -20,6 +20,12 @@ namespace MasterDataModule.API.Models
         [DataMember]
         public int examClassId{ get; set; }
         /// <summary>
+        ///     Model property for <see cref="ExamClassRequiredClass.ExamClassIdRequired"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public int examClassIdRequired{ get; set; }
+        /// <summary>
         ///     Model property for <see cref="ExamClassRequiredClass.FromDate"/> entity
         /// </summary>
         [Required]

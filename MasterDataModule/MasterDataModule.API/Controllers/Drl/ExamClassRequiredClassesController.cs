@@ -16,12 +16,14 @@ namespace MasterDataModule.API.Controllers
         protected override void EntityToModel(ExamClassRequiredClass entity, ExamClassRequiredClassModel model)
         {
             model.examClassId = entity.ExamClassId;
+            model.examClassIdRequired = entity.ExamClassIdRequired;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
         }
         protected override void ModelToEntity(ExamClassRequiredClassModel model, ExamClassRequiredClass entity, ActionTypes actionType)
         {
             entity.ExamClassId = model.examClassId;
+            entity.ExamClassIdRequired = model.examClassIdRequired;
             entity.FromDate = model.fromDate;
             entity.ToDate = model.toDate;
         }

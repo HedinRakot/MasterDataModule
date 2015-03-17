@@ -5278,13 +5278,13 @@
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamClassArgeMaps.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
+      <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamClasses.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamClassInclusiveClasses.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
+      <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamClassInclusiveClassRelationships.js">
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
@@ -5293,25 +5293,25 @@
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamClassMaps.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
+      <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamClassRelationships.js">
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamClassRequiredClasses.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
+      <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamClassRequiredClassRelationships.js">
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamClassRestrictedClasses.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
+      <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamClassRestrictedClassRelationships.js">
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamConstraintExamClasses.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
+      <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamConstraintExamClassRelationships.js">
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
@@ -5329,7 +5329,7 @@
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamRecognitionTypeExamClasses.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
+      <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamRecognitionTypeExamClassRelationships.js">
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
@@ -5350,7 +5350,7 @@
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamStationExamRecognitionTypes.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
+      <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamStationRelationships.js">
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
@@ -5370,25 +5370,7 @@
     <Content Include="web\views\DriverLicenceMasterData\FilterExamClass.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
-    <Content Include="web\views\DriverLicenceMasterData\FilterExamClassArgeMap.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\DriverLicenceMasterData\FilterExamClassInclusiveClass.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\DriverLicenceMasterData\FilterExamClassMap.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\DriverLicenceMasterData\FilterExamClassRequiredClass.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\DriverLicenceMasterData\FilterExamClassRestrictedClass.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
-    </Content>
     <Content Include="web\views\DriverLicenceMasterData\FilterExamConstraint.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\DriverLicenceMasterData\FilterExamConstraintExamClass.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\FilterExamPossibleResult.js">
@@ -5397,22 +5379,13 @@
     <Content Include="web\views\DriverLicenceMasterData\FilterExamRecognitionType.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
-    <Content Include="web\views\DriverLicenceMasterData\FilterExamRecognitionTypeExamClass.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
-    </Content>
     <Content Include="web\views\DriverLicenceMasterData\FilterExamRoom.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\FilterExamStation.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
-    <Content Include="web\views\DriverLicenceMasterData\FilterExamStationExamRecognitionType.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
-    </Content>
     <Content Include="web\views\DriverLicenceMasterData\FilterHoliday.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\DriverLicenceMasterData\FilterHolidayOrdFederalState.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\FilterLanguage.js">
@@ -5422,9 +5395,6 @@
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\FilterMeetingPoint.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\DriverLicenceMasterData\FilterMeetingPointOrganizationalUnit.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\FilterMessageLocalization.js">
@@ -5440,7 +5410,7 @@
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\HolidayOrdFederalStates.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
+      <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\HolidayRelationships.js">
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
@@ -5464,7 +5434,7 @@
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\MeetingPointOrganizationalUnits.js">
-      <DependentUpon>web.drl.views.tt</DependentUpon>
+      <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\MeetingPointRelationships.js">
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
@@ -5499,6 +5469,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\web.drl.related.views.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\web.drl.views.txt">
       <AutoGen>True</AutoGen>
@@ -6367,6 +6342,10 @@
     <Content Include="web\web.employee.router.template.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>web.employee.router.template.txt</LastGenOutput>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\web.drl.related.views.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>web.drl.related.views.txt</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

@@ -7,6 +7,7 @@ namespace MasterDataModule.Contracts.Entities
     ///     Validation errors localization messages
     /// </summary>
     public partial class MessageLocalization: IHasId<int>
+        ,IHasTitle
         ,IRemovable
     {
         /// <summary>
@@ -118,6 +119,10 @@ namespace MasterDataModule.Contracts.Entities
         ///     QUELLSYSTEM
         /// </summary>
         public string Source{ get; set; }
+        string IHasTitle.EntityTitle
+        {
+            get { return Message; }
+        }
                 
         
         /// <summary>

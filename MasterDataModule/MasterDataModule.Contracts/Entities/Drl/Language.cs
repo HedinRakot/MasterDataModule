@@ -7,6 +7,7 @@ namespace MasterDataModule.Contracts.Entities
     ///     EN: 5.2.12.9 Language  DE: 5.2.12.9 Fahrerlaubnis - Sprachen
     /// </summary>
     public partial class Language: IHasId<int>
+        ,IHasTitle
         ,IIntervalFields
         ,IRemovable
     {
@@ -144,6 +145,10 @@ namespace MasterDataModule.Contracts.Entities
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        string IHasTitle.EntityTitle
+        {
+            get { return OldAbbr; }
         }
                 
         

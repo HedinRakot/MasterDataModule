@@ -109,6 +109,7 @@
     <None Include="TTMasterData\Web\resources.ttinclude" />
     <None Include="TTMasterData\Web\templates.ttinclude" />
     <None Include="TTMasterData\Web\relationships.views.ttinclude" />
+    <None Include="TTMasterData\Web\related.views.ttinclude" />
     <None Include="TTMasterData\Web\views.ttinclude" />
     <None Include="TTMasterData\Web\models.ttinclude" />
     <None Include="TTMasterData\Web\collection.ttinclude" />

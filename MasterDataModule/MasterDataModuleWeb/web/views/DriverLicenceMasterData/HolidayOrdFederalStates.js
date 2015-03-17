@@ -1,27 +1,43 @@
 define([
-	'base/base-object-grid-view',
+	'base/related-object-grid-view',
     'collections/DriverLicenceMasterData/HolidayOrdFederalStates',
-    'l!t!DriverLicenceMasterData/FilterHolidayOrdFederalState',
-    'l!t!DriverLicenceMasterData/HolidayOrdFederalStateRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
+    'l!t!DriverLicenceMasterData/AddHolidayOrdFederalState'
+], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
 	var view = BaseView.extend({
 
-        collectionType: Collection,
-        detailView: DetailView,
-        filterView: FilterView,
-        tableName: 'HolidayOrdFederalState',
-        editUrl: '#HolidayOrdFederalStates',
+		addNewModelView: AddNewModelView,
+		collectionType: Collection,
+		gridSelector: '.grid',
+		tableName: 'HolidayOrdFederalStates',
+        
+        addingInPopup: false,
 
-	    editItemTitle: function () {
-	        return this.resources.edit
-	    },
+		initialize: function() {
+			view.__super__.initialize.apply(this, arguments);
+
+			this.defaultFiltering = { field: 'holidayId', operator: 'eq', value: this.model.id };
+
+			this.collection = new Collection();
+		},
 
 		columns: function () {
 		    return [
 				{ field: 'ordFederalStateId', title: this.resources.ordFederalStateId },
 			];
+		},
+		
+		render: function () {
+		    var self = this;
+
+		    view.__super__.render.apply(self, arguments);
+
+		    self.grid.bind('edit', function (e) {
+		        e.model.holidayId = self.model.id;
+		    });
+
+		    return self;
 		}
 	});
 

@@ -6,34 +6,39 @@
     foreach (var model in context.WebModels)
     {
         var entityContent = model.Table.Content;
-        //skip related objects
-		if(entityContent.IsRelated)
+
+		//skip main objects
+		if(!entityContent.IsRelated)
 		{
 			continue;
 		}
-		
-		context.FileManager.StartNewFile(entityContent.CodeNamePlural + ".js");
+
+        context.FileManager.StartNewFile(entityContent.CodeNamePlural + ".js");
 		//Model
 #>
 define([
-	'base/base-object-grid-view',
+	'base/related-object-grid-view',
     'collections/<#=context.CurrentRelatedWebPath #>/<#=entityContent.CodeNamePlural#>',
-    'l!t!<#=context.CurrentRelatedWebPath #>/<#= "Filter" + entityContent.CodeName #>',
-    'l!t!<#=context.CurrentRelatedWebPath #>/<#= entityContent.CodeName + "Relationships" #>'
-], function (BaseView, Collection, FilterView, DetailView) {
+    'l!t!<#=context.CurrentRelatedWebPath #>/<#= "Add" + entityContent.CodeName #>'
+], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
 	var view = BaseView.extend({
 
-        collectionType: Collection,
-        detailView: DetailView,
-        filterView: FilterView,
-        tableName: '<#=entityContent.CodeName#>',
-        editUrl: '#<#=entityContent.CodeNamePlural#>',
+		addNewModelView: AddNewModelView,
+		collectionType: Collection,
+		gridSelector: '.grid',
+		tableName: '<#=entityContent.CodeNamePlural#>',
+        
+        addingInPopup: false,
 
-	    editItemTitle: function () {
-	        return this.resources.edit
-	    },
+		initialize: function() {
+			view.__super__.initialize.apply(this, arguments);
+
+			this.defaultFiltering = { field: '<#= entityContent.RelationFieldName#>', operator: 'eq', value: this.model.id };
+
+			this.collection = new Collection();
+		},
 
 		columns: function () {
 		    return [
@@ -51,6 +56,18 @@ define([
 		}
 #>
 			];
+		},
+		
+		render: function () {
+		    var self = this;
+
+		    view.__super__.render.apply(self, arguments);
+
+		    self.grid.bind('edit', function (e) {
+		        e.model.<#= entityContent.RelationFieldName#> = self.model.id;
+		    });
+
+		    return self;
 		}
 	});
 
@@ -59,23 +76,6 @@ define([
 <#
 		context.FileManager.EndBlock();
 
-		context.FileManager.StartNewFile("Filter" + entityContent.CodeName + ".js");
-#>
-define([
-	'base/base-object-filter-view',
-	'models/<#= context.CurrentRelatedWebPath #>/<#= "Filter" + entityContent.CodeName #>'
-], function (BaseFilterView, Filter) {
-    'use strict'
-
-    var view = BaseFilterView.extend({
-
-        filter: Filter
-    });
-
-    return view;
-});
-<#
-		context.FileManager.EndBlock();
     }
     context.FileManager.Process();
 #>
@@ -103,7 +103,12 @@ define([
             case "decimal":
             case "float":
             case "double":
-                return "";
+				var result = String.Empty;
+				if(!String.IsNullOrEmpty(property.Column.Content.ViewCollection))
+				{
+					result = String.Format(", collection: this.options.{0}, filterable: false", property.Column.Content.ViewCollection);
+				}
+                return result;
             case "datetime":
                 return ", format: '{0:d}'";
             default:

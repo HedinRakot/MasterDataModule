@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Voraussetzungsklasse ',
 		examClassId: 'übergeordnete Klasse ',	
+		examClassIdRequired: 'Voraussetzungsklasse',	
 		fromDate: 'Von Datum',	
 		toDate: 'Bis Datum',	
 	};

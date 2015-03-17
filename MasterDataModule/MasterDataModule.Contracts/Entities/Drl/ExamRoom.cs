@@ -7,6 +7,7 @@ namespace MasterDataModule.Contracts.Entities
     ///     EN: 5.3.2.3 Exam Room  DE: 5.3.2.3 Fahrschule - Pruefplatz zuordnen
     /// </summary>
     public partial class ExamRoom: IHasId<int>
+        ,IHasTitle
         ,IIntervalFields
         ,IRemovable
     {
@@ -240,6 +241,10 @@ namespace MasterDataModule.Contracts.Entities
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        string IHasTitle.EntityTitle
+        {
+            get { return Name1; }
         }
                 
         

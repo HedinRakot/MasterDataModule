@@ -37,7 +37,8 @@ namespace MasterDataModule.Generation
             var iremovable = TypeUsageInfo.CreateInterface("IRemovable", "MasterDataModule.Contracts");
             var ihasid = TypeUsageInfo.CreateInterface("IHasId", "MasterDataModule.Contracts", new[] {typeof (int).ToUsageInfo()});
             var iintervalfields = TypeUsageInfo.CreateInterface("IIntervalFields", "MasterDataModule.Contracts");
-
+            var ihastitle = TypeUsageInfo.CreateInterface("IHasTitle", "MasterDataModule.Contracts");
+   
             foreach (var entity in entities)
             {
                 entity.InheritsFrom(iremovable);
@@ -55,6 +56,15 @@ namespace MasterDataModule.Generation
                     }
                 }
                 #endregion
+
+                var tableContent = tables.
+                    First(table => table.Name == entity.TableName && table.Schema == entity.TableSchemaName).Content;
+
+                if (!string.IsNullOrEmpty(tableContent.TitleFieldName))
+                {
+                    entity.InheritsFrom(ihastitle);
+                    AddHasTitleProperty(ihastitle, entity, tableContent);
+                }
             }
             return entities;
         }
@@ -68,6 +78,15 @@ namespace MasterDataModule.Generation
                 new PropertyInvokerInfo(string.Format("return {0};", property.Name)),
                 new PropertyInvokerInfo(string.Format("if(value.HasValue){0} = value.Value; else throw new ArgumentNullException(\"value\");", property.Name)));
             prop.ExplicitInterface = iintervalfields;
+            entity.AddProperty(prop);
+        }
+
+        internal static void AddHasTitleProperty(TypeUsageInfo ihastitle, EntityInfo entity, TableContent tableContent)
+        {
+            var prop = new PropertyInfo("EntityTitle", new FieldInfo("EntityTitle", (typeof(string)).ToUsageInfo()),
+                new PropertyInvokerInfo(string.Format("return {0};", tableContent.TitleFieldName)),
+                null);
+            prop.ExplicitInterface = ihastitle;
             entity.AddProperty(prop);
         }
         #endregion

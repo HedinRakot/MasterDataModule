@@ -7,6 +7,7 @@ namespace MasterDataModule.Contracts.Entities
     ///     EN: 5.2.2.2 Driver School Information  DE: 5.2.2.2 Fahrschule - Information
     /// </summary>
     public partial class SchoolInfo: IHasId<int>
+        ,IHasTitle
         ,IIntervalFields
         ,IRemovable
     {
@@ -136,6 +137,10 @@ namespace MasterDataModule.Contracts.Entities
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        string IHasTitle.EntityTitle
+        {
+            get { return Text; }
         }
                 
         

@@ -12,5 +12,7 @@ namespace MasterDataModule.Generation
         public string JsModelType { get; set; }
         public bool JsSkipStandardValidation { get; set; }
         public string JsExtraValidation { get; set; }
+        
+        public string ViewCollection { get; set; }
     }
 }

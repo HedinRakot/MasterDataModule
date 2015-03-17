@@ -1,29 +1,45 @@
 define([
-	'base/base-object-grid-view',
+	'base/related-object-grid-view',
     'collections/DriverLicenceMasterData/ExamClassRequiredClasses',
-    'l!t!DriverLicenceMasterData/FilterExamClassRequiredClass',
-    'l!t!DriverLicenceMasterData/ExamClassRequiredClassRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
+    'l!t!DriverLicenceMasterData/AddExamClassRequiredClass'
+], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
 	var view = BaseView.extend({
 
-        collectionType: Collection,
-        detailView: DetailView,
-        filterView: FilterView,
-        tableName: 'ExamClassRequiredClass',
-        editUrl: '#ExamClassRequiredClasses',
+		addNewModelView: AddNewModelView,
+		collectionType: Collection,
+		gridSelector: '.grid',
+		tableName: 'ExamClassRequiredClasses',
+        
+        addingInPopup: false,
 
-	    editItemTitle: function () {
-	        return this.resources.edit
-	    },
+		initialize: function() {
+			view.__super__.initialize.apply(this, arguments);
+
+			this.defaultFiltering = { field: 'examClassId', operator: 'eq', value: this.model.id };
+
+			this.collection = new Collection();
+		},
 
 		columns: function () {
 		    return [
-				{ field: 'examClassIdRequired', title: this.resources.examClassIdRequired },
+				{ field: 'examClassIdRequired', title: this.resources.examClassIdRequired , collection: this.options.examClasses, filterable: false},
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
+		},
+		
+		render: function () {
+		    var self = this;
+
+		    view.__super__.render.apply(self, arguments);
+
+		    self.grid.bind('edit', function (e) {
+		        e.model.examClassId = self.model.id;
+		    });
+
+		    return self;
 		}
 	});
 

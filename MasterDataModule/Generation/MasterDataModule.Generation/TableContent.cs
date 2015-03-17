@@ -6,6 +6,7 @@ namespace MasterDataModule.Generation
     public class TableContent : BaseMasterDataContent
     {
         public bool IsRelated { get; set; }
+        public string RelationFieldName { get; set; }
         public string PrimaryObject { get; set; }
         public string Group { get; set; }
         public string ViewCollections { get; set; }
@@ -28,5 +29,7 @@ namespace MasterDataModule.Generation
         public string RelationShipsSelectors { get; set; }
         public string RelationShipsDe { get; set; }
         public string RelationShipsEn { get; set; }
+
+        public string TitleFieldName { get; set; }
     }
 }

@@ -8,6 +8,7 @@ namespace MasterDataModule.Contracts.Entities
     ///     DE: Feiertage EN: Holidays
     /// </summary>
     public partial class Holiday: IHasId<int>
+        ,IHasTitle
         ,IRemovable
     {
         /// <summary>
@@ -112,6 +113,10 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         public virtual ICollection<HolidayOrdFederalState> HolidayOrdFederalStates{ get; set; }
+        string IHasTitle.EntityTitle
+        {
+            get { return Name; }
+        }
                 
         
         /// <summary>

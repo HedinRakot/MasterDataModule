@@ -7,6 +7,7 @@ namespace MasterDataModule.Contracts.Entities
     ///     EN: Versions of ARGE Exam-Programm  DE: ARGE-Versionen
     /// </summary>
     public partial class ArgeVersion: IHasId<int>
+        ,IHasTitle
         ,IIntervalFields
         ,IRemovable
     {
@@ -144,6 +145,10 @@ namespace MasterDataModule.Contracts.Entities
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        string IHasTitle.EntityTitle
+        {
+            get { return ProgrammName; }
         }
                 
         
