@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit FE language',
 	    masterData: 'FE masterdata',
 	    pageTitle: 'FE language',
+		pleaseSelect: 'Please select',
 		sysLanguageId: 'Language',	
 		oldAbbr: 'Abbreviation in old System',	
 		fromDate: 'From date',	

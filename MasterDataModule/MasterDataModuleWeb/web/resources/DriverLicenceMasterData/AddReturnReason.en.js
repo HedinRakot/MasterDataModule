@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Return reason',
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Return reason',
+		pleaseSelect: 'Please select',
 		name: 'Reason for returning the Driver Licence to Authority',	
 		description: 'Description',	
 		text1: 'Text 1',	

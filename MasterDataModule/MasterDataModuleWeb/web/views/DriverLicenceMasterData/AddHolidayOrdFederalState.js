@@ -10,9 +10,15 @@ define([
         tableName: 'HolidayOrdFederalState',
         actionUrl: '#HolidayOrdFederalStates',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#holidayId': 'holidayId',
 			'#ordFederalStateId': 'ordFederalStateId',
+			};
+
+            return result;
 		},
 
         render: function () {

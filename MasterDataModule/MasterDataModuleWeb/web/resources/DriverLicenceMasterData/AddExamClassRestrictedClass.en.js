@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Restricted class',
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Restricted class',
+		pleaseSelect: 'Please select',
 		examClassId: 'Class',	
 		examClassIdRestricted: 'Exam class with restrictions',	
 		fromDate: 'From date',	

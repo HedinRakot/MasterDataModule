@@ -10,11 +10,17 @@ define([
         tableName: 'MeetingPointOrganizationalUnit',
         actionUrl: '#MeetingPointOrganizationalUnits',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#meetingPointId': 'meetingPointId',
 			'#orgOrganizationalUnitId': 'orgOrganizationalUnitId',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

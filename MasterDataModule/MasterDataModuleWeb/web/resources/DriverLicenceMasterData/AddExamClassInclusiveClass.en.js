@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Inclusiv class',
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Inclusiv class',
+		pleaseSelect: 'Please select',
 		examClassId: 'Class',	
 		examClassIdInclusive: 'inclusiv class',	
 		fromDate: 'From date',	

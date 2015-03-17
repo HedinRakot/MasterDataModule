@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Exam room',
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Exam room',
+		pleaseSelect: 'Please select',
 		roomNumber: 'Exam Room Number',	
 		placeAmount: 'Amount of places',	
 		orgOrganizationalUnitId: 'Organizational Unit',	

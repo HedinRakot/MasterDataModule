@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Holiday to federal state',
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Holiday to federal state',
+		pleaseSelect: 'Please select',
 		holidayId: 'Holiday',	
 		ordFederalStateId: 'Federal State',	
 	};

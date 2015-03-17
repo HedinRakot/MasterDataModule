@@ -10,7 +10,10 @@ define([
         tableName: 'ExamClass',
         actionUrl: '#ExamClasses',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#name': 'name',
 			'#description': 'description',
 			'#isMofa': 'isMofa',
@@ -18,6 +21,9 @@ define([
 			'#toDate': 'toDate',
 			'#isFsClass': 'isFsClass',
 			'#sortOrder': 'sortOrder',
+			};
+
+            return result;
 		},
 
         render: function () {

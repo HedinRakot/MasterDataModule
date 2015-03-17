@@ -10,9 +10,15 @@ define([
         tableName: 'Holiday',
         actionUrl: '#Holidays',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#name': 'name',
 			'#date': 'date',
+			};
+
+            return result;
 		},
 
         render: function () {

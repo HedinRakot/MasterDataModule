@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Exam class to constraint',
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Exam class to constraint',
+		pleaseSelect: 'Please select',
 		examConstraintId: 'Constraint',	
 		examClassId: 'Class',	
 		fromDate: 'From date',	

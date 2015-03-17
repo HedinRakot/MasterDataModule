@@ -27,7 +27,7 @@ define(function () {
 });
 <#
 		context.FileManager.EndBlock();
-		context.FileManager.StartNewFile("Filter" + entityContent.CodeNamePlural + ".en.js");
+		context.FileManager.StartNewFile("Filter" + entityContent.CodeName + ".en.js");
 		//resources en
 #>
 define(function () {

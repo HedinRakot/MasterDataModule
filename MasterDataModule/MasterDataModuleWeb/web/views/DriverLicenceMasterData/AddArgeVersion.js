@@ -10,12 +10,18 @@ define([
         tableName: 'ArgeVersion',
         actionUrl: '#ArgeVersions',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#programmName': 'programmName',
 			'#versionSystem': 'versionSystem',
 			'#expirationDate': 'expirationDate',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

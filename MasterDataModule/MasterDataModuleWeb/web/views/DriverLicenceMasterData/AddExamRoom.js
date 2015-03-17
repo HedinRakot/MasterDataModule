@@ -10,7 +10,10 @@ define([
         tableName: 'ExamRoom',
         actionUrl: '#ExamRooms',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#roomNumber': 'roomNumber',
 			'#placeAmount': 'placeAmount',
 			'#orgOrganizationalUnitId': 'orgOrganizationalUnitId',
@@ -28,6 +31,9 @@ define([
 			'#fax': 'fax',
 			'#email': 'email',
 			'#sysCountryId': 'sysCountryId',
+			};
+
+            return result;
 		},
 
         render: function () {

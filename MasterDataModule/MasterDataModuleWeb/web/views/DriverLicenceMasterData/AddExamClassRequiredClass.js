@@ -10,10 +10,20 @@ define([
         tableName: 'ExamClassRequiredClass',
         actionUrl: '#ExamClassRequiredClasses',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#examClassId': 'examClassId',
+			'#examClassIdRequired': { observe: 'examClassIdRequired',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.examClasses
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {
@@ -22,6 +32,7 @@ define([
 
 			//TODO foreach model field
 			this.disableInput(this, 'examClassId', 'numeric');
+			this.disableInput(this, 'examClassIdRequired', 'select');
 			this.disableInput(this, 'fromDate', 'date');
 			this.disableInput(this, 'toDate', 'date');
 

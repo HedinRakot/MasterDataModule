@@ -10,9 +10,18 @@ define([
         tableName: 'ExamClassMap',
         actionUrl: '#ExamClassMaps',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#examClassIdOld': 'examClassIdOld',
-			'#examClassIdActual': 'examClassIdActual',
+			'#examClassIdActual': { observe: 'examClassIdActual',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.examClasses
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
+			};
+
+            return result;
 		},
 
         render: function () {
@@ -21,7 +30,7 @@ define([
 
 			//TODO foreach model field
 			this.disableInput(this, 'examClassIdOld', 'numeric');
-			this.disableInput(this, 'examClassIdActual', 'numeric');
+			this.disableInput(this, 'examClassIdActual', 'select');
 
             return this;
         }

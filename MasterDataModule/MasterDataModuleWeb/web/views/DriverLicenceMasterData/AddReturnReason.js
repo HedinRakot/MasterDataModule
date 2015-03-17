@@ -10,13 +10,19 @@ define([
         tableName: 'ReturnReason',
         actionUrl: '#ReturnReasons',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#name': 'name',
 			'#description': 'description',
 			'#text1': 'text1',
 			'#text2': 'text2',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

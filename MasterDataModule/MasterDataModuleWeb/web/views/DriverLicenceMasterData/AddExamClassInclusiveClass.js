@@ -10,12 +10,21 @@ define([
         tableName: 'ExamClassInclusiveClass',
         actionUrl: '#ExamClassInclusiveClasses',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#examClassId': 'examClassId',
-			'#examClassIdInclusive': 'examClassIdInclusive',
+			'#examClassIdInclusive': { observe: 'examClassIdInclusive',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.examClasses
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
 			'#isConditional': 'isConditional',
+			};
+
+            return result;
 		},
 
         render: function () {
@@ -24,7 +33,7 @@ define([
 
 			//TODO foreach model field
 			this.disableInput(this, 'examClassId', 'numeric');
-			this.disableInput(this, 'examClassIdInclusive', 'numeric');
+			this.disableInput(this, 'examClassIdInclusive', 'select');
 			this.disableInput(this, 'fromDate', 'date');
 			this.disableInput(this, 'toDate', 'date');
 			this.disableInput(this, 'isConditional');

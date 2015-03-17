@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Driverschool info',
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Driverschool info',
+		pleaseSelect: 'Please select',
 		text: 'Text',	
 		fromDate: 'From date',	
 		toDate: 'To date',	

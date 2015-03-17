@@ -10,11 +10,17 @@ define([
         tableName: 'Language',
         actionUrl: '#Languages',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#sysLanguageId': 'sysLanguageId',
 			'#oldAbbr': 'oldAbbr',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

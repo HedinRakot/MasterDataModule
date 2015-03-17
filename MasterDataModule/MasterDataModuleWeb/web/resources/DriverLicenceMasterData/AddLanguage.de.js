@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'FE-Sprache editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'FE-Sprache',
+		pleaseSelect: 'Bitte auswählen',
 		sysLanguageId: 'Sprachschlüssel ',	
 		oldAbbr: 'Alter Sprachschlüssel aus VF97',	
 		fromDate: 'Von Datum',	

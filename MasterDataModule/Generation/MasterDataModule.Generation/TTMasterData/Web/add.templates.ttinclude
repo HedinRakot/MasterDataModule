@@ -24,8 +24,15 @@
 #>
 		<div class="editor-label">
 			<label for="<#=property.Name#>" data-localized="<#=property.Name#>"></label>
+<#
+			if(property.Type.ShortName != "bool")
+			{		
+#>
 		</div>
 		<div class="editor-field">
+<#
+			}
+#>
             <#=type#> id="<#=property.Name#>" name="<#=property.Name#>" />
 		</div>   
 <#
@@ -78,7 +85,10 @@
             case "decimal":
             case "float":
             case "double":
-                return "<input type=\"text\" data-role=\"numerictextbox\"";
+				if(!String.IsNullOrEmpty(property.Column.Content.ViewCollection))
+					return "<select ";
+				else
+					return "<input type=\"text\" data-role=\"numerictextbox\"";
             case "datetime":
                 return "<input type=\"text\" data-role=\"datepicker\"";
             default:

@@ -10,10 +10,16 @@ define([
         tableName: 'SchoolInfo',
         actionUrl: '#SchoolInfos',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#text': 'text',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

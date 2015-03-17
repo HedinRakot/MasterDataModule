@@ -10,11 +10,17 @@ define([
         tableName: 'ExamConstraintExamClass',
         actionUrl: '#ExamConstraintExamClasses',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#examConstraintId': 'examConstraintId',
 			'#examClassId': 'examClassId',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

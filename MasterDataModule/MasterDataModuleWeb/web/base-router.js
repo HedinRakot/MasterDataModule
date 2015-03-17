@@ -3,11 +3,13 @@
 	'use strict';
 
     var createView = function (baseRouter, viewPath, collectionTypes, options) {
-	    var d = $.Deferred();
+        var d = $.Deferred(); 
 	    require([viewPath], function (View) {
 
 	        if (!!collectionTypes) {
+
 	            require(['models/view-collection'], function (ViewCollection) {
+
 	                ViewCollection.load(collectionTypes).done(function (viewCollection) {
 
 	                    options = _.extend({}, options, viewCollection.toJSON());
@@ -18,7 +20,7 @@
 	        else
 	            d.resolve(new View(options));
 	    });
-
+        
 	    return d.promise();
 	},
 	createViewWithModel = function (baseRouter, viewPath, modelPath, collectionTypes, id) {

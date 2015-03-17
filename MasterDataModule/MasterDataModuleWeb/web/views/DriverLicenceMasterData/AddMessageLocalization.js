@@ -10,10 +10,16 @@ define([
         tableName: 'MessageLocalization',
         actionUrl: '#MessageLocalizations',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#validationErrorNumber': 'validationErrorNumber',
 			'#sysLanguageId': 'sysLanguageId',
 			'#message': 'message',
+			};
+
+            return result;
 		},
 
         render: function () {

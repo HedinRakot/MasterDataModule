@@ -10,7 +10,10 @@ define([
         tableName: 'ExamPossibleResult',
         actionUrl: '#ExamPossibleResults',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#name': 'name',
 			'#description': 'description',
 			'#isFeePayable': 'isFeePayable',
@@ -20,6 +23,9 @@ define([
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
 			'#isMedicalAttestRequired': 'isMedicalAttestRequired',
+			};
+
+            return result;
 		},
 
         render: function () {

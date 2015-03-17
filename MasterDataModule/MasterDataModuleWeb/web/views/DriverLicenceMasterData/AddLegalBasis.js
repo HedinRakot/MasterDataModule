@@ -10,17 +10,29 @@ define([
         tableName: 'LegalBasis',
         actionUrl: '#LegalBases',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#name': 'name',
 			'#description': 'description',
 			'#educationCertificateRequired': 'educationCertificateRequired',
-			'#firstAssignation': 'firstAssignation',
+			'#firstAssignation': { observe: 'firstAssignation',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.assignationTypes
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#messageReason': 'messageReason',
 			'#messageReasonStyle': 'messageReasonStyle',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
-			'#replacementId': 'replacementId',
+			'#replacementId': { observe: 'replacementId',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.legalBasises
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#printName': 'printName',
+			};
+
+            return result;
 		},
 
         render: function () {
@@ -31,12 +43,12 @@ define([
 			this.disableInput(this, 'name');
 			this.disableInput(this, 'description');
 			this.disableInput(this, 'educationCertificateRequired');
-			this.disableInput(this, 'firstAssignation', 'numeric');
+			this.disableInput(this, 'firstAssignation', 'select');
 			this.disableInput(this, 'messageReason');
 			this.disableInput(this, 'messageReasonStyle');
 			this.disableInput(this, 'fromDate', 'date');
 			this.disableInput(this, 'toDate', 'date');
-			this.disableInput(this, 'replacementId', 'numeric');
+			this.disableInput(this, 'replacementId', 'select');
 			this.disableInput(this, 'printName');
 
             return this;

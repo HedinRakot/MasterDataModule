@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'ARGE-Version editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'ARGE-Version',
+		pleaseSelect: 'Bitte auswählen',
 		programmName: 'Programm-Name',	
 		versionSystem: 'Version',	
 		expirationDate: 'Version gültig bis',	

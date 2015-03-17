@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'FE-Anerkennung editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'FE-Anerkennung',
+		pleaseSelect: 'Bitte auswählen',
 		name: 'Beschreibung der Anerkennung',	
 		description: 'Beschreibung der Anerkennung',	
 		fromDate: 'Von Datum',	

@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Rückgabegrund editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Rückgabegrund',
+		pleaseSelect: 'Bitte auswählen',
 		name: 'Kurzbezeichnung',	
 		description: 'Beschreibung des Rückgabegrunds',	
 		text1: 'Zusatztext 1',	

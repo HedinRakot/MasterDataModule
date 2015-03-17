@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Class',
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Class',
+		pleaseSelect: 'Please select',
 		name: 'Class',	
 		description: 'Description',	
 		isMofa: 'Indication that it is MOFA',	

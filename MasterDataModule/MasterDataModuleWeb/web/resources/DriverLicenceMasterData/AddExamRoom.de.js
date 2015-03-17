@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Prüfraum editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Prüfraum',
+		pleaseSelect: 'Bitte auswählen',
 		roomNumber: 'Prüfraum-Nummer',	
 		placeAmount: 'Anzahl der Plätze',	
 		orgOrganizationalUnitId: 'Organisationseinheit ',	

@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Meeting point to org unit',
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Meeting point to org unit',
+		pleaseSelect: 'Please select',
 		meetingPointId: 'Meeting Point',	
 		orgOrganizationalUnitId: 'Organizational Unit',	
 		fromDate: 'From date',	

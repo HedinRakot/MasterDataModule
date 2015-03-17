@@ -16,7 +16,7 @@ define(function () {
 				                    validation: { required: false } }			
 			,firstAssignation: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('legalBasis', 'firstAssignation'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 			,messageReason: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('legalBasis', 'messageReason'), 
 				                    validation: { required: false, maxLength: 50 } }			

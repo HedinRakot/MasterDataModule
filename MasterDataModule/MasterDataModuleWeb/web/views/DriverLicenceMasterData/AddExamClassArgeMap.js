@@ -10,9 +10,15 @@ define([
         tableName: 'ExamClassArgeMap',
         actionUrl: '#ExamClassArgeMaps',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#examNameArge': 'examNameArge',
 			'#examClassId': 'examClassId',
+			};
+
+            return result;
 		},
 
         render: function () {

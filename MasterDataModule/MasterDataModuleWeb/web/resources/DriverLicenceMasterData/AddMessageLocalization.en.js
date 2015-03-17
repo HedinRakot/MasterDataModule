@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Error message',
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Error message',
+		pleaseSelect: 'Please select',
 		validationErrorNumber: 'Validation error number',	
 		sysLanguageId: 'Message language',	
 		message: 'Message text',	

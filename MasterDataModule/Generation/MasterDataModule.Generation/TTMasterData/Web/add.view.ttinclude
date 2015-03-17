@@ -21,15 +21,22 @@ define([
         tableName: '<#= entityContent.CodeName #>',
         actionUrl: '#<#= entityContent.CodeNamePlural #>',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 <#
         foreach (var property in model.ModelProperties)
         {
+			var bindigsPropertyType = GetBindigsPropertyType(context, property);
 #>
-			'#<#=property.Name #>': '<#=property.Name#>',
+			'#<#=property.Name #>': <#=bindigsPropertyType#>,
 <#
 		}
 #>
+			};
+
+            return result;
 		},
 
         render: function () {
@@ -60,7 +67,7 @@ define([
     context.FileManager.Process();
 #>
 <#+
-    private string GetPropertyType(IWebGenerationContext context, PropertyModelInfo property, bool forValidation = false)
+    private string GetPropertyType(IWebGenerationContext context, PropertyModelInfo property)
     {
         var shortName = property.Type.ShortName;
         if (string.IsNullOrEmpty(shortName))
@@ -83,11 +90,49 @@ define([
             case "decimal":
             case "float":
             case "double":
-                return ", 'numeric'";
+				if(!String.IsNullOrEmpty(property.Column.Content.ViewCollection))
+					return ", 'select'";
+				else
+					return ", 'numeric'";
             case "datetime":
                 return ", 'date'";
             default:
 				return "";
+        }
+    }
+
+	private string GetBindigsPropertyType(IWebGenerationContext context, PropertyModelInfo property)
+    {
+        var shortName = property.Type.ShortName;
+        if (string.IsNullOrEmpty(shortName))
+        {
+            shortName = property.Type.Name.ToLower();
+        }
+
+        switch (shortName)
+        {
+            case "byte":
+            case "short":
+            case "int":
+            case "long":
+            case "sbyte":
+            case "ushort":
+            case "uint":
+            case "ulong":
+            case "decimal":
+            case "float":
+            case "double":
+				if(!String.IsNullOrEmpty(property.Column.Content.ViewCollection))
+				{
+					return "{ observe: '" + property.Name + "'," +
+						   "\n				selectOptions: { labelPath: 'name', valuePath: 'id'," + 
+						   "\n				collection: self.options." + property.Column.Content.ViewCollection +
+						   "\n				,defaultOption: {label: self.resources.pleaseSelect,value: null}},}";
+				}
+				else 
+					return "'" + property.Name + "'";
+            default:
+				return "'" + property.Name + "'";
         }
     }
 #>

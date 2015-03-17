@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Meeting point',
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Meeting point',
+		pleaseSelect: 'Please select',
 		name: 'Meeting Point',	
 		description: 'Description',	
 		fromDate: 'From date',	

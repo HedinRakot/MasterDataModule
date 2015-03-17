@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Zuordnung Bundesland zu einem Feiertag editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Zuordnung Bundesland zu einem Feiertag',
+		pleaseSelect: 'Bitte auswählen',
 		holidayId: 'Feiertag ',	
 		ordFederalStateId: 'zugeordnete Bundesland ',	
 	};

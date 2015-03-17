@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Behörde editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Behörde',
+		pleaseSelect: 'Bitte auswählen',
 		authorityNumber: 'Behördenschlüssel',	
 		name: 'Name der Behörde',	
 		description: 'Beschreibung der Behörde',	

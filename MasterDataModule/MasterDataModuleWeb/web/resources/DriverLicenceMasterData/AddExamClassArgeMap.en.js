@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Arge class map',
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Arge class map',
+		pleaseSelect: 'Please select',
 		examNameArge: 'ARGE exam class',	
 		examClassId: 'Class',	
 	};

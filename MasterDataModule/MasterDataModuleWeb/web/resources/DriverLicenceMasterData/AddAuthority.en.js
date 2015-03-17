@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Authority',
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Authority',
+		pleaseSelect: 'Please select',
 		authorityNumber: 'Authority Number',	
 		name: 'Authority Name',	
 		description: 'Description',	

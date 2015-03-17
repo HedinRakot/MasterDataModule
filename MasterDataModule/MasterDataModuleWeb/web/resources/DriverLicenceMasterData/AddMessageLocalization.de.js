@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Fehlermeldung editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Fehlermeldung',
+		pleaseSelect: 'Bitte auswählen',
 		validationErrorNumber: 'Fehlernummer',	
 		sysLanguageId: 'Sprachschlüssel ',	
 		message: 'Meldungstext',	

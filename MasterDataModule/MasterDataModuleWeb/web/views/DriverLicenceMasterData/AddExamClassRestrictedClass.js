@@ -10,11 +10,20 @@ define([
         tableName: 'ExamClassRestrictedClass',
         actionUrl: '#ExamClassRestrictedClasses',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#examClassId': 'examClassId',
-			'#examClassIdRestricted': 'examClassIdRestricted',
+			'#examClassIdRestricted': { observe: 'examClassIdRestricted',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.examClasses
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {
@@ -23,7 +32,7 @@ define([
 
 			//TODO foreach model field
 			this.disableInput(this, 'examClassId', 'numeric');
-			this.disableInput(this, 'examClassIdRestricted', 'numeric');
+			this.disableInput(this, 'examClassIdRestricted', 'select');
 			this.disableInput(this, 'fromDate', 'date');
 			this.disableInput(this, 'toDate', 'date');
 

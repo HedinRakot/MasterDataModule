@@ -10,7 +10,10 @@ define([
         tableName: 'Authority',
         actionUrl: '#Authorities',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#authorityNumber': 'authorityNumber',
 			'#name': 'name',
 			'#description': 'description',
@@ -26,6 +29,9 @@ define([
 			'#phone1': 'phone1',
 			'#phone2': 'phone2',
 			'#fax': 'fax',
+			};
+
+            return result;
 		},
 
         render: function () {

@@ -10,13 +10,19 @@ define([
         tableName: 'ExamStation',
         actionUrl: '#ExamStations',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#ordFederalStateId': 'ordFederalStateId',
 			'#place': 'place',
 			'#description': 'description',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
 			'#sortOrder': 'sortOrder',
+			};
+
+            return result;
 		},
 
         render: function () {

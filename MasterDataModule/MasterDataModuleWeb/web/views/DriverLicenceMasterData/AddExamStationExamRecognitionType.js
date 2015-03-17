@@ -10,11 +10,17 @@ define([
         tableName: 'ExamStationExamRecognitionType',
         actionUrl: '#ExamStationExamRecognitionTypes',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#examStationId': 'examStationId',
 			'#examRecognitionTypeId': 'examRecognitionTypeId',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

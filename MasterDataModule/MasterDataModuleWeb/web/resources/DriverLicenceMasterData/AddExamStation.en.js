@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit FE exam station',
 	    masterData: 'FE masterdata',
 	    pageTitle: 'FE exam station',
+		pleaseSelect: 'Please select',
 		ordFederalStateId: 'Federal State',	
 		place: 'Location (Place)',	
 		description: 'Description',	

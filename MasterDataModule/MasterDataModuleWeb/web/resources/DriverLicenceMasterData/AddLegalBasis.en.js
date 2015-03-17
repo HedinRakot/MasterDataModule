@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Legal basis',
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Legal basis',
+		pleaseSelect: 'Please select',
 		name: 'Legal Basis',	
 		description: 'Description',	
 		educationCertificateRequired: 'Indication whether Education Certificate is required',	
