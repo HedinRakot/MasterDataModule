@@ -51,7 +51,9 @@ namespace MasterDataModule.Lib.Data
                 .HasColumnName(SysTable.Fields.EditMode)
                 .IsRequired();
 
-            Ignore(r => r.ChangeDate);
+            Property(t => t.ChangeDate)
+                .HasColumnName(SysTable.Fields.ChangeDate)
+                .IsRequired();
 
 
             //Relationships

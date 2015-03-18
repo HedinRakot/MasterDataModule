@@ -55,7 +55,10 @@ namespace MasterDataModule.Lib.Data
                 .HasColumnName(SysColumn.Fields.ReadOnly)
                 .IsRequired();
 
-            Ignore(r => r.ChangeDate);
+            Property(t => t.ChangeDate)
+                .HasColumnName(SysColumn.Fields.ChangeDate)
+                .IsRequired();
+
 
             //Relationships
             HasRequired(s => s.SysTable)
