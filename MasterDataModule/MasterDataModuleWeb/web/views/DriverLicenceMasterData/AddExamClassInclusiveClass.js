@@ -17,7 +17,7 @@ define([
 			'#examClassId': 'examClassId',
 			'#examClassIdInclusive': { observe: 'examClassIdInclusive',
 				selectOptions: { labelPath: 'name', valuePath: 'id',
-				collection: self.options.examClasses
+				collection: self.options.examClass
 				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',

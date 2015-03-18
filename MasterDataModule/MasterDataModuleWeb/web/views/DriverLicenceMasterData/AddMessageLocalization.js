@@ -17,7 +17,7 @@ define([
 			'#validationErrorNumber': 'validationErrorNumber',
 			'#sysLanguageId': { observe: 'sysLanguageId',
 				selectOptions: { labelPath: 'name', valuePath: 'id',
-				collection: self.options.sysLanguages
+				collection: self.options.sysLanguage
 				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#message': 'message',
 			};

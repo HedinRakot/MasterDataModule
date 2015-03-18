@@ -24,7 +24,7 @@ define([
 
 		columns: function () {
 		    return [
-				{ field: 'examClassIdInclusive', title: this.resources.examClassIdInclusive , collection: this.options.examClasses, filterable: false},
+				{ field: 'examClassIdInclusive', title: this.resources.examClassIdInclusive , collection: this.options.examClass, filterable: false},
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 				{ field: 'isConditional', title: this.resources.isConditional , headerTitle: this.resources.isConditional, checkbox: true},

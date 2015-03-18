@@ -24,7 +24,7 @@ define([
 
 		columns: function () {
 		    return [
-				{ field: 'examClassIdActual', title: this.resources.examClassIdActual , collection: this.options.examClasses, filterable: false},
+				{ field: 'examClassIdActual', title: this.resources.examClassIdActual , collection: this.options.examClass, filterable: false},
 			];
 		},
 		

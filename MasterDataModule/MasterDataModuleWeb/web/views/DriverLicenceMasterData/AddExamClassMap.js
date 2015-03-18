@@ -17,7 +17,7 @@ define([
 			'#examClassIdOld': 'examClassIdOld',
 			'#examClassIdActual': { observe: 'examClassIdActual',
 				selectOptions: { labelPath: 'name', valuePath: 'id',
-				collection: self.options.examClasses
+				collection: self.options.examClass
 				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			};
 

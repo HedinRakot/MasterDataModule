@@ -19,7 +19,7 @@ define([
 			'#educationCertificateRequired': 'educationCertificateRequired',
 			'#firstAssignation': { observe: 'firstAssignation',
 				selectOptions: { labelPath: 'name', valuePath: 'id',
-				collection: self.options.assignationTypes
+				collection: self.options.assignationType
 				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#messageReason': 'messageReason',
 			'#messageReasonStyle': 'messageReasonStyle',
@@ -27,7 +27,7 @@ define([
 			'#toDate': 'toDate',
 			'#replacementId': { observe: 'replacementId',
 				selectOptions: { labelPath: 'name', valuePath: 'id',
-				collection: self.options.legalBasises
+				collection: self.options.legalBasis
 				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#printName': 'printName',
 			};
