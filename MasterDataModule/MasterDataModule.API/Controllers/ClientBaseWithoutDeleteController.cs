@@ -44,6 +44,11 @@ namespace MasterDataModule.API.Controllers
             {
                 return NotFound();
             }
+            if (HasConcurrency(entity, model))
+            {
+                //TODO: put proper processor for concurrency
+                return Conflict();
+            }
 
             Validate(model, entity, ActionTypes.Update);
             if (!ModelState.IsValid)
@@ -52,6 +57,7 @@ namespace MasterDataModule.API.Controllers
             }
 
             ModelToEntity(model, entity, ActionTypes.Update);
+            SetChangeDate(entity);
 
             // TODO we should save FROM_DATE as "FROM_DATE 00:00:00"
             // TO_DATE as "TO_DATE 23:59:59"
@@ -71,30 +77,37 @@ namespace MasterDataModule.API.Controllers
             return Ok(model);
         }
 
+        
+
         public virtual IHttpActionResult Post([FromBody] TModel model)
         {
             var entity = Manager.DataContext.CreateObject<TEntity>();
             Validate(model, entity, ActionTypes.Add);
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                ModelToEntity(model, entity, ActionTypes.Add);
-
-                Manager.AddEntity(entity);
-                Manager.SaveChanges();
-
-                model = new TModel
-                {
-                    Id = entity.Id
-                };
-
-                OnActionSuccess(entity, ActionTypes.Add);
-
-                EntityToModel(entity, model);
-
-                return Ok(model);
+                return BadRequest(ModelState);
             }
 
-            return BadRequest(ModelState);
+            ModelToEntity(model, entity, ActionTypes.Add);
+            SetChangeDate(entity);
+            Manager.AddEntity(entity);
+            Manager.SaveChanges();
+
+            model = new TModel
+            {
+                Id = entity.Id
+            };
+
+            OnActionSuccess(entity, ActionTypes.Add);
+
+            EntityToModel(entity, model);
+
+            return Ok(model);
+        }
+
+        private void SetChangeDate(ISystemFields entity)
+        {
+            entity.ChangeDate = DateTime.Now;
         }
 
         private bool HasConcurrency(ISystemFields entity, ISystemModelFields model)

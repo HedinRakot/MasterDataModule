@@ -51,6 +51,8 @@ namespace MasterDataModule.Lib.Data
                 .HasColumnName(SysTable.Fields.EditMode)
                 .IsRequired();
 
+            Ignore(r => r.ChangeDate);
+
 
             //Relationships
         }

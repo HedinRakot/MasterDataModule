@@ -13,7 +13,7 @@ namespace MasterDataModule.Lib.Managers.Base
     /// <typeparam name="TDataContext"></typeparam>
     public class ReadOnlyEntityManager<TEntity, TId, TDataContext> :
         ReadOnlyManagerBase<TEntity, TId, TDataContext>, IReadOnlyEntityManager<TEntity, TId, TDataContext>
-        where TEntity : class, IHasId<TId>
+        where TEntity : class, IHasId<TId>, ISystemFields
         where TId : struct, IEquatable<TId>
         where TDataContext : class, IEntities
     {
@@ -48,15 +48,14 @@ namespace MasterDataModule.Lib.Managers.Base
     /// <typeparam name="TEntity"></typeparam>
     /// <typeparam name="TId"></typeparam>
     public abstract class ReadOnlyEntityManager<TEntity, TId> : ReadOnlyEntityManager<TEntity, TId, IEntities>
-        where TEntity : class, IHasId<TId>
+        where TEntity : class, IHasId<TId>, ISystemFields
         where TId : struct, IEquatable<TId>
     {
         /// <summary>
         /// </summary>
         /// <param name="context"></param>
-        public ReadOnlyEntityManager(IEntities context)
-            :
-                base(context)
+        protected ReadOnlyEntityManager(IEntities context)
+            :base(context)
         {
         }
     }
