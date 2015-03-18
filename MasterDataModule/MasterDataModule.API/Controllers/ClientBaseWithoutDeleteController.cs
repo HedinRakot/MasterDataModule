@@ -118,7 +118,9 @@ namespace MasterDataModule.API.Controllers
             {
                 return false;
             }
-            return entity.ChangeDate != model.changeDate;
+            var diff = entity.ChangeDate.Subtract(model.changeDate);
+            return (diff.Seconds < -1 || diff.Seconds > 1);
+
         }
     }
 }
