@@ -8,6 +8,7 @@ namespace MasterDataModule.Contracts.Entities
     /// </summary>
     public partial class SysColumn: IHasId<int>
         ,IRemovable
+        ,ISystemFields
     {
         /// <summary>
         /// Table name
@@ -47,6 +48,10 @@ namespace MasterDataModule.Contracts.Entities
             /// Column name 'READ_ONLY' for property <see cref="SysColumn.ReadOnly"/>
             /// </summary>
             public static readonly string ReadOnly = "READ_ONLY";
+            /// <summary>
+            /// Column name 'CHANGE_DATE' for property <see cref="SysColumn.ChangeDate"/>
+            /// </summary>
+            public static readonly string ChangeDate = "CHANGE_DATE";
           
         }
         #endregion
@@ -57,10 +62,21 @@ namespace MasterDataModule.Contracts.Entities
         public DateTime? DeleteDate{ get; set; }
         public string Description{ get; set; }
         public bool ReadOnly{ get; set; }
+        public DateTime ChangeDate{ get; set; }
         public virtual SysTable SysTable{ get; set; }
         public bool HasSysTable
         {
             get { return !ReferenceEquals(SysTable, null); }
+        }
+        DateTime ISystemFields.CreateDate
+        {
+            get { return CreateDate; }
+            set { CreateDate = value; }
+        }
+        DateTime ISystemFields.ChangeDate
+        {
+            get { return ChangeDate; }
+            set { ChangeDate = value; }
         }
                 
         
@@ -76,6 +92,7 @@ namespace MasterDataModule.Contracts.Entities
                        DeleteDate = DeleteDate,
                        Description = Description,
                        ReadOnly = ReadOnly,
+                       ChangeDate = ChangeDate,
         	           };
         }
     }
