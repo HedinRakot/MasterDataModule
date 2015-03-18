@@ -1,4 +1,5 @@
 using MasterDataModule.API.Models;
+using MasterDataModule.Contracts;
 using MasterDataModule.Contracts.Entities;
 using MasterDataModule.Contracts.Managers;
 using System;
@@ -30,8 +31,8 @@ namespace MasterDataModule.API.Controllers
             model.phone1 = entity.Phone1;
             model.phone2 = entity.Phone2;
             model.fax = entity.Fax;
-            model.createDate = entity.CreateDate;
-            model.changeDate = entity.ChangeDate;
+            model.createDate = ((ISystemFields)entity).CreateDate;
+            model.changeDate = ((ISystemFields)entity).ChangeDate;
         }
         protected override void ModelToEntity(AuthorityModel model, Authority entity, ActionTypes actionType)
         {

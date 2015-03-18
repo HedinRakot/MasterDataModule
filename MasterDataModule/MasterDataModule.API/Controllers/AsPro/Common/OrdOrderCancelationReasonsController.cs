@@ -1,4 +1,5 @@
 using MasterDataModule.API.Models;
+using MasterDataModule.Contracts;
 using MasterDataModule.Contracts.Entities;
 using MasterDataModule.Contracts.Managers;
 using System;
@@ -18,6 +19,8 @@ namespace MasterDataModule.API.Controllers
             model.cancelationReasonText = entity.CancelationReasonText;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
+            model.createDate = ((ISystemFields)entity).CreateDate;
+            model.changeDate = ((ISystemFields)entity).ChangeDate;
         }
         protected override void ModelToEntity(OrdOrderCancelationReasonModel model, OrdOrderCancelationReason entity, ActionTypes actionType)
         {

@@ -1,4 +1,5 @@
 using MasterDataModule.API.Models;
+using MasterDataModule.Contracts;
 using MasterDataModule.Contracts.Entities;
 using MasterDataModule.Contracts.Managers;
 using System;
@@ -25,8 +26,8 @@ namespace MasterDataModule.API.Controllers
             model.toDate = entity.ToDate;
             model.replacementId = entity.ReplacementId;
             model.printName = entity.PrintName;
-            model.createDate = entity.CreateDate;
-            model.changeDate = entity.ChangeDate;
+            model.createDate = ((ISystemFields)entity).CreateDate;
+            model.changeDate = ((ISystemFields)entity).ChangeDate;
         }
         protected override void ModelToEntity(LegalBasisModel model, LegalBasis entity, ActionTypes actionType)
         {

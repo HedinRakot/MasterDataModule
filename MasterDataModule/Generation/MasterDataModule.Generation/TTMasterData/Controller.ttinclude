@@ -34,7 +34,8 @@
         {
             "MasterDataModule.API.Models", 
 			"MasterDataModule.Contracts.Entities",
-            "MasterDataModule.Contracts.Managers"
+            "MasterDataModule.Contracts.Managers",
+            "MasterDataModule.Contracts"
         }, controllerType);
 
         code.WriteLine();
@@ -61,8 +62,8 @@
         var changeDate = model.Entity.SimpleProperties.FirstOrDefault(p => p.Name == "ChangeDate");
         if (createDate != null && changeDate != null)
         {
-			code.WriteLine("model.createDate = entity.{0};", createDate.Name);
-			code.WriteLine("model.changeDate = entity.{0};", changeDate.Name);
+			code.WriteLine("model.createDate = ((ISystemFields)entity).{0};", createDate.Name);
+			code.WriteLine("model.changeDate = ((ISystemFields)entity).{0};", changeDate.Name);
 		}
 
         if (model.Content.ExtraEntityToModel)

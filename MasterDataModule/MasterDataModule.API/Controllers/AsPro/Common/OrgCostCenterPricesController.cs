@@ -1,4 +1,5 @@
 using MasterDataModule.API.Models;
+using MasterDataModule.Contracts;
 using MasterDataModule.Contracts.Entities;
 using MasterDataModule.Contracts.Managers;
 using System;
@@ -26,6 +27,8 @@ namespace MasterDataModule.API.Controllers
             model.changeAbilityType = entity.ChangeAbilityType;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
+            model.createDate = ((ISystemFields)entity).CreateDate;
+            model.changeDate = ((ISystemFields)entity).ChangeDate;
         }
         protected override void ModelToEntity(OrgCostCenterPriceModel model, OrgCostCenterPrice entity, ActionTypes actionType)
         {

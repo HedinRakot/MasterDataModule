@@ -1,4 +1,5 @@
 using MasterDataModule.API.Models;
+using MasterDataModule.Contracts;
 using MasterDataModule.Contracts.Entities;
 using MasterDataModule.Contracts.Managers;
 using System;

@@ -1,4 +1,5 @@
 using MasterDataModule.API.Models;
+using MasterDataModule.Contracts;
 using MasterDataModule.Contracts.Entities;
 using MasterDataModule.Contracts.Managers;
 using System;
@@ -18,8 +19,8 @@ namespace MasterDataModule.API.Controllers
             model.validationErrorNumber = entity.ValidationErrorNumber;
             model.sysLanguageId = entity.SysLanguageId;
             model.message = entity.Message;
-            model.createDate = entity.CreateDate;
-            model.changeDate = entity.ChangeDate;
+            model.createDate = ((ISystemFields)entity).CreateDate;
+            model.changeDate = ((ISystemFields)entity).ChangeDate;
         }
         protected override void ModelToEntity(MessageLocalizationModel model, MessageLocalization entity, ActionTypes actionType)
         {
