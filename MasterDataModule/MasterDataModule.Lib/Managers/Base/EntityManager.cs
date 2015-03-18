@@ -12,7 +12,7 @@ namespace MasterDataModule.Lib.Managers.Base
     /// <typeparam name="TDataContext"></typeparam>
 	public class EntityManager<TEntity, TId, TDataContext> : 
         ReadOnlyEntityManager<TEntity, TId, TDataContext>, IEntityManager<TEntity, TId, TDataContext>
-        where TEntity : class, IHasId<TId>, IRemovable
+        where TEntity : class, IHasId<TId>, IRemovable, ISystemFields
 		where TDataContext: class, IEntities
         where TId : struct, IEquatable<TId>
 	{
@@ -57,7 +57,8 @@ namespace MasterDataModule.Lib.Managers.Base
 		{
 			if (entity != null)
 			{
-				DoRemove(entity);
+                DoRemove(entity);
+                DoUpdate(entity);
 
 				if (SaveChangesAutomatically)
 					DataContext.SaveChanges();
@@ -75,6 +76,15 @@ namespace MasterDataModule.Lib.Managers.Base
 		{
             entity.DeleteDate = DateTime.Now;
 		}
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="entity"></param>
+        protected virtual void DoUpdate(TEntity entity)
+        {
+            entity.ChangeDate = DateTime.Now;
+        }
         		
         /// <summary>
         /// 
@@ -104,14 +114,14 @@ namespace MasterDataModule.Lib.Managers.Base
     /// <typeparam name="TEntity"></typeparam>
     /// <typeparam name="TId"></typeparam>
     public abstract class EntityManager<TEntity, TId> : EntityManager<TEntity, TId, IEntities>
-        where TEntity : class, IHasId<TId>, IRemovable
+        where TEntity : class, IHasId<TId>, IRemovable, ISystemFields
         where TId : struct, IEquatable<TId>
     {
         /// <summary>
         /// 
         /// </summary>
         /// <param name="context"></param>
-        public EntityManager(IEntities context) :
+        protected EntityManager(IEntities context) :
             base(context)
         {
         }

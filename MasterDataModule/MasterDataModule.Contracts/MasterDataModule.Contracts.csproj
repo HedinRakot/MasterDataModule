@@ -335,6 +335,8 @@
     <Compile Include="Entities\Drl\Role.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Drl\SysTable.Custom.cs" />
+    <Compile Include="Entities\Drl\SysColumn.Custom.cs" />
     <Compile Include="Entities\Drl\Role.Custom.cs" />
     <Compile Include="Entities\Drl\SchoolInfo.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>

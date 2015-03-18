@@ -9,8 +9,8 @@ namespace MasterDataModule.API.Controllers
     public abstract class ClientBaseWithoutDeleteController<TModel, TEntity, TId, TManager> :
         ReadOnlyClientBaseController<TModel, TEntity, TId, TManager>
         where TManager : IManagerBase<TEntity, TId>
-        where TModel : class, IHasId<TId>, new()
-        where TEntity : class, IHasId<TId>, IRemovable
+        where TModel : class, IHasId<TId>, ISystemModelFields, new()
+        where TEntity : class, IHasId<TId>, IRemovable, ISystemFields
     {
         protected ClientBaseWithoutDeleteController(TManager manager)
             : base(manager)
@@ -40,36 +40,35 @@ namespace MasterDataModule.API.Controllers
         public virtual IHttpActionResult Put([FromBody] TModel model)
         {
             var entity = Manager.GetById(model.Id);
-            if (entity != null)
+            if (entity == null)
             {
-                Validate(model, entity, ActionTypes.Update);
+                return NotFound();
+            }
 
-                if (ModelState.IsValid)
-                {
-                    ModelToEntity(model, entity, ActionTypes.Update);
-
-                    // TODO we should save FROM_DATE as "FROM_DATE 00:00:00"
-                    // TO_DATE as "TO_DATE 23:59:59"
-                    var sysModel = ((object) model) as IModelIntervalFields;
-                    var sysEntity = entity as IIntervalFields;
-                    if (sysEntity != null && sysModel != null)
-                    {
-                        sysEntity.ToDate = sysModel.toDate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59);
-                    }
-
-                    Manager.SaveChanges();
-
-                    OnActionSuccess(entity, ActionTypes.Update);
-
-                    EntityToModel(entity, model);
-
-                    return Ok(model);
-                }
-
+            Validate(model, entity, ActionTypes.Update);
+            if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
             }
 
-            return NotFound();
+            ModelToEntity(model, entity, ActionTypes.Update);
+
+            // TODO we should save FROM_DATE as "FROM_DATE 00:00:00"
+            // TO_DATE as "TO_DATE 23:59:59"
+            var sysModel = ((object) model) as IModelIntervalFields;
+            var sysEntity = entity as IIntervalFields;
+            if (sysEntity != null && sysModel != null)
+            {
+                sysEntity.ToDate = sysModel.toDate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59);
+            }
+
+            Manager.SaveChanges();
+
+            OnActionSuccess(entity, ActionTypes.Update);
+
+            EntityToModel(entity, model);
+
+            return Ok(model);
         }
 
         public virtual IHttpActionResult Post([FromBody] TModel model)
@@ -96,6 +95,17 @@ namespace MasterDataModule.API.Controllers
             }
 
             return BadRequest(ModelState);
+        }
+
+        private bool HasConcurrency(ISystemFields entity, ISystemModelFields model)
+        {
+            if (entity == null || 
+                model == null ||
+                entity.ChangeDate == DateTime.MinValue) //exclude tables without ChangeDate field. DateTime.MinValue is a default for them
+            {
+                return false;
+            }
+            return entity.ChangeDate != model.changeDate;
         }
     }
 }

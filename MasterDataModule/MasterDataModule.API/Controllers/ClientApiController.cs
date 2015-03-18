@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using MasterDataModule.API.Models;
 using MasterDataModule.API.SystemLog;
 using MasterDataModule.Contracts;
 using MasterDataModule.Contracts.Entities;
@@ -23,8 +24,8 @@ namespace MasterDataModule.API.Controllers
     public abstract class ClientApiWithoutDeleteController<TModel, TEntity, TId, TManager> :
         ClientBaseWithoutDeleteController<TModel, TEntity, TId, TManager>
         where TManager : class, IManagerBase<TEntity, TId>
-        where TModel : class, IHasId<TId>, new()
-        where TEntity : class, IHasId<TId>, IRemovable
+        where TModel : class, IHasId<TId>, ISystemModelFields, new()
+        where TEntity : class, IHasId<TId>, ISystemFields, IRemovable
     {
         protected ClientApiWithoutDeleteController(TManager manager)
             : base(manager)
@@ -35,8 +36,8 @@ namespace MasterDataModule.API.Controllers
     public abstract class ClientApiController<TModel, TEntity, TId, TManager> :
         ClientBaseController<TModel, TEntity, TId, TManager>
         where TManager : class, IManagerBase<TEntity, TId>
-        where TModel : class, IHasId<TId>, new()
-        where TEntity : class, IHasId<TId>, IRemovable
+        where TModel : class, IHasId<TId>, ISystemModelFields, new()
+        where TEntity : class, IHasId<TId>, ISystemFields, IRemovable
     {
         protected ClientApiController(TManager manager)
             : base(manager)

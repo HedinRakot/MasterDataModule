@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using MasterDataModule.API.Models;
 using MasterDataModule.Contracts;
 using MasterDataModule.Contracts.Managers.Base;
 
@@ -7,8 +8,8 @@ namespace MasterDataModule.API.Controllers
     public abstract class ClientBaseController<TModel, TEntity, TId, TManager> :
         ClientBaseWithoutDeleteController<TModel, TEntity, TId, TManager>
         where TManager : IManagerBase<TEntity, TId>
-        where TModel : class, IHasId<TId>, new()
-        where TEntity : class, IHasId<TId>, IRemovable
+        where TModel : class, IHasId<TId>, ISystemModelFields, new()
+        where TEntity : class, IHasId<TId>, ISystemFields, IRemovable
     {
         protected ClientBaseController(TManager manager)
             : base(manager)
