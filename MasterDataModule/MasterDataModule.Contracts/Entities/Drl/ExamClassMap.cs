@@ -8,6 +8,7 @@ namespace MasterDataModule.Contracts.Entities
     /// </summary>
     public partial class ExamClassMap: IHasId<int>
         ,IRemovable
+        ,ISystemFields
     {
         /// <summary>
         /// Table name
@@ -119,6 +120,16 @@ namespace MasterDataModule.Contracts.Entities
         public bool HasExamClass2
         {
             get { return !ReferenceEquals(ExamClass2, null); }
+        }
+        DateTime ISystemFields.CreateDate
+        {
+            get { return CreateDate; }
+            set { CreateDate = value; }
+        }
+        DateTime ISystemFields.ChangeDate
+        {
+            get { return ChangeDate; }
+            set { ChangeDate = value; }
         }
                 
         

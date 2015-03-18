@@ -6,6 +6,7 @@ namespace MasterDataModule.Contracts.Entities
     public partial class InsSummaryField: IHasId<int>
         ,IIntervalFields
         ,IRemovable
+        ,ISystemFields
     {
         /// <summary>
         /// Table name
@@ -89,6 +90,16 @@ namespace MasterDataModule.Contracts.Entities
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        DateTime ISystemFields.CreateDate
+        {
+            get { if(CreateDate.HasValue) return CreateDate.Value; else return DateTime.Now; }
+            set { CreateDate = value; }
+        }
+        DateTime ISystemFields.ChangeDate
+        {
+            get { if(ChangeDate.HasValue) return ChangeDate.Value; else return CreateDate ?? DateTime.Now; }
+            set { ChangeDate = value; }
         }
                 
         

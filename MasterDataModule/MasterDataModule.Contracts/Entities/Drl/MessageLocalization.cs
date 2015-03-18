@@ -9,6 +9,7 @@ namespace MasterDataModule.Contracts.Entities
     public partial class MessageLocalization: IHasId<int>
         ,IHasTitle
         ,IRemovable
+        ,ISystemFields
     {
         /// <summary>
         /// Table name
@@ -122,6 +123,16 @@ namespace MasterDataModule.Contracts.Entities
         string IHasTitle.EntityTitle
         {
             get { return Message; }
+        }
+        DateTime ISystemFields.CreateDate
+        {
+            get { if(CreateDate.HasValue) return CreateDate.Value; else return DateTime.Now; }
+            set { CreateDate = value; }
+        }
+        DateTime ISystemFields.ChangeDate
+        {
+            get { if(ChangeDate.HasValue) return ChangeDate.Value; else return CreateDate ?? DateTime.Now; }
+            set { ChangeDate = value; }
         }
                 
         

@@ -355,6 +355,7 @@
     <Compile Include="IEntities.cs" />
     <Compile Include="IHasId.cs" />
     <Compile Include="IHasTitle.cs" />
+    <Compile Include="ISystemFields.cs" />
     <Compile Include="IRemovable.cs" />
     <Compile Include="ISaveManager.cs" />
     <Compile Include="IIntervalFields.cs" />

@@ -10,6 +10,7 @@ namespace MasterDataModule.Contracts.Entities
         ,IHasTitle
         ,IIntervalFields
         ,IRemovable
+        ,ISystemFields
     {
         /// <summary>
         /// Table name
@@ -237,6 +238,16 @@ namespace MasterDataModule.Contracts.Entities
         string IHasTitle.EntityTitle
         {
             get { return Name; }
+        }
+        DateTime ISystemFields.CreateDate
+        {
+            get { return CreateDate; }
+            set { CreateDate = value; }
+        }
+        DateTime ISystemFields.ChangeDate
+        {
+            get { return ChangeDate; }
+            set { ChangeDate = value; }
         }
                 
         

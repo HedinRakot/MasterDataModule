@@ -21,7 +21,7 @@ define([
 		columns: function () {
 		    return [
 				{ field: 'validationErrorNumber', title: this.resources.validationErrorNumber },
-				{ field: 'sysLanguageId', title: this.resources.sysLanguageId },
+				{ field: 'sysLanguageId', title: this.resources.sysLanguageId , collection: this.options.sysLanguages, filterable: false},
 				{ field: 'message', title: this.resources.message },
 			];
 		}

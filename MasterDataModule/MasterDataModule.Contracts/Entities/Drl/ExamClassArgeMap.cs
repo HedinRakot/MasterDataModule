@@ -9,6 +9,7 @@ namespace MasterDataModule.Contracts.Entities
     public partial class ExamClassArgeMap: IHasId<int>
         ,IHasTitle
         ,IRemovable
+        ,ISystemFields
     {
         /// <summary>
         /// Table name
@@ -119,6 +120,16 @@ namespace MasterDataModule.Contracts.Entities
         string IHasTitle.EntityTitle
         {
             get { return ExamNameArge; }
+        }
+        DateTime ISystemFields.CreateDate
+        {
+            get { return CreateDate; }
+            set { CreateDate = value; }
+        }
+        DateTime ISystemFields.ChangeDate
+        {
+            get { return ChangeDate; }
+            set { ChangeDate = value; }
         }
                 
         

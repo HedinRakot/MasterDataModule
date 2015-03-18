@@ -4,6 +4,7 @@ using MetadataLoader.Contracts.CSharp;
 using MetadataLoader.EntityFramework;
 using MetadataLoader.MSSQL.Contracts.Database;
 using MetadataLoader.MSSQL.EntityFramework;
+using System;
 
 namespace MasterDataModule.Generation
 {
@@ -37,6 +38,7 @@ namespace MasterDataModule.Generation
             var iremovable = TypeUsageInfo.CreateInterface("IRemovable", "MasterDataModule.Contracts");
             var ihasid = TypeUsageInfo.CreateInterface("IHasId", "MasterDataModule.Contracts", new[] {typeof (int).ToUsageInfo()});
             var iintervalfields = TypeUsageInfo.CreateInterface("IIntervalFields", "MasterDataModule.Contracts");
+            var isystemfields = TypeUsageInfo.CreateInterface("ISystemFields", "MasterDataModule.Contracts");
             var ihastitle = TypeUsageInfo.CreateInterface("IHasTitle", "MasterDataModule.Contracts");
    
             foreach (var entity in entities)
@@ -65,9 +67,25 @@ namespace MasterDataModule.Generation
                     entity.InheritsFrom(ihastitle);
                     AddHasTitleProperty(ihastitle, entity, tableContent);
                 }
+
+
+                #region SystemFields
+                {
+                    var createDate = entity.SimpleProperties.FirstOrDefault(p => p.Name == "CreateDate");
+                    var changeDate = entity.SimpleProperties.FirstOrDefault(p => p.Name == "ChangeDate");
+                    if (createDate != null && changeDate != null)
+                    {
+                        entity.InheritsFrom(isystemfields);
+
+                        AddCreateDateProperty(createDate, isystemfields, entity);
+                        AddChangeDateProperty(createDate, changeDate, isystemfields, entity);
+                    }
+                }
+                #endregion
             }
             return entities;
         }
+
         internal static void AddExplicitProperty(PropertyInfo property, TypeUsageInfo iintervalfields, EntityInfo entity)
         {
             if (property.Type.IsNullable)
@@ -89,6 +107,45 @@ namespace MasterDataModule.Generation
             prop.ExplicitInterface = ihastitle;
             entity.AddProperty(prop);
         }
+
+        internal static void AddCreateDateProperty(PropertyInfo property, TypeUsageInfo iintervalfields, EntityInfo entity)
+        {
+            var getter = string.Format("return {0};", property.Name);
+            if (property.Type.IsNullable)
+            {
+                getter = string.Format("if({0}.HasValue) return {0}.Value; else return DateTime.Now;", property.Name);
+            }
+
+            var prop = new PropertyInfo(property.Name, (typeof(DateTime)).ToUsageInfo(),
+                new PropertyInvokerInfo(getter),
+                new PropertyInvokerInfo(string.Format("{0} = value;", property.Name)));
+            prop.ExplicitInterface = iintervalfields;
+            entity.AddProperty(prop);
+        }
+
+        internal static void AddChangeDateProperty(PropertyInfo createDateProperty, PropertyInfo changeDateProperty,
+            TypeUsageInfo iintervalfields, EntityInfo entity)
+        {
+            var getter = string.Format("return {0};", changeDateProperty.Name);
+            if(changeDateProperty.Type.IsNullable)
+            {
+                var createPropertyGetter = createDateProperty.Name;
+                if (createDateProperty.Type.IsNullable)
+                {
+                    createPropertyGetter = createDateProperty.Name + " ?? DateTime.Now";
+                }
+
+                getter = string.Format("if({0}.HasValue) return {0}.Value; else return {1};",
+                    changeDateProperty.Name, createPropertyGetter);
+            }
+            var prop = new PropertyInfo(changeDateProperty.Name, (typeof(DateTime)).ToUsageInfo(),
+                new PropertyInvokerInfo(getter),
+                new PropertyInvokerInfo(string.Format("{0} = value;",
+                    changeDateProperty.Name)));
+            prop.ExplicitInterface = iintervalfields;
+            entity.AddProperty(prop);
+        }
+
         #endregion
     }
 }

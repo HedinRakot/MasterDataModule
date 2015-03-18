@@ -8,6 +8,7 @@ namespace MasterDataModule.Contracts.Entities
     /// </summary>
     public partial class HolidayOrdFederalState: IHasId<int>
         ,IRemovable
+        ,ISystemFields
     {
         /// <summary>
         /// Table name
@@ -114,6 +115,16 @@ namespace MasterDataModule.Contracts.Entities
         public bool HasHoliday
         {
             get { return !ReferenceEquals(Holiday, null); }
+        }
+        DateTime ISystemFields.CreateDate
+        {
+            get { return CreateDate; }
+            set { CreateDate = value; }
+        }
+        DateTime ISystemFields.ChangeDate
+        {
+            get { return ChangeDate; }
+            set { ChangeDate = value; }
         }
                 
         

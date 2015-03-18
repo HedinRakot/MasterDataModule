@@ -4,7 +4,7 @@ define(function () {
 	var resources = {
         MessageLocalizations: 'Fehlermeldung',
         ReturnReasons: 'Rückgabegrund',
-        ExamPossibleResults: 'Prüfleistungsergebniss',
+        ExamPossibleResults: 'Prüfleistungsergebnis',
         SchoolInfos: 'Fahrschulinformationstyp',
         ArgeVersions: 'ARGE-Version',
         Authorities: 'Behörde',

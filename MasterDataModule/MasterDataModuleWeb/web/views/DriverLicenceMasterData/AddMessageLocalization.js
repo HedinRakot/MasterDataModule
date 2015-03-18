@@ -15,7 +15,10 @@ define([
             var self = this;
             var result = {
 			'#validationErrorNumber': 'validationErrorNumber',
-			'#sysLanguageId': 'sysLanguageId',
+			'#sysLanguageId': { observe: 'sysLanguageId',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.sysLanguages
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#message': 'message',
 			};
 
@@ -28,7 +31,7 @@ define([
 
 			//TODO foreach model field
 			this.disableInput(this, 'validationErrorNumber', 'numeric');
-			this.disableInput(this, 'sysLanguageId', 'numeric');
+			this.disableInput(this, 'sysLanguageId', 'select');
 			this.disableInput(this, 'message');
 
             return this;

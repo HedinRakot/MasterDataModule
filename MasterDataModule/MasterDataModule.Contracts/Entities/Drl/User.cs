@@ -6,6 +6,7 @@ namespace MasterDataModule.Contracts.Entities
     public partial class User: IHasId<int>
         ,IIntervalFields
         ,IRemovable
+        ,ISystemFields
     {
         /// <summary>
         /// Table name
@@ -114,6 +115,16 @@ namespace MasterDataModule.Contracts.Entities
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        DateTime ISystemFields.CreateDate
+        {
+            get { return CreateDate; }
+            set { CreateDate = value; }
+        }
+        DateTime ISystemFields.ChangeDate
+        {
+            get { return ChangeDate; }
+            set { ChangeDate = value; }
         }
                 
         

@@ -19,6 +19,7 @@
             data: kendo.stringify(self.model.toJSON()),
             contentType: 'application/json',
             success: function () {
+
                 Backbone.trigger('logged-in');
             },
             error: function (model, xhr) {

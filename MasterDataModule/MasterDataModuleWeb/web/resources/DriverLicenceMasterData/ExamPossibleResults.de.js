@@ -3,10 +3,10 @@ define(function () {
 
 	var resources = {
 
-		add: 'Prüfleistungsergebniss anlegen',
-	    edit: 'Prüfleistungsergebniss editieren',
+		add: 'Prüfleistungsergebnis anlegen',
+	    edit: 'Prüfleistungsergebnis editieren',
 	    masterData: 'FE Stammdaten',
-	    pageTitle: 'Prüfleistungsergebniss',
+	    pageTitle: 'Prüfleistungsergebnis',
 		name: 'Kurzbeschreibung des Prüfleistungsergebnisses',	
 		description: 'Beschreibung des Prüfleistungsergebnisses',	
 		isFeePayable: 'Angabe, ob die Gebühr bei diesem Ergebnis fällig wird ',	

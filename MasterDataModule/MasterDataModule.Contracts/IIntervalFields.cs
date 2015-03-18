@@ -3,7 +3,7 @@
 namespace MasterDataModule.Contracts
 {
     /// <summary>
-    /// Interface entity with all system fields 
+    /// Interface entity with FromDate and ToDate fields 
     /// </summary>
     public interface IIntervalFields
     {

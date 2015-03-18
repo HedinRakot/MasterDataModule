@@ -16,6 +16,7 @@
 			var self = this;
 			this.masterView = options.masterView;
 			this.listenTo(Backbone, 'logged-in', function () {
+
 				location.reload();
 			});
 			this.listenTo(Backbone, 'logged-out', function () {

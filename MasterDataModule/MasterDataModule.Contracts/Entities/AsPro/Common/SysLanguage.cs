@@ -4,8 +4,10 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     public partial class SysLanguage: IHasId<int>
+        ,IHasTitle
         ,IIntervalFields
         ,IRemovable
+        ,ISystemFields
     {
         /// <summary>
         /// Table name
@@ -109,6 +111,20 @@ namespace MasterDataModule.Contracts.Entities
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        string IHasTitle.EntityTitle
+        {
+            get { return Description; }
+        }
+        DateTime ISystemFields.CreateDate
+        {
+            get { if(CreateDate.HasValue) return CreateDate.Value; else return DateTime.Now; }
+            set { CreateDate = value; }
+        }
+        DateTime ISystemFields.ChangeDate
+        {
+            get { if(ChangeDate.HasValue) return ChangeDate.Value; else return CreateDate ?? DateTime.Now; }
+            set { ChangeDate = value; }
         }
                 
         
