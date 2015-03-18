@@ -78,10 +78,28 @@
 			var self = this;
 
 			self.model.save({}, {
-				success: function () {
+			    success: function () {
+
 					self.trigger('base-edit-model-view:save', self.model);
 				},
-				error: function (model, response) {
+			    error: function (model, response) {
+
+			        require(['base/confirmation-view'], function (Confirmation) {
+
+			            var confirmation = new Confirmation({
+			                title: "Concurency",
+			                message: "Concurency Message"
+			            });
+
+			            self.listenToOnce(confirmation, 'continue', function () {
+			                //TODO do action....
+			                location.reload();
+			            });
+
+			            self.addView(confirmation);
+			            self.$el.append(confirmation.render().$el);
+			        });
+
 					self.validateResponse(response);
 				}
 			});
