@@ -87,6 +87,7 @@
     <None Include="TTCommon\Mapping.ttinclude" />
     <None Include="TTCommon\TextTransformProxy.ttinclude" />
     <None Include="TTMasterData\AsPro.Settings.ttinclude" />
+    <None Include="TTMasterData\CollectionTypes.ttinclude" />
     <None Include="TTMasterData\Custom.Controller.ttinclude" />
     <None Include="TTMasterData\Drl.Settings.ttinclude" />
     <None Include="TTMasterData\Controller.ttinclude" />

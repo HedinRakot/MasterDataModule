@@ -286,6 +286,9 @@
     <Compile Include="Controllers\AsPro\Common\SysRoleSysPermissionRspsController.cs">
       <DependentUpon>Common.Controllers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AsPro\TechnicalInspection\CollectionTypesModel.cs">
+      <DependentUpon>TP.CollectionTypes.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AsPro\TechnicalInspection\Custom.InsAvailableInspectionStepsController.cs" />
     <Compile Include="Controllers\AsPro\TechnicalInspection\Custom.InsInspectionStepsController.cs" />
     <Compile Include="Controllers\AsPro\TechnicalInspection\Custom.InsNextInspectionsController.cs" />
@@ -344,11 +347,17 @@
     <Compile Include="Controllers\ClientBaseController.cs" />
     <Compile Include="Controllers\ClientApiController.cs" />
     <Compile Include="Controllers\ClientBaseWithoutDeleteController.cs" />
+    <Compile Include="Controllers\AsPro\Common\CollectionTypesModel.cs">
+      <DependentUpon>Common.CollectionTypes.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Drl\ArgeVersionsController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Drl\AuthoritiesController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Drl\CollectionTypesModel.cs">
+      <DependentUpon>Drl.CollectionTypes.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Drl\CommunitiesController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
@@ -779,9 +788,21 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TP.Controllers.txt</LastGenOutput>
     </None>
+    <None Include="Controllers\AsPro\Common\Common.CollectionTypes.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Common.CollectionTypes.txt</LastGenOutput>
+    </None>
     <None Include="Controllers\Drl\Drl.Controllers.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Drl.Controllers.txt</LastGenOutput>
+    </None>
+    <None Include="Controllers\Drl\Drl.CollectionTypes.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Drl.CollectionTypes.txt</LastGenOutput>
+    </None>
+    <None Include="Controllers\AsPro\TechnicalInspection\TP.CollectionTypes.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TP.CollectionTypes.txt</LastGenOutput>
     </None>
     <None Include="Models\AsPro\Common\Common.Models.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -819,6 +840,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TP.Controllers.tt</DependentUpon>
+    </Content>
+    <Content Include="Controllers\AsPro\Common\Common.CollectionTypes.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.CollectionTypes.tt</DependentUpon>
+    </Content>
+    <Content Include="Controllers\Drl\Drl.CollectionTypes.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Drl.CollectionTypes.tt</DependentUpon>
+    </Content>
+    <Content Include="Controllers\AsPro\TechnicalInspection\TP.CollectionTypes.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TP.CollectionTypes.tt</DependentUpon>
     </Content>
     <Content Include="Controllers\Drl\Drl.Controllers.txt">
       <AutoGen>True</AutoGen>

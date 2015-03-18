@@ -10,19 +10,12 @@ using MasterDataModule.Contracts.Managers.Base;
 
 namespace MasterDataModule.API.Controllers
 {
-    public class CollectionTypesModel
+    public partial class CollectionTypesModel
     {
-        public bool permissions { get; set;}
-        public bool roles { get; set; }
-        public bool examClasses { get; set; }
-        public bool sysTables { get; set; }
-        public bool editModeTypes { get; set; }
-        public bool returnReasons { get; set; }
-        public bool assignationTypes { get; set; }
-        public bool legalBasises { get; set; }
-        public bool sysLanguages { get; set; }
-        public bool coreDataProducts { get; set; }
-        public bool accountingAreas { get; set; }
+        public bool Permission { get; set;}
+        public bool Role { get; set; }
+        public bool EditModeType { get; set; }
+        public bool AssignationType { get; set; }
     }
 
     public class IdNameModel<TId>
@@ -70,36 +63,36 @@ namespace MasterDataModule.API.Controllers
 
             var result = new Dictionary<string, IEnumerable<object>>();
 
-            if (model.permissions)
-                result.Add("permissions", GetViewCollection<Permission, int, IPermissionManager>(permissionManager));
+            if (model.Permission)
+                result.Add("Permission", GetViewCollection<Permission, int, IPermissionManager>(permissionManager));
 
-            if (model.roles)
-                result.Add("roles", GetViewCollection<Role, int, IRoleManager>(roleManager));
+            if (model.Role)
+                result.Add("Role", GetViewCollection<Role, int, IRoleManager>(roleManager));
 
-            if (model.examClasses)
-                result.Add("examClasses", GetViewCollection<ExamClass, int, IExamClassManager>(examClassManager));
+            if (model.ExamClass)
+                result.Add("ExamClass", GetViewCollection<ExamClass, int, IExamClassManager>(examClassManager));
 
-            if (model.sysTables)
-                result.Add("sysTables", GetViewCollection<SysTable, int, ISysTableManager>(sysTableManager));
+            if (model.SysTable)
+                result.Add("SysTable", GetViewCollection<SysTable, int, ISysTableManager>(sysTableManager));
 
-            if (model.returnReasons)
-                result.Add("returnReasons", GetViewCollection<ReturnReason, int, IReturnReasonManager>(returnReasonManager));
+            if (model.ReturnReason)
+                result.Add("ReturnReason", GetViewCollection<ReturnReason, int, IReturnReasonManager>(returnReasonManager));
 
-            if (model.legalBasises)
-                result.Add("legalBasises", GetViewCollection<LegalBasis, int, ILegalBasisManager>(legalBasisManager));
+            if (model.LegalBasis)
+                result.Add("LegalBasis", GetViewCollection<LegalBasis, int, ILegalBasisManager>(legalBasisManager));
 
-            if (model.sysLanguages)
-                result.Add("sysLanguages", GetViewCollection<SysLanguage, int, ISysLanguageManager>(sysLanguageManager));
+            if (model.SysLanguage)
+                result.Add("SysLanguage", GetViewCollection<SysLanguage, int, ISysLanguageManager>(sysLanguageManager));
 
             //if (model.coreDataProducts)
             //    result.Add("coreDataProducts", GetViewCollection<CoreDataProduct, int, ICoreDataProductManager>(coreDataProductManager));
 
-            if (model.accountingAreas)
-                result.Add("accountingAreas", GetViewCollection<OrgAccountingArea, int, IOrgAccountingAreaManager>(accountingAreaManager));
+            if (model.OrgAccountingArea)
+                result.Add("OrgAccountingArea", GetViewCollection<OrgAccountingArea, int, IOrgAccountingAreaManager>(accountingAreaManager));
 
             //TODO localize
-            if (model.editModeTypes)
-                result.Add("editModeTypes", new[]
+            if (model.EditModeType)
+                result.Add("EditModeType", new[]
                 {
                     new { id = "0", name = "nur lesen"},
                     new { id = "1", name = "editieren"},
@@ -107,8 +100,8 @@ namespace MasterDataModule.API.Controllers
                     new { id = "3", name = "editieren/anlegen/löschen"},
                 });
 
-            if (model.assignationTypes)
-                result.Add("assignationTypes", new[]
+            if (model.AssignationType)
+                result.Add("AssignationType", new[]
                 {
                     new { id = 0, name = "Erweiterung"},
                     new { id = 1, name = "Ersterteilung"},
