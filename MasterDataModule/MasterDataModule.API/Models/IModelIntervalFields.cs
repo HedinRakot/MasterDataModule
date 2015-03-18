@@ -4,7 +4,7 @@
 namespace MasterDataModule.API.Models
 {
     /// <summary>
-    ///     Interface model with system fields
+    ///     Interface model with FromDate and ToDate fields
     /// </summary>
     public interface IModelIntervalFields
     {

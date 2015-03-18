@@ -30,6 +30,7 @@ namespace MasterDataModule.Generation
 
                 model.Attributes.Add(AttributeDictionary.DataContract);
                 model.InheritsFrom(baseModel);
+                
                 #region IntervalFields
                 {
                     var fromDate = properties.FirstOrDefault(p => p.Name == "fromDate");
@@ -43,6 +44,7 @@ namespace MasterDataModule.Generation
                     }
                 }
                 #endregion
+
                 foreach (var property in model.ModelProperties)
                 {
                     if (property.Content.IsModelRequired)

@@ -718,6 +718,7 @@
       <DependentUpon>Drl.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GlobalSysTableModel.cs" />
+    <Compile Include="Models\ISystemModelFields.cs" />
     <Compile Include="Models\IModelIntervalFields.cs" />
     <Compile Include="Security\PermissionTypes.cs" />
     <Compile Include="Controllers\Settings\SystemLogController.cs" />
