@@ -3335,7 +3335,7 @@
       <DependentUpon>web.tp.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\base-router.js" />
-    <Content Include="web\router-customer-masterdata.js">
+    <Content Include="web\router-common-masterdata.js">
       <DependentUpon>web.common.router.template.tt</DependentUpon>
     </Content>
     <Content Include="web\router-drl-masterdata.js">

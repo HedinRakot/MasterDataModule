@@ -3,7 +3,7 @@
 <#@ include file="..\..\Generation\MasterDataModule.Generation\TTMasterData\ASPro.Settings.ttinclude" once="true"#>
 <#
 	var relatedPath = "CommonMasterData/Customer";
-	var routerName = "customer-masterdata";
+	var routerName = "common-masterdata";
 	tableGroup = "Common";
 
     const string filesDir = @"..\..\Generation\MasterDataModule.Generation\Declarations\";

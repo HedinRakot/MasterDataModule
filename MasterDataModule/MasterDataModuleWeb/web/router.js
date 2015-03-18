@@ -2,13 +2,8 @@
     'base-router',
     'router-drl-masterdata',
     'router-tp-masterdata',
-    'router-customer-masterdata',
-    'router-product-masterdata',
-    'router-org-masterdata',
-    'router-system-masterdata',
-    'router-employee-masterdata'
-], function (BaseRouter, FeMasterDataRouter, TPMasterDataRouter, EmployeeMasterDataRouter, 
-    CustomerMasterDataRouter, ProductMasterDataRouter, OrgMasterDataRouter, SystemMasterDataRouter) {
+    'router-common-masterdata'
+], function (BaseRouter, FeMasterDataRouter, TPMasterDataRouter, CommonMasterDataRouter) {
 	'use strict';
 
 	var router = Backbone.Router.extend({
@@ -53,11 +48,7 @@
 
 		    var result = $.extend({}, commonRoutes, FeMasterDataRouter.getAllMasterDataRoutes(this));
 		    result = $.extend({}, result, TPMasterDataRouter.getAllMasterDataRoutes(this));
-		    result = $.extend({}, result, CustomerMasterDataRouter.getAllMasterDataRoutes(this));
-		    result = $.extend({}, result, OrgMasterDataRouter.getAllMasterDataRoutes(this));
-		    result = $.extend({}, result, SystemMasterDataRouter.getAllMasterDataRoutes(this));
-		    result = $.extend({}, result, ProductMasterDataRouter.getAllMasterDataRoutes(this));
-		    result = $.extend({}, result, EmployeeMasterDataRouter.getAllMasterDataRoutes(this));
+		    result = $.extend({}, result, CommonMasterDataRouter.getAllMasterDataRoutes(this));
 		    return result;
 		}		
 	});
