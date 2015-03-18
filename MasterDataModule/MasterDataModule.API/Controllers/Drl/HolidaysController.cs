@@ -17,6 +17,8 @@ namespace MasterDataModule.API.Controllers
         {
             model.name = entity.Name;
             model.date = entity.Date;
+            model.createDate = entity.CreateDate;
+            model.changeDate = entity.ChangeDate;
         }
         protected override void ModelToEntity(HolidayModel model, Holiday entity, ActionTypes actionType)
         {

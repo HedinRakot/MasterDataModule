@@ -24,6 +24,8 @@ namespace MasterDataModule.API.Controllers
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
             model.isMedicalAttestRequired = entity.IsMedicalAttestRequired;
+            model.createDate = entity.CreateDate;
+            model.changeDate = entity.ChangeDate;
         }
         protected override void ModelToEntity(ExamPossibleResultModel model, ExamPossibleResult entity, ActionTypes actionType)
         {

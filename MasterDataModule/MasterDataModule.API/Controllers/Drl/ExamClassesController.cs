@@ -22,6 +22,8 @@ namespace MasterDataModule.API.Controllers
             model.toDate = entity.ToDate;
             model.isFsClass = entity.IsFsClass;
             model.sortOrder = entity.SortOrder;
+            model.createDate = entity.CreateDate;
+            model.changeDate = entity.ChangeDate;
         }
         protected override void ModelToEntity(ExamClassModel model, ExamClass entity, ActionTypes actionType)
         {

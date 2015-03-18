@@ -55,6 +55,16 @@
         {
             code.WriteLine("model.{0} = entity.{1};", property.Name, property.Property.Name);
         }
+
+		
+		var createDate = model.Entity.SimpleProperties.FirstOrDefault(p => p.Name == "CreateDate");
+        var changeDate = model.Entity.SimpleProperties.FirstOrDefault(p => p.Name == "ChangeDate");
+        if (createDate != null && changeDate != null)
+        {
+			code.WriteLine("model.createDate = entity.{0};", createDate.Name);
+			code.WriteLine("model.changeDate = entity.{0};", changeDate.Name);
+		}
+
         if (model.Content.ExtraEntityToModel)
         {
 		    code.WriteLine();
@@ -69,6 +79,7 @@
         {
             code.WriteLine("entity.{1} = model.{0};", property.Name, property.Property.Name);
         }
+		
         if (model.Content.ExtraEntityToModel)
         {
 		    code.WriteLine();

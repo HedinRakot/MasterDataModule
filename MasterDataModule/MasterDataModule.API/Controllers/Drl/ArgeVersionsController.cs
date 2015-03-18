@@ -20,6 +20,8 @@ namespace MasterDataModule.API.Controllers
             model.expirationDate = entity.ExpirationDate;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
+            model.createDate = entity.CreateDate;
+            model.changeDate = entity.ChangeDate;
         }
         protected override void ModelToEntity(ArgeVersionModel model, ArgeVersion entity, ActionTypes actionType)
         {

@@ -17,6 +17,8 @@ namespace MasterDataModule.API.Controllers
         {
             model.holidayId = entity.HolidayId;
             model.ordFederalStateId = entity.OrdFederalStateId;
+            model.createDate = entity.CreateDate;
+            model.changeDate = entity.ChangeDate;
         }
         protected override void ModelToEntity(HolidayOrdFederalStateModel model, HolidayOrdFederalState entity, ActionTypes actionType)
         {

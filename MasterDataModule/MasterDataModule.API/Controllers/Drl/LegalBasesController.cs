@@ -25,6 +25,8 @@ namespace MasterDataModule.API.Controllers
             model.toDate = entity.ToDate;
             model.replacementId = entity.ReplacementId;
             model.printName = entity.PrintName;
+            model.createDate = entity.CreateDate;
+            model.changeDate = entity.ChangeDate;
         }
         protected override void ModelToEntity(LegalBasisModel model, LegalBasis entity, ActionTypes actionType)
         {

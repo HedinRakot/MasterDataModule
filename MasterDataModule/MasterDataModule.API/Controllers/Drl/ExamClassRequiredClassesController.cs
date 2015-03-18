@@ -19,6 +19,8 @@ namespace MasterDataModule.API.Controllers
             model.examClassIdRequired = entity.ExamClassIdRequired;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
+            model.createDate = entity.CreateDate;
+            model.changeDate = entity.ChangeDate;
         }
         protected override void ModelToEntity(ExamClassRequiredClassModel model, ExamClassRequiredClass entity, ActionTypes actionType)
         {

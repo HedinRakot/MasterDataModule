@@ -30,6 +30,8 @@ namespace MasterDataModule.API.Controllers
             model.phone1 = entity.Phone1;
             model.phone2 = entity.Phone2;
             model.fax = entity.Fax;
+            model.createDate = entity.CreateDate;
+            model.changeDate = entity.ChangeDate;
         }
         protected override void ModelToEntity(AuthorityModel model, Authority entity, ActionTypes actionType)
         {

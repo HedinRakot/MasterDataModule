@@ -32,6 +32,8 @@ namespace MasterDataModule.API.Controllers
             model.fax = entity.Fax;
             model.email = entity.Email;
             model.sysCountryId = entity.SysCountryId;
+            model.createDate = entity.CreateDate;
+            model.changeDate = entity.ChangeDate;
         }
         protected override void ModelToEntity(ExamRoomModel model, ExamRoom entity, ActionTypes actionType)
         {

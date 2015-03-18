@@ -19,6 +19,8 @@ namespace MasterDataModule.API.Controllers
             model.oldAbbr = entity.OldAbbr;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
+            model.createDate = entity.CreateDate;
+            model.changeDate = entity.ChangeDate;
         }
         protected override void ModelToEntity(LanguageModel model, Language entity, ActionTypes actionType)
         {

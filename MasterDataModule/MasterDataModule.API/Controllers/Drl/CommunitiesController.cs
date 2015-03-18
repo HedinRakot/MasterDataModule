@@ -18,6 +18,8 @@ namespace MasterDataModule.API.Controllers
             model.driverSchoolId = entity.DriverSchoolId;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
+            model.createDate = entity.CreateDate;
+            model.changeDate = entity.ChangeDate;
         }
         protected override void ModelToEntity(CommunityModel model, Community entity, ActionTypes actionType)
         {

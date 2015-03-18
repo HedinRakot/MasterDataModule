@@ -19,6 +19,8 @@ namespace MasterDataModule.API.Controllers
             model.description = entity.Description;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
+            model.createDate = entity.CreateDate;
+            model.changeDate = entity.ChangeDate;
         }
         protected override void ModelToEntity(MeetingPointModel model, MeetingPoint entity, ActionTypes actionType)
         {

@@ -19,6 +19,8 @@ namespace MasterDataModule.API.Controllers
             model.examClassId = entity.ExamClassId;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
+            model.createDate = entity.CreateDate;
+            model.changeDate = entity.ChangeDate;
         }
         protected override void ModelToEntity(ExamConstraintExamClassModel model, ExamConstraintExamClass entity, ActionTypes actionType)
         {

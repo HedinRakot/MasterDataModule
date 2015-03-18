@@ -20,6 +20,8 @@ namespace MasterDataModule.API.Controllers
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
             model.isConditional = entity.IsConditional;
+            model.createDate = entity.CreateDate;
+            model.changeDate = entity.ChangeDate;
         }
         protected override void ModelToEntity(ExamClassInclusiveClassModel model, ExamClassInclusiveClass entity, ActionTypes actionType)
         {
