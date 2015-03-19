@@ -46,6 +46,25 @@
         this.cancel();
     },
 
+    showConcurrencyError = function showConcurrencyMessage(self) {
+        
+        require(['base/confirmation-view'], function (Confirmation) {
+
+            var confirmation = new Confirmation({
+                title: Resources.concurencyTitle,
+                message: Resources.concurencyMessage
+            });
+
+            self.listenToOnce(confirmation, 'continue', function () {
+                location.reload();
+            });
+
+            self.addView(confirmation);
+            self.$el.append(confirmation.render().$el);
+
+        });
+    },
+
 	view = BaseView.extend({
 
         cancelAction: null,
@@ -83,23 +102,11 @@
 					self.trigger('base-edit-model-view:save', self.model);
 				},
 			    error: function (model, response) {
-
-			        require(['base/confirmation-view'], function (Confirmation) {
-
-			            var confirmation = new Confirmation({
-			                title: Resources.concurencyTitle,
-			                message: Resources.concurencyMessage
-			            });
-
-			            self.listenToOnce(confirmation, 'continue', function () {
-			                location.reload();
-			            });
-
-			            self.addView(confirmation);
-			            self.$el.append(confirmation.render().$el);
-			        });
-
-					self.validateResponse(response);
+			        debugger;
+			        if (response.statusText == 'Conflict') {
+			            showConcurrencyError(self);
+			        };
+			        self.validateResponse(response);
 				}
 			});
 		},
@@ -113,4 +120,6 @@
 	view.mixin(KendoWidgetFormMixin);
 
 	return view;
+
+	
 });
