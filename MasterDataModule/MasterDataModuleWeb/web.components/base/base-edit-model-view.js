@@ -87,12 +87,11 @@
 			        require(['base/confirmation-view'], function (Confirmation) {
 
 			            var confirmation = new Confirmation({
-			                title: "Concurency",
-			                message: "Concurency Message"
+			                title: Resources.concurencyTitle,
+			                message: Resources.concurencyMessage
 			            });
 
 			            self.listenToOnce(confirmation, 'continue', function () {
-			                //TODO do action....
 			                location.reload();
 			            });
 

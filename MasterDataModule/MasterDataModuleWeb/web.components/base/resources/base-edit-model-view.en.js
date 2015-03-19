@@ -7,7 +7,9 @@
 		add: 'Add',
 		cancel: 'Cancel',
 		save: 'Save',
-        'delete': 'Delete'
+		'delete': 'Delete',
+	    concurencyTitle: 'The data was changed',
+	    concurencyMessage: 'The data was changed by another user. Your changes will not be applied'
 	};
 
 	return resources;
