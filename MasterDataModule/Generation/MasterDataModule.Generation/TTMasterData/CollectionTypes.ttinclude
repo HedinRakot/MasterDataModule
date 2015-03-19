@@ -24,11 +24,10 @@
 	
     foreach (var model in context.Models)
     {
-        //if (model.Content.SkipController)
-        //{
-        //    continue;
-        //}
-		code.WriteLine("public bool " + model.Entity.Name + " { get; set;}");
+        if (model.Content.GenerateViewCollection)
+        {        
+			code.WriteLine("public bool " + model.Entity.Name + " { get; set;}");
+		}
     }
 
     code.EndArea(); //End Area:  Type

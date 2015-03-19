@@ -110,6 +110,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration.cs" />
+    <Compile Include="Controllers\AsPro\Common\CollectionTypesModel.cs">
+      <DependentUpon>Common.CollectionTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AsPro\Common\CommonViewCollectionControllerFactory.cs">
+      <DependentUpon>Common.ViewCollectionFactory.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AsPro\Common\Custom.EmpCashPermissionTypesController.cs" />
     <Compile Include="Controllers\AsPro\Common\Custom.EmpEmployeesController.cs" />
     <Compile Include="Controllers\AsPro\Common\Custom.EmpEmployeeSysRoleRspsController.cs" />
@@ -344,12 +350,12 @@
     <Compile Include="Controllers\AsPro\TechnicalInspection\InsValidPeriodsController.cs">
       <DependentUpon>TP.Controllers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AsPro\TechnicalInspection\TPViewCollectionControllerFactory.cs">
+      <DependentUpon>TP.ViewCollectionFactory.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\ClientBaseController.cs" />
     <Compile Include="Controllers\ClientApiController.cs" />
     <Compile Include="Controllers\ClientBaseWithoutDeleteController.cs" />
-    <Compile Include="Controllers\AsPro\Common\CollectionTypesModel.cs">
-      <DependentUpon>Common.CollectionTypes.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\Drl\ArgeVersionsController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
@@ -382,6 +388,9 @@
     <Compile Include="Controllers\Drl\Custom.SchoolInfosController.cs" />
     <Compile Include="Controllers\Drl\Custom.SysColumnsController.cs" />
     <Compile Include="Controllers\Drl\Custom.SysTablesController.cs" />
+    <Compile Include="Controllers\Drl\DrlViewCollectionControllerFactory.cs">
+      <DependentUpon>Drl.ViewCollectionFactory.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Drl\ExamClassArgeMapsController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
@@ -464,6 +473,7 @@
     <Compile Include="Controllers\LogoutController.cs" />
     <Compile Include="Controllers\Settings\SysTablesController.cs" />
     <Compile Include="Controllers\Settings\SysColumnsController.cs" />
+    <Compile Include="Controllers\ViewCollectionFactoryBase.cs" />
     <Compile Include="JsonHelper.Classes.cs" />
     <Compile Include="Models\AsPro\Common\EmpCashPermissionTypeModel.cs">
       <DependentUpon>Common.Models.tt</DependentUpon>
@@ -780,9 +790,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Controllers\AsPro\Common\Common.ViewCollectionFactory.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Common.ViewCollectionFactory.txt</LastGenOutput>
+    </None>
     <None Include="Controllers\AsPro\Common\Common.Controllers.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Common.Controllers.txt</LastGenOutput>
+    </None>
+    <None Include="Controllers\AsPro\TechnicalInspection\TP.ViewCollectionFactory.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TP.ViewCollectionFactory.txt</LastGenOutput>
     </None>
     <None Include="Controllers\AsPro\TechnicalInspection\TP.Controllers.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -791,6 +809,10 @@
     <None Include="Controllers\AsPro\Common\Common.CollectionTypes.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Common.CollectionTypes.txt</LastGenOutput>
+    </None>
+    <None Include="Controllers\Drl\Drl.ViewCollectionFactory.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Drl.ViewCollectionFactory.txt</LastGenOutput>
     </None>
     <None Include="Controllers\Drl\Drl.Controllers.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -831,10 +853,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controllers\AsPro\Common\Common.ViewCollectionFactory.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.ViewCollectionFactory.tt</DependentUpon>
+    </Content>
     <Content Include="Controllers\AsPro\Common\Common.Controllers.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Common.Controllers.tt</DependentUpon>
+    </Content>
+    <Content Include="Controllers\AsPro\TechnicalInspection\TP.ViewCollectionFactory.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TP.ViewCollectionFactory.tt</DependentUpon>
     </Content>
     <Content Include="Controllers\AsPro\TechnicalInspection\TP.Controllers.txt">
       <AutoGen>True</AutoGen>
@@ -845,6 +877,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Common.CollectionTypes.tt</DependentUpon>
+    </Content>
+    <Content Include="Controllers\Drl\Drl.ViewCollectionFactory.txt">
+      <DependentUpon>Drl.ViewCollectionFactory.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Content>
     <Content Include="Controllers\Drl\Drl.CollectionTypes.txt">
       <AutoGen>True</AutoGen>

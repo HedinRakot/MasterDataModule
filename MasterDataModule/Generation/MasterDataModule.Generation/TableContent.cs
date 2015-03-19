@@ -31,5 +31,7 @@ namespace MasterDataModule.Generation
         public string RelationShipsEn { get; set; }
 
         public string TitleFieldName { get; set; }
+
+        public bool GenerateViewCollection { get; set; }
     }
 }

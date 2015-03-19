@@ -1,0 +1,11 @@
+﻿<#@ template language="C#" debug="true" hostspecific="true" linePragmas="true"#>
+<#@ output extension=".txt"#>
+<#@ include file="..\..\..\..\Generation\MasterDataModule.Generation\TTMasterData\ASPro.Settings.ttinclude" once="true"#>
+<# 
+    const string filesDir = @"..\..\..\..\Generation\MasterDataModule.Generation\Declarations\";
+	tableGroup = "Common";
+	defaultNamespace = "MasterDataModule.API.Controllers";
+	var masterData = "Common";
+#>
+<#@ include file="..\..\..\..\Generation\MasterDataModule.Generation\TTMasterData\MasterData.GenerationContext.ttinclude" once="true"#>
+<#@ include file="..\..\..\..\Generation\MasterDataModule.Generation\TTMasterData\ViewCollectionFactories.ttinclude"  once="true"#>
