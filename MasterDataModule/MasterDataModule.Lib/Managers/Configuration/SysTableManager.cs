@@ -10,7 +10,7 @@ namespace MasterDataModule.Lib.Managers
         ,ISysTableManager
     {
 
-        public SysTableManager(IDrlEntities context): base(context){}
+        public SysTableManager(IMasterDataConfigurationEntities context): base(context){}
 
     }
 }

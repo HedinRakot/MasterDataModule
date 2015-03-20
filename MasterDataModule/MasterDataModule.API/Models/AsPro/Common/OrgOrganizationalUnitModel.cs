@@ -58,7 +58,6 @@ namespace MasterDataModule.API.Models
         /// <summary>
         ///     Model property for <see cref="OrgOrganizationalUnit.IsEgdokPrintAlways"/> entity
         /// </summary>
-        [Required]
         [DataMember]
         public bool isEgdokPrintAlways{ get; set; }
         /// <summary>

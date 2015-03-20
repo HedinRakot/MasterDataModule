@@ -6,11 +6,11 @@ using System;
 
 namespace MasterDataModule.Lib.Managers
 {
-    public partial class UserManager: EntityManager<User, int>
-        ,IUserManager
+    public partial class InsCoreDataProductManager: EntityManager<InsCoreDataProduct, int>
+        ,IInsCoreDataProductManager
     {
 
-        public UserManager(IDrlEntities context): base(context){}
+        public InsCoreDataProductManager(IAsProEntities context): base(context){}
 
     }
 }

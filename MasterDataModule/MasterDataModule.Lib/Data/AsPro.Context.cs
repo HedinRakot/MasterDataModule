@@ -26,6 +26,7 @@ namespace MasterDataModule.Lib.Data
             modelBuilder.Configurations.Add(InsSeverityTypeMapping.Instance);
             modelBuilder.Configurations.Add(SysLanguageMapping.Instance);
             modelBuilder.Configurations.Add(InsValidPeriodMapping.Instance);
+            modelBuilder.Configurations.Add(InsCoreDataProductMapping.Instance);
             modelBuilder.Configurations.Add(InsPfpPositionMapping.Instance);
             modelBuilder.Configurations.Add(InsPfpInspectionTypePfpPositionRspMapping.Instance);
             modelBuilder.Configurations.Add(InsPfpVehicleTypeMapping.Instance);
@@ -112,6 +113,10 @@ namespace MasterDataModule.Lib.Data
         ///     Set of <see cref="InsValidPeriod"/> entities from table dbo.INS_VALID_PERIOD
         /// </summary>
         public IQueryable<InsValidPeriod> InsValidPeriod{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="InsCoreDataProduct"/> entities from table dbo.INS_CORE_DATA_PRODUCT
+        /// </summary>
+        public IQueryable<InsCoreDataProduct> InsCoreDataProduct{ get; set; }
         /// <summary>
         ///     Set of <see cref="InsPfpPosition"/> entities from table dbo.INS_PFP_POSITION
         /// </summary>

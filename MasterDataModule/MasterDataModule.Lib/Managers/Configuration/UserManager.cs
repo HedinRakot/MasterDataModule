@@ -6,11 +6,11 @@ using System;
 
 namespace MasterDataModule.Lib.Managers
 {
-    public partial class PermissionManager: EntityManager<Permission, int>
-        ,IPermissionManager
+    public partial class UserManager: EntityManager<User, int>
+        ,IUserManager
     {
 
-        public PermissionManager(IDrlEntities context): base(context){}
+        public UserManager(IMasterDataConfigurationEntities context): base(context){}
 
     }
 }

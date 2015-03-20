@@ -9,7 +9,7 @@ using TuevSued.V1.IT.FE.CoreBase;
 
 namespace MasterDataModule.API.Controllers.Settings
 {
-    [AuthorizeByPermissions(PermissionTypes = new[] {PermissionTypes.Users})]
+    //[AuthorizeByPermissions(PermissionTypes = new[] {PermissionTypes.Users})]
     public class UsersController : ClientApiController<UserModel, User, int, IUserManager>
     {
         public UsersController(IUserManager manager)

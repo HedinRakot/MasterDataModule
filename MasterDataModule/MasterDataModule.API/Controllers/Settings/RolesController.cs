@@ -6,7 +6,7 @@ using MasterDataModule.Contracts.Managers;
 
 namespace MasterDataModule.API.Controllers.Settings
 {
-    [AuthorizeByPermissions(PermissionTypes = new[] {PermissionTypes.Roles})]
+    //[AuthorizeByPermissions(PermissionTypes = new[] {PermissionTypes.Roles})]
     public class RolesController : ClientApiController<RoleModel, Role, int, IRoleManager>
     {
         public RolesController(IRoleManager manager)

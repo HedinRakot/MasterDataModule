@@ -2,6 +2,7 @@ define(function () {
 	'use strict';
 
 	var resources = {
+        InsCoreDataProducts: 'Product',
         InsCoreDataProductGroups: 'Product group',
         InsProductCombinationTypes: 'Product combination type',
         InsProductMaterialGroups: 'Product material group',

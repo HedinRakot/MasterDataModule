@@ -1,0 +1,131 @@
+<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#CommonMasterData" data-localized="masterData"></a> / 
+	<a href="#InsCoreDataProducts" data-localized="pageTitle"></a> / <%= title %></span>
+
+<form method="post" class="add-model">
+    <div class="inline-block" style="width: 520px;">
+		<div class="editor-label">
+			<label for="productNumber" data-localized="productNumber"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="productNumber" name="productNumber" />
+		</div>   
+		<div class="editor-label">
+			<label for="isNextInspectionProduct" data-localized="isNextInspectionProduct"></label>
+            <input type="checkbox" id="isNextInspectionProduct" name="isNextInspectionProduct" />
+		</div>   
+		<div class="editor-label">
+			<label for="isProvisionCostMayBeCalculated" data-localized="isProvisionCostMayBeCalculated"></label>
+            <input type="checkbox" id="isProvisionCostMayBeCalculated" name="isProvisionCostMayBeCalculated" />
+		</div>   
+		<div class="editor-label">
+			<label for="priceReportRequired" data-localized="priceReportRequired"></label>
+            <input type="checkbox" id="priceReportRequired" name="priceReportRequired" />
+		</div>   
+		<div class="editor-label">
+			<label for="insProductTypeId" data-localized="insProductTypeId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="insProductTypeId" name="insProductTypeId" />
+		</div>   
+		<div class="editor-label">
+			<label for="insProductObjectClassId" data-localized="insProductObjectClassId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="insProductObjectClassId" name="insProductObjectClassId" />
+		</div>   
+		<div class="editor-label">
+			<label for="insProductObjectTypeId" data-localized="insProductObjectTypeId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="insProductObjectTypeId" name="insProductObjectTypeId" />
+		</div>   
+		<div class="editor-label">
+			<label for="insProductMaterialGroupId" data-localized="insProductMaterialGroupId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="insProductMaterialGroupId" name="insProductMaterialGroupId" />
+		</div>   
+		<div class="editor-label">
+			<label for="insProductClassId" data-localized="insProductClassId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="insProductClassId" name="insProductClassId" />
+		</div>   
+		<div class="editor-label">
+			<label for="insCoreDataProductGroupId" data-localized="insCoreDataProductGroupId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="insCoreDataProductGroupId" name="insCoreDataProductGroupId" />
+		</div>   
+		<div class="editor-label">
+			<label for="isIngener" data-localized="isIngener"></label>
+            <input type="checkbox" id="isIngener" name="isIngener" />
+		</div>   
+		<div class="editor-label">
+			<label for="isProductive" data-localized="isProductive"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="isProductive" name="isProductive" />
+		</div>   
+		<div class="editor-label">
+			<label for="isKmGeld" data-localized="isKmGeld"></label>
+            <input type="checkbox" id="isKmGeld" name="isKmGeld" />
+		</div>   
+		<div class="editor-label">
+			<label for="isOtherMaterial" data-localized="isOtherMaterial"></label>
+            <input type="checkbox" id="isOtherMaterial" name="isOtherMaterial" />
+		</div>   
+		<div class="editor-label">
+			<label for="isTrip" data-localized="isTrip"></label>
+            <input type="checkbox" id="isTrip" name="isTrip" />
+		</div>   
+		<div class="editor-label">
+			<label for="fromDate" data-localized="fromDate"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="datepicker" id="fromDate" name="fromDate" />
+		</div>   
+		<div class="editor-label">
+			<label for="toDate" data-localized="toDate"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="datepicker" id="toDate" name="toDate" />
+		</div>   
+		<div class="editor-label">
+			<label for="reusageType" data-localized="reusageType"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="reusageType" name="reusageType" />
+		</div>   
+		<div class="editor-label">
+			<label for="insTaxCodeId" data-localized="insTaxCodeId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="insTaxCodeId" name="insTaxCodeId" />
+		</div>   
+		<div class="editor-label">
+			<label for="oldProductNumber" data-localized="oldProductNumber"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="oldProductNumber" name="oldProductNumber" />
+		</div>   
+	</div>
+	<div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>

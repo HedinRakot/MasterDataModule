@@ -63,6 +63,42 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="MasterDataConfiguration.Context.Interface.Custom.cs" />
+    <Compile Include="Entities\Configuration\Permission.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\Role.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\SysColumn.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\SysTable.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\User.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IPermissionManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IRoleManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\ISysColumnManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\ISysTableManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IUserManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataСonfiguration.Context.Interface.cs">
+      <DependentUpon>MasterDataСonfiguration.Context.Interface.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Drl.Context.Interface.Custom.cs" />
     <Compile Include="Drl.Context.Interface.cs">
       <AutoGen>True</AutoGen>
@@ -91,6 +127,9 @@
       <DependentUpon>Common.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\Common\ExpPassengersType.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AsPro\Common\InsCoreDataProduct.cs">
       <DependentUpon>Common.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\AsPro\Common\InsCoreDataProductGroup.cs">
@@ -330,13 +369,7 @@
     <Compile Include="Entities\Drl\MessageLocalization.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Drl\Permission.cs">
-      <DependentUpon>Drl.Entities.tt</DependentUpon>
-    </Compile>
     <Compile Include="Entities\Drl\ReturnReason.cs">
-      <DependentUpon>Drl.Entities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\Drl\Role.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Drl\Role.Custom.cs" />
@@ -344,15 +377,6 @@
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="AsPro.Context.Interface.Custom.cs" />
-    <Compile Include="Entities\Drl\SysColumn.cs">
-      <DependentUpon>Drl.Entities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\Drl\SysTable.cs">
-      <DependentUpon>Drl.Entities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\Drl\User.cs">
-      <DependentUpon>Drl.Entities.tt</DependentUpon>
-    </Compile>
     <Compile Include="EntityExtensions.cs" />
     <Compile Include="Enums\EditModeType.cs" />
     <Compile Include="IDbCommiter.cs" />
@@ -389,6 +413,9 @@
       <DependentUpon>Common.IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\AsPro\Common\IInsCoreDataProductGroupManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IInsCoreDataProductManager.cs">
       <DependentUpon>Common.IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\AsPro\Common\IInsProductCombinationTypeManager.cs">
@@ -630,26 +657,11 @@
     <Compile Include="Managers\Drl\IMessageLocalizationManager.cs">
       <DependentUpon>Drl.IManagers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Managers\Drl\IPermissionManager.cs">
-      <DependentUpon>Drl.IManagers.tt</DependentUpon>
-    </Compile>
     <Compile Include="Managers\Drl\IReturnReasonManager.cs">
-      <DependentUpon>Drl.IManagers.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Managers\Drl\IRoleManager.cs">
       <DependentUpon>Drl.IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Drl\IRoleManager.Custom.cs" />
     <Compile Include="Managers\Drl\ISchoolInfoManager.cs">
-      <DependentUpon>Drl.IManagers.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Managers\Drl\ISysColumnManager.cs">
-      <DependentUpon>Drl.IManagers.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Managers\Drl\ISysTableManager.cs">
-      <DependentUpon>Drl.IManagers.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Managers\Drl\IUserManager.cs">
       <DependentUpon>Drl.IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Drl\IUserManager.Custom.cs" />
@@ -662,6 +674,14 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AsPro.Context.Interface.cs</LastGenOutput>
     </None>
+    <None Include="Managers\Configuration\MasterDataConfiguration.IManagers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MasterDataConfiguration.IManagers.txt</LastGenOutput>
+    </None>
+    <None Include="MasterDataСonfiguration.Context.Interface.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MasterDataСonfiguration.Context.Interface.cs</LastGenOutput>
+    </None>
     <None Include="Drl.Context.Interface.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Drl.Context.Interface.cs</LastGenOutput>
@@ -673,6 +693,10 @@
     <None Include="Entities\AsPro\TechnicalInspection\TP.Entities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TP.Entities.txt</LastGenOutput>
+    </None>
+    <None Include="Entities\Configuration\MasterDataСonfiguration.Entities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MasterDataСonfiguration.Entities.txt</LastGenOutput>
     </None>
     <None Include="Entities\Drl\Drl.Entities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -705,6 +729,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TP.Entities.tt</DependentUpon>
     </Content>
+    <Content Include="Entities\Configuration\MasterDataСonfiguration.Entities.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Content>
     <Content Include="Entities\Drl\Drl.Entities.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -719,6 +748,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TP.IManagers.tt</DependentUpon>
+    </Content>
+    <Content Include="Managers\Configuration\MasterDataConfiguration.IManagers.txt">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Content>
     <Content Include="Managers\Drl\Drl.IManagers.txt">
       <AutoGen>True</AutoGen>

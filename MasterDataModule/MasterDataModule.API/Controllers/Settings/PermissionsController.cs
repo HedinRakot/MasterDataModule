@@ -6,7 +6,7 @@ using MasterDataModule.Contracts.Managers;
 
 namespace MasterDataModule.API.Controllers.Settings
 {
-    [AuthorizeByPermissions(PermissionTypes = new[] { PermissionTypes.Permissions })]
+    //[AuthorizeByPermissions(PermissionTypes = new[] { PermissionTypes.Permissions })]
     public class PermissionsController : ClientApiWithoutDeleteController<PermissionModel, Permission, int, IPermissionManager>
     {
         public PermissionsController(IPermissionManager permissionManager): base(permissionManager)

@@ -10,7 +10,7 @@ namespace MasterDataModule.Lib.Managers
         ,ISysColumnManager
     {
 
-        public SysColumnManager(IDrlEntities context): base(context){}
+        public SysColumnManager(IMasterDataConfigurationEntities context): base(context){}
 
     }
 }

@@ -16,6 +16,7 @@ namespace MasterDataModule.Configuration
         private static void InitializeAsProCommon(IUnityContainer container)
         {
             container.RegisterType<ISysLanguageManager, SysLanguageManager>();
+            container.RegisterType<IInsCoreDataProductManager, InsCoreDataProductManager>();
             container.RegisterType<IEmpEmployeeManager, EmpEmployeeManager>();
             container.RegisterType<ISysLocationManager, SysLocationManager>();
             container.RegisterType<ISysRoleManager, SysRoleManager>();

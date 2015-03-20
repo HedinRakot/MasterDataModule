@@ -283,6 +283,9 @@
     <Content Include="web\collections\CommonMasterData\Product\InsCoreDataProductGroups.js">
       <DependentUpon>web.product.collections.tt</DependentUpon>
     </Content>
+    <Content Include="web\collections\CommonMasterData\Product\InsCoreDataProducts.js">
+      <DependentUpon>web.product.collections.tt</DependentUpon>
+    </Content>
     <Content Include="web\collections\CommonMasterData\Product\InsProductCombinationTypes.js">
       <DependentUpon>web.product.collections.tt</DependentUpon>
     </Content>
@@ -648,6 +651,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>web.org.models.tt</DependentUpon>
     </Content>
+    <Content Include="web\models\CommonMasterData\Product\FilterInsCoreDataProduct.js">
+      <DependentUpon>web.product.models.tt</DependentUpon>
+    </Content>
     <Content Include="web\models\CommonMasterData\Product\FilterInsCoreDataProductGroup.js">
       <DependentUpon>web.product.models.tt</DependentUpon>
     </Content>
@@ -679,6 +685,9 @@
       <DependentUpon>web.product.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\CommonMasterData\Product\FilterOrdRecognitionType.js">
+      <DependentUpon>web.product.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\CommonMasterData\Product\InsCoreDataProduct.js">
       <DependentUpon>web.product.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\CommonMasterData\Product\InsCoreDataProductGroup.js">
@@ -1702,6 +1711,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>web.org.relationships.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\CommonMasterData\Product\AddInsCoreDataProduct.de.js">
+      <DependentUpon>web.product.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\CommonMasterData\Product\AddInsCoreDataProduct.en.js">
+      <DependentUpon>web.product.add.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\CommonMasterData\Product\AddInsCoreDataProductGroup.de.js">
       <DependentUpon>web.product.add.resources.tt</DependentUpon>
     </Content>
@@ -1767,6 +1782,12 @@
     </Content>
     <Content Include="web\resources\CommonMasterData\Product\AddOrdRecognitionType.en.js">
       <DependentUpon>web.product.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\CommonMasterData\Product\FilterInsCoreDataProduct.de.js">
+      <DependentUpon>web.product.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\CommonMasterData\Product\FilterInsCoreDataProduct.en.js">
+      <DependentUpon>web.product.filter.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\CommonMasterData\Product\FilterInsCoreDataProductGroup.de.js">
       <DependentUpon>web.product.filter.resources.tt</DependentUpon>
@@ -1844,6 +1865,18 @@
       <DependentUpon>web.product.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProductGroups.en.js">
+      <DependentUpon>web.product.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProductRelationships.de.js">
+      <DependentUpon>web.product.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProductRelationships.en.js">
+      <DependentUpon>web.product.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProducts.de.js">
+      <DependentUpon>web.product.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProducts.en.js">
       <DependentUpon>web.product.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\CommonMasterData\Product\InsProductCombinationTypeRelationships.de.js">
@@ -3721,6 +3754,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>web.org.relationships.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\CommonMasterData\Product\AddInsCoreDataProduct.html">
+      <DependentUpon>web.product.add.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\CommonMasterData\Product\AddInsCoreDataProductGroup.html">
       <DependentUpon>web.product.add.templates.tt</DependentUpon>
     </Content>
@@ -3753,6 +3789,9 @@
     </Content>
     <Content Include="web\templates\CommonMasterData\Product\AddOrdRecognitionType.html">
       <DependentUpon>web.product.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\CommonMasterData\Product\FilterInsCoreDataProduct.html">
+      <DependentUpon>web.product.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\CommonMasterData\Product\FilterInsCoreDataProductGroup.html">
       <DependentUpon>web.product.templates.tt</DependentUpon>
@@ -3791,6 +3830,12 @@
       <DependentUpon>web.product.relationships.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\CommonMasterData\Product\InsCoreDataProductGroups.html">
+      <DependentUpon>web.product.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\CommonMasterData\Product\InsCoreDataProductRelationships.html">
+      <DependentUpon>web.product.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\CommonMasterData\Product\InsCoreDataProducts.html">
       <DependentUpon>web.product.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\CommonMasterData\Product\InsProductCombinationTypeRelationships.html">
@@ -4875,6 +4920,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>web.org.relationships.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\CommonMasterData\Product\AddInsCoreDataProduct.js">
+      <DependentUpon>web.product.add.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\CommonMasterData\Product\AddInsCoreDataProductGroup.js">
       <DependentUpon>web.product.add.views.tt</DependentUpon>
     </Content>
@@ -4907,6 +4955,9 @@
     </Content>
     <Content Include="web\views\CommonMasterData\Product\AddOrdRecognitionType.js">
       <DependentUpon>web.product.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\CommonMasterData\Product\FilterInsCoreDataProduct.js">
+      <DependentUpon>web.product.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\CommonMasterData\Product\FilterInsCoreDataProductGroup.js">
       <DependentUpon>web.product.views.tt</DependentUpon>
@@ -4942,6 +4993,12 @@
       <DependentUpon>web.product.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\CommonMasterData\Product\InsCoreDataProductGroups.js">
+      <DependentUpon>web.product.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\CommonMasterData\Product\InsCoreDataProductRelationships.js">
+      <DependentUpon>web.product.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\CommonMasterData\Product\InsCoreDataProducts.js">
       <DependentUpon>web.product.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\CommonMasterData\Product\InsProductCombinationTypeRelationships.js">
@@ -5479,7 +5536,6 @@
     <Content Include="web\views\Home\Login.js" />
     <Content Include="web\master-footer.js" />
     <Content Include="web\master.js" />
-    <Content Include="web\router-master-data.js" />
     <Content Include="web\views\Settings\AddRole.js" />
     <Content Include="web\views\Settings\AddUser.js" />
     <Content Include="web\views\Settings\ChangePassword.js" />

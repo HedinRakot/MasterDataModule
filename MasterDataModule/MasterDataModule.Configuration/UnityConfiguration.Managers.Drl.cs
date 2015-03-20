@@ -16,16 +16,11 @@ namespace MasterDataModule.Configuration
         private static void InitializeDrl(IUnityContainer container)
         {
             container.RegisterType<IMessageLocalizationManager, MessageLocalizationManager>();
-            container.RegisterType<ISysColumnManager, SysColumnManager>();
-            container.RegisterType<ISysTableManager, SysTableManager>();
-            container.RegisterType<IRoleManager, RoleManager>();
             container.RegisterType<IReturnReasonManager, ReturnReasonManager>();
-            container.RegisterType<IPermissionManager, PermissionManager>();
             container.RegisterType<IExamPossibleResultManager, ExamPossibleResultManager>();
             container.RegisterType<ISchoolInfoManager, SchoolInfoManager>();
             container.RegisterType<IArgeVersionManager, ArgeVersionManager>();
             container.RegisterType<IAuthorityManager, AuthorityManager>();
-            container.RegisterType<IUserManager, UserManager>();
             container.RegisterType<ICommunityManager, CommunityManager>();
             container.RegisterType<IExamRecognitionTypeManager, ExamRecognitionTypeManager>();
             container.RegisterType<IExamRecognitionTypeExamClassManager, ExamRecognitionTypeExamClassManager>();

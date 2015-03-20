@@ -184,6 +184,9 @@
     <Compile Include="Controllers\AsPro\Common\InsCoreDataProductGroupsController.cs">
       <DependentUpon>Common.Controllers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AsPro\Common\InsCoreDataProductsController.cs">
+      <DependentUpon>Common.Controllers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AsPro\Common\InsProductCombinationTypesController.cs">
       <DependentUpon>Common.Controllers.tt</DependentUpon>
     </Compile>
@@ -389,8 +392,6 @@
     <Compile Include="Controllers\Drl\Custom.MessageLocalizationsController.cs" />
     <Compile Include="Controllers\Drl\Custom.ReturnReasonsController.cs" />
     <Compile Include="Controllers\Drl\Custom.SchoolInfosController.cs" />
-    <Compile Include="Controllers\Drl\Custom.SysColumnsController.cs" />
-    <Compile Include="Controllers\Drl\Custom.SysTablesController.cs" />
     <Compile Include="Controllers\Drl\DrlViewCollectionControllerFactory.cs">
       <DependentUpon>Drl.ViewCollectionFactory.tt</DependentUpon>
     </Compile>
@@ -463,12 +464,6 @@
     <Compile Include="Controllers\Drl\SchoolInfosController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\Drl\SysColumnsController.cs">
-      <DependentUpon>Drl.Controllers.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Drl\SysTablesController.cs">
-      <DependentUpon>Drl.Controllers.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\ReadOnlyClientBaseController.cs" />
     <Compile Include="Controllers\GridArgs.cs" />
     <Compile Include="Controllers\GridArgsModelBinder.cs" />
@@ -503,6 +498,9 @@
       <DependentUpon>Common.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AsPro\Common\InsCoreDataProductGroupModel.cs">
+      <DependentUpon>Common.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AsPro\Common\InsCoreDataProductModel.cs">
       <DependentUpon>Common.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AsPro\Common\InsProductCombinationTypeModel.cs">
@@ -736,15 +734,11 @@
     <Compile Include="Models\Drl\SchoolInfoModel.cs">
       <DependentUpon>Drl.Models.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Drl\SysColumnModel.cs">
-      <DependentUpon>Drl.Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Drl\SysTableModel.cs">
-      <DependentUpon>Drl.Models.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\GlobalSysTableModel.cs" />
     <Compile Include="Models\ISystemModelFields.cs" />
     <Compile Include="Models\IModelIntervalFields.cs" />
+    <Compile Include="Models\Settings\SysColumnModel.cs" />
+    <Compile Include="Models\Settings\SysTableModel.cs" />
     <Compile Include="Security\PermissionTypes.cs" />
     <Compile Include="Controllers\Settings\SystemLogController.cs" />
     <Compile Include="Controllers\Settings\PermissionsController.cs" />

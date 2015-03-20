@@ -2,6 +2,7 @@ define(function () {
 	'use strict';
 
 	var resources = {
+        InsCoreDataProducts: 'Produkt',
         InsCoreDataProductGroups: 'Produkt-Arbeitswerte',
         InsProductCombinationTypes: 'Produkt-Kombinationstypen',
         InsProductMaterialGroups: 'Produkt-Materialgruppen',

@@ -112,6 +112,9 @@
     <Compile Include="Data\AsPro\Common\InsCoreDataProductGroupMapping.cs">
       <DependentUpon>Common.EntityMapping.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\AsPro\Common\InsCoreDataProductMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\AsPro\Common\InsProductCombinationTypeMapping.cs">
       <DependentUpon>Common.EntityMapping.tt</DependentUpon>
     </Compile>
@@ -274,11 +277,33 @@
     <Compile Include="Data\AsPro\TechnicalInspection\InsValidPeriodMapping.cs">
       <DependentUpon>TP.EntityMapping.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\Configuration\PermissionMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\RoleMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\SysColumnMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\SysTableMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\UserMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MasterDataConfiguration.Context.cs">
+      <DependentUpon>MasterDataConfiguration.Context.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Data\MasterDataConfiguration.Context.Configuration.cs" />
     <Compile Include="Data\Drl.Context.cs">
       <DependentUpon>Drl.Context.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Data\MasterDataConfiguration.Context.Custom.cs" />
     <Compile Include="Data\Drl\ArgeVersionMapping.cs">
       <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
     </Compile>
@@ -351,25 +376,10 @@
     <Compile Include="Data\Drl\MessageLocalizationMapping.cs">
       <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\Drl\PermissionMapping.cs">
-      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
-    </Compile>
     <Compile Include="Data\Drl\ReturnReasonMapping.cs">
       <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\Drl\RoleMapping.cs">
-      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
-    </Compile>
     <Compile Include="Data\Drl\SchoolInfoMapping.cs">
-      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Drl\SysColumnMapping.cs">
-      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Drl\SysTableMapping.cs">
-      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Drl\UserMapping.cs">
       <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\EntitiesBase.cs" />
@@ -402,6 +412,9 @@
       <DependentUpon>Common.Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\AsPro\Common\InsCoreDataProductGroupManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\InsCoreDataProductManager.cs">
       <DependentUpon>Common.Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\AsPro\Common\InsProductCombinationTypeManager.cs">
@@ -571,6 +584,21 @@
     <Compile Include="Managers\Base\ManagerBase.cs" />
     <Compile Include="Managers\Base\ReadOnlyEntityManager.cs" />
     <Compile Include="Managers\Base\ReadOnlyManagerBase.cs" />
+    <Compile Include="Managers\Configuration\PermissionManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\RoleManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\SysColumnManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\SysTableManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\UserManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\Drl\ArgeVersionManager.cs">
       <DependentUpon>Drl.Managers.tt</DependentUpon>
     </Compile>
@@ -643,29 +671,14 @@
     <Compile Include="Managers\Drl\MessageLocalizationManager.cs">
       <DependentUpon>Drl.Managers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Managers\Drl\PermissionManager.cs">
-      <DependentUpon>Drl.Managers.tt</DependentUpon>
-    </Compile>
     <Compile Include="Managers\Drl\ReturnReasonManager.cs">
       <DependentUpon>Drl.Managers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Managers\Drl\RoleManager.cs">
-      <DependentUpon>Drl.Managers.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Managers\Drl\RoleManager.Custom.cs" />
+    <Compile Include="Managers\Configuration\RoleManager.Custom.cs" />
     <Compile Include="Managers\Drl\SchoolInfoManager.cs">
       <DependentUpon>Drl.Managers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Managers\Drl\SysColumnManager.cs">
-      <DependentUpon>Drl.Managers.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Managers\Drl\SysTableManager.cs">
-      <DependentUpon>Drl.Managers.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Managers\Drl\UserManager.cs">
-      <DependentUpon>Drl.Managers.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Managers\Drl\UserManager.Custom.cs" />
+    <Compile Include="Managers\Configuration\UserManager.Custom.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -691,6 +704,14 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TP.EntityMapping.txt</LastGenOutput>
     </None>
+    <None Include="Data\Configuration\MasterDataConfiguration.EntityMapping.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MasterDataConfiguration.EntityMapping.txt</LastGenOutput>
+    </None>
+    <None Include="Data\MasterDataConfiguration.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MasterDataConfiguration.Context.cs</LastGenOutput>
+    </None>
     <None Include="Data\Drl.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Drl.Context.cs</LastGenOutput>
@@ -706,6 +727,10 @@
     <None Include="Managers\AsPro\TechnicalInspection\TP.Managers.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TP.Managers.txt</LastGenOutput>
+    </None>
+    <None Include="Managers\Configuration\MasterDataConfiguration.Managers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MasterDataConfiguration.Managers.txt</LastGenOutput>
     </None>
     <None Include="Managers\Drl\Drl.Managers.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -728,6 +753,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TP.EntityMapping.tt</DependentUpon>
     </Content>
+    <Content Include="Data\Configuration\MasterDataConfiguration.EntityMapping.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Content>
     <Content Include="Data\Drl\Drl.EntityMapping.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -742,6 +772,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TP.Managers.tt</DependentUpon>
+    </Content>
+    <Content Include="Managers\Configuration\MasterDataConfiguration.Managers.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
     </Content>
     <Content Include="Managers\Drl\Drl.Managers.txt">
       <AutoGen>True</AutoGen>

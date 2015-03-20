@@ -13,6 +13,8 @@ namespace MasterDataModule.Configuration
                 new InjectionConstructor(ConfigurationManager.ConnectionStrings["ASProEntities"].ConnectionString));
             container.RegisterType<IDrlEntities, DrlEntities>(new PerRequestLifetimeManager(),
                 new InjectionConstructor(ConfigurationManager.ConnectionStrings["FeEntities"].ConnectionString));
+            container.RegisterType<IMasterDataConfigurationEntities, MasterDataConfigurationEntities>(new PerRequestLifetimeManager(),
+                new InjectionConstructor(ConfigurationManager.ConnectionStrings["MasterDataConfigurationEntities"].ConnectionString));
 
             RegisterManagers(container);
         }
@@ -22,6 +24,7 @@ namespace MasterDataModule.Configuration
             InitializeDrl(container);
             InitializeAsProCommon(container);
             InitializeAsProTP(container);
+            InitializeMasterDataСonfiguration(container);
         }
     }
 }

@@ -7,10 +7,12 @@ using MasterDataModule.Contracts.Entities;
 using MasterDataModule.Contracts.Managers;
 using TuevSued.V1.IT.FE.CoreBase;
 using TuevSued.V1.IT.FE.CoreBase.Localization;
+using MasterDataModule.Contracts;
+using System.Collections.Generic;
 
 namespace MasterDataModule.API.Controllers.Settings
 {
-    [AuthorizeByPermissions(PermissionTypes = new[] { PermissionTypes.SysTables })]
+    //[AuthorizeByPermissions(PermissionTypes = new[] { PermissionTypes.SysTables })]
     public class SysColumnsController : ClientApiWithoutDeleteController<SysColumnModel, SysColumn, int, ISysColumnManager>
     {
         public SysColumnsController(ISysColumnManager manager)
@@ -37,6 +39,8 @@ namespace MasterDataModule.API.Controllers.Settings
             model.description = String.Format("{0} ({1})", description, entity.Name);
             model.sysTableId = entity.SysTableId;
             model.readOnly = entity.ReadOnly;
+            model.createDate = ((ISystemFields)entity).CreateDate;
+            model.changeDate = ((ISystemFields)entity).ChangeDate;
         }
 
         protected override IQueryable<SysColumn> GetEntities()
@@ -52,6 +56,24 @@ namespace MasterDataModule.API.Controllers.Settings
                 !o.Name.Equals("ROW_VERSION", StringComparison.InvariantCultureIgnoreCase) &&
                 !o.Name.Equals("SOURCE", StringComparison.InvariantCultureIgnoreCase) &&
                 !o.Name.Equals("DELETE_DATE", StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        protected override string BuildWhereClause<T>(Filter filter)
+        {
+            if (filter.Field == "name")
+            {
+                var clauses = new List<string>();
+
+                clauses.AddRange(new[] { 
+        				base.BuildWhereClause<T>(new Filter { Field = "Name", Operator = filter.Operator, Value = filter.Value }),
+        				base.BuildWhereClause<T>(new Filter { Field = "Description", Operator = filter.Operator, 
+                            Value = filter.Value }),
+        			});
+
+                return string.Join(" or ", clauses);
+            }
+
+            return base.BuildWhereClause<T>(filter);
         }
     }
 }
