@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="Community"/> entity
     /// </summary>
     [DataContract]
-    public class CommunityModel: BaseModel
+    public partial class CommunityModel: BaseModel
     {
 
         /// <summary>

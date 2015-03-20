@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="LegalBasis"/> entity
     /// </summary>
     [DataContract]
-    public class LegalBasisModel: BaseModel
+    public partial class LegalBasisModel: BaseModel
     {
 
         /// <summary>

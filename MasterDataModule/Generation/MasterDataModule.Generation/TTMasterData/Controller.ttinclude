@@ -81,7 +81,7 @@
             code.WriteLine("entity.{1} = model.{0};", property.Name, property.Property.Name);
         }
 		
-        if (model.Content.ExtraEntityToModel)
+        if (model.Content.ExtraModelToEntity)
         {
 		    code.WriteLine();
             code.WriteLine("ExtraModelToEntity(entity, model, actionType);");

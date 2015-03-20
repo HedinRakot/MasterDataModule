@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="ExamClassRequiredClass"/> entity
     /// </summary>
     [DataContract]
-    public class ExamClassRequiredClassModel: BaseModel
+    public partial class ExamClassRequiredClassModel: BaseModel
     {
 
         /// <summary>

@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="MeetingPoint"/> entity
     /// </summary>
     [DataContract]
-    public class MeetingPointModel: BaseModel
+    public partial class MeetingPointModel: BaseModel
     {
 
         /// <summary>

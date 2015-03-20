@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="MessageLocalization"/> entity
     /// </summary>
     [DataContract]
-    public class MessageLocalizationModel: BaseModel
+    public partial class MessageLocalizationModel: BaseModel
     {
 
         /// <summary>

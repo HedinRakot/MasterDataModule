@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="Authority"/> entity
     /// </summary>
     [DataContract]
-    public class AuthorityModel: BaseModel
+    public partial class AuthorityModel: BaseModel
     {
 
         /// <summary>

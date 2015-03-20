@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="ArgeVersion"/> entity
     /// </summary>
     [DataContract]
-    public class ArgeVersionModel: BaseModel
+    public partial class ArgeVersionModel: BaseModel
     {
 
         /// <summary>

@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="ReturnReason"/> entity
     /// </summary>
     [DataContract]
-    public class ReturnReasonModel: BaseModel
+    public partial class ReturnReasonModel: BaseModel
     {
 
         /// <summary>

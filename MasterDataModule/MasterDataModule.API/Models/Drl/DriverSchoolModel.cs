@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="DriverSchool"/> entity
     /// </summary>
     [DataContract]
-    public class DriverSchoolModel: BaseModel
+    public partial class DriverSchoolModel: BaseModel
     {
 
         /// <summary>

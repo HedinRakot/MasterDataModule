@@ -36,6 +36,8 @@ namespace MasterDataModule.API.Controllers
             model.repeatTimeInDaysReduced = entity.RepeatTimeInDaysReduced;
             model.createDate = ((ISystemFields)entity).CreateDate;
             model.changeDate = ((ISystemFields)entity).ChangeDate;
+
+            ExtraEntityToModel(entity, model);
         }
         protected override void ModelToEntity(CoreDataProductModel model, CoreDataProduct entity, ActionTypes actionType)
         {

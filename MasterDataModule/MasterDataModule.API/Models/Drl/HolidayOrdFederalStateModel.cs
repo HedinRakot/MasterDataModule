@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="HolidayOrdFederalState"/> entity
     /// </summary>
     [DataContract]
-    public class HolidayOrdFederalStateModel: BaseModel
+    public partial class HolidayOrdFederalStateModel: BaseModel
     {
 
         /// <summary>

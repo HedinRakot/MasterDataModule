@@ -393,6 +393,7 @@
     <Compile Include="Controllers\Drl\Custom.AuthoritiesController.cs" />
     <Compile Include="Controllers\Drl\Custom.CommunitiesController.cs" />
     <Compile Include="Controllers\Drl\Custom.ExamClassArgeMapsController.cs" />
+    <Compile Include="Controllers\Drl\Custom.CoreDataProductsController.cs" />
     <Compile Include="Controllers\Drl\Custom.ExamClassesController.cs" />
     <Compile Include="Controllers\Drl\Custom.ExamClassMapsController.cs" />
     <Compile Include="Controllers\Drl\Custom.ExamConstraintsController.cs" />
@@ -704,6 +705,7 @@
     <Compile Include="Models\Drl\CoreDataProductModel.cs">
       <DependentUpon>Drl.Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Drl\Custom.CoreDataProductModel.cs" />
     <Compile Include="Models\Drl\DriverSchoolExamRecognitionTypeModel.cs">
       <DependentUpon>Drl.Models.tt</DependentUpon>
     </Compile>

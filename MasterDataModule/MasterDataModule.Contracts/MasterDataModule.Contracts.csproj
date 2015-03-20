@@ -63,6 +63,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Entities\AsPro\Common\Custom.InsCoreDataProduct.cs" />
     <Compile Include="Entities\AsPro\Common\InsCoreDataProductLocalization.cs">
       <DependentUpon>Common.Entities.tt</DependentUpon>
     </Compile>
@@ -78,6 +79,7 @@
     <Compile Include="Entities\Drl\CoreDataProductLocalization.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Drl\Custom.CoreDataProduct.cs" />
     <Compile Include="Entities\Drl\DriverSchool.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>

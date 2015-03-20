@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="Language"/> entity
     /// </summary>
     [DataContract]
-    public class LanguageModel: BaseModel
+    public partial class LanguageModel: BaseModel
     {
 
         /// <summary>

@@ -11,7 +11,7 @@ namespace MasterDataModule.Generation
         #region Constructor
         internal ModelInfo(EntityInfo entity, ITable<TableContent, ColumnContent> table, List<PropertyModelInfo> properties)
         {
-
+            IsPartial = true;
             Entity = entity;
             Table = table;
             ModelProperties = properties;
