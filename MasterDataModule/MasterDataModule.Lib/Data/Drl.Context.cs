@@ -20,6 +20,7 @@ namespace MasterDataModule.Lib.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(MessageLocalizationMapping.Instance);
+            modelBuilder.Configurations.Add(CoreDataProductMapping.Instance);
             modelBuilder.Configurations.Add(ReturnReasonMapping.Instance);
             modelBuilder.Configurations.Add(ExamPossibleResultMapping.Instance);
             modelBuilder.Configurations.Add(SchoolInfoMapping.Instance);
@@ -27,9 +28,14 @@ namespace MasterDataModule.Lib.Data
             modelBuilder.Configurations.Add(AuthorityMapping.Instance);
             modelBuilder.Configurations.Add(CommunityMapping.Instance);
             modelBuilder.Configurations.Add(ExamRecognitionTypeMapping.Instance);
+            modelBuilder.Configurations.Add(CoreDataProductClassBasisMapping.Instance);
+            modelBuilder.Configurations.Add(CommunityParticipantMapping.Instance);
             modelBuilder.Configurations.Add(ExamRecognitionTypeExamClassMapping.Instance);
+            modelBuilder.Configurations.Add(DriverSchoolMapping.Instance);
             modelBuilder.Configurations.Add(ExamRoomMapping.Instance);
             modelBuilder.Configurations.Add(ExamStationMapping.Instance);
+            modelBuilder.Configurations.Add(DriverSchoolExamRecognitionTypeMapping.Instance);
+            modelBuilder.Configurations.Add(DriverSchoolInfoMapping.Instance);
             modelBuilder.Configurations.Add(ExamStationExamRecognitionTypeMapping.Instance);
             modelBuilder.Configurations.Add(HolidayMapping.Instance);
             modelBuilder.Configurations.Add(ExamClassMapping.Instance);
@@ -40,6 +46,7 @@ namespace MasterDataModule.Lib.Data
             modelBuilder.Configurations.Add(ExamClassInclusiveClassMapping.Instance);
             modelBuilder.Configurations.Add(ExamClassMapMapping.Instance);
             modelBuilder.Configurations.Add(ExamClassRequiredClassMapping.Instance);
+            modelBuilder.Configurations.Add(CoreDataProductLocalizationMapping.Instance);
             modelBuilder.Configurations.Add(ExamClassRestrictedClassMapping.Instance);
             modelBuilder.Configurations.Add(ExamConstraintMapping.Instance);
             modelBuilder.Configurations.Add(MeetingPointMapping.Instance);
@@ -51,6 +58,10 @@ namespace MasterDataModule.Lib.Data
         ///     Set of <see cref="MessageLocalization"/> entities from table DATA.DRL_MESSAGE_LOCALIZATION
         /// </summary>
         public IQueryable<MessageLocalization> MessageLocalization{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="CoreDataProduct"/> entities from table DATA.DRL_CORE_DATA_PRODUCT
+        /// </summary>
+        public IQueryable<CoreDataProduct> CoreDataProduct{ get; set; }
         /// <summary>
         ///     Set of <see cref="ReturnReason"/> entities from table DATA.DRL_RETURN_REASON
         /// </summary>
@@ -80,9 +91,21 @@ namespace MasterDataModule.Lib.Data
         /// </summary>
         public IQueryable<ExamRecognitionType> ExamRecognitionType{ get; set; }
         /// <summary>
+        ///     Set of <see cref="CoreDataProductClassBasis"/> entities from table DATA.DRL_CORE_DATA_PRODUCT_CLASS_BASIS_RSP
+        /// </summary>
+        public IQueryable<CoreDataProductClassBasis> CoreDataProductClassBasis{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="CommunityParticipant"/> entities from table DATA.DRL_COMMUNITY_PARTICIPANT
+        /// </summary>
+        public IQueryable<CommunityParticipant> CommunityParticipant{ get; set; }
+        /// <summary>
         ///     Set of <see cref="ExamRecognitionTypeExamClass"/> entities from table DATA.DRL_EXAM_RECOGNITION_TYPE_EXAM_CLASS_RSP
         /// </summary>
         public IQueryable<ExamRecognitionTypeExamClass> ExamRecognitionTypeExamClass{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="DriverSchool"/> entities from table DATA.DRL_DRIVER_SCHOOL
+        /// </summary>
+        public IQueryable<DriverSchool> DriverSchool{ get; set; }
         /// <summary>
         ///     Set of <see cref="ExamRoom"/> entities from table DATA.DRL_EXAM_ROOM
         /// </summary>
@@ -91,6 +114,14 @@ namespace MasterDataModule.Lib.Data
         ///     Set of <see cref="ExamStation"/> entities from table DATA.DRL_EXAM_STATION
         /// </summary>
         public IQueryable<ExamStation> ExamStation{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="DriverSchoolExamRecognitionType"/> entities from table DATA.DRL_DRIVER_SCHOOL_EXAM_RECOGNITION_TYPE_RSP
+        /// </summary>
+        public IQueryable<DriverSchoolExamRecognitionType> DriverSchoolExamRecognitionType{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="DriverSchoolInfo"/> entities from table DATA.DRL_DRIVER_SCHOOL_INFO_RSP
+        /// </summary>
+        public IQueryable<DriverSchoolInfo> DriverSchoolInfo{ get; set; }
         /// <summary>
         ///     Set of <see cref="ExamStationExamRecognitionType"/> entities from table DATA.DRL_EXAM_STATION_EXAM_RECOGNITION_TYPE_RSP
         /// </summary>
@@ -131,6 +162,10 @@ namespace MasterDataModule.Lib.Data
         ///     Set of <see cref="ExamClassRequiredClass"/> entities from table DATA.DRL_EXAM_CLASS_REQUIRED_CLASS_RSP
         /// </summary>
         public IQueryable<ExamClassRequiredClass> ExamClassRequiredClass{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="CoreDataProductLocalization"/> entities from table DATA.DRL_CORE_DATA_PRODUCT_LOCALIZATION
+        /// </summary>
+        public IQueryable<CoreDataProductLocalization> CoreDataProductLocalization{ get; set; }
         /// <summary>
         ///     Set of <see cref="ExamClassRestrictedClass"/> entities from table DATA.DRL_EXAM_CLASS_RESTRICTED_CLASS_RSP
         /// </summary>

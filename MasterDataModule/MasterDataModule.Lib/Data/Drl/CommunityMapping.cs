@@ -69,6 +69,9 @@ namespace MasterDataModule.Lib.Data
 
 
             //Relationships
+            HasRequired(c => c.DriverSchool)
+                .WithMany(d => d.Communities)
+                .HasForeignKey(t => t.DriverSchoolId);
         }
     }
 }

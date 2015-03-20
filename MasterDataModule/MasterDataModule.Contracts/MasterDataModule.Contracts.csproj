@@ -66,8 +66,50 @@
     <Compile Include="Entities\AsPro\Common\InsCoreDataProductLocalization.cs">
       <DependentUpon>Common.Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Drl\CommunityParticipant.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\CoreDataProduct.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\CoreDataProductClassBasis.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\CoreDataProductLocalization.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\DriverSchool.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\DriverSchoolExamRecognitionType.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Drl\DriverSchoolInfo.cs">
+      <DependentUpon>Drl.Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\AsPro\Common\IInsCoreDataProductLocalizationManager.cs">
       <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ICommunityParticipantManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ICoreDataProductClassBasisManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ICoreDataProductLocalizationManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\ICoreDataProductManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IDriverSchoolExamRecognitionTypeManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IDriverSchoolInfoManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\IDriverSchoolManager.cs">
+      <DependentUpon>Drl.IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="MasterDataConfiguration.Context.Interface.Custom.cs" />
     <Compile Include="Entities\Configuration\Permission.cs">

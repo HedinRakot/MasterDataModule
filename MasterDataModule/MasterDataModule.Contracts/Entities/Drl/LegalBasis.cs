@@ -1,5 +1,6 @@
 using MasterDataModule.Contracts;
 using System;
+using System.Collections.Generic;
 
 namespace MasterDataModule.Contracts.Entities
 {
@@ -177,6 +178,7 @@ namespace MasterDataModule.Contracts.Entities
         ///     EN: Print name
         /// </summary>
         public string PrintName{ get; set; }
+        public virtual ICollection<CoreDataProductClassBasis> CoreDataProductClassBases{ get; set; }
         DateTime? IIntervalFields.FromDate
         {
             get { return FromDate; }

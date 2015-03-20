@@ -1,0 +1,18 @@
+define(function () {
+	'use strict';
+
+	var resources = {
+
+		add: 'Add Community participant',
+	    edit: 'Edit Community participant',
+	    masterData: 'FE masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
+	    pageTitle: 'Community participant',
+		driverSchoolIdParticipant: 'Participant',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
+		driverSchoolIdLead: 'Driverschool lead',	
+	};
+
+	return resources;
+});

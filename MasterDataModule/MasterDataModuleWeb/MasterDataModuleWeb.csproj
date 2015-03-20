@@ -377,6 +377,27 @@
     <Content Include="web\collections\DriverLicenceMasterData\Communities.js">
       <DependentUpon>web.drl.collections.tt</DependentUpon>
     </Content>
+    <Content Include="web\collections\DriverLicenceMasterData\CommunityParticipants.js">
+      <DependentUpon>web.drl.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\DriverLicenceMasterData\CoreDataProductClassBases.js">
+      <DependentUpon>web.drl.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\DriverLicenceMasterData\CoreDataProductLocalizations.js">
+      <DependentUpon>web.drl.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\DriverLicenceMasterData\CoreDataProducts.js">
+      <DependentUpon>web.drl.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\DriverLicenceMasterData\DriverSchoolExamRecognitionTypes.js">
+      <DependentUpon>web.drl.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\DriverLicenceMasterData\DriverSchoolInfos.js">
+      <DependentUpon>web.drl.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\DriverLicenceMasterData\DriverSchools.js">
+      <DependentUpon>web.drl.collections.tt</DependentUpon>
+    </Content>
     <Content Include="web\collections\DriverLicenceMasterData\ExamClassArgeMaps.js">
       <DependentUpon>web.drl.collections.tt</DependentUpon>
     </Content>
@@ -826,6 +847,27 @@
     <Content Include="web\models\DriverLicenceMasterData\Community.js">
       <DependentUpon>web.drl.models.tt</DependentUpon>
     </Content>
+    <Content Include="web\models\DriverLicenceMasterData\CommunityParticipant.js">
+      <DependentUpon>web.drl.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\DriverLicenceMasterData\CoreDataProduct.js">
+      <DependentUpon>web.drl.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\DriverLicenceMasterData\CoreDataProductClassBasis.js">
+      <DependentUpon>web.drl.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\DriverLicenceMasterData\CoreDataProductLocalization.js">
+      <DependentUpon>web.drl.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\DriverLicenceMasterData\DriverSchool.js">
+      <DependentUpon>web.drl.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\DriverLicenceMasterData\DriverSchoolExamRecognitionType.js">
+      <DependentUpon>web.drl.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\DriverLicenceMasterData\DriverSchoolInfo.js">
+      <DependentUpon>web.drl.models.tt</DependentUpon>
+    </Content>
     <Content Include="web\models\DriverLicenceMasterData\ExamClass.js">
       <DependentUpon>web.drl.models.tt</DependentUpon>
     </Content>
@@ -875,6 +917,27 @@
       <DependentUpon>web.drl.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\DriverLicenceMasterData\FilterCommunity.js">
+      <DependentUpon>web.drl.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\DriverLicenceMasterData\FilterCommunityParticipant.js">
+      <DependentUpon>web.drl.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\DriverLicenceMasterData\FilterCoreDataProduct.js">
+      <DependentUpon>web.drl.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\DriverLicenceMasterData\FilterCoreDataProductClassBasis.js">
+      <DependentUpon>web.drl.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\DriverLicenceMasterData\FilterCoreDataProductLocalization.js">
+      <DependentUpon>web.drl.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\DriverLicenceMasterData\FilterDriverSchool.js">
+      <DependentUpon>web.drl.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\DriverLicenceMasterData\FilterDriverSchoolExamRecognitionType.js">
+      <DependentUpon>web.drl.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\DriverLicenceMasterData\FilterDriverSchoolInfo.js">
       <DependentUpon>web.drl.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\DriverLicenceMasterData\FilterExamClass.js">
@@ -2397,6 +2460,48 @@
     <Content Include="web\resources\DriverLicenceMasterData\AddCommunity.en.js">
       <DependentUpon>web.drl.add.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\AddCommunityParticipant.de.js">
+      <DependentUpon>web.drl.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\AddCommunityParticipant.en.js">
+      <DependentUpon>web.drl.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\AddCoreDataProduct.de.js">
+      <DependentUpon>web.drl.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\AddCoreDataProduct.en.js">
+      <DependentUpon>web.drl.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\AddCoreDataProductClassBasis.de.js">
+      <DependentUpon>web.drl.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\AddCoreDataProductClassBasis.en.js">
+      <DependentUpon>web.drl.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\AddCoreDataProductLocalization.de.js">
+      <DependentUpon>web.drl.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\AddCoreDataProductLocalization.en.js">
+      <DependentUpon>web.drl.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\AddDriverSchool.de.js">
+      <DependentUpon>web.drl.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\AddDriverSchool.en.js">
+      <DependentUpon>web.drl.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\AddDriverSchoolExamRecognitionType.de.js">
+      <DependentUpon>web.drl.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\AddDriverSchoolExamRecognitionType.en.js">
+      <DependentUpon>web.drl.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\AddDriverSchoolInfo.de.js">
+      <DependentUpon>web.drl.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\AddDriverSchoolInfo.en.js">
+      <DependentUpon>web.drl.add.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\DriverLicenceMasterData\AddExamClass.de.js">
       <DependentUpon>web.drl.add.resources.tt</DependentUpon>
     </Content>
@@ -2565,17 +2670,101 @@
     <Content Include="web\resources\DriverLicenceMasterData\Communities.en.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\CommunityParticipantRelationships.de.js">
+      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\CommunityParticipantRelationships.en.js">
+      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\CommunityParticipants.de.js">
+      <DependentUpon>web.drl.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\CommunityParticipants.en.js">
+      <DependentUpon>web.drl.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\DriverLicenceMasterData\CommunityRelationships.de.js">
       <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\CommunityRelationships.en.js">
       <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductClassBases.de.js">
+      <DependentUpon>web.drl.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductClassBases.en.js">
+      <DependentUpon>web.drl.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductClassBasisRelationships.de.js">
+      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductClassBasisRelationships.en.js">
+      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductLocalizationRelationships.de.js">
+      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductLocalizationRelationships.en.js">
+      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductLocalizations.de.js">
+      <DependentUpon>web.drl.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductLocalizations.en.js">
+      <DependentUpon>web.drl.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductRelationships.de.js">
+      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductRelationships.en.js">
+      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProducts.de.js">
+      <DependentUpon>web.drl.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProducts.en.js">
+      <DependentUpon>web.drl.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\DriverLicenceMasterData\DriverLicenceMasterData.de.js">
       <DependentUpon>web.drl.menu.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\DriverLicenceMasterData.en.js">
       <DependentUpon>web.drl.menu.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\DriverSchoolExamRecognitionTypeRelationships.de.js">
+      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\DriverSchoolExamRecognitionTypeRelationships.en.js">
+      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\DriverSchoolExamRecognitionTypes.de.js">
+      <DependentUpon>web.drl.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\DriverSchoolExamRecognitionTypes.en.js">
+      <DependentUpon>web.drl.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\DriverSchoolInfoRelationships.de.js">
+      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\DriverSchoolInfoRelationships.en.js">
+      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\DriverSchoolInfos.de.js">
+      <DependentUpon>web.drl.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\DriverSchoolInfos.en.js">
+      <DependentUpon>web.drl.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\DriverSchoolRelationships.de.js">
+      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\DriverSchoolRelationships.en.js">
+      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\DriverSchools.de.js">
+      <DependentUpon>web.drl.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\DriverSchools.en.js">
+      <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\ExamClassArgeMapRelationships.de.js">
       <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
@@ -2761,6 +2950,48 @@
       <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\FilterCommunity.en.js">
+      <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\FilterCommunityParticipant.de.js">
+      <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\FilterCommunityParticipant.en.js">
+      <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\FilterCoreDataProduct.de.js">
+      <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\FilterCoreDataProduct.en.js">
+      <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\FilterCoreDataProductClassBasis.de.js">
+      <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\FilterCoreDataProductClassBasis.en.js">
+      <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\FilterCoreDataProductLocalization.de.js">
+      <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\FilterCoreDataProductLocalization.en.js">
+      <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\FilterDriverSchool.de.js">
+      <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\FilterDriverSchool.en.js">
+      <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\FilterDriverSchoolExamRecognitionType.de.js">
+      <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\FilterDriverSchoolExamRecognitionType.en.js">
+      <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\FilterDriverSchoolInfo.de.js">
+      <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\FilterDriverSchoolInfo.en.js">
       <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\FilterExamClass.de.js">
@@ -3790,6 +4021,9 @@
     <Content Include="web\templates\CommonMasterData\Product\AddInsCoreDataProductGroup.html">
       <DependentUpon>web.product.add.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\CommonMasterData\Product\AddInsCoreDataProductLocalization.html">
+      <DependentUpon>web.product.add.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\CommonMasterData\Product\AddInsProductCombinationType.html">
       <DependentUpon>web.product.add.templates.tt</DependentUpon>
     </Content>
@@ -3826,6 +4060,9 @@
     <Content Include="web\templates\CommonMasterData\Product\FilterInsCoreDataProductGroup.html">
       <DependentUpon>web.product.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\CommonMasterData\Product\FilterInsCoreDataProductLocalization.html">
+      <DependentUpon>web.product.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\CommonMasterData\Product\FilterInsProductCombinationType.html">
       <DependentUpon>web.product.templates.tt</DependentUpon>
     </Content>
@@ -3860,6 +4097,12 @@
       <DependentUpon>web.product.relationships.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\CommonMasterData\Product\InsCoreDataProductGroups.html">
+      <DependentUpon>web.product.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\CommonMasterData\Product\InsCoreDataProductLocalizationRelationships.html">
+      <DependentUpon>web.product.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\CommonMasterData\Product\InsCoreDataProductLocalizations.html">
       <DependentUpon>web.product.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\CommonMasterData\Product\InsCoreDataProductRelationships.html">
@@ -4127,6 +4370,27 @@
     <Content Include="web\templates\DriverLicenceMasterData\AddCommunity.html">
       <DependentUpon>web.drl.add.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\AddCommunityParticipant.html">
+      <DependentUpon>web.drl.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\AddCoreDataProduct.html">
+      <DependentUpon>web.drl.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\AddCoreDataProductClassBasis.html">
+      <DependentUpon>web.drl.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\AddCoreDataProductLocalization.html">
+      <DependentUpon>web.drl.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\AddDriverSchool.html">
+      <DependentUpon>web.drl.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\AddDriverSchoolExamRecognitionType.html">
+      <DependentUpon>web.drl.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\AddDriverSchoolInfo.html">
+      <DependentUpon>web.drl.add.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\DriverLicenceMasterData\AddExamClass.html">
       <DependentUpon>web.drl.add.templates.tt</DependentUpon>
     </Content>
@@ -4211,11 +4475,53 @@
     <Content Include="web\templates\DriverLicenceMasterData\Communities.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\CommunityParticipantRelationships.html">
+      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\CommunityParticipants.html">
+      <DependentUpon>web.drl.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\DriverLicenceMasterData\CommunityRelationships.html">
       <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProductClassBases.html">
+      <DependentUpon>web.drl.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProductClassBasisRelationships.html">
+      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProductLocalizationRelationships.html">
+      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProductLocalizations.html">
+      <DependentUpon>web.drl.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProductRelationships.html">
+      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProducts.html">
+      <DependentUpon>web.drl.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\DriverLicenceMasterData\DriverLicenceMasterData.html">
       <DependentUpon>web.drl.menu.template.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\DriverSchoolExamRecognitionTypeRelationships.html">
+      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\DriverSchoolExamRecognitionTypes.html">
+      <DependentUpon>web.drl.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\DriverSchoolInfoRelationships.html">
+      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\DriverSchoolInfos.html">
+      <DependentUpon>web.drl.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\DriverSchoolRelationships.html">
+      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\DriverSchools.html">
+      <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\DriverLicenceMasterData\ExamClassArgeMapRelationships.html">
       <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
@@ -4308,6 +4614,27 @@
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\DriverLicenceMasterData\FilterCommunity.html">
+      <DependentUpon>web.drl.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\FilterCommunityParticipant.html">
+      <DependentUpon>web.drl.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\FilterCoreDataProduct.html">
+      <DependentUpon>web.drl.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\FilterCoreDataProductClassBasis.html">
+      <DependentUpon>web.drl.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\FilterCoreDataProductLocalization.html">
+      <DependentUpon>web.drl.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\FilterDriverSchool.html">
+      <DependentUpon>web.drl.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\FilterDriverSchoolExamRecognitionType.html">
+      <DependentUpon>web.drl.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\FilterDriverSchoolInfo.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\DriverLicenceMasterData\FilterExamClass.html">
@@ -5325,6 +5652,27 @@
     <Content Include="web\views\DriverLicenceMasterData\AddCommunity.js">
       <DependentUpon>web.drl.add.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\DriverLicenceMasterData\AddCommunityParticipant.js">
+      <DependentUpon>web.drl.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\AddCoreDataProduct.js">
+      <DependentUpon>web.drl.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\AddCoreDataProductClassBasis.js">
+      <DependentUpon>web.drl.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\AddCoreDataProductLocalization.js">
+      <DependentUpon>web.drl.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\AddDriverSchool.js">
+      <DependentUpon>web.drl.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\AddDriverSchoolExamRecognitionType.js">
+      <DependentUpon>web.drl.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\AddDriverSchoolInfo.js">
+      <DependentUpon>web.drl.add.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\DriverLicenceMasterData\AddExamClass.js">
       <DependentUpon>web.drl.add.views.tt</DependentUpon>
     </Content>
@@ -5409,10 +5757,52 @@
     <Content Include="web\views\DriverLicenceMasterData\Communities.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\DriverLicenceMasterData\CommunityParticipantRelationships.js">
+      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\CommunityParticipants.js">
+      <DependentUpon>web.drl.related.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\DriverLicenceMasterData\CommunityRelationships.js">
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\DriverLicenceMasterData\CoreDataProductClassBases.js">
+      <DependentUpon>web.drl.related.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\CoreDataProductClassBasisRelationships.js">
+      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\CoreDataProductLocalizationRelationships.js">
+      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\CoreDataProductLocalizations.js">
+      <DependentUpon>web.drl.related.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\CoreDataProductRelationships.js">
+      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\CoreDataProducts.js">
+      <DependentUpon>web.drl.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\DriverLicenceMasterData\DriverLicenceMasterData.js" />
+    <Content Include="web\views\DriverLicenceMasterData\DriverSchoolExamRecognitionTypeRelationships.js">
+      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\DriverSchoolExamRecognitionTypes.js">
+      <DependentUpon>web.drl.related.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\DriverSchoolInfoRelationships.js">
+      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\DriverSchoolInfos.js">
+      <DependentUpon>web.drl.related.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\DriverSchoolRelationships.js">
+      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\DriverSchools.js">
+      <DependentUpon>web.drl.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamClassArgeMapRelationships.js">
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
@@ -5504,6 +5894,12 @@
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\FilterCommunity.js">
+      <DependentUpon>web.drl.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\FilterCoreDataProduct.js">
+      <DependentUpon>web.drl.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\DriverLicenceMasterData\FilterDriverSchool.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\FilterExamClass.js">

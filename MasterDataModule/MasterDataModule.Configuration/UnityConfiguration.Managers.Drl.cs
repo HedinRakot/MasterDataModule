@@ -16,6 +16,7 @@ namespace MasterDataModule.Configuration
         private static void InitializeDrl(IUnityContainer container)
         {
             container.RegisterType<IMessageLocalizationManager, MessageLocalizationManager>();
+            container.RegisterType<ICoreDataProductManager, CoreDataProductManager>();
             container.RegisterType<IReturnReasonManager, ReturnReasonManager>();
             container.RegisterType<IExamPossibleResultManager, ExamPossibleResultManager>();
             container.RegisterType<ISchoolInfoManager, SchoolInfoManager>();
@@ -23,9 +24,14 @@ namespace MasterDataModule.Configuration
             container.RegisterType<IAuthorityManager, AuthorityManager>();
             container.RegisterType<ICommunityManager, CommunityManager>();
             container.RegisterType<IExamRecognitionTypeManager, ExamRecognitionTypeManager>();
+            container.RegisterType<ICoreDataProductClassBasisManager, CoreDataProductClassBasisManager>();
+            container.RegisterType<ICommunityParticipantManager, CommunityParticipantManager>();
             container.RegisterType<IExamRecognitionTypeExamClassManager, ExamRecognitionTypeExamClassManager>();
+            container.RegisterType<IDriverSchoolManager, DriverSchoolManager>();
             container.RegisterType<IExamRoomManager, ExamRoomManager>();
             container.RegisterType<IExamStationManager, ExamStationManager>();
+            container.RegisterType<IDriverSchoolExamRecognitionTypeManager, DriverSchoolExamRecognitionTypeManager>();
+            container.RegisterType<IDriverSchoolInfoManager, DriverSchoolInfoManager>();
             container.RegisterType<IExamStationExamRecognitionTypeManager, ExamStationExamRecognitionTypeManager>();
             container.RegisterType<IHolidayManager, HolidayManager>();
             container.RegisterType<IExamClassManager, ExamClassManager>();
@@ -36,6 +42,7 @@ namespace MasterDataModule.Configuration
             container.RegisterType<IExamClassInclusiveClassManager, ExamClassInclusiveClassManager>();
             container.RegisterType<IExamClassMapManager, ExamClassMapManager>();
             container.RegisterType<IExamClassRequiredClassManager, ExamClassRequiredClassManager>();
+            container.RegisterType<ICoreDataProductLocalizationManager, CoreDataProductLocalizationManager>();
             container.RegisterType<IExamClassRestrictedClassManager, ExamClassRestrictedClassManager>();
             container.RegisterType<IExamConstraintManager, ExamConstraintManager>();
             container.RegisterType<IMeetingPointManager, MeetingPointManager>();

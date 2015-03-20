@@ -295,6 +295,27 @@
     <Compile Include="Data\Configuration\UserMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\Drl\CommunityParticipantMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\CoreDataProductClassBasisMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\CoreDataProductLocalizationMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\CoreDataProductMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\DriverSchoolExamRecognitionTypeMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\DriverSchoolInfoMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Drl\DriverSchoolMapping.cs">
+      <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\MasterDataConfiguration.Context.cs">
       <DependentUpon>MasterDataConfiguration.Context.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -612,6 +633,27 @@
       <DependentUpon>Drl.Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Drl\CommunityManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\CommunityParticipantManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\CoreDataProductClassBasisManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\CoreDataProductLocalizationManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\CoreDataProductManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\DriverSchoolExamRecognitionTypeManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\DriverSchoolInfoManager.cs">
+      <DependentUpon>Drl.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Drl\DriverSchoolManager.cs">
       <DependentUpon>Drl.Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Drl\ExamClassArgeMapManager.cs">

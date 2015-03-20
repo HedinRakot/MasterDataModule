@@ -1,5 +1,6 @@
 using MasterDataModule.Contracts;
 using System;
+using System.Collections.Generic;
 
 namespace MasterDataModule.Contracts.Entities
 {
@@ -129,6 +130,7 @@ namespace MasterDataModule.Contracts.Entities
         ///     ENDE-DATUM DER GUELTIGKEIT
         /// </summary>
         public DateTime ToDate{ get; set; }
+        public virtual ICollection<DriverSchoolInfo> DriverSchoolInfos{ get; set; }
         DateTime? IIntervalFields.FromDate
         {
             get { return FromDate; }

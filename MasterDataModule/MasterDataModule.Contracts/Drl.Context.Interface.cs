@@ -20,6 +20,10 @@ namespace MasterDataModule.Contracts
         /// </summary>
         IQueryable<MessageLocalization> MessageLocalization{get;}
         /// <summary>
+        ///     Set of <see cref="CoreDataProduct"/> entities from table DATA.DRL_CORE_DATA_PRODUCT
+        /// </summary>
+        IQueryable<CoreDataProduct> CoreDataProduct{get;}
+        /// <summary>
         ///     Set of <see cref="ReturnReason"/> entities from table DATA.DRL_RETURN_REASON
         /// </summary>
         IQueryable<ReturnReason> ReturnReason{get;}
@@ -48,9 +52,21 @@ namespace MasterDataModule.Contracts
         /// </summary>
         IQueryable<ExamRecognitionType> ExamRecognitionType{get;}
         /// <summary>
+        ///     Set of <see cref="CoreDataProductClassBasis"/> entities from table DATA.DRL_CORE_DATA_PRODUCT_CLASS_BASIS_RSP
+        /// </summary>
+        IQueryable<CoreDataProductClassBasis> CoreDataProductClassBasis{get;}
+        /// <summary>
+        ///     Set of <see cref="CommunityParticipant"/> entities from table DATA.DRL_COMMUNITY_PARTICIPANT
+        /// </summary>
+        IQueryable<CommunityParticipant> CommunityParticipant{get;}
+        /// <summary>
         ///     Set of <see cref="ExamRecognitionTypeExamClass"/> entities from table DATA.DRL_EXAM_RECOGNITION_TYPE_EXAM_CLASS_RSP
         /// </summary>
         IQueryable<ExamRecognitionTypeExamClass> ExamRecognitionTypeExamClass{get;}
+        /// <summary>
+        ///     Set of <see cref="DriverSchool"/> entities from table DATA.DRL_DRIVER_SCHOOL
+        /// </summary>
+        IQueryable<DriverSchool> DriverSchool{get;}
         /// <summary>
         ///     Set of <see cref="ExamRoom"/> entities from table DATA.DRL_EXAM_ROOM
         /// </summary>
@@ -59,6 +75,14 @@ namespace MasterDataModule.Contracts
         ///     Set of <see cref="ExamStation"/> entities from table DATA.DRL_EXAM_STATION
         /// </summary>
         IQueryable<ExamStation> ExamStation{get;}
+        /// <summary>
+        ///     Set of <see cref="DriverSchoolExamRecognitionType"/> entities from table DATA.DRL_DRIVER_SCHOOL_EXAM_RECOGNITION_TYPE_RSP
+        /// </summary>
+        IQueryable<DriverSchoolExamRecognitionType> DriverSchoolExamRecognitionType{get;}
+        /// <summary>
+        ///     Set of <see cref="DriverSchoolInfo"/> entities from table DATA.DRL_DRIVER_SCHOOL_INFO_RSP
+        /// </summary>
+        IQueryable<DriverSchoolInfo> DriverSchoolInfo{get;}
         /// <summary>
         ///     Set of <see cref="ExamStationExamRecognitionType"/> entities from table DATA.DRL_EXAM_STATION_EXAM_RECOGNITION_TYPE_RSP
         /// </summary>
@@ -99,6 +123,10 @@ namespace MasterDataModule.Contracts
         ///     Set of <see cref="ExamClassRequiredClass"/> entities from table DATA.DRL_EXAM_CLASS_REQUIRED_CLASS_RSP
         /// </summary>
         IQueryable<ExamClassRequiredClass> ExamClassRequiredClass{get;}
+        /// <summary>
+        ///     Set of <see cref="CoreDataProductLocalization"/> entities from table DATA.DRL_CORE_DATA_PRODUCT_LOCALIZATION
+        /// </summary>
+        IQueryable<CoreDataProductLocalization> CoreDataProductLocalization{get;}
         /// <summary>
         ///     Set of <see cref="ExamClassRestrictedClass"/> entities from table DATA.DRL_EXAM_CLASS_RESTRICTED_CLASS_RSP
         /// </summary>

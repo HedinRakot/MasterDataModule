@@ -154,6 +154,7 @@ namespace MasterDataModule.Contracts.Entities
         ///     DE: Auflistungsreihenfolge EN: Sort order for GUI
         /// </summary>
         public int SortOrder{ get; set; }
+        public virtual ICollection<CoreDataProductClassBasis> CoreDataProductClassBases{ get; set; }
         public virtual ICollection<ExamRecognitionTypeExamClass> ExamRecognitionTypeExamClasses{ get; set; }
         public virtual ICollection<ExamClassArgeMap> ExamClassArgeMaps{ get; set; }
         public virtual ICollection<ExamClassInclusiveClass> ExamClassInclusiveClasses{ get; set; }

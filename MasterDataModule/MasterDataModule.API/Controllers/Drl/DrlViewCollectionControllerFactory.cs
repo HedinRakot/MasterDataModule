@@ -14,6 +14,14 @@ namespace MasterDataModule.API.Controllers
     {
         public void GetViewCollections(IDependencyResolver resolver, CollectionTypesModel model, Dictionary<string, IEnumerable<object>> result)
         {
+            if (model.ReturnReason)
+            	result.Add("ReturnReason", GetViewCollection<ReturnReason, int, IReturnReasonManager>(
+            		(IReturnReasonManager)resolver.GetService(typeof(IReturnReasonManager))));
+
+            if (model.SchoolInfo)
+            	result.Add("SchoolInfo", GetViewCollection<SchoolInfo, int, ISchoolInfoManager>(
+            		(ISchoolInfoManager)resolver.GetService(typeof(ISchoolInfoManager))));
+
             if (model.ExamRecognitionType)
             	result.Add("ExamRecognitionType", GetViewCollection<ExamRecognitionType, int, IExamRecognitionTypeManager>(
             		(IExamRecognitionTypeManager)resolver.GetService(typeof(IExamRecognitionTypeManager))));

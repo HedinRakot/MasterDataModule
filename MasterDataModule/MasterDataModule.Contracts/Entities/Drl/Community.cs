@@ -120,6 +120,11 @@ namespace MasterDataModule.Contracts.Entities
         ///     ENDE-DATUM DER GUELTIGKEIT
         /// </summary>
         public DateTime ToDate{ get; set; }
+        public virtual DriverSchool DriverSchool{ get; set; }
+        public bool HasDriverSchool
+        {
+            get { return !ReferenceEquals(DriverSchool, null); }
+        }
         DateTime? IIntervalFields.FromDate
         {
             get { return FromDate; }

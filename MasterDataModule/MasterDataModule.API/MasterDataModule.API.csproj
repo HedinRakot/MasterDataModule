@@ -377,6 +377,18 @@
     <Compile Include="Controllers\Drl\CommunitiesController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\Drl\CommunityParticipantsController.cs">
+      <DependentUpon>Drl.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Drl\CoreDataProductClassBasesController.cs">
+      <DependentUpon>Drl.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Drl\CoreDataProductLocalizationsController.cs">
+      <DependentUpon>Drl.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Drl\CoreDataProductsController.cs">
+      <DependentUpon>Drl.Controllers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Drl\Custom.ArgeVersionsController.cs" />
     <Compile Include="Controllers\Drl\Custom.AuthoritiesController.cs" />
     <Compile Include="Controllers\Drl\Custom.CommunitiesController.cs" />
@@ -395,6 +407,15 @@
     <Compile Include="Controllers\Drl\Custom.MessageLocalizationsController.cs" />
     <Compile Include="Controllers\Drl\Custom.ReturnReasonsController.cs" />
     <Compile Include="Controllers\Drl\Custom.SchoolInfosController.cs" />
+    <Compile Include="Controllers\Drl\DriverSchoolExamRecognitionTypesController.cs">
+      <DependentUpon>Drl.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Drl\DriverSchoolInfosController.cs">
+      <DependentUpon>Drl.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Drl\DriverSchoolsController.cs">
+      <DependentUpon>Drl.Controllers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Drl\DrlViewCollectionControllerFactory.cs">
       <DependentUpon>Drl.ViewCollectionFactory.tt</DependentUpon>
     </Compile>
@@ -669,6 +690,27 @@
       <DependentUpon>Drl.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Drl\CommunityModel.cs">
+      <DependentUpon>Drl.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Drl\CommunityParticipantModel.cs">
+      <DependentUpon>Drl.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Drl\CoreDataProductClassBasisModel.cs">
+      <DependentUpon>Drl.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Drl\CoreDataProductLocalizationModel.cs">
+      <DependentUpon>Drl.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Drl\CoreDataProductModel.cs">
+      <DependentUpon>Drl.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Drl\DriverSchoolExamRecognitionTypeModel.cs">
+      <DependentUpon>Drl.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Drl\DriverSchoolInfoModel.cs">
+      <DependentUpon>Drl.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Drl\DriverSchoolModel.cs">
       <DependentUpon>Drl.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Drl\ExamClassArgeMapModel.cs">

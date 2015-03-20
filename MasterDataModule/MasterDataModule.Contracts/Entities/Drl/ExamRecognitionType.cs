@@ -131,6 +131,7 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public DateTime ToDate{ get; set; }
         public virtual ICollection<ExamRecognitionTypeExamClass> ExamRecognitionTypeExamClasses{ get; set; }
+        public virtual ICollection<DriverSchoolExamRecognitionType> DriverSchoolExamRecognitionTypes{ get; set; }
         public virtual ICollection<ExamStationExamRecognitionType> ExamStationExamRecognitionTypes{ get; set; }
         DateTime? IIntervalFields.FromDate
         {

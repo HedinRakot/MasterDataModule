@@ -1,0 +1,119 @@
+<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#DriverLicenceMasterData" data-localized="masterData"></a> / 
+	<a href="#CoreDataProducts" data-localized="pageTitle"></a> / <%= title %></span>
+
+<form method="post" class="add-model">
+    <div class="inline-block" style="width: 520px;">
+		<div class="editor-label">
+			<label for="insCoreDataProductId" data-localized="insCoreDataProductId"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="insCoreDataProductId" name="insCoreDataProductId" />
+		</div>   
+		<div class="editor-label">
+			<label for="minAge" data-localized="minAge"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="minAge" name="minAge" />
+		</div>   
+		<div class="editor-label">
+			<label for="maxAge" data-localized="maxAge"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="maxAge" name="maxAge" />
+		</div>   
+		<div class="editor-label">
+			<label for="examType" data-localized="examType"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="examType" name="examType" />
+		</div>   
+		<div class="editor-label">
+			<label for="priorTimeInMonths" data-localized="priorTimeInMonths"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="priorTimeInMonths" name="priorTimeInMonths" />
+		</div>   
+		<div class="editor-label">
+			<label for="expirationInMonth" data-localized="expirationInMonth"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="expirationInMonth" name="expirationInMonth" />
+		</div>   
+		<div class="editor-label">
+			<label for="repeatTimeInDays" data-localized="repeatTimeInDays"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="repeatTimeInDays" name="repeatTimeInDays" />
+		</div>   
+		<div class="editor-label">
+			<label for="trainingCertFlag" data-localized="trainingCertFlag"></label>
+            <input type="checkbox" id="trainingCertFlag" name="trainingCertFlag" />
+		</div>   
+		<div class="editor-label">
+			<label for="resultFlag" data-localized="resultFlag"></label>
+            <input type="checkbox" id="resultFlag" name="resultFlag" />
+		</div>   
+		<div class="editor-label">
+			<label for="multiplyFlag" data-localized="multiplyFlag"></label>
+            <input type="checkbox" id="multiplyFlag" name="multiplyFlag" />
+		</div>   
+		<div class="editor-label">
+			<label for="fromDate" data-localized="fromDate"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="datepicker" id="fromDate" name="fromDate" />
+		</div>   
+		<div class="editor-label">
+			<label for="toDate" data-localized="toDate"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="datepicker" id="toDate" name="toDate" />
+		</div>   
+		<div class="editor-label">
+			<label for="isMofaPrint" data-localized="isMofaPrint"></label>
+            <input type="checkbox" id="isMofaPrint" name="isMofaPrint" />
+		</div>   
+		<div class="editor-label">
+			<label for="isAdditionalProduct" data-localized="isAdditionalProduct"></label>
+            <input type="checkbox" id="isAdditionalProduct" name="isAdditionalProduct" />
+		</div>   
+		<div class="editor-label">
+			<label for="isPrepaymentRequired" data-localized="isPrepaymentRequired"></label>
+            <input type="checkbox" id="isPrepaymentRequired" name="isPrepaymentRequired" />
+		</div>   
+		<div class="editor-label">
+			<label for="isMandatory" data-localized="isMandatory"></label>
+            <input type="checkbox" id="isMandatory" name="isMandatory" />
+		</div>   
+		<div class="editor-label">
+			<label for="feProductNumber" data-localized="feProductNumber"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="feProductNumber" name="feProductNumber" />
+		</div>   
+		<div class="editor-label">
+			<label for="repeatTimeInDaysReduced" data-localized="repeatTimeInDaysReduced"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="repeatTimeInDaysReduced" name="repeatTimeInDaysReduced" />
+		</div>   
+	</div>
+	<div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>
