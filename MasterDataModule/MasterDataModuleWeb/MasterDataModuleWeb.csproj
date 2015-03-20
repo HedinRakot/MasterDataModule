@@ -264,6 +264,9 @@
     <Content Include="web\collections\CommonMasterData\Org\OrgInspectionDevices.js">
       <DependentUpon>web.org.collections.tt</DependentUpon>
     </Content>
+    <Content Include="web\collections\CommonMasterData\Org\OrgOrganizationalUnits.js">
+      <DependentUpon>web.org.collections.tt</DependentUpon>
+    </Content>
     <Content Include="web\collections\CommonMasterData\Org\OrgRelationshipTypes.js">
       <DependentUpon>web.org.collections.tt</DependentUpon>
     </Content>
@@ -1105,31 +1108,31 @@
     <Content Include="web\resources\CommonMasterData\Customer\FilterInsTaxClass.de.js">
       <DependentUpon>web.customer.filter.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\CommonMasterData\Customer\FilterInsTaxClasses.en.js">
+    <Content Include="web\resources\CommonMasterData\Customer\FilterInsTaxClass.en.js">
       <DependentUpon>web.customer.filter.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\CommonMasterData\Customer\FilterOrdBillingParameter.de.js">
       <DependentUpon>web.customer.filter.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\CommonMasterData\Customer\FilterOrdBillingParameters.en.js">
+    <Content Include="web\resources\CommonMasterData\Customer\FilterOrdBillingParameter.en.js">
       <DependentUpon>web.customer.filter.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\CommonMasterData\Customer\FilterOrdContactPersonFunction.de.js">
       <DependentUpon>web.customer.filter.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\CommonMasterData\Customer\FilterOrdContactPersonFunctions.en.js">
+    <Content Include="web\resources\CommonMasterData\Customer\FilterOrdContactPersonFunction.en.js">
       <DependentUpon>web.customer.filter.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\CommonMasterData\Customer\FilterOrdCustomerInfo.de.js">
       <DependentUpon>web.customer.filter.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\CommonMasterData\Customer\FilterOrdCustomerInfos.en.js">
+    <Content Include="web\resources\CommonMasterData\Customer\FilterOrdCustomerInfo.en.js">
       <DependentUpon>web.customer.filter.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\CommonMasterData\Customer\FilterOrdPartnerRole.de.js">
       <DependentUpon>web.customer.filter.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\CommonMasterData\Customer\FilterOrdPartnerRoles.en.js">
+    <Content Include="web\resources\CommonMasterData\Customer\FilterOrdPartnerRole.en.js">
       <DependentUpon>web.customer.filter.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\CommonMasterData\Customer\InsTaxClasses.de.js">

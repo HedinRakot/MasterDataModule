@@ -44,6 +44,10 @@ namespace MasterDataModule.Contracts
         /// </summary>
         IQueryable<InsValidPeriod> InsValidPeriod{get;}
         /// <summary>
+        ///     Set of <see cref="InsCoreDataProduct"/> entities from table dbo.INS_CORE_DATA_PRODUCT
+        /// </summary>
+        IQueryable<InsCoreDataProduct> InsCoreDataProduct{get;}
+        /// <summary>
         ///     Set of <see cref="InsPfpPosition"/> entities from table dbo.INS_PFP_POSITION
         /// </summary>
         IQueryable<InsPfpPosition> InsPfpPosition{get;}

@@ -23,6 +23,30 @@ namespace MasterDataModule.API
                 {"TO_DATE", "toDate"},
             });
 
+            tables.Add("INS_CORE_DATA_PRODUCT", new TableMapping("INS_CORE_DATA_PRODUCT", "InsCoreDataProduct", 20)
+            {
+                {"PRODUCT_NUMBER", "productNumber"},
+                {"IS_NEXT_INSPECTION_PRODUCT", "isNextInspectionProduct"},
+                {"IS_PROVISION_COST_MAY_BE_CALCULATED", "isProvisionCostMayBeCalculated"},
+                {"PRICE_REPORT_REQUIRED", "priceReportRequired"},
+                {"INS_PRODUCT_TYPE_ID", "insProductTypeId"},
+                {"INS_PRODUCT_OBJECT_CLASS_ID", "insProductObjectClassId"},
+                {"INS_PRODUCT_OBJECT_TYPE_ID", "insProductObjectTypeId"},
+                {"INS_PRODUCT_MATERIAL_GROUP_ID", "insProductMaterialGroupId"},
+                {"INS_PRODUCT_CLASS_ID", "insProductClassId"},
+                {"INS_CORE_DATA_PRODUCT_GROUP_ID", "insCoreDataProductGroupId"},
+                {"IS_INGENER", "isIngener"},
+                {"IS_PRODUCTIVE", "isProductive"},
+                {"IS_KM_GELD", "isKmGeld"},
+                {"IS_OTHER_MATERIAL", "isOtherMaterial"},
+                {"IS_TRIP", "isTrip"},
+                {"FROM_DATE", "fromDate"},
+                {"TO_DATE", "toDate"},
+                {"REUSAGE_TYPE", "reusageType"},
+                {"INS_TAX_CODE_ID", "insTaxCodeId"},
+                {"OLD_PRODUCT_NUMBER", "oldProductNumber"},
+            });
+
             tables.Add("EMP_EMPLOYEE", new TableMapping("EMP_EMPLOYEE", "EmpEmployee", 15)
             {
                 {"PERSONAL_NUMBER", "personalNumber"},

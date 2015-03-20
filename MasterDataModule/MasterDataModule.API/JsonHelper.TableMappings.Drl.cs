@@ -20,19 +20,6 @@ namespace MasterDataModule.API
                 {"MESSAGE", "message"},
             });
 
-            tables.Add("SYS_COLUMNS", new TableMapping("SYS_COLUMNS", "SysColumn", 3)
-            {
-                {"SYS_TABLE_ID", "sysTableId"},
-                {"DESCRIPTION", "description"},
-                {"READ_ONLY", "readOnly"},
-            });
-
-            tables.Add("SYS_TABLES", new TableMapping("SYS_TABLES", "SysTable", 2)
-            {
-                {"DESCRIPTION", "description"},
-                {"EDIT_MODE", "editMode"},
-            });
-
             tables.Add("DRL_RETURN_REASON", new TableMapping("DRL_RETURN_REASON", "ReturnReason", 6)
             {
                 {"NAME", "name"},

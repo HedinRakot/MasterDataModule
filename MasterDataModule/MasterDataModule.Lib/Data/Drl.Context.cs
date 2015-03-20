@@ -20,16 +20,11 @@ namespace MasterDataModule.Lib.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(MessageLocalizationMapping.Instance);
-            modelBuilder.Configurations.Add(SysColumnMapping.Instance);
-            modelBuilder.Configurations.Add(SysTableMapping.Instance);
-            modelBuilder.Configurations.Add(RoleMapping.Instance);
             modelBuilder.Configurations.Add(ReturnReasonMapping.Instance);
-            modelBuilder.Configurations.Add(PermissionMapping.Instance);
             modelBuilder.Configurations.Add(ExamPossibleResultMapping.Instance);
             modelBuilder.Configurations.Add(SchoolInfoMapping.Instance);
             modelBuilder.Configurations.Add(ArgeVersionMapping.Instance);
             modelBuilder.Configurations.Add(AuthorityMapping.Instance);
-            modelBuilder.Configurations.Add(UserMapping.Instance);
             modelBuilder.Configurations.Add(CommunityMapping.Instance);
             modelBuilder.Configurations.Add(ExamRecognitionTypeMapping.Instance);
             modelBuilder.Configurations.Add(ExamRecognitionTypeExamClassMapping.Instance);
@@ -57,25 +52,9 @@ namespace MasterDataModule.Lib.Data
         /// </summary>
         public IQueryable<MessageLocalization> MessageLocalization{ get; set; }
         /// <summary>
-        ///     Set of <see cref="SysColumn"/> entities from table dbo.SYS_COLUMNS
-        /// </summary>
-        public IQueryable<SysColumn> SysColumn{ get; set; }
-        /// <summary>
-        ///     Set of <see cref="SysTable"/> entities from table dbo.SYS_TABLES
-        /// </summary>
-        public IQueryable<SysTable> SysTable{ get; set; }
-        /// <summary>
-        ///     Set of <see cref="Role"/> entities from table dbo.MASTER_DATA_ROLE
-        /// </summary>
-        public IQueryable<Role> Role{ get; set; }
-        /// <summary>
         ///     Set of <see cref="ReturnReason"/> entities from table DATA.DRL_RETURN_REASON
         /// </summary>
         public IQueryable<ReturnReason> ReturnReason{ get; set; }
-        /// <summary>
-        ///     Set of <see cref="Permission"/> entities from table dbo.MASTER_DATA_PERMISSION
-        /// </summary>
-        public IQueryable<Permission> Permission{ get; set; }
         /// <summary>
         ///     Set of <see cref="ExamPossibleResult"/> entities from table DATA.DRL_EXAM_POSSIBLE_RESULT
         /// </summary>
@@ -92,10 +71,6 @@ namespace MasterDataModule.Lib.Data
         ///     Set of <see cref="Authority"/> entities from table DATA.DRL_AUTHORITY
         /// </summary>
         public IQueryable<Authority> Authority{ get; set; }
-        /// <summary>
-        ///     Set of <see cref="User"/> entities from table dbo.MASTER_DATA_USER
-        /// </summary>
-        public IQueryable<User> User{ get; set; }
         /// <summary>
         ///     Set of <see cref="Community"/> entities from table DATA.DRL_COMMUNITY
         /// </summary>

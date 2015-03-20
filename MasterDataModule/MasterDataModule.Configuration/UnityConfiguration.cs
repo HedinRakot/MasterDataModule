@@ -24,7 +24,7 @@ namespace MasterDataModule.Configuration
             InitializeDrl(container);
             InitializeAsProCommon(container);
             InitializeAsProTP(container);
-            InitializeMasterDataСonfiguration(container);
+            InitializeMasterDataConfiguration(container);
         }
     }
 }

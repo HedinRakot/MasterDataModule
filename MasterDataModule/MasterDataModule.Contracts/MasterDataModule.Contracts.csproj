@@ -387,7 +387,6 @@
     <Compile Include="IRemovable.cs" />
     <Compile Include="ISaveManager.cs" />
     <Compile Include="IIntervalFields.cs" />
-    <Compile Include="Managers\ASProDataContextRequestManager.cs" />
     <Compile Include="Managers\AsPro\Common\IEmpCashPermissionTypeManager.cs">
       <DependentUpon>Common.IManagers.tt</DependentUpon>
     </Compile>
@@ -665,7 +664,6 @@
       <DependentUpon>Drl.IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Drl\IUserManager.Custom.cs" />
-    <Compile Include="Managers\FeDataContextRequestManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

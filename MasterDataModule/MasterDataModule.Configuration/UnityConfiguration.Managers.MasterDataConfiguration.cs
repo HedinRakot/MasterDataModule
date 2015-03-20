@@ -13,7 +13,7 @@ namespace MasterDataModule.Configuration
 {
     public static partial class UnityConfiguration
     {
-        private static void InitializeMasterDataСonfiguration(IUnityContainer container)
+        private static void InitializeMasterDataConfiguration(IUnityContainer container)
         {
             container.RegisterType<IPermissionManager, PermissionManager>();
             container.RegisterType<IRoleManager, RoleManager>();

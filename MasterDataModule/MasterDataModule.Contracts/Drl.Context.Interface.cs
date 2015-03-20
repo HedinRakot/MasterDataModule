@@ -20,25 +20,9 @@ namespace MasterDataModule.Contracts
         /// </summary>
         IQueryable<MessageLocalization> MessageLocalization{get;}
         /// <summary>
-        ///     Set of <see cref="SysColumn"/> entities from table dbo.SYS_COLUMNS
-        /// </summary>
-        IQueryable<SysColumn> SysColumn{get;}
-        /// <summary>
-        ///     Set of <see cref="SysTable"/> entities from table dbo.SYS_TABLES
-        /// </summary>
-        IQueryable<SysTable> SysTable{get;}
-        /// <summary>
-        ///     Set of <see cref="Role"/> entities from table dbo.MASTER_DATA_ROLE
-        /// </summary>
-        IQueryable<Role> Role{get;}
-        /// <summary>
         ///     Set of <see cref="ReturnReason"/> entities from table DATA.DRL_RETURN_REASON
         /// </summary>
         IQueryable<ReturnReason> ReturnReason{get;}
-        /// <summary>
-        ///     Set of <see cref="Permission"/> entities from table dbo.MASTER_DATA_PERMISSION
-        /// </summary>
-        IQueryable<Permission> Permission{get;}
         /// <summary>
         ///     Set of <see cref="ExamPossibleResult"/> entities from table DATA.DRL_EXAM_POSSIBLE_RESULT
         /// </summary>
@@ -55,10 +39,6 @@ namespace MasterDataModule.Contracts
         ///     Set of <see cref="Authority"/> entities from table DATA.DRL_AUTHORITY
         /// </summary>
         IQueryable<Authority> Authority{get;}
-        /// <summary>
-        ///     Set of <see cref="User"/> entities from table dbo.MASTER_DATA_USER
-        /// </summary>
-        IQueryable<User> User{get;}
         /// <summary>
         ///     Set of <see cref="Community"/> entities from table DATA.DRL_COMMUNITY
         /// </summary>
