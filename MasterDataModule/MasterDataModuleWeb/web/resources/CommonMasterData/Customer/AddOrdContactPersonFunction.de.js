@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Kunde-Funktionen Ansprechpartner editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Kunde-Funktionen Ansprechpartner',
+		pleaseSelect: 'Bitte auswählen',
 		sapId: 'SAP Kennung',	
 		description: 'Beschreibungsfeld',	
 		fromDate: 'Von Datum',	

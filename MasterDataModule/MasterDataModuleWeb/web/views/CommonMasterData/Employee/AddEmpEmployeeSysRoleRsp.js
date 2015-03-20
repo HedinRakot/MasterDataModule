@@ -10,11 +10,17 @@ define([
         tableName: 'EmpEmployeeSysRoleRsp',
         actionUrl: '#EmpEmployeeSysRoleRsps',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#empEmployeeId': 'empEmployeeId',
 			'#sysRoleId': 'sysRoleId',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

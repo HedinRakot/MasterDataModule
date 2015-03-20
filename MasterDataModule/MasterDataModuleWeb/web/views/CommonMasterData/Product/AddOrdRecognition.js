@@ -10,11 +10,17 @@ define([
         tableName: 'OrdRecognition',
         actionUrl: '#OrdRecognitions',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#ordRecognitionTypeId': 'ordRecognitionTypeId',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
 			'#orgAccountingAreaId': 'orgAccountingAreaId',
+			};
+
+            return result;
 		},
 
         render: function () {

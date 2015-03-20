@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Billing parameter',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Billing parameter',
+		pleaseSelect: 'Please select',
 		sapId: 'SAP ID',	
 		description: 'Description',	
 		fromDate: 'From date',	

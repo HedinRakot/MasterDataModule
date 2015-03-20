@@ -10,11 +10,17 @@ define([
         tableName: 'InsCoreDataProductGroup',
         actionUrl: '#InsCoreDataProductGroups',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#name': 'name',
 			'#defaultDuration': 'defaultDuration',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

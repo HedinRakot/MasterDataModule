@@ -10,11 +10,17 @@ define([
         tableName: 'OrgInformation',
         actionUrl: '#OrgInformation',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#name': 'name',
 			'#value': 'value',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Zuordnung Verfügbarer Prüfschritt zu Prüfschritt editieren',
 	    masterData: 'TP Stammdaten',
 	    pageTitle: 'Zuordnung Verfügbarer Prüfschritt zu Prüfschritt',
+		pleaseSelect: 'Bitte auswählen',
 		insInspectionStepId: 'Beschreibung des Prüfschritts ',	
 		isMandatory: 'Angabe, ob Prüfschritt ein Pflichtprüfschritt ist',	
 		fromDate: 'Von Datum',	

@@ -10,12 +10,18 @@ define([
         tableName: 'InsValidPeriod',
         actionUrl: '#InsValidPeriods',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#description': 'description',
 			'#validityPeriod': 'validityPeriod',
 			'#isNextTerminPossible': 'isNextTerminPossible',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

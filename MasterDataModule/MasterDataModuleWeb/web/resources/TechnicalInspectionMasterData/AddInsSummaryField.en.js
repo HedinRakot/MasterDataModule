@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Summary field',
 	    masterData: 'TP masterdata',
 	    pageTitle: 'Summary field',
+		pleaseSelect: 'Please select',
 		description: 'Description',	
 		fromDate: 'From date',	
 		toDate: 'To date',	

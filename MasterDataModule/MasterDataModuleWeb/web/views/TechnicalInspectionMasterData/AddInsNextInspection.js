@@ -10,10 +10,16 @@ define([
         tableName: 'InsNextInspection',
         actionUrl: '#InsNextInspections',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#description': 'description',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

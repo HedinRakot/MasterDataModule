@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Produkt-Objekttypen editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Produkt-Objekttypen',
+		pleaseSelect: 'Bitte auswählen',
 		description: 'Beschreibung des Objekttyps',	
 		sapId: 'Kurzbeschreibung des Objekttyps',	
 		isAuNecessary: 'AU erforderlich',	

@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Customer info',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Customer info',
+		pleaseSelect: 'Please select',
 		textValue: 'Text value',	
 		numberValue: 'Number value',	
 		infoType: 'Info type',	

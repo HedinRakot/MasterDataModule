@@ -10,11 +10,17 @@ define([
         tableName: 'SysRoleSysPermissionRsp',
         actionUrl: '#SysRoleSysPermissionRsps',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#sysRoleId': 'sysRoleId',
 			'#sysPermissionId': 'sysPermissionId',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

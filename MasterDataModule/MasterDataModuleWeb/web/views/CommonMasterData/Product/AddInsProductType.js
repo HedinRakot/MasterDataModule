@@ -10,10 +10,16 @@ define([
         tableName: 'InsProductType',
         actionUrl: '#InsProductTypes',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#name': 'name',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

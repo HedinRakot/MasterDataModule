@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Passenger type',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Passenger type',
+		pleaseSelect: 'Please select',
 		text: 'Text',	
 		code: 'Code',	
 		fromDate: 'From date',	

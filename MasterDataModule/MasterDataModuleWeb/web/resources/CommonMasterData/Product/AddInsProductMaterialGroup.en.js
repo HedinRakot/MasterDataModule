@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Product material group',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Product material group',
+		pleaseSelect: 'Please select',
 		description: 'Description',	
 		sapId: 'SAP ID',	
 		fromDate: 'From date',	

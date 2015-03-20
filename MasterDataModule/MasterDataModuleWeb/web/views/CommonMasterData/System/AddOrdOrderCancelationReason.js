@@ -10,10 +10,16 @@ define([
         tableName: 'OrdOrderCancelationReason',
         actionUrl: '#OrdOrderCancelationReasons',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#cancelationReasonText': 'cancelationReasonText',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

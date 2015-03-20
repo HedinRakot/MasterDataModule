@@ -10,10 +10,16 @@ define([
         tableName: 'InsTaxClass',
         actionUrl: '#InsTaxClasses',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#taxClass': 'taxClass',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

@@ -10,11 +10,17 @@ define([
         tableName: 'InsProductClassGroup',
         actionUrl: '#InsProductClassGroups',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#description': 'description',
 			'#sapId': 'sapId',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

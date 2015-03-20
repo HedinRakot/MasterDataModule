@@ -10,11 +10,17 @@ define([
         tableName: 'EmpEmployeeTopEmployeeRsp',
         actionUrl: '#EmpEmployeeTopEmployeeRsps',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#empEmployeeId': 'empEmployeeId',
 			'#topEmployeeId': 'topEmployeeId',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

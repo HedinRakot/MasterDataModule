@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Valid period',
 	    masterData: 'TP masterdata',
 	    pageTitle: 'Valid period',
+		pleaseSelect: 'Please select',
 		description: 'Description',	
 		validityPeriod: 'Validity period',	
 		isNextTerminPossible: 'Is next term possible',	

@@ -12,6 +12,7 @@ define(function () {
         OrgInformation: 'Organization information',
         OrgTypes: 'Organization type',
         OrgInspectionDevices: 'Organization inspection device',
+        OrgOrganizationalUnits: 'Organizational unit',
 	};
 
 	return resources;

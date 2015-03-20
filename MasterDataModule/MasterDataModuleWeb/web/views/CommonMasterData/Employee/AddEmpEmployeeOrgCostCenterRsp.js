@@ -10,11 +10,17 @@ define([
         tableName: 'EmpEmployeeOrgCostCenterRsp',
         actionUrl: '#EmpEmployeeOrgCostCenterRsps',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#empEmployeeId': 'empEmployeeId',
 			'#orgCostCenterId': 'orgCostCenterId',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

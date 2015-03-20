@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Produkt-Steuercode editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Produkt-Steuercode',
+		pleaseSelect: 'Bitte auswählen',
 		taxCode: 'SAP-Steuer-Code',	
 		fromDate: 'Von Datum',	
 		toDate: 'Bis Datum',	

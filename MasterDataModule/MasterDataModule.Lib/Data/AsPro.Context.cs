@@ -70,6 +70,7 @@ namespace MasterDataModule.Lib.Data
             modelBuilder.Configurations.Add(InsProductMaterialGroupMapping.Instance);
             modelBuilder.Configurations.Add(InsProductObjectClassMapping.Instance);
             modelBuilder.Configurations.Add(InsProductObjectTypeMapping.Instance);
+            modelBuilder.Configurations.Add(OrgOrganizationalUnitMapping.Instance);
             modelBuilder.Configurations.Add(InsProductTypeMapping.Instance);
             modelBuilder.Configurations.Add(InsStatisticGroupMapping.Instance);
             modelBuilder.Configurations.Add(OrdAreaOfWorkMapping.Instance);
@@ -287,6 +288,10 @@ namespace MasterDataModule.Lib.Data
         ///     Set of <see cref="InsProductObjectType"/> entities from table dbo.INS_PRODUCT_OBJECT_TYPE
         /// </summary>
         public IQueryable<InsProductObjectType> InsProductObjectType{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="OrgOrganizationalUnit"/> entities from table dbo.ORG_ORGANIZATIONAL_UNIT
+        /// </summary>
+        public IQueryable<OrgOrganizationalUnit> OrgOrganizationalUnit{ get; set; }
         /// <summary>
         ///     Set of <see cref="InsProductType"/> entities from table dbo.INS_PRODUCT_TYPE
         /// </summary>

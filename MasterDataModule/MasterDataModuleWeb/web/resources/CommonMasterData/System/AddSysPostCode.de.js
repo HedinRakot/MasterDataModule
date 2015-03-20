@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Postleitzahl editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Postleitzahl',
+		pleaseSelect: 'Bitte auswählen',
 		postCode: 'Postleitzahl',	
 		city: 'Ort',	
 		street: 'Straße',	

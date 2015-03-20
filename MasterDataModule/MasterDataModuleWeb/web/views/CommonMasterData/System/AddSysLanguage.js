@@ -10,13 +10,19 @@ define([
         tableName: 'SysLanguage',
         actionUrl: '#SysLanguages',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#sapId': 'sapId',
 			'#sapIdIso': 'sapIdIso',
 			'#resourceFileName': 'resourceFileName',
 			'#isAvailable': 'isAvailable',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

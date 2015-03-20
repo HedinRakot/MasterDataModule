@@ -1,6 +1,6 @@
 define([
 	'base/base-object-filter-view',
-	'models/CommonMasterData/Employee/FilterEmpEmployeeOrgCostCenterRsp'
+	'models/CommonMasterData/Org/FilterOrgOrganizationalUnit'
 ], function (BaseFilterView, Filter) {
     'use strict'
 

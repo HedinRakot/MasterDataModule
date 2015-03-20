@@ -10,11 +10,17 @@ define([
         tableName: 'InsPfpInspectionTypePfpPositionRsp',
         actionUrl: '#InsPfpInspectionTypePfpPositionRsps',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#insPfpPositionId': 'insPfpPositionId',
 			'#insPfpInspectionTypeId': 'insPfpInspectionTypeId',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

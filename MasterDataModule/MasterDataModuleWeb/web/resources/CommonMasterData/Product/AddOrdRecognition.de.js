@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Anerkennung editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Anerkennung',
+		pleaseSelect: 'Bitte auswählen',
 		ordRecognitionTypeId: 'Anerkennungstyp ',	
 		fromDate: 'Von Datum',	
 		toDate: 'Bis Datum',	

@@ -1,0 +1,95 @@
+<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#CommonMasterData" data-localized="masterData"></a> / 
+	<a href="#OrgOrganizationalUnits" data-localized="pageTitle"></a> / <%= title %></span>
+
+<form method="post" class="add-model">
+    <div class="inline-block" style="width: 520px;">
+		<div class="editor-label">
+			<label for="orgNumber" data-localized="orgNumber"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="orgNumber" name="orgNumber" />
+		</div>   
+		<div class="editor-label">
+			<label for="name" data-localized="name"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="name" name="name" />
+		</div>   
+		<div class="editor-label">
+			<label for="abbr" data-localized="abbr"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="abbr" name="abbr" />
+		</div>   
+		<div class="editor-label">
+			<label for="locationAbbr" data-localized="locationAbbr"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="locationAbbr" name="locationAbbr" />
+		</div>   
+		<div class="editor-label">
+			<label for="sysLocationId" data-localized="sysLocationId"></label>
+		</div>
+		<div class="editor-field">
+            <select  id="sysLocationId" name="sysLocationId" />
+		</div>   
+		<div class="editor-label">
+			<label for="orgTypeId" data-localized="orgTypeId"></label>
+		</div>
+		<div class="editor-field">
+            <select  id="orgTypeId" name="orgTypeId" />
+		</div>   
+		<div class="editor-label">
+			<label for="emailFrom" data-localized="emailFrom"></label>
+		</div>
+		<div class="editor-field">
+            <textarea type="text" class="k-textbox" style="width: 362px" id="emailFrom" name="emailFrom" />
+		</div>   
+		<div class="editor-label">
+			<label for="emailTo" data-localized="emailTo"></label>
+		</div>
+		<div class="editor-field">
+            <textarea type="text" class="k-textbox" style="width: 362px" id="emailTo" name="emailTo" />
+		</div>   
+		<div class="editor-label">
+			<label for="isEgdokPrintAlways" data-localized="isEgdokPrintAlways"></label>
+            <input type="checkbox" id="isEgdokPrintAlways" name="isEgdokPrintAlways" />
+		</div>   
+		<div class="editor-label">
+			<label for="fromDate" data-localized="fromDate"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="datepicker" id="fromDate" name="fromDate" />
+		</div>   
+		<div class="editor-label">
+			<label for="toDate" data-localized="toDate"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="datepicker" id="toDate" name="toDate" />
+		</div>   
+		<div class="editor-label">
+			<label for="orgAccountingAreaId" data-localized="orgAccountingAreaId"></label>
+		</div>
+		<div class="editor-field">
+            <select  id="orgAccountingAreaId" name="orgAccountingAreaId" />
+		</div>   
+	</div>
+	<div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>

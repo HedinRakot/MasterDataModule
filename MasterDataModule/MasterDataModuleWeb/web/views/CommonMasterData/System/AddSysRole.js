@@ -10,12 +10,18 @@ define([
         tableName: 'SysRole',
         actionUrl: '#SysRoles',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#roleNumber': 'roleNumber',
 			'#name': 'name',
 			'#description': 'description',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

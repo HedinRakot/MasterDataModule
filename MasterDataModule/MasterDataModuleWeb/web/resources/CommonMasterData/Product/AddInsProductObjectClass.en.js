@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Product object class',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Product object class',
+		pleaseSelect: 'Please select',
 		description: 'Description',	
 		weightFrom: 'Weight from',	
 		fromDate: 'From date',	

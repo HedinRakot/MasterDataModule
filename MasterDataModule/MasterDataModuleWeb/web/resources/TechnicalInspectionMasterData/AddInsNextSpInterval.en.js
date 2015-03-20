@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Next SP-Interval',
 	    masterData: 'TP masterdata',
 	    pageTitle: 'Next SP-Interval',
+		pleaseSelect: 'Please select',
 		insProductObjectTypeId: 'Object type',	
 		insProductObjectClassId: 'Object class',	
 		ageMonthFrom: 'Age month from',	

@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Organization hierarchy type',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Organization hierarchy type',
+		pleaseSelect: 'Please select',
 		name: 'Name',	
 		description: 'Description',	
 		fromDate: 'From date',	

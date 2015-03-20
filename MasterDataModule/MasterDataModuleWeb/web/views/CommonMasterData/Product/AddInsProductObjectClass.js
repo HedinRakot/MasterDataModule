@@ -10,11 +10,17 @@ define([
         tableName: 'InsProductObjectClass',
         actionUrl: '#InsProductObjectClasses',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#description': 'description',
 			'#weightFrom': 'weightFrom',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

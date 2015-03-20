@@ -10,11 +10,17 @@ define([
         tableName: 'OrdContactPersonFunction',
         actionUrl: '#OrdContactPersonFunctions',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#sapId': 'sapId',
 			'#description': 'description',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

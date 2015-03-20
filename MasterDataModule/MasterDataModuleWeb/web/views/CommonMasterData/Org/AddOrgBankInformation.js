@@ -10,12 +10,18 @@ define([
         tableName: 'OrgBankInformation',
         actionUrl: '#OrgBankInformation',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#bankName': 'bankName',
 			'#bankCode': 'bankCode',
 			'#bankAccount': 'bankAccount',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

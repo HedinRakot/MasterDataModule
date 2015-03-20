@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Language',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Language',
+		pleaseSelect: 'Please select',
 		sapId: 'SAP ID',	
 		sapIdIso: 'SAP ID ISO',	
 		resourceFileName: 'Resource file name',	

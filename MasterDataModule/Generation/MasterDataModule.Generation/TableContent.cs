@@ -9,6 +9,7 @@ namespace MasterDataModule.Generation
         public string RelationFieldName { get; set; }
         public string PrimaryObject { get; set; }
         public string Group { get; set; }
+        public string SubGroup { get; set; }
         public string ViewCollections { get; set; }
         public bool IsSystem { get; set; }
         public bool SkipManagerConstructor { get; set; }

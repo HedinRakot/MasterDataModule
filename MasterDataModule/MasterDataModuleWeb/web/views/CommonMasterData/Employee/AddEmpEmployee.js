@@ -10,7 +10,10 @@ define([
         tableName: 'EmpEmployee',
         actionUrl: '#EmpEmployees',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#personalNumber': 'personalNumber',
 			'#domain': 'domain',
 			'#userName': 'userName',
@@ -26,6 +29,9 @@ define([
 			'#birthdate': 'birthdate',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

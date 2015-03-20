@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Bank information',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Bank information',
+		pleaseSelect: 'Please select',
 		bankName: 'Bank name',	
 		bankCode: 'Bank code',	
 		bankAccount: 'Account number',	

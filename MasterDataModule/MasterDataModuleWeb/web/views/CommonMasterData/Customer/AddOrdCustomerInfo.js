@@ -10,12 +10,18 @@ define([
         tableName: 'OrdCustomerInfo',
         actionUrl: '#OrdCustomerInfos',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#textValue': 'textValue',
 			'#numberValue': 'numberValue',
 			'#infoType': 'infoType',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

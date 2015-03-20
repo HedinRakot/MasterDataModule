@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Statistic group',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Statistic group',
+		pleaseSelect: 'Please select',
 		description: 'Description',	
 		fromDate: 'From date',	
 		toDate: 'To date',	

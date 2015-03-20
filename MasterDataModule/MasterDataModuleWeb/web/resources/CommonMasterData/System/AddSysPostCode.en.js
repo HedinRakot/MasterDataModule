@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit ZIP',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'ZIP',
+		pleaseSelect: 'Please select',
 		postCode: 'Post code',	
 		city: 'City',	
 		street: 'Street',	

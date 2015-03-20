@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Cash permission',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Cash permission',
+		pleaseSelect: 'Please select',
 		name: 'Name',	
 		description: 'Description',	
 		fromDate: 'From date',	

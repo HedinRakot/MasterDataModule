@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Product object type',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Product object type',
+		pleaseSelect: 'Please select',
 		description: 'Description',	
 		sapId: 'SAP ID',	
 		isAuNecessary: 'IS AU necessery',	

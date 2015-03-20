@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Association type',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Association type',
+		pleaseSelect: 'Please select',
 		name: 'Name',	
 		description: 'Description',	
 		fromDate: 'From date',	

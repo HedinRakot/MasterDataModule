@@ -219,9 +219,10 @@ namespace MasterDataModule.API
                 {"DRL_EXAM_CLASS_ID_ACTUAL", "examClassIdActual"},
             });
 
-            tables.Add("DRL_EXAM_CLASS_REQUIRED_CLASS_RSP", new TableMapping("DRL_EXAM_CLASS_REQUIRED_CLASS_RSP", "ExamClassRequiredClass", 3)
+            tables.Add("DRL_EXAM_CLASS_REQUIRED_CLASS_RSP", new TableMapping("DRL_EXAM_CLASS_REQUIRED_CLASS_RSP", "ExamClassRequiredClass", 4)
             {
                 {"DRL_EXAM_CLASS_ID", "examClassId"},
+                {"DRL_EXAM_CLASS_ID_REQUIRED", "examClassIdRequired"},
                 {"FROM_DATE", "fromDate"},
                 {"TO_DATE", "toDate"},
             });

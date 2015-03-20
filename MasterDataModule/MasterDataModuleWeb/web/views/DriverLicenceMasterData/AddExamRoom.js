@@ -16,7 +16,10 @@ define([
             var result = {
 			'#roomNumber': 'roomNumber',
 			'#placeAmount': 'placeAmount',
-			'#orgOrganizationalUnitId': 'orgOrganizationalUnitId',
+			'#orgOrganizationalUnitId': { observe: 'orgOrganizationalUnitId',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.orgOrganizationalUnit
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
 			'#name1': 'name1',
@@ -30,7 +33,10 @@ define([
 			'#phone1': 'phone1',
 			'#fax': 'fax',
 			'#email': 'email',
-			'#sysCountryId': 'sysCountryId',
+			'#sysCountryId': { observe: 'sysCountryId',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.sysCountry
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			};
 
             return result;
@@ -43,7 +49,7 @@ define([
 			//TODO foreach model field
 			this.disableInput(this, 'roomNumber', 'numeric');
 			this.disableInput(this, 'placeAmount', 'numeric');
-			this.disableInput(this, 'orgOrganizationalUnitId', 'numeric');
+			this.disableInput(this, 'orgOrganizationalUnitId', 'select');
 			this.disableInput(this, 'fromDate', 'date');
 			this.disableInput(this, 'toDate', 'date');
 			this.disableInput(this, 'name1');
@@ -57,7 +63,7 @@ define([
 			this.disableInput(this, 'phone1');
 			this.disableInput(this, 'fax');
 			this.disableInput(this, 'email');
-			this.disableInput(this, 'sysCountryId', 'numeric');
+			this.disableInput(this, 'sysCountryId', 'select');
 
             return this;
         }

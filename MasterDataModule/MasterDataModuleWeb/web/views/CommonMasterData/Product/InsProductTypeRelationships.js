@@ -9,7 +9,7 @@ define([
         tabs: function () {
             
             var result = [
-                
+				                
             ];
             
             return result;

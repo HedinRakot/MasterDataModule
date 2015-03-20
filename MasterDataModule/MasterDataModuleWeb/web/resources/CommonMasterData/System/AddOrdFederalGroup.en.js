@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Federal state group',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Federal state group',
+		pleaseSelect: 'Please select',
 		name: 'Name',	
 		description: 'Description',	
 		fromDate: 'From date',	

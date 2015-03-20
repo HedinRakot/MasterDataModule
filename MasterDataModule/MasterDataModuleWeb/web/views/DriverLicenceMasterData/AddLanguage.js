@@ -14,7 +14,10 @@ define([
 
             var self = this;
             var result = {
-			'#sysLanguageId': 'sysLanguageId',
+			'#sysLanguageId': { observe: 'sysLanguageId',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.sysLanguage
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#oldAbbr': 'oldAbbr',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
@@ -28,7 +31,7 @@ define([
             view.__super__.render.apply(this, arguments);
 
 			//TODO foreach model field
-			this.disableInput(this, 'sysLanguageId', 'numeric');
+			this.disableInput(this, 'sysLanguageId', 'select');
 			this.disableInput(this, 'oldAbbr');
 			this.disableInput(this, 'fromDate', 'date');
 			this.disableInput(this, 'toDate', 'date');

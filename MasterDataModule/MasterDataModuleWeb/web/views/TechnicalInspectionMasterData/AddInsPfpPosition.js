@@ -10,11 +10,17 @@ define([
         tableName: 'InsPfpPosition',
         actionUrl: '#InsPfpPositions',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#text': 'text',
 			'#topId': 'topId',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

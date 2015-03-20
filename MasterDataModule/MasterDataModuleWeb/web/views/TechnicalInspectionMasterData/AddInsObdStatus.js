@@ -10,12 +10,18 @@ define([
         tableName: 'InsObdStatus',
         actionUrl: '#InsObdStatuses',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#name': 'name',
 			'#description': 'description',
 			'#auView': 'auView',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

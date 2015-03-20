@@ -10,10 +10,16 @@ define([
         tableName: 'InsStatisticGroup',
         actionUrl: '#InsStatisticGroups',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#description': 'description',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

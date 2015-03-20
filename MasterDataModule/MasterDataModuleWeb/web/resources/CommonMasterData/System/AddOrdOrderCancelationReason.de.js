@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Stornogrund editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Stornogrund',
+		pleaseSelect: 'Bitte auswählen',
 		cancelationReasonText: 'Stornotext, Platzhalter werden mit „#“ angegeben',	
 		fromDate: 'Von Datum',	
 		toDate: 'Bis Datum',	

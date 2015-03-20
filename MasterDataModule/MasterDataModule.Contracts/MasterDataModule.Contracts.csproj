@@ -183,6 +183,9 @@
     <Compile Include="Entities\AsPro\Common\OrgInspectionDevice.cs">
       <DependentUpon>Common.Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\AsPro\Common\OrgOrganizationalUnit.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\AsPro\Common\OrgRelationshipType.cs">
       <DependentUpon>Common.Entities.tt</DependentUpon>
     </Compile>
@@ -473,6 +476,9 @@
       <DependentUpon>Common.IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\AsPro\Common\IOrgInspectionDeviceManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IOrgOrganizationalUnitManager.cs">
       <DependentUpon>Common.IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\AsPro\Common\IOrgRelationshipTypeManager.cs">

@@ -199,6 +199,9 @@
     <Compile Include="Data\AsPro\Common\OrgInspectionDeviceMapping.cs">
       <DependentUpon>Common.EntityMapping.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\AsPro\Common\OrgOrganizationalUnitMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\AsPro\Common\OrgRelationshipTypeMapping.cs">
       <DependentUpon>Common.EntityMapping.tt</DependentUpon>
     </Compile>
@@ -486,6 +489,9 @@
       <DependentUpon>Common.Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\AsPro\Common\OrgInspectionDeviceManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\OrgOrganizationalUnitManager.cs">
       <DependentUpon>Common.Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\AsPro\Common\OrgRelationshipTypeManager.cs">

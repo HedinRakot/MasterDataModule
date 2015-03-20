@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Accounting area',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Accounting area',
+		pleaseSelect: 'Please select',
 		accountingArea: 'Number',	
 		maxOrderSum: 'Max order sum',	
 		fromDate: 'From date',	

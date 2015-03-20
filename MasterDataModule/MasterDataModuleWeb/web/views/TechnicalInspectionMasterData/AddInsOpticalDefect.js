@@ -10,12 +10,18 @@ define([
         tableName: 'InsOpticalDefect',
         actionUrl: '#InsOpticalDefects',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#name': 'name',
 			'#description': 'description',
 			'#isCustom': 'isCustom',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

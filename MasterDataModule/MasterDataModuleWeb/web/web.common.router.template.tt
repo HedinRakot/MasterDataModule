@@ -2,7 +2,7 @@
 <#@ output extension=".txt"#>
 <#@ include file="..\..\Generation\MasterDataModule.Generation\TTMasterData\ASPro.Settings.ttinclude" once="true"#>
 <#
-	var relatedPath = "CommonMasterData/Customer";
+	var relatedPath = "CommonMasterData/";
 	var routerName = "common-masterdata";
 	tableGroup = "Common";
 

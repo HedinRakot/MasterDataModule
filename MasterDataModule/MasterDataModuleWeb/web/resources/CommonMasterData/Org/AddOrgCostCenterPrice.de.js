@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Zuordnung Preise zu Kostenstelle editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Zuordnung Preise zu Kostenstelle',
+		pleaseSelect: 'Bitte auswählen',
 		insCoreDataProductId: 'Produkt ',	
 		salesOffice: 'Verkaufsbüro (ersten 4 Stellen der Kostenstelle)',	
 		minPrice: 'Minimaler Preis',	

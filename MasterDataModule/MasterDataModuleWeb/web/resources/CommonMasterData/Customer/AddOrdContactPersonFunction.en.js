@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Customer contact person',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Customer contact person',
+		pleaseSelect: 'Please select',
 		sapId: 'SAP ID',	
 		description: 'Description',	
 		fromDate: 'From date',	

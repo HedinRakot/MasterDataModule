@@ -10,7 +10,10 @@ define([
         tableName: 'InsNextSpInterval',
         actionUrl: '#InsNextSpIntervals',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#insProductObjectTypeId': 'insProductObjectTypeId',
 			'#insProductObjectClassId': 'insProductObjectClassId',
 			'#ageMonthFrom': 'ageMonthFrom',
@@ -18,6 +21,9 @@ define([
 			'#spInterval': 'spInterval',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

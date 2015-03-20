@@ -14,7 +14,10 @@ define([
 
             var self = this;
             var result = {
-			'#ordFederalStateId': 'ordFederalStateId',
+			'#ordFederalStateId': { observe: 'ordFederalStateId',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.ordFederalState
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#place': 'place',
 			'#description': 'description',
 			'#fromDate': 'fromDate',
@@ -30,7 +33,7 @@ define([
             view.__super__.render.apply(this, arguments);
 
 			//TODO foreach model field
-			this.disableInput(this, 'ordFederalStateId', 'numeric');
+			this.disableInput(this, 'ordFederalStateId', 'select');
 			this.disableInput(this, 'place');
 			this.disableInput(this, 'description');
 			this.disableInput(this, 'fromDate', 'date');

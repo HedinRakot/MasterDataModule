@@ -10,12 +10,21 @@ define([
         tableName: 'OrdFederalState',
         actionUrl: '#OrdFederalStates',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#federalStateName': 'federalStateName',
 			'#description': 'description',
-			'#sysCountryId': 'sysCountryId',
+			'#sysCountryId': { observe: 'sysCountryId',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.sysCountry
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {
@@ -25,7 +34,7 @@ define([
 			//TODO foreach model field
 			this.disableInput(this, 'federalStateName');
 			this.disableInput(this, 'description');
-			this.disableInput(this, 'sysCountryId', 'numeric');
+			this.disableInput(this, 'sysCountryId', 'select');
 			this.disableInput(this, 'fromDate', 'date');
 			this.disableInput(this, 'toDate', 'date');
 

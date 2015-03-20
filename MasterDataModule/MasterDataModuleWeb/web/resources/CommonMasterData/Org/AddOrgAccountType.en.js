@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Account type',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Account type',
+		pleaseSelect: 'Please select',
 		name: 'Name',	
 		description: 'Description',	
 		fromDate: 'From date',	

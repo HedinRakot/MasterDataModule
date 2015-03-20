@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Auszahlungsrecht editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Auszahlungsrecht',
+		pleaseSelect: 'Bitte auswählen',
 		name: 'Kurzbezeichnung des Auszahlungsgrunds',	
 		description: 'Beschreibung des Auszahlungsgrund',	
 		fromDate: 'Von Datum',	

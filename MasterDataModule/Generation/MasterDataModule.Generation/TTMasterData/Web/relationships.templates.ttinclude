@@ -31,7 +31,7 @@
 			foreach(var selector in selectors)
 			{
 #>
-    <div class="<#= selector #>"><#= selector #></div>
+    <div class="<#= selector #>"><label data-localized="dataLoading"></label></div>
 <#
 			}
 #>

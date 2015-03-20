@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Organization type',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Organization type',
+		pleaseSelect: 'Please select',
 		name: 'Name',	
 		description: 'Description',	
 		fromDate: 'From date',	

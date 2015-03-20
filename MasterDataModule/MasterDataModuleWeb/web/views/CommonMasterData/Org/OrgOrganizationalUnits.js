@@ -1,8 +1,8 @@
 define([
 	'base/base-object-grid-view',
-    'collections/CommonMasterData/Org/OrgCostCenterResponsibleEmployeeRsps',
-    'l!t!CommonMasterData/Org/FilterOrgCostCenterResponsibleEmployeeRsp',
-    'l!t!CommonMasterData/Org/OrgCostCenterResponsibleEmployeeRspRelationships'
+    'collections/CommonMasterData/Org/OrgOrganizationalUnits',
+    'l!t!CommonMasterData/Org/FilterOrgOrganizationalUnit',
+    'l!t!CommonMasterData/Org/OrgOrganizationalUnitRelationships'
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -11,8 +11,8 @@ define([
         collectionType: Collection,
         detailView: DetailView,
         filterView: FilterView,
-        tableName: 'OrgCostCenterResponsibleEmployeeRsp',
-        editUrl: '#OrgCostCenterResponsibleEmployeeRsps',
+        tableName: 'OrgOrganizationalUnit',
+        editUrl: '#OrgOrganizationalUnits',
 
 	    editItemTitle: function () {
 	        return this.resources.edit
@@ -20,7 +20,7 @@ define([
 
 		columns: function () {
 		    return [
-				{ field: 'empEmployeeId', title: this.resources.empEmployeeId },
+				{ field: 'orgNumber', title: this.resources.orgNumber },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];

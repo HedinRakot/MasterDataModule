@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Parnter role',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Parnter role',
+		pleaseSelect: 'Please select',
 		sapQualifier: 'SAP ID',	
 		fromDate: 'From date',	
 		toDate: 'To date',	

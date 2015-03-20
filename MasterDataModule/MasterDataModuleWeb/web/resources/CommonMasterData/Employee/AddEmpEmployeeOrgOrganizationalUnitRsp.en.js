@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Org. unit',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Org. unit',
+		pleaseSelect: 'Please select',
 		empEmployeeId: 'Employee',	
 		orgOrganizationalUnitId: 'Org unit',	
 		fromDate: 'From date',	

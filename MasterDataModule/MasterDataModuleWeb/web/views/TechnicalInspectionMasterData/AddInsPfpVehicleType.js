@@ -10,12 +10,18 @@ define([
         tableName: 'InsPfpVehicleType',
         actionUrl: '#InsPfpVehicleTypes',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#description': 'description',
 			'#imageFileName': 'imageFileName',
 			'#isPolygonDataValid': 'isPolygonDataValid',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

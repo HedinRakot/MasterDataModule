@@ -10,11 +10,17 @@ define([
         tableName: 'InsAvailableInspectionStep',
         actionUrl: '#InsAvailableInspectionSteps',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#insInspectionStepId': 'insInspectionStepId',
 			'#isMandatory': 'isMandatory',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

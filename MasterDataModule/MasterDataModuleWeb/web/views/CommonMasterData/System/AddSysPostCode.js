@@ -10,12 +10,18 @@ define([
         tableName: 'SysPostCode',
         actionUrl: '#SysPostCodes',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#postCode': 'postCode',
 			'#city': 'city',
 			'#street': 'street',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Kunde-Informationstyp editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Kunde-Informationstyp',
+		pleaseSelect: 'Bitte auswählen',
 		textValue: 'Textuelle Beschreibung',	
 		numberValue: 'Numerischer Wert',	
 		infoType: 'Infotyp',	

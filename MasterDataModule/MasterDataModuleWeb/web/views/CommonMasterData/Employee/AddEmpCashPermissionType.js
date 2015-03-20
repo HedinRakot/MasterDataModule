@@ -10,11 +10,17 @@ define([
         tableName: 'EmpCashPermissionType',
         actionUrl: '#EmpCashPermissionTypes',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#name': 'name',
 			'#description': 'description',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

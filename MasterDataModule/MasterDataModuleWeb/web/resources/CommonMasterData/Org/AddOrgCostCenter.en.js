@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Cost center',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Cost center',
+		pleaseSelect: 'Please select',
 		name: 'Name',	
 		description: 'Description',	
 		fromDate: 'From date',	

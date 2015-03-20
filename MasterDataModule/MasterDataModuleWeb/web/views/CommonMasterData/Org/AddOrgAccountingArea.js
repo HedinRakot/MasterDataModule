@@ -10,11 +10,17 @@ define([
         tableName: 'OrgAccountingArea',
         actionUrl: '#OrgAccountingAreas',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#accountingArea': 'accountingArea',
 			'#maxOrderSum': 'maxOrderSum',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

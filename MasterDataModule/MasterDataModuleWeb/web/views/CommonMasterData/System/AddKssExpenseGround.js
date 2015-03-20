@@ -10,13 +10,19 @@ define([
         tableName: 'KssExpenseGround',
         actionUrl: '#KssExpenseGrounds',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#description': 'description',
 			'#account': 'account',
 			'#insVatTypeId': 'insVatTypeId',
 			'#maxAmount': 'maxAmount',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

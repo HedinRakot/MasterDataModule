@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Product class group',
 	    masterData: 'TP masterdata',
 	    pageTitle: 'Product class group',
+		pleaseSelect: 'Please select',
 		description: 'Description',	
 		sapId: 'SAP ID',	
 		fromDate: 'From date',	

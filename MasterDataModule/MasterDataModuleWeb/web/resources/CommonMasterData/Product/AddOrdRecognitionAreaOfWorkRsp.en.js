@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Area of work to recognition',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Area of work to recognition',
+		pleaseSelect: 'Please select',
 		ordRecognitionId: 'Recognition',	
 		ordAreaOfWorkId: 'Area of work',	
 		priority: 'Priority',	

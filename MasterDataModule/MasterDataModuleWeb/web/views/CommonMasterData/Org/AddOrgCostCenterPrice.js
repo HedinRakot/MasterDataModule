@@ -10,7 +10,10 @@ define([
         tableName: 'OrgCostCenterPrice',
         actionUrl: '#OrgCostCenterPrices',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#insCoreDataProductId': 'insCoreDataProductId',
 			'#salesOffice': 'salesOffice',
 			'#minPrice': 'minPrice',
@@ -22,6 +25,9 @@ define([
 			'#changeAbilityType': 'changeAbilityType',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

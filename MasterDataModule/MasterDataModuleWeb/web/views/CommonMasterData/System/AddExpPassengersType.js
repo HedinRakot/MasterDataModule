@@ -10,11 +10,17 @@ define([
         tableName: 'ExpPassengersType',
         actionUrl: '#ExpPassengersTypes',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#text': 'text',
 			'#code': 'code',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

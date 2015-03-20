@@ -10,7 +10,10 @@ define([
         tableName: 'OrgInspectionDevice',
         actionUrl: '#OrgInspectionDevices',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#debitorCustomerNumber': 'debitorCustomerNumber',
 			'#identification': 'identification',
 			'#newIdentification': 'newIdentification',
@@ -25,6 +28,9 @@ define([
 			'#inspectionInterval': 'inspectionInterval',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

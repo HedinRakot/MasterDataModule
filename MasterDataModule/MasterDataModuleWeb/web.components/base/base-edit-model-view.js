@@ -102,7 +102,7 @@
 					self.trigger('base-edit-model-view:save', self.model);
 				},
 			    error: function (model, response) {
-			        debugger;
+
 			        if (response.statusText == 'Conflict') {
 			            showConcurrencyError(self);
 			        };

@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Vorgesetzter editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Vorgesetzter',
+		pleaseSelect: 'Bitte auswählen',
 		empEmployeeId: 'Mitarbeiter',	
 		topEmployeeId: 'Vorgesetzter',	
 		fromDate: 'Von Datum',	

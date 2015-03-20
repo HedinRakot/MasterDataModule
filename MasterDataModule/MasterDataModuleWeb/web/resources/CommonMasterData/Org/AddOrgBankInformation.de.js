@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Bankverbindung editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Bankverbindung',
+		pleaseSelect: 'Bitte auswählen',
 		bankName: 'Bankname',	
 		bankCode: 'Bankleitzahl bzw. BIC',	
 		bankAccount: 'Kontonummer bzw. IBAN',	

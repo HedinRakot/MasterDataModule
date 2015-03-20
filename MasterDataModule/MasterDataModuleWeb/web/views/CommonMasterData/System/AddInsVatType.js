@@ -10,12 +10,18 @@ define([
         tableName: 'InsVatType',
         actionUrl: '#InsVatTypes',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#description': 'description',
 			'#taxCode': 'taxCode',
 			'#percent': 'percent',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

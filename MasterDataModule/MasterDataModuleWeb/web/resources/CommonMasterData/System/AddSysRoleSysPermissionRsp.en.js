@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Role to permission',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Role to permission',
+		pleaseSelect: 'Please select',
 		sysRoleId: 'Role',	
 		sysPermissionId: 'Permission',	
 		fromDate: 'From date',	

@@ -10,10 +10,16 @@ define([
         tableName: 'OrdPartnerRole',
         actionUrl: '#OrdPartnerRoles',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#sapQualifier': 'sapQualifier',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

@@ -18,6 +18,8 @@ namespace MasterDataModule.API.Controllers
         {
             model.description = entity.Description;
             model.editMode = entity.EditMode;
+            model.createDate = ((ISystemFields)entity).CreateDate;
+            model.changeDate = ((ISystemFields)entity).ChangeDate;
         }
         protected override void ModelToEntity(SysTableModel model, SysTable entity, ActionTypes actionType)
         {

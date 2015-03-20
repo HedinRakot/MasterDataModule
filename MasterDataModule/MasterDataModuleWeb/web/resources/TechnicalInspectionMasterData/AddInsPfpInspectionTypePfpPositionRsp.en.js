@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit PFP inspection type to position',
 	    masterData: 'TP masterdata',
 	    pageTitle: 'PFP inspection type to position',
+		pleaseSelect: 'Please select',
 		insPfpPositionId: 'Position',	
 		insPfpInspectionTypeId: 'Inspection type',	
 		fromDate: 'From date',	

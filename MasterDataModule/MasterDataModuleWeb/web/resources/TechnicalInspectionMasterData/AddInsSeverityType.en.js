@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Severity type',
 	    masterData: 'TP masterdata',
 	    pageTitle: 'Severity type',
+		pleaseSelect: 'Please select',
 		name: 'Name',	
 		description: 'Description',	
 		fromDate: 'From date',	

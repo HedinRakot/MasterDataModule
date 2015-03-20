@@ -10,12 +10,18 @@ define([
         tableName: 'OrdRecognitionAreaOfWorkRsp',
         actionUrl: '#OrdRecognitionAreaOfWorkRsps',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#ordRecognitionId': 'ordRecognitionId',
 			'#ordAreaOfWorkId': 'ordAreaOfWorkId',
 			'#priority': 'priority',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Optical defect',
 	    masterData: 'TP masterdata',
 	    pageTitle: 'Optical defect',
+		pleaseSelect: 'Please select',
 		name: 'Name',	
 		description: 'Description',	
 		isCustom: 'Is custom',	

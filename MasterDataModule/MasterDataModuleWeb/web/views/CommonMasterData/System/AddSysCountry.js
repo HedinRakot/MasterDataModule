@@ -10,12 +10,18 @@ define([
         tableName: 'SysCountry',
         actionUrl: '#SysCountries',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#sapId': 'sapId',
 			'#name': 'name',
 			'#isEu': 'isEu',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

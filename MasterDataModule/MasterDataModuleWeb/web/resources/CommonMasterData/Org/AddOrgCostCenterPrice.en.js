@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Cost center price',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Cost center price',
+		pleaseSelect: 'Please select',
 		insCoreDataProductId: 'Product',	
 		salesOffice: 'Sales office',	
 		minPrice: 'Min price',	

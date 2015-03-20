@@ -4,6 +4,7 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     public partial class OrgType: IHasId<int>
+        ,IHasTitle
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -95,6 +96,10 @@ namespace MasterDataModule.Contracts.Entities
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        string IHasTitle.EntityTitle
+        {
+            get { return Name; }
         }
         DateTime ISystemFields.CreateDate
         {

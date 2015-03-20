@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Expense ground',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Expense ground',
+		pleaseSelect: 'Please select',
 		description: 'Description',	
 		account: 'Account',	
 		insVatTypeId: 'Vat type',	

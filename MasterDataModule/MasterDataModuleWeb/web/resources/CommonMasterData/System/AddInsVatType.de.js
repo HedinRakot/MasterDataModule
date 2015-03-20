@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Mehrwertsteuersatz editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Mehrwertsteuersatz',
+		pleaseSelect: 'Bitte auswählen',
 		description: 'Beschreibung des Mehrwertsteuersatzes',	
 		taxCode: 'SAP-Steuercode ',	
 		percent: 'Prozentsatz des Mehrwertsteuersatzes',	

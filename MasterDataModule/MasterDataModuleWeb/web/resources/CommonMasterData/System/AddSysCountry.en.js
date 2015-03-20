@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Country',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Country',
+		pleaseSelect: 'Please select',
 		sapId: 'SAP ID',	
 		name: 'Name',	
 		isEu: 'Is EU',	

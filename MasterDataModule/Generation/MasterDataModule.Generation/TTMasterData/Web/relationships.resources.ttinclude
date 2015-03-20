@@ -14,6 +14,7 @@ define(function () {
 
 	var resources = {
 	    title: 'Zuordnungen',
+		dataLoading: 'Daten werden geladen. Bitte warten...',
 <#
 		if(!String.IsNullOrEmpty(entityContent.RelationShipsDe) &&
 		   !String.IsNullOrEmpty(entityContent.RelationShipsSelectors))
@@ -46,6 +47,7 @@ define(function () {
 
 	var resources = {
 	     title: 'Relationships',
+		 dataLoading: 'Data is loading. Please wait...',
 <#
 		if(!String.IsNullOrEmpty(entityContent.RelationShipsEn) &&
 		   !String.IsNullOrEmpty(entityContent.RelationShipsSelectors))

@@ -54,6 +54,7 @@ namespace MasterDataModule.Configuration
             container.RegisterType<IInsProductMaterialGroupManager, InsProductMaterialGroupManager>();
             container.RegisterType<IInsProductObjectClassManager, InsProductObjectClassManager>();
             container.RegisterType<IInsProductObjectTypeManager, InsProductObjectTypeManager>();
+            container.RegisterType<IOrgOrganizationalUnitManager, OrgOrganizationalUnitManager>();
             container.RegisterType<IInsProductTypeManager, InsProductTypeManager>();
             container.RegisterType<IInsStatisticGroupManager, InsStatisticGroupManager>();
             container.RegisterType<IOrdAreaOfWorkManager, OrdAreaOfWorkManager>();

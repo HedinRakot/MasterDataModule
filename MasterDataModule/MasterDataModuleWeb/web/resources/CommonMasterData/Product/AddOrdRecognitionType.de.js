@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Produkt-Anerkennungstyp editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Produkt-Anerkennungstyp',
+		pleaseSelect: 'Bitte auswählen',
 		name: 'Bezeichnung des Anerkennungstyps',	
 		fromDate: 'Von Datum',	
 		toDate: 'Bis Datum',	

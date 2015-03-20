@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Organization inspection device',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Organization inspection device',
+		pleaseSelect: 'Please select',
 		debitorCustomerNumber: 'Debitor number',	
 		identification: 'Identification',	
 		newIdentification: 'New identification',	

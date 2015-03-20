@@ -32,6 +32,7 @@ namespace MasterDataModule.API.Models
         /// <summary>
         ///     Model property for <see cref="LegalBasis.FirstAssignation"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public int firstAssignation{ get; set; }
         /// <summary>

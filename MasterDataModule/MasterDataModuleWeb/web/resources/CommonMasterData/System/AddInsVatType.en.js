@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Tax code',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Tax code',
+		pleaseSelect: 'Please select',
 		description: 'Description',	
 		taxCode: 'Tax code',	
 		percent: 'Percent',	

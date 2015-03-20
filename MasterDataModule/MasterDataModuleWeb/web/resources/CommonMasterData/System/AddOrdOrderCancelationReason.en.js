@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Cancel reason',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Cancel reason',
+		pleaseSelect: 'Please select',
 		cancelationReasonText: 'Cancelation reason text',	
 		fromDate: 'From date',	
 		toDate: 'To date',	

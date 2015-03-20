@@ -220,6 +220,10 @@ namespace MasterDataModule.Contracts
         /// </summary>
         IQueryable<InsProductObjectType> InsProductObjectType{get;}
         /// <summary>
+        ///     Set of <see cref="OrgOrganizationalUnit"/> entities from table dbo.ORG_ORGANIZATIONAL_UNIT
+        /// </summary>
+        IQueryable<OrgOrganizationalUnit> OrgOrganizationalUnit{get;}
+        /// <summary>
         ///     Set of <see cref="InsProductType"/> entities from table dbo.INS_PRODUCT_TYPE
         /// </summary>
         IQueryable<InsProductType> InsProductType{get;}

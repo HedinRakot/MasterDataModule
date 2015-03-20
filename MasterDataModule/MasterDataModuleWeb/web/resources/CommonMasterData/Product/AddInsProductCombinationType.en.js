@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Product combination type',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Product combination type',
+		pleaseSelect: 'Please select',
 		description: 'Description',	
 		fromDate: 'From date',	
 		toDate: 'To date',	

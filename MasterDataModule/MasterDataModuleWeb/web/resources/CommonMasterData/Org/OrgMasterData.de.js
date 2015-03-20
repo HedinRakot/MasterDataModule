@@ -12,6 +12,7 @@ define(function () {
         OrgInformation: 'OE-Information',
         OrgTypes: 'OE-Type',
         OrgInspectionDevices: 'OE-Prüfmittel',
+        OrgOrganizationalUnits: 'Organisationseinheit',
 	};
 
 	return resources;

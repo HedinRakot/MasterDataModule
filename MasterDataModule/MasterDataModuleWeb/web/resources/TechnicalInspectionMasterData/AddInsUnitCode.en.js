@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Unit code',
 	    masterData: 'TP masterdata',
 	    pageTitle: 'Unit code',
+		pleaseSelect: 'Please select',
 		orgAccountingAreaId: 'Accounting area',	
 		ordFederalStateId: 'Federal state',	
 		ordAreaOfWorkId: 'Area of work',	

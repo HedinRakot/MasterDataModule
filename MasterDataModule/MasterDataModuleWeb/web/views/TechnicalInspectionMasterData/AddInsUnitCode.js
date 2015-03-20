@@ -10,13 +10,19 @@ define([
         tableName: 'InsUnitCode',
         actionUrl: '#InsUnitCodes',
 
-		bindings: {
+		bindings: function () {
+
+            var self = this;
+            var result = {
 			'#orgAccountingAreaId': 'orgAccountingAreaId',
 			'#ordFederalStateId': 'ordFederalStateId',
 			'#ordAreaOfWorkId': 'ordAreaOfWorkId',
 			'#unitCode': 'unitCode',
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
+			};
+
+            return result;
 		},
 
         render: function () {

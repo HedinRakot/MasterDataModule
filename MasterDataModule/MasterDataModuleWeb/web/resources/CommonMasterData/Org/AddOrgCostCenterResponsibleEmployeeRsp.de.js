@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Kostenstellenverantwortlicher  editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Kostenstellenverantwortlicher ',
+		pleaseSelect: 'Bitte auswählen',
 		orgCostCenterId: 'Kostenstelle',	
 		empEmployeeId: 'Verantwortlicher Mitarbeiter ',	
 		fromDate: 'Von Datum',	

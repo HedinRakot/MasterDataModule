@@ -363,6 +363,22 @@ namespace MasterDataModule.API
                 {"TO_DATE", "toDate"},
             });
 
+            tables.Add("ORG_ORGANIZATIONAL_UNIT", new TableMapping("ORG_ORGANIZATIONAL_UNIT", "OrgOrganizationalUnit", 12)
+            {
+                {"ORG_NUMBER", "orgNumber"},
+                {"NAME", "name"},
+                {"ABBR", "abbr"},
+                {"LOCATION_ABBR", "locationAbbr"},
+                {"SYS_LOCATION_ID", "sysLocationId"},
+                {"ORG_TYPE_ID", "orgTypeId"},
+                {"EMAIL_FROM", "emailFrom"},
+                {"EMAIL_TO", "emailTo"},
+                {"IS_EGDOK_PRINT_ALWAYS", "isEgdokPrintAlways"},
+                {"FROM_DATE", "fromDate"},
+                {"TO_DATE", "toDate"},
+                {"ORG_ACCOUNTING_AREA_ID", "orgAccountingAreaId"},
+            });
+
             tables.Add("INS_PRODUCT_TYPE", new TableMapping("INS_PRODUCT_TYPE", "InsProductType", 3)
             {
                 {"NAME", "name"},

@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Edit Employee',
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Employee',
+		pleaseSelect: 'Please select',
 		personalNumber: 'Personal number',	
 		domain: 'Domain',	
 		userName: 'User name',	
