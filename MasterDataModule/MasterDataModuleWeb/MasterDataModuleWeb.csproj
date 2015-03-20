@@ -601,6 +601,9 @@
     <Content Include="web\models\CommonMasterData\Org\FilterOrgInspectionDevice.js">
       <DependentUpon>web.org.models.tt</DependentUpon>
     </Content>
+    <Content Include="web\models\CommonMasterData\Org\FilterOrgOrganizationalUnit.js">
+      <DependentUpon>web.org.models.tt</DependentUpon>
+    </Content>
     <Content Include="web\models\CommonMasterData\Org\FilterOrgRelationshipType.js">
       <DependentUpon>web.org.models.tt</DependentUpon>
     </Content>
@@ -629,6 +632,9 @@
       <DependentUpon>web.org.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\CommonMasterData\Org\OrgInspectionDevice.js">
+      <DependentUpon>web.org.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\CommonMasterData\Org\OrgOrganizationalUnit.js">
       <DependentUpon>web.org.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\CommonMasterData\Org\OrgRelationshipType.js">

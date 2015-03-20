@@ -9,7 +9,8 @@ define([
         tabs: function () {
             
             var result = [
-				                
+				{ view: 'l!t!DriverLicenceMasterData/ExamConstraintExamClasses', selector: '.examClasses'},
+                
             ];
             
             return result;

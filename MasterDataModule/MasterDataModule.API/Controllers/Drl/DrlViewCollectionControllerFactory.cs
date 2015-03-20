@@ -14,6 +14,10 @@ namespace MasterDataModule.API.Controllers
     {
         public void GetViewCollections(IDependencyResolver resolver, CollectionTypesModel model, Dictionary<string, IEnumerable<object>> result)
         {
+            if (model.ExamRecognitionType)
+            	result.Add("ExamRecognitionType", GetViewCollection<ExamRecognitionType, int, IExamRecognitionTypeManager>(
+            		(IExamRecognitionTypeManager)resolver.GetService(typeof(IExamRecognitionTypeManager))));
+
             if (model.ExamClass)
             	result.Add("ExamClass", GetViewCollection<ExamClass, int, IExamClassManager>(
             		(IExamClassManager)resolver.GetService(typeof(IExamClassManager))));

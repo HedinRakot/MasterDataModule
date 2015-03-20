@@ -24,7 +24,7 @@ define([
 
 		columns: function () {
 		    return [
-				{ field: 'examClassId', title: this.resources.examClassId },
+				{ field: 'examClassId', title: this.resources.examClassId , collection: this.options.examClass, filterable: false},
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];

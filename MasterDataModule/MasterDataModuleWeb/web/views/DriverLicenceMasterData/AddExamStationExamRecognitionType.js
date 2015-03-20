@@ -15,7 +15,10 @@ define([
             var self = this;
             var result = {
 			'#examStationId': 'examStationId',
-			'#examRecognitionTypeId': 'examRecognitionTypeId',
+			'#examRecognitionTypeId': { observe: 'examRecognitionTypeId',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.examRecognitionType
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
 			};
@@ -29,7 +32,7 @@ define([
 
 			//TODO foreach model field
 			this.disableInput(this, 'examStationId', 'numeric');
-			this.disableInput(this, 'examRecognitionTypeId', 'numeric');
+			this.disableInput(this, 'examRecognitionTypeId', 'select');
 			this.disableInput(this, 'fromDate', 'date');
 			this.disableInput(this, 'toDate', 'date');
 

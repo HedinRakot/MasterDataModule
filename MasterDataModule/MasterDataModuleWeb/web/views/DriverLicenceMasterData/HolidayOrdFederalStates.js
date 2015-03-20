@@ -24,7 +24,7 @@ define([
 
 		columns: function () {
 		    return [
-				{ field: 'ordFederalStateId', title: this.resources.ordFederalStateId },
+				{ field: 'ordFederalStateId', title: this.resources.ordFederalStateId , collection: this.options.ordFederalState, filterable: false},
 			];
 		},
 		

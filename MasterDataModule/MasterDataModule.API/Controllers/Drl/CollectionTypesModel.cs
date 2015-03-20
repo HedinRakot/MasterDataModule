@@ -7,6 +7,7 @@ namespace MasterDataModule.API.Controllers
     /// </summary>
     public partial class CollectionTypesModel
     {
+        public bool ExamRecognitionType { get; set;}
         public bool ExamClass { get; set;}
         public bool LegalBasis { get; set;}
     }

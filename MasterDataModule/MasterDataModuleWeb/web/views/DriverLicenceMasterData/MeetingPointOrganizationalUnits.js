@@ -24,7 +24,7 @@ define([
 
 		columns: function () {
 		    return [
-				{ field: 'orgOrganizationalUnitId', title: this.resources.orgOrganizationalUnitId },
+				{ field: 'orgOrganizationalUnitId', title: this.resources.orgOrganizationalUnitId , collection: this.options.orgOrganizationalUnit, filterable: false},
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
