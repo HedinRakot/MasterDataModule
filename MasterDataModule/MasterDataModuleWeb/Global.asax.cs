@@ -18,13 +18,8 @@ namespace TuevSued.V1.IT.FE.MasterDataModuleWeb
         protected void Application_Start()
         {
 			AreaRegistration.RegisterAllAreas();
+            UnityConfig.RegisterComponents();
 			GlobalConfiguration.Configure(WebApiConfig.Register);
-
-            var container = new UnityContainer();
-            UnityConfiguration.ConfigureContainer(container);
-
-            container.RegisterInstance<IHttpControllerActivator>(new UnityHttpControllerActivator(container));
-            GlobalConfiguration.Configuration.DependencyResolver = new UnityResolver(container);
         }
     }
 }

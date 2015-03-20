@@ -58,7 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IDbCommiter.cs" />
+    <Compile Include="MasterDataModule\IDbCommiter.cs" />
     <Compile Include="ISaveManager.cs" />
     <Compile Include="MasterDataModule\ASProDataContextRequestManager.cs" />
     <Compile Include="MasterDataModule\Common\IEmpEmployeeSysRoleRspManager.cs" />

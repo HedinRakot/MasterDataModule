@@ -824,7 +824,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="UnityHttpControllerActivator.cs" />
     <Compile Include="UnityResolver.cs" />
     <Compile Include="Validation\RequiredAttribute.cs" />
   </ItemGroup>
