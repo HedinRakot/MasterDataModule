@@ -56,6 +56,10 @@ namespace MasterDataModule.Contracts
         /// </summary>
         IQueryable<InsPfpInspectionTypePfpPositionRsp> InsPfpInspectionTypePfpPositionRsp{get;}
         /// <summary>
+        ///     Set of <see cref="InsCoreDataProductLocalization"/> entities from table dbo.INS_CORE_DATA_PRODUCT_LOCALIZATION
+        /// </summary>
+        IQueryable<InsCoreDataProductLocalization> InsCoreDataProductLocalization{get;}
+        /// <summary>
         ///     Set of <see cref="InsPfpVehicleType"/> entities from table dbo.INS_PFP_VEHICLE_TYPE
         /// </summary>
         IQueryable<InsPfpVehicleType> InsPfpVehicleType{get;}

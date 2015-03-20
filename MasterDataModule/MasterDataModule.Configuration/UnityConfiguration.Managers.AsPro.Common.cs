@@ -17,6 +17,7 @@ namespace MasterDataModule.Configuration
         {
             container.RegisterType<ISysLanguageManager, SysLanguageManager>();
             container.RegisterType<IInsCoreDataProductManager, InsCoreDataProductManager>();
+            container.RegisterType<IInsCoreDataProductLocalizationManager, InsCoreDataProductLocalizationManager>();
             container.RegisterType<IEmpEmployeeManager, EmpEmployeeManager>();
             container.RegisterType<ISysLocationManager, SysLocationManager>();
             container.RegisterType<ISysRoleManager, SysRoleManager>();

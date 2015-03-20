@@ -286,6 +286,9 @@
     <Content Include="web\collections\CommonMasterData\Product\InsCoreDataProductGroups.js">
       <DependentUpon>web.product.collections.tt</DependentUpon>
     </Content>
+    <Content Include="web\collections\CommonMasterData\Product\InsCoreDataProductLocalizations.js">
+      <DependentUpon>web.product.collections.tt</DependentUpon>
+    </Content>
     <Content Include="web\collections\CommonMasterData\Product\InsCoreDataProducts.js">
       <DependentUpon>web.product.collections.tt</DependentUpon>
     </Content>
@@ -660,6 +663,9 @@
     <Content Include="web\models\CommonMasterData\Product\FilterInsCoreDataProductGroup.js">
       <DependentUpon>web.product.models.tt</DependentUpon>
     </Content>
+    <Content Include="web\models\CommonMasterData\Product\FilterInsCoreDataProductLocalization.js">
+      <DependentUpon>web.product.models.tt</DependentUpon>
+    </Content>
     <Content Include="web\models\CommonMasterData\Product\FilterInsProductCombinationType.js">
       <DependentUpon>web.product.models.tt</DependentUpon>
     </Content>
@@ -694,6 +700,9 @@
       <DependentUpon>web.product.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\CommonMasterData\Product\InsCoreDataProductGroup.js">
+      <DependentUpon>web.product.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\CommonMasterData\Product\InsCoreDataProductLocalization.js">
       <DependentUpon>web.product.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\CommonMasterData\Product\InsProductCombinationType.js">
@@ -1726,6 +1735,12 @@
     <Content Include="web\resources\CommonMasterData\Product\AddInsCoreDataProductGroup.en.js">
       <DependentUpon>web.product.add.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\CommonMasterData\Product\AddInsCoreDataProductLocalization.de.js">
+      <DependentUpon>web.product.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\CommonMasterData\Product\AddInsCoreDataProductLocalization.en.js">
+      <DependentUpon>web.product.add.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\CommonMasterData\Product\AddInsProductCombinationType.de.js">
       <DependentUpon>web.product.add.resources.tt</DependentUpon>
     </Content>
@@ -1868,6 +1883,18 @@
       <DependentUpon>web.product.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProductGroups.en.js">
+      <DependentUpon>web.product.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProductLocalizationRelationships.de.js">
+      <DependentUpon>web.product.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProductLocalizationRelationships.en.js">
+      <DependentUpon>web.product.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProductLocalizations.de.js">
+      <DependentUpon>web.product.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProductLocalizations.en.js">
       <DependentUpon>web.product.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\CommonMasterData\Product\InsCoreDataProductRelationships.de.js">
@@ -4711,6 +4738,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>web.customer.relationships.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\CommonMasterData\Customer\web.customer.related.views.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web.customer.related.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\CommonMasterData\Employee\AddEmpCashPermissionType.js">
       <DependentUpon>web.employee.add.views.tt</DependentUpon>
     </Content>
@@ -4741,8 +4773,14 @@
     <Content Include="web\views\CommonMasterData\Employee\EmpEmployeeOrgCostCenterRspRelationships.js">
       <DependentUpon>web.employee.relationships.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\CommonMasterData\Employee\EmpEmployeeOrgCostCenterRsps.js">
+      <DependentUpon>web.employee.related.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\CommonMasterData\Employee\EmpEmployeeOrgOrganizationalUnitRspRelationships.js">
       <DependentUpon>web.employee.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\CommonMasterData\Employee\EmpEmployeeOrgOrganizationalUnitRsps.js">
+      <DependentUpon>web.employee.related.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\CommonMasterData\Employee\EmpEmployeeRelationships.js">
       <DependentUpon>web.employee.relationships.views.tt</DependentUpon>
@@ -4753,8 +4791,14 @@
     <Content Include="web\views\CommonMasterData\Employee\EmpEmployeeSysRoleRspRelationships.js">
       <DependentUpon>web.employee.relationships.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\CommonMasterData\Employee\EmpEmployeeSysRoleRsps.js">
+      <DependentUpon>web.employee.related.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\CommonMasterData\Employee\EmpEmployeeTopEmployeeRspRelationships.js">
       <DependentUpon>web.employee.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\CommonMasterData\Employee\EmpEmployeeTopEmployeeRsps.js">
+      <DependentUpon>web.employee.related.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\CommonMasterData\Employee\EmployeeMasterData.js" />
     <Content Include="web\views\CommonMasterData\Employee\EmpOrgAssociationTypeRelationships.js">
@@ -4786,6 +4830,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>web.employee.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\CommonMasterData\Employee\web.employee.related.views.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web.employee.related.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\CommonMasterData\Org\AddOrgAccountingArea.js">
       <DependentUpon>web.org.add.views.tt</DependentUpon>
@@ -4868,11 +4917,17 @@
     <Content Include="web\views\CommonMasterData\Org\OrgCostCenterPriceRelationships.js">
       <DependentUpon>web.org.relationships.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\CommonMasterData\Org\OrgCostCenterPrices.js">
+      <DependentUpon>web.org.related.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\CommonMasterData\Org\OrgCostCenterRelationships.js">
       <DependentUpon>web.org.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\CommonMasterData\Org\OrgCostCenterResponsibleEmployeeRspRelationships.js">
       <DependentUpon>web.org.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\CommonMasterData\Org\OrgCostCenterResponsibleEmployeeRsps.js">
+      <DependentUpon>web.org.related.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\CommonMasterData\Org\OrgCostCenters.js">
       <DependentUpon>web.org.views.tt</DependentUpon>
@@ -4923,10 +4978,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>web.org.relationships.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\CommonMasterData\Org\web.org.related.views.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web.org.related.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\CommonMasterData\Product\AddInsCoreDataProduct.js">
       <DependentUpon>web.product.add.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\CommonMasterData\Product\AddInsCoreDataProductGroup.js">
+      <DependentUpon>web.product.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\CommonMasterData\Product\AddInsCoreDataProductLocalization.js">
       <DependentUpon>web.product.add.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\CommonMasterData\Product\AddInsProductCombinationType.js">
@@ -4998,6 +5061,12 @@
     <Content Include="web\views\CommonMasterData\Product\InsCoreDataProductGroups.js">
       <DependentUpon>web.product.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\CommonMasterData\Product\InsCoreDataProductLocalizationRelationships.js">
+      <DependentUpon>web.product.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\CommonMasterData\Product\InsCoreDataProductLocalizations.js">
+      <DependentUpon>web.product.related.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\CommonMasterData\Product\InsCoreDataProductRelationships.js">
       <DependentUpon>web.product.relationships.views.tt</DependentUpon>
     </Content>
@@ -5049,6 +5118,9 @@
     <Content Include="web\views\CommonMasterData\Product\OrdRecognitionAreaOfWorkRspRelationships.js">
       <DependentUpon>web.product.relationships.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\CommonMasterData\Product\OrdRecognitionAreaOfWorkRsps.js">
+      <DependentUpon>web.product.related.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\CommonMasterData\Product\OrdRecognitionRelationships.js">
       <DependentUpon>web.product.relationships.views.tt</DependentUpon>
     </Content>
@@ -5062,6 +5134,11 @@
       <DependentUpon>web.product.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\CommonMasterData\Product\ProductMasterData.js" />
+    <Content Include="web\views\CommonMasterData\Product\web.product.related.views.txt">
+      <DependentUpon>web.product.related.views.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
     <Content Include="web\views\CommonMasterData\Product\web.product.add.views.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -5215,7 +5292,15 @@
     <Content Include="web\views\CommonMasterData\System\SysRoleSysPermissionRspRelationships.js">
       <DependentUpon>web.system.relationships.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\CommonMasterData\System\SysRoleSysPermissionRsps.js">
+      <DependentUpon>web.system.related.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\CommonMasterData\System\SystemMasterData.js" />
+    <Content Include="web\views\CommonMasterData\System\web.system.related.views.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web.system.related.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\CommonMasterData\System\web.system.add.views.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -5631,6 +5716,9 @@
     <Content Include="web\views\TechnicalInspectionMasterData\InsAvailableInspectionStepRelationships.js">
       <DependentUpon>web.tp.relationships.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\TechnicalInspectionMasterData\InsAvailableInspectionSteps.js">
+      <DependentUpon>web.tp.related.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\TechnicalInspectionMasterData\InsInspectionStepRelationships.js">
       <DependentUpon>web.tp.relationships.views.tt</DependentUpon>
     </Content>
@@ -5663,6 +5751,9 @@
     </Content>
     <Content Include="web\views\TechnicalInspectionMasterData\InsPfpInspectionTypePfpPositionRspRelationships.js">
       <DependentUpon>web.tp.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\TechnicalInspectionMasterData\InsPfpInspectionTypePfpPositionRsps.js">
+      <DependentUpon>web.tp.related.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\TechnicalInspectionMasterData\InsPfpPositionRelationships.js">
       <DependentUpon>web.tp.relationships.views.tt</DependentUpon>
@@ -5707,6 +5798,11 @@
       <DependentUpon>web.tp.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\TechnicalInspectionMasterData\TechnicalInspectionMasterData.js" />
+    <Content Include="web\views\TechnicalInspectionMasterData\web.tp.related.views.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web.tp.related.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\TechnicalInspectionMasterData\web.tp.relationships.views.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -6351,6 +6447,30 @@
     <Content Include="web\views\DriverLicenceMasterData\web.drl.related.views.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>web.drl.related.views.txt</LastGenOutput>
+    </Content>
+    <Content Include="web\views\CommonMasterData\Product\web.product.related.views.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>web.product.related.views.txt</LastGenOutput>
+    </Content>
+    <Content Include="web\views\CommonMasterData\Org\web.org.related.views.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>web.org.related.views.txt</LastGenOutput>
+    </Content>
+    <Content Include="web\views\CommonMasterData\Employee\web.employee.related.views.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>web.employee.related.views.txt</LastGenOutput>
+    </Content>
+    <Content Include="web\views\CommonMasterData\Customer\web.customer.related.views.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>web.customer.related.views.txt</LastGenOutput>
+    </Content>
+    <Content Include="web\views\CommonMasterData\System\web.system.related.views.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>web.system.related.views.txt</LastGenOutput>
+    </Content>
+    <Content Include="web\views\TechnicalInspectionMasterData\web.tp.related.views.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>web.tp.related.views.txt</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

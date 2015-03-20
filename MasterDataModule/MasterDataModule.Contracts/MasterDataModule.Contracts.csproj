@@ -63,6 +63,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Entities\AsPro\Common\InsCoreDataProductLocalization.cs">
+      <DependentUpon>Common.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\IInsCoreDataProductLocalizationManager.cs">
+      <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
     <Compile Include="MasterDataConfiguration.Context.Interface.Custom.cs" />
     <Compile Include="Entities\Configuration\Permission.cs">
       <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>

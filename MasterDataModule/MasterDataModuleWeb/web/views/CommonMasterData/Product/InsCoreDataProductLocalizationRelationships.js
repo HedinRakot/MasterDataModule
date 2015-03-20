@@ -9,8 +9,7 @@ define([
         tabs: function () {
             
             var result = [
-				{ view: 'l!t!CommonMasterData/Product/InsCoreDataProductLocalizations', selector: '.localizations'},
-                
+				                
             ];
             
             return result;

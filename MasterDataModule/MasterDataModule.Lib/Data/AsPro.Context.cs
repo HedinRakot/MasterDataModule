@@ -29,6 +29,7 @@ namespace MasterDataModule.Lib.Data
             modelBuilder.Configurations.Add(InsCoreDataProductMapping.Instance);
             modelBuilder.Configurations.Add(InsPfpPositionMapping.Instance);
             modelBuilder.Configurations.Add(InsPfpInspectionTypePfpPositionRspMapping.Instance);
+            modelBuilder.Configurations.Add(InsCoreDataProductLocalizationMapping.Instance);
             modelBuilder.Configurations.Add(InsPfpVehicleTypeMapping.Instance);
             modelBuilder.Configurations.Add(EmpEmployeeMapping.Instance);
             modelBuilder.Configurations.Add(InsUnitCodeMapping.Instance);
@@ -125,6 +126,10 @@ namespace MasterDataModule.Lib.Data
         ///     Set of <see cref="InsPfpInspectionTypePfpPositionRsp"/> entities from table dbo.INS_PFP_INSPECTION_TYPE_PFP_POSITION_RSP
         /// </summary>
         public IQueryable<InsPfpInspectionTypePfpPositionRsp> InsPfpInspectionTypePfpPositionRsp{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="InsCoreDataProductLocalization"/> entities from table dbo.INS_CORE_DATA_PRODUCT_LOCALIZATION
+        /// </summary>
+        public IQueryable<InsCoreDataProductLocalization> InsCoreDataProductLocalization{ get; set; }
         /// <summary>
         ///     Set of <see cref="InsPfpVehicleType"/> entities from table dbo.INS_PFP_VEHICLE_TYPE
         /// </summary>

@@ -112,6 +112,9 @@
     <Compile Include="Data\AsPro\Common\InsCoreDataProductGroupMapping.cs">
       <DependentUpon>Common.EntityMapping.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\AsPro\Common\InsCoreDataProductLocalizationMapping.cs">
+      <DependentUpon>Common.EntityMapping.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\AsPro\Common\InsCoreDataProductMapping.cs">
       <DependentUpon>Common.EntityMapping.tt</DependentUpon>
     </Compile>
@@ -412,6 +415,9 @@
       <DependentUpon>Common.Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\AsPro\Common\InsCoreDataProductGroupManager.cs">
+      <DependentUpon>Common.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AsPro\Common\InsCoreDataProductLocalizationManager.cs">
       <DependentUpon>Common.Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\AsPro\Common\InsCoreDataProductManager.cs">
