@@ -10,7 +10,7 @@ define(function () {
 				                    validation: { required: true, maxLength: 13 } }			
 			,name: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('authority', 'name'), 
-				                    validation: { required: false, maxLength: 100 } }			
+				                    validation: { required: true, maxLength: 100 } }			
 			,description: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('authority', 'description'), 
 				                    validation: { required: false, maxLength: 250 } }			
@@ -19,7 +19,7 @@ define(function () {
 				                    validation: { required: false } }			
 			,returnType: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('authority', 'returnType'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 			,fromDate: { type: "date", 
 			                        editable: Application.canTableItemBeEdit('authority', 'fromDate'), 
 				                    validation: { required: true, date: true } }			

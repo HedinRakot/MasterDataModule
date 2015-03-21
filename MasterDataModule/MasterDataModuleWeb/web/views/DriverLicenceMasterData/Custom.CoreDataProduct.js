@@ -5,10 +5,10 @@
 
 	var extraColumns = function () {
 	    return [
-            { field: 'productName', title: Resources.productName },
-            { field: 'productDescription', title: Resources.productDescription },
-            { field: 'insCoreDataProductName', title: Resources.insCoreDataProductName },
-            { field: 'insCoreDataProductNumber', title: Resources.insCoreDataProductNumber },
+            { field: 'productName', title: Resources.productName, filterable: false },
+            { field: 'productDescription', title: Resources.productDescription, filterable: false },
+            { field: 'insCoreDataProductName', title: Resources.insCoreDataProductName, filterable: false, sortable: false },
+            { field: 'insCoreDataProductNumber', title: Resources.insCoreDataProductNumber, filterable: false, sortable: false },
 	    ];
 	};
 

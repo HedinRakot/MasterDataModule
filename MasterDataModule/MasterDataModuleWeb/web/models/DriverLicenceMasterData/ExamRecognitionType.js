@@ -10,7 +10,7 @@ define(function () {
 				                    validation: { required: true, maxLength: 50 } }			
 			,description: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('examRecognitionType', 'description'), 
-				                    validation: { required: false, maxLength: 250 } }			
+				                    validation: { required: true, maxLength: 250 } }			
 			,fromDate: { type: "date", 
 			                        editable: Application.canTableItemBeEdit('examRecognitionType', 'fromDate'), 
 				                    validation: { required: true, date: true } }			

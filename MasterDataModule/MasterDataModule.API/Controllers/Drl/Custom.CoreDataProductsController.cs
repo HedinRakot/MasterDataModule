@@ -26,11 +26,15 @@ namespace MasterDataModule.API.Controllers
 
         protected override IQueryable<CoreDataProduct> Sort(IQueryable<CoreDataProduct> entities, Sorting sorting)
         {
-            if (sorting.Field == "name")
+            if (sorting.Field == "productName")
                 return entities.OrderBy("CoreDataProductLocalizations.FirstOrDefault().ProductName " + sorting.Direction);
 
-            if (sorting.Field == "description")
+            if (sorting.Field == "productDescription")
                 return entities.OrderBy("CoreDataProductLocalizations.FirstOrDefault().Description " + sorting.Direction);
+
+            if (sorting.Field == "insCoreDataProductName")
+                return entities.OrderBy("InsCoreDataProductName " + sorting.Direction);
+
 
             return base.Sort(entities, sorting);
         }
@@ -39,13 +43,13 @@ namespace MasterDataModule.API.Controllers
         {
             model.productName = entity.ProductName;
             model.productDescription = entity.ProductDescription;
+            model.insCoreDataProductName = entity.InsCoreDataProductName;
 
             var insCoreDataProductManager = (IInsCoreDataProductManager)GlobalConfiguration.Configuration.
                 DependencyResolver.GetService(typeof(IInsCoreDataProductManager));
             var insCoreDataProduct = insCoreDataProductManager.GetById(entity.InsCoreDataProductId);
             if (insCoreDataProduct != null)
             {
-                model.insCoreDataProductName = insCoreDataProduct.ProductName;
                 model.insCoreDataProductNumber = insCoreDataProduct.ProductNumber;
             }
         }

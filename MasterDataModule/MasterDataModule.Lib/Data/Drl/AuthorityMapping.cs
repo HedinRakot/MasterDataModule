@@ -87,11 +87,7 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.ToDate)
                 .HasColumnName(Authority.Fields.ToDate)
                 .IsRequired();
-
-            Property(t => t.RowVersion)
-                .HasColumnName(Authority.Fields.RowVersion)
-                .IsRequired();
-
+           
             Property(t => t.Name2)
                 .HasColumnName(Authority.Fields.Name2)
                 .IsUnicode()
@@ -126,7 +122,7 @@ namespace MasterDataModule.Lib.Data
                 .HasColumnName(Authority.Fields.Fax)
                 .HasMaxLength(90);
 
-
+            Ignore(t => t.RowVersion);
             //Relationships
         }
     }

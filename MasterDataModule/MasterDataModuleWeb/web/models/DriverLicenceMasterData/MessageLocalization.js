@@ -13,7 +13,7 @@ define(function () {
 				                    validation: { required: true } }			
 			,message: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('messageLocalization', 'message'), 
-				                    validation: { required: false, maxLength: 500 } }			
+				                    validation: { required: true, maxLength: 500 } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

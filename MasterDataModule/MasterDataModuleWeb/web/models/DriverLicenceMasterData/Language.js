@@ -10,7 +10,7 @@ define(function () {
 				                    validation: { required: true } }			
 			,oldAbbr: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('language', 'oldAbbr'), 
-				                    validation: { required: false, maxLength: 10 } }			
+				                    validation: { required: true, maxLength: 10 } }			
 			,fromDate: { type: "date", 
 			                        editable: Application.canTableItemBeEdit('language', 'fromDate'), 
 				                    validation: { required: true, date: true } }			

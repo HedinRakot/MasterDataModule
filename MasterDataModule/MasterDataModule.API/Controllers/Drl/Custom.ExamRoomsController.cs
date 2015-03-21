@@ -17,8 +17,8 @@ namespace MasterDataModule.API.Controllers
                 var clauses = new List<string>();
 
                 clauses.AddRange(new[] { 
-        				base.BuildWhereClause<T>(new Filter { Field = "Name", Operator = filter.Operator, Value = filter.Value }),
-        				base.BuildWhereClause<T>(new Filter { Field = "Description", Operator = filter.Operator, 
+        				base.BuildWhereClause<T>(new Filter { Field = "Name1", Operator = filter.Operator, Value = filter.Value }),
+        				base.BuildWhereClause<T>(new Filter { Field = "StreetHouseNumber", Operator = filter.Operator, 
                             Value = filter.Value }),
         			});
 

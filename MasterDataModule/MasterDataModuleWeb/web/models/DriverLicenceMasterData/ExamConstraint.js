@@ -10,10 +10,10 @@ define(function () {
 				                    validation: { required: true, maxLength: 50 } }			
 			,description: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('examConstraint', 'description'), 
-				                    validation: { required: false, maxLength: 250 } }			
+				                    validation: { required: true, maxLength: 250 } }			
 			,constraintType: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('examConstraint', 'constraintType'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 			,fromDate: { type: "date", 
 			                        editable: Application.canTableItemBeEdit('examConstraint', 'fromDate'), 
 				                    validation: { required: true, date: true } }			

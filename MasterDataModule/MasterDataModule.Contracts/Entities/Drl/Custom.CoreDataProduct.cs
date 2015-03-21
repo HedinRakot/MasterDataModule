@@ -1,7 +1,9 @@
 ﻿using MasterDataModule.Contracts;
+using MasterDataModule.Contracts.Managers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web.Http;
 
 namespace MasterDataModule.Contracts.Entities
 {
@@ -44,6 +46,26 @@ namespace MasterDataModule.Contracts.Entities
                     result = CoreDataProductLocalizations.FirstOrDefault().Description;
                 }
 
+                return result;
+            }
+        }
+
+        /// <summary>
+        /// Ins core data product Name
+        /// </summary>
+        public virtual string InsCoreDataProductName
+        {
+            get
+            {
+                //TODO?
+                var result = String.Empty;
+                var insCoreDataProductManager = (IInsCoreDataProductManager)GlobalConfiguration.Configuration.
+                DependencyResolver.GetService(typeof(IInsCoreDataProductManager));
+                var insCoreDataProduct = insCoreDataProductManager.GetById(InsCoreDataProductId);
+                if (insCoreDataProduct != null)
+                {
+                    result = insCoreDataProduct.ProductName;
+                }
                 return result;
             }
         }

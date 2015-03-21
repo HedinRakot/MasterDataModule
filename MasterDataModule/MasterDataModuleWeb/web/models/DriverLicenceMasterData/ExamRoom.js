@@ -10,10 +10,10 @@ define(function () {
 				                    validation: { required: true } }			
 			,placeAmount: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('examRoom', 'placeAmount'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 			,orgOrganizationalUnitId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('examRoom', 'orgOrganizationalUnitId'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 			,fromDate: { type: "date", 
 			                        editable: Application.canTableItemBeEdit('examRoom', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
@@ -55,7 +55,7 @@ define(function () {
 				                    validation: { required: false, maxLength: 90 } }			
 			,sysCountryId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('examRoom', 'sysCountryId'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

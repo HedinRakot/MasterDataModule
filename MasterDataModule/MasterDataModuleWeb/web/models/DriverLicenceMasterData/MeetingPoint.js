@@ -10,7 +10,7 @@ define(function () {
 				                    validation: { required: true, maxLength: 100 } }			
 			,description: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('meetingPoint', 'description'), 
-				                    validation: { required: false, maxLength: 250 } }			
+				                    validation: { required: true, maxLength: 250 } }			
 			,fromDate: { type: "date", 
 			                        editable: Application.canTableItemBeEdit('meetingPoint', 'fromDate'), 
 				                    validation: { required: true, date: true } }			

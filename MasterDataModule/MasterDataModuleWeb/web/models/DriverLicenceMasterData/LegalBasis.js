@@ -10,7 +10,7 @@ define(function () {
 				                    validation: { required: true, maxLength: 50 } }			
 			,description: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('legalBasis', 'description'), 
-				                    validation: { required: false, maxLength: 250 } }			
+				                    validation: { required: true, maxLength: 250 } }			
 			,educationCertificateRequired: { type: "boolean", 
 			                        editable: Application.canTableItemBeEdit('legalBasis', 'educationCertificateRequired'), 
 				                    validation: { required: false } }			
@@ -19,10 +19,10 @@ define(function () {
 				                    validation: { required: true } }			
 			,messageReason: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('legalBasis', 'messageReason'), 
-				                    validation: { required: false, maxLength: 50 } }			
+				                    validation: { required: true, maxLength: 50 } }			
 			,messageReasonStyle: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('legalBasis', 'messageReasonStyle'), 
-				                    validation: { required: false, maxLength: 50 } }			
+				                    validation: { required: true, maxLength: 50 } }			
 			,fromDate: { type: "date", 
 			                        editable: Application.canTableItemBeEdit('legalBasis', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
@@ -34,7 +34,7 @@ define(function () {
 				                    validation: { required: false } }			
 			,printName: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('legalBasis', 'printName'), 
-				                    validation: { required: false, maxLength: 50 } }			
+				                    validation: { required: true, maxLength: 50 } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

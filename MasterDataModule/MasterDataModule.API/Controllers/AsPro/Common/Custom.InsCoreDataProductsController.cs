@@ -26,10 +26,10 @@ namespace MasterDataModule.API.Controllers
 
         protected override IQueryable<InsCoreDataProduct> Sort(IQueryable<InsCoreDataProduct> entities, Sorting sorting)
         {
-            if (sorting.Field == "name")
+            if (sorting.Field == "productName")
                 return entities.OrderBy("InsCoreDataProductLocalizations.FirstOrDefault().ProductName " + sorting.Direction);
 
-            if (sorting.Field == "description")
+            if (sorting.Field == "productDescription")
                 return entities.OrderBy("InsCoreDataProductLocalizations.FirstOrDefault().Description " + sorting.Direction);
 
             return base.Sort(entities, sorting);

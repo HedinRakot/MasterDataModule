@@ -25,7 +25,10 @@ define([
 			'#streetHouseNumber': 'streetHouseNumber',
 			'#zipCode': 'zipCode',
 			'#city': 'city',
-			'#sysCountryId': 'sysCountryId',
+			'#sysCountryId': { observe: 'sysCountryId',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.sysCountry
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#phone1': 'phone1',
 			'#phone2': 'phone2',
 			'#fax': 'fax',
@@ -50,7 +53,7 @@ define([
 			this.disableInput(this, 'streetHouseNumber');
 			this.disableInput(this, 'zipCode');
 			this.disableInput(this, 'city');
-			this.disableInput(this, 'sysCountryId', 'numeric');
+			this.disableInput(this, 'sysCountryId', 'select');
 			this.disableInput(this, 'phone1');
 			this.disableInput(this, 'phone2');
 			this.disableInput(this, 'fax');

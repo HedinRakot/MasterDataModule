@@ -10,7 +10,7 @@ define(function () {
 				                    validation: { required: true, maxLength: 10 } }			
 			,description: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('examClass', 'description'), 
-				                    validation: { required: false, maxLength: 250 } }			
+				                    validation: { required: true, maxLength: 250 } }			
 			,isMofa: { type: "boolean", 
 			                        editable: Application.canTableItemBeEdit('examClass', 'isMofa'), 
 				                    validation: { required: false } }			
