@@ -18,11 +18,30 @@ namespace MasterDataModule.Contracts.Entities
             get
             {
                 //TODO
-                var result = "TODO";
+                var result = "";
 
                 if (CoreDataProductLocalizations != null && CoreDataProductLocalizations.Count != 0)
                 {
                     result = CoreDataProductLocalizations.FirstOrDefault().ProductName;
+                }
+
+                return result;
+            }
+        }
+
+        /// <summary>
+        /// Product Name
+        /// </summary>
+        public string ProductDescription
+        {
+            get
+            {
+                //TODO
+                var result = "";
+
+                if (CoreDataProductLocalizations != null && CoreDataProductLocalizations.Count != 0)
+                {
+                    result = CoreDataProductLocalizations.FirstOrDefault().Description;
                 }
 
                 return result;

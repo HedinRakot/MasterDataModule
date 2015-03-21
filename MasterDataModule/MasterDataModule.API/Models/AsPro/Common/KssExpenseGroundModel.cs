@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="KssExpenseGround"/> entity
     /// </summary>
     [DataContract]
-    public class KssExpenseGroundModel: BaseModel
+    public partial class KssExpenseGroundModel: BaseModel
     {
 
         /// <summary>

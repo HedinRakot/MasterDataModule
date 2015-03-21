@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/DriverLicenceMasterData/Communities',
-    'l!t!DriverLicenceMasterData/FilterCommunity',
-    'l!t!DriverLicenceMasterData/CommunityRelationships'
+'collections/DriverLicenceMasterData/Communities',
+'l!t!DriverLicenceMasterData/FilterCommunity',
+'l!t!DriverLicenceMasterData/CommunityRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'driverSchoolId', title: this.resources.driverSchoolId },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},

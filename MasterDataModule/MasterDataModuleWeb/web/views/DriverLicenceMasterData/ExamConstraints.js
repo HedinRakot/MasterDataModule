@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/DriverLicenceMasterData/ExamConstraints',
-    'l!t!DriverLicenceMasterData/FilterExamConstraint',
-    'l!t!DriverLicenceMasterData/ExamConstraintRelationships'
+'collections/DriverLicenceMasterData/ExamConstraints',
+'l!t!DriverLicenceMasterData/FilterExamConstraint',
+'l!t!DriverLicenceMasterData/ExamConstraintRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'name', title: this.resources.name },
 				{ field: 'description', title: this.resources.description },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},

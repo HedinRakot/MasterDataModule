@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/DriverLicenceMasterData/Authorities',
-    'l!t!DriverLicenceMasterData/FilterAuthority',
-    'l!t!DriverLicenceMasterData/AuthorityRelationships'
+'collections/DriverLicenceMasterData/Authorities',
+'l!t!DriverLicenceMasterData/FilterAuthority',
+'l!t!DriverLicenceMasterData/AuthorityRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'authorityNumber', title: this.resources.authorityNumber },
 				{ field: 'name', title: this.resources.name },
 				{ field: 'description', title: this.resources.description },

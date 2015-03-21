@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="InsCoreDataProductLocalization"/> entity
     /// </summary>
     [DataContract]
-    public class InsCoreDataProductLocalizationModel: BaseModel
+    public partial class InsCoreDataProductLocalizationModel: BaseModel
     {
 
         /// <summary>

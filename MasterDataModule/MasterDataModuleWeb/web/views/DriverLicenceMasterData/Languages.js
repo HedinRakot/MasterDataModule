@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/DriverLicenceMasterData/Languages',
-    'l!t!DriverLicenceMasterData/FilterLanguage',
-    'l!t!DriverLicenceMasterData/LanguageRelationships'
+'collections/DriverLicenceMasterData/Languages',
+'l!t!DriverLicenceMasterData/FilterLanguage',
+'l!t!DriverLicenceMasterData/LanguageRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'sysLanguageId', title: this.resources.sysLanguageId , collection: this.options.sysLanguage, filterable: false},
 				{ field: 'oldAbbr', title: this.resources.oldAbbr },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},

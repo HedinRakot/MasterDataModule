@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="SysLocation"/> entity
     /// </summary>
     [DataContract]
-    public class SysLocationModel: BaseModel
+    public partial class SysLocationModel: BaseModel
     {
 
         /// <summary>

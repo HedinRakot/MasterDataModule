@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="OrgAccountType"/> entity
     /// </summary>
     [DataContract]
-    public class OrgAccountTypeModel: BaseModel
+    public partial class OrgAccountTypeModel: BaseModel
     {
 
         /// <summary>

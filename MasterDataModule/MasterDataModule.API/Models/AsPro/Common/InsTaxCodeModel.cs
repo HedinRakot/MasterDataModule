@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="InsTaxCode"/> entity
     /// </summary>
     [DataContract]
-    public class InsTaxCodeModel: BaseModel
+    public partial class InsTaxCodeModel: BaseModel
     {
 
         /// <summary>

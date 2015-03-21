@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="EmpEmployeeTopEmployeeRsp"/> entity
     /// </summary>
     [DataContract]
-    public class EmpEmployeeTopEmployeeRspModel: BaseModel
+    public partial class EmpEmployeeTopEmployeeRspModel: BaseModel
     {
 
         /// <summary>

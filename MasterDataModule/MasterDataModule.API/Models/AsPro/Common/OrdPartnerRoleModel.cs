@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="OrdPartnerRole"/> entity
     /// </summary>
     [DataContract]
-    public class OrdPartnerRoleModel: BaseModel
+    public partial class OrdPartnerRoleModel: BaseModel
     {
 
         /// <summary>

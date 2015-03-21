@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="SysRole"/> entity
     /// </summary>
     [DataContract]
-    public class SysRoleModel: BaseModel
+    public partial class SysRoleModel: BaseModel
     {
 
         /// <summary>

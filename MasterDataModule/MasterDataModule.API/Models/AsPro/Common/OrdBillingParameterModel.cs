@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="OrdBillingParameter"/> entity
     /// </summary>
     [DataContract]
-    public class OrdBillingParameterModel: BaseModel
+    public partial class OrdBillingParameterModel: BaseModel
     {
 
         /// <summary>

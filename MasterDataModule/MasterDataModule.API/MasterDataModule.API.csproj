@@ -116,6 +116,7 @@
     <Compile Include="Controllers\AsPro\Common\CommonViewCollectionControllerFactory.cs">
       <DependentUpon>Common.ViewCollectionFactory.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AsPro\Common\Custom.InsCoreDataProductsController.cs" />
     <Compile Include="Controllers\AsPro\Common\Custom.EmpCashPermissionTypesController.cs" />
     <Compile Include="Controllers\AsPro\Common\Custom.EmpEmployeesController.cs" />
     <Compile Include="Controllers\AsPro\Common\Custom.EmpEmployeeSysRoleRspsController.cs" />
@@ -498,6 +499,7 @@
     <Compile Include="Controllers\Settings\SysColumnsController.cs" />
     <Compile Include="Controllers\ViewCollectionFactoryBase.cs" />
     <Compile Include="JsonHelper.Classes.cs" />
+    <Compile Include="Models\AsPro\Common\Custom.InsCoreDataProductModel.cs" />
     <Compile Include="Models\AsPro\Common\EmpCashPermissionTypeModel.cs">
       <DependentUpon>Common.Models.tt</DependentUpon>
     </Compile>

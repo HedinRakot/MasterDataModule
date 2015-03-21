@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="InsProductType"/> entity
     /// </summary>
     [DataContract]
-    public class InsProductTypeModel: BaseModel
+    public partial class InsProductTypeModel: BaseModel
     {
 
         /// <summary>

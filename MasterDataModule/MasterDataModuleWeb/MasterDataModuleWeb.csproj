@@ -1864,6 +1864,8 @@
     <Content Include="web\resources\CommonMasterData\Product\AddOrdRecognitionType.en.js">
       <DependentUpon>web.product.add.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\CommonMasterData\Product\Custom.InsCoreDataProduct.de.js" />
+    <Content Include="web\resources\CommonMasterData\Product\Custom.InsCoreDataProduct.en.js" />
     <Content Include="web\resources\CommonMasterData\Product\FilterInsCoreDataProduct.de.js">
       <DependentUpon>web.product.filter.resources.tt</DependentUpon>
     </Content>
@@ -2724,6 +2726,8 @@
     <Content Include="web\resources\DriverLicenceMasterData\CoreDataProducts.en.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\Custom.CoreDataProduct.en.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\Custom.CoreDataProduct.de.js" />
     <Content Include="web\resources\DriverLicenceMasterData\DriverLicenceMasterData.de.js">
       <DependentUpon>web.drl.menu.resources.tt</DependentUpon>
     </Content>
@@ -5349,6 +5353,7 @@
     <Content Include="web\views\CommonMasterData\Product\AddOrdRecognitionType.js">
       <DependentUpon>web.product.add.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\CommonMasterData\Product\Custom.InsCoreDataProduct.js" />
     <Content Include="web\views\CommonMasterData\Product\FilterInsCoreDataProduct.js">
       <DependentUpon>web.product.views.tt</DependentUpon>
     </Content>
@@ -5784,6 +5789,7 @@
     <Content Include="web\views\DriverLicenceMasterData\CoreDataProducts.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\DriverLicenceMasterData\Custom.CoreDataProduct.js" />
     <Content Include="web\views\DriverLicenceMasterData\DriverLicenceMasterData.js" />
     <Content Include="web\views\DriverLicenceMasterData\DriverSchoolExamRecognitionTypeRelationships.js">
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>

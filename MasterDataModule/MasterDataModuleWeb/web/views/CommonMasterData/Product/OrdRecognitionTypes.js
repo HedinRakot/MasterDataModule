@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/CommonMasterData/Product/OrdRecognitionTypes',
-    'l!t!CommonMasterData/Product/FilterOrdRecognitionType',
-    'l!t!CommonMasterData/Product/OrdRecognitionTypeRelationships'
+'collections/CommonMasterData/Product/OrdRecognitionTypes',
+'l!t!CommonMasterData/Product/FilterOrdRecognitionType',
+'l!t!CommonMasterData/Product/OrdRecognitionTypeRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'name', title: this.resources.name },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},

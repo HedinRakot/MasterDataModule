@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="OrgInspectionDevice"/> entity
     /// </summary>
     [DataContract]
-    public class OrgInspectionDeviceModel: BaseModel
+    public partial class OrgInspectionDeviceModel: BaseModel
     {
 
         /// <summary>

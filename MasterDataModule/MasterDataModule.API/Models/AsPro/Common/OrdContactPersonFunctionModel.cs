@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="OrdContactPersonFunction"/> entity
     /// </summary>
     [DataContract]
-    public class OrdContactPersonFunctionModel: BaseModel
+    public partial class OrdContactPersonFunctionModel: BaseModel
     {
 
         /// <summary>

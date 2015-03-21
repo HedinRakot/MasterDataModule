@@ -6,20 +6,14 @@ using System.Runtime.Serialization;
 namespace MasterDataModule.API.Models
 {
     /// <summary>
-    ///     Model for <see cref="CoreDataProduct"/> entity
+    ///     Model for <see cref="InsCoreDataProduct"/> entity
     /// </summary>
-    public partial class CoreDataProductModel
+    public partial class InsCoreDataProductModel
     {
         [DataMember]
         public string productName { get; set; }
 
         [DataMember]
         public string productDescription { get; set; }
-
-        [DataMember]
-        public string insCoreDataProductName { get; set; }
-
-        [DataMember]
-        public string insCoreDataProductNumber { get; set; }
     }
 }

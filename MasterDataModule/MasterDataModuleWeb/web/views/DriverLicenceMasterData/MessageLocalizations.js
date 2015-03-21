@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/DriverLicenceMasterData/MessageLocalizations',
-    'l!t!DriverLicenceMasterData/FilterMessageLocalization',
-    'l!t!DriverLicenceMasterData/MessageLocalizationRelationships'
+'collections/DriverLicenceMasterData/MessageLocalizations',
+'l!t!DriverLicenceMasterData/FilterMessageLocalization',
+'l!t!DriverLicenceMasterData/MessageLocalizationRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'validationErrorNumber', title: this.resources.validationErrorNumber },
 				{ field: 'sysLanguageId', title: this.resources.sysLanguageId , collection: this.options.sysLanguage, filterable: false},
 				{ field: 'message', title: this.resources.message },

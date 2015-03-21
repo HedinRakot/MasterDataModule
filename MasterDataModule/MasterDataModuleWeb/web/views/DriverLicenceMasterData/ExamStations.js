@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/DriverLicenceMasterData/ExamStations',
-    'l!t!DriverLicenceMasterData/FilterExamStation',
-    'l!t!DriverLicenceMasterData/ExamStationRelationships'
+'collections/DriverLicenceMasterData/ExamStations',
+'l!t!DriverLicenceMasterData/FilterExamStation',
+'l!t!DriverLicenceMasterData/ExamStationRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'ordFederalStateId', title: this.resources.ordFederalStateId , collection: this.options.ordFederalState, filterable: false},
 				{ field: 'place', title: this.resources.place },
 				{ field: 'description', title: this.resources.description },

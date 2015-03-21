@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="OrdFederalGroup"/> entity
     /// </summary>
     [DataContract]
-    public class OrdFederalGroupModel: BaseModel
+    public partial class OrdFederalGroupModel: BaseModel
     {
 
         /// <summary>

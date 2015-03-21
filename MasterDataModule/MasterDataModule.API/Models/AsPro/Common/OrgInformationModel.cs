@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="OrgInformation"/> entity
     /// </summary>
     [DataContract]
-    public class OrgInformationModel: BaseModel
+    public partial class OrgInformationModel: BaseModel
     {
 
         /// <summary>

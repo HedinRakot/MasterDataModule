@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="SysRoleSysPermissionRsp"/> entity
     /// </summary>
     [DataContract]
-    public class SysRoleSysPermissionRspModel: BaseModel
+    public partial class SysRoleSysPermissionRspModel: BaseModel
     {
 
         /// <summary>

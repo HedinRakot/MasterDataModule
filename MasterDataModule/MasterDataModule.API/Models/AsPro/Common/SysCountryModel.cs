@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="SysCountry"/> entity
     /// </summary>
     [DataContract]
-    public class SysCountryModel: BaseModel
+    public partial class SysCountryModel: BaseModel
     {
 
         /// <summary>

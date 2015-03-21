@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="EmpCashPermissionType"/> entity
     /// </summary>
     [DataContract]
-    public class EmpCashPermissionTypeModel: BaseModel
+    public partial class EmpCashPermissionTypeModel: BaseModel
     {
 
         /// <summary>

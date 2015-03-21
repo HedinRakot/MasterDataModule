@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="OrdRecognition"/> entity
     /// </summary>
     [DataContract]
-    public class OrdRecognitionModel: BaseModel
+    public partial class OrdRecognitionModel: BaseModel
     {
 
         /// <summary>

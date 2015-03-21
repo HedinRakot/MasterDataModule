@@ -38,6 +38,8 @@ namespace MasterDataModule.API.Controllers
             model.oldProductNumber = entity.OldProductNumber;
             model.createDate = ((ISystemFields)entity).CreateDate;
             model.changeDate = ((ISystemFields)entity).ChangeDate;
+
+            ExtraEntityToModel(entity, model);
         }
         protected override void ModelToEntity(InsCoreDataProductModel model, InsCoreDataProduct entity, ActionTypes actionType)
         {

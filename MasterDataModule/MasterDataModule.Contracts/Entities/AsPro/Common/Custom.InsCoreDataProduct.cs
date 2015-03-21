@@ -23,11 +23,30 @@ namespace MasterDataModule.Contracts.Entities
             get
             {
                 //TODO
-                var result = "TODO";
+                var result = "";
 
                 if (InsCoreDataProductLocalizations != null && InsCoreDataProductLocalizations.Count != 0)
                 {
                     result = InsCoreDataProductLocalizations.FirstOrDefault().ProductName;
+                }
+
+                return result;
+            }
+        }
+
+        /// <summary>
+        /// Product Name
+        /// </summary>
+        public string ProductDescription
+        {
+            get
+            {
+                //TODO
+                var result = "";
+
+                if (InsCoreDataProductLocalizations != null && InsCoreDataProductLocalizations.Count != 0)
+                {
+                    result = InsCoreDataProductLocalizations.FirstOrDefault().Description;
                 }
 
                 return result;

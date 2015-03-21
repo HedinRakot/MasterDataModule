@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="OrdRecognitionAreaOfWorkRsp"/> entity
     /// </summary>
     [DataContract]
-    public class OrdRecognitionAreaOfWorkRspModel: BaseModel
+    public partial class OrdRecognitionAreaOfWorkRspModel: BaseModel
     {
 
         /// <summary>

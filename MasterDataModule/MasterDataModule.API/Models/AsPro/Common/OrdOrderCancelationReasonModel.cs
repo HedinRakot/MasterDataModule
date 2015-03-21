@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="OrdOrderCancelationReason"/> entity
     /// </summary>
     [DataContract]
-    public class OrdOrderCancelationReasonModel: BaseModel
+    public partial class OrdOrderCancelationReasonModel: BaseModel
     {
 
         /// <summary>

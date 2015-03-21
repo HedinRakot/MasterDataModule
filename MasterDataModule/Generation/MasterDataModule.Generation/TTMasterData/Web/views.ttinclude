@@ -14,13 +14,21 @@
 		
 		context.FileManager.StartNewFile(entityContent.CodeNamePlural + ".js");
 		//Model
+		var defines = String.Format("{0}\n{1}\n{2}\n{3}\n{4}",
+			"'base/base-object-grid-view',",
+			"'collections/" + context.CurrentRelatedWebPath + "/" + entityContent.CodeNamePlural + "',",
+			"'l!t!" + context.CurrentRelatedWebPath + "/Filter" + entityContent.CodeName + "',",
+			"'l!t!" + context.CurrentRelatedWebPath + "/" + entityContent.CodeName + "Relationships'",
+			entityContent.ShowExtraFields ? 
+				",'" + context.CurrentRelatedWebPath+ "/Custom." + entityContent.CodeName + "'" : "");
+
+		var defineMembers = entityContent.ShowExtraFields ? ", CustomColumns" : "";
+		var columnsOpenText = entityContent.ShowExtraFields ? "return $.merge( CustomColumns(),\n[" : "return [";
+		var columnsCloseText = entityContent.ShowExtraFields ? "]);" : "];";
 #>
 define([
-	'base/base-object-grid-view',
-    'collections/<#=context.CurrentRelatedWebPath #>/<#=entityContent.CodeNamePlural#>',
-    'l!t!<#=context.CurrentRelatedWebPath #>/<#= "Filter" + entityContent.CodeName #>',
-    'l!t!<#=context.CurrentRelatedWebPath #>/<#= entityContent.CodeName + "Relationships" #>'
-], function (BaseView, Collection, FilterView, DetailView) {
+	<#= defines #>
+], function (BaseView, Collection, FilterView, DetailView<#= defineMembers #>) {
 	'use strict';
 
 	var view = BaseView.extend({
@@ -36,9 +44,10 @@ define([
 	    },
 
 		columns: function () {
-		    return [
-<#
-        foreach (var property in model.ModelProperties)
+			
+			<#= columnsOpenText #>
+<#        
+		foreach (var property in model.ModelProperties)
         {
             var propContent = property.Column.Content;
             var columnInfo = GetColumnInfo(context, property);
@@ -50,7 +59,7 @@ define([
 			}
 		}
 #>
-			];
+			<#= columnsCloseText #>
 		}
 	});
 

@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="InsStatisticGroup"/> entity
     /// </summary>
     [DataContract]
-    public class InsStatisticGroupModel: BaseModel
+    public partial class InsStatisticGroupModel: BaseModel
     {
 
         /// <summary>

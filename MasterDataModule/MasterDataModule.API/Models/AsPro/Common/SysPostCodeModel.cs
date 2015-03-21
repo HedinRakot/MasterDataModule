@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="SysPostCode"/> entity
     /// </summary>
     [DataContract]
-    public class SysPostCodeModel: BaseModel
+    public partial class SysPostCodeModel: BaseModel
     {
 
         /// <summary>

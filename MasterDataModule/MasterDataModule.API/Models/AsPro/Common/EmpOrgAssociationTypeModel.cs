@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="EmpOrgAssociationType"/> entity
     /// </summary>
     [DataContract]
-    public class EmpOrgAssociationTypeModel: BaseModel
+    public partial class EmpOrgAssociationTypeModel: BaseModel
     {
 
         /// <summary>

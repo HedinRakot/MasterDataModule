@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/CommonMasterData/Product/InsProductObjectClasses',
-    'l!t!CommonMasterData/Product/FilterInsProductObjectClass',
-    'l!t!CommonMasterData/Product/InsProductObjectClassRelationships'
+'collections/CommonMasterData/Product/InsProductObjectClasses',
+'l!t!CommonMasterData/Product/FilterInsProductObjectClass',
+'l!t!CommonMasterData/Product/InsProductObjectClassRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'description', title: this.resources.description },
 				{ field: 'weightFrom', title: this.resources.weightFrom },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},

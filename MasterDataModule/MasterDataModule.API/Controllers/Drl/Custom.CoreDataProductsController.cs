@@ -38,19 +38,40 @@ namespace MasterDataModule.API.Controllers
         protected void ExtraEntityToModel(CoreDataProduct entity, CoreDataProductModel model)
         {
             model.productName = entity.ProductName;
+            model.productDescription = entity.ProductDescription;
 
-            //var insCoreDataProductManager = (IInsCoreDataProductManager)GlobalConfiguration.Configuration.
-            //    DependencyResolver.GetService(typeof(IInsCoreDataProductManager));
-            //var insCoreDataProduct = insCoreDataProductManager.GetById(entity.InsCoreDataProductId);
-            //if (insCoreDataProduct != null)
-            //{
-            //    model.insCoreDataProductName = insCoreDataProduct.ProductName;
-            //}
+            var insCoreDataProductManager = (IInsCoreDataProductManager)GlobalConfiguration.Configuration.
+                DependencyResolver.GetService(typeof(IInsCoreDataProductManager));
+            var insCoreDataProduct = insCoreDataProductManager.GetById(entity.InsCoreDataProductId);
+            if (insCoreDataProduct != null)
+            {
+                model.insCoreDataProductName = insCoreDataProduct.ProductName;
+                model.insCoreDataProductNumber = insCoreDataProduct.ProductNumber;
+            }
+        }
 
-            //TODO
-            //if (entity.CoreDataProductLocalizations != null && entity.CoreDataProductLocalizations.Count != 0)
+        protected void ExtraModelToEntity(CoreDataProduct entity, CoreDataProductModel model, ActionTypes actionType)
+        {
+            //if (actionType == ActionTypes.Add)
             //{
-            //    model.description = entity.CoreDataProductLocalizations.FirstOrDefault().Description;
+            //    var sysLanguageManager = (ISysLanguageManager)GlobalConfiguration.Configuration.
+            //        DependencyResolver.GetService(typeof(ISysLanguageManager));
+
+            //    var defaultLanguage = sysLanguageManager.GetEntities(o =>
+            //        o.Description.Equals("Deutsch", StringComparison.InvariantCultureIgnoreCase)).FirstOrDefault();
+
+            //    var defaultGermanlocalization = new CoreDataProductLocalization()
+            //    {
+            //        ProductName = model.name,
+            //        SysLanguageId = defaultLanguage != null ? defaultLanguage.Id : 0,
+            //        FromDate = model.fromDate,
+            //        ToDate = model.toDate,
+            //        Description = model.description,
+            //        CoreDataProduct = entity
+            //    };
+
+            //    entity.CoreDataProductLocalizations = new List<CoreDataProductLocalization>();
+            //    entity.CoreDataProductLocalizations.Add(defaultGermanlocalization);
             //}
         }
     }

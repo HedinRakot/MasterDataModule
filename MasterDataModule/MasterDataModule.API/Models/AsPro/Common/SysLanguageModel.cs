@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="SysLanguage"/> entity
     /// </summary>
     [DataContract]
-    public class SysLanguageModel: BaseModel
+    public partial class SysLanguageModel: BaseModel
     {
 
         /// <summary>

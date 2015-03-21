@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="ExpPassengersType"/> entity
     /// </summary>
     [DataContract]
-    public class ExpPassengersTypeModel: BaseModel
+    public partial class ExpPassengersTypeModel: BaseModel
     {
 
         /// <summary>
