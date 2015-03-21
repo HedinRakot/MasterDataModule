@@ -3,16 +3,29 @@
 <#@ include file="..\MasterData.GenerationContext.ttinclude"  once="true" #>
 <#
     IWebGenerationContext context = generationContext;
+
     foreach (var model in context.WebModels)
     {
         var entityContent = model.Table.Content;
         context.FileManager.StartNewFile("Add" + entityContent.CodeName + ".js");
-		//Model
+		
+		//find custom properties
+		var customDefines = "";
+		var customViews = "";
+		foreach (var property in model.ModelProperties)
+		{
+			var customView = property.Column.Content.CustomView;
+			if(!String.IsNullOrEmpty(customView))
+			{
+				customDefines += String.Format(",\n    'l!t!{0}/{1}'", context.CurrentRelatedWebPath, customView);
+				customViews += String.Format(", {0}View", customView);
+			}
+		}
 #>
 define([
 	'base/base-object-add-view',
-    'l!t!<#= context.CurrentRelatedWebPath #>/<#= entityContent.CodeName + "Relationships" #>'
-], function (BaseView, TabView) {
+    'l!t!<#= context.CurrentRelatedWebPath #>/<#= entityContent.CodeName + "Relationships" #>'<#= customDefines #>
+], function (BaseView, TabView<#= customViews #>) {
     'use strict';
 
     var view = BaseView.extend({
@@ -29,8 +42,16 @@ define([
         foreach (var property in model.ModelProperties)
         {
 			var bindigsPropertyType = GetBindigsPropertyType(context, property);
+
+			var customPropertyBinding = "";
+			var propContent = property.Column.Content;
+			if(!String.IsNullOrEmpty(propContent.CustomView))
+			{
+				customPropertyBinding = String.Format("\n			'#{0}_Name': '{1}',", 
+					property.Name, propContent.CustomDataBindingProperty);
+			}
 #>
-			'#<#=property.Name #>': <#=bindigsPropertyType#>,
+			'#<#=property.Name #>': <#=bindigsPropertyType#>,<#= customPropertyBinding #>
 <#
 		}
 #>
@@ -49,14 +70,53 @@ define([
         {
             var propContent = property.Column.Content;
             var type = GetPropertyType(context, property);
+			if(String.IsNullOrEmpty(propContent.CustomView))
+			{
 #>
 			this.disableInput(this, '<#= property.Name #>'<#= type #>);
 <#
+			}
 		}
 #>
 
             return this;
         }
+<#
+		if(!String.IsNullOrEmpty(customViews))
+		{
+#>
+		,events: {
+<#
+			foreach (var property in model.ModelProperties)
+			{
+				var propContent = property.Column.Content;
+				if(!String.IsNullOrEmpty(propContent.CustomView))
+				{
+#>
+			'click .<#= propContent.CustomView #>': function (e) {
+                e.preventDefault();
+
+                var self = this,
+                    view = new <#= propContent.CustomView #>View();
+
+                self.listenTo(view, 'select', function (item) {
+
+                    self.model.set('<#= property.Name #>', item.id);
+                    self.$el.find('#<#= property.Name #>').val(item.id);
+                    self.$el.find('#<#= property.Name #>_Name').val(item.get('<#= propContent.CustomViewBindingProperty #>'));
+                });
+
+                self.addView(view);
+                self.$el.append(view.render().$el);
+            },
+<#
+				}
+			}
+#>
+		}
+<#		
+		}
+#>
     });
 
     return view;

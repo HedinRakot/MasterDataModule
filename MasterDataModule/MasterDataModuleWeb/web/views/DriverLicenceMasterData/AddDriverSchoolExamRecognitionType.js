@@ -17,7 +17,7 @@ define([
 			'#driverSchoolId': 'driverSchoolId',
 			'#examRecognitionTypeId': { observe: 'examRecognitionTypeId',
 				selectOptions: { labelPath: 'name', valuePath: 'id',
-				collection: self.options.drlExamRecognitionType
+				collection: self.options.examRecognitionType
 				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',

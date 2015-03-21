@@ -3094,6 +3094,8 @@
     <Content Include="web\resources\DriverLicenceMasterData\FilterHolidayOrdFederalState.en.js">
       <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\FilterInsCoreDataProduct.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\FilterInsCoreDataProduct.en.js" />
     <Content Include="web\resources\DriverLicenceMasterData\FilterLanguage.de.js">
       <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
     </Content>
@@ -3160,6 +3162,8 @@
     <Content Include="web\resources\DriverLicenceMasterData\Holidays.en.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\InsCoreDataProducts.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\InsCoreDataProducts.en.js" />
     <Content Include="web\resources\DriverLicenceMasterData\LanguageRelationships.de.js">
       <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
     </Content>
@@ -3244,6 +3248,8 @@
     <Content Include="web\resources\DriverLicenceMasterData\SchoolInfos.en.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\SelectProduct.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\SelectProduct.en.js" />
     <Content Include="web\resources\DriverLicenceMasterData\web.drl.add.resources.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>web.drl.add.resources.txt</LastGenOutput>
@@ -4689,6 +4695,7 @@
     <Content Include="web\templates\DriverLicenceMasterData\FilterHolidayOrdFederalState.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\FilterInsCoreDataProduct.html" />
     <Content Include="web\templates\DriverLicenceMasterData\FilterLanguage.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
@@ -4722,6 +4729,7 @@
     <Content Include="web\templates\DriverLicenceMasterData\Holidays.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\InsCoreDataProducts.html" />
     <Content Include="web\templates\DriverLicenceMasterData\LanguageRelationships.html">
       <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
     </Content>
@@ -4764,6 +4772,7 @@
     <Content Include="web\templates\DriverLicenceMasterData\SchoolInfos.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\SelectProduct.html" />
     <Content Include="web\templates\DriverLicenceMasterData\web.drl.relationships.templates.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -5929,6 +5938,7 @@
     <Content Include="web\views\DriverLicenceMasterData\FilterHoliday.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\DriverLicenceMasterData\FilterInsCoreDataProduct.js" />
     <Content Include="web\views\DriverLicenceMasterData\FilterLanguage.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
@@ -5959,6 +5969,7 @@
     <Content Include="web\views\DriverLicenceMasterData\Holidays.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\DriverLicenceMasterData\InsCoreDataProducts.js" />
     <Content Include="web\views\DriverLicenceMasterData\LanguageRelationships.js">
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
@@ -6001,6 +6012,7 @@
     <Content Include="web\views\DriverLicenceMasterData\SchoolInfos.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\DriverLicenceMasterData\SelectProduct.js" />
     <Content Include="web\views\DriverLicenceMasterData\web.drl.add.views.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

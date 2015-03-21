@@ -1,7 +1,8 @@
 define([
 	'base/base-object-add-view',
-    'l!t!DriverLicenceMasterData/CoreDataProductRelationships'
-], function (BaseView, TabView) {
+    'l!t!DriverLicenceMasterData/CoreDataProductRelationships',
+    'l!t!DriverLicenceMasterData/SelectProduct'
+], function (BaseView, TabView, SelectProductView) {
     'use strict';
 
     var view = BaseView.extend({
@@ -15,9 +16,13 @@ define([
             var self = this;
             var result = {
 			'#insCoreDataProductId': 'insCoreDataProductId',
+			'#insCoreDataProductId_Name': 'insCoreDataProductName',
 			'#minAge': 'minAge',
 			'#maxAge': 'maxAge',
-			'#examType': 'examType',
+			'#examType': { observe: 'examType',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.examType
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#priorTimeInMonths': 'priorTimeInMonths',
 			'#expirationInMonth': 'expirationInMonth',
 			'#repeatTimeInDays': 'repeatTimeInDays',
@@ -42,10 +47,9 @@ define([
             view.__super__.render.apply(this, arguments);
 
 			//TODO foreach model field
-			this.disableInput(this, 'insCoreDataProductId', 'numeric');
 			this.disableInput(this, 'minAge', 'numeric');
 			this.disableInput(this, 'maxAge', 'numeric');
-			this.disableInput(this, 'examType', 'numeric');
+			this.disableInput(this, 'examType', 'select');
 			this.disableInput(this, 'priorTimeInMonths', 'numeric');
 			this.disableInput(this, 'expirationInMonth', 'numeric');
 			this.disableInput(this, 'repeatTimeInDays', 'numeric');
@@ -63,6 +67,24 @@ define([
 
             return this;
         }
+		,events: {
+			'click .SelectProduct': function (e) {
+                e.preventDefault();
+
+                var self = this,
+                    view = new SelectProductView();
+
+                self.listenTo(view, 'select', function (item) {
+
+                    self.model.set('insCoreDataProductId', item.id);
+                    self.$el.find('#insCoreDataProductId').val(item.id);
+                    self.$el.find('#insCoreDataProductId_Name').val(item.get('productName'));
+                });
+
+                self.addView(view);
+                self.$el.append(view.render().$el);
+            },
+		}
     });
 
     return view;

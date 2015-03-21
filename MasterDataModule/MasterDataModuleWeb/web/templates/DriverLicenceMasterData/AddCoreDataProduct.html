@@ -9,7 +9,9 @@
 			<label for="insCoreDataProductId" data-localized="insCoreDataProductId"></label>
 		</div>
 		<div class="editor-field">
-            <input type="text" data-role="numerictextbox" id="insCoreDataProductId" name="insCoreDataProductId" />
+            <input type="text" class="k-textbox" style="width: 190px" disabled="disabled" id="insCoreDataProductId_Name" name="insCoreDataProductId_Name" />
+            <button class="k-primary k-button SelectProduct" style="width: auto;" type="button" data-localized="SelectProduct">Auswählen</button>
+            <input type="hidden" id="insCoreDataProductId" name="insCoreDataProductId" />
 		</div>   
 		<div class="editor-label">
 			<label for="minAge" data-localized="minAge"></label>
@@ -27,7 +29,7 @@
 			<label for="examType" data-localized="examType"></label>
 		</div>
 		<div class="editor-field">
-            <input type="text" data-role="numerictextbox" id="examType" name="examType" />
+            <select  id="examType" name="examType" />
 		</div>   
 		<div class="editor-label">
 			<label for="priorTimeInMonths" data-localized="priorTimeInMonths"></label>

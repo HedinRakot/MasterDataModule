@@ -32,8 +32,22 @@
 		<div class="editor-field">
 <#
 			}
+
+			var customProperty = "";
+			var customPropertyPostfix = "";
+			if(!String.IsNullOrEmpty(propContent.CustomView))
+			{
+				customProperty = String.Format(
+					"\n            <button class=\"k-primary k-button {0}\" style=\"width: auto;\" type=\"button\" data-localized=\"{0}\">Auswählen</button>" + 
+					"\n            <input type=\"hidden\" id=\"{1}\" name=\"{1}\" />",
+					propContent.CustomView, property.Name
+				);
+
+				type = "<input type=\"text\" class=\"k-textbox\" style=\"width: 190px\" disabled=\"disabled\"";
+				customPropertyPostfix = "_Name";
+			}
 #>
-            <#=type#> id="<#=property.Name#>" name="<#=property.Name#>" />
+            <#=type#> id="<#=property.Name + customPropertyPostfix #>" name="<#=property.Name + customPropertyPostfix #>" /><#= customProperty #>
 		</div>   
 <#
         }

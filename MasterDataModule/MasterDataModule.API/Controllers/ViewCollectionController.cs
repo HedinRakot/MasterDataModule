@@ -17,6 +17,7 @@ namespace MasterDataModule.API.Controllers
         public bool Role { get; set; }
         public bool EditModeType { get; set; }
         public bool AssignationType { get; set; }
+        public bool ExamType { get; set; }
     }
 
     public class IdNameModel<TId>
@@ -65,6 +66,13 @@ namespace MasterDataModule.API.Controllers
                     new { id = 0, name = "Erweiterung"},
                     new { id = 1, name = "Ersterteilung"},
                     new { id = 2, name = "--"},
+                });
+
+            if (model.ExamType)
+                result.Add("ExamType", new[]
+                {
+                    new { id = 1, name = "Theorie"},
+                    new { id = 2, name = "Praxis"},
                 });
 			
 			return Ok(result);
