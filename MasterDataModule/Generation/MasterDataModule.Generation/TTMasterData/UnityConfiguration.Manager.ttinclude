@@ -26,7 +26,7 @@
 	code.StartArea(); //Area: OnModelCreating
     foreach (var entityInfo in context.Entities)
     {
-        code.WriteLine("container.RegisterType<I{0}Manager, {0}Manager>();", entityInfo.Name);
+        code.WriteLine("container.RegisterType<I{0}Manager, {0}Manager>(new PerRequestLifetimeManager());", entityInfo.Name);
     }
 	code.EndArea(); //End Area: OnModelCreating
 

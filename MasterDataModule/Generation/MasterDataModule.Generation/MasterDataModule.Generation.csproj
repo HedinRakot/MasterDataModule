@@ -95,6 +95,7 @@
     <None Include="TTCommon\Assemblies.ttinclude" />
     <None Include="TTCommon\Context.ttinclude" />
     <None Include="TTCommon\Context.Interface.ttinclude" />
+    <None Include="TTMasterData\DuplicateChecker.ttinclude" />
     <None Include="TTCommon\DynamicTextTransformation.ttinclude" />
     <None Include="TTCommon\Entities.Interfaces.ttinclude" />
     <None Include="TTCommon\Entities.ttinclude" />
@@ -106,6 +107,7 @@
     <None Include="TTCommon\TextTransformProxy.ttinclude" />
     <None Include="TTMasterData\AsPro.Settings.ttinclude" />
     <None Include="TTMasterData\MasterDataConfiguration.Settings.ttinclude" />
+    <None Include="TTMasterData\UnityConfiguration.DuplicateCheckers.ttinclude" />
     <None Include="TTMasterData\ViewCollectionFactories.ttinclude" />
     <None Include="TTMasterData\CollectionTypes.ttinclude" />
     <None Include="TTMasterData\Custom.Controller.ttinclude" />

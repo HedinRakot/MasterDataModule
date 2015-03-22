@@ -48,6 +48,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -724,6 +727,14 @@
     </Compile>
     <Compile Include="Managers\Drl\IUserManager.Custom.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveActors\Aspro\IAsProSaveActor.cs" />
+    <Compile Include="SaveActors\Aspro\IAsProSaveActorManager.cs" />
+    <Compile Include="SaveActors\Base\ISaveActor.cs" />
+    <Compile Include="SaveActors\Base\ISaveActorManager.cs" />
+    <Compile Include="SaveActors\Drl\IDrlSaveActorManager.cs" />
+    <Compile Include="SaveActors\Drl\IDrlSaveActor.cs" />
+    <Compile Include="SaveActors\MasterDataConfiguration\IMasterDataConfigurationSaveActorManager.cs" />
+    <Compile Include="SaveActors\MasterDataConfiguration\IMasterDataConfigurationSaveActor.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

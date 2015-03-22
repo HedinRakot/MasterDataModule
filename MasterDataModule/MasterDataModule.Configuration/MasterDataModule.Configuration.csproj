@@ -72,6 +72,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UnityConfiguration.DuplicateCheckers.MasterDataConfiguration.cs">
+      <DependentUpon>UnityConfiguration.DuplicateCheckers.MasterDataConfiguration.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UnityConfiguration.DuplicateCheckers.AsPro.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UnityConfiguration.DuplicateCheckers.AsPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnityConfiguration.DuplicateCheckers.Drl.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UnityConfiguration.DuplicateCheckers.Drl.tt</DependentUpon>
+    </Compile>
     <Compile Include="UnityConfiguration.Managers.AsPro.TP.cs">
       <DependentUpon>UnityConfiguration.Managers.AsPro.TP.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -110,6 +125,18 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="UnityConfiguration.DuplicateCheckers.MasterDataConfiguration.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UnityConfiguration.DuplicateCheckers.MasterDataConfiguration.cs</LastGenOutput>
+    </None>
+    <None Include="UnityConfiguration.DuplicateCheckers.AsPro.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UnityConfiguration.DuplicateCheckers.AsPro.cs</LastGenOutput>
+    </None>
+    <None Include="UnityConfiguration.DuplicateCheckers.Drl.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UnityConfiguration.DuplicateCheckers.Drl.cs</LastGenOutput>
+    </None>
     <None Include="UnityConfiguration.Managers.AsPro.TP.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>UnityConfiguration.Managers.AsPro.TP.cs</LastGenOutput>

@@ -17,5 +17,6 @@ namespace MasterDataModule.Generation
         public string CustomView { get; set; }
         public string CustomViewBindingProperty { get; set; }
         public string CustomDataBindingProperty { get; set; }
+        public bool IsBusinessKey { get; set; }
     }
 }

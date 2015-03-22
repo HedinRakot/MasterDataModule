@@ -411,6 +411,28 @@
     <Compile Include="Data\AsPro.Context.Custom.cs" />
     <Compile Include="Data\Drl.Context.Custom.cs" />
     <Compile Include="Data\Drl.Context.Configuration.cs" />
+    <Compile Include="Data\SaveActors\AsPro\AsProSaveActorManager.cs" />
+    <Compile Include="Data\SaveActors\Base\SaveActorManager.cs" />
+    <Compile Include="Data\SaveActors\Drl\DrlSaveActorManager.cs" />
+    <Compile Include="Data\SaveActors\MasterDataConfiguration\DrlSaveActorManager.cs" />
+    <Compile Include="DuplicateCheckers\Aspro\AsproDuplicateCheckerSaveActor.cs" />
+    <Compile Include="DuplicateCheckers\Aspro\EmpEmployeeDuplicateChecker.cs">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateCheckers\Base\BaseDuplicateChecker.cs" />
+    <Compile Include="DuplicateCheckers\Aspro\InsCoreDataProductLocalizationDuplicateChecker.cs">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateCheckers\Base\BaseDuplicateCheckerSaveActor.cs" />
+    <Compile Include="DuplicateCheckers\Drl\CoreDataProductDuplicateChecker.cs">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateCheckers\Drl\DrlDuplicateCheckerSaveActor.cs" />
+    <Compile Include="DuplicateCheckers\Interfaces\IAsProDuplicateChecker.cs" />
+    <Compile Include="DuplicateCheckers\Interfaces\IDrlDuplicateChecker.cs" />
+    <Compile Include="DuplicateCheckers\Interfaces\IDuplicateChecker.cs" />
+    <Compile Include="DuplicateCheckers\Interfaces\IMasterDataConfigurationDuplicateChecker.cs" />
+    <Compile Include="DuplicateCheckers\MasterDataConfiguration\MasterDataConfigurationDuplicateCheckerSaveActor.cs" />
     <Compile Include="Managers\AsPro\Common\EmpCashPermissionTypeManager.cs">
       <DependentUpon>Common.Managers.tt</DependentUpon>
     </Compile>
@@ -768,6 +790,18 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Drl.EntityMapping.txt</LastGenOutput>
     </None>
+    <None Include="DuplicateCheckers\Aspro\DuplicateChecker.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DuplicateChecker.txt</LastGenOutput>
+    </None>
+    <None Include="DuplicateCheckers\Drl\DuplicateChecker.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DuplicateChecker.txt</LastGenOutput>
+    </None>
+    <None Include="DuplicateCheckers\MasterDataConfiguration\DuplicateChecker.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DuplicateChecker.txt</LastGenOutput>
+    </None>
     <None Include="Managers\AsPro\Common\Common.Managers.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Common.Managers.txt</LastGenOutput>
@@ -810,6 +844,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Drl.EntityMapping.tt</DependentUpon>
+    </Content>
+    <Content Include="DuplicateCheckers\Aspro\DuplicateChecker.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+    </Content>
+    <Content Include="DuplicateCheckers\Drl\DuplicateChecker.txt">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
+    <Content Include="DuplicateCheckers\MasterDataConfiguration\DuplicateChecker.txt">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Content>
     <Content Include="Managers\AsPro\Common\Common.Managers.txt">
       <AutoGen>True</AutoGen>

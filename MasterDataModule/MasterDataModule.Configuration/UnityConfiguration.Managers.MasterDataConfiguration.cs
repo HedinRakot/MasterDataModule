@@ -15,11 +15,11 @@ namespace MasterDataModule.Configuration
     {
         private static void InitializeMasterDataConfiguration(IUnityContainer container)
         {
-            container.RegisterType<IPermissionManager, PermissionManager>();
-            container.RegisterType<IRoleManager, RoleManager>();
-            container.RegisterType<IUserManager, UserManager>();
-            container.RegisterType<ISysColumnManager, SysColumnManager>();
-            container.RegisterType<ISysTableManager, SysTableManager>();
+            container.RegisterType<IPermissionManager, PermissionManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IRoleManager, RoleManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IUserManager, UserManager>(new PerRequestLifetimeManager());
+            container.RegisterType<ISysColumnManager, SysColumnManager>(new PerRequestLifetimeManager());
+            container.RegisterType<ISysTableManager, SysTableManager>(new PerRequestLifetimeManager());
         }
 
     }

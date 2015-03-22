@@ -15,39 +15,39 @@ namespace MasterDataModule.Configuration
     {
         private static void InitializeDrl(IUnityContainer container)
         {
-            container.RegisterType<IMessageLocalizationManager, MessageLocalizationManager>();
-            container.RegisterType<ICoreDataProductManager, CoreDataProductManager>();
-            container.RegisterType<IReturnReasonManager, ReturnReasonManager>();
-            container.RegisterType<IExamPossibleResultManager, ExamPossibleResultManager>();
-            container.RegisterType<ISchoolInfoManager, SchoolInfoManager>();
-            container.RegisterType<IArgeVersionManager, ArgeVersionManager>();
-            container.RegisterType<IAuthorityManager, AuthorityManager>();
-            container.RegisterType<ICommunityManager, CommunityManager>();
-            container.RegisterType<IExamRecognitionTypeManager, ExamRecognitionTypeManager>();
-            container.RegisterType<ICoreDataProductClassBasisManager, CoreDataProductClassBasisManager>();
-            container.RegisterType<ICommunityParticipantManager, CommunityParticipantManager>();
-            container.RegisterType<IExamRecognitionTypeExamClassManager, ExamRecognitionTypeExamClassManager>();
-            container.RegisterType<IDriverSchoolManager, DriverSchoolManager>();
-            container.RegisterType<IExamRoomManager, ExamRoomManager>();
-            container.RegisterType<IExamStationManager, ExamStationManager>();
-            container.RegisterType<IDriverSchoolExamRecognitionTypeManager, DriverSchoolExamRecognitionTypeManager>();
-            container.RegisterType<IDriverSchoolInfoManager, DriverSchoolInfoManager>();
-            container.RegisterType<IExamStationExamRecognitionTypeManager, ExamStationExamRecognitionTypeManager>();
-            container.RegisterType<IHolidayManager, HolidayManager>();
-            container.RegisterType<IExamClassManager, ExamClassManager>();
-            container.RegisterType<IHolidayOrdFederalStateManager, HolidayOrdFederalStateManager>();
-            container.RegisterType<ILanguageManager, LanguageManager>();
-            container.RegisterType<IExamClassArgeMapManager, ExamClassArgeMapManager>();
-            container.RegisterType<ILegalBasisManager, LegalBasisManager>();
-            container.RegisterType<IExamClassInclusiveClassManager, ExamClassInclusiveClassManager>();
-            container.RegisterType<IExamClassMapManager, ExamClassMapManager>();
-            container.RegisterType<IExamClassRequiredClassManager, ExamClassRequiredClassManager>();
-            container.RegisterType<ICoreDataProductLocalizationManager, CoreDataProductLocalizationManager>();
-            container.RegisterType<IExamClassRestrictedClassManager, ExamClassRestrictedClassManager>();
-            container.RegisterType<IExamConstraintManager, ExamConstraintManager>();
-            container.RegisterType<IMeetingPointManager, MeetingPointManager>();
-            container.RegisterType<IExamConstraintExamClassManager, ExamConstraintExamClassManager>();
-            container.RegisterType<IMeetingPointOrganizationalUnitManager, MeetingPointOrganizationalUnitManager>();
+            container.RegisterType<IMessageLocalizationManager, MessageLocalizationManager>(new PerRequestLifetimeManager());
+            container.RegisterType<ICoreDataProductManager, CoreDataProductManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IReturnReasonManager, ReturnReasonManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IExamPossibleResultManager, ExamPossibleResultManager>(new PerRequestLifetimeManager());
+            container.RegisterType<ISchoolInfoManager, SchoolInfoManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IArgeVersionManager, ArgeVersionManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IAuthorityManager, AuthorityManager>(new PerRequestLifetimeManager());
+            container.RegisterType<ICommunityManager, CommunityManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IExamRecognitionTypeManager, ExamRecognitionTypeManager>(new PerRequestLifetimeManager());
+            container.RegisterType<ICoreDataProductClassBasisManager, CoreDataProductClassBasisManager>(new PerRequestLifetimeManager());
+            container.RegisterType<ICommunityParticipantManager, CommunityParticipantManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IExamRecognitionTypeExamClassManager, ExamRecognitionTypeExamClassManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IDriverSchoolManager, DriverSchoolManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IExamRoomManager, ExamRoomManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IExamStationManager, ExamStationManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IDriverSchoolExamRecognitionTypeManager, DriverSchoolExamRecognitionTypeManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IDriverSchoolInfoManager, DriverSchoolInfoManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IExamStationExamRecognitionTypeManager, ExamStationExamRecognitionTypeManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IHolidayManager, HolidayManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IExamClassManager, ExamClassManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IHolidayOrdFederalStateManager, HolidayOrdFederalStateManager>(new PerRequestLifetimeManager());
+            container.RegisterType<ILanguageManager, LanguageManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IExamClassArgeMapManager, ExamClassArgeMapManager>(new PerRequestLifetimeManager());
+            container.RegisterType<ILegalBasisManager, LegalBasisManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IExamClassInclusiveClassManager, ExamClassInclusiveClassManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IExamClassMapManager, ExamClassMapManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IExamClassRequiredClassManager, ExamClassRequiredClassManager>(new PerRequestLifetimeManager());
+            container.RegisterType<ICoreDataProductLocalizationManager, CoreDataProductLocalizationManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IExamClassRestrictedClassManager, ExamClassRestrictedClassManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IExamConstraintManager, ExamConstraintManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IMeetingPointManager, MeetingPointManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IExamConstraintExamClassManager, ExamConstraintExamClassManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IMeetingPointOrganizationalUnitManager, MeetingPointOrganizationalUnitManager>(new PerRequestLifetimeManager());
         }
 
     }
