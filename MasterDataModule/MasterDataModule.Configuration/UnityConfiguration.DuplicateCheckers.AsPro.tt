@@ -3,7 +3,7 @@
 <#@ include file="..\Generation\MasterDataModule.Generation\TTMasterData\AsPro.Settings.ttinclude" once="true"#>
 <# 
     const string filesDir = @"..\Generation\MasterDataModule.Generation\Declarations\";
-    extraUsages = new string[] {"MasterDataModule.Lib.DuplicateCheckers", "MasterDataModule.Lib.DuplicateCheckers.Aspro" };
+    extraUsages = new string[] {"MasterDataModule.Lib.DuplicateCheckers.Interfaces", "MasterDataModule.Lib.DuplicateCheckers.Aspro" };
 #>
 <#@ include file="..\Generation\MasterDataModule.Generation\TTMasterData\MasterData.GenerationContext.ttinclude" once="true"#>
 <#@ include file="..\Generation\MasterDataModule.Generation\TTMasterData\UnityConfiguration.DuplicateCheckers.ttinclude"  once="true"#>

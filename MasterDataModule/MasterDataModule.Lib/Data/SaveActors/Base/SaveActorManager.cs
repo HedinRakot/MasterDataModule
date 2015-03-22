@@ -10,7 +10,7 @@ namespace MasterDataModule.Lib.Data.SaveActors.Base
 
         protected SaveActorManager(IEnumerable<TSaveActor> actors)
         {
-            actors = new List<TSaveActor>(actors);
+            this.actors = new List<TSaveActor>(actors);
         }
 
         public void DoBeforeSaveAction(object entity, EntityState state)

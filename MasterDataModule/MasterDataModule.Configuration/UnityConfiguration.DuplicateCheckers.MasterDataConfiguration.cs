@@ -5,7 +5,7 @@
 
 
 
-using MasterDataModule.Lib.DuplicateCheckers;
+using MasterDataModule.Lib.DuplicateCheckers.Interfaces;
 using MasterDataModule.Lib.DuplicateCheckers.MasterDataConfiguration;
 using Microsoft.Practices.Unity;
 
