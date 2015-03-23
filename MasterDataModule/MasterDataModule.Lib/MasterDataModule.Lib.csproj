@@ -424,10 +424,10 @@
       <DependentUpon>DuplicateChecker.tt</DependentUpon>
     </Compile>
     <Compile Include="DuplicateCheckers\Base\BaseDuplicateCheckerSaveActor.cs" />
-    <Compile Include="DuplicateCheckers\Drl\CoreDataProductDuplicateChecker.cs">
+    <Compile Include="DuplicateCheckers\Drl\DrlDuplicateCheckerSaveActor.cs" />
+    <Compile Include="DuplicateCheckers\Drl\ExamClassDuplicateChecker.cs">
       <DependentUpon>DuplicateChecker.tt</DependentUpon>
     </Compile>
-    <Compile Include="DuplicateCheckers\Drl\DrlDuplicateCheckerSaveActor.cs" />
     <Compile Include="DuplicateCheckers\Interfaces\IAsProDuplicateChecker.cs" />
     <Compile Include="DuplicateCheckers\Interfaces\IDrlDuplicateChecker.cs" />
     <Compile Include="DuplicateCheckers\Interfaces\IDuplicateChecker.cs" />

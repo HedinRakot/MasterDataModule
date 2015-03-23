@@ -15,7 +15,7 @@ namespace MasterDataModule.Configuration
     {
         private static void InitializeDrlDuplicateCheckers(IUnityContainer container)
         {
-            container.RegisterType<IDrlDuplicateChecker, CoreDataProductDuplicateChecker>("coreDataProduct", new PerRequestLifetimeManager());
+            container.RegisterType<IDrlDuplicateChecker, ExamClassDuplicateChecker>("examClass", new PerRequestLifetimeManager());
         }
 
     }

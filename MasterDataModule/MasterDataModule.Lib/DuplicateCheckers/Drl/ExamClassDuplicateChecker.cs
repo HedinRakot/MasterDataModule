@@ -7,19 +7,19 @@ using System;
 using System.Linq;
 namespace MasterDataModule.Lib.DuplicateCheckers.Drl
 {
-    	public class CoreDataProductDuplicateChecker : BaseDuplicateChecker<CoreDataProduct>, IDrlDuplicateChecker
+    	public class ExamClassDuplicateChecker : BaseDuplicateChecker<ExamClass>, IDrlDuplicateChecker
     	{
-    		private readonly Lazy<ICoreDataProductManager> manager;
+    		private readonly Lazy<IExamClassManager> manager;
     
-    		public CoreDataProductDuplicateChecker (Lazy<ICoreDataProductManager> manager)
+    		public ExamClassDuplicateChecker (Lazy<IExamClassManager> manager)
     		{
     			this.manager = manager;
     		}
     
-    		protected override bool HasDuplicate(CoreDataProduct entity)
+    		protected override bool HasDuplicate(ExamClass entity)
     		{
     			var query = manager.Value.GetEntities().Where(o => o.Id != entity.Id &&
-    						o.InsCoreDataProductId == entity.InsCoreDataProductId &&
+    						o.Name == entity.Name &&
     											o.FromDate <= entity.ToDate && o.ToDate >= entity.FromDate);
     						 return query.Any();
     		}
