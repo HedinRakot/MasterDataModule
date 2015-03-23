@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Mitglied der Fahrschulgemeinschaft editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Mitglied der Fahrschulgemeinschaft',
+		pleaseSelect: 'Bitte auswählen',
 		driverSchoolIdParticipant: 'Mitglied Fahrschule',	
 		fromDate: 'Von Datum',	
 		toDate: 'Bis Datum',	

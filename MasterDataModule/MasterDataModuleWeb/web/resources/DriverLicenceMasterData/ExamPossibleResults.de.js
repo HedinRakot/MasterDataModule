@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Prüfleistungsergebnis editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Prüfleistungsergebnis',
+		pleaseSelect: 'Bitte auswählen',
 		name: 'Kurzbeschreibung des Prüfleistungsergebnisses',	
 		description: 'Beschreibung des Prüfleistungsergebnisses',	
 		isFeePayable: 'Angabe, ob die Gebühr bei diesem Ergebnis fällig wird ',	

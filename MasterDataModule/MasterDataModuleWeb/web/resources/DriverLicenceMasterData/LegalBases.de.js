@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Rechtsgrund editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Rechtsgrund',
+		pleaseSelect: 'Bitte auswählen',
 		name: 'Kurz-Bezeichnung des FE-Rechtsgrunds',	
 		description: 'Beschreibung der FE-Rechtsgrunds',	
 		educationCertificateRequired: 'Angabe, ob eine Ausbildungsbescheinigung notwendig ist ',	

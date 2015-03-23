@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'FE masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Exam class to constraint',
+		pleaseSelect: 'Please select',
 		examConstraintId: 'Constraint',	
 		examClassId: 'Class',	
 		fromDate: 'From date',	

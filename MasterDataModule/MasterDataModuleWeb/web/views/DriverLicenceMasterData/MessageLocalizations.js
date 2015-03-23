@@ -23,7 +23,7 @@ define([
 			
 			return [
 				{ field: 'validationErrorNumber', title: this.resources.validationErrorNumber },
-				{ field: 'sysLanguageId', title: this.resources.sysLanguageId , collection: this.options.sysLanguage, filterable: false},
+				{ field: 'sysLanguageId', title: this.resources.sysLanguageId , collection: this.options.sysLanguage, defaultText: this.resources.pleaseSelect},
 				{ field: 'message', title: this.resources.message },
 			];
 		}

@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'FE masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Legal basis/class',
+		pleaseSelect: 'Please select',
 		examClassId: 'Class',	
 		coreDataProductId: 'Product',	
 		legalBasisId: 'Legalbasis',	

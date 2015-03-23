@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'FE masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Meeting point to org unit',
+		pleaseSelect: 'Please select',
 		meetingPointId: 'Meeting Point',	
 		orgOrganizationalUnitId: 'Organizational Unit',	
 		fromDate: 'From date',	

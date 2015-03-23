@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Ausschlussklasse  editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Ausschlussklasse ',
+		pleaseSelect: 'Bitte auswählen',
 		examClassId: 'übergeordnete Klasse ',	
 		examClassIdRestricted: 'Klasse mit Beschraenkung',	
 		fromDate: 'Von Datum',	

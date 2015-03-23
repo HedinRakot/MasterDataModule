@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'FE masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Community participant',
+		pleaseSelect: 'Please select',
 		driverSchoolIdParticipant: 'Participant',	
 		fromDate: 'From date',	
 		toDate: 'To date',	

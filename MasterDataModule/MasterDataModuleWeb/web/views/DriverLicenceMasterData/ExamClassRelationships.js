@@ -14,6 +14,7 @@ define([
 { view: 'l!t!DriverLicenceMasterData/ExamClassRestrictedClasses', selector: '.restrictedClasses'},
 { view: 'l!t!DriverLicenceMasterData/ExamClassArgeMaps', selector: '.examClassArgeMaps'},
 { view: 'l!t!DriverLicenceMasterData/ExamClassMaps', selector: '.examClassMaps'},
+{ view: 'l!t!DriverLicenceMasterData/ExamClassCoreDataProducts', selector: '.examClassCoreDataProducts'},
                 
             ];
             

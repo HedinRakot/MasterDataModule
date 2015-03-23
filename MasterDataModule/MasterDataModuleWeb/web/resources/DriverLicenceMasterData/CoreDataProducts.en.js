@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'FE masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'FE-Product',
+		pleaseSelect: 'Please select',
 		insCoreDataProductId: 'Product',	
 		minAge: 'Min age',	
 		maxAge: 'Max age',	

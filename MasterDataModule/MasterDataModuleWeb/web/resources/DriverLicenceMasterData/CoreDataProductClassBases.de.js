@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Rechtsgrund/Klasse editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Rechtsgrund/Klasse',
+		pleaseSelect: 'Bitte auswählen',
 		examClassId: 'Klasse ',	
 		coreDataProductId: 'Produkt',	
 		legalBasisId: 'Rechtsgrund',	

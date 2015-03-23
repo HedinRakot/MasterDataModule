@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'FE masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Localization',
+		pleaseSelect: 'Please select',
 		coreDataProductId: 'Product',	
 		sysLanguageId: 'Language',	
 		productName: 'Name',	

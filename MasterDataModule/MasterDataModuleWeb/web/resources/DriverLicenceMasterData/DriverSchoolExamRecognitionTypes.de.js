@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Anerkennung der Fahrschule editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Anerkennung der Fahrschule',
+		pleaseSelect: 'Bitte auswählen',
 		driverSchoolId: 'Fahrschule',	
 		examRecognitionTypeId: 'Anerkennung',	
 		fromDate: 'Von Datum',	

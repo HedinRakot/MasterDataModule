@@ -14,6 +14,10 @@ namespace MasterDataModule.API.Controllers
     {
         public void GetViewCollections(IDependencyResolver resolver, CollectionTypesModel model, Dictionary<string, IEnumerable<object>> result)
         {
+            if (model.CoreDataProduct)
+            	result.Add("CoreDataProduct", GetViewCollection<CoreDataProduct, int, ICoreDataProductManager>(
+            		(ICoreDataProductManager)resolver.GetService(typeof(ICoreDataProductManager))));
+
             if (model.ReturnReason)
             	result.Add("ReturnReason", GetViewCollection<ReturnReason, int, IReturnReasonManager>(
             		(IReturnReasonManager)resolver.GetService(typeof(IReturnReasonManager))));

@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Voraussetzungsklasse  editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Voraussetzungsklasse ',
+		pleaseSelect: 'Bitte auswählen',
 		examClassId: 'übergeordnete Klasse ',	
 		examClassIdRequired: 'Voraussetzungsklasse',	
 		fromDate: 'Von Datum',	

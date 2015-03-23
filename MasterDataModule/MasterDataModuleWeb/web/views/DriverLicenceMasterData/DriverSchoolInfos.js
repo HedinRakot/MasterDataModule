@@ -24,7 +24,7 @@ define([
 
 		columns: function () {
 		    return [
-				{ field: 'schoolInfoId', title: this.resources.schoolInfoId , collection: this.options.schoolInfo, filterable: false},
+				{ field: 'schoolInfoId', title: this.resources.schoolInfoId , collection: this.options.schoolInfo, defaultText: this.resources.pleaseSelect},
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];

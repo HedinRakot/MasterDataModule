@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Fahrschule Information editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Fahrschule Information',
+		pleaseSelect: 'Bitte auswählen',
 		schoolInfoId: 'Informationswert',	
 		driverSchoolId: 'Fahrschule',	
 		fromDate: 'Von Datum',	

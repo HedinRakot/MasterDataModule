@@ -34,6 +34,7 @@ define(function () {
 	    edit: '<#=entityContent.De#> editieren',
 	    masterData: '<#= tableGroupNameDe #>',
 	    pageTitle: '<#=entityContent.De#>',
+		pleaseSelect: 'Bitte auswählen',
 <#
         foreach (var property in model.ModelProperties)
         {
@@ -62,6 +63,7 @@ define(function () {
 	    masterData: '<#= tableGroupNameEn #>',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: '<#=entityContent.En#>',
+		pleaseSelect: 'Please select',
 <#
         
 		foreach (var property in model.ModelProperties)

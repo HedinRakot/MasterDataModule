@@ -22,7 +22,7 @@ define([
 		columns: function () {
 			
 			return [
-				{ field: 'sysLanguageId', title: this.resources.sysLanguageId , collection: this.options.sysLanguage, filterable: false},
+				{ field: 'sysLanguageId', title: this.resources.sysLanguageId , collection: this.options.sysLanguage, defaultText: this.resources.pleaseSelect},
 				{ field: 'oldAbbr', title: this.resources.oldAbbr },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},

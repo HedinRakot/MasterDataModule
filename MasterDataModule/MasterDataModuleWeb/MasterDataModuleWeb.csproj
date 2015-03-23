@@ -2782,6 +2782,8 @@
     <Content Include="web\resources\DriverLicenceMasterData\ExamClassArgeMaps.en.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\DriverLicenceMasterData\ExamClassCoreDataProducts.de.js" />
+    <Content Include="web\resources\DriverLicenceMasterData\ExamClassCoreDataProducts.en.js" />
     <Content Include="web\resources\DriverLicenceMasterData\ExamClasses.de.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
@@ -4539,6 +4541,7 @@
     <Content Include="web\templates\DriverLicenceMasterData\ExamClassArgeMaps.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\DriverLicenceMasterData\ExamClassCoreDataProducts.html" />
     <Content Include="web\templates\DriverLicenceMasterData\ExamClasses.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
@@ -5824,6 +5827,7 @@
     <Content Include="web\views\DriverLicenceMasterData\ExamClassArgeMaps.js">
       <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\DriverLicenceMasterData\ExamClassCoreDataProducts.js" />
     <Content Include="web\views\DriverLicenceMasterData\ExamClasses.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>

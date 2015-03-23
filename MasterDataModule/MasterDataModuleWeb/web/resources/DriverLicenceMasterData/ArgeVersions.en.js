@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'FE masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'ARGE-Version',
+		pleaseSelect: 'Please select',
 		programmName: 'Exam-Programm',	
 		versionSystem: 'Version of Exam-Programm',	
 		expirationDate: 'Expiration Date',	

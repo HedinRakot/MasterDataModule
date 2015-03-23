@@ -24,7 +24,7 @@ define([
 
 		columns: function () {
 		    return [
-				{ field: 'sysLanguageId', title: this.resources.sysLanguageId , collection: this.options.sysLanguage, filterable: false},
+				{ field: 'sysLanguageId', title: this.resources.sysLanguageId , collection: this.options.sysLanguage, defaultText: this.resources.pleaseSelect},
 				{ field: 'productName', title: this.resources.productName },
 				{ field: 'description', title: this.resources.description },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},

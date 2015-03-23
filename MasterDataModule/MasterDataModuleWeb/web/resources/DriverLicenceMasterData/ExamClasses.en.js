@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'FE masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Class',
+		pleaseSelect: 'Please select',
 		name: 'Class',	
 		description: 'Description',	
 		isMofa: 'Indication that it is MOFA',	

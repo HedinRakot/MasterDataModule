@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'FE masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Holiday to federal state',
+		pleaseSelect: 'Please select',
 		holidayId: 'Holiday',	
 		ordFederalStateId: 'Federal State',	
 	};

@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'FE masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Holiday',
+		pleaseSelect: 'Please select',
 		name: 'Message language',	
 		date: 'Validation error number',	
 	};

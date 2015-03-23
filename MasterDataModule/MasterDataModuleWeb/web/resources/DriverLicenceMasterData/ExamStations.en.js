@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'FE masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'FE exam station',
+		pleaseSelect: 'Please select',
 		ordFederalStateId: 'Federal State',	
 		place: 'Location (Place)',	
 		description: 'Description',	

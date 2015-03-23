@@ -8,6 +8,7 @@ namespace MasterDataModule.Contracts.Entities
     ///     EN: 5.3.5.15 Product - assign Additional Details  DE: 5.3.5.15 Produkt - FE-Zusatzdaten zuordnen
     /// </summary>
     public partial class CoreDataProduct: IHasId<int>
+        ,IHasTitle
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -260,6 +261,10 @@ namespace MasterDataModule.Contracts.Entities
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        string IHasTitle.EntityTitle
+        {
+            get { return ProductName; }
         }
         DateTime ISystemFields.CreateDate
         {

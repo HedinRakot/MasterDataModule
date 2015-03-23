@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'FE masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Exam room',
+		pleaseSelect: 'Please select',
 		roomNumber: 'Exam Room Number',	
 		placeAmount: 'Amount of places',	
 		orgOrganizationalUnitId: 'Organizational Unit',	

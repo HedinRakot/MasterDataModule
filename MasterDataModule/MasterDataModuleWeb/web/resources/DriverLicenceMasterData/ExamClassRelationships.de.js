@@ -9,6 +9,7 @@ define(function () {
 	    restrictedClasses: ' Ausschlussklassen',
 	    examClassArgeMaps: ' ARGE-Klassenbezeichnungen',
 	    examClassMaps: ' Alt-Klassen',
+	    examClassCoreDataProducts: 'Produkte',
 	};
 
 	return resources;

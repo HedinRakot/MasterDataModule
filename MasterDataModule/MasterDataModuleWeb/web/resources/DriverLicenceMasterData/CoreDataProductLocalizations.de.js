@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Lokalisierung editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Lokalisierung',
+		pleaseSelect: 'Bitte auswählen',
 		coreDataProductId: 'Produkt',	
 		sysLanguageId: 'Sprachschlüssel ',	
 		productName: 'Name',	

@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'FE masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Exam constraints',
+		pleaseSelect: 'Please select',
 		name: 'Constraint Name',	
 		description: 'Description',	
 		constraintType: 'Type of the Contraint(1 - General, 2 - Class level)',	

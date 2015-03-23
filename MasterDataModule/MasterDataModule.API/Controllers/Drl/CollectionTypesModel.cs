@@ -7,6 +7,7 @@ namespace MasterDataModule.API.Controllers
     /// </summary>
     public partial class CollectionTypesModel
     {
+        public bool CoreDataProduct { get; set;}
         public bool ReturnReason { get; set;}
         public bool SchoolInfo { get; set;}
         public bool ExamRecognitionType { get; set;}

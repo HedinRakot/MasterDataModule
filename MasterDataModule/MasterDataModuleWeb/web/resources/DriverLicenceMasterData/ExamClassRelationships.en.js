@@ -9,6 +9,7 @@ define(function () {
 	    restrictedClasses: 'Restricted classes',
 	    examClassArgeMaps: 'Arge class map',
 	    examClassMaps: 'Old class to actual map',
+	    examClassCoreDataProducts: 'Products',
 	};
 
 	return resources;

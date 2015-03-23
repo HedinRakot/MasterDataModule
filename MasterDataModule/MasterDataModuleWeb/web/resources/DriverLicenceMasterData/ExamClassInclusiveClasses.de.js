@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Inklusivklasse  editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Inklusivklasse ',
+		pleaseSelect: 'Bitte auswählen',
 		examClassId: 'übergeordnete Klasse ',	
 		examClassIdInclusive: 'Inklusiv-Klasse ',	
 		fromDate: 'Von Datum',	

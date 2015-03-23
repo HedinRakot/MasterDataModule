@@ -106,7 +106,7 @@ define([
 				var result = String.Empty;
 				if(!String.IsNullOrEmpty(property.Column.Content.ViewCollection))
 				{
-					result = String.Format(", collection: this.options.{0}, filterable: false", property.Column.Content.ViewCollection);
+					result = String.Format(", collection: this.options.{0}, defaultText: this.resources.pleaseSelect", property.Column.Content.ViewCollection);
 				}
                 return result;
             case "datetime":

@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'FE-Produkt editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'FE-Produkt',
+		pleaseSelect: 'Bitte auswählen',
 		insCoreDataProductId: 'Produkt',	
 		minAge: 'Mindestalter des Bewerbers',	
 		maxAge: 'Höchstalter des Bewerbers',	

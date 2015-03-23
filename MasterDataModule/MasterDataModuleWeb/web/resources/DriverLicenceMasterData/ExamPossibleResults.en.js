@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'FE masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Exam result',
+		pleaseSelect: 'Please select',
 		name: 'Exam Result',	
 		description: 'Description',	
 		isFeePayable: 'Indication whether fee is due',	

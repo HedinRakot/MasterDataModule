@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'FE-Prüfort editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'FE-Prüfort',
+		pleaseSelect: 'Bitte auswählen',
 		ordFederalStateId: 'Bundesland ',	
 		place: 'Prüforts-Bezeichnung ',	
 		description: 'Beschreibung des FE-Prüforts',	

@@ -24,7 +24,7 @@ define([
 
 		columns: function () {
 		    return [
-				{ field: 'examRecognitionTypeId', title: this.resources.examRecognitionTypeId , collection: this.options.examRecognitionType, filterable: false},
+				{ field: 'examRecognitionTypeId', title: this.resources.examRecognitionTypeId , collection: this.options.examRecognitionType, defaultText: this.resources.pleaseSelect},
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];

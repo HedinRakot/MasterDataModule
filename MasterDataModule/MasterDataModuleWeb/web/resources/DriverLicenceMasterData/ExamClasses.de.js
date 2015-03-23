@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Klasse editieren',
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Klasse',
+		pleaseSelect: 'Bitte auswählen',
 		name: 'Kurz-Bezeichnung der FE-Klasse',	
 		description: 'Beschreibung',	
 		isMofa: 'Angabe, ob FE-Klasse eine Mofa-Prüfbescheinigung ist ',	

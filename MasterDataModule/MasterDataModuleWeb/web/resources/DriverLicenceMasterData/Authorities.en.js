@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'FE masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Authority',
+		pleaseSelect: 'Please select',
 		authorityNumber: 'Authority Number',	
 		name: 'Authority Name',	
 		description: 'Description',	
