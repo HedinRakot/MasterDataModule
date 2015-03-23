@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Validation;
 using MasterDataModule.Contracts.SaveActors.Base;
@@ -20,15 +21,26 @@ namespace MasterDataModule.Lib.DuplicateCheckers.Base
 
         public bool NeedDoAction(object entity, EntityState state)
         {
-            return (state == EntityState.Added || state == EntityState.Modified) && checkers.ContainsKey(entity.GetType().Name);
+
+            return (state == EntityState.Added || state == EntityState.Modified) && checkers.ContainsKey(GetEntityTypeName(entity));
+        }
+
+        private string GetEntityTypeName(object entity)
+        {
+            Type type = entity.GetType();
+            if (type.Namespace == "System.Data.Entity.DynamicProxies")
+            {
+                type = type.BaseType;
+            }
+            return type.Name;
         }
 
         public void DoAction(object entity, EntityState state)
         {
-            var checker = checkers[entity.GetType().Name];
+            var checker = checkers[GetEntityTypeName(entity)];
             if (checker.HasDuplicate(entity))
             {
-                throw new DbEntityValidationException(string.Format("Database contains entity of type {0} with the same business keys.", entity.GetType().Name));
+                throw new DbEntityValidationException(string.Format("Database contains entity of type {0} with the same business keys.", GetEntityTypeName(entity)));
             }
         }
     }
