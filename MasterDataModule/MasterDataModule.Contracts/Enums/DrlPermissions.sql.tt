@@ -1,0 +1,9 @@
+﻿<#@ template language="C#" debug="true" hostspecific="true" linePragmas="true"#>
+<#@ output extension=".sql"#>
+<#@ include file="..\..\Generation\MasterDataModule.Generation\TTMasterData\Drl.Settings.ttinclude" once="true"#>
+<# 
+    const string filesDir = @"..\..\Generation\MasterDataModule.Generation\Declarations\";
+    extraUsages = new[] {"MasterDataModule.Contracts.Entities"};
+#>
+<#@ include file="..\..\Generation\MasterDataModule.Generation\TTMasterData\MasterData.GenerationContext.ttinclude" once="true"#>
+<#@ include file="..\..\Generation\MasterDataModule.Generation\TTMasterData\Permissions.sql.ttinclude"  once="true"#>

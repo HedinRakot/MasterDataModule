@@ -1,0 +1,30 @@
+﻿<#@ import namespace="System.Text" #>
+<#@ include file="MasterData.GenerationContext.ttinclude"  once="true" #>
+<#
+    IEntitiesGenerationContext<TableContent> context = generationContext;
+    var code = context.Code;
+
+	code.WriteNamespace(); //Area: Namespace
+#>
+	public enum <#=context.ContextName#>Permissions
+	{
+	 
+<#
+	var i = 0;
+	foreach (var entity in context.Entities)
+    {
+#>
+		///<summary>
+		/// Grant for edit <#=entity.TableName#> table
+		///</summary>
+		<#=entity.Name#> = <#=i++#>,
+<#
+	}
+#>
+	}
+<#
+	code.EndArea();
+#>
+
+
+
