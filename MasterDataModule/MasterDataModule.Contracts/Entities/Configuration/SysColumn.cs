@@ -1,7 +1,7 @@
 using MasterDataModule.Contracts;
 using System;
 
-namespace MasterDataModule.Contracts.Entities
+namespace MasterDataModule.Contracts.Entities.Configuration
 {
     /// <summary>
     ///     Database tables columns

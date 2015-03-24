@@ -2,7 +2,7 @@ using MasterDataModule.Contracts;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDataModule.Contracts.Entities
+namespace MasterDataModule.Contracts.Entities.Configuration
 {
     /// <summary>
     ///     Database tables

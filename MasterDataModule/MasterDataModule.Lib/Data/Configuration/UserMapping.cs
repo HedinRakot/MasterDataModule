@@ -1,8 +1,8 @@
-using MasterDataModule.Contracts.Entities;
+using MasterDataModule.Contracts.Entities.Configuration;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
-namespace MasterDataModule.Lib.Data
+namespace MasterDataModule.Lib.Data.Configuration
 {
     /// <summary>
     ///     Mappping table dbo.MASTER_DATA_USER to entity <see cref="User"/>
@@ -75,10 +75,6 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.Source)
                 .HasColumnName(User.Fields.Source)
                 .HasMaxLength(10);
-
-            Property(t => t.RowVersion)
-                .HasColumnName(User.Fields.RowVersion)
-                .IsRequired();
 
             Property(t => t.FromDate)
                 .HasColumnName(User.Fields.FromDate)

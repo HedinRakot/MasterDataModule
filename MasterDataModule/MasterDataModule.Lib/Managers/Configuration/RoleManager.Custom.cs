@@ -1,16 +1,16 @@
 ﻿using System.Collections.Generic;
 using MasterDataModule.Contracts;
-using MasterDataModule.Contracts.Entities;
-using MasterDataModule.Contracts.Managers;
+using MasterDataModule.Contracts.Entities.Configuration;
+using MasterDataModule.Contracts.Managers.Configuration;
 
-namespace MasterDataModule.Lib.Managers
+namespace MasterDataModule.Lib.Managers.Configuration
 {
     /// <summary>
     /// </summary>
     public partial class RoleManager
     {
         private readonly IPermissionManager _permissionManager;
-        public RoleManager(IPermissionManager permissionManager, IDrlEntities context)
+        public RoleManager(IPermissionManager permissionManager, IMasterDataConfigurationEntities context)
             : base(context)
         {
             _permissionManager = permissionManager;

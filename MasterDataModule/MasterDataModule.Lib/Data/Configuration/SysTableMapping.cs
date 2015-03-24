@@ -1,8 +1,8 @@
-using MasterDataModule.Contracts.Entities;
+using MasterDataModule.Contracts.Entities.Configuration;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
-namespace MasterDataModule.Lib.Data
+namespace MasterDataModule.Lib.Data.Configuration
 {
     /// <summary>
     ///     Mappping table dbo.SYS_TABLES to entity <see cref="SysTable"/>

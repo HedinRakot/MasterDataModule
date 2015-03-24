@@ -14,8 +14,14 @@ define([
 
             var self = this;
             var result = {
-			'#masterDataRoleId': 'masterDataRoleId',
-			'#masterDataPermissionId': 'masterDataPermissionId',
+			'#masterDataRoleId': { observe: 'masterDataRoleId',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.role
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
+			'#masterDataPermissionId': { observe: 'masterDataPermissionId',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.permission
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#fromDate': 'fromDate',
 			'#toDate': 'toDate',
 			};
@@ -28,8 +34,8 @@ define([
             view.__super__.render.apply(this, arguments);
 
 			//TODO foreach model field
-			this.disableInput(this, 'masterDataRoleId', 'numeric');
-			this.disableInput(this, 'masterDataPermissionId', 'numeric');
+			this.disableInput(this, 'masterDataRoleId', 'select');
+			this.disableInput(this, 'masterDataPermissionId', 'select');
 			this.disableInput(this, 'fromDate', 'date');
 			this.disableInput(this, 'toDate', 'date');
 

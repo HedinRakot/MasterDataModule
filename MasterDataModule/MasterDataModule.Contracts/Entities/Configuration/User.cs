@@ -1,7 +1,7 @@
 using MasterDataModule.Contracts;
 using System;
 
-namespace MasterDataModule.Contracts.Entities
+namespace MasterDataModule.Contracts.Entities.Configuration
 {
     public partial class User: IHasId<int>
         ,IIntervalFields
@@ -71,10 +71,6 @@ namespace MasterDataModule.Contracts.Entities
             /// </summary>
             public static readonly string Source = "SOURCE";
             /// <summary>
-            /// Column name 'ROW_VERSION' for property <see cref="User.RowVersion"/>
-            /// </summary>
-            public static readonly string RowVersion = "ROW_VERSION";
-            /// <summary>
             /// Column name 'FROM_DATE' for property <see cref="User.FromDate"/>
             /// </summary>
             public static readonly string FromDate = "FROM_DATE";
@@ -98,7 +94,6 @@ namespace MasterDataModule.Contracts.Entities
         public int? CreateEmployeeId{ get; set; }
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
-        public byte[] RowVersion{ get; set; }
         public DateTime FromDate{ get; set; }
         public DateTime ToDate{ get; set; }
         public virtual Role Role{ get; set; }
@@ -146,7 +141,6 @@ namespace MasterDataModule.Contracts.Entities
                        CreateEmployeeId = CreateEmployeeId,
                        ChangeEmployeeId = ChangeEmployeeId,
                        Source = Source,
-                       RowVersion = RowVersion,
                        FromDate = FromDate,
                        ToDate = ToDate,
         	           };

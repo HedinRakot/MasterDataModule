@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using MasterDataModule.Contracts.Managers;
+using MasterDataModule.Contracts.Managers.Configuration;
 
 namespace MasterDataModule.API.Security
 {

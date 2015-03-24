@@ -3,7 +3,7 @@
 <#@ include file="..\..\Generation\MasterDataModule.Generation\TTMasterData\MasterDataConfiguration.Settings.ttinclude" once="true"#>
 <# 
     const string filesDir = @"..\..\Generation\MasterDataModule.Generation\Declarations\";
-    extraUsages = new[] {"MasterDataModule.Contracts","MasterDataModule.Contracts.Entities"};
+    extraUsages = new[] {"MasterDataModule.Contracts","MasterDataModule.Contracts.Entities.Configuration", "MasterDataModule.Lib.Data.Configuration"};
 #>
 <#@ include file="..\..\Generation\MasterDataModule.Generation\TTMasterData\MasterData.GenerationContext.ttinclude" once="true"#>
 <#@ include file="..\..\Generation\MasterDataModule.Generation\TTCommon\Context.ttinclude"  once="true"#>

@@ -3,7 +3,8 @@
 <#@ include file="..\..\..\Generation\MasterDataModule.Generation\TTMasterData\MasterDataConfiguration.Settings.ttinclude" once="true"#>
 <# 
     const string filesDir = @"..\..\..\Generation\MasterDataModule.Generation\Declarations\";
-    defaultNamespace = "MasterDataModule.Contracts.Managers";
+    defaultNamespace = "MasterDataModule.Contracts.Managers.Configuration";
+	extraUsages = new[] {"MasterDataModule.Contracts.Entities.Configuration"};
 #>
 <#@ include file="..\..\..\Generation\MasterDataModule.Generation\TTMasterData\MasterData.GenerationContext.ttinclude" once="true"#>
 <#@ include file="..\..\..\Generation\MasterDataModule.Generation\TTMasterData\Manager.Interface.ttinclude"  once="true"#>

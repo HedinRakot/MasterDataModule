@@ -2,9 +2,8 @@
 using System.Linq.Dynamic;
 using System.Web.Http;
 using MasterDataModule.API.Models.Settings;
-using MasterDataModule.API.Security;
-using MasterDataModule.Contracts.Entities;
-using MasterDataModule.Contracts.Managers;
+using MasterDataModule.Contracts.Entities.Configuration;
+using MasterDataModule.Contracts.Managers.Configuration;
 using TuevSued.V1.IT.FE.CoreBase;
 
 namespace MasterDataModule.API.Controllers.Settings

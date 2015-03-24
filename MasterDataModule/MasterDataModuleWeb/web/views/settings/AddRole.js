@@ -1,28 +1,39 @@
-﻿define([
-	'base/base-add-model-view',
-	'mixins/localized-view'
-], function (BaseView, LocalizedViewMixin) {
-	'use strict';
+define([
+	'base/base-object-add-view',
+    'l!t!Settings/RoleRelationships'
+], function (BaseView, TabView) {
+    'use strict';
 
-	var view = BaseView.extend({
+    var view = BaseView.extend({
+
+        tabView: TabView,
+        tableName: 'Role',
+        actionUrl: '#Roles',
+
 		bindings: function () {
-			var result = {
-				'#name': 'name',
-				'#permissions': {
-				    observe: 'permissions',
-					selectOptions: {
-						labelPath: 'name',
-						valuePath: 'id',
-						collection: this.options.permissions
-					}
-				}
-			}
 
-			return result;
-		}
-	});
+            var self = this;
+            var result = {
+			'#name': 'name',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
+			};
 
-	view.mixin(LocalizedViewMixin);
+            return result;
+		},
 
-	return view;
+        render: function () {
+
+            view.__super__.render.apply(this, arguments);
+
+			//TODO foreach model field
+			this.disableInput(this, 'name');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
+
+            return this;
+        }
+    });
+
+    return view;
 });

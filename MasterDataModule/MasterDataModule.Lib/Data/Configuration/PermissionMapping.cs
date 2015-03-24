@@ -1,8 +1,8 @@
-using MasterDataModule.Contracts.Entities;
+using MasterDataModule.Contracts.Entities.Configuration;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
-namespace MasterDataModule.Lib.Data
+namespace MasterDataModule.Lib.Data.Configuration
 {
     /// <summary>
     ///     Mappping table dbo.MASTER_DATA_PERMISSION to entity <see cref="Permission"/>
@@ -66,10 +66,6 @@ namespace MasterDataModule.Lib.Data
                 .HasColumnName(Permission.Fields.Source)
                 .HasMaxLength(10);
 
-            Property(t => t.RowVersion)
-                .HasColumnName(Permission.Fields.RowVersion)
-                .IsRequired();
-
             Property(t => t.FromDate)
                 .HasColumnName(Permission.Fields.FromDate)
                 .IsRequired();
@@ -77,6 +73,9 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.ToDate)
                 .HasColumnName(Permission.Fields.ToDate)
                 .IsRequired();
+
+            Property(t => t.RoleId)
+                .HasColumnName(Permission.Fields.RoleId);
 
 
             //Relationships

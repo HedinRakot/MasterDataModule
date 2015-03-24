@@ -280,6 +280,9 @@
     <Compile Include="Data\AsPro\TechnicalInspection\InsValidPeriodMapping.cs">
       <DependentUpon>TP.EntityMapping.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\Configuration\MasterDataRolePermissionRspMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\Configuration\PermissionMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
@@ -633,6 +636,9 @@
     <Compile Include="Managers\Base\ManagerBase.cs" />
     <Compile Include="Managers\Base\ReadOnlyEntityManager.cs" />
     <Compile Include="Managers\Base\ReadOnlyManagerBase.cs" />
+    <Compile Include="Managers\Configuration\MasterDataRolePermissionRspManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\Configuration\PermissionManager.cs">
       <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
     </Compile>

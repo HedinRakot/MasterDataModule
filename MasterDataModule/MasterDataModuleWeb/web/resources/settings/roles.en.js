@@ -1,10 +1,17 @@
-﻿define(function () {
+define(function () {
 	'use strict';
 
 	var resources = {
-	    name: 'Name',
-	    permissions: 'Permissions',
-	    title: 'User roles'
+
+		add: 'Add Master data role',
+	    edit: 'Edit Master data role',
+	    masterData: 'FE masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
+	    pageTitle: 'Master data role',
+		pleaseSelect: 'Please select',
+		name: 'Name',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

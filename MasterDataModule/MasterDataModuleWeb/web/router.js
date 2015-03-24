@@ -2,8 +2,9 @@
     'base-router',
     'router-drl-masterdata',
     'router-tp-masterdata',
-    'router-common-masterdata'
-], function (BaseRouter, FeMasterDataRouter, TPMasterDataRouter, CommonMasterDataRouter) {
+    'router-common-masterdata',
+    'router-masterdata'
+], function (BaseRouter, FeMasterDataRouter, TPMasterDataRouter, CommonMasterDataRouter, MasterDataRouter) {
 	'use strict';
 
 	var router = Backbone.Router.extend({
@@ -28,10 +29,10 @@
             {
                 'home': _.partial(BaseRouter.showView, this, 'l!t!home/home'),
 
-                'settings': _.partial(BaseRouter.showView, this, 'l!t!settings/settings'),
-                'permissions': _.partial(BaseRouter.showView, this, 'l!t!settings/permissions'),
+                'settings': _.partial(BaseRouter.showView, this, 'l!t!Settings/Settings'),
+                //'permissions': _.partial(BaseRouter.showView, this, 'l!t!settings/permissions'),
                 'sysTables': _.partial(BaseRouter.showView, this, 'l!t!settings/sysTables', { editModeTypes: true }),
-                'roles': _.partial(BaseRouter.showView, this, 'l!t!settings/roles', { permissions: true }),
+                //'roles': _.partial(BaseRouter.showView, this, 'l!t!settings/roles', { permissions: true }),
                 'users': _.partial(BaseRouter.showView, this, 'l!t!settings/users', { roles: true }),
                 'systemLog': _.partial(BaseRouter.showView, this, 't!settings/systemLog'),
 
@@ -49,6 +50,7 @@
 		    var result = $.extend({}, commonRoutes, FeMasterDataRouter.getAllMasterDataRoutes(this));
 		    result = $.extend({}, result, TPMasterDataRouter.getAllMasterDataRoutes(this));
 		    result = $.extend({}, result, CommonMasterDataRouter.getAllMasterDataRoutes(this));
+		    result = $.extend({}, result, MasterDataRouter.getAllMasterDataRoutes(this));
 		    return result;
 		}		
 	});

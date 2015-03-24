@@ -3,6 +3,7 @@
 <#@ include file="..\Generation\MasterDataModule.Generation\TTMasterData\MasterDataConfiguration.Settings.ttinclude" once="true"#>
 <# 
     const string filesDir = @"..\Generation\MasterDataModule.Generation\Declarations\";
+	extraUsages = new[] {"MasterDataModule.Contracts.Managers.Configuration", "MasterDataModule.Lib.Managers.Configuration"};
 #>
 <#@ include file="..\Generation\MasterDataModule.Generation\TTMasterData\MasterData.GenerationContext.ttinclude" once="true"#>
 <#@ include file="..\Generation\MasterDataModule.Generation\TTMasterData\UnityConfiguration.Manager.ttinclude"  once="true"#>

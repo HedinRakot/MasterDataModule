@@ -1,30 +1,31 @@
-﻿define([
-	'base/base-grid-view',
-	'collections/settings/roles',
-	't!settings/addRole'
-], function (BaseView, RolesCollection, AddNewModelView) {
+define([
+	'base/base-object-grid-view',
+'collections/Settings/Roles',
+'l!t!Settings/FilterRole',
+'l!t!Settings/RoleRelationships'
+
+], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
 	var view = BaseView.extend({
 
-		addNewModelView: AddNewModelView,
-		gridSelector: 'div',
+        collectionType: Collection,
+        detailView: DetailView,
+        filterView: FilterView,
+        tableName: 'Role',
+        editUrl: '#Roles',
 
-        addingInPopup: true,
-
-		initialize: function() {
-			view.__super__.initialize.apply(this, arguments);			
-
-			this.collection = new RolesCollection();
-		},
+	    editItemTitle: function () {
+	        return this.resources.edit
+	    },
 
 		columns: function () {
-			var result = [
+			
+			return [
 				{ field: 'name', title: this.resources.name },
-				{ field: 'permissions', title: this.resources.permissions, sortable: false, selectBox: true, collection: this.options.permissions }
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
-
-			return result;
 		}
 	});
 

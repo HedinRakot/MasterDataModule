@@ -3,8 +3,10 @@ using MasterDataModule.API.Models;
 using MasterDataModule.API.SystemLog;
 using MasterDataModule.Contracts;
 using MasterDataModule.Contracts.Entities;
+using MasterDataModule.Contracts.Entities.Configuration;
 using MasterDataModule.Contracts.Managers;
 using MasterDataModule.Contracts.Managers.Base;
+using MasterDataModule.Contracts.Managers.Configuration;
 using Microsoft.Practices.Unity;
 
 namespace MasterDataModule.API.Controllers

@@ -1,34 +1,37 @@
-﻿using System.Web.Http;
+using MasterDataModule.API.Models;
 using MasterDataModule.API.Models.Settings;
-using MasterDataModule.API.Security;
+using MasterDataModule.Contracts;
 using MasterDataModule.Contracts.Entities;
+using MasterDataModule.Contracts.Entities.Configuration;
 using MasterDataModule.Contracts.Managers;
+using MasterDataModule.Contracts.Managers.Configuration;
+using System;
 
 namespace MasterDataModule.API.Controllers.Settings
 {
-    //[AuthorizeByPermissions(PermissionTypes = new[] { PermissionTypes.Permissions })]
-    public class PermissionsController : ClientApiWithoutDeleteController<PermissionModel, Permission, int, IPermissionManager>
+    /// <summary>
+    ///     Controller for <see cref="Permission"/> entity
+    /// </summary>
+    public partial class PermissionsController: ClientApiController<PermissionModel, Permission, int, IPermissionManager>
     {
-        public PermissionsController(IPermissionManager permissionManager): base(permissionManager)
-        {
 
-        }
-
-        public override IHttpActionResult Post(PermissionModel model)
-        {
-            return NotFound();
-        }
+        public PermissionsController(IPermissionManager manager): base(manager){}
 
         protected override void EntityToModel(Permission entity, PermissionModel model)
         {
-            model.name = entity.Name;
             model.systemName = entity.SystemName;
+            model.name = entity.Name;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
+            model.createDate = ((ISystemFields)entity).CreateDate;
+            model.changeDate = ((ISystemFields)entity).ChangeDate;
         }
-
         protected override void ModelToEntity(PermissionModel model, Permission entity, ActionTypes actionType)
         {
-            entity.Name = model.name;
             entity.SystemName = model.systemName;
+            entity.Name = model.name;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

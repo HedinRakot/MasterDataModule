@@ -49,7 +49,10 @@ namespace MasterDataModule.API.Controllers
 
             new DrlViewCollectionControllerFactory().GetViewCollections(
                 GlobalConfiguration.Configuration.DependencyResolver, model, result);
-            
+
+            new MasterDataViewCollectionControllerFactory().GetViewCollections(
+                GlobalConfiguration.Configuration.DependencyResolver, model, result);
+
             //TODO localize
             if (model.EditModeType)
                 result.Add("EditModeType", new[]

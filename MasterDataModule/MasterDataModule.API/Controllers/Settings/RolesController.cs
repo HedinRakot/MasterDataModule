@@ -1,30 +1,39 @@
-﻿using System.Linq;
+using MasterDataModule.API.Models;
 using MasterDataModule.API.Models.Settings;
-using MasterDataModule.API.Security;
+using MasterDataModule.Contracts;
 using MasterDataModule.Contracts.Entities;
+using MasterDataModule.Contracts.Entities.Configuration;
 using MasterDataModule.Contracts.Managers;
+using MasterDataModule.Contracts.Managers.Configuration;
+using System;
 
 namespace MasterDataModule.API.Controllers.Settings
 {
-    //[AuthorizeByPermissions(PermissionTypes = new[] {PermissionTypes.Roles})]
-    public class RolesController : ClientApiController<RoleModel, Role, int, IRoleManager>
+    /// <summary>
+    ///     Controller for <see cref="Role"/> entity
+    /// </summary>
+    public partial class RolesController: ClientApiController<RoleModel, Role, int, IRoleManager>
     {
-        public RolesController(IRoleManager manager)
-            : base(manager)
-        {
-        }
+
+        public RolesController(IRoleManager manager): base(manager){}
 
         protected override void EntityToModel(Role entity, RoleModel model)
         {
             model.name = entity.Name;
-            model.permissions = entity.Permissions.Select(o => o.Id).ToList();
-        }
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
+            model.createDate = ((ISystemFields)entity).CreateDate;
+            model.changeDate = ((ISystemFields)entity).ChangeDate;
 
+            ExtraEntityToModel(entity, model);
+        }
         protected override void ModelToEntity(RoleModel model, Role entity, ActionTypes actionType)
         {
             entity.Name = model.name;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
 
-            Manager.SetPermissions(entity, model.permissions);
+            ExtraModelToEntity(entity, model, actionType);
         }
     }
 }

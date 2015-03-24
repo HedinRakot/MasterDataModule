@@ -1,11 +1,11 @@
-﻿define([
+define([
 	'base/base-collection',
-	'models/settings/role'
+	'models/Settings/Role'
 ], function (BaseCollection, Model) {
 	'use strict';
 
 	var collection = BaseCollection.extend({
-		url: 'api/roles',
+	    url: 'api/Roles',
 		model: Model
 	});
 

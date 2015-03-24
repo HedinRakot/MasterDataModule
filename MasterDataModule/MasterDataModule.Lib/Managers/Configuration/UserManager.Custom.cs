@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using MasterDataModule.Contracts.Entities;
+using MasterDataModule.Contracts.Entities.Configuration;
 
-namespace MasterDataModule.Lib.Managers
+namespace MasterDataModule.Lib.Managers.Configuration
 {
     /// <summary>
     /// </summary>

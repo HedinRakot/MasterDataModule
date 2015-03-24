@@ -495,8 +495,20 @@
     <Compile Include="Controllers\GridArgsModelBinder.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\LogoutController.cs" />
-    <Compile Include="Controllers\Settings\SysTablesController.cs" />
-    <Compile Include="Controllers\Settings\SysColumnsController.cs" />
+    <Compile Include="Controllers\Settings\Custom.RolesController.cs" />
+    <Compile Include="Controllers\Settings\Custom.SysTablesController.cs" />
+    <Compile Include="Controllers\Settings\MasterDataRolePermissionRspsController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\MasterDataViewCollectionControllerFactory.cs">
+      <DependentUpon>MasterDataConfiguration.ViewCollectionFactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\SysTablesController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\SysColumnsController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\ViewCollectionFactoryBase.cs" />
     <Compile Include="JsonHelper.Classes.cs" />
     <Compile Include="Models\AsPro\Common\Custom.InsCoreDataProductModel.cs" />
@@ -789,12 +801,24 @@
     <Compile Include="Models\GlobalSysTableModel.cs" />
     <Compile Include="Models\ISystemModelFields.cs" />
     <Compile Include="Models\IModelIntervalFields.cs" />
-    <Compile Include="Models\Settings\SysColumnModel.cs" />
-    <Compile Include="Models\Settings\SysTableModel.cs" />
+    <Compile Include="Models\Settings\Custom.RoleModel.cs" />
+    <Compile Include="Models\Settings\MasterDataRolePermissionRspModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings\SysColumnModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings\SysTableModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="Security\PermissionTypes.cs" />
     <Compile Include="Controllers\Settings\SystemLogController.cs" />
-    <Compile Include="Controllers\Settings\PermissionsController.cs" />
-    <Compile Include="Controllers\Settings\RolesController.cs" />
+    <Compile Include="Controllers\Settings\PermissionsController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\RolesController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Settings\UsersController.cs" />
     <Compile Include="Controllers\ViewCollectionController.cs" />
     <Compile Include="CookieHelper.cs" />
@@ -802,8 +826,12 @@
     <Compile Include="Models\LoggedUserModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\Settings\SystemLogRecordModel.cs" />
-    <Compile Include="Models\Settings\PermissionModel.cs" />
-    <Compile Include="Models\Settings\RoleModel.cs" />
+    <Compile Include="Models\Settings\PermissionModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings\RoleModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Settings\PasswordModel.cs" />
     <Compile Include="Models\Settings\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -877,6 +905,14 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TP.CollectionTypes.txt</LastGenOutput>
     </None>
+    <None Include="Controllers\Settings\MasterDataConfiguration.Controllers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MasterDataConfiguration.Controllers.txt</LastGenOutput>
+    </None>
+    <None Include="Controllers\Settings\MasterDataConfiguration.ViewCollectionFactory.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MasterDataConfiguration.ViewCollectionFactory.txt</LastGenOutput>
+    </None>
     <None Include="Models\AsPro\Common\Common.Models.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Common.Models.txt</LastGenOutput>
@@ -888,6 +924,10 @@
     <None Include="Models\Drl\Drl.Models.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Drl.Models.txt</LastGenOutput>
+    </None>
+    <None Include="Models\Settings\MasterDataConfiguration.Models.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MasterDataConfiguration.Models.txt</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="JsonHelper.TableMappings.AsPro.Common.tt">
@@ -949,6 +989,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Content>
+    <Content Include="Controllers\Settings\MasterDataConfiguration.Controllers.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Content>
+    <Content Include="Controllers\Settings\MasterDataConfiguration.ViewCollectionFactory.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasterDataConfiguration.ViewCollectionFactory.tt</DependentUpon>
+    </Content>
     <Content Include="Models\AsPro\Common\Common.Models.txt">
       <DependentUpon>Common.Models.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -963,6 +1013,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Drl.Models.tt</DependentUpon>
+    </Content>
+    <Content Include="Models\Settings\MasterDataConfiguration.Models.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>

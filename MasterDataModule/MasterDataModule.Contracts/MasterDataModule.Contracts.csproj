@@ -78,6 +78,10 @@
     <Compile Include="Entities\AsPro\Common\InsCoreDataProductLocalization.cs">
       <DependentUpon>Common.Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Configuration\MasterDataRolePermissionRsp.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\Role.Custom.cs" />
     <Compile Include="Entities\Drl\CommunityParticipant.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
@@ -104,6 +108,11 @@
     <Compile Include="Managers\AsPro\Common\IInsCoreDataProductLocalizationManager.cs">
       <DependentUpon>Common.IManagers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Managers\Configuration\IMasterDataRolePermissionRspManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IRoleManager.Custom.cs" />
+    <Compile Include="Managers\Configuration\IUserManager.Custom.cs" />
     <Compile Include="Managers\Drl\ICommunityParticipantManager.cs">
       <DependentUpon>Drl.IManagers.tt</DependentUpon>
     </Compile>
@@ -434,7 +443,6 @@
     <Compile Include="Entities\Drl\ReturnReason.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Drl\Role.Custom.cs" />
     <Compile Include="Entities\Drl\SchoolInfo.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
@@ -721,11 +729,9 @@
     <Compile Include="Managers\Drl\IReturnReasonManager.cs">
       <DependentUpon>Drl.IManagers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Managers\Drl\IRoleManager.Custom.cs" />
     <Compile Include="Managers\Drl\ISchoolInfoManager.cs">
       <DependentUpon>Drl.IManagers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Managers\Drl\IUserManager.Custom.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaveActors\Aspro\IAsProSaveActor.cs" />
     <Compile Include="SaveActors\Aspro\IAsProSaveActorManager.cs" />

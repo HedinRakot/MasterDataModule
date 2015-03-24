@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Http.Dependencies;
 using MasterDataModule.API.Models;
 using MasterDataModule.Contracts.Managers;
+using MasterDataModule.Contracts.Managers.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 

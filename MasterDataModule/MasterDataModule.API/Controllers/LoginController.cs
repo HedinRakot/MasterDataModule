@@ -3,6 +3,7 @@ using System.Web.Http;
 using System.Web.Security;
 using MasterDataModule.API.Models;
 using MasterDataModule.Contracts.Managers;
+using MasterDataModule.Contracts.Managers.Configuration;
 using TuevSued.V1.IT.FE.CoreBase;
 
 namespace MasterDataModule.API.Controllers
