@@ -2,8 +2,8 @@
 <#@ output extension=".txt"#>
 <#@ include file="..\..\..\..\Generation\MasterDataModule.Generation\TTMasterData\MasterDataConfiguration.Settings.ttinclude" once="true"#>
 <#
-	var masterDataName = "Settings";
+	var menuFileName = "Settings.html";
     const string filesDir = @"..\..\..\..\Generation\MasterDataModule.Generation\Declarations\";
 #>
 <#@ include file="..\..\..\..\Generation\MasterDataModule.Generation\TTMasterData\MasterData.GenerationContext.ttinclude" once="true"#>
-<#@ include file="..\..\..\..\Generation\MasterDataModule.Generation\TTMasterData\Web\templates.ttinclude"  once="true"#>
+<#@ include file="..\..\..\..\Generation\MasterDataModule.Generation\TTMasterData\Web\menu.template.ttinclude"  once="true"#>

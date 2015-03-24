@@ -29,7 +29,7 @@
             {
                 'home': _.partial(BaseRouter.showView, this, 'l!t!home/home'),
 
-                'settings': _.partial(BaseRouter.showView, this, 'l!t!Settings/Settings'),
+                'Settings': _.partial(BaseRouter.showView, this, 'l!t!Settings/Settings'),
                 //'permissions': _.partial(BaseRouter.showView, this, 'l!t!settings/permissions'),
                 'sysTables': _.partial(BaseRouter.showView, this, 'l!t!settings/sysTables', { editModeTypes: true }),
                 //'roles': _.partial(BaseRouter.showView, this, 'l!t!settings/roles', { permissions: true }),

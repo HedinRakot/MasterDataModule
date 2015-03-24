@@ -3396,14 +3396,23 @@
     <Content Include="web\resources\Settings\Roles.en.js">
       <DependentUpon>web.masterdata.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\Settings\settings.de.js" />
-    <Content Include="web\resources\Settings\settings.en.js" />
+    <Content Include="web\resources\Settings\Settings.de.js">
+      <DependentUpon>web.masterdata.menu.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\Settings.en.js">
+      <DependentUpon>web.masterdata.menu.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\sysColumns.de.js" />
     <Content Include="web\resources\Settings\sysColumns.en.js" />
     <Content Include="web\resources\Settings\sysTables.de.js" />
     <Content Include="web\resources\Settings\sysTables.en.js" />
     <Content Include="web\resources\Settings\users.de.js" />
     <Content Include="web\resources\Settings\users.en.js" />
+    <Content Include="web\resources\Settings\web.masterdata.menu.resources.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web.masterdata.menu.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\web.masterdata.add.resources.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -4964,11 +4973,18 @@
     <Content Include="web\templates\Settings\Roles.html">
       <DependentUpon>web.masterdata.templates.tt</DependentUpon>
     </Content>
-    <Content Include="web\templates\Settings\Settings.html" />
+    <Content Include="web\templates\Settings\Settings.html">
+      <DependentUpon>web.masterdata.menu.template.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\Settings\SysColumns.html" />
     <Content Include="web\templates\Settings\SysTables.html" />
     <Content Include="web\templates\Settings\SystemLog.html" />
     <Content Include="web\templates\Settings\Users.html" />
+    <Content Include="web\templates\Settings\web.masterdata.menu.template.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web.masterdata.menu.template.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\Settings\web.masterdata.add.templates.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -7173,6 +7189,14 @@
     <Content Include="web\collections\Settings\web.masterdata.collections.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>web.masterdata.collections.txt</LastGenOutput>
+    </Content>
+    <Content Include="web\templates\Settings\web.masterdata.menu.template.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>web.masterdata.menu.template.txt</LastGenOutput>
+    </Content>
+    <Content Include="web\resources\Settings\web.masterdata.menu.resources.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>web.masterdata.menu.resources.txt</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
