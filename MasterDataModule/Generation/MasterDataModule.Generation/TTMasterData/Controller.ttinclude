@@ -40,6 +40,8 @@
 
         code.WriteLine();
         code.WriteNamespace(); //Area: Namespace
+
+		code.WriteLine("[AuthorizeByPermissions(PermissionTypes = new[] {{ Permissions.{0}") }})]", model.Entity.Name);
         code.WriteClassDeclaration(controllerType); //Area: Type
 		code.WriteLine();
 
