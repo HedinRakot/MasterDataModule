@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'TP masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Next inspection',
+		pleaseSelect: 'Please select',
 		description: 'Description',	
 		fromDate: 'From date',	
 		toDate: 'To date',	

@@ -1,24 +1,21 @@
-﻿define(function () {
+define(function () {
 	'use strict';
 
-    var resources = {
-    	name: 'Name',
-    	login: 'Login',
-    	password: 'Password',
-    	passwordConfirmation: 'Password confirmation',
-    	role: 'Role',
-    	selectRole: 'Select role...',
-    	changePassword: 'Change password',
+	var resources = {
 
-    	'login-unique': 'Login must be unique',
-    	'password-confirmation-match': 'Password and confirmation must match',
-    	'password-match': 'Password and confirmation must match',
+		add: 'Add Master data user',
+	    edit: 'Edit Master data user',
+	    masterData: 'FE masterdata',
+		driverLicenceMasterData: 'Driver licence masterdata',
+	    pageTitle: 'Master data user',
+		pleaseSelect: 'Please select',
+		masterDataRoleId: 'Role',	
+		login: 'Login',	
+		name: 'Name',	
+		password: 'Password',	
+		fromDate: 'From date',	
+		toDate: 'To date',	
+	};
 
-    	cancel: 'Cancel',
-    	change: 'Change',
-
-        title: 'Users'
-    };
-
-    return resources;
+	return resources;
 });

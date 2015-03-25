@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Common masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Product object class',
+		pleaseSelect: 'Please select',
 		description: 'Description',	
 		weightFrom: 'Weight from',	
 		fromDate: 'From date',	

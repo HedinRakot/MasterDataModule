@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/TechnicalInspectionMasterData/InsValidPeriods',
-    'l!t!TechnicalInspectionMasterData/FilterInsValidPeriod',
-    'l!t!TechnicalInspectionMasterData/InsValidPeriodRelationships'
+'collections/TechnicalInspectionMasterData/InsValidPeriods',
+'l!t!TechnicalInspectionMasterData/FilterInsValidPeriod',
+'l!t!TechnicalInspectionMasterData/InsValidPeriodRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'description', title: this.resources.description },
 				{ field: 'validityPeriod', title: this.resources.validityPeriod },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},

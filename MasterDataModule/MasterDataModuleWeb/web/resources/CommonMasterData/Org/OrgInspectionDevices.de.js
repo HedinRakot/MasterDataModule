@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'OE-Prüfmittel editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'OE-Prüfmittel',
+		pleaseSelect: 'Bitte auswählen',
 		debitorCustomerNumber: 'Debitornummer des Kunden',	
 		identification: 'Identifizierung des Prüfmittels',	
 		newIdentification: 'Neue Identifizierung des Prüfmittels',	

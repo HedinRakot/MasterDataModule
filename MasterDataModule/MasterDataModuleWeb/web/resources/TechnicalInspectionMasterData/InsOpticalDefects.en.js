@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'TP masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Optical defect',
+		pleaseSelect: 'Please select',
 		name: 'Name',	
 		description: 'Description',	
 		isCustom: 'Is custom',	

@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Organisationseinheit editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Organisationseinheit',
+		pleaseSelect: 'Bitte auswählen',
 		orgNumber: 'OE-Nummer',	
 		name: 'OE-Bezeichnung',	
 		abbr: 'OE-Kürzel',	

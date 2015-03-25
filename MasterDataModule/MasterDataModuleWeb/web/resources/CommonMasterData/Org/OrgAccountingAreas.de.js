@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Buchungskreis editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Buchungskreis',
+		pleaseSelect: 'Bitte auswählen',
 		accountingArea: 'Nummer des Buchungskreises',	
 		maxOrderSum: 'Maximale Auftragssumme im Buchungskreis',	
 		fromDate: 'Von Datum',	

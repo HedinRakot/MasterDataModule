@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Auszahlungsgrund editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Auszahlungsgrund',
+		pleaseSelect: 'Bitte auswählen',
 		description: 'Auszahlungsgrund',	
 		account: 'Kostenstelle',	
 		insVatTypeId: 'Mehrwertsteuerkennzeichen ',	

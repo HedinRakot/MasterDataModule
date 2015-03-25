@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/CommonMasterData/Customer/OrdCustomerInfos',
-    'l!t!CommonMasterData/Customer/FilterOrdCustomerInfo',
-    'l!t!CommonMasterData/Customer/OrdCustomerInfoRelationships'
+'collections/CommonMasterData/Customer/OrdCustomerInfos',
+'l!t!CommonMasterData/Customer/FilterOrdCustomerInfo',
+'l!t!CommonMasterData/Customer/OrdCustomerInfoRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'textValue', title: this.resources.textValue },
 				{ field: 'numberValue', title: this.resources.numberValue },
 				{ field: 'infoType', title: this.resources.infoType },

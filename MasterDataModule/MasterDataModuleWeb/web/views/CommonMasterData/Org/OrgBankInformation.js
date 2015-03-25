@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/CommonMasterData/Org/OrgBankInformation',
-    'l!t!CommonMasterData/Org/FilterOrgBankInformation',
-    'l!t!CommonMasterData/Org/OrgBankInformationRelationships'
+'collections/CommonMasterData/Org/OrgBankInformation',
+'l!t!CommonMasterData/Org/FilterOrgBankInformation',
+'l!t!CommonMasterData/Org/OrgBankInformationRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'bankName', title: this.resources.bankName },
 				{ field: 'bankCode', title: this.resources.bankCode },
 				{ field: 'bankAccount', title: this.resources.bankAccount },

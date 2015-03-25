@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Common masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Federal state',
+		pleaseSelect: 'Please select',
 		federalStateName: 'Name',	
 		description: 'Description',	
 		sysCountryId: 'Country',	

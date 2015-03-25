@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="InsObdStatus"/> entity
     /// </summary>
     [DataContract]
-    public class InsObdStatusModel: BaseModel
+    public partial class InsObdStatusModel: BaseModel
     {
 
         /// <summary>

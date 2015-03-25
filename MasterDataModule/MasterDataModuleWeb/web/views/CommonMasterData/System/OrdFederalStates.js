@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/CommonMasterData/System/OrdFederalStates',
-    'l!t!CommonMasterData/System/FilterOrdFederalState',
-    'l!t!CommonMasterData/System/OrdFederalStateRelationships'
+'collections/CommonMasterData/System/OrdFederalStates',
+'l!t!CommonMasterData/System/FilterOrdFederalState',
+'l!t!CommonMasterData/System/OrdFederalStateRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'federalStateName', title: this.resources.federalStateName },
 				{ field: 'description', title: this.resources.description },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},

@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Common masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'ZIP',
+		pleaseSelect: 'Please select',
 		postCode: 'Post code',	
 		city: 'City',	
 		street: 'Street',	

@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Common masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Language',
+		pleaseSelect: 'Please select',
 		sapId: 'SAP ID',	
 		sapIdIso: 'SAP ID ISO',	
 		resourceFileName: 'Resource file name',	

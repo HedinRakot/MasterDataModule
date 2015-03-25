@@ -9,7 +9,7 @@ define([
         tabs: function () {
             
             var result = [
-				{ view: 'l!t!Settings/MasterDataRolePermissionRsps', selector: '.masterDataRolePermissionRsps' },
+				{ view: 'l!t!Settings/MasterDataRolePermissionRsps', selector: '.masterDataRolePermissionRsps'},
                 
             ];
             

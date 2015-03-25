@@ -23,6 +23,10 @@ namespace MasterDataModule.Contracts.Entities
         public static class Fields
         {
             /// <summary>
+            /// Column name 'ID' for property <see cref="ExamPossibleResult.Id"/>
+            /// </summary>
+            public static readonly string Id = "ID";
+            /// <summary>
             /// Column name 'NAME' for property <see cref="ExamPossibleResult.Name"/>
             /// </summary>
             public static readonly string Name = "NAME";
@@ -90,13 +94,13 @@ namespace MasterDataModule.Contracts.Entities
             /// Column name 'IS_MEDICAL_ATTEST_REQUIRED' for property <see cref="ExamPossibleResult.IsMedicalAttestRequired"/>
             /// </summary>
             public static readonly string IsMedicalAttestRequired = "IS_MEDICAL_ATTEST_REQUIRED";
-            /// <summary>
-            /// Column name 'ID' for property <see cref="ExamPossibleResult.Id"/>
-            /// </summary>
-            public static readonly string Id = "ID";
           
         }
         #endregion
+        /// <summary>
+        ///     EN: PK, corresponding Result (Enum: 0 - is absent; 1 - passed; 2 - not passed; 3 - not appear, fee is due; 5 - interrupting; 7 - not  examined, absence of conditions; 8 - eye test not passed; 90 - Change of driver school; 99 - without Exam back to Authority;)  DE: Primaerschluessel, entspricht den Wert-Schluesse (Enum: 0 - entfaellt; 1 - bestanden; 2 - nicht bestanden; 3 - nicht erschienen, Gebuehr faellig; 5 - Abbruch; 7 - nicht geprueft, da Voraussetzung fehlt; 8 - Sehtest nicht bestanden; 90 - Fahrschulwechsel; 99 - ohne Pruefung zurueck an Behoerde;)
+        /// </summary>
+        public int Id{ get; set; }
         /// <summary>
         ///     EN: Exam Result (for example 90, --, 1, 2, ...)  DE: Pruefleistungsergebnis (z.B. 90, --, 1, 2, ...)
         /// </summary>
@@ -165,7 +169,6 @@ namespace MasterDataModule.Contracts.Entities
         ///     Is medical attest requared
         /// </summary>
         public bool IsMedicalAttestRequired{ get; set; }
-        public int Id{ get; set; }
         DateTime? IIntervalFields.FromDate
         {
             get { return FromDate; }

@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'TP masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Available inspection step',
+		pleaseSelect: 'Please select',
 		insInspectionStepId: 'Description',	
 		isMandatory: 'Is mandatory',	
 		fromDate: 'From date',	

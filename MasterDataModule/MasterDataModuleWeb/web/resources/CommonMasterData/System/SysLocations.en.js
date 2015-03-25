@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Common masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Location code',
+		pleaseSelect: 'Please select',
 		locationCode: 'Location code',	
 		locationName: 'Location name',	
 		sysCountryId: 'Country',	

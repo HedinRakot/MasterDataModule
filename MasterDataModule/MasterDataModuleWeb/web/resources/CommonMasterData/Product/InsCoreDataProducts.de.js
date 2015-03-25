@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Produkt editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Produkt',
+		pleaseSelect: 'Bitte auswählen',
 		productNumber: 'Produktnummer',	
 		isNextInspectionProduct: 'Angabe, ob Produkt eine Nachprüfung ist',	
 		isProvisionCostMayBeCalculated: 'Angabe, ob für Produkt Gestellungskosten verrechnet werden können',	

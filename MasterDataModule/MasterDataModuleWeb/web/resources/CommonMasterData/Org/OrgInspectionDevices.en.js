@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Common masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Organization inspection device',
+		pleaseSelect: 'Please select',
 		debitorCustomerNumber: 'Debitor number',	
 		identification: 'Identification',	
 		newIdentification: 'New identification',	

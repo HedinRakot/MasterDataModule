@@ -22,6 +22,7 @@ namespace MasterDataModule.API.Models
         /// <summary>
         ///     Model property for <see cref="MeetingPoint.Description"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public string description{ get; set; }
         /// <summary>

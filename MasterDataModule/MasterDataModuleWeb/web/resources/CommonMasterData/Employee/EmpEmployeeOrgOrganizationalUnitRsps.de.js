@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'OE/TSC editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'OE/TSC',
+		pleaseSelect: 'Bitte auswählen',
 		empEmployeeId: 'Mitarbeiter',	
 		orgOrganizationalUnitId: 'OE/TSC',	
 		fromDate: 'Von Datum',	

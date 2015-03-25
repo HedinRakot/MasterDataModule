@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Produkt-Materialgruppen editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Produkt-Materialgruppen',
+		pleaseSelect: 'Bitte auswählen',
 		description: 'Beschreibung',	
 		sapId: 'SAP-Materialgruppe',	
 		fromDate: 'Von Datum',	

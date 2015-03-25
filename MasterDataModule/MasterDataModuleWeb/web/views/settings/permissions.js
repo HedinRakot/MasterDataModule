@@ -1,4 +1,4 @@
-﻿define([
+define([
 	'base/base-object-grid-view',
 'collections/Settings/Permissions',
 'l!t!Settings/FilterPermission',

@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'TP masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Next SP-Interval',
+		pleaseSelect: 'Please select',
 		insProductObjectTypeId: 'Object type',	
 		insProductObjectClassId: 'Object class',	
 		ageMonthFrom: 'Age month from',	

@@ -484,7 +484,9 @@
     <Content Include="web\collections\Settings\SysColumns.js" />
     <Content Include="web\collections\Settings\SysTables.js" />
     <Content Include="web\collections\Settings\SystemLog.js" />
-    <Content Include="web\collections\Settings\Users.js" />
+    <Content Include="web\collections\Settings\Users.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
     <Content Include="web\collections\Settings\web.masterdata.collections.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1064,6 +1066,9 @@
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\Settings\FilterSysTable.js" />
+    <Content Include="web\models\Settings\FilterUser.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
     <Content Include="web\models\Settings\MasterDataRolePermissionRsp.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
@@ -1076,7 +1081,9 @@
     <Content Include="web\models\Settings\SysColumn.js" />
     <Content Include="web\models\Settings\SysTable.js" />
     <Content Include="web\models\Settings\SystemLogRecord.js" />
-    <Content Include="web\models\Settings\User.js" />
+    <Content Include="web\models\Settings\User.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
     <Content Include="web\models\Settings\web.masterdata.models.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1909,6 +1916,12 @@
       <DependentUpon>web.product.filter.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\CommonMasterData\Product\FilterInsCoreDataProductGroup.en.js">
+      <DependentUpon>web.product.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\CommonMasterData\Product\FilterInsCoreDataProductLocalization.de.js">
+      <DependentUpon>web.product.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\CommonMasterData\Product\FilterInsCoreDataProductLocalization.en.js">
       <DependentUpon>web.product.filter.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\CommonMasterData\Product\FilterInsProductCombinationType.de.js">
@@ -3340,6 +3353,12 @@
     <Content Include="web\resources\Settings\AddRole.en.js">
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\Settings\AddUser.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddUser.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\FilterMasterDataRolePermissionRsp.de.js">
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
     </Content>
@@ -3360,6 +3379,12 @@
     </Content>
     <Content Include="web\resources\Settings\FilterSysTables.de.js" />
     <Content Include="web\resources\Settings\FilterSysTables.en.js" />
+    <Content Include="web\resources\Settings\FilterUser.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterUser.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\MasterDataRolePermissionRspRelationships.de.js">
       <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
     </Content>
@@ -3406,8 +3431,18 @@
     <Content Include="web\resources\Settings\sysColumns.en.js" />
     <Content Include="web\resources\Settings\sysTables.de.js" />
     <Content Include="web\resources\Settings\sysTables.en.js" />
-    <Content Include="web\resources\Settings\users.de.js" />
-    <Content Include="web\resources\Settings\users.en.js" />
+    <Content Include="web\resources\Settings\UserRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\UserRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\Users.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\Users.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\web.masterdata.menu.resources.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -4943,7 +4978,9 @@
     <Content Include="web\templates\Settings\AddRole.html">
       <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
     </Content>
-    <Content Include="web\templates\Settings\AddUser.html" />
+    <Content Include="web\templates\Settings\AddUser.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\Settings\ChangePassword.html" />
     <Content Include="web\templates\Settings\FilterMasterDataRolePermissionRsp.html">
       <DependentUpon>web.masterdata.templates.tt</DependentUpon>
@@ -4955,6 +4992,9 @@
       <DependentUpon>web.masterdata.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\Settings\FilterSysTables.html" />
+    <Content Include="web\templates\Settings\FilterUser.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\Settings\MasterDataRolePermissionRspRelationships.html">
       <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
     </Content>
@@ -4979,7 +5019,12 @@
     <Content Include="web\templates\Settings\SysColumns.html" />
     <Content Include="web\templates\Settings\SysTables.html" />
     <Content Include="web\templates\Settings\SystemLog.html" />
-    <Content Include="web\templates\Settings\Users.html" />
+    <Content Include="web\templates\Settings\UserRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\Users.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\Settings\web.masterdata.menu.template.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -6239,7 +6284,9 @@
     <Content Include="web\views\Settings\AddRole.js">
       <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
     </Content>
-    <Content Include="web\views\Settings\AddUser.js" />
+    <Content Include="web\views\Settings\AddUser.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\Settings\ChangePassword.js" />
     <Content Include="web\views\Settings\FilterPermission.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
@@ -6248,6 +6295,9 @@
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\FilterSysTables.js" />
+    <Content Include="web\views\Settings\FilterUser.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\Settings\MasterDataRolePermissionRspRelationships.js">
       <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
     </Content>
@@ -6270,7 +6320,12 @@
     <Content Include="web\views\Settings\SysColumns.js" />
     <Content Include="web\views\Settings\SysTables.js" />
     <Content Include="web\views\Settings\SystemLog.js" />
-    <Content Include="web\views\Settings\Users.js" />
+    <Content Include="web\views\Settings\UserRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\Users.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\Settings\web.masterdata.add.views1.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -6281,19 +6336,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>web.masterdata.related.views.tt</DependentUpon>
     </Content>
-    <Content Include="web\views\Settings\web.masterdata.relationships.views.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>web.masterdata.relationships.views1.txt</LastGenOutput>
-    </Content>
     <Content Include="web\views\Settings\web.masterdata.relationships.views1.txt">
-      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\web.masterdata.views1.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\_Users.js" />
+    <Content Include="web\views\Settings\web.masterdata.relationships.views.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>web.masterdata.relationships.views1.txt</LastGenOutput>
     </Content>
     <Content Include="web\views\TechnicalInspectionMasterData\AddInsAvailableInspectionStep.js">
       <DependentUpon>web.tp.add.views.tt</DependentUpon>

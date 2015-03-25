@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Mitarbeiter editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Mitarbeiter',
+		pleaseSelect: 'Bitte auswählen',
 		personalNumber: 'Personalnummer',	
 		domain: 'Domäne des Users (z.B. „DE001“)',	
 		userName: 'Anmeldenamen für ASPRO-Anmeldung',	

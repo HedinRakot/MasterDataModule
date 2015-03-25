@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/CommonMasterData/System/SysLocations',
-    'l!t!CommonMasterData/System/FilterSysLocation',
-    'l!t!CommonMasterData/System/SysLocationRelationships'
+'collections/CommonMasterData/System/SysLocations',
+'l!t!CommonMasterData/System/FilterSysLocation',
+'l!t!CommonMasterData/System/SysLocationRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'locationCode', title: this.resources.locationCode },
 				{ field: 'locationName', title: this.resources.locationName },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},

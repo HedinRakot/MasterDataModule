@@ -47,6 +47,16 @@ namespace MasterDataModule.API
                 {"OLD_PRODUCT_NUMBER", "oldProductNumber"},
             });
 
+            tables.Add("INS_CORE_DATA_PRODUCT_LOCALIZATION", new TableMapping("INS_CORE_DATA_PRODUCT_LOCALIZATION", "InsCoreDataProductLocalization", 6)
+            {
+                {"INS_CORE_DATA_PRODUCT_ID", "insCoreDataProductId"},
+                {"SYS_LANGUAGE_ID", "sysLanguageId"},
+                {"PRODUCT_NAME", "productName"},
+                {"DESCRIPTION", "description"},
+                {"FROM_DATE", "fromDate"},
+                {"TO_DATE", "toDate"},
+            });
+
             tables.Add("EMP_EMPLOYEE", new TableMapping("EMP_EMPLOYEE", "EmpEmployee", 15)
             {
                 {"PERSONAL_NUMBER", "personalNumber"},

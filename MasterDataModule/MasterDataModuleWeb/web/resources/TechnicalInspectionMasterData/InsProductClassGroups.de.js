@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Produktklasse-Produktklassengruppe editieren',
 	    masterData: 'TP Stammdaten',
 	    pageTitle: 'Produktklasse-Produktklassengruppe',
+		pleaseSelect: 'Bitte auswählen',
 		description: 'Beschreibung der Produktklassengruppe',	
 		sapId: 'Schlüsselwert der Produktklassengruppe',	
 		fromDate: 'Von Datum',	

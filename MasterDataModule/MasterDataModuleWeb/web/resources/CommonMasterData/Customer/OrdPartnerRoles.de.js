@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Kunde-Partnerrollen editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Kunde-Partnerrollen',
+		pleaseSelect: 'Bitte auswählen',
 		sapQualifier: 'SAP Kennung',	
 		fromDate: 'Von Datum',	
 		toDate: 'Bis Datum',	

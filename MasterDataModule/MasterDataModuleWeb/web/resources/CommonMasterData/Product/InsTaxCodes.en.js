@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Common masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Tax code',
+		pleaseSelect: 'Please select',
 		taxCode: 'Tax code',	
 		fromDate: 'From date',	
 		toDate: 'To date',	

@@ -22,6 +22,7 @@ namespace MasterDataModule.API.Models
         /// <summary>
         ///     Model property for <see cref="Authority.Name"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public string name{ get; set; }
         /// <summary>
@@ -37,6 +38,7 @@ namespace MasterDataModule.API.Models
         /// <summary>
         ///     Model property for <see cref="Authority.ReturnType"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public int returnType{ get; set; }
         /// <summary>

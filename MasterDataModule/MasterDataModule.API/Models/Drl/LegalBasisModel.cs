@@ -22,6 +22,7 @@ namespace MasterDataModule.API.Models
         /// <summary>
         ///     Model property for <see cref="LegalBasis.Description"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public string description{ get; set; }
         /// <summary>
@@ -38,11 +39,13 @@ namespace MasterDataModule.API.Models
         /// <summary>
         ///     Model property for <see cref="LegalBasis.MessageReason"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public string messageReason{ get; set; }
         /// <summary>
         ///     Model property for <see cref="LegalBasis.MessageReasonStyle"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public string messageReasonStyle{ get; set; }
         /// <summary>
@@ -65,6 +68,7 @@ namespace MasterDataModule.API.Models
         /// <summary>
         ///     Model property for <see cref="LegalBasis.PrintName"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public string printName{ get; set; }
 

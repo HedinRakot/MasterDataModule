@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Abrechnungsvariante editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Abrechnungsvariante',
+		pleaseSelect: 'Bitte auswählen',
 		name: 'Kurzbezeichnung der Abrechnungsvariante',	
 		description: 'Beschreibung der Abrechnungsvariante ',	
 		fromDate: 'Von Datum',	

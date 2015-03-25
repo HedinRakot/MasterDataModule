@@ -22,11 +22,13 @@ namespace MasterDataModule.API.Models
         /// <summary>
         ///     Model property for <see cref="ExamConstraint.Description"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public string description{ get; set; }
         /// <summary>
         ///     Model property for <see cref="ExamConstraint.ConstraintType"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public int constraintType{ get; set; }
         /// <summary>

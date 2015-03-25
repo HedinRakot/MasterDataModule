@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'TP masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'PFP inspection type to position',
+		pleaseSelect: 'Please select',
 		insPfpPositionId: 'Position',	
 		insPfpInspectionTypeId: 'Inspection type',	
 		fromDate: 'From date',	

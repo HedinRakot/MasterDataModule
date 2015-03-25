@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Produktklasse-SP-Intervall editieren',
 	    masterData: 'TP Stammdaten',
 	    pageTitle: 'Produktklasse-SP-Intervall',
+		pleaseSelect: 'Bitte auswählen',
 		insProductObjectTypeId: 'Objekttyp ',	
 		insProductObjectClassId: 'Gewichtsklasse ',	
 		ageMonthFrom: 'Minimales Alter des Fahrzeugs in Monaten',	

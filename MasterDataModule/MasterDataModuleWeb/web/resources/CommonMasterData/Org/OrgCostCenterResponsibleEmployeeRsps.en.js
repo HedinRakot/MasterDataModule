@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Common masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Cost center responsible employee',
+		pleaseSelect: 'Please select',
 		orgCostCenterId: 'Cost center',	
 		empEmployeeId: 'Responsible employee',	
 		fromDate: 'From date',	

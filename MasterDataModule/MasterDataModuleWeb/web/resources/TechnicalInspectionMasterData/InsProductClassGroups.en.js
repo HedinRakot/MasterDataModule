@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'TP masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Product class group',
+		pleaseSelect: 'Please select',
 		description: 'Description',	
 		sapId: 'SAP ID',	
 		fromDate: 'From date',	

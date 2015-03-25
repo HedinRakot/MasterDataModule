@@ -1,4 +1,5 @@
 using MasterDataModule.Contracts.Entities;
+using MasterDataModule.Contracts.Entities.Configuration;
 using System;
 using System.Runtime.Serialization;
 // ReSharper disable InconsistentNaming

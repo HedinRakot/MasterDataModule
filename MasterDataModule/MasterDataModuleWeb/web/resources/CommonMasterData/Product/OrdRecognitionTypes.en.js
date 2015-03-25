@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Common masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Product recognition type',
+		pleaseSelect: 'Please select',
 		name: 'Name',	
 		fromDate: 'From date',	
 		toDate: 'To date',	

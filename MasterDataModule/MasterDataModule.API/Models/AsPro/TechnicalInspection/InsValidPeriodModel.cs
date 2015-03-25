@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="InsValidPeriod"/> entity
     /// </summary>
     [DataContract]
-    public class InsValidPeriodModel: BaseModel
+    public partial class InsValidPeriodModel: BaseModel
     {
 
         /// <summary>

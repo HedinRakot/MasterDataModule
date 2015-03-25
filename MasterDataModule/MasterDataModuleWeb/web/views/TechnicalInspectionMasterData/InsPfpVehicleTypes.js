@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/TechnicalInspectionMasterData/InsPfpVehicleTypes',
-    'l!t!TechnicalInspectionMasterData/FilterInsPfpVehicleType',
-    'l!t!TechnicalInspectionMasterData/InsPfpVehicleTypeRelationships'
+'collections/TechnicalInspectionMasterData/InsPfpVehicleTypes',
+'l!t!TechnicalInspectionMasterData/FilterInsPfpVehicleType',
+'l!t!TechnicalInspectionMasterData/InsPfpVehicleTypeRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'description', title: this.resources.description },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},

@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Common masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Country',
+		pleaseSelect: 'Please select',
 		sapId: 'SAP ID',	
 		name: 'Name',	
 		isEu: 'Is EU',	

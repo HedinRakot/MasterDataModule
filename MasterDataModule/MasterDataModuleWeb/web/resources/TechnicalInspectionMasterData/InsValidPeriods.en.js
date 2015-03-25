@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'TP masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Valid period',
+		pleaseSelect: 'Please select',
 		description: 'Description',	
 		validityPeriod: 'Validity period',	
 		isNextTerminPossible: 'Is next term possible',	

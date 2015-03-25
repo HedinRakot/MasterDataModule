@@ -3,6 +3,7 @@ define(function () {
 
 	var resources = {
         InsCoreDataProducts: 'Product',
+        InsCoreDataProductLocalizations: 'Localization',
         InsCoreDataProductGroups: 'Product group',
         InsProductCombinationTypes: 'Product combination type',
         InsProductMaterialGroups: 'Product material group',

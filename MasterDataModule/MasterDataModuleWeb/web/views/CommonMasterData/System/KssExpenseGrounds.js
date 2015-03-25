@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/CommonMasterData/System/KssExpenseGrounds',
-    'l!t!CommonMasterData/System/FilterKssExpenseGround',
-    'l!t!CommonMasterData/System/KssExpenseGroundRelationships'
+'collections/CommonMasterData/System/KssExpenseGrounds',
+'l!t!CommonMasterData/System/FilterKssExpenseGround',
+'l!t!CommonMasterData/System/KssExpenseGroundRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'description', title: this.resources.description },
 				{ field: 'account', title: this.resources.account },
 				{ field: 'insVatTypeId', title: this.resources.insVatTypeId },

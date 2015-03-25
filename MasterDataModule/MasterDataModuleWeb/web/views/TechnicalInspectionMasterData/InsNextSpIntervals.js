@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/TechnicalInspectionMasterData/InsNextSpIntervals',
-    'l!t!TechnicalInspectionMasterData/FilterInsNextSpInterval',
-    'l!t!TechnicalInspectionMasterData/InsNextSpIntervalRelationships'
+'collections/TechnicalInspectionMasterData/InsNextSpIntervals',
+'l!t!TechnicalInspectionMasterData/FilterInsNextSpInterval',
+'l!t!TechnicalInspectionMasterData/InsNextSpIntervalRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'insProductObjectTypeId', title: this.resources.insProductObjectTypeId },
 				{ field: 'insProductObjectClassId', title: this.resources.insProductObjectClassId },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},

@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'TP masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'OBD status',
+		pleaseSelect: 'Please select',
 		name: 'Name',	
 		description: 'Description',	
 		auView: 'AU View',	

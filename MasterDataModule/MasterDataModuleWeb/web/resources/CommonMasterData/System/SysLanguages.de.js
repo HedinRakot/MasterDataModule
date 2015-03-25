@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Sprache editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Sprache',
+		pleaseSelect: 'Bitte auswählen',
 		sapId: 'Sprachschlüssel ',	
 		sapIdIso: 'ISO-Sprachbezeichnung',	
 		resourceFileName: 'Dateiname mit Oberflächentextenfür die Sprache',	

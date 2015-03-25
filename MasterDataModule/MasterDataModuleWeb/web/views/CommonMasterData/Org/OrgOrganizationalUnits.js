@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/CommonMasterData/Org/OrgOrganizationalUnits',
-    'l!t!CommonMasterData/Org/FilterOrgOrganizationalUnit',
-    'l!t!CommonMasterData/Org/OrgOrganizationalUnitRelationships'
+'collections/CommonMasterData/Org/OrgOrganizationalUnits',
+'l!t!CommonMasterData/Org/FilterOrgOrganizationalUnit',
+'l!t!CommonMasterData/Org/OrgOrganizationalUnitRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'orgNumber', title: this.resources.orgNumber },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},

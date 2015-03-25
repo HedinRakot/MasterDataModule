@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Systemrolle editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Systemrolle',
+		pleaseSelect: 'Bitte auswählen',
 		roleNumber: 'Rollenschlüssel',	
 		name: 'Kurzbezeichnung der Rolle',	
 		description: 'Beschreibung der Rolle',	

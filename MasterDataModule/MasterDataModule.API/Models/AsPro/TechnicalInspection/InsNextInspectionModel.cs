@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="InsNextInspection"/> entity
     /// </summary>
     [DataContract]
-    public class InsNextInspectionModel: BaseModel
+    public partial class InsNextInspectionModel: BaseModel
     {
 
         /// <summary>

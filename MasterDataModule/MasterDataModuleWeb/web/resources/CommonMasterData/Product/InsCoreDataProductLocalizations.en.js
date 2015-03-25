@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Common masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Localization',
+		pleaseSelect: 'Please select',
 		insCoreDataProductId: 'Product',	
 		sysLanguageId: 'Language',	
 		productName: 'Name',	

@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Rolle editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Rolle',
+		pleaseSelect: 'Bitte auswählen',
 		empEmployeeId: 'Mitarbeiter',	
 		sysRoleId: 'Rolle',	
 		fromDate: 'Von Datum',	

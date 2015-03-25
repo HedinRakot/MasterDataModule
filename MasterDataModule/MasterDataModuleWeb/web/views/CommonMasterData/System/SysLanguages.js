@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/CommonMasterData/System/SysLanguages',
-    'l!t!CommonMasterData/System/FilterSysLanguage',
-    'l!t!CommonMasterData/System/SysLanguageRelationships'
+'collections/CommonMasterData/System/SysLanguages',
+'l!t!CommonMasterData/System/FilterSysLanguage',
+'l!t!CommonMasterData/System/SysLanguageRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'sapId', title: this.resources.sapId },
 				{ field: 'sapIdIso', title: this.resources.sapIdIso },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},

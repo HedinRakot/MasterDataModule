@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Kostenstelle editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Kostenstelle',
+		pleaseSelect: 'Bitte auswählen',
 		name: 'Kostenstelle',	
 		description: 'Bezeichnung der Kostenstelle',	
 		fromDate: 'Von Datum',	

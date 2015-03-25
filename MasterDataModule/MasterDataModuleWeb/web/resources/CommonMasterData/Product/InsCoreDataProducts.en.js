@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Common masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Product',
+		pleaseSelect: 'Please select',
 		productNumber: 'Product number',	
 		isNextInspectionProduct: 'Is next inspection product',	
 		isProvisionCostMayBeCalculated: 'Is provision cost may be calculated',	

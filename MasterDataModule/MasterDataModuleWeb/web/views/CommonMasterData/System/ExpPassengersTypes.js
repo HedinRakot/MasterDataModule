@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/CommonMasterData/System/ExpPassengersTypes',
-    'l!t!CommonMasterData/System/FilterExpPassengersType',
-    'l!t!CommonMasterData/System/ExpPassengersTypeRelationships'
+'collections/CommonMasterData/System/ExpPassengersTypes',
+'l!t!CommonMasterData/System/FilterExpPassengersType',
+'l!t!CommonMasterData/System/ExpPassengersTypeRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'text', title: this.resources.text },
 				{ field: 'code', title: this.resources.code },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},

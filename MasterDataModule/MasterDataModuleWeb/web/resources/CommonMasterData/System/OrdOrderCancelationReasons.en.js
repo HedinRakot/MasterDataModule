@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Common masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Cancel reason',
+		pleaseSelect: 'Please select',
 		cancelationReasonText: 'Cancelation reason text',	
 		fromDate: 'From date',	
 		toDate: 'To date',	

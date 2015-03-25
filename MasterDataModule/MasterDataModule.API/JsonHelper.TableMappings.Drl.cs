@@ -20,6 +20,28 @@ namespace MasterDataModule.API
                 {"MESSAGE", "message"},
             });
 
+            tables.Add("DRL_CORE_DATA_PRODUCT", new TableMapping("DRL_CORE_DATA_PRODUCT", "CoreDataProduct", 18)
+            {
+                {"INS_CORE_DATA_PRODUCT_ID", "insCoreDataProductId"},
+                {"MIN_AGE", "minAge"},
+                {"MAX_AGE", "maxAge"},
+                {"EXAM_TYPE", "examType"},
+                {"PRIOR_TIME_IN_MONTHS", "priorTimeInMonths"},
+                {"EXPIRATION_IN_MONTH", "expirationInMonth"},
+                {"REPEAT_TIME_IN_DAYS", "repeatTimeInDays"},
+                {"TRAINING_CERT_FLAG", "trainingCertFlag"},
+                {"RESULT_FLAG", "resultFlag"},
+                {"MULTIPLY_FLAG", "multiplyFlag"},
+                {"FROM_DATE", "fromDate"},
+                {"TO_DATE", "toDate"},
+                {"IS_MOFA_PRINT", "isMofaPrint"},
+                {"IS_ADDITIONAL_PRODUCT", "isAdditionalProduct"},
+                {"IS_PREPAYMENT_REQUIRED", "isPrepaymentRequired"},
+                {"IS_MANDATORY", "isMandatory"},
+                {"FE_PRODUCT_NUMBER", "feProductNumber"},
+                {"REPEAT_TIME_IN_DAYS_REDUCED", "repeatTimeInDaysReduced"},
+            });
+
             tables.Add("DRL_RETURN_REASON", new TableMapping("DRL_RETURN_REASON", "ReturnReason", 6)
             {
                 {"NAME", "name"},
@@ -93,10 +115,36 @@ namespace MasterDataModule.API
                 {"TO_DATE", "toDate"},
             });
 
+            tables.Add("DRL_CORE_DATA_PRODUCT_CLASS_BASIS_RSP", new TableMapping("DRL_CORE_DATA_PRODUCT_CLASS_BASIS_RSP", "CoreDataProductClassBasis", 6)
+            {
+                {"DRL_EXAM_CLASS_ID", "examClassId"},
+                {"DRL_CORE_DATA_PRODUCT_ID", "coreDataProductId"},
+                {"DRL_LEGAL_BASIS_ID", "legalBasisId"},
+                {"FROM_DATE", "fromDate"},
+                {"TO_DATE", "toDate"},
+                {"SORT_ORDER", "sortOrder"},
+            });
+
+            tables.Add("DRL_COMMUNITY_PARTICIPANT", new TableMapping("DRL_COMMUNITY_PARTICIPANT", "CommunityParticipant", 4)
+            {
+                {"DRL_DRIVER_SCHOOL_ID_PARTICIPANT", "driverSchoolIdParticipant"},
+                {"FROM_DATE", "fromDate"},
+                {"TO_DATE", "toDate"},
+                {"DRL_DRIVER_SCHOOL_ID_LEAD", "driverSchoolIdLead"},
+            });
+
             tables.Add("DRL_EXAM_RECOGNITION_TYPE_EXAM_CLASS_RSP", new TableMapping("DRL_EXAM_RECOGNITION_TYPE_EXAM_CLASS_RSP", "ExamRecognitionTypeExamClass", 4)
             {
                 {"DRL_EXAM_RECOGNITION_TYPE_ID", "examRecognitionTypeId"},
                 {"DRL_EXAM_CLASS_ID", "examClassId"},
+                {"FROM_DATE", "fromDate"},
+                {"TO_DATE", "toDate"},
+            });
+
+            tables.Add("DRL_DRIVER_SCHOOL", new TableMapping("DRL_DRIVER_SCHOOL", "DriverSchool", 4)
+            {
+                {"DRIVER_SCHOOL_NUMBER", "driverSchoolNumber"},
+                {"ORD_CUSTOMER_ID", "ordCustomerId"},
                 {"FROM_DATE", "fromDate"},
                 {"TO_DATE", "toDate"},
             });
@@ -130,6 +178,22 @@ namespace MasterDataModule.API
                 {"FROM_DATE", "fromDate"},
                 {"TO_DATE", "toDate"},
                 {"SORT_ORDER", "sortOrder"},
+            });
+
+            tables.Add("DRL_DRIVER_SCHOOL_EXAM_RECOGNITION_TYPE_RSP", new TableMapping("DRL_DRIVER_SCHOOL_EXAM_RECOGNITION_TYPE_RSP", "DriverSchoolExamRecognitionType", 4)
+            {
+                {"DRL_DRIVER_SCHOOL_ID", "driverSchoolId"},
+                {"DRL_EXAM_RECOGNITION_TYPE_ID", "examRecognitionTypeId"},
+                {"FROM_DATE", "fromDate"},
+                {"TO_DATE", "toDate"},
+            });
+
+            tables.Add("DRL_DRIVER_SCHOOL_INFO_RSP", new TableMapping("DRL_DRIVER_SCHOOL_INFO_RSP", "DriverSchoolInfo", 4)
+            {
+                {"DRL_SCHOOL_INFO_ID", "schoolInfoId"},
+                {"DRL_DRIVER_SCHOOL_ID", "driverSchoolId"},
+                {"FROM_DATE", "fromDate"},
+                {"TO_DATE", "toDate"},
             });
 
             tables.Add("DRL_EXAM_STATION_EXAM_RECOGNITION_TYPE_RSP", new TableMapping("DRL_EXAM_STATION_EXAM_RECOGNITION_TYPE_RSP", "ExamStationExamRecognitionType", 4)
@@ -210,6 +274,16 @@ namespace MasterDataModule.API
             {
                 {"DRL_EXAM_CLASS_ID", "examClassId"},
                 {"DRL_EXAM_CLASS_ID_REQUIRED", "examClassIdRequired"},
+                {"FROM_DATE", "fromDate"},
+                {"TO_DATE", "toDate"},
+            });
+
+            tables.Add("DRL_CORE_DATA_PRODUCT_LOCALIZATION", new TableMapping("DRL_CORE_DATA_PRODUCT_LOCALIZATION", "CoreDataProductLocalization", 6)
+            {
+                {"DRL_CORE_DATA_PRODUCT_ID", "coreDataProductId"},
+                {"SYS_LANGUAGE_ID", "sysLanguageId"},
+                {"PRODUCT_NAME", "productName"},
+                {"DESCRIPTION", "description"},
                 {"FROM_DATE", "fromDate"},
                 {"TO_DATE", "toDate"},
             });

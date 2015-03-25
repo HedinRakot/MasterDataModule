@@ -17,6 +17,14 @@ define(function () {
 			,orgAccountingAreaId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('ordRecognition', 'orgAccountingAreaId'), 
 				                    validation: { required: true } }			
+		},
+		defaults: function () {
+			var dnf = new Date();
+			var dnt = new Date(2070,11,31);
+			return {
+				fromDate: dnf, 
+				toDate: dnt
+			};
 		}
 	});
 	return model;

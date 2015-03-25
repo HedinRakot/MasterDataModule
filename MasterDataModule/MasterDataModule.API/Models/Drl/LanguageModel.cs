@@ -22,6 +22,7 @@ namespace MasterDataModule.API.Models
         /// <summary>
         ///     Model property for <see cref="Language.OldAbbr"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public string oldAbbr{ get; set; }
         /// <summary>

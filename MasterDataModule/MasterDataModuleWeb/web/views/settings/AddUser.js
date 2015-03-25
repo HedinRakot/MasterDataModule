@@ -1,35 +1,46 @@
-﻿define([
-	'base/base-add-model-view',
-	'mixins/localized-view'
-], function (BaseView, LocalizedViewMixin) {
+define([
+	'base/base-object-add-view',
+    'l!t!Settings/UserRelationships'
+], function (BaseView, TabView) {
     'use strict';
 
     var view = BaseView.extend({
-        bindings: function () {
-            var result = {
-                '#name': 'name',
-                '#password': 'password',
-                '#passwordConfirmation': 'passwordConfirmation',
-                '#login': 'login',
-                '#role': {
-                    observe: 'role',
-                    selectOptions: {
-                        labelPath: 'name',
-                        valuePath: 'id',
-                        collection: this.options.roles,
-                        defaultOption: {
-                            label: this.resources.selectRole,
-                            value: null
-                        }
-                    }
-                }         
-            };
 
-            return result
+        tabView: TabView,
+        tableName: 'User',
+        actionUrl: '#Users',
+
+		bindings: function () {
+
+            var self = this;
+            var result = {
+			'#masterDataRoleId': { observe: 'masterDataRoleId',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.role
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
+			'#login': 'login',
+			'#name': 'name',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
+			};
+
+            return result;
+		},
+
+        render: function () {
+
+            view.__super__.render.apply(this, arguments);
+
+			//TODO foreach model field
+			this.disableInput(this, 'masterDataRoleId', 'select');
+			this.disableInput(this, 'login');
+			this.disableInput(this, 'name');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
+
+            return this;
         }
     });
-
-    view.mixin(LocalizedViewMixin);
 
     return view;
 });

@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Land  editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Land ',
+		pleaseSelect: 'Bitte auswählen',
 		sapId: 'Länderschlüssel ',	
 		name: 'Landesbezeichnung',	
 		isEu: 'Angabe, ob das Land in der EU liegt ',	

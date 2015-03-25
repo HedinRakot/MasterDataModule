@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Zuordnungsarten zwischen Mitarbeiter und OE editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Zuordnungsarten zwischen Mitarbeiter und OE',
+		pleaseSelect: 'Bitte auswählen',
 		name: 'Kurzbezeichnung der Zuordnungsart',	
 		description: 'Beschreibung der Zuordnungsart',	
 		fromDate: 'Von Datum',	

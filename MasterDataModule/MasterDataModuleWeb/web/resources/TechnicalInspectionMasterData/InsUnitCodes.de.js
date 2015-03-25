@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'berichtende Stellen editieren',
 	    masterData: 'TP Stammdaten',
 	    pageTitle: 'berichtende Stellen',
+		pleaseSelect: 'Bitte auswählen',
 		orgAccountingAreaId: 'Buchungskreis ',	
 		ordFederalStateId: 'Bundesland',	
 		ordAreaOfWorkId: 'Arbeitsgebiet ',	

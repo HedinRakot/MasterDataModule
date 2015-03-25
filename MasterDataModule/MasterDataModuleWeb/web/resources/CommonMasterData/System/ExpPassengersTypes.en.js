@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Common masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Passenger type',
+		pleaseSelect: 'Please select',
 		text: 'Text',	
 		code: 'Code',	
 		fromDate: 'From date',	

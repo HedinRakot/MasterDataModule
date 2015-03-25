@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Common masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Organizational unit',
+		pleaseSelect: 'Please select',
 		orgNumber: 'Org Number',	
 		name: 'Name',	
 		abbr: 'Abbreviation',	

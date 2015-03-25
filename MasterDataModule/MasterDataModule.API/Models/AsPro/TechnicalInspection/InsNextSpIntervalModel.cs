@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="InsNextSpInterval"/> entity
     /// </summary>
     [DataContract]
-    public class InsNextSpIntervalModel: BaseModel
+    public partial class InsNextSpIntervalModel: BaseModel
     {
 
         /// <summary>

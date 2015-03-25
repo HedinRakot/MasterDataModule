@@ -28,6 +28,7 @@ namespace MasterDataModule.API.Models
         /// <summary>
         ///     Model property for <see cref="MessageLocalization.Message"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public string message{ get; set; }
 

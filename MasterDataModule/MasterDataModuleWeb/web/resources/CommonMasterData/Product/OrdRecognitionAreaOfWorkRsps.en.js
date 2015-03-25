@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Common masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Area of work to recognition',
+		pleaseSelect: 'Please select',
 		ordRecognitionId: 'Recognition',	
 		ordAreaOfWorkId: 'Area of work',	
 		priority: 'Priority',	

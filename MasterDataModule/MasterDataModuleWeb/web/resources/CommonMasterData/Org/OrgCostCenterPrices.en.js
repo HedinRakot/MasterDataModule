@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Common masterdata',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Cost center price',
+		pleaseSelect: 'Please select',
 		insCoreDataProductId: 'Product',	
 		salesOffice: 'Sales office',	
 		minPrice: 'Min price',	

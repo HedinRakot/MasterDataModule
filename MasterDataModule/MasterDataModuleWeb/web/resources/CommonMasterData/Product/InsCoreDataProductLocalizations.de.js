@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Lokalisierung editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Lokalisierung',
+		pleaseSelect: 'Bitte auswählen',
 		insCoreDataProductId: 'Produkt',	
 		sysLanguageId: 'Sprachschlüssel ',	
 		productName: 'Name',	

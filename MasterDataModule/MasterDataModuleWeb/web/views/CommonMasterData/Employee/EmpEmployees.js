@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/CommonMasterData/Employee/EmpEmployees',
-    'l!t!CommonMasterData/Employee/FilterEmpEmployee',
-    'l!t!CommonMasterData/Employee/EmpEmployeeRelationships'
+'collections/CommonMasterData/Employee/EmpEmployees',
+'l!t!CommonMasterData/Employee/FilterEmpEmployee',
+'l!t!CommonMasterData/Employee/EmpEmployeeRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'personalNumber', title: this.resources.personalNumber },
 				{ field: 'name', title: this.resources.name },
 				{ field: 'middleName', title: this.resources.middleName },

@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/CommonMasterData/System/InsVatTypes',
-    'l!t!CommonMasterData/System/FilterInsVatType',
-    'l!t!CommonMasterData/System/InsVatTypeRelationships'
+'collections/CommonMasterData/System/InsVatTypes',
+'l!t!CommonMasterData/System/FilterInsVatType',
+'l!t!CommonMasterData/System/InsVatTypeRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'description', title: this.resources.description },
 				{ field: 'taxCode', title: this.resources.taxCode },
 				{ field: 'percent', title: this.resources.percent },

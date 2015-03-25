@@ -10,7 +10,7 @@ namespace MasterDataModule.API.Models
     ///     Model for <see cref="InsPfpPosition"/> entity
     /// </summary>
     [DataContract]
-    public class InsPfpPositionModel: BaseModel
+    public partial class InsPfpPositionModel: BaseModel
     {
 
         /// <summary>

@@ -419,13 +419,7 @@
     <Compile Include="Data\SaveActors\Drl\DrlSaveActorManager.cs" />
     <Compile Include="Data\SaveActors\MasterDataConfiguration\DrlSaveActorManager.cs" />
     <Compile Include="DuplicateCheckers\Aspro\AsproDuplicateCheckerSaveActor.cs" />
-    <Compile Include="DuplicateCheckers\Aspro\EmpEmployeeDuplicateChecker.cs">
-      <DependentUpon>DuplicateChecker.tt</DependentUpon>
-    </Compile>
     <Compile Include="DuplicateCheckers\Base\BaseDuplicateChecker.cs" />
-    <Compile Include="DuplicateCheckers\Aspro\InsCoreDataProductLocalizationDuplicateChecker.cs">
-      <DependentUpon>DuplicateChecker.tt</DependentUpon>
-    </Compile>
     <Compile Include="DuplicateCheckers\Base\BaseDuplicateCheckerSaveActor.cs" />
     <Compile Include="DuplicateCheckers\Drl\DrlDuplicateCheckerSaveActor.cs" />
     <Compile Include="DuplicateCheckers\Drl\ExamClassDuplicateChecker.cs">

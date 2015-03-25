@@ -22,11 +22,13 @@ namespace MasterDataModule.API.Models
         /// <summary>
         ///     Model property for <see cref="ExamRoom.PlaceAmount"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public int placeAmount{ get; set; }
         /// <summary>
         ///     Model property for <see cref="ExamRoom.OrgOrganizationalUnitId"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public int orgOrganizationalUnitId{ get; set; }
         /// <summary>
@@ -99,6 +101,7 @@ namespace MasterDataModule.API.Models
         /// <summary>
         ///     Model property for <see cref="ExamRoom.SysCountryId"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public int sysCountryId{ get; set; }
 

@@ -7,6 +7,7 @@ define(function () {
 	    edit: 'Bundeslandgruppe editieren',
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Bundeslandgruppe',
+		pleaseSelect: 'Bitte auswählen',
 		name: 'Kürzel der Bundeslandgruppe',	
 		description: 'Beschreibung der Bundeslandgruppe',	
 		fromDate: 'Von Datum',	

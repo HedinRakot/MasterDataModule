@@ -1,8 +1,9 @@
 define([
 	'base/base-object-grid-view',
-    'collections/CommonMasterData/Org/OrgInspectionDevices',
-    'l!t!CommonMasterData/Org/FilterOrgInspectionDevice',
-    'l!t!CommonMasterData/Org/OrgInspectionDeviceRelationships'
+'collections/CommonMasterData/Org/OrgInspectionDevices',
+'l!t!CommonMasterData/Org/FilterOrgInspectionDevice',
+'l!t!CommonMasterData/Org/OrgInspectionDeviceRelationships'
+
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -19,7 +20,8 @@ define([
 	    },
 
 		columns: function () {
-		    return [
+			
+			return [
 				{ field: 'identification', title: this.resources.identification },
 				{ field: 'name', title: this.resources.name },
 				{ field: 'description', title: this.resources.description },
