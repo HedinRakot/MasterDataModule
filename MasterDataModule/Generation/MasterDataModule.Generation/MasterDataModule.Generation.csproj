@@ -107,6 +107,8 @@
     <None Include="TTCommon\TextTransformProxy.ttinclude" />
     <None Include="TTMasterData\AsPro.Settings.ttinclude" />
     <None Include="TTMasterData\MasterDataConfiguration.Settings.ttinclude" />
+    <None Include="TTMasterData\Permissions.sql.ttinclude" />
+    <None Include="TTMasterData\Permissions.ttinclude" />
     <None Include="TTMasterData\UnityConfiguration.DuplicateCheckers.ttinclude" />
     <None Include="TTMasterData\ViewCollectionFactories.ttinclude" />
     <None Include="TTMasterData\CollectionTypes.ttinclude" />

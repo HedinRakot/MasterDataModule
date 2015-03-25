@@ -12,20 +12,23 @@ namespace MasterDataModule.API.Security
     {
         #region	Private fields
         private readonly IUserManager _userManager;
-        private PermissionTypes[] _permissionTypes;
+        private IMasterDataRolePermissionRspManager rolePermissionRspManager;
+        private int[] _permissionTypes;
         #endregion
         #region Constructor
         public AuthorizeByPermissionsAttribute()
         {
             //TODO Should be refactored
-            _userManager = (IUserManager) GlobalConfiguration.Configuration.DependencyResolver.GetService(typeof (IUserManager));
-            PermissionTypes = new PermissionTypes[0];
+            var resolver = GlobalConfiguration.Configuration.DependencyResolver;
+            _userManager = (IUserManager)resolver.GetService(typeof(IUserManager));
+            rolePermissionRspManager = (IMasterDataRolePermissionRspManager)resolver.GetService(typeof(IMasterDataRolePermissionRspManager));
+            PermissionTypes = new int[0];
         }
         #endregion
-        public PermissionTypes[] PermissionTypes
+        public int[] PermissionTypes
         {
             get { return _permissionTypes; }
-            set { _permissionTypes = value ?? new PermissionTypes[0]; }
+            set { _permissionTypes = value ?? new int[0]; }
         }
 
         protected override bool IsAuthorized(HttpActionContext actionContext)
@@ -46,10 +49,8 @@ namespace MasterDataModule.API.Security
                 return false;
             }
 
-            var userPermissionIds = user.Role.Permissions.Select(o => o.Id).ToList();
-            var intersection = userPermissionIds.Intersect(PermissionTypes.Select(o => (int) o));
-
-            return intersection.Any();
+            var userPermissionIds = rolePermissionRspManager.GetEntities().Where(e => user.MasterDataRoleId == e.MasterDataRoleId && PermissionTypes.Contains(e.MasterDataPermissionId));
+            return userPermissionIds.Any();
         }
 
         protected override void HandleUnauthorizedRequest(HttpActionContext actionContext)

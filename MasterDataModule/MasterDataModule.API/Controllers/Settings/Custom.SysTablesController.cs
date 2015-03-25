@@ -7,12 +7,14 @@ using TuevSued.V1.IT.FE.CoreBase.Localization;
 using MasterDataModule.Contracts;
 using System.Collections.Generic;
 using MasterDataModule.API.Models.Settings;
+using MasterDataModule.API.Security;
 using MasterDataModule.Contracts.Entities.Configuration;
+using MasterDataModule.Contracts.Enums;
 using MasterDataModule.Contracts.Managers.Configuration;
 
 namespace MasterDataModule.API.Controllers.Settings
 {
-    //[AuthorizeByPermissions(PermissionTypes = new[] {PermissionTypes.SysTables})]
+    [AuthorizeByPermissions(PermissionTypes = new[] { Permissions.ArgeVersion })]
     public partial class SysTablesController //: ClientApiWithoutDeleteController<SysTableModel, SysTable, int, ISysTableManager>
     {
         public override IHttpActionResult Post(SysTableModel model)

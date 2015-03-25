@@ -7,141 +7,141 @@
 
 namespace MasterDataModule.Contracts.Enums
 {
-    	public enum DrlPermissions
+    	public partial class Permissions
     	{
     	 
     		///<summary>
     		/// Grant for edit DRL_MESSAGE_LOCALIZATION table
     		///</summary>
-    		MessageLocalization = 0,
+    		public const int MessageLocalization = 2000;
     		///<summary>
     		/// Grant for edit DRL_CORE_DATA_PRODUCT table
     		///</summary>
-    		CoreDataProduct = 1,
+    		public const int CoreDataProduct = 2001;
     		///<summary>
     		/// Grant for edit DRL_RETURN_REASON table
     		///</summary>
-    		ReturnReason = 2,
+    		public const int ReturnReason = 2002;
     		///<summary>
     		/// Grant for edit DRL_EXAM_POSSIBLE_RESULT table
     		///</summary>
-    		ExamPossibleResult = 3,
+    		public const int ExamPossibleResult = 2003;
     		///<summary>
     		/// Grant for edit DRL_SCHOOL_INFO table
     		///</summary>
-    		SchoolInfo = 4,
+    		public const int SchoolInfo = 2004;
     		///<summary>
     		/// Grant for edit DRL_ARGE_VERSION table
     		///</summary>
-    		ArgeVersion = 5,
+    		public const int ArgeVersion = 2005;
     		///<summary>
     		/// Grant for edit DRL_AUTHORITY table
     		///</summary>
-    		Authority = 6,
+    		public const int Authority = 2006;
     		///<summary>
     		/// Grant for edit DRL_COMMUNITY table
     		///</summary>
-    		Community = 7,
+    		public const int Community = 2007;
     		///<summary>
     		/// Grant for edit DRL_EXAM_RECOGNITION_TYPE table
     		///</summary>
-    		ExamRecognitionType = 8,
+    		public const int ExamRecognitionType = 2008;
     		///<summary>
     		/// Grant for edit DRL_CORE_DATA_PRODUCT_CLASS_BASIS_RSP table
     		///</summary>
-    		CoreDataProductClassBasis = 9,
+    		public const int CoreDataProductClassBasis = 2009;
     		///<summary>
     		/// Grant for edit DRL_COMMUNITY_PARTICIPANT table
     		///</summary>
-    		CommunityParticipant = 10,
+    		public const int CommunityParticipant = 2010;
     		///<summary>
     		/// Grant for edit DRL_EXAM_RECOGNITION_TYPE_EXAM_CLASS_RSP table
     		///</summary>
-    		ExamRecognitionTypeExamClass = 11,
+    		public const int ExamRecognitionTypeExamClass = 2011;
     		///<summary>
     		/// Grant for edit DRL_DRIVER_SCHOOL table
     		///</summary>
-    		DriverSchool = 12,
+    		public const int DriverSchool = 2012;
     		///<summary>
     		/// Grant for edit DRL_EXAM_ROOM table
     		///</summary>
-    		ExamRoom = 13,
+    		public const int ExamRoom = 2013;
     		///<summary>
     		/// Grant for edit DRL_EXAM_STATION table
     		///</summary>
-    		ExamStation = 14,
+    		public const int ExamStation = 2014;
     		///<summary>
     		/// Grant for edit DRL_DRIVER_SCHOOL_EXAM_RECOGNITION_TYPE_RSP table
     		///</summary>
-    		DriverSchoolExamRecognitionType = 15,
+    		public const int DriverSchoolExamRecognitionType = 2015;
     		///<summary>
     		/// Grant for edit DRL_DRIVER_SCHOOL_INFO_RSP table
     		///</summary>
-    		DriverSchoolInfo = 16,
+    		public const int DriverSchoolInfo = 2016;
     		///<summary>
     		/// Grant for edit DRL_EXAM_STATION_EXAM_RECOGNITION_TYPE_RSP table
     		///</summary>
-    		ExamStationExamRecognitionType = 17,
+    		public const int ExamStationExamRecognitionType = 2017;
     		///<summary>
     		/// Grant for edit DRL_HOLIDAY table
     		///</summary>
-    		Holiday = 18,
+    		public const int Holiday = 2018;
     		///<summary>
     		/// Grant for edit DRL_EXAM_CLASS table
     		///</summary>
-    		ExamClass = 19,
+    		public const int ExamClass = 2019;
     		///<summary>
     		/// Grant for edit DRL_HOLIDAY_ORD_FEDERAL_STATE_RSP table
     		///</summary>
-    		HolidayOrdFederalState = 20,
+    		public const int HolidayOrdFederalState = 2020;
     		///<summary>
     		/// Grant for edit DRL_LANGUAGE table
     		///</summary>
-    		Language = 21,
+    		public const int Language = 2021;
     		///<summary>
     		/// Grant for edit DRL_EXAM_CLASS_ARGE_MAP table
     		///</summary>
-    		ExamClassArgeMap = 22,
+    		public const int ExamClassArgeMap = 2022;
     		///<summary>
     		/// Grant for edit DRL_LEGAL_BASIS table
     		///</summary>
-    		LegalBasis = 23,
+    		public const int LegalBasis = 2023;
     		///<summary>
     		/// Grant for edit DRL_EXAM_CLASS_INCLUSIVE_CLASS_RSP table
     		///</summary>
-    		ExamClassInclusiveClass = 24,
+    		public const int ExamClassInclusiveClass = 2024;
     		///<summary>
     		/// Grant for edit DRL_EXAM_CLASS_MAP table
     		///</summary>
-    		ExamClassMap = 25,
+    		public const int ExamClassMap = 2025;
     		///<summary>
     		/// Grant for edit DRL_EXAM_CLASS_REQUIRED_CLASS_RSP table
     		///</summary>
-    		ExamClassRequiredClass = 26,
+    		public const int ExamClassRequiredClass = 2026;
     		///<summary>
     		/// Grant for edit DRL_CORE_DATA_PRODUCT_LOCALIZATION table
     		///</summary>
-    		CoreDataProductLocalization = 27,
+    		public const int CoreDataProductLocalization = 2027;
     		///<summary>
     		/// Grant for edit DRL_EXAM_CLASS_RESTRICTED_CLASS_RSP table
     		///</summary>
-    		ExamClassRestrictedClass = 28,
+    		public const int ExamClassRestrictedClass = 2028;
     		///<summary>
     		/// Grant for edit DRL_EXAM_CONSTRAINT table
     		///</summary>
-    		ExamConstraint = 29,
+    		public const int ExamConstraint = 2029;
     		///<summary>
     		/// Grant for edit DRL_MEETING_POINT table
     		///</summary>
-    		MeetingPoint = 30,
+    		public const int MeetingPoint = 2030;
     		///<summary>
     		/// Grant for edit DRL_EXAM_CONSTRAINT_EXAM_CLASS_RSP table
     		///</summary>
-    		ExamConstraintExamClass = 31,
+    		public const int ExamConstraintExamClass = 2031;
     		///<summary>
     		/// Grant for edit DRL_MEETING_POINT_ORGANIZATIONAL_UNIT_RSP table
     		///</summary>
-    		MeetingPointOrganizationalUnit = 32,
+    		public const int MeetingPointOrganizationalUnit = 2032;
     	}
 }
 

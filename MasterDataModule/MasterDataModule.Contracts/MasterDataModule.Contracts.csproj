@@ -105,6 +105,21 @@
     <Compile Include="Entities\Drl\DriverSchoolInfo.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Enums\MasterDataPermissions.cs">
+      <DependentUpon>MasterDataPermissions.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Enums\AsProPermissions.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsProPermissions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\DrlPermissions.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DrlPermissions.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\AsPro\Common\IInsCoreDataProductLocalizationManager.cs">
       <DependentUpon>Common.IManagers.tt</DependentUpon>
     </Compile>
@@ -747,6 +762,18 @@
     <None Include="AsPro.Context.Interface.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AsPro.Context.Interface.cs</LastGenOutput>
+    </None>
+    <None Include="Enums\MasterDataPermissions.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MasterDataPermissions.cs</LastGenOutput>
+    </None>
+    <None Include="Enums\AsProPermissions.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AsProPermissions.cs</LastGenOutput>
+    </None>
+    <None Include="Enums\DrlPermissions.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DrlPermissions.cs</LastGenOutput>
     </None>
     <None Include="Managers\Configuration\MasterDataConfiguration.IManagers.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

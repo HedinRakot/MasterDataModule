@@ -7,269 +7,269 @@
 
 namespace MasterDataModule.Contracts.Enums
 {
-    	public enum AsProPermissions
+    	public partial class Permissions
     	{
     	 
     		///<summary>
     		/// Grant for edit INS_NEXT_SP_INTERVAL table
     		///</summary>
-    		InsNextSpInterval = 0,
+    		public const int InsNextSpInterval = 1000;
     		///<summary>
     		/// Grant for edit INS_OBD_STATUS table
     		///</summary>
-    		InsObdStatus = 1,
+    		public const int InsObdStatus = 1001;
     		///<summary>
     		/// Grant for edit INS_OPTICAL_DEFECT table
     		///</summary>
-    		InsOpticalDefect = 2,
+    		public const int InsOpticalDefect = 1002;
     		///<summary>
     		/// Grant for edit INS_PRODUCT_CLASS_GROUP table
     		///</summary>
-    		InsProductClassGroup = 3,
+    		public const int InsProductClassGroup = 1003;
     		///<summary>
     		/// Grant for edit INS_SEVERITY_TYPE table
     		///</summary>
-    		InsSeverityType = 4,
+    		public const int InsSeverityType = 1004;
     		///<summary>
     		/// Grant for edit SYS_LANGUAGE table
     		///</summary>
-    		SysLanguage = 5,
+    		public const int SysLanguage = 1005;
     		///<summary>
     		/// Grant for edit INS_VALID_PERIOD table
     		///</summary>
-    		InsValidPeriod = 6,
+    		public const int InsValidPeriod = 1006;
     		///<summary>
     		/// Grant for edit INS_CORE_DATA_PRODUCT table
     		///</summary>
-    		InsCoreDataProduct = 7,
+    		public const int InsCoreDataProduct = 1007;
     		///<summary>
     		/// Grant for edit INS_PFP_POSITION table
     		///</summary>
-    		InsPfpPosition = 8,
+    		public const int InsPfpPosition = 1008;
     		///<summary>
     		/// Grant for edit INS_PFP_INSPECTION_TYPE_PFP_POSITION_RSP table
     		///</summary>
-    		InsPfpInspectionTypePfpPositionRsp = 9,
+    		public const int InsPfpInspectionTypePfpPositionRsp = 1009;
     		///<summary>
     		/// Grant for edit INS_CORE_DATA_PRODUCT_LOCALIZATION table
     		///</summary>
-    		InsCoreDataProductLocalization = 10,
+    		public const int InsCoreDataProductLocalization = 1010;
     		///<summary>
     		/// Grant for edit INS_PFP_VEHICLE_TYPE table
     		///</summary>
-    		InsPfpVehicleType = 11,
+    		public const int InsPfpVehicleType = 1011;
     		///<summary>
     		/// Grant for edit EMP_EMPLOYEE table
     		///</summary>
-    		EmpEmployee = 12,
+    		public const int EmpEmployee = 1012;
     		///<summary>
     		/// Grant for edit INS_UNIT_CODE table
     		///</summary>
-    		InsUnitCode = 13,
+    		public const int InsUnitCode = 1013;
     		///<summary>
     		/// Grant for edit SYS_LOCATION table
     		///</summary>
-    		SysLocation = 14,
+    		public const int SysLocation = 1014;
     		///<summary>
     		/// Grant for edit SYS_ROLE table
     		///</summary>
-    		SysRole = 15,
+    		public const int SysRole = 1015;
     		///<summary>
     		/// Grant for edit EMP_CASH_PERMISSION_TYPE table
     		///</summary>
-    		EmpCashPermissionType = 16,
+    		public const int EmpCashPermissionType = 1016;
     		///<summary>
     		/// Grant for edit SYS_ROLE_SYS_PERMISSION_RSP table
     		///</summary>
-    		SysRoleSysPermissionRsp = 17,
+    		public const int SysRoleSysPermissionRsp = 1017;
     		///<summary>
     		/// Grant for edit EMP_ORG_ASSOCIATION_TYPE table
     		///</summary>
-    		EmpOrgAssociationType = 18,
+    		public const int EmpOrgAssociationType = 1018;
     		///<summary>
     		/// Grant for edit ORG_ACCOUNT_TYPE table
     		///</summary>
-    		OrgAccountType = 19,
+    		public const int OrgAccountType = 1019;
     		///<summary>
     		/// Grant for edit INS_AVAILABLE_INSPECTION_TEXT table
     		///</summary>
-    		InsAvailableInspectionText = 20,
+    		public const int InsAvailableInspectionText = 1020;
     		///<summary>
     		/// Grant for edit ORG_ACCOUNTING_AREA table
     		///</summary>
-    		OrgAccountingArea = 21,
+    		public const int OrgAccountingArea = 1021;
     		///<summary>
     		/// Grant for edit INS_AVAILABLE_INSPECTION_TEXT_VALUE table
     		///</summary>
-    		InsAvailableInspectionTextValue = 22,
+    		public const int InsAvailableInspectionTextValue = 1022;
     		///<summary>
     		/// Grant for edit ORG_BANK_INFORMATION table
     		///</summary>
-    		OrgBankInformation = 23,
+    		public const int OrgBankInformation = 1023;
     		///<summary>
     		/// Grant for edit ORG_COST_CENTER table
     		///</summary>
-    		OrgCostCenter = 24,
+    		public const int OrgCostCenter = 1024;
     		///<summary>
     		/// Grant for edit ORD_FEDERAL_GROUP table
     		///</summary>
-    		OrdFederalGroup = 25,
+    		public const int OrdFederalGroup = 1025;
     		///<summary>
     		/// Grant for edit ORG_COST_CENTER_RESPONSIBLE_EMPLOYEE_RSP table
     		///</summary>
-    		OrgCostCenterResponsibleEmployeeRsp = 26,
+    		public const int OrgCostCenterResponsibleEmployeeRsp = 1026;
     		///<summary>
     		/// Grant for edit ORD_FEDERAL_STATE table
     		///</summary>
-    		OrdFederalState = 27,
+    		public const int OrdFederalState = 1027;
     		///<summary>
     		/// Grant for edit ORG_COST_CENTER_PRICE table
     		///</summary>
-    		OrgCostCenterPrice = 28,
+    		public const int OrgCostCenterPrice = 1028;
     		///<summary>
     		/// Grant for edit SYS_COUNTRY table
     		///</summary>
-    		SysCountry = 29,
+    		public const int SysCountry = 1029;
     		///<summary>
     		/// Grant for edit SYS_POST_CODE table
     		///</summary>
-    		SysPostCode = 30,
+    		public const int SysPostCode = 1030;
     		///<summary>
     		/// Grant for edit ORD_ORDER_CANCELATION_REASON table
     		///</summary>
-    		OrdOrderCancelationReason = 31,
+    		public const int OrdOrderCancelationReason = 1031;
     		///<summary>
     		/// Grant for edit ORG_RELATIONSHIP_TYPE table
     		///</summary>
-    		OrgRelationshipType = 32,
+    		public const int OrgRelationshipType = 1032;
     		///<summary>
     		/// Grant for edit KSS_EXPENSE_GROUND table
     		///</summary>
-    		KssExpenseGround = 33,
+    		public const int KssExpenseGround = 1033;
     		///<summary>
     		/// Grant for edit ORG_INFORMATION table
     		///</summary>
-    		OrgInformation = 34,
+    		public const int OrgInformation = 1034;
     		///<summary>
     		/// Grant for edit EXP_PASSENGERS_TYPE table
     		///</summary>
-    		ExpPassengersType = 35,
+    		public const int ExpPassengersType = 1035;
     		///<summary>
     		/// Grant for edit ORG_TYPE table
     		///</summary>
-    		OrgType = 36,
+    		public const int OrgType = 1036;
     		///<summary>
     		/// Grant for edit INS_VAT_TYPE table
     		///</summary>
-    		InsVatType = 37,
+    		public const int InsVatType = 1037;
     		///<summary>
     		/// Grant for edit ORG_INSPECTION_DEVICE table
     		///</summary>
-    		OrgInspectionDevice = 38,
+    		public const int OrgInspectionDevice = 1038;
     		///<summary>
     		/// Grant for edit EMP_EMPLOYEE_ORG_COST_CENTER_RSP table
     		///</summary>
-    		EmpEmployeeOrgCostCenterRsp = 39,
+    		public const int EmpEmployeeOrgCostCenterRsp = 1039;
     		///<summary>
     		/// Grant for edit ORD_BILLING_PARAMETER table
     		///</summary>
-    		OrdBillingParameter = 40,
+    		public const int OrdBillingParameter = 1040;
     		///<summary>
     		/// Grant for edit EMP_EMPLOYEE_ORG_ORGANIZATIONAL_UNIT_RSP table
     		///</summary>
-    		EmpEmployeeOrgOrganizationalUnitRsp = 41,
+    		public const int EmpEmployeeOrgOrganizationalUnitRsp = 1041;
     		///<summary>
     		/// Grant for edit ORD_CONTACT_PERSON_FUNCTION table
     		///</summary>
-    		OrdContactPersonFunction = 42,
+    		public const int OrdContactPersonFunction = 1042;
     		///<summary>
     		/// Grant for edit EMP_EMPLOYEE_TOP_EMPLOYEE_RSP table
     		///</summary>
-    		EmpEmployeeTopEmployeeRsp = 43,
+    		public const int EmpEmployeeTopEmployeeRsp = 1043;
     		///<summary>
     		/// Grant for edit ORD_CUSTOMER_INFO table
     		///</summary>
-    		OrdCustomerInfo = 44,
+    		public const int OrdCustomerInfo = 1044;
     		///<summary>
     		/// Grant for edit EMP_EMPLOYEE_SYS_ROLE_RSP table
     		///</summary>
-    		EmpEmployeeSysRoleRsp = 45,
+    		public const int EmpEmployeeSysRoleRsp = 1045;
     		///<summary>
     		/// Grant for edit ORD_PARTNER_ROLE table
     		///</summary>
-    		OrdPartnerRole = 46,
+    		public const int OrdPartnerRole = 1046;
     		///<summary>
     		/// Grant for edit INS_TAX_CLASS table
     		///</summary>
-    		InsTaxClass = 47,
+    		public const int InsTaxClass = 1047;
     		///<summary>
     		/// Grant for edit INS_CORE_DATA_PRODUCT_GROUP table
     		///</summary>
-    		InsCoreDataProductGroup = 48,
+    		public const int InsCoreDataProductGroup = 1048;
     		///<summary>
     		/// Grant for edit INS_PRODUCT_COMBINATION_TYPE table
     		///</summary>
-    		InsProductCombinationType = 49,
+    		public const int InsProductCombinationType = 1049;
     		///<summary>
     		/// Grant for edit INS_PRODUCT_MATERIAL_GROUP table
     		///</summary>
-    		InsProductMaterialGroup = 50,
+    		public const int InsProductMaterialGroup = 1050;
     		///<summary>
     		/// Grant for edit INS_PRODUCT_OBJECT_CLASS table
     		///</summary>
-    		InsProductObjectClass = 51,
+    		public const int InsProductObjectClass = 1051;
     		///<summary>
     		/// Grant for edit INS_PRODUCT_OBJECT_TYPE table
     		///</summary>
-    		InsProductObjectType = 52,
+    		public const int InsProductObjectType = 1052;
     		///<summary>
     		/// Grant for edit ORG_ORGANIZATIONAL_UNIT table
     		///</summary>
-    		OrgOrganizationalUnit = 53,
+    		public const int OrgOrganizationalUnit = 1053;
     		///<summary>
     		/// Grant for edit INS_PRODUCT_TYPE table
     		///</summary>
-    		InsProductType = 54,
+    		public const int InsProductType = 1054;
     		///<summary>
     		/// Grant for edit INS_STATISTIC_GROUP table
     		///</summary>
-    		InsStatisticGroup = 55,
+    		public const int InsStatisticGroup = 1055;
     		///<summary>
     		/// Grant for edit ORD_AREA_OF_WORK table
     		///</summary>
-    		OrdAreaOfWork = 56,
+    		public const int OrdAreaOfWork = 1056;
     		///<summary>
     		/// Grant for edit ORD_RECOGNITION_TYPE table
     		///</summary>
-    		OrdRecognitionType = 57,
+    		public const int OrdRecognitionType = 1057;
     		///<summary>
     		/// Grant for edit ORD_RECOGNITION table
     		///</summary>
-    		OrdRecognition = 58,
+    		public const int OrdRecognition = 1058;
     		///<summary>
     		/// Grant for edit ORD_RECOGNITION_AREA_OF_WORK_RSP table
     		///</summary>
-    		OrdRecognitionAreaOfWorkRsp = 59,
+    		public const int OrdRecognitionAreaOfWorkRsp = 1059;
     		///<summary>
     		/// Grant for edit INS_TAX_CODE table
     		///</summary>
-    		InsTaxCode = 60,
+    		public const int InsTaxCode = 1060;
     		///<summary>
     		/// Grant for edit INS_INSPECTION_STEP table
     		///</summary>
-    		InsInspectionStep = 61,
+    		public const int InsInspectionStep = 1061;
     		///<summary>
     		/// Grant for edit INS_AVAILABLE_INSPECTION_STEP table
     		///</summary>
-    		InsAvailableInspectionStep = 62,
+    		public const int InsAvailableInspectionStep = 1062;
     		///<summary>
     		/// Grant for edit INS_SUMMARY_FIELD table
     		///</summary>
-    		InsSummaryField = 63,
+    		public const int InsSummaryField = 1063;
     		///<summary>
     		/// Grant for edit INS_NEXT_INSPECTION table
     		///</summary>
-    		InsNextInspection = 64,
+    		public const int InsNextInspection = 1064;
     	}
 }
 
