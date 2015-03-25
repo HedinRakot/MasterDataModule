@@ -497,6 +497,7 @@
     <Compile Include="Controllers\LogoutController.cs" />
     <Compile Include="Controllers\Settings\Custom.RolesController.cs" />
     <Compile Include="Controllers\Settings\Custom.SysTablesController.cs" />
+    <Compile Include="Controllers\Settings\Custom.UserController.cs" />
     <Compile Include="Controllers\Settings\MasterDataRolePermissionRspsController.cs">
       <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
     </Compile>

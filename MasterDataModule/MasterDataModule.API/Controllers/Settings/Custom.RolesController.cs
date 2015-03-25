@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using MasterDataModule.API.Models.Settings;
 using MasterDataModule.Contracts.Entities.Configuration;
-using MasterDataModule.Contracts.Managers.Configuration;
 
 namespace MasterDataModule.API.Controllers.Settings
 {

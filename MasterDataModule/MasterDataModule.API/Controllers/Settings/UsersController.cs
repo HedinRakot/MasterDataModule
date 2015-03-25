@@ -39,6 +39,8 @@ namespace MasterDataModule.API.Controllers.Settings
             entity.Password = model.password;
             entity.FromDate = model.fromDate;
             entity.ToDate = model.toDate;
+
+            ExtraModelToEntity(entity, model, actionType);
         }
     }
 }
