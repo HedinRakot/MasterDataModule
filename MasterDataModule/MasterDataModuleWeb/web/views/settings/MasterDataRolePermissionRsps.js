@@ -24,7 +24,6 @@ define([
 
 		columns: function () {
 		    return [
-				{ field: 'masterDataRoleId', title: this.resources.masterDataRoleId , collection: this.options.role, defaultText: this.resources.pleaseSelect},
 				{ field: 'masterDataPermissionId', title: this.resources.masterDataPermissionId , collection: this.options.permission, defaultText: this.resources.pleaseSelect},
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},

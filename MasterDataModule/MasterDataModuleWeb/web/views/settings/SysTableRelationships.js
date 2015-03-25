@@ -9,7 +9,8 @@ define([
         tabs: function () {
             
             var result = [
-				                
+				{ view: 'l!t!Settings/SysColumns', selector: '.sysColumns'},
+                
             ];
             
             return result;

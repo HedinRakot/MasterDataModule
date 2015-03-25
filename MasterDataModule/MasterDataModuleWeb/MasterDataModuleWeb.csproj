@@ -3470,10 +3470,10 @@
     <Content Include="web\resources\Settings\SysColumnRelationships.en.js">
       <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\Settings\sysColumns.de.js">
+    <Content Include="web\resources\Settings\SysColumns.de.js">
       <DependentUpon>web.masterdata.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\Settings\sysColumns.en.js">
+    <Content Include="web\resources\Settings\SysColumns.en.js">
       <DependentUpon>web.masterdata.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\SysTableRelationships.de.js">
@@ -3482,10 +3482,10 @@
     <Content Include="web\resources\Settings\SysTableRelationships.en.js">
       <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\Settings\sysTables.de.js">
+    <Content Include="web\resources\Settings\SysTables.de.js">
       <DependentUpon>web.masterdata.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\Settings\sysTables.en.js">
+    <Content Include="web\resources\Settings\SysTables.en.js">
       <DependentUpon>web.masterdata.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\UserRelationships.de.js">
@@ -6363,6 +6363,12 @@
     <Content Include="web\views\Settings\AddRole.js">
       <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\Settings\AddSysColumn.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\AddSysTable.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\Settings\AddUser.js">
       <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
     </Content>
@@ -6411,6 +6417,11 @@
     <Content Include="web\views\Settings\SysTables.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\Settings\web.masterdata.add.views1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\Settings\web.masterdata.related.views1.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -6434,11 +6445,6 @@
     </Content>
     <Content Include="web\views\Settings\Users.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\Settings\web.masterdata.add.views1.txt">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\_Users.js" />
     <Content Include="web\views\Settings\web.masterdata.relationships.views.tt">

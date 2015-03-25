@@ -24,7 +24,6 @@ define([
 
 		columns: function () {
 		    return [
-				{ field: 'sysTableId', title: this.resources.sysTableId },
 				{ field: 'description', title: this.resources.description },
 				{ field: 'readOnly', title: this.resources.readOnly , headerTitle: this.resources.readOnly, checkbox: true},
 			];
