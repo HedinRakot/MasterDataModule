@@ -1,11 +1,11 @@
-﻿define([
+define([
 	'base/base-collection',
-	'models/settings/sysColumn'
+	'models/Settings/SysColumn'
 ], function (BaseCollection, Model) {
 	'use strict';
 
 	var collection = BaseCollection.extend({
-	    url: 'api/sysColumns',
+	    url: 'api/SysColumns',
 		model: Model
 	});
 

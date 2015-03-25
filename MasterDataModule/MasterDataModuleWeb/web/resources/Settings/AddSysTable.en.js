@@ -6,7 +6,6 @@ define(function () {
 		add: 'Add Master data table',
 	    edit: 'Edit Master data table',
 	    masterData: 'FE masterdata',
-		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Master data table',
 		pleaseSelect: 'Please select',
 		description: 'Description',	

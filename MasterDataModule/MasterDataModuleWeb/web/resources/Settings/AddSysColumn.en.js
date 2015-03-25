@@ -6,7 +6,6 @@ define(function () {
 		add: 'Add Master data column',
 	    edit: 'Edit Master data column',
 	    masterData: 'FE masterdata',
-		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Master data column',
 		pleaseSelect: 'Please select',
 		sysTableId: 'Table',	

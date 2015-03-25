@@ -1,43 +1,31 @@
-﻿define([
-	'base/base-grid-view',
-    'l!t!settings/FilterSysTables',
-	'collections/settings/sysTables',
-    'l!t!settings/sysColumns'
-], function (BaseView, FilterView, SysTableCollection, DetailView) {
+define([
+	'base/base-object-grid-view',
+'collections/Settings/SysTables',
+'l!t!Settings/FilterSysTable',
+'l!t!Settings/SysTableRelationships'
+
+], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
 	var view = BaseView.extend({
-	    gridSelector: '.tables-container',
 
-		showAddButton: false,
-		showDeleteButton: false,
-		detailView: DetailView,
+        collectionType: Collection,
+        detailView: DetailView,
+        filterView: FilterView,
+        tableName: 'SysTable',
+        editUrl: '#SysTables',
 
-		initialize: function() {
-			view.__super__.initialize.apply(this, arguments);
-
-			this.collection = new SysTableCollection();
-		},
+	    editItemTitle: function () {
+	        return this.resources.edit
+	    },
 
 		columns: function () {
-		    return [
-				{ field: "description", title: this.resources.name },
-				{ field: "editMode", title: this.resources.edit, collection: this.options.editModeTypes },
-			]
-		},
-
-		close: function () {
-
-		},
-
-		render: function () {
-		    view.__super__.render.apply(this, arguments);
-
-		    var filterView = new FilterView({ grid: this.grid });
-		    this.showView(filterView, '.filter');
-
-		    return this;
-		},
+			
+			return [
+				{ field: 'description', title: this.resources.description },
+				{ field: 'editMode', title: this.resources.editMode , collection: this.options.editModeType, defaultText: this.resources.pleaseSelect},
+			];
+		}
 	});
 
 	return view;

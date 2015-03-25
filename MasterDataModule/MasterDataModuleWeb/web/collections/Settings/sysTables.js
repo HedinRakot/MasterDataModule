@@ -1,11 +1,11 @@
-﻿define([
+define([
 	'base/base-collection',
-	'models/settings/sysTable'
+	'models/Settings/SysTable'
 ], function (BaseCollection, Model) {
 	'use strict';
 
 	var collection = BaseCollection.extend({
-	    url: 'api/sysTables',
+	    url: 'api/SysTables',
 		model: Model
 	});
 

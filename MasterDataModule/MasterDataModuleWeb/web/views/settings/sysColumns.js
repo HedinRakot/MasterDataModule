@@ -1,33 +1,45 @@
-﻿define([
-	'base/base-grid-view',
-	'collections/settings/sysColumns'
-], function (BaseView, SysColumnCollection) {
+define([
+	'base/related-object-grid-view',
+    'collections/Settings/SysColumns',
+    'l!t!Settings/AddSysColumn'
+], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
 	var view = BaseView.extend({
-		gridSelector: 'div',
 
-		showAddButton: false,
-		showDeleteButton: false,
+		addNewModelView: AddNewModelView,
+		collectionType: Collection,
+		gridSelector: '.grid',
+		tableName: 'SysColumns',
+        
+        addingInPopup: false,
 
 		initialize: function() {
 			view.__super__.initialize.apply(this, arguments);
 
-			this.defaultFiltering = { field: 'sysTableId', operator: 'eq', value: this.options.model.id };
+			this.defaultFiltering = { field: 'sysTableId', operator: 'eq', value: this.model.id };
 
-			this.collection = new SysColumnCollection();
+			this.collection = new Collection();
 		},
 
 		columns: function () {
 		    return [
-				{ field: "description", title: this.resources.name },
-                {
-                    field: "readOnly",
-                    title: this.resources.edit,
-                    headerTitle: this.resources.editTitle,
-                    checkbox: true
-                }
-			]
+				{ field: 'sysTableId', title: this.resources.sysTableId },
+				{ field: 'description', title: this.resources.description },
+				{ field: 'readOnly', title: this.resources.readOnly , headerTitle: this.resources.readOnly, checkbox: true},
+			];
+		},
+		
+		render: function () {
+		    var self = this;
+
+		    view.__super__.render.apply(self, arguments);
+
+		    self.grid.bind('edit', function (e) {
+		        e.model.sysTableId = self.model.id;
+		    });
+
+		    return self;
 		}
 	});
 

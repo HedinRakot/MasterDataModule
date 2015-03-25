@@ -481,8 +481,12 @@
     <Content Include="web\collections\Settings\Roles.js">
       <DependentUpon>web.masterdata.collections.tt</DependentUpon>
     </Content>
-    <Content Include="web\collections\Settings\SysColumns.js" />
-    <Content Include="web\collections\Settings\SysTables.js" />
+    <Content Include="web\collections\Settings\SysColumns.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\Settings\SysTables.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
     <Content Include="web\collections\Settings\SystemLog.js" />
     <Content Include="web\collections\Settings\Users.js">
       <DependentUpon>web.masterdata.collections.tt</DependentUpon>
@@ -1065,7 +1069,12 @@
     <Content Include="web\models\Settings\FilterRole.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
-    <Content Include="web\models\Settings\FilterSysTable.js" />
+    <Content Include="web\models\Settings\FilterSysColumn.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\FilterSysTable.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
     <Content Include="web\models\Settings\FilterUser.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
@@ -1078,8 +1087,12 @@
     <Content Include="web\models\Settings\Role.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
-    <Content Include="web\models\Settings\SysColumn.js" />
-    <Content Include="web\models\Settings\SysTable.js" />
+    <Content Include="web\models\Settings\SysColumn.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\SysTable.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
     <Content Include="web\models\Settings\SystemLogRecord.js" />
     <Content Include="web\models\Settings\User.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
@@ -3353,6 +3366,18 @@
     <Content Include="web\resources\Settings\AddRole.en.js">
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\Settings\AddSysColumn.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddSysColumn.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddSysTable.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddSysTable.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\AddUser.de.js">
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
@@ -3375,6 +3400,18 @@
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\FilterRole.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterSysColumn.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterSysColumn.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterSysTable.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterSysTable.en.js">
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\FilterSysTables.de.js" />
@@ -3427,10 +3464,30 @@
     <Content Include="web\resources\Settings\Settings.en.js">
       <DependentUpon>web.masterdata.menu.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\Settings\sysColumns.de.js" />
-    <Content Include="web\resources\Settings\sysColumns.en.js" />
-    <Content Include="web\resources\Settings\sysTables.de.js" />
-    <Content Include="web\resources\Settings\sysTables.en.js" />
+    <Content Include="web\resources\Settings\SysColumnRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\SysColumnRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\sysColumns.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\sysColumns.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\SysTableRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\SysTableRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\sysTables.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\sysTables.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\UserRelationships.de.js">
       <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
     </Content>
@@ -4978,6 +5035,12 @@
     <Content Include="web\templates\Settings\AddRole.html">
       <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\Settings\AddSysColumn.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\AddSysTable.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\Settings\AddUser.html">
       <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
     </Content>
@@ -4989,6 +5052,12 @@
       <DependentUpon>web.masterdata.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\Settings\FilterRole.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\FilterSysColumn.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\FilterSysTable.html">
       <DependentUpon>web.masterdata.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\Settings\FilterSysTables.html" />
@@ -5016,8 +5085,18 @@
     <Content Include="web\templates\Settings\Settings.html">
       <DependentUpon>web.masterdata.menu.template.tt</DependentUpon>
     </Content>
-    <Content Include="web\templates\Settings\SysColumns.html" />
-    <Content Include="web\templates\Settings\SysTables.html" />
+    <Content Include="web\templates\Settings\SysColumnRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\SysColumns.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\SysTableRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\SysTables.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\Settings\SystemLog.html" />
     <Content Include="web\templates\Settings\UserRelationships.html">
       <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
@@ -6294,6 +6373,9 @@
     <Content Include="web\views\Settings\FilterRole.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\Settings\FilterSysTable.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\Settings\FilterSysTables.js" />
     <Content Include="web\views\Settings\FilterUser.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
@@ -6317,19 +6399,17 @@
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\Settings.js" />
-    <Content Include="web\views\Settings\SysColumns.js" />
-    <Content Include="web\views\Settings\SysTables.js" />
-    <Content Include="web\views\Settings\SystemLog.js" />
-    <Content Include="web\views\Settings\UserRelationships.js">
+    <Content Include="web\views\Settings\SysColumnRelationships.js">
       <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
     </Content>
-    <Content Include="web\views\Settings\Users.js">
-      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    <Content Include="web\views\Settings\SysColumns.js">
+      <DependentUpon>web.masterdata.related.views.tt</DependentUpon>
     </Content>
-    <Content Include="web\views\Settings\web.masterdata.add.views1.txt">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    <Content Include="web\views\Settings\SysTableRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\SysTables.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\web.masterdata.related.views1.txt">
       <AutoGen>True</AutoGen>
@@ -6345,6 +6425,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\_SysColumns.js" />
+    <Content Include="web\views\Settings\_SysTables.js" />
+    <Content Include="web\views\Settings\SystemLog.js" />
+    <Content Include="web\views\Settings\UserRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\Users.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\web.masterdata.add.views1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\_Users.js" />
     <Content Include="web\views\Settings\web.masterdata.relationships.views.tt">
