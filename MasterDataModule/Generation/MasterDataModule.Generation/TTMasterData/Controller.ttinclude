@@ -35,13 +35,14 @@
             "MasterDataModule.API.Models", 
 			"MasterDataModule.Contracts.Entities",
             "MasterDataModule.Contracts.Managers",
-            "MasterDataModule.Contracts"
+            "MasterDataModule.Contracts",
+			"MasterDataModule.Contracts.Enums",
+			"MasterDataModule.API.Security"
         }, controllerType);
 
         code.WriteLine();
         code.WriteNamespace(); //Area: Namespace
-
-		code.WriteLine("[AuthorizeByPermissions(PermissionTypes = new[] {{ Permissions.{0}") }})]", model.Entity.Name);
+		code.WriteLine("[AuthorizeByPermissions(PermissionTypes = new[] {{ Permissions.{0} }})]", model.Entity.Name);
         code.WriteClassDeclaration(controllerType); //Area: Type
 		code.WriteLine();
 

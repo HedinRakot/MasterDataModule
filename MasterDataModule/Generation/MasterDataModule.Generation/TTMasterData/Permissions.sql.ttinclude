@@ -4,7 +4,7 @@
     IEntitiesGenerationContext<TableContent> context = generationContext;
 
     var code = context.Code;
-	var i = context.ContextName.ToUpper() == "ASPRO"? 1000: 2000;
+	
 #>
 	INSERT INTO [dbo].[MASTER_DATA_PERMISSION] ([ID], [SYSTEM_NAME], [NAME], [CREATE_DATE], [CHANGE_DATE], [DELETE_DATE], [OWNER_ORG_ID], [VISIBILITY_ORG_ID], [CREATE_EMPLOYEE_ID], [CHANGE_EMPLOYEE_ID], [SOURCE], [FROM_DATE], [TO_DATE])
 	VALUES
@@ -18,7 +18,7 @@
 ,<#
 		}
 		needComma = true;
-#>(<#=i++#>, '<#=context.ContextName.ToUpper()#>' ,'<#=entity.Name#>' ,GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, -1, GETDATE()))
+#>(<#=startId++#>, '<#=context.ContextName.ToUpper()#>' ,'<#=entity.Name#>' ,GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, -1, GETDATE()))
 <#
 	}
 #>

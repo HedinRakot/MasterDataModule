@@ -1,11 +1,14 @@
 using MasterDataModule.API.Models;
+using MasterDataModule.API.Security;
 using MasterDataModule.Contracts;
 using MasterDataModule.Contracts.Entities;
+using MasterDataModule.Contracts.Enums;
 using MasterDataModule.Contracts.Managers;
 using System;
 
 namespace MasterDataModule.API.Controllers
 {
+    [AuthorizeByPermissions(PermissionTypes = new[] { Permissions.InsTaxCode })]
     /// <summary>
     ///     Controller for <see cref="InsTaxCode"/> entity
     /// </summary>
