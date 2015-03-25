@@ -5,7 +5,7 @@ define(function () {
 
 		add: 'Stammdaten Berechtigung anlegen',
 	    edit: 'Stammdaten Berechtigung editieren',
-	    masterData: 'FE Stammdaten',
+	    masterData: 'Einstellungen',
 	    pageTitle: 'Stammdaten Berechtigung',
 		pleaseSelect: 'Bitte auswählen',
 		systemName: 'Systemname',	

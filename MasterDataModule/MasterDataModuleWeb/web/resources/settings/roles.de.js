@@ -5,7 +5,7 @@ define(function () {
 
 		add: 'Stammdaten Rolle anlegen',
 	    edit: 'Stammdaten Rolle editieren',
-	    masterData: 'FE Stammdaten',
+	    masterData: 'Einstellungen',
 	    pageTitle: 'Stammdaten Rolle',
 		pleaseSelect: 'Bitte auswählen',
 		name: 'Name',	

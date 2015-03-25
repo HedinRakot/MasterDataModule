@@ -5,7 +5,7 @@ define(function () {
 
 		add: 'Stammdaten Benutzer anlegen',
 	    edit: 'Stammdaten Benutzer editieren',
-	    masterData: 'FE Stammdaten',
+	    masterData: 'Einstellungen',
 	    pageTitle: 'Stammdaten Benutzer',
 		pleaseSelect: 'Bitte auswählen',
 		masterDataRoleId: 'DE: Role',	

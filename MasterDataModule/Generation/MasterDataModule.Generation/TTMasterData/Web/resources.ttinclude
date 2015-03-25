@@ -17,7 +17,11 @@
 		tableGroupNameDe = "TP Stammdaten";
 		tableGroupNameEn = "TP masterdata";
 	}  
-
+	else if (tableGroup == "Settings")
+	{
+		tableGroupNameDe = "Einstellungen";
+		tableGroupNameEn = "Settings";
+	}
 
     foreach (var model in context.WebModels)
     {

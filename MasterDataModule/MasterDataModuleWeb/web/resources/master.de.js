@@ -5,7 +5,7 @@
 		language: 'Englisch',
 		logout: 'Abmelden',
 		home: 'Hauptmaske',
-		settings: 'Einstellungen',
+		Settings: 'Einstellungen',
 		CommonMasterData: 'Allgemeine Stammdaten',
 		TechnicalInspectionMasterData: 'TP Stammdaten',
 		DriverLicenceMasterData: 'FE Stammdaten',

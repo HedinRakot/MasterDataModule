@@ -5,7 +5,7 @@ define(function () {
 
 		add: 'Stammdaten Spalte anlegen',
 	    edit: 'Stammdaten Spalte editieren',
-	    masterData: 'FE Stammdaten',
+	    masterData: 'Einstellungen',
 	    pageTitle: 'Stammdaten Spalte',
 		pleaseSelect: 'Bitte auswählen',
 		sysTableId: 'Tabelle',	

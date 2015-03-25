@@ -5,7 +5,7 @@ define(function () {
 
 		add: 'Stammdaten Tabelle anlegen',
 	    edit: 'Stammdaten Tabelle editieren',
-	    masterData: 'FE Stammdaten',
+	    masterData: 'Einstellungen',
 	    pageTitle: 'Stammdaten Tabelle',
 		pleaseSelect: 'Bitte auswählen',
 		description: 'Beschreibung',	

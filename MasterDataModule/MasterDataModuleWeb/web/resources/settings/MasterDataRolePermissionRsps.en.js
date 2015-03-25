@@ -5,7 +5,7 @@ define(function () {
 
 		add: 'Add Master data permissiom',
 	    edit: 'Edit Master data permissiom',
-	    masterData: 'FE masterdata',
+	    masterData: 'Settings',
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Master data permissiom',
 		pleaseSelect: 'Please select',

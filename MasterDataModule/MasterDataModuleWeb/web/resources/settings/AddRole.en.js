@@ -5,7 +5,7 @@ define(function () {
 
 		add: 'Add Master data role',
 	    edit: 'Edit Master data role',
-	    masterData: 'FE masterdata',
+	    masterData: 'Settings',
 	    pageTitle: 'Master data role',
 		pleaseSelect: 'Please select',
 		name: 'Name',	

@@ -5,7 +5,7 @@
 		language: 'German',
 		logout: 'Logout',
 		home: 'Home',
-		settings: 'Settings',
+		Settings: 'Settings',
 		CommonMasterData: 'Common masterdata',
 		TechnicalInspectionMasterData: 'TP masterdata',
 		DriverLicenceMasterData: 'FE masterdata',

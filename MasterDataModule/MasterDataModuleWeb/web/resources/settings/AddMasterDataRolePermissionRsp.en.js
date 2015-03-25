@@ -5,7 +5,7 @@ define(function () {
 
 		add: 'Add Master data permissiom',
 	    edit: 'Edit Master data permissiom',
-	    masterData: 'FE masterdata',
+	    masterData: 'Settings',
 	    pageTitle: 'Master data permissiom',
 		pleaseSelect: 'Please select',
 		masterDataRoleId: 'Master data role',	

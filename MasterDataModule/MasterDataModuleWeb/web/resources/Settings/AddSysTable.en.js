@@ -5,7 +5,7 @@ define(function () {
 
 		add: 'Add Master data table',
 	    edit: 'Edit Master data table',
-	    masterData: 'FE masterdata',
+	    masterData: 'Settings',
 	    pageTitle: 'Master data table',
 		pleaseSelect: 'Please select',
 		description: 'Description',	

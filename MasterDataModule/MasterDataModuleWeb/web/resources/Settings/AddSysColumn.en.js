@@ -5,7 +5,7 @@ define(function () {
 
 		add: 'Add Master data column',
 	    edit: 'Edit Master data column',
-	    masterData: 'FE masterdata',
+	    masterData: 'Settings',
 	    pageTitle: 'Master data column',
 		pleaseSelect: 'Please select',
 		sysTableId: 'Table',	
