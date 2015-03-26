@@ -10,7 +10,7 @@ namespace MasterDataModule.Lib.Data
         {
             SetProviderServices("System.Data.SqlClient", SqlProviderServices.Instance);
             SetExecutionStrategy("System.Data.SqlClient", () => new DefaultExecutionStrategy());
-            SetDefaultConnectionFactory(new LocalDbConnectionFactory("v11.0"));
+            //SetDefaultConnectionFactory(new LocalDbConnectionFactory("v11.0"));
         }
     }
 }

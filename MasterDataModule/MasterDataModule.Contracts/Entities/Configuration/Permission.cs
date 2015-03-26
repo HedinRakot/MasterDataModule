@@ -72,10 +72,6 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             /// Column name 'TO_DATE' for property <see cref="Permission.ToDate"/>
             /// </summary>
             public static readonly string ToDate = "TO_DATE";
-            /// <summary>
-            /// Column name 'Role_Id' for property <see cref="Permission.RoleId"/>
-            /// </summary>
-            public static readonly string RoleId = "Role_Id";
           
         }
         #endregion
@@ -92,7 +88,6 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public string Source{ get; set; }
         public DateTime FromDate{ get; set; }
         public DateTime ToDate{ get; set; }
-        public int? RoleId{ get; set; }
         public virtual ICollection<MasterDataRolePermissionRsp> MasterDataRolePermissionRsps{ get; set; }
         DateTime? IIntervalFields.FromDate
         {
@@ -138,7 +133,6 @@ namespace MasterDataModule.Contracts.Entities.Configuration
                        Source = Source,
                        FromDate = FromDate,
                        ToDate = ToDate,
-                       RoleId = RoleId,
         	           };
         }
     }

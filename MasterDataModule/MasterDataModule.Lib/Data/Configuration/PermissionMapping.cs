@@ -74,9 +74,6 @@ namespace MasterDataModule.Lib.Data.Configuration
                 .HasColumnName(Permission.Fields.ToDate)
                 .IsRequired();
 
-            Property(t => t.RoleId)
-                .HasColumnName(Permission.Fields.RoleId);
-
 
             //Relationships
         }

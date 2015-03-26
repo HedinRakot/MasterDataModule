@@ -11,6 +11,8 @@ namespace MasterDataModule.Lib.Managers.Configuration
     public partial class RoleManager: EntityManager<Role, int>
         ,IRoleManager
     {
-
+        public RoleManager(IEntities context) : base(context)
+        {
+        }
     }
 }

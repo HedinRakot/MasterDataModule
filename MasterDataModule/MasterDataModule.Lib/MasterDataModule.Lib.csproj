@@ -783,7 +783,6 @@
     <Compile Include="Managers\Drl\ReturnReasonManager.cs">
       <DependentUpon>Drl.Managers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Managers\Configuration\RoleManager.Custom.cs" />
     <Compile Include="Managers\Drl\SchoolInfoManager.cs">
       <DependentUpon>Drl.Managers.tt</DependentUpon>
     </Compile>
