@@ -9,7 +9,7 @@ namespace MasterDataModule.API.Models
         [DataMember]
         public bool IsAuthenticated { get; set; }
         [DataMember]
-        public Dictionary<string, bool> Permissions { get; set; }
+        public List<string> Permissions { get; set; }
         [DataMember]
         public string Name { get; set; }
         [DataMember]

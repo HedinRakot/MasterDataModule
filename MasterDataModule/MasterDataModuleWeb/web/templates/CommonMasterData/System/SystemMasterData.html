@@ -3,42 +3,66 @@
     <tr>        
         <td>
             <ul>
+				<% if (Application.hasPermission('SysLanguage')) { %>
                 <li>
                     <a href="#SysLanguages" data-localized="SysLanguages"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('SysLocation')) { %>
                 <li>
                     <a href="#SysLocations" data-localized="SysLocations"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('SysRole')) { %>
                 <li>
                     <a href="#SysRoles" data-localized="SysRoles"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('SysRoleSysPermissionRsp')) { %>
                 <li>
                     <a href="#SysRoleSysPermissionRsps" data-localized="SysRoleSysPermissionRsps"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrdFederalGroup')) { %>
                 <li>
                     <a href="#OrdFederalGroups" data-localized="OrdFederalGroups"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrdFederalState')) { %>
                 <li>
                     <a href="#OrdFederalStates" data-localized="OrdFederalStates"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('SysCountry')) { %>
                 <li>
                     <a href="#SysCountries" data-localized="SysCountries"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('SysPostCode')) { %>
                 <li>
                     <a href="#SysPostCodes" data-localized="SysPostCodes"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrdOrderCancelationReason')) { %>
                 <li>
                     <a href="#OrdOrderCancelationReasons" data-localized="OrdOrderCancelationReasons"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('KssExpenseGround')) { %>
                 <li>
                     <a href="#KssExpenseGrounds" data-localized="KssExpenseGrounds"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('ExpPassengersType')) { %>
                 <li>
                     <a href="#ExpPassengersTypes" data-localized="ExpPassengersTypes"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('InsVatType')) { %>
                 <li>
                     <a href="#InsVatTypes" data-localized="InsVatTypes"></a>
                 </li>
+				<%}%>
 			</ul>
         </td>
     </tr>

@@ -71,44 +71,40 @@
                 german: localStorage.getItem('language') === 'true',
                 user: new Backbone.Model(@Html.Raw(JsonHelper.GetCurrentUserJson(GlobalConfiguration.Configuration.DependencyResolver))),
                 tables: new Backbone.Model(@Html.Raw(JsonHelper.GetSystemTablesJson(GlobalConfiguration.Configuration.DependencyResolver))),
-            canTableItemBeEdit: function (tableName) {
+                hasPermission: function(tableName) {
+                    var permissions = Application.user.get('permissions');
+                    return permissions.indexOf(tableName) !== -1;
+                },
+                canTableItemBeCreated: function(tableName) {
 
-                var self = this,
-                itemEditMode = new Backbone.Model(self.tables.get('tableNames')).get(tableName);
-                result = !itemEditMode || itemEditMode.editMode >= 1;
+                    var self = this,
+                        itemEditMode = new Backbone.Model(self.tables.get('tableNames')).get(tableName);
+                    result = !itemEditMode || itemEditMode.editMode >= 2;
 
-                return result;
-            },
-            canTableItemBeCreated: function (tableName) {
+                    return result;
+                },
+                canTableItemBeDeleted: function(tableName) {
 
-                var self = this,
-                itemEditMode = new Backbone.Model(self.tables.get('tableNames')).get(tableName);
-                result = !itemEditMode || itemEditMode.editMode >= 2;
+                    var self = this,
+                        itemEditMode = new Backbone.Model(self.tables.get('tableNames')).get(tableName);
+                    result = !itemEditMode || itemEditMode.editMode == 3;
 
-                return result;
-            },
-            canTableItemBeDeleted: function (tableName) {
+                    return result;
+                },
+                canTableItemBeEdit: function(tableName, columnName) {
 
-                var self = this,
-                itemEditMode = new Backbone.Model(self.tables.get('tableNames')).get(tableName);
-                result = !itemEditMode || itemEditMode.editMode == 3;
+                    var self = this,
+                        itemEditMode = new Backbone.Model(self.tables.get('tableNames')).get(tableName);
+                    result = !itemEditMode || itemEditMode.editMode >= 1;
 
-                return result;
-            },
-            canTableItemBeEdit: function (tableName, columnName) {
+                    if (itemEditMode && result) {
+                        var isColumnReadOnly = _.contains(itemEditMode.readOnlyColumns, columnName);
+                        result = !isColumnReadOnly;
+                    }
 
-                var self = this,
-                itemEditMode = new Backbone.Model(self.tables.get('tableNames')).get(tableName);
-                result = !itemEditMode || itemEditMode.editMode >= 1;
-
-                if (itemEditMode && result) {
-                    var isColumnReadOnly = _.contains(itemEditMode.readOnlyColumns, columnName);
-                    result = !isColumnReadOnly;
+                    return result;
                 }
-
-                return result;
-            }
-        };
+            };
         require(['application-start']);
     });
     </script>

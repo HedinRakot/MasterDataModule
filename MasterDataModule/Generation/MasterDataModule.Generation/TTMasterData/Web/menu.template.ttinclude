@@ -17,9 +17,11 @@
 		if(model.Table.Content.ShowInMenu)
 		{
 #>
+				<% if (Application.hasPermission('<#=model.Entity.Name#>')) { %>
                 <li>
                     <a href="#<#=model.Table.Content.CodeNamePlural #>" data-localized="<#=model.Table.Content.CodeNamePlural #>"></a>
                 </li>
+				<%}%>
 <#        
 		}
 	}

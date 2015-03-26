@@ -3,60 +3,96 @@
     <tr>        
         <td>
             <ul>
+				<% if (Application.hasPermission('MessageLocalization')) { %>
                 <li>
                     <a href="#MessageLocalizations" data-localized="MessageLocalizations"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('CoreDataProduct')) { %>
                 <li>
                     <a href="#CoreDataProducts" data-localized="CoreDataProducts"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('ReturnReason')) { %>
                 <li>
                     <a href="#ReturnReasons" data-localized="ReturnReasons"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('ExamPossibleResult')) { %>
                 <li>
                     <a href="#ExamPossibleResults" data-localized="ExamPossibleResults"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('SchoolInfo')) { %>
                 <li>
                     <a href="#SchoolInfos" data-localized="SchoolInfos"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('ArgeVersion')) { %>
                 <li>
                     <a href="#ArgeVersions" data-localized="ArgeVersions"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('Authority')) { %>
                 <li>
                     <a href="#Authorities" data-localized="Authorities"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('Community')) { %>
                 <li>
                     <a href="#Communities" data-localized="Communities"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('ExamRecognitionType')) { %>
                 <li>
                     <a href="#ExamRecognitionTypes" data-localized="ExamRecognitionTypes"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('DriverSchool')) { %>
                 <li>
                     <a href="#DriverSchools" data-localized="DriverSchools"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('ExamRoom')) { %>
                 <li>
                     <a href="#ExamRooms" data-localized="ExamRooms"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('ExamStation')) { %>
                 <li>
                     <a href="#ExamStations" data-localized="ExamStations"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('Holiday')) { %>
                 <li>
                     <a href="#Holidays" data-localized="Holidays"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('ExamClass')) { %>
                 <li>
                     <a href="#ExamClasses" data-localized="ExamClasses"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('Language')) { %>
                 <li>
                     <a href="#Languages" data-localized="Languages"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('LegalBasis')) { %>
                 <li>
                     <a href="#LegalBases" data-localized="LegalBases"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('ExamConstraint')) { %>
                 <li>
                     <a href="#ExamConstraints" data-localized="ExamConstraints"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('MeetingPoint')) { %>
                 <li>
                     <a href="#MeetingPoints" data-localized="MeetingPoints"></a>
                 </li>
+				<%}%>
 			</ul>
         </td>
     </tr>

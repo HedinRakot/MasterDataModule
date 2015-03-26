@@ -30,7 +30,7 @@ namespace MasterDataModule.API.Controllers
 						IsAuthenticated = true,
 						Login = user.Login,
 						Name = user.Name,
-						Permissions = user.Role.Permissions.ToDictionary(o => o.SystemName, o => true)
+						//Permissions = user.Role.Permissions.ToDictionary(o => o.SystemName, o => true)
 					});
 				}
 

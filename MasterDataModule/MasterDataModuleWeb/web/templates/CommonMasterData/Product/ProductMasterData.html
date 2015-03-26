@@ -3,42 +3,66 @@
     <tr>        
         <td>
             <ul>
+				<% if (Application.hasPermission('InsCoreDataProduct')) { %>
                 <li>
                     <a href="#InsCoreDataProducts" data-localized="InsCoreDataProducts"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('InsCoreDataProductGroup')) { %>
                 <li>
                     <a href="#InsCoreDataProductGroups" data-localized="InsCoreDataProductGroups"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('InsProductCombinationType')) { %>
                 <li>
                     <a href="#InsProductCombinationTypes" data-localized="InsProductCombinationTypes"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('InsProductMaterialGroup')) { %>
                 <li>
                     <a href="#InsProductMaterialGroups" data-localized="InsProductMaterialGroups"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('InsProductObjectClass')) { %>
                 <li>
                     <a href="#InsProductObjectClasses" data-localized="InsProductObjectClasses"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('InsProductObjectType')) { %>
                 <li>
                     <a href="#InsProductObjectTypes" data-localized="InsProductObjectTypes"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('InsProductType')) { %>
                 <li>
                     <a href="#InsProductTypes" data-localized="InsProductTypes"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('InsStatisticGroup')) { %>
                 <li>
                     <a href="#InsStatisticGroups" data-localized="InsStatisticGroups"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrdRecognitionType')) { %>
                 <li>
                     <a href="#OrdRecognitionTypes" data-localized="OrdRecognitionTypes"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrdRecognition')) { %>
                 <li>
                     <a href="#OrdRecognitions" data-localized="OrdRecognitions"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrdRecognitionAreaOfWorkRsp')) { %>
                 <li>
                     <a href="#OrdRecognitionAreaOfWorkRsps" data-localized="OrdRecognitionAreaOfWorkRsps"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('InsTaxCode')) { %>
                 <li>
                     <a href="#InsTaxCodes" data-localized="InsTaxCodes"></a>
                 </li>
+				<%}%>
 			</ul>
         </td>
     </tr>

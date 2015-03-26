@@ -3,27 +3,41 @@
     <tr>        
         <td>
             <ul>
+				<% if (Application.hasPermission('EmpEmployee')) { %>
                 <li>
                     <a href="#EmpEmployees" data-localized="EmpEmployees"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('EmpCashPermissionType')) { %>
                 <li>
                     <a href="#EmpCashPermissionTypes" data-localized="EmpCashPermissionTypes"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('EmpOrgAssociationType')) { %>
                 <li>
                     <a href="#EmpOrgAssociationTypes" data-localized="EmpOrgAssociationTypes"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('EmpEmployeeOrgCostCenterRsp')) { %>
                 <li>
                     <a href="#EmpEmployeeOrgCostCenterRsps" data-localized="EmpEmployeeOrgCostCenterRsps"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('EmpEmployeeOrgOrganizationalUnitRsp')) { %>
                 <li>
                     <a href="#EmpEmployeeOrgOrganizationalUnitRsps" data-localized="EmpEmployeeOrgOrganizationalUnitRsps"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('EmpEmployeeTopEmployeeRsp')) { %>
                 <li>
                     <a href="#EmpEmployeeTopEmployeeRsps" data-localized="EmpEmployeeTopEmployeeRsps"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('EmpEmployeeSysRoleRsp')) { %>
                 <li>
                     <a href="#EmpEmployeeSysRoleRsps" data-localized="EmpEmployeeSysRoleRsps"></a>
                 </li>
+				<%}%>
 			</ul>
         </td>
     </tr>

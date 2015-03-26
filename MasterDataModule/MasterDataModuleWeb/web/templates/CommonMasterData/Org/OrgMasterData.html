@@ -3,39 +3,61 @@
     <tr>        
         <td>
             <ul>
+				<% if (Application.hasPermission('OrgAccountType')) { %>
                 <li>
                     <a href="#OrgAccountTypes" data-localized="OrgAccountTypes"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrgAccountingArea')) { %>
                 <li>
                     <a href="#OrgAccountingAreas" data-localized="OrgAccountingAreas"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrgBankInformation')) { %>
                 <li>
                     <a href="#OrgBankInformation" data-localized="OrgBankInformation"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrgCostCenter')) { %>
                 <li>
                     <a href="#OrgCostCenters" data-localized="OrgCostCenters"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrgCostCenterResponsibleEmployeeRsp')) { %>
                 <li>
                     <a href="#OrgCostCenterResponsibleEmployeeRsps" data-localized="OrgCostCenterResponsibleEmployeeRsps"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrgCostCenterPrice')) { %>
                 <li>
                     <a href="#OrgCostCenterPrices" data-localized="OrgCostCenterPrices"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrgRelationshipType')) { %>
                 <li>
                     <a href="#OrgRelationshipTypes" data-localized="OrgRelationshipTypes"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrgInformation')) { %>
                 <li>
                     <a href="#OrgInformation" data-localized="OrgInformation"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrgType')) { %>
                 <li>
                     <a href="#OrgTypes" data-localized="OrgTypes"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrgInspectionDevice')) { %>
                 <li>
                     <a href="#OrgInspectionDevices" data-localized="OrgInspectionDevices"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrgOrganizationalUnit')) { %>
                 <li>
                     <a href="#OrgOrganizationalUnits" data-localized="OrgOrganizationalUnits"></a>
                 </li>
+				<%}%>
 			</ul>
         </td>
     </tr>

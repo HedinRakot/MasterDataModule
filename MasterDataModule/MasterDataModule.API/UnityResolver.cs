@@ -53,4 +53,17 @@ namespace MasterDataModule.API
             _container.Dispose();
         }
     }
+
+    public static class DependencyResolverExtensions
+    {
+        public static T GetService<T>(this IDependencyResolver resolver) where T: class
+        {
+            var service = resolver.GetService(typeof (T));
+            if (service == null)
+            {
+                return null;
+            }
+            return (T) service;
+        }
+    }
 }

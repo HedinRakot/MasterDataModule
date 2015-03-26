@@ -3,21 +3,31 @@
     <tr>        
         <td>
             <ul>
+				<% if (Application.hasPermission('OrdBillingParameter')) { %>
                 <li>
                     <a href="#OrdBillingParameters" data-localized="OrdBillingParameters"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrdContactPersonFunction')) { %>
                 <li>
                     <a href="#OrdContactPersonFunctions" data-localized="OrdContactPersonFunctions"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrdCustomerInfo')) { %>
                 <li>
                     <a href="#OrdCustomerInfos" data-localized="OrdCustomerInfos"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('OrdPartnerRole')) { %>
                 <li>
                     <a href="#OrdPartnerRoles" data-localized="OrdPartnerRoles"></a>
                 </li>
+				<%}%>
+				<% if (Application.hasPermission('InsTaxClass')) { %>
                 <li>
                     <a href="#InsTaxClasses" data-localized="InsTaxClasses"></a>
                 </li>
+				<%}%>
 			</ul>
         </td>
     </tr>

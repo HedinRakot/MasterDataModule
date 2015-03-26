@@ -23,12 +23,19 @@ namespace MasterDataModule.API
                 result.IsAuthenticated = false;
             else
             {
-                var service = resolver.GetService(typeof (IUserManager));
-                var user = ((IUserManager)service).GetByLogin(HttpContext.Current.User.Identity.Name);
+                var userManager = resolver.GetService<IUserManager>();
+                var permissionsRspManager = resolver.GetService<IMasterDataRolePermissionRspManager>();
+                var permissionsManager = resolver.GetService<IPermissionManager>();
+
+                var user = userManager.GetByLogin(HttpContext.Current.User.Identity.Name);
 
                 result.IsAuthenticated = true;
                 result.Name = user.Name;
-                result.Permissions = user.Role.Permissions.ToDictionary(o => o.SystemName, o => true);
+                var permissionsQuery = from permissionRsp in permissionsRspManager.GetEntities()
+                    join permission in permissionsManager.GetEntities() on permissionRsp.MasterDataPermissionId equals permission.Id
+                    where permissionRsp.MasterDataRoleId == user.MasterDataRoleId
+                    select permission.Name;
+                result.Permissions = permissionsQuery.ToList();
             }
 
             return JsonConvert.SerializeObject(result, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
