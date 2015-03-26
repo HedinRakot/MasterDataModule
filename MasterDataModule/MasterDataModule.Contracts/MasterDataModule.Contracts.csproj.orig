@@ -105,12 +105,8 @@
     <Compile Include="Entities\Drl\DriverSchoolInfo.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Enums\MasterDataPermissions.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MasterDataPermissions.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Exceptions\DuplicateEntityException.cs">
       <DependentUpon>MasterDataPermissions.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -125,6 +121,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DrlPermissions.tt</DependentUpon>
     </Compile>
+=======
+    <Compile Include="Exceptions\DuplicateEntityException.cs" />
+>>>>>>> DuplicateChecker
     <Compile Include="Managers\AsPro\Common\IInsCoreDataProductLocalizationManager.cs">
       <DependentUpon>Common.IManagers.tt</DependentUpon>
     </Compile>
