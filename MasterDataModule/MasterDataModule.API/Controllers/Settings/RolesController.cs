@@ -27,16 +27,12 @@ namespace MasterDataModule.API.Controllers.Settings
             model.toDate = entity.ToDate;
             model.createDate = ((ISystemFields)entity).CreateDate;
             model.changeDate = ((ISystemFields)entity).ChangeDate;
-
-            ExtraEntityToModel(entity, model);
         }
         protected override void ModelToEntity(RoleModel model, Role entity, ActionTypes actionType)
         {
             entity.Name = model.name;
             entity.FromDate = model.fromDate;
             entity.ToDate = model.toDate;
-
-            ExtraModelToEntity(entity, model, actionType);
         }
     }
 }

@@ -495,7 +495,6 @@
     <Compile Include="Controllers\GridArgsModelBinder.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\LogoutController.cs" />
-    <Compile Include="Controllers\Settings\Custom.RolesController.cs" />
     <Compile Include="Controllers\Settings\Custom.SysTablesController.cs" />
     <Compile Include="Controllers\Settings\Custom.UserController.cs" />
     <Compile Include="Controllers\Settings\MasterDataRolePermissionRspsController.cs">
