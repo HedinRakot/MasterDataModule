@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Data.Entity.Validation;
 using MasterDataModule.Contracts.SaveActors.Base;
 using MasterDataModule.Lib.DuplicateCheckers.Interfaces;
+using MasterDataModule.Contracts.Exceptions;
 
 namespace MasterDataModule.Lib.DuplicateCheckers.Base
 {
@@ -40,7 +41,7 @@ namespace MasterDataModule.Lib.DuplicateCheckers.Base
             var checker = checkers[GetEntityTypeName(entity)];
             if (checker.HasDuplicate(entity))
             {
-                throw new DbEntityValidationException(string.Format("Database contains entity of type {0} with the same business keys.", GetEntityTypeName(entity)));
+                throw new DuplicateEntityException(string.Format("Database contains entity of type {0} with the same business keys.", GetEntityTypeName(entity)));
             }
         }
     }

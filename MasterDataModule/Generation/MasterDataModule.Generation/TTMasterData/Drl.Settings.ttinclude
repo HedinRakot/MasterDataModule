@@ -1,5 +1,5 @@
 ﻿<#
-    const string conn = @"Data Source=.;Initial Catalog=FeMasterData;Integrated Security=True;MultipleActiveResultSets=True";
+    const string conn = @"Data Source=SPBNB-PRC199\SQL2012;Initial Catalog=FeMasterData;Integrated Security=True;MultipleActiveResultSets=True";
     const string contextName = "Drl";
 	const string tableContext = "Drl";
 	var tableGroup = "";

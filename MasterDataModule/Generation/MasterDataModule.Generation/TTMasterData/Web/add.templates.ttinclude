@@ -48,6 +48,14 @@
 			}
 #>
             <#=type#> id="<#=property.Name + customPropertyPostfix #>" name="<#=property.Name + customPropertyPostfix #>" /><#= customProperty #>
+<#
+			if(propContent.IsBusinessKey)
+			{
+#>
+			<span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg" data-for="modelName" role="alert"></span>
+<#
+			}
+#>
 		</div>   
 <#
         }

@@ -105,7 +105,7 @@
     <Compile Include="Entities\Drl\DriverSchoolInfo.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Enums\MasterDataPermissions.cs">
+    <Compile Include="Exceptions\DuplicateEntityException.cs" />
       <DependentUpon>MasterDataPermissions.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

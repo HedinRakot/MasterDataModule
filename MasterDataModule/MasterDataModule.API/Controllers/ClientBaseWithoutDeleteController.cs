@@ -3,6 +3,7 @@ using System.Web.Http;
 using MasterDataModule.API.Models;
 using MasterDataModule.Contracts;
 using MasterDataModule.Contracts.Managers.Base;
+using MasterDataModule.Contracts.Exceptions;
 
 namespace MasterDataModule.API.Controllers
 {
@@ -68,7 +69,15 @@ namespace MasterDataModule.API.Controllers
                 sysEntity.ToDate = sysModel.toDate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59);
             }
 
-            Manager.SaveChanges();
+            try
+            {
+                Manager.SaveChanges();
+            }
+            catch(DuplicateEntityException ex)
+            {
+                ModelState.AddModelError("model.modelname", "Die Entität muss im System eindeutig sein.");
+                return BadRequest(ModelState);
+            }
 
             OnActionSuccess(entity, ActionTypes.Update);
 
@@ -91,7 +100,17 @@ namespace MasterDataModule.API.Controllers
             ModelToEntity(model, entity, ActionTypes.Add);
             SetChangeDate(entity);
             Manager.AddEntity(entity);
-            Manager.SaveChanges();
+            
+            try
+            {
+                Manager.SaveChanges();
+            }
+            catch(DuplicateEntityException ex)
+            {
+                ModelState.AddModelError("model.modelname", "Die Entität muss im System eindeutig sein.");
+                return BadRequest(ModelState);
+            }
+
 
             model = new TModel
             {

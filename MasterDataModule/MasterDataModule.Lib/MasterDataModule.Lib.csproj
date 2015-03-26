@@ -421,8 +421,47 @@
     <Compile Include="DuplicateCheckers\Aspro\AsproDuplicateCheckerSaveActor.cs" />
     <Compile Include="DuplicateCheckers\Base\BaseDuplicateChecker.cs" />
     <Compile Include="DuplicateCheckers\Base\BaseDuplicateCheckerSaveActor.cs" />
+    <Compile Include="DuplicateCheckers\Drl\AuthorityDuplicateChecker.cs">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateCheckers\Drl\CoreDataProductDuplicateChecker.cs">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+    </Compile>
     <Compile Include="DuplicateCheckers\Drl\DrlDuplicateCheckerSaveActor.cs" />
     <Compile Include="DuplicateCheckers\Drl\ExamClassDuplicateChecker.cs">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateCheckers\Drl\ExamConstraintDuplicateChecker.cs">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateCheckers\Drl\ExamPossibleResultDuplicateChecker.cs">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateCheckers\Drl\ExamRecognitionTypeDuplicateChecker.cs">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateCheckers\Drl\ExamRoomDuplicateChecker.cs">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateCheckers\Drl\ExamStationDuplicateChecker.cs">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateCheckers\Drl\LanguageDuplicateChecker.cs">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateCheckers\Drl\LegalBasisDuplicateChecker.cs">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateCheckers\Drl\MeetingPointDuplicateChecker.cs">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateCheckers\Drl\MessageLocalizationDuplicateChecker.cs">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateCheckers\Drl\ReturnReasonDuplicateChecker.cs">
+      <DependentUpon>DuplicateChecker.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateCheckers\Drl\SchoolInfoDuplicateChecker.cs">
       <DependentUpon>DuplicateChecker.tt</DependentUpon>
     </Compile>
     <Compile Include="DuplicateCheckers\Interfaces\IAsProDuplicateChecker.cs" />
