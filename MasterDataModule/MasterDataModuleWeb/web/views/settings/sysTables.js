@@ -3,8 +3,8 @@ define([
 'collections/Settings/SysTables',
 'l!t!Settings/FilterSysTable',
 'l!t!Settings/SysTableRelationships'
-
-], function (BaseView, Collection, FilterView, DetailView) {
+,'Settings/Custom.SysTable'
+], function (BaseView, Collection, FilterView, DetailView, CustomColumns) {
 	'use strict';
 
 	var view = BaseView.extend({
@@ -21,10 +21,10 @@ define([
 
 		columns: function () {
 			
-			return [
-				{ field: 'description', title: this.resources.description },
+			return $.merge( CustomColumns(),
+[
 				{ field: 'editMode', title: this.resources.editMode , collection: this.options.editModeType, defaultText: this.resources.pleaseSelect},
-			];
+			]);
 		}
 	});
 

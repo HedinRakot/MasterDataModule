@@ -8,6 +8,9 @@ define(function () {
 			,sysTableId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('sysColumn', 'sysTableId'), 
 				                    validation: { required: false } }			
+			,name: { type: "string", 
+			                        editable: Application.canTableItemBeEdit('sysColumn', 'name'), 
+				                    validation: { required: true, maxLength: 128 } }			
 			,description: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('sysColumn', 'description'), 
 				                    validation: { required: false, maxLength: 256 } }			

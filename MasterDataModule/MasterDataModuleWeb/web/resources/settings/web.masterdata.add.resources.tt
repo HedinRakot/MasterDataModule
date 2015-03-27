@@ -3,7 +3,6 @@
 <#@ include file="..\..\..\..\Generation\MasterDataModule.Generation\TTMasterData\MasterDataConfiguration.Settings.ttinclude" once="true"#>
 <#
     const string filesDir = @"..\..\..\..\Generation\MasterDataModule.Generation\Declarations\";
-	tableGroup = "Settings";
 #>
 <#@ include file="..\..\..\..\Generation\MasterDataModule.Generation\TTMasterData\MasterData.GenerationContext.ttinclude" once="true"#>
 <#@ include file="..\..\..\..\Generation\MasterDataModule.Generation\TTMasterData\Web\add.resources.ttinclude"  once="true"#>

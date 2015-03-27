@@ -37,6 +37,13 @@ define([
 
 		    self.grid.bind('edit', function (e) {
 		        e.model.masterDataRoleId = self.model.id;
+
+				if (e.model.isNew()) {
+                    var dt = new Date(2070, 11, 31);
+		            e.model.toDate = dt;
+		            var numeric = e.container.find("input[name=toDate]");
+		            numeric[0].value = dt.toLocaleDateString();
+		        }
 		    });
 
 		    return self;

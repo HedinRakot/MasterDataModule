@@ -23,6 +23,7 @@ namespace MasterDataModule.API.Controllers.Settings
         protected override void EntityToModel(SysColumn entity, SysColumnModel model)
         {
             model.sysTableId = entity.SysTableId;
+            model.name = entity.Name;
             model.description = entity.Description;
             model.readOnly = entity.ReadOnly;
             model.createDate = ((ISystemFields)entity).CreateDate;
@@ -31,6 +32,7 @@ namespace MasterDataModule.API.Controllers.Settings
         protected override void ModelToEntity(SysColumnModel model, SysColumn entity, ActionTypes actionType)
         {
             entity.SysTableId = model.sysTableId;
+            entity.Name = model.name;
             entity.Description = model.description;
             entity.ReadOnly = model.readOnly;
         }

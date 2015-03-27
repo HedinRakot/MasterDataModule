@@ -14,6 +14,7 @@ define([
 
             var self = this;
             var result = {
+			'#name': 'name',
 			'#description': 'description',
 			'#editMode': { observe: 'editMode',
 				selectOptions: { labelPath: 'name', valuePath: 'id',
@@ -29,6 +30,7 @@ define([
             view.__super__.render.apply(this, arguments);
 
 			//TODO foreach model field
+			this.disableInput(this, 'name');
 			this.disableInput(this, 'description');
 			this.disableInput(this, 'editMode', 'select');
 

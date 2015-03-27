@@ -3,9 +3,9 @@ define(function () {
 
 	var resources = {
         SysColumns: 'Stammdaten Spalte',
+        SysTables: 'Stammdaten Tabelle',
         Roles: 'Stammdaten Rolle',
         Permissions: 'Stammdaten Berechtigung',
-        SysTables: 'Stammdaten Tabelle',
         MasterDataRolePermissionRsps: 'Stammdaten Berechtigung',
         Users: 'Stammdaten Benutzer',
 	};

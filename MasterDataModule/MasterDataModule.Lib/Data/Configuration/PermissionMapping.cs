@@ -25,6 +25,7 @@ namespace MasterDataModule.Lib.Data.Configuration
             //Properties
             Property(t => t.Id)
                 .HasColumnName(Permission.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
                 .IsRequired();
 
             Property(t => t.SystemName)

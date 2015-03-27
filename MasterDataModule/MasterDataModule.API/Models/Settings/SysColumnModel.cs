@@ -1,3 +1,4 @@
+using MasterDataModule.API.Validation;
 using MasterDataModule.Contracts.Entities;
 using MasterDataModule.Contracts.Entities.Configuration;
 using System;
@@ -18,6 +19,12 @@ namespace MasterDataModule.API.Models.Settings
         /// </summary>
         [DataMember]
         public int sysTableId{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="SysColumn.Name"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public string name{ get; set; }
         /// <summary>
         ///     Model property for <see cref="SysColumn.Description"/> entity
         /// </summary>

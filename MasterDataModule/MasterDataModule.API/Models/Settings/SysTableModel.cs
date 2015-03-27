@@ -1,3 +1,4 @@
+using MasterDataModule.API.Validation;
 using MasterDataModule.Contracts.Entities;
 using MasterDataModule.Contracts.Entities.Configuration;
 using System;
@@ -13,6 +14,12 @@ namespace MasterDataModule.API.Models.Settings
     public partial class SysTableModel: BaseModel
     {
 
+        /// <summary>
+        ///     Model property for <see cref="SysTable.Name"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public string name{ get; set; }
         /// <summary>
         ///     Model property for <see cref="SysTable.Description"/> entity
         /// </summary>

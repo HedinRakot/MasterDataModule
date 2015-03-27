@@ -8,6 +8,7 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Stammdaten Tabelle',
 		pleaseSelect: 'Bitte auswählen',
+		name: 'Name',	
 		description: 'Beschreibung',	
 		editMode: 'Editiebarkeit',	
 	};

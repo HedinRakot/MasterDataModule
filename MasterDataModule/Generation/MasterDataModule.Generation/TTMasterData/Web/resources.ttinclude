@@ -7,25 +7,26 @@
 	var tableGroupNameDe = "FE Stammdaten";
 	var tableGroupNameEn = "FE masterdata";
 	
-	if(tableGroup == "Common")
-	{
-		tableGroupNameDe = "Allgemeine Stammdaten";
-		tableGroupNameEn = "Common masterdata";
-	}
-	else if(tableGroup == "TP")
-	{
-		tableGroupNameDe = "TP Stammdaten";
-		tableGroupNameEn = "TP masterdata";
-	}  
-	else if (tableGroup == "Settings")
-	{
-		tableGroupNameDe = "Einstellungen";
-		tableGroupNameEn = "Settings";
-	}
-
     foreach (var model in context.WebModels)
     {
         var entityContent = model.Table.Content;
+
+		if(entityContent.Group == "Common")
+		{
+			tableGroupNameDe = "Allgemeine Stammdaten";
+			tableGroupNameEn = "Common masterdata";
+		}
+		else if(entityContent.Group == "TP")
+		{
+			tableGroupNameDe = "TP Stammdaten";
+			tableGroupNameEn = "TP masterdata";
+		}  
+		else if (entityContent.Group == "Settings")
+		{
+			tableGroupNameDe = "Einstellungen";
+			tableGroupNameEn = "Settings";
+		}
+
         context.FileManager.StartNewFile(entityContent.CodeNamePlural + ".de.js");
 		//resources de
 #>

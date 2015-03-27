@@ -9,6 +9,7 @@ define(function () {
 	    pageTitle: 'Stammdaten Spalte',
 		pleaseSelect: 'Bitte auswählen',
 		sysTableId: 'Tabelle',	
+		name: 'Name',	
 		description: 'Beschreibung',	
 		readOnly: 'Nicht editierbar',	
 	};

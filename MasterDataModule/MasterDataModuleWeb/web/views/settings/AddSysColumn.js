@@ -15,6 +15,7 @@ define([
             var self = this;
             var result = {
 			'#sysTableId': 'sysTableId',
+			'#name': 'name',
 			'#description': 'description',
 			'#readOnly': 'readOnly',
 			};
@@ -28,6 +29,7 @@ define([
 
 			//TODO foreach model field
 			this.disableInput(this, 'sysTableId', 'numeric');
+			this.disableInput(this, 'name');
 			this.disableInput(this, 'description');
 			this.disableInput(this, 'readOnly');
 

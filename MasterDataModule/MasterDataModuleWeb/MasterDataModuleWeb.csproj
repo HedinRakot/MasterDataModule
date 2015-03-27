@@ -3384,6 +3384,8 @@
     <Content Include="web\resources\Settings\AddUser.en.js">
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\Settings\Custom.SysTables.de.js" />
+    <Content Include="web\resources\Settings\Custom.SysTables.en.js" />
     <Content Include="web\resources\Settings\FilterMasterDataRolePermissionRsp.de.js">
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
     </Content>
@@ -6417,6 +6419,9 @@
     <Content Include="web\views\Settings\SysTables.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\Settings\Users.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\Settings\web.masterdata.add.views1.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -6442,9 +6447,6 @@
     <Content Include="web\views\Settings\SystemLog.js" />
     <Content Include="web\views\Settings\UserRelationships.js">
       <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\Settings\Users.js">
-      <DependentUpon>web.masterdata.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\_Users.js" />
     <Content Include="web\views\Settings\web.masterdata.relationships.views.tt">
@@ -7354,6 +7356,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>web.masterdata.menu.resources.txt</LastGenOutput>
     </Content>
+    <Content Include="web\views\Settings\Custom.SysTable.js" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MasterDataModule.API\MasterDataModule.API.csproj">

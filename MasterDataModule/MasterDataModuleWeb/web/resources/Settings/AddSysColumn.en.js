@@ -9,6 +9,7 @@ define(function () {
 	    pageTitle: 'Master data column',
 		pleaseSelect: 'Please select',
 		sysTableId: 'Table',	
+		name: 'Name',	
 		description: 'Description',	
 		readOnly: 'Readonly',	
 	};

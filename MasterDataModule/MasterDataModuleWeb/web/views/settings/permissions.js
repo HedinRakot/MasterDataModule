@@ -24,6 +24,8 @@ define([
 			return [
 				{ field: 'systemName', title: this.resources.systemName },
 				{ field: 'name', title: this.resources.name },
+				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
+				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
 	});

@@ -17,16 +17,11 @@ namespace MasterDataModule.API.Controllers.Settings
     [AuthorizeByPermissions(PermissionTypes = new[] { Permissions.ArgeVersion })]
     public partial class SysTablesController //: ClientApiWithoutDeleteController<SysTableModel, SysTable, int, ISysTableManager>
     {
-        public override IHttpActionResult Post(SysTableModel model)
-        {
-            return NotFound();
-        }
-
         protected void ExtraEntityToModel(SysTable entity, SysTableModel model)
         {
             var description = StringHelper.GetTextForCurrentLocale(entity.Description,
                 CultureManager.Current.CurrentCulture);
-            model.description = String.Format("{0} ({1})", description, entity.Name);
+            model.tableDescription = String.Format("{0} ({1})", description, entity.Name);
         }
 
         //protected override IQueryable<SysTable> GetEntities()

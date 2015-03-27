@@ -24,6 +24,7 @@ define([
 
 		columns: function () {
 		    return [
+				{ field: 'name', title: this.resources.name },
 				{ field: 'description', title: this.resources.description },
 				{ field: 'readOnly', title: this.resources.readOnly , headerTitle: this.resources.readOnly, checkbox: true},
 			];
@@ -36,6 +37,13 @@ define([
 
 		    self.grid.bind('edit', function (e) {
 		        e.model.sysTableId = self.model.id;
+
+				if (e.model.isNew()) {
+                    var dt = new Date(2070, 11, 31);
+		            e.model.toDate = dt;
+		            var numeric = e.container.find("input[name=toDate]");
+		            numeric[0].value = dt.toLocaleDateString();
+		        }
 		    });
 
 		    return self;

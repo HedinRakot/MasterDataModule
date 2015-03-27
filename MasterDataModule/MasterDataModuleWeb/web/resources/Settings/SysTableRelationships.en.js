@@ -4,7 +4,7 @@ define(function () {
 	var resources = {
 	     title: 'Relationships',
 		 dataLoading: 'Data is loading. Please wait...',
-	    sysColumns: 'Column',
+	    sysColumns: 'Columns',
 	};
 
 	return resources;

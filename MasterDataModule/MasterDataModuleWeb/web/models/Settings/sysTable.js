@@ -5,6 +5,9 @@ define(function () {
 	    urlRoot: 'api/SysTables',
 		fields: {
 			id: { type: "number", editable: false }
+			,name: { type: "string", 
+			                        editable: Application.canTableItemBeEdit('sysTable', 'name'), 
+				                    validation: { required: true, maxLength: 128 } }			
 			,description: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('sysTable', 'description'), 
 				                    validation: { required: false, maxLength: 256 } }			

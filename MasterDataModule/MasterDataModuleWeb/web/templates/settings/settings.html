@@ -3,6 +3,11 @@
     <tr>        
         <td>
             <ul>
+				<% if (Application.hasPermission('SysTable')) { %>
+                <li>
+                    <a href="#SysTables" data-localized="SysTables"></a>
+                </li>
+				<%}%>
 				<% if (Application.hasPermission('Role')) { %>
                 <li>
                     <a href="#Roles" data-localized="Roles"></a>
@@ -11,11 +16,6 @@
 				<% if (Application.hasPermission('Permission')) { %>
                 <li>
                     <a href="#Permissions" data-localized="Permissions"></a>
-                </li>
-				<%}%>
-				<% if (Application.hasPermission('SysTable')) { %>
-                <li>
-                    <a href="#SysTables" data-localized="SysTables"></a>
                 </li>
 				<%}%>
 				<% if (Application.hasPermission('User')) { %>
