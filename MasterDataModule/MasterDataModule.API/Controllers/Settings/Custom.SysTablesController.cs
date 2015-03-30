@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Linq;
-using System.Web.Http;
-using MasterDataModule.API.Models;
 using TuevSued.V1.IT.FE.CoreBase;
 using TuevSued.V1.IT.FE.CoreBase.Localization;
-using MasterDataModule.Contracts;
 using System.Collections.Generic;
 using MasterDataModule.API.Models.Settings;
 using MasterDataModule.API.Security;
@@ -15,8 +11,7 @@ using System.Linq.Dynamic;
 
 namespace MasterDataModule.API.Controllers.Settings
 {
-    [AuthorizeByPermissions(PermissionTypes = new[] { Permissions.SysTable })]
-    public partial class SysTablesController 
+    public partial class SysTablesController
     {
         protected void ExtraEntityToModel(SysTable entity, SysTableModel model)
         {
