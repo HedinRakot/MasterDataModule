@@ -48,9 +48,9 @@
     <Compile Include="WcfServicePingManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MonitoringAgent.Common\MonitoringAgent.Common.csproj">
+    <ProjectReference Include="..\MonitoringAgent.Data\MonitoringAgent.Data.csproj">
       <Project>{212CBF33-24EA-447A-8086-6CC2504EE108}</Project>
-      <Name>MonitoringAgent.Common</Name>
+      <Name>MonitoringAgent.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

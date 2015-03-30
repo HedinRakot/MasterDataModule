@@ -3,6 +3,7 @@ using System.Linq;
 using MonitoringAgent.Common.Data;
 using MonitoringAgent.Common.Data.Managers;
 
+
 namespace MonitoringAgent.WcfServices
 {
     public class WcfPingService

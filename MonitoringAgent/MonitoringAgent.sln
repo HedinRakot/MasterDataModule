@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringAgent.Console", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringAgent.WcfServices", "MonitoringAgent.WcfServices\MonitoringAgent.WcfServices.csproj", "{8EF550E5-C1E3-4DE8-BB30-29BABBCED03E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringAgent.Common", "MonitoringAgent.Common\MonitoringAgent.Common.csproj", "{212CBF33-24EA-447A-8086-6CC2504EE108}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringAgent.Data", "MonitoringAgent.Data\MonitoringAgent.Data.csproj", "{212CBF33-24EA-447A-8086-6CC2504EE108}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
