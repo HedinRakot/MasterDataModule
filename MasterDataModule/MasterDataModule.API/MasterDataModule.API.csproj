@@ -495,6 +495,7 @@
     <Compile Include="Controllers\GridArgsModelBinder.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\LogoutController.cs" />
+    <Compile Include="Controllers\Settings\Custom.SysColumnsController.cs" />
     <Compile Include="Controllers\Settings\Custom.SysTablesController.cs" />
     <Compile Include="Controllers\Settings\Custom.UserController.cs" />
     <Compile Include="Controllers\Settings\MasterDataRolePermissionRspsController.cs">
@@ -802,10 +803,12 @@
     <Compile Include="Models\ISystemModelFields.cs" />
     <Compile Include="Models\IModelIntervalFields.cs" />
     <Compile Include="Models\Settings\Custom.RoleModel.cs" />
+    <Compile Include="Models\Settings\Custom.SysColumnModel.cs" />
     <Compile Include="Models\Settings\Custom.SysTableModel.cs" />
     <Compile Include="Models\Settings\MasterDataRolePermissionRspModel.cs">
       <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Settings\Custom.UserModel.cs" />
     <Compile Include="Models\Settings\SysColumnModel.cs">
       <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
     </Compile>

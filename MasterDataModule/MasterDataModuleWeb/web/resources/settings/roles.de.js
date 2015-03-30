@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,9 +9,13 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Stammdaten Rolle',
 		pleaseSelect: 'Bitte auswählen',
+
 		name: 'Name',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

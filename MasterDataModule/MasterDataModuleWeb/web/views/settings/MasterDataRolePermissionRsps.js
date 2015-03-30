@@ -1,7 +1,7 @@
-define([
-	'base/related-object-grid-view',
-    'collections/Settings/MasterDataRolePermissionRsps',
-    'l!t!Settings/AddMasterDataRolePermissionRsp'
+define([	
+    'base/related-object-grid-view',
+'collections/Settings/MasterDataRolePermissionRsps',
+'l!t!Settings/AddMasterDataRolePermissionRsp'
 ], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
@@ -23,7 +23,8 @@ define([
 		},
 
 		columns: function () {
-		    return [
+		   
+		   return [
 				{ field: 'masterDataPermissionId', title: this.resources.masterDataPermissionId , collection: this.options.permission, defaultText: this.resources.pleaseSelect},
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},

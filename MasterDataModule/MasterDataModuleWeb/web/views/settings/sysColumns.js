@@ -1,8 +1,9 @@
-define([
-	'base/related-object-grid-view',
-    'collections/Settings/SysColumns',
-    'l!t!Settings/AddSysColumn'
-], function (BaseView, Collection, AddNewModelView) {
+define([	
+    'base/related-object-grid-view',
+'collections/Settings/SysColumns',
+'l!t!Settings/AddSysColumn',
+'Settings/Custom.SysColumn'
+], function (BaseView, Collection, AddNewModelView, CustomColumns) {
 	'use strict';
 
 	var view = BaseView.extend({
@@ -23,11 +24,11 @@ define([
 		},
 
 		columns: function () {
-		    return [
-				{ field: 'name', title: this.resources.name },
-				{ field: 'description', title: this.resources.description },
+		   
+		   return $.merge( CustomColumns(),
+[
 				{ field: 'readOnly', title: this.resources.readOnly , headerTitle: this.resources.readOnly, checkbox: true},
-			];
+			]);
 		},
 		
 		render: function () {

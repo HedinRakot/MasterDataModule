@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Stammdaten Spalte',
 		pleaseSelect: 'Bitte auswählen',
+
 		sysTableId: 'Tabelle',	
+
 		name: 'Name',	
+
 		description: 'Beschreibung',	
+
 		readOnly: 'Nicht editierbar',	
+
 	};
 
 	return resources;

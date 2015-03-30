@@ -11,11 +11,12 @@ using MasterDataModule.API.Security;
 using MasterDataModule.Contracts.Entities.Configuration;
 using MasterDataModule.Contracts.Enums;
 using MasterDataModule.Contracts.Managers.Configuration;
+using System.Linq.Dynamic;
 
 namespace MasterDataModule.API.Controllers.Settings
 {
-    [AuthorizeByPermissions(PermissionTypes = new[] { Permissions.ArgeVersion })]
-    public partial class SysTablesController //: ClientApiWithoutDeleteController<SysTableModel, SysTable, int, ISysTableManager>
+    [AuthorizeByPermissions(PermissionTypes = new[] { Permissions.SysTable })]
+    public partial class SysTablesController 
     {
         protected void ExtraEntityToModel(SysTable entity, SysTableModel model)
         {
@@ -23,11 +24,6 @@ namespace MasterDataModule.API.Controllers.Settings
                 CultureManager.Current.CurrentCulture);
             model.tableDescription = String.Format("{0} ({1})", description, entity.Name);
         }
-
-        //protected override IQueryable<SysTable> GetEntities()
-        //{
-        //    return base.GetEntities().Where(o => !o.DeleteDate.HasValue);
-        //}
 
         protected override string BuildWhereClause<T>(Filter filter)
         {
@@ -45,6 +41,14 @@ namespace MasterDataModule.API.Controllers.Settings
             }
 
             return base.BuildWhereClause<T>(filter);
+        }
+
+        protected override IQueryable<SysTable> Sort(IQueryable<SysTable> entities, Sorting sorting)
+        {
+            if (sorting.Field == "tableDescription")
+                return entities.OrderBy("Description " + sorting.Direction);
+            
+            return base.Sort(entities, sorting);
         }
     }
 }

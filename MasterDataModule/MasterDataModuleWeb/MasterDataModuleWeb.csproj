@@ -3384,6 +3384,12 @@
     <Content Include="web\resources\Settings\AddUser.en.js">
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\Settings\Custom.ChangePassword.de.js" />
+    <Content Include="web\resources\Settings\Custom.SysColumns.de.js" />
+    <Content Include="web\resources\Settings\Custom.SysColumns.en.js" />
+    <Content Include="web\resources\Settings\Custom.User.de.js" />
+    <Content Include="web\resources\Settings\Custom.ChangePassword.en.js" />
+    <Content Include="web\resources\Settings\Custom.User.en.js" />
     <Content Include="web\resources\Settings\Custom.SysTables.de.js" />
     <Content Include="web\resources\Settings\Custom.SysTables.en.js" />
     <Content Include="web\resources\Settings\FilterMasterDataRolePermissionRsp.de.js">
@@ -6375,6 +6381,9 @@
       <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\ChangePassword.js" />
+    <Content Include="web\views\Settings\Custom.Events.User.js" />
+    <Content Include="web\views\Settings\Custom.SysColumn.js" />
+    <Content Include="web\views\Settings\Custom.User.js" />
     <Content Include="web\views\Settings\FilterPermission.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
     </Content>

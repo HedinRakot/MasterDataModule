@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,9 +9,13 @@ define(function () {
 	    masterData: 'Settings',
 	    pageTitle: 'Master data table',
 		pleaseSelect: 'Please select',
+
 		name: 'Name',	
+
 		description: 'Description',	
+
 		editMode: 'Edit mode',	
+
 	};
 
 	return resources;

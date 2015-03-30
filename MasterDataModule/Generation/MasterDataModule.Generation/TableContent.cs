@@ -32,5 +32,6 @@ namespace MasterDataModule.Generation
         public string TitleFieldName { get; set; }
         public bool GenerateViewCollection { get; set; }
         public bool ShowExtraFields { get; set; }
+        public bool CustomEvents { get; set; }
     }
 }

@@ -3,7 +3,7 @@
 
     var resources = {
 
-        tableDescription: 'Beschreibung',
+        columnDescription: 'Description',
     };
 
     return resources;

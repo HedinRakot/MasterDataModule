@@ -20,6 +20,10 @@
         foreach (var property in model.ModelProperties)
         {
             var propContent = property.Column.Content;
+
+			if(!propContent.ShowInAddView)
+				continue;
+
             var type = GetPropertyType(context, property);
 #>
 		<div class="editor-label">

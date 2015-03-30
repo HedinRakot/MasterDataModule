@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -9,10 +10,15 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Master data column',
 		pleaseSelect: 'Please select',
+
 		sysTableId: 'Table',	
+
 		name: 'Name',	
+
 		description: 'Description',	
+
 		readOnly: 'Readonly',	
+
 	};
 
 	return resources;

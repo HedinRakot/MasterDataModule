@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,9 +9,13 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Stammdaten Tabelle',
 		pleaseSelect: 'Bitte auswählen',
+
 		name: 'Name',	
+
 		description: 'Beschreibung',	
+
 		editMode: 'Editiebarkeit',	
+
 	};
 
 	return resources;

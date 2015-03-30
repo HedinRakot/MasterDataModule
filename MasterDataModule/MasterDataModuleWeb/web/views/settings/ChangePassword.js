@@ -2,13 +2,14 @@
 	'base/base-window-view',
 	'mixins/kendo-validator-form',
 	'mixins/localized-view',
-	'mixins/bound-form'
-], function (BaseView, KendoValidatorFormMixin, LocalizedViewMixin, BoundForm) {
+	'mixins/bound-form',
+    'lr!resources/Settings/Custom.ChangePassword',
+], function (BaseView, KendoValidatorFormMixin, LocalizedViewMixin, BoundForm, Resources) {
 	'use strict';
 
 	var view = BaseView.extend({
 		title: function () {
-			return this.resources.changePassword;
+			return Resources.changePassword;
 		},
 		events: {
 			'click button[type=submit]': function (e) {
@@ -43,6 +44,13 @@
 			view.__super__.render.apply(this, arguments);
 
 			this.stickit();
+
+			var self = this;
+
+			self.$el.find('#passwordTitle').text(Resources.password);
+			self.$el.find('#passwordConfirmationTitle').text(Resources.passwordConfirmation);
+			self.$el.find('#change').text(Resources.change);
+			self.$el.find('#cancel').text(Resources.cancel);
 
 			return this;
 		}

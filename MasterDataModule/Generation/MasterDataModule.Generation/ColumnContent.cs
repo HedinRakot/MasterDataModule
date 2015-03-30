@@ -7,6 +7,7 @@ namespace MasterDataModule.Generation
     {
         public bool InModel { get; set; }
         public bool ShowInGrid { get; set; }
+        public bool ShowInAddView { get; set; }
         public bool IsModelRequired { get; set; }
         
         public string JsModelType { get; set; }

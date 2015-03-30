@@ -2,8 +2,8 @@ define([
 	'base/base-object-grid-view',
 'collections/Settings/SysTables',
 'l!t!Settings/FilterSysTable',
-'l!t!Settings/SysTableRelationships'
-,'Settings/Custom.SysTable'
+'l!t!Settings/SysTableRelationships',
+'Settings/Custom.SysTable'
 ], function (BaseView, Collection, FilterView, DetailView, CustomColumns) {
 	'use strict';
 
@@ -26,6 +26,7 @@ define([
 				{ field: 'editMode', title: this.resources.editMode , collection: this.options.editModeType, defaultText: this.resources.pleaseSelect},
 			]);
 		}
+
 	});
 
 	return view;

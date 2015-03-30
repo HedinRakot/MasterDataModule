@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Stammdaten Berechtigung',
 		pleaseSelect: 'Bitte auswählen',
+
 		systemName: 'Systemname',	
+
 		name: 'Name',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

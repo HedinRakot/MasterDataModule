@@ -28,6 +28,8 @@ namespace MasterDataModule.API.Controllers.Settings
             model.readOnly = entity.ReadOnly;
             model.createDate = ((ISystemFields)entity).CreateDate;
             model.changeDate = ((ISystemFields)entity).ChangeDate;
+
+            ExtraEntityToModel(entity, model);
         }
         protected override void ModelToEntity(SysColumnModel model, SysColumn entity, ActionTypes actionType)
         {

@@ -57,10 +57,10 @@ namespace MasterDataModule.API.Controllers
             if (model.EditModeType)
                 result.Add("EditModeType", new[]
                 {
-                    new { id = "0", name = "nur lesen"},
-                    new { id = "1", name = "editieren"},
-                    new { id = "2", name = "editieren/anlegen"},
-                    new { id = "3", name = "editieren/anlegen/löschen"},
+                    new { id = 0, name = "nur lesen"},
+                    new { id = 1, name = "editieren"},
+                    new { id = 2, name = "editieren/anlegen"},
+                    new { id = 3, name = "editieren/anlegen/löschen"},
                 });
 
             if (model.AssignationType)
