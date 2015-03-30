@@ -8,6 +8,7 @@ using MasterDataModule.Contracts.Entities.Configuration;
 using MasterDataModule.Contracts.Enums;
 using MasterDataModule.Contracts.Managers.Configuration;
 using System.Linq.Dynamic;
+using System.Linq;
 
 namespace MasterDataModule.API.Controllers.Settings
 {
