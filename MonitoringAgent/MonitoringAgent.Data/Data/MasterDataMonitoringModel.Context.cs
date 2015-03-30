@@ -6,7 +6,7 @@
 //     Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+using MonitoringAgent.Data.Interfaces.Entities;
 namespace MonitoringAgent.Common.Data
 {
     using System;

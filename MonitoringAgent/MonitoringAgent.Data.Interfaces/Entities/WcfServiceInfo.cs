@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MonitoringAgent.Common.Data
+namespace MonitoringAgent.Data.Interfaces.Entities
 {
     using System;
     using System.Collections.Generic;

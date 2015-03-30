@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Practices.Unity;
+using MonitoringAgent.WcfServices.Interfaces.Services;
 
 namespace MonitoringAgent
 {
@@ -10,6 +8,11 @@ namespace MonitoringAgent
     {
         static void Main(string[] args)
         {
+            var application = new Application();
+            application.Initialize();
+            var wcfManager = application.Container.Resolve<IWcfServicePingManager>();
+            wcfManager.StartChecking();
+            Console.ReadLine();
         }
     }
 }

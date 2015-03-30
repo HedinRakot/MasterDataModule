@@ -4,11 +4,22 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="MasterDataMonitoringModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
-        <EntityContainer Name="MasterDataMonitoringModelTargetContainer" >
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="MasterDataMonitoringModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MasterDataMonitoringModelStoreContainer">
+    <EntitySet Name="WcfServiceInfoSet" EntityType="MasterDataMonitoringModel.Store.WcfServiceInfoSet" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="WcfServiceInfoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="WsdlPath" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastCheckStatus" Type="smallint" Nullable="true" />
+    <Property Name="LastCheckDate" Type="datetime" Nullable="true" />
+    <Property Name="Message" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="MasterDataMonitoringModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
@@ -24,19 +35,28 @@
           <Property Name="WsdlPath" Type="String" Nullable="false" />
           <Property Name="LastCheckStatus" Type="Int16" Nullable="true" />
           <Property Name="LastCheckDate" Type="DateTime" Nullable="true" />
-          <Property Name="Message" Type="String" Nullable="false" />
+          <Property Name="Message" Type="String" Nullable="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
-        <Alias Key="Model" Value="MasterDataMonitoringModel" />
-        <Alias Key="Target" Value="MasterDataMonitoringModel.Store" />
-        <EntityContainerMapping CdmEntityContainer="MasterDataMonitoringModelContainer" StorageEntityContainer="MasterDataMonitoringModelTargetContainer">
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MasterDataMonitoringModelStoreContainer" CdmEntityContainer="MasterDataMonitoringModelContainer">
+    <EntitySetMapping Name="WcfServiceInfoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(MasterDataMonitoringModel.WcfServiceInfo)">
+        <MappingFragment StoreEntitySet="WcfServiceInfoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="WsdlPath" ColumnName="WsdlPath" />
+          <ScalarProperty Name="LastCheckStatus" ColumnName="LastCheckStatus" />
+          <ScalarProperty Name="LastCheckDate" ColumnName="LastCheckDate" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -50,6 +70,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->

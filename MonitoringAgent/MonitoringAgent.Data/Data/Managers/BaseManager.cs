@@ -1,10 +1,11 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
+using MonitoringAgent.Data.Interfaces.Managers;
 
 namespace MonitoringAgent.Common.Data.Managers
 {
-    public abstract class BaseManager<TEntity> where TEntity : class
+    public abstract class BaseManager<TEntity> : IBaseManager<TEntity> where TEntity : class
     {
         private readonly DbContext context;
 
@@ -21,6 +22,11 @@ namespace MonitoringAgent.Common.Data.Managers
         public void AddOrUpdateEntities(TEntity[] entities)
         {
             context.Set<TEntity>().AddOrUpdate(entities);
+        }
+
+        public void SaveChanges()
+        {
+            context.SaveChanges();
         }
     }
 }

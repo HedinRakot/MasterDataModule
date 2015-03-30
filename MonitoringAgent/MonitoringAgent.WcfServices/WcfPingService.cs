@@ -1,16 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using MonitoringAgent.Common.Data;
-using MonitoringAgent.Common.Data.Managers;
+using MonitoringAgent.Data.Interfaces.Entities;
+using MonitoringAgent.Data.Interfaces.Managers;
+using MonitoringAgent.WcfServices.Interfaces.Services;
 
 
 namespace MonitoringAgent.WcfServices
 {
-    public class WcfPingService
+    public class WcfPingService : IWcfPingService
     {
-        private readonly WcfServiceInfoManager manager;
+        private readonly IWcfServiceInfoManager manager;
 
-        public WcfPingService(WcfServiceInfoManager manager)
+        public WcfPingService(IWcfServiceInfoManager manager)
         {
             this.manager = manager;
         }
@@ -23,6 +24,7 @@ namespace MonitoringAgent.WcfServices
         public void SetCheckingResults(List<WcfServiceInfo> serviceInfos)
         {
             manager.AddOrUpdateEntities(serviceInfos.ToArray());
+            manager.SaveChanges();
         }
     }
 }

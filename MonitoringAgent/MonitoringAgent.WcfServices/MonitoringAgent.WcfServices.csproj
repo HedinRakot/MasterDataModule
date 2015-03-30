@@ -48,9 +48,13 @@
     <Compile Include="WcfServicePingManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MonitoringAgent.Data\MonitoringAgent.Data.csproj">
-      <Project>{212CBF33-24EA-447A-8086-6CC2504EE108}</Project>
-      <Name>MonitoringAgent.Data</Name>
+    <ProjectReference Include="..\MonitoringAgent.Data.Interfaces\MonitoringAgent.Data.Interfaces.csproj">
+      <Project>{60706078-76E4-4402-8AC4-C14D94138946}</Project>
+      <Name>MonitoringAgent.Data.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonitoringAgent.WcfServices.Interfaces\MonitoringAgent.WcfServices.Interfaces.csproj">
+      <Project>{A4C045C8-8F6A-4990-98D3-52F0706A93F3}</Project>
+      <Name>MonitoringAgent.WcfServices.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
