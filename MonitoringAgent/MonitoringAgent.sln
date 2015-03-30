@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringAgent.WcfServices
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringAgent.Common", "MonitoringAgent.Common\MonitoringAgent.Common.csproj", "{212CBF33-24EA-447A-8086-6CC2504EE108}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringAgent.SettingsStorage", "MonitoringAgent.SettingsStorage\MonitoringAgent.SettingsStorage.csproj", "{BEA3E966-2071-439C-B939-E24ADBE59A79}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{212CBF33-24EA-447A-8086-6CC2504EE108}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{212CBF33-24EA-447A-8086-6CC2504EE108}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{212CBF33-24EA-447A-8086-6CC2504EE108}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BEA3E966-2071-439C-B939-E24ADBE59A79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BEA3E966-2071-439C-B939-E24ADBE59A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BEA3E966-2071-439C-B939-E24ADBE59A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BEA3E966-2071-439C-B939-E24ADBE59A79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

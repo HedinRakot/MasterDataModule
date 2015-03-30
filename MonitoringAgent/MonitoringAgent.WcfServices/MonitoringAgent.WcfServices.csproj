@@ -43,7 +43,15 @@
   <ItemGroup>
     <Compile Include="PingResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WcfPingService.cs" />
     <Compile Include="WcfMetadataLoader.cs" />
+    <Compile Include="WcfServicePingManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MonitoringAgent.Common\MonitoringAgent.Common.csproj">
+      <Project>{212CBF33-24EA-447A-8086-6CC2504EE108}</Project>
+      <Name>MonitoringAgent.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
