@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{60706078-76E4-4402-8AC4-C14D94138946}</ProjectGuid>
+    <ProjectGuid>{920C610B-F26D-4FF1-A330-5F4EC671BC8A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MonitoringAgent.Data.Interfaces</RootNamespace>
-    <AssemblyName>MonitoringAgent.Data.Interfaces</AssemblyName>
+    <RootNamespace>MonitoringAgent.Site</RootNamespace>
+    <AssemblyName>MonitoringAgent.Site</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,55 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Entities.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Entities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\SiteInfo.cs">
-      <DependentUpon>Entities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\SiteInfoCheckResult.cs">
-      <DependentUpon>Entities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\WcfServiceInfo.cs">
-      <DependentUpon>Entities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\WcfServiceInfoCheckResult.cs">
-      <DependentUpon>Entities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Managers\IBaseManager.cs" />
-    <Compile Include="Managers\IManagers.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IManagers.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Managers\ISiteInfoCheckResultManager.cs">
-      <DependentUpon>IManagers.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Managers\ISiteInfoManager.cs">
-      <DependentUpon>IManagers.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Managers\IWcfServiceInfoCheckResultManager.cs">
-      <DependentUpon>IManagers.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Managers\IWcfServiceInfoManager.cs">
-      <DependentUpon>IManagers.tt</DependentUpon>
-    </Compile>
+    <Compile Include="SitePingModule.cs" />
+    <Compile Include="SitePingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Entities\Entities.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Entities.cs</LastGenOutput>
-    </None>
-    <None Include="Managers\IManagers.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>IManagers.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <ProjectReference Include="..\MonitoringAgent.Data.Interfaces\MonitoringAgent.Data.Interfaces.csproj">
+      <Project>{60706078-76E4-4402-8AC4-C14D94138946}</Project>
+      <Name>MonitoringAgent.Data.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonitoringAgent.Services.Common\MonitoringAgent.Services.Common.csproj">
+      <Project>{57E0112C-5F5D-4AF8-9249-406030775DF7}</Project>
+      <Name>MonitoringAgent.Services.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonitoringAgent.Site.Interfaces\MonitoringAgent.Site.Interfaces.csproj">
+      <Project>{4B3C304C-5F5C-4B6A-922B-FB0782C9056E}</Project>
+      <Name>MonitoringAgent.Site.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

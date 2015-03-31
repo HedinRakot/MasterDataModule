@@ -65,6 +65,14 @@
       <Project>{57E0112C-5F5D-4AF8-9249-406030775DF7}</Project>
       <Name>MonitoringAgent.Services.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MonitoringAgent.Site.Interfaces\MonitoringAgent.Site.Interfaces.csproj">
+      <Project>{4B3C304C-5F5C-4B6A-922B-FB0782C9056E}</Project>
+      <Name>MonitoringAgent.Site.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonitoringAgent.Site\MonitoringAgent.Site.csproj">
+      <Project>{920C610B-F26D-4FF1-A330-5F4EC671BC8A}</Project>
+      <Name>MonitoringAgent.Site</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MonitoringAgent.WcfServices.Interfaces\MonitoringAgent.WcfServices.Interfaces.csproj">
       <Project>{A4C045C8-8F6A-4990-98D3-52F0706A93F3}</Project>
       <Name>MonitoringAgent.WcfServices.Interfaces</Name>

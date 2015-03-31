@@ -8,9 +8,15 @@
   <EntityContainer Name="MasterDataMonitoringModelStoreContainer">
     <EntitySet Name="WcfServiceInfoSet" EntityType="MasterDataMonitoringModel.Store.WcfServiceInfoSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="WcfServiceInfoCheckResultSet" EntityType="MasterDataMonitoringModel.Store.WcfServiceInfoCheckResultSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SiteInfoSet" EntityType="MasterDataMonitoringModel.Store.SiteInfoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SiteInfoCheckResultSet" EntityType="MasterDataMonitoringModel.Store.SiteInfoCheckResultSet" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="WcfServiceInfoCheckResultWcfServiceInfo" Association="MasterDataMonitoringModel.Store.WcfServiceInfoCheckResultWcfServiceInfo">
       <End Role="WcfServiceInfoCheckResult" EntitySet="WcfServiceInfoCheckResultSet" />
       <End Role="WcfServiceInfo" EntitySet="WcfServiceInfoSet" />
+    </AssociationSet>
+    <AssociationSet Name="SiteInfoCheckResultSiteInfo" Association="MasterDataMonitoringModel.Store.SiteInfoCheckResultSiteInfo">
+      <End Role="SiteInfoCheckResult" EntitySet="SiteInfoCheckResultSet" />
+      <End Role="SiteInfo" EntitySet="SiteInfoSet" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="WcfServiceInfoSet">
@@ -33,6 +39,26 @@
     <Property Name="Attempt" Type="int" Nullable="true" />
     <Property Name="WcfServiceInfoId" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="SiteInfoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TimeoutChecking" Type="int" Nullable="false" />
+    <Property Name="SitePath" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SiteInfoCheckResultSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CheckStatus" Type="int" Nullable="true" />
+    <Property Name="CheckDate" Type="datetime" Nullable="true" />
+    <Property Name="Message" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Attempt" Type="int" Nullable="true" />
+    <Property Name="SiteInfoId" Type="int" Nullable="false" />
+  </EntityType>
   <Association Name="WcfServiceInfoCheckResultWcfServiceInfo">
     <End Role="WcfServiceInfoCheckResult" Type="MasterDataMonitoringModel.Store.WcfServiceInfoCheckResultSet" Multiplicity="*" />
     <End Role="WcfServiceInfo" Type="MasterDataMonitoringModel.Store.WcfServiceInfoSet" Multiplicity="1" />
@@ -42,6 +68,18 @@
       </Principal>
       <Dependent Role="WcfServiceInfoCheckResult">
         <PropertyRef Name="WcfServiceInfoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SiteInfoCheckResultSiteInfo">
+    <End Role="SiteInfoCheckResult" Type="MasterDataMonitoringModel.Store.SiteInfoCheckResultSet" Multiplicity="*" />
+    <End Role="SiteInfo" Type="MasterDataMonitoringModel.Store.SiteInfoSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="SiteInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SiteInfoCheckResult">
+        <PropertyRef Name="SiteInfoId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -55,6 +93,12 @@
           <AssociationSet Name="WcfServiceInfoCheckResultWcfServiceInfo" Association="MasterDataMonitoringModel.WcfServiceInfoCheckResultWcfServiceInfo">
             <End Role="WcfServiceInfoCheckResult" EntitySet="WcfServiceInfoCheckResultSet" />
             <End Role="WcfServiceInfo" EntitySet="WcfServiceInfoSet" />
+          </AssociationSet>
+          <EntitySet Name="SiteInfoSet" EntityType="MasterDataMonitoringModel.SiteInfo" />
+          <EntitySet Name="SiteInfoCheckResultSet" EntityType="MasterDataMonitoringModel.SiteInfoCheckResult" />
+          <AssociationSet Name="SiteInfoCheckResultSiteInfo" Association="MasterDataMonitoringModel.SiteInfoCheckResultSiteInfo">
+            <End Role="SiteInfoCheckResult" EntitySet="SiteInfoCheckResultSet" />
+            <End Role="SiteInfo" EntitySet="SiteInfoSet" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="WcfServiceInfo">
@@ -89,6 +133,38 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="SiteInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="TimeoutChecking" Type="Int32" Nullable="false" />
+          <Property Name="SitePath" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SiteInfoCheckResult">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CheckStatus" Type="Int32" Nullable="true" />
+          <Property Name="CheckDate" Type="DateTime" Nullable="true" />
+          <Property Name="Message" Type="String" Nullable="true" />
+          <Property Name="Attempt" Type="Int32" Nullable="true" />
+          <Property Name="SiteInfoId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="SiteInfoCheckResultSiteInfo">
+          <End Type="MasterDataMonitoringModel.SiteInfoCheckResult" Role="SiteInfoCheckResult" Multiplicity="*" />
+          <End Type="MasterDataMonitoringModel.SiteInfo" Role="SiteInfo" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="SiteInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SiteInfoCheckResult">
+              <PropertyRef Name="SiteInfoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -114,6 +190,28 @@
           <ScalarProperty Name="Message" ColumnName="Message" />
           <ScalarProperty Name="Attempt" ColumnName="Attempt" />
           <ScalarProperty Name="WcfServiceInfoId" ColumnName="WcfServiceInfoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiteInfoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(MasterDataMonitoringModel.SiteInfo)">
+        <MappingFragment StoreEntitySet="SiteInfoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TimeoutChecking" ColumnName="TimeoutChecking" />
+          <ScalarProperty Name="SitePath" ColumnName="SitePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiteInfoCheckResultSet">
+      <EntityTypeMapping TypeName="IsTypeOf(MasterDataMonitoringModel.SiteInfoCheckResult)">
+        <MappingFragment StoreEntitySet="SiteInfoCheckResultSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CheckStatus" ColumnName="CheckStatus" />
+          <ScalarProperty Name="CheckDate" ColumnName="CheckDate" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Attempt" ColumnName="Attempt" />
+          <ScalarProperty Name="SiteInfoId" ColumnName="SiteInfoId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

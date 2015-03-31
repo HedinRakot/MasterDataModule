@@ -55,6 +55,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Managers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\Managers\SiteInfoCheckResultManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Managers\SiteInfoManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\Managers\WcfServiceInfoCheckResultManager.cs">
       <DependentUpon>Managers.tt</DependentUpon>
     </Compile>

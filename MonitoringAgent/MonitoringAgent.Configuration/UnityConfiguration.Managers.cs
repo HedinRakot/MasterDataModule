@@ -19,6 +19,8 @@ namespace MonitoringAgent.Configuration
     {
     	public void RegisterManagers(IUnityContainer container)
     	{
+    		container.RegisterType<ISiteInfoManager, SiteInfoManager>();
+    		container.RegisterType<ISiteInfoCheckResultManager, SiteInfoCheckResultManager>();
     		container.RegisterType<IWcfServiceInfoManager, WcfServiceInfoManager>();
     		container.RegisterType<IWcfServiceInfoCheckResultManager, WcfServiceInfoCheckResultManager>();
     	}

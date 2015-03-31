@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ServiceModel.Description;
+using MonitoringAgent.Services.Common;
 
 namespace MonitoringAgent.WcfServices
 {

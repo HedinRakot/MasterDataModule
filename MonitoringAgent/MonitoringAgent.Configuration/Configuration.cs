@@ -1,5 +1,7 @@
 ﻿using Microsoft.Practices.Unity;
 using MonitoringAgent.Services.Common.Contracts;
+using MonitoringAgent.Site;
+using MonitoringAgent.Site.Interfaces.Services;
 using MonitoringAgent.WcfServices;
 using MonitoringAgent.WcfServices.Interfaces.Services;
 
@@ -13,7 +15,9 @@ namespace MonitoringAgent.Configuration
         {
             RegisterManagers(container);   
             container.RegisterType<IWcfPingService, WcfPingService>();
-            container.RegisterType<ICheckingService, WcfServicePingManager>("wcfPingManager");
+            container.RegisterType<ICheckingModule, WcfServicePingModule>("wcfPingManager");
+
+            container.RegisterType<ISitePingService, SitePingService>();
         }
 
         public IUnityContainer Container

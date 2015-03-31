@@ -8,6 +8,9 @@
         <EntityTypeShape EntityType="MasterDataMonitoringModel.WcfServiceInfo" Width="1.5" PointX="2.375" PointY="0.625" IsExpanded="true" />
         <EntityTypeShape EntityType="MasterDataMonitoringModel.WcfServiceInfoCheckResult" Width="1.5" PointX="6" PointY="0.875" />
         <AssociationConnector Association="MasterDataMonitoringModel.WcfServiceInfoCheckResultWcfServiceInfo" />
+        <EntityTypeShape EntityType="MasterDataMonitoringModel.SiteInfoCheckResult" Width="1.5" PointX="4.125" PointY="3.5" />
+        <EntityTypeShape EntityType="MasterDataMonitoringModel.SiteInfo" Width="1.5" PointX="1.75" PointY="3.5" />
+        <AssociationConnector Association="MasterDataMonitoringModel.SiteInfoCheckResultSiteInfo" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
