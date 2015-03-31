@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Managers\BaseManager.cs" />
+    <Compile Include="Data\Managers\WcfServiceInfoCheckResultManager.cs" />
     <Compile Include="Data\Managers\WcfServiceInfoManager.cs" />
     <Compile Include="Data\MasterDataMonitoringModel.Context.cs">
       <AutoGen>True</AutoGen>

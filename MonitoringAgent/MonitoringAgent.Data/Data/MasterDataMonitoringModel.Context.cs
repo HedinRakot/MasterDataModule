@@ -26,5 +26,6 @@ namespace MonitoringAgent.Common.Data
         }
     
         public virtual DbSet<WcfServiceInfo> WcfServiceInfoSet { get; set; }
+        public virtual DbSet<WcfServiceInfoCheckResult> WcfServiceInfoCheckResultSet { get; set; }
     }
 }

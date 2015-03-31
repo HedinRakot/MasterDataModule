@@ -48,7 +48,11 @@
     <Compile Include="Entities\WcfServiceInfo.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\WcfServiceInfoCheckResult.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\IBaseManager.cs" />
+    <Compile Include="Managers\IWcfServiceInfoCheckResultManager.cs" />
     <Compile Include="Managers\IWcfServiceInfoManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

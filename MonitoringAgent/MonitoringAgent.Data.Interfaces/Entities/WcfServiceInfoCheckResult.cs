@@ -12,11 +12,13 @@ namespace MonitoringAgent.Data.Interfaces.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class WcfServiceInfo
+    public partial class WcfServiceInfoCheckResult
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string WsdlPath { get; set; }
-        public int TimeoutChecking { get; set; }
+        public Nullable<int> CheckStatus { get; set; }
+        public Nullable<System.DateTime> CheckDate { get; set; }
+        public string Message { get; set; }
+        public Nullable<int> Attempt { get; set; }
+        public int WcfServiceInfoId { get; set; }
     }
 }

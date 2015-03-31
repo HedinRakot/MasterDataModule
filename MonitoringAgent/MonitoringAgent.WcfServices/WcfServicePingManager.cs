@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Threading;
+using MonitoringAgent.Data.Interfaces.Entities;
+using MonitoringAgent.Services.Common.Contracts;
 using MonitoringAgent.WcfServices.Interfaces.Services;
 
 namespace MonitoringAgent.WcfServices
 {
-    public class WcfServicePingManager : IWcfServicePingManager
+    public class WcfServicePingManager : ICheckingService
     {
         private readonly IWcfPingService service;
         private readonly Timer timer;
@@ -34,11 +36,26 @@ namespace MonitoringAgent.WcfServices
             {
                 var loader = new WcfMetadataLoader(wcfServiceInfo.WsdlPath);
                 var result = loader.Ping();
-                wcfServiceInfo.LastCheckStatus = (short)(result.Result? 1: 0);
-                wcfServiceInfo.LastCheckDate = DateTime.Now;
-                wcfServiceInfo.Message = result.Message;
+                var lastResult = service.GetLastResult(wcfServiceInfo.Id);
+                if (lastResult != null && ((lastResult.CheckStatus == 1 && result.Result) || (lastResult.CheckStatus == 0 && !result.Result)))
+                {
+                    lastResult.Attempt++;
+                    lastResult.CheckDate = DateTime.Now;
+                }
+                else
+                {
+                    lastResult = new WcfServiceInfoCheckResult
+                    {
+                        Attempt = 1,
+                        CheckDate = DateTime.Now,
+                        WcfServiceInfoId = wcfServiceInfo.Id,
+                        CheckStatus = result.Result ? 1 : 0,
+                        Message = result.Message,
+                    };
+                }
+
+                service.SetCheckingResult(lastResult);
             }
-            service.SetCheckingResults(services);
 
             StartChecking();
         }

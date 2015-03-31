@@ -64,7 +64,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +77,10 @@
     <ProjectReference Include="..\MonitoringAgent.Data\MonitoringAgent.Data.csproj">
       <Project>{212CBF33-24EA-447A-8086-6CC2504EE108}</Project>
       <Name>MonitoringAgent.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonitoringAgent.Services.Common\MonitoringAgent.Services.Common.csproj">
+      <Project>{57E0112C-5F5D-4AF8-9249-406030775DF7}</Project>
+      <Name>MonitoringAgent.Services.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\MonitoringAgent.WcfServices.Interfaces\MonitoringAgent.WcfServices.Interfaces.csproj">
       <Project>{A4C045C8-8F6A-4990-98D3-52F0706A93F3}</Project>

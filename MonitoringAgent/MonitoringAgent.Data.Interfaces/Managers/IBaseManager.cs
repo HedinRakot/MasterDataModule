@@ -6,7 +6,6 @@ namespace MonitoringAgent.Data.Interfaces.Managers
     {
         IQueryable<TEntity> GetAllEntities();
         void AddOrUpdateEntities(TEntity[] entities);
-
         void SaveChanges();
     }
 }

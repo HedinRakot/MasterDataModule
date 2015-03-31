@@ -7,6 +7,11 @@
     <Schema Namespace="MasterDataMonitoringModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="MasterDataMonitoringModelStoreContainer">
     <EntitySet Name="WcfServiceInfoSet" EntityType="MasterDataMonitoringModel.Store.WcfServiceInfoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WcfServiceInfoCheckResultSet" EntityType="MasterDataMonitoringModel.Store.WcfServiceInfoCheckResultSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="WcfServiceInfoCheckResultWcfServiceInfo" Association="MasterDataMonitoringModel.Store.WcfServiceInfoCheckResultWcfServiceInfo">
+      <End Role="WcfServiceInfoCheckResult" EntitySet="WcfServiceInfoCheckResultSet" />
+      <End Role="WcfServiceInfo" EntitySet="WcfServiceInfoSet" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="WcfServiceInfoSet">
     <Key>
@@ -15,16 +20,42 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="WsdlPath" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="LastCheckStatus" Type="smallint" Nullable="true" />
-    <Property Name="LastCheckDate" Type="datetime" Nullable="true" />
-    <Property Name="Message" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TimeoutChecking" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="WcfServiceInfoCheckResultSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CheckStatus" Type="int" Nullable="true" />
+    <Property Name="CheckDate" Type="datetime" Nullable="true" />
+    <Property Name="Message" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Attempt" Type="int" Nullable="true" />
+    <Property Name="WcfServiceInfoId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="WcfServiceInfoCheckResultWcfServiceInfo">
+    <End Role="WcfServiceInfoCheckResult" Type="MasterDataMonitoringModel.Store.WcfServiceInfoCheckResultSet" Multiplicity="*" />
+    <End Role="WcfServiceInfo" Type="MasterDataMonitoringModel.Store.WcfServiceInfoSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="WcfServiceInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="WcfServiceInfoCheckResult">
+        <PropertyRef Name="WcfServiceInfoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="MasterDataMonitoringModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="MasterDataMonitoringModelContainer" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="WcfServiceInfoSet" EntityType="MasterDataMonitoringModel.WcfServiceInfo" />
+          <EntitySet Name="WcfServiceInfoCheckResultSet" EntityType="MasterDataMonitoringModel.WcfServiceInfoCheckResult" />
+          <AssociationSet Name="WcfServiceInfoCheckResultWcfServiceInfo" Association="MasterDataMonitoringModel.WcfServiceInfoCheckResultWcfServiceInfo">
+            <End Role="WcfServiceInfoCheckResult" EntitySet="WcfServiceInfoCheckResultSet" />
+            <End Role="WcfServiceInfo" EntitySet="WcfServiceInfoSet" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="WcfServiceInfo">
           <Key>
@@ -33,10 +64,31 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" />
           <Property Name="WsdlPath" Type="String" Nullable="false" />
-          <Property Name="LastCheckStatus" Type="Int16" Nullable="true" />
-          <Property Name="LastCheckDate" Type="DateTime" Nullable="true" />
-          <Property Name="Message" Type="String" Nullable="true" />
+          <Property Name="TimeoutChecking" Type="Int32" Nullable="false" />
         </EntityType>
+        <EntityType Name="WcfServiceInfoCheckResult">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CheckStatus" Type="Int32" Nullable="true" />
+          <Property Name="CheckDate" Type="DateTime" Nullable="true" />
+          <Property Name="Message" Type="String" Nullable="true" />
+          <Property Name="Attempt" Type="Int32" Nullable="true" />
+          <Property Name="WcfServiceInfoId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="WcfServiceInfoCheckResultWcfServiceInfo">
+          <End Type="MasterDataMonitoringModel.WcfServiceInfoCheckResult" Role="WcfServiceInfoCheckResult" Multiplicity="*" />
+          <End Type="MasterDataMonitoringModel.WcfServiceInfo" Role="WcfServiceInfo" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="WcfServiceInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WcfServiceInfoCheckResult">
+              <PropertyRef Name="WcfServiceInfoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -49,9 +101,19 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="WsdlPath" ColumnName="WsdlPath" />
-          <ScalarProperty Name="LastCheckStatus" ColumnName="LastCheckStatus" />
-          <ScalarProperty Name="LastCheckDate" ColumnName="LastCheckDate" />
+          <ScalarProperty Name="TimeoutChecking" ColumnName="TimeoutChecking" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WcfServiceInfoCheckResultSet">
+      <EntityTypeMapping TypeName="IsTypeOf(MasterDataMonitoringModel.WcfServiceInfoCheckResult)">
+        <MappingFragment StoreEntitySet="WcfServiceInfoCheckResultSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CheckStatus" ColumnName="CheckStatus" />
+          <ScalarProperty Name="CheckDate" ColumnName="CheckDate" />
           <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Attempt" ColumnName="Attempt" />
+          <ScalarProperty Name="WcfServiceInfoId" ColumnName="WcfServiceInfoId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
