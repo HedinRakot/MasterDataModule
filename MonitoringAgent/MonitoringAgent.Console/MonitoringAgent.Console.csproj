@@ -59,7 +59,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -70,6 +69,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MonitoringAgent.Configuration\MonitoringAgent.Configuration.csproj">
+      <Project>{BFF3AF7A-B8E5-46D4-932E-9ACBB87ECBA1}</Project>
+      <Name>MonitoringAgent.Configuration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MonitoringAgent.Data.Interfaces\MonitoringAgent.Data.Interfaces.csproj">
       <Project>{60706078-76E4-4402-8AC4-C14D94138946}</Project>
       <Name>MonitoringAgent.Data.Interfaces</Name>
