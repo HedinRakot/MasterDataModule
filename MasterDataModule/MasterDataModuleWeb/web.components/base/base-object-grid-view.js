@@ -60,7 +60,7 @@
 		},
 
 		events: {
-		    'dblclick .k-grid tbody tr[role=row] td:not(.k-hierarchy-cell)': function (e) {
+		    'dblclick .k-grid tbody tr.k-master-row td:not(.k-hierarchy-cell)': function (e) {
 		        
 		        var self = this,
 		            dataItem = self.grid.dataItem(e.currentTarget.parentElement);
