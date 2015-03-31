@@ -50,8 +50,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Managers\BaseManager.cs" />
-    <Compile Include="Data\Managers\WcfServiceInfoCheckResultManager.cs" />
-    <Compile Include="Data\Managers\WcfServiceInfoManager.cs" />
+    <Compile Include="Data\Managers\Managers.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Managers\WcfServiceInfoCheckResultManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Managers\WcfServiceInfoManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\MasterDataMonitoringModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -78,6 +87,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+    <None Include="Data\Managers\Managers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Managers.cs</LastGenOutput>
+    </None>
     <None Include="Data\MasterDataMonitoringModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MasterDataMonitoringModel.Context.cs</LastGenOutput>

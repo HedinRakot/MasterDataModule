@@ -9,10 +9,10 @@ namespace MonitoringAgent
     {
         static void Main(string[] args)
         {
-            var application = new Application();
-            application.Initialize();
+            var config = new Configuration.Configuration();
+            config.Initialize();
 
-            var checkingServices = application.Container.ResolveAll<ICheckingService>();
+            var checkingServices = config.Container.ResolveAll<ICheckingService>();
             foreach (var checkingService in checkingServices)
             {
                 checkingService.StartChecking();
