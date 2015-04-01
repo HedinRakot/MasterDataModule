@@ -13,6 +13,7 @@ namespace MonitoringAgent.Data.Interfaces.Entities
     using System.Collections.Generic;
     
     public partial class SiteInfo
+    : ICheckServiceInfo
     {
         public int Id { get; set; }
         public string Name { get; set; }

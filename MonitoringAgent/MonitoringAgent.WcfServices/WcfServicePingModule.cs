@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Services.Common;
 using MonitoringAgent.WcfServices.Interfaces.Services;
@@ -14,13 +15,14 @@ namespace MonitoringAgent.WcfServices
             this.service = service;
         }
 
-        protected override void RegisterServices()
+        protected override IList<WcfServiceInfo> ServiceExtractor()
         {
-            var services = service.GetAllServicesToCheck();
-            foreach (var serviceInfo in services)
-            {
-                AddService(serviceInfo, serviceInfo.Name, serviceInfo.TimeoutChecking);
-            }
+            return service.GetAllServicesToCheck();
+        }
+
+        protected override WcfServiceInfoCheckResult LastResultExtractor(WcfServiceInfo serviceInfo)
+        {
+            return service.GetLastResult(serviceInfo.Id);
         }
 
         protected override WcfServiceInfoCheckResult CheckService(WcfServiceInfo serviceInfo)
@@ -39,13 +41,6 @@ namespace MonitoringAgent.WcfServices
 
         protected override void SaveCheckingResult(WcfServiceInfoCheckResult result)
         {
-            var lastResult = service.GetLastResult(result.WcfServiceInfoId);
-            if (lastResult != null && result.CheckStatus == lastResult.CheckStatus && result.Message == lastResult.Message)
-            {
-                lastResult.Attempt++;
-                lastResult.CheckDate = result.CheckDate;
-                result = lastResult;
-            }
             service.SetCheckingResult(result);
         }
     }

@@ -25,6 +25,20 @@ foreach (var entity in typeMapper.GetItemsToGenerate<EntityType>(itemCollection)
 #>
 <#=codeStringGenerator.UsingDirectives(inHeader: false)#>
 <#=codeStringGenerator.EntityClassOpening(entity)#>
+<#if (entity.Name.EndsWith("Info"))
+{
+#>
+: ICheckServiceInfo
+<#
+}
+#>
+<#if (entity.Name.EndsWith("CheckResult"))
+{
+#>
+: ICheckResult
+<#
+}
+#>
 {
 <#
     var propertiesWithDefaultValues = typeMapper.GetPropertiesWithDefaultValues(entity);

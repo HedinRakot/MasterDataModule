@@ -13,6 +13,7 @@ namespace MonitoringAgent.Data.Interfaces.Entities
     using System.Collections.Generic;
     
     public partial class SiteInfoCheckResult
+    : ICheckResult
     {
         public int Id { get; set; }
         public Nullable<int> CheckStatus { get; set; }

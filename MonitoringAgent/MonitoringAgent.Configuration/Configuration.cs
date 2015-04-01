@@ -15,9 +15,10 @@ namespace MonitoringAgent.Configuration
         {
             RegisterManagers(container);   
             container.RegisterType<IWcfPingService, WcfPingService>();
-            container.RegisterType<ICheckingModule, WcfServicePingModule>("wcfPingManager");
+            container.RegisterType<ICheckingModule, WcfServicePingModule>("wcfPing");
 
             container.RegisterType<ISitePingService, SitePingService>();
+            container.RegisterType<ICheckingModule, SitePingModule>("sitePing");
         }
 
         public IUnityContainer Container

@@ -3,5 +3,7 @@
     public interface ICheckingModule
     {
         void Initialize();
+        void StartAllChecks();
+        void StopAllChecks();
     }
 }

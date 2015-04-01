@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="CheckingModule.cs" />
     <Compile Include="Contracts\ICheckingModule.cs" />
-    <Compile Include="PingResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

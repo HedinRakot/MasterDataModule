@@ -1,48 +1,94 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
+using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Services.Common.Contracts;
 
 namespace MonitoringAgent.Services.Common
 {
     public abstract class CheckingModule<TServiceInfo, TCheckingResult> : ICheckingModule
-        where TServiceInfo : class
-        where TCheckingResult: class
+        where TServiceInfo : class, ICheckServiceInfo
+        where TCheckingResult: class, ICheckResult
     {
-        readonly Dictionary<string, Timer> checkTimers = new Dictionary<string, Timer>(); 
+        readonly Dictionary<string, ServiceInfo> checkServices = new Dictionary<string, ServiceInfo>(); 
 
-        protected void AddService(TServiceInfo serviceInfo, string name, int timeout)
+        private void AddService(TServiceInfo serviceInfo, string name, int timeout)
         {
             var info = new ServiceInfo
             {
                 Info = serviceInfo,
                 Name = name,
-                Timeout = timeout
+                Timeout = timeout,
+                Timer = new Timer(TimerElapsed, name, Timeout.Infinite, Timeout.Infinite)
             };
 
-            var timer = new Timer(TimerElapsed, info, Timeout.Infinite, Timeout.Infinite);
-            checkTimers.Add(name, timer);
-            timer.Change(timeout, timeout);
+            checkServices.Add(name, info);
         }
 
         private void TimerElapsed(object state)
         {
-            var info = state as ServiceInfo;
-            if (info != null)
+            var serviceName = state as string;
+            ServiceInfo info;
+            if (!string.IsNullOrEmpty(serviceName) && checkServices.TryGetValue(serviceName, out info))
             {
-                var timer = checkTimers[info.Name];
+                var timer = info.Timer;
                 timer.Change(Timeout.Infinite, Timeout.Infinite);
                 var checkingResult = CheckService(info.Info);
+
+                var lastResult = LastResultExtractor(info.Info);
+                if (lastResult != null && checkingResult.CheckStatus == lastResult.CheckStatus && checkingResult.Message == lastResult.Message)
+                {
+                    lastResult.Attempt++;
+                    lastResult.CheckDate = checkingResult.CheckDate;
+                    checkingResult = lastResult;
+                }
                 SaveCheckingResult(checkingResult);
-                timer.Change(info.Timeout, info.Timeout);
+
+                lock (info.SyncObject)
+                {
+                    if (info.CanStart)
+                    {
+                        timer.Change(info.Timeout, info.Timeout);
+                    }
+                }
             }
         }
 
         public void Initialize()
         {
-            RegisterServices();
+            var services = ServiceExtractor();
+            foreach (var service in services)
+            {
+                AddService(service, service.Name, service.TimeoutChecking);
+            }
         }
 
-        protected abstract void RegisterServices();
+        public void StartAllChecks()
+        {
+            foreach (var value in checkServices.Values)
+            {
+                lock (value.SyncObject)
+                {
+                    value.CanStart = true;
+                    value.Timer.Change(value.Timeout, value.Timeout);
+                }
+            }
+        }
+
+        public void StopAllChecks()
+        {
+            foreach (var value in checkServices.Values)
+            {
+                lock (value.SyncObject)
+                {
+                    value.CanStart = false;
+                    value.Timer.Change(Timeout.Infinite, Timeout.Infinite);
+                }
+            }
+        }
+
+        protected abstract IList<TServiceInfo> ServiceExtractor();
+
+        protected abstract TCheckingResult LastResultExtractor(TServiceInfo serviceInfo);
 
         protected abstract TCheckingResult CheckService(TServiceInfo serviceInfo);
 
@@ -52,9 +98,17 @@ namespace MonitoringAgent.Services.Common
 
         private class ServiceInfo
         {
+            private readonly object syncObject = new object();
+
             public TServiceInfo Info { get; set; }
             public string Name { get; set; }
             public int Timeout { get; set; }
+            public Timer Timer { get; set; }
+            public object SyncObject
+            {
+                get { return syncObject; }
+            }
+            public bool CanStart { get; set; }
         }
 
         #endregion Nested types

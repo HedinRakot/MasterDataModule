@@ -1,4 +1,4 @@
-namespace MonitoringAgent.Services.Common
+namespace MonitoringAgent.WcfServices
 {
     public class PingResult
     {

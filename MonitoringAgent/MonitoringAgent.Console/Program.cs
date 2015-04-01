@@ -16,6 +16,7 @@ namespace MonitoringAgent
             foreach (var checkingModule in checkingModules)
             {
                 checkingModule.Initialize();
+                checkingModule.StartAllChecks();
             }
 
             Console.ReadLine();
