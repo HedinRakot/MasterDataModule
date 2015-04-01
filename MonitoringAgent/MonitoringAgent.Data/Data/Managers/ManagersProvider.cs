@@ -12,17 +12,18 @@ using MonitoringAgent.Common.Data.Managers;
 using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Data.Interfaces.Managers;
 
-namespace MonitoringAgent.Configuration
+namespace MonitoringAgent.Common.Data.Managers
 {
     
-    public partial class Configuration
+    public partial class ManagersProvider
     {
     	public void RegisterManagers(IUnityContainer container)
     	{
-    		container.RegisterType<ISiteInfoManager, SiteInfoManager>();
-    		container.RegisterType<ISiteInfoCheckResultManager, SiteInfoCheckResultManager>();
-    		container.RegisterType<IWcfServiceInfoManager, WcfServiceInfoManager>();
-    		container.RegisterType<IWcfServiceInfoCheckResultManager, WcfServiceInfoCheckResultManager>();
+    		container.RegisterType<ISiteInfoManager, SiteInfoManager>(new PerResolveLifetimeManager());
+    		container.RegisterType<ISiteInfoCheckResultManager, SiteInfoCheckResultManager>(new PerResolveLifetimeManager());
+    		container.RegisterType<IStateManager, StateManager>(new PerResolveLifetimeManager());
+    		container.RegisterType<IWcfServiceInfoManager, WcfServiceInfoManager>(new PerResolveLifetimeManager());
+    		container.RegisterType<IWcfServiceInfoCheckResultManager, WcfServiceInfoCheckResultManager>(new PerResolveLifetimeManager());
     	}
     }
 }

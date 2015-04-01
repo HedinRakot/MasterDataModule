@@ -15,7 +15,7 @@ namespace MonitoringAgent.Common.Data.Managers
     
     public partial class SiteInfoManager: BaseManager<SiteInfo>, ISiteInfoManager
     {
-    	public SiteInfoManager(MasterDataMonitoringModelContainer context) : base(context)
+    	public SiteInfoManager(DbContextProvider contextProvider) : base(contextProvider)
         {
         }
     }

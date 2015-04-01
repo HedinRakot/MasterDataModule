@@ -62,6 +62,22 @@ namespace MonitoringAgent.Services.Common
             }
         }
 
+        public void Reinitialize()
+        {
+            foreach (var checkService in checkServices.Values)
+            {
+                lock (checkService.SyncObject)
+                {
+                    checkService.Timer.Change(Timeout.Infinite, Timeout.Infinite);
+                    checkService.Timer.Dispose();
+                    checkService.Timer = null;
+                    checkService.CanStart = false;
+                }
+            }
+            checkServices.Clear();
+            Initialize();
+        }
+
         public void StartAllChecks()
         {
             foreach (var value in checkServices.Values)

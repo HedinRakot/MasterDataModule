@@ -13,9 +13,9 @@ using MonitoringAgent.Data.Interfaces.Managers;
 namespace MonitoringAgent.Common.Data.Managers
 {
     
-    public partial class WcfServiceInfoManager: BaseManager<WcfServiceInfo>, IWcfServiceInfoManager
+    public partial class StateManager: BaseManager<State>, IStateManager
     {
-    	public WcfServiceInfoManager(DbContextProvider contextProvider) : base(contextProvider)
+    	public StateManager(DbContextProvider contextProvider) : base(contextProvider)
         {
         }
     }

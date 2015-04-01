@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using MonitoringAgent.Data.Interfaces.Managers;
@@ -9,9 +10,9 @@ namespace MonitoringAgent.Common.Data.Managers
     {
         private readonly DbContext context;
 
-        protected BaseManager(DbContext context)
+        protected BaseManager(DbContextProvider contextProvider)
         {
-            this.context = context;
+            context = contextProvider.GetContext();
         }
 
         public IQueryable<TEntity> GetAllEntities()
@@ -21,6 +22,7 @@ namespace MonitoringAgent.Common.Data.Managers
 
         public void AddOrUpdateEntities(TEntity[] entities)
         {
+
             context.Set<TEntity>().AddOrUpdate(entities);
         }
 

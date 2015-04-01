@@ -10,6 +10,7 @@
     <EntitySet Name="WcfServiceInfoCheckResultSet" EntityType="MasterDataMonitoringModel.Store.WcfServiceInfoCheckResultSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="SiteInfoSet" EntityType="MasterDataMonitoringModel.Store.SiteInfoSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="SiteInfoCheckResultSet" EntityType="MasterDataMonitoringModel.Store.SiteInfoCheckResultSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="States" EntityType="MasterDataMonitoringModel.Store.States" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="WcfServiceInfoCheckResultWcfServiceInfo" Association="MasterDataMonitoringModel.Store.WcfServiceInfoCheckResultWcfServiceInfo">
       <End Role="WcfServiceInfoCheckResult" EntitySet="WcfServiceInfoCheckResultSet" />
       <End Role="WcfServiceInfo" EntitySet="WcfServiceInfoSet" />
@@ -59,6 +60,14 @@
     <Property Name="Attempt" Type="int" Nullable="true" />
     <Property Name="SiteInfoId" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="States">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Reconfigure" Type="bit" Nullable="true" DefaultValue="true" />
+    <Property Name="ReconfigureCheckTimeout" Type="int" Nullable="false" DefaultValue="10000" />
+  </EntityType>
   <Association Name="WcfServiceInfoCheckResultWcfServiceInfo">
     <End Role="WcfServiceInfoCheckResult" Type="MasterDataMonitoringModel.Store.WcfServiceInfoCheckResultSet" Multiplicity="*" />
     <End Role="WcfServiceInfo" Type="MasterDataMonitoringModel.Store.WcfServiceInfoSet" Multiplicity="1" />
@@ -87,7 +96,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="MasterDataMonitoringModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
-        <EntityContainer Name="MasterDataMonitoringModelContainer" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="MasterDataMonitoringModelContainer" annotation:LazyLoadingEnabled="false">
           <EntitySet Name="WcfServiceInfoSet" EntityType="MasterDataMonitoringModel.WcfServiceInfo" />
           <EntitySet Name="WcfServiceInfoCheckResultSet" EntityType="MasterDataMonitoringModel.WcfServiceInfoCheckResult" />
           <AssociationSet Name="WcfServiceInfoCheckResultWcfServiceInfo" Association="MasterDataMonitoringModel.WcfServiceInfoCheckResultWcfServiceInfo">
@@ -100,6 +109,7 @@
             <End Role="SiteInfoCheckResult" EntitySet="SiteInfoCheckResultSet" />
             <End Role="SiteInfo" EntitySet="SiteInfoSet" />
           </AssociationSet>
+          <EntitySet Name="States" EntityType="MasterDataMonitoringModel.State" />
         </EntityContainer>
         <EntityType Name="WcfServiceInfo">
           <Key>
@@ -165,6 +175,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Reconfigure" Type="Boolean" DefaultValue="true" />
+          <Property Name="ReconfigureCheckTimeout" Type="Int32" Nullable="false" DefaultValue="10000" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -212,6 +230,15 @@
           <ScalarProperty Name="Message" ColumnName="Message" />
           <ScalarProperty Name="Attempt" ColumnName="Attempt" />
           <ScalarProperty Name="SiteInfoId" ColumnName="SiteInfoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="IsTypeOf(MasterDataMonitoringModel.State)">
+        <MappingFragment StoreEntitySet="States">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Reconfigure" ColumnName="Reconfigure" />
+          <ScalarProperty Name="ReconfigureCheckTimeout" ColumnName="ReconfigureCheckTimeout" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -2,7 +2,7 @@
 <#@ include file="EF6.Utility.CS.ttinclude"#><#@ 
  output extension=".cs"#><#
 
-const string inputFile = @"..\MonitoringAgent.Data\Data\MasterDataMonitoringModel.edmx";
+const string inputFile = @"..\MasterDataMonitoringModel.edmx";
 var textTransform = DynamicTextTransformation.Create(this);
 var code = new CodeGenerationTools(this);
 var ef = new MetadataTools(this);
@@ -25,7 +25,7 @@ using MonitoringAgent.Data.Interfaces.Managers;
 
 <#BeginNamespace(code);#>
 
-public partial class Configuration
+public partial class ManagersProvider
 {
 	public void RegisterManagers(IUnityContainer container)
 	{
@@ -35,7 +35,7 @@ public partial class Configuration
 			var repName = entity.Name + "Manager";
 			var repInterface = "I" + repName;
 #>
-		container.RegisterType<<#=repInterface#>, <#=repName#>>();
+		container.RegisterType<<#=repInterface#>, <#=repName#>>(new PerResolveLifetimeManager());
 <#
 		}
 #>

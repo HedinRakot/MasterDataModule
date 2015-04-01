@@ -18,6 +18,8 @@ namespace MonitoringAgent.Common.Data
         public MasterDataMonitoringModelContainer()
             : base("name=MasterDataMonitoringModelContainer")
         {
+            this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.ProxyCreationEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -29,5 +31,6 @@ namespace MonitoringAgent.Common.Data
         public virtual DbSet<WcfServiceInfoCheckResult> WcfServiceInfoCheckResultSet { get; set; }
         public virtual DbSet<SiteInfo> SiteInfoSet { get; set; }
         public virtual DbSet<SiteInfoCheckResult> SiteInfoCheckResultSet { get; set; }
+        public virtual DbSet<State> States { get; set; }
     }
 }

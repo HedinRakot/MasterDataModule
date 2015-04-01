@@ -30,7 +30,7 @@ using MonitoringAgent.Data.Interfaces.Managers;
 
 public partial class <#=repName#>: BaseManager<<#=entity.Name#>>, I<#=repName#>
 {
-	public <#=repName#>(MasterDataMonitoringModelContainer context) : base(context)
+	public <#=repName#>(DbContextProvider contextProvider) : base(contextProvider)
     {
     }
 }

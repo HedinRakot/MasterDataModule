@@ -15,7 +15,7 @@ namespace MonitoringAgent.Common.Data.Managers
     
     public partial class WcfServiceInfoCheckResultManager: BaseManager<WcfServiceInfoCheckResult>, IWcfServiceInfoCheckResultManager
     {
-    	public WcfServiceInfoCheckResultManager(MasterDataMonitoringModelContainer context) : base(context)
+    	public WcfServiceInfoCheckResultManager(DbContextProvider contextProvider) : base(contextProvider)
         {
         }
     }

@@ -8,16 +8,12 @@
 //------------------------------------------------------------------------------
 
 using MonitoringAgent.Data.Interfaces.Entities;
-using MonitoringAgent.Data.Interfaces.Managers;
 
-namespace MonitoringAgent.Common.Data.Managers
+namespace MonitoringAgent.Data.Interfaces.Managers
 {
     
-    public partial class WcfServiceInfoManager: BaseManager<WcfServiceInfo>, IWcfServiceInfoManager
+    public partial interface IStateManager: IBaseManager<State>
     {
-    	public WcfServiceInfoManager(DbContextProvider contextProvider) : base(contextProvider)
-        {
-        }
     }
     
 }

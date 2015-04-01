@@ -46,11 +46,6 @@
   <ItemGroup>
     <Compile Include="Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnityConfiguration.Managers.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UnityConfiguration.Managers.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MonitoringAgent.Data.Interfaces\MonitoringAgent.Data.Interfaces.csproj">
@@ -81,12 +76,6 @@
       <Project>{8EF550E5-C1E3-4DE8-BB30-29BABBCED03E}</Project>
       <Name>MonitoringAgent.WcfServices</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="UnityConfiguration.Managers.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>UnityConfiguration.Managers.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -43,6 +43,8 @@
     <Compile Include="CheckingModule.cs" />
     <Compile Include="Contracts\ICheckingModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ConfigurationService.cs" />
+    <Compile Include="Contracts\IConfigurationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MonitoringAgent.Data.Interfaces\MonitoringAgent.Data.Interfaces.csproj">
