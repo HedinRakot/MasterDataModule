@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -20,6 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TargetFrameworkProfile />
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -1192,6 +1194,12 @@
       <DependentUpon>web.tp.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\view-collection.js" />
+    <Content Include="web\resources\AdminService\AdminService.de.js" />
+    <Content Include="web\resources\AdminService\AdminService.en.js" />
+    <Content Include="web\resources\AdminService\JobMonitor\JobMonitor.de.js" />
+    <Content Include="web\resources\AdminService\JobMonitor\JobMonitor.en.js" />
+    <Content Include="web\resources\AdminService\WebServiceMonitor\WebServiceMonitor.de.js" />
+    <Content Include="web\resources\AdminService\WebServiceMonitor\WebServiceMonitor.en.js" />
     <Content Include="web\resources\CommonMasterData\CommonMasterData.de.js" />
     <Content Include="web\resources\CommonMasterData\CommonMasterData.en.js" />
     <Content Include="web\resources\CommonMasterData\Customer\AddInsTaxClass.de.js">
@@ -3901,6 +3909,7 @@
       <DependentUpon>web.tp.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\base-router.js" />
+    <Content Include="web\router-adminservice.js" />
     <Content Include="web\router-common-masterdata.js">
       <DependentUpon>web.common.router.template.tt</DependentUpon>
     </Content>
@@ -3914,6 +3923,9 @@
       <DependentUpon>web.tp.router.template.tt</DependentUpon>
     </Content>
     <Content Include="web\router.js" />
+    <Content Include="web\templates\AdminService\AdminService.html" />
+    <Content Include="web\templates\AdminService\JobMonitor\JobMonitor.html" />
+    <Content Include="web\templates\AdminService\WebServiceMonitor\WebServiceMonitor.html" />
     <Content Include="web\templates\CommonMasterData\CommonMasterData.html" />
     <Content Include="web\templates\CommonMasterData\Customer\AddInsTaxClass.html">
       <DependentUpon>web.customer.add.templates.tt</DependentUpon>
@@ -5324,6 +5336,9 @@
       <DependentUpon>web.tp.menu.template.tt</DependentUpon>
     </Content>
     <Content Include="web\application-start.js" />
+    <Content Include="web\views\AdminService\AdminService.js" />
+    <Content Include="web\views\AdminService\JobMonitor\JobMonitor.js" />
+    <Content Include="web\views\AdminService\WebServiceMonitor\WebServiceMonitor.js" />
     <Content Include="web\views\CommonMasterData\CommonMasterData.js" />
     <Content Include="web\views\CommonMasterData\Customer\AddInsTaxClass.js">
       <DependentUpon>web.customer.add.views.tt</DependentUpon>
@@ -7415,6 +7430,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>

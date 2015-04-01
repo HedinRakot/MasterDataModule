@@ -3,8 +3,9 @@
     'router-drl-masterdata',
     'router-tp-masterdata',
     'router-common-masterdata',
-    'router-masterdata'
-], function (BaseRouter, FeMasterDataRouter, TPMasterDataRouter, CommonMasterDataRouter, MasterDataRouter) {
+    'router-masterdata',
+    'router-adminservice'
+], function (BaseRouter, FeMasterDataRouter, TPMasterDataRouter, CommonMasterDataRouter, MasterDataRouter, AdminServiceRouter) {
 	'use strict';
 
 	var router = Backbone.Router.extend({
@@ -38,6 +39,7 @@
 
 
                 'CommonMasterData': _.partial(BaseRouter.showView, this, 'l!t!CommonMasterData/CommonMasterData'),
+                'AdminService': _.partial(BaseRouter.showView, this, 'l!t!AdminService/AdminService'),
                 'DriverLicenceMasterData': _.partial(BaseRouter.showView, this, 'l!t!DriverLicenceMasterData/DriverLicenceMasterData'),
                 'TechnicalInspectionMasterData': _.partial(BaseRouter.showView, this, 'l!t!TechnicalInspectionMasterData/TechnicalInspectionMasterData'),
                 'CustomerMasterData': _.partial(BaseRouter.showView, this, 'l!t!CommonMasterData/Customer/CustomerMasterData'),
@@ -46,11 +48,12 @@
                 'ProductMasterData': _.partial(BaseRouter.showView, this, 'l!t!CommonMasterData/Product/ProductMasterData'),
                 'SystemMasterData': _.partial(BaseRouter.showView, this, 'l!t!CommonMasterData/System/SystemMasterData'),
             };
-
+		    
 		    var result = $.extend({}, commonRoutes, FeMasterDataRouter.getAllMasterDataRoutes(this));
 		    result = $.extend({}, result, TPMasterDataRouter.getAllMasterDataRoutes(this));
 		    result = $.extend({}, result, CommonMasterDataRouter.getAllMasterDataRoutes(this));
 		    result = $.extend({}, result, MasterDataRouter.getAllMasterDataRoutes(this));
+		    result = $.extend({}, result, AdminServiceRouter.getAllMasterDataRoutes(this));
 		    return result;
 		}		
 	});
