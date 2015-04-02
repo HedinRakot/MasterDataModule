@@ -5,8 +5,8 @@ namespace MonitoringAgent.WcfServices.Interfaces.Services
 {
     public interface IWcfPingService
     {
-        List<WcfServiceInfo> GetAllServicesToCheck();
-        void SetCheckingResult(WcfServiceInfoCheckResult result);
-        WcfServiceInfoCheckResult GetLastResult(int serviceId);
+        List<MasterDataWcfInfo> GetAllServicesToCheck();
+        void SetCheckingResult(MasterDataWcfCheckResults result);
+        MasterDataWcfCheckResults GetLastResult(int serviceId);
     }
 }

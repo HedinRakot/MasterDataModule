@@ -40,8 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="JobCheckingModule.cs" />
+    <Compile Include="JobCheckService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MonitoringAgent.Data.Interfaces\MonitoringAgent.Data.Interfaces.csproj">
+      <Project>{60706078-76E4-4402-8AC4-C14D94138946}</Project>
+      <Name>MonitoringAgent.Data.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonitoringAgent.Job.Interfaces\MonitoringAgent.Job.Interfaces.csproj">
+      <Project>{C023387A-ED3A-40FE-B8FD-B95F88273C5E}</Project>
+      <Name>MonitoringAgent.Job.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonitoringAgent.Services.Common\MonitoringAgent.Services.Common.csproj">
+      <Project>{57E0112C-5F5D-4AF8-9249-406030775DF7}</Project>
+      <Name>MonitoringAgent.Services.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

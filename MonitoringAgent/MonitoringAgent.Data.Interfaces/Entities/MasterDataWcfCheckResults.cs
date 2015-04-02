@@ -1,0 +1,14 @@
+using System;
+
+namespace MonitoringAgent.Data.Interfaces.Entities
+{
+    public partial class MasterDataWcfCheckResults
+    {
+        public int Id { get; set; } // ID (Primary key)
+        public int? CheckStatus { get; set; } // CHECK_STATUS
+        public DateTime? CheckDate { get; set; } // CHECK_DATE
+        public string Message { get; set; } // MESSAGE
+        public int? Attempt { get; set; } // ATTEMPT
+        public int MasterDataWcfInfoId { get; set; } // MASTER_DATA_WCF_INFO_ID
+	}
+}

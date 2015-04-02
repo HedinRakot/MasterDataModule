@@ -2,34 +2,32 @@
 using System.Linq;
 using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Data.Interfaces.Managers;
+using MonitoringAgent.Services.Common.Base;
 using MonitoringAgent.Site.Interfaces.Services;
 
 namespace MonitoringAgent.Site
 {
-    public class SitePingService : ISitePingService
+    public class SitePingService :BaseManagersService, ISitePingService
     {
-        private readonly IManagersProvider managerProvider;
-
-        public SitePingService(IManagersProvider managerProvider)
+        public SitePingService(IManagersProvider managerProvider): base(managerProvider)
         {
-            this.managerProvider = managerProvider;
         }
 
-        public List<SiteInfo> GetAllSitesForCheck()
+        public List<MasterDataSiteInfo> GetAllSitesForCheck()
         {
-            var siteInfoManager = managerProvider.GetManager<ISiteInfoManager>();
+            var siteInfoManager = ManagersProvider.GetManager<IMasterDataSiteInfoManager>();
             return siteInfoManager.GetAllEntities().ToList();
         }
 
-        public SiteInfoCheckResult GetLastResult(int siteId)
+        public MasterDataSiteCheckResults GetLastResult(int siteId)
         {
-            var checkResultManager = managerProvider.GetManager<ISiteInfoCheckResultManager>();
-            return checkResultManager.GetAllEntities().Where(s => s.SiteInfoId == siteId).OrderByDescending(s => s.CheckDate).FirstOrDefault();
+            var checkResultManager = ManagersProvider.GetManager<IMasterDataSiteCheckResultsManager>();
+            return checkResultManager.GetAllEntities().Where(s => s.MasterDataSiteInfoId == siteId).OrderByDescending(s => s.CheckDate).FirstOrDefault();
         }
 
-        public void SetCheckingResult(SiteInfoCheckResult result)
+        public void SetCheckingResult(MasterDataSiteCheckResults result)
         {
-            var checkResultManager = managerProvider.GetManager<ISiteInfoCheckResultManager>();
+            var checkResultManager = ManagersProvider.GetManager<IMasterDataSiteCheckResultsManager>();
             checkResultManager.AddOrUpdateEntities(new[] { result });
             checkResultManager.SaveChanges();
         }

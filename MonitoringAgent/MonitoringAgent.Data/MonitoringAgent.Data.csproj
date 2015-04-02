@@ -42,6 +42,7 @@
       <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -54,6 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DbContextProvider.cs" />
+    <Compile Include="Data\IMasterDataDbContext.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\Managers\BaseManager.cs" />
     <Compile Include="Data\Managers\Custom.ManagersProvider.cs" />
     <Compile Include="Data\Managers\Managers.cs">
@@ -66,30 +70,55 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Data\Managers\SiteInfoCheckResultManager.cs">
+    <Compile Include="Data\Managers\MasterDataJobCheckResultsManager.cs">
       <DependentUpon>Managers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\Managers\SiteInfoManager.cs">
+    <Compile Include="Data\Managers\MasterDataJobInfoManager.cs">
       <DependentUpon>Managers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\Managers\StateManager.cs">
+    <Compile Include="Data\Managers\MasterDataMonitorStateManager.cs">
       <DependentUpon>Managers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\Managers\WcfServiceInfoCheckResultManager.cs">
+    <Compile Include="Data\Managers\MasterDataSiteCheckResultsManager.cs">
       <DependentUpon>Managers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\Managers\WcfServiceInfoManager.cs">
+    <Compile Include="Data\Managers\MasterDataSiteInfoManager.cs">
       <DependentUpon>Managers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\MasterDataMonitoringModel.Context.cs">
+    <Compile Include="Data\Managers\MasterDataWcfCheckResultsManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Managers\MasterDataWcfInfoManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MasterDataContext.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MasterDataMonitoringModel.Context.tt</DependentUpon>
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\MasterDataMonitoringModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MasterDataMonitoringModel.edmx</DependentUpon>
+    <Compile Include="Data\MasterDataDbContext.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MasterDataJobCheckResultsConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MasterDataJobInfoConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MasterDataMonitorStateConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MasterDataSiteCheckResultsConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MasterDataSiteInfoConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MasterDataWcfCheckResultsConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MasterDataWcfInfoConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -100,13 +129,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Data\MasterDataMonitoringModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MasterDataMonitoringModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
+    <None Include="Data\EF.Reverse.POCO.Core.ttinclude" />
+    <None Include="Data\EF.Reverse.POCO.ttinclude" />
     <None Include="Data\Managers\Managers.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Managers.cs</LastGenOutput>
@@ -115,14 +139,11 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ManagersProvider.cs</LastGenOutput>
     </None>
-    <None Include="Data\MasterDataMonitoringModel.Context.tt">
+    <None Include="Data\MasterDataContext.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MasterDataMonitoringModel.Context.cs</LastGenOutput>
-      <DependentUpon>MasterDataMonitoringModel.edmx</DependentUpon>
+      <LastGenOutput>MasterDataContext.cs</LastGenOutput>
     </None>
-    <None Include="Data\MasterDataMonitoringModel.edmx.diagram">
-      <DependentUpon>MasterDataMonitoringModel.edmx</DependentUpon>
-    </None>
+    <None Include="Data\Settings.ttinclude" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +152,7 @@
   <ItemGroup>
     <Content Include="Data\MasterDataMonitoringModel.edmx.sql" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

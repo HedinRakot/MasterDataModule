@@ -3,27 +3,26 @@ using System.Linq;
 using System.Threading;
 using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Data.Interfaces.Managers;
+using MonitoringAgent.Services.Common.Base;
 using MonitoringAgent.Services.Common.Contracts;
 
 namespace MonitoringAgent.Services.Common.Services
 {
-    public sealed class ConfigurationService : IConfigurationService
+    public sealed class ConfigurationService : BaseManagersService, IConfigurationService
     {
-        private readonly IManagersProvider managerProvider;
         private readonly Timer timer;
 
         public event EventHandler NeedReconfigure;
 
-        public ConfigurationService(IManagersProvider managerProvider)
+        public ConfigurationService(IManagersProvider managerProvider): base(managerProvider)
         {
-            this.managerProvider = managerProvider;
             timer = new Timer(state => TimerElapsed(), null, Timeout.Infinite, Timeout.Infinite);
         }
 
         public void Initialize()
         {
             var state = GetState();
-            timer.Change(state.ReconfigureCheckTimeout, state.ReconfigureCheckTimeout);
+            timer.Change(state.ReconfigureCheckingTimeout, state.ReconfigureCheckingTimeout);
         }
 
         private void TimerElapsed()
@@ -34,12 +33,12 @@ namespace MonitoringAgent.Services.Common.Services
             {
                 OnNeedReconfigure();
             }
-            timer.Change(state.ReconfigureCheckTimeout, state.ReconfigureCheckTimeout);
+            timer.Change(state.ReconfigureCheckingTimeout, state.ReconfigureCheckingTimeout);
         }
 
-        private State GetState()
+        private MasterDataMonitorState GetState()
         {
-            var stateManager = managerProvider.GetManager<IStateManager>();
+            var stateManager = ManagersProvider.GetManager<IMasterDataMonitorStateManager>();
             return stateManager.GetAllEntities().First();
         }
 
@@ -54,7 +53,7 @@ namespace MonitoringAgent.Services.Common.Services
 
         private void MarkReconfigureAsRead()
         {
-            var stateManager = managerProvider.GetManager<IStateManager>();
+            var stateManager = ManagersProvider.GetManager<IMasterDataMonitorStateManager>();
             var state = GetState();
             state.Reconfigure = false;
             stateManager.AddOrUpdateEntities(new[] {state});

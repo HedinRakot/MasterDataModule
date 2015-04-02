@@ -5,8 +5,8 @@ namespace MonitoringAgent.Site.Interfaces.Services
 {
     public interface ISitePingService
     {
-        List<SiteInfo> GetAllSitesForCheck();
-        SiteInfoCheckResult GetLastResult(int siteId);
-        void SetCheckingResult(SiteInfoCheckResult result);
+        List<MasterDataSiteInfo> GetAllSitesForCheck();
+        MasterDataSiteCheckResults GetLastResult(int siteId);
+        void SetCheckingResult(MasterDataSiteCheckResults result);
     }
 }

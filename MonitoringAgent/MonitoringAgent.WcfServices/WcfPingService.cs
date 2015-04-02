@@ -2,35 +2,34 @@
 using System.Linq;
 using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Data.Interfaces.Managers;
+using MonitoringAgent.Services.Common.Base;
 using MonitoringAgent.WcfServices.Interfaces.Services;
 
 
 namespace MonitoringAgent.WcfServices
 {
-    public class WcfPingService : IWcfPingService
+    public class WcfPingService : BaseManagersService, IWcfPingService
     {
-        private readonly IManagersProvider managersProvider;
-
         public WcfPingService(IManagersProvider managersProvider)
+            : base(managersProvider)
         {
-            this.managersProvider = managersProvider;
         }
 
-        public List<WcfServiceInfo> GetAllServicesToCheck()
+        public List<MasterDataWcfInfo> GetAllServicesToCheck()
         {
-            var manager = managersProvider.GetManager<IWcfServiceInfoManager>();
+            var manager = ManagersProvider.GetManager<IMasterDataWcfInfoManager>();
             return manager.GetAllEntities().ToList();
         }
 
-        public WcfServiceInfoCheckResult GetLastResult(int serviceId)
+        public MasterDataWcfCheckResults GetLastResult(int serviceId)
         {
-            var serviceInfoCheckResultManager = managersProvider.GetManager<IWcfServiceInfoCheckResultManager>();
-            return serviceInfoCheckResultManager.GetAllEntities().Where(s => s.WcfServiceInfoId == serviceId).OrderByDescending(s => s.CheckDate).FirstOrDefault();
+            var serviceInfoCheckResultManager = ManagersProvider.GetManager<IMasterDataWcfCheckResultsManager>();
+            return serviceInfoCheckResultManager.GetAllEntities().Where(s => s.MasterDataWcfInfoId == serviceId).OrderByDescending(s => s.CheckDate).FirstOrDefault();
         }
 
-        public void SetCheckingResult(WcfServiceInfoCheckResult result)
+        public void SetCheckingResult(MasterDataWcfCheckResults result)
         {
-            var serviceInfoCheckResultManager = managersProvider.GetManager<IWcfServiceInfoCheckResultManager>();
+            var serviceInfoCheckResultManager = ManagersProvider.GetManager<IMasterDataWcfCheckResultsManager>();
             serviceInfoCheckResultManager.AddOrUpdateEntities(new[] { result });
             serviceInfoCheckResultManager.SaveChanges();
         }

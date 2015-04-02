@@ -1,0 +1,8 @@
+﻿<#@ include file="Settings.ttinclude" #>
+<#
+    // Read schema
+    var factory = GetDbProviderFactory();
+    var tables = LoadTables(factory);
+    var storedProcs = LoadStoredProcs(factory);
+#>
+<#@ include file="EF.Reverse.POCO.ttinclude" #>

@@ -44,26 +44,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Entities.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Entities.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Entities\Custom.MasterDataJobInfo.cs" />
+    <Compile Include="Entities\Custom.MasterDataSiteInfo.cs" />
+    <Compile Include="Entities\Custom.MasterDataWcfInfo.cs" />
+    <Compile Include="Entities\Custom.WcfServiceInfoCheckResult.cs" />
+    <Compile Include="Entities\Custom.SiteInfoCheckResult.cs" />
     <Compile Include="Entities\ICheckResult.cs" />
     <Compile Include="Entities\ICheckServiceInfo.cs" />
-    <Compile Include="Entities\SiteInfo.cs">
+    <Compile Include="Entities\Entities.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\MasterDataJobCheckResults.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\SiteInfoCheckResult.cs">
+    <Compile Include="Entities\MasterDataJobInfo.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\State.cs">
+    <Compile Include="Entities\MasterDataMonitorState.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\WcfServiceInfo.cs">
+    <Compile Include="Entities\MasterDataSiteCheckResults.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\WcfServiceInfoCheckResult.cs">
+    <Compile Include="Entities\MasterDataSiteInfo.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterDataWcfCheckResults.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterDataWcfInfo.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\IBaseManager.cs" />
@@ -73,19 +84,25 @@
       <DependentUpon>IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\IManagersProvider.cs" />
-    <Compile Include="Managers\ISiteInfoCheckResultManager.cs">
+    <Compile Include="Managers\IMasterDataJobCheckResultsManager.cs">
       <DependentUpon>IManagers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Managers\ISiteInfoManager.cs">
+    <Compile Include="Managers\IMasterDataJobInfoManager.cs">
       <DependentUpon>IManagers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Managers\IStateManager.cs">
+    <Compile Include="Managers\IMasterDataMonitorStateManager.cs">
       <DependentUpon>IManagers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Managers\IWcfServiceInfoCheckResultManager.cs">
+    <Compile Include="Managers\IMasterDataSiteCheckResultsManager.cs">
       <DependentUpon>IManagers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Managers\IWcfServiceInfoManager.cs">
+    <Compile Include="Managers\IMasterDataSiteInfoManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\IMasterDataWcfCheckResultsManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\IMasterDataWcfInfoManager.cs">
       <DependentUpon>IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

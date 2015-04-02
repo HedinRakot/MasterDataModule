@@ -2,7 +2,6 @@
 using System.Linq;
 using Microsoft.Practices.Unity;
 using MonitoringAgent.Services.Common.Contracts;
-using MonitoringAgent.WcfServices.Interfaces.Services;
 
 namespace MonitoringAgent
 {
@@ -32,11 +31,6 @@ namespace MonitoringAgent
             };
 
             Console.ReadLine();
-        }
-
-        private static void ConfigServiceOnNeedReconfigure(object sender, EventArgs eventArgs)
-        {
-            
         }
     }
 }

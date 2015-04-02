@@ -1,10 +1,12 @@
-﻿namespace MonitoringAgent.Common.Data
+﻿using System.Data.Entity;
+
+namespace MonitoringAgent.Common.Data
 {
     public class DbContextProvider
     {
-        public MasterDataMonitoringModelContainer GetContext()
+        public DbContext GetContext()
         {
-            return new MasterDataMonitoringModelContainer();
+            return new MasterDataDbContext();
         }
     }
 }

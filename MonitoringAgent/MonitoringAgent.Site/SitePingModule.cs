@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Services.Common;
+using MonitoringAgent.Services.Common.Base;
 using MonitoringAgent.Site.Interfaces.Services;
 
 namespace MonitoringAgent.Site
 {
-    public sealed class SitePingModule: CheckingModule<SiteInfo, SiteInfoCheckResult>
+    public sealed class SitePingModule : CheckingModuleWithLastResult<MasterDataSiteInfo, MasterDataSiteCheckResults>
     {
         private readonly ISitePingService sitePingService;
 
@@ -16,32 +17,32 @@ namespace MonitoringAgent.Site
             this.sitePingService = sitePingService;
         }
 
-        protected override IList<SiteInfo> ServiceExtractor()
+        protected override IList<MasterDataSiteInfo> ServiceExtractor()
         {
             return sitePingService.GetAllSitesForCheck();
         }
 
-        protected override SiteInfoCheckResult LastResultExtractor(SiteInfo serviceInfo)
+        protected override void SaveResult(MasterDataSiteCheckResults result)
+        {
+            sitePingService.SetCheckingResult(result);
+        }
+
+        protected override MasterDataSiteCheckResults LastResultExtractor(MasterDataSiteInfo serviceInfo)
         {
             return sitePingService.GetLastResult(serviceInfo.Id);
         }
 
-        protected override SiteInfoCheckResult CheckService(SiteInfo serviceInfo)
+        protected override MasterDataSiteCheckResults CheckService(MasterDataSiteInfo serviceInfo)
         {
             var ping = new Ping();
             var result = ping.Send(serviceInfo.SitePath);
-            return new SiteInfoCheckResult
+            return new MasterDataSiteCheckResults
             {
                 Attempt = 1,
                 CheckDate = DateTime.Now,
-                SiteInfoId = serviceInfo.Id,
+                MasterDataSiteInfoId = serviceInfo.Id,
                 CheckStatus = result.Status == IPStatus.Success ? 1 : 0,
             };
-        }
-
-        protected override void SaveCheckingResult(SiteInfoCheckResult result)
-        {
-            sitePingService.SetCheckingResult(result);
         }
     }
 }
