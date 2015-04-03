@@ -78,10 +78,10 @@ public static readonly <#= mapping.Name #> Instance = new <#= mapping.Name #>();
             code.WriteLine();
             code.Write(".IsUnicode()");
         }
-        if (property.Length.HasValue)
+        if (property.Length.HasValue && property.Length.Value > 0)
         {
             code.WriteLine();
-            code.Write(property.IsMaxLength ? ".IsMaxLength()" : string.Format(".HasMaxLength({0})", property.Length.Value));
+            code.Write(property.IsMaxLength? ".IsMaxLength()" : string.Format(".HasMaxLength({0})", property.Length.Value));
         }
         if (property.IsFixedLength)
         {

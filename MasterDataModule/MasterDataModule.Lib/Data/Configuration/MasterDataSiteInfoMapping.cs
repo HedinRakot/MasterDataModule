@@ -31,8 +31,7 @@ namespace MasterDataModule.Lib.Data.Configuration
             Property(t => t.Name)
                 .HasColumnName(MasterDataSiteInfo.Fields.Name)
                 .IsRequired()
-                .IsUnicode()
-                .HasMaxLength(0);
+                .IsUnicode();
 
             Property(t => t.TimeoutChecking)
                 .HasColumnName(MasterDataSiteInfo.Fields.TimeoutChecking)
@@ -41,19 +40,7 @@ namespace MasterDataModule.Lib.Data.Configuration
             Property(t => t.SitePath)
                 .HasColumnName(MasterDataSiteInfo.Fields.SitePath)
                 .IsRequired()
-                .IsUnicode()
-                .HasMaxLength(0);
-
-            Property(t => t.CreateDate)
-                .HasColumnName(MasterDataSiteInfo.Fields.CreateDate)
-                .IsRequired();
-
-            Property(t => t.DeleteDate)
-                .HasColumnName(MasterDataSiteInfo.Fields.DeleteDate);
-
-            Property(t => t.ChangeDate)
-                .HasColumnName(MasterDataSiteInfo.Fields.ChangeDate)
-                .IsRequired();
+                .IsUnicode();
 
 
             //Relationships
