@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -9,11 +10,17 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Vehicle type',
 		pleaseSelect: 'Please select',
+
 		description: 'Description',	
+
 		imageFileName: 'Image file name',	
+
 		isPolygonDataValid: 'Is polygon data valid',	
+
 		fromDate: 'From date',	
+
 		toDate: 'To date',	
+
 	};
 
 	return resources;

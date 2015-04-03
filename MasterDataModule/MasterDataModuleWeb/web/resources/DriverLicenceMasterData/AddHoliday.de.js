@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,8 +9,11 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Feiertag',
 		pleaseSelect: 'Bitte auswählen',
+
 		name: 'Beschreibung des Feiertags',	
+
 		date: 'Datum des Feiertags',	
+
 	};
 
 	return resources;

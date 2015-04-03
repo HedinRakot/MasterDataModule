@@ -501,6 +501,9 @@
     <Compile Include="Controllers\Settings\MasterDataRolePermissionRspsController.cs">
       <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\Settings\MasterDataSiteInfosController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Settings\MasterDataViewCollectionControllerFactory.cs">
       <DependentUpon>MasterDataConfiguration.ViewCollectionFactory.tt</DependentUpon>
     </Compile>
@@ -809,6 +812,9 @@
       <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Settings\Custom.UserModel.cs" />
+    <Compile Include="Models\Settings\MasterDataSiteInfoModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Settings\SysColumnModel.cs">
       <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
     </Compile>

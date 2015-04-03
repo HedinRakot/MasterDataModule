@@ -2,8 +2,7 @@ define(function () {
 	'use strict';
 
 	var resources = {
-	    WebServiceMonitor: 'Web services monitor',
-	    JobMonitor: 'Jobs monitor',
+	    MasterDataSiteInfo: 'Web Sites'
 	};
         
 	return resources;

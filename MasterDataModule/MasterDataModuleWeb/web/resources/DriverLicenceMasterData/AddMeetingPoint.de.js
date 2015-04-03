@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Treffpunkt',
 		pleaseSelect: 'Bitte auswählen',
+
 		name: 'Kurzbezeichnung des FE-Treffpunkts ',	
+
 		description: 'Beschreibung des FE-Treffpunkts',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

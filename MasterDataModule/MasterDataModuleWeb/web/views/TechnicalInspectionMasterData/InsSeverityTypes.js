@@ -3,7 +3,6 @@ define([
 'collections/TechnicalInspectionMasterData/InsSeverityTypes',
 'l!t!TechnicalInspectionMasterData/FilterInsSeverityType',
 'l!t!TechnicalInspectionMasterData/InsSeverityTypeRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -28,6 +27,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;

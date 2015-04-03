@@ -3,7 +3,6 @@ define([
 'collections/DriverLicenceMasterData/ReturnReasons',
 'l!t!DriverLicenceMasterData/FilterReturnReason',
 'l!t!DriverLicenceMasterData/ReturnReasonRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -30,6 +29,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;

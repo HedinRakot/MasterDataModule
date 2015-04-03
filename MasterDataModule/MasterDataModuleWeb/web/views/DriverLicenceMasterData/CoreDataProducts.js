@@ -2,8 +2,8 @@ define([
 	'base/base-object-grid-view',
 'collections/DriverLicenceMasterData/CoreDataProducts',
 'l!t!DriverLicenceMasterData/FilterCoreDataProduct',
-'l!t!DriverLicenceMasterData/CoreDataProductRelationships'
-,'DriverLicenceMasterData/Custom.CoreDataProduct'
+'l!t!DriverLicenceMasterData/CoreDataProductRelationships',
+'DriverLicenceMasterData/Custom.CoreDataProduct'
 ], function (BaseView, Collection, FilterView, DetailView, CustomColumns) {
 	'use strict';
 
@@ -27,6 +27,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			]);
 		}
+
 	});
 
 	return view;

@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,9 +9,13 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Stornogrund',
 		pleaseSelect: 'Bitte auswählen',
+
 		cancelationReasonText: 'Stornotext, Platzhalter werden mit „#“ angegeben',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

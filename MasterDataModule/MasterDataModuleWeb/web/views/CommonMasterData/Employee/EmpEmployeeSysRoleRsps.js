@@ -1,7 +1,7 @@
-define([
-	'base/related-object-grid-view',
-    'collections/CommonMasterData/Employee/EmpEmployeeSysRoleRsps',
-    'l!t!CommonMasterData/Employee/AddEmpEmployeeSysRoleRsp'
+define([	
+    'base/related-object-grid-view',
+'collections/CommonMasterData/Employee/EmpEmployeeSysRoleRsps',
+'l!t!CommonMasterData/Employee/AddEmpEmployeeSysRoleRsp'
 ], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
@@ -23,7 +23,8 @@ define([
 		},
 
 		columns: function () {
-		    return [
+		   
+		   return [
 				{ field: 'sysRoleId', title: this.resources.sysRoleId },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
@@ -37,6 +38,13 @@ define([
 
 		    self.grid.bind('edit', function (e) {
 		        e.model.empEmployeeId = self.model.id;
+
+				if (e.model.isNew()) {
+                    var dt = new Date(2070, 11, 31);
+		            e.model.toDate = dt;
+		            var numeric = e.container.find("input[name=toDate]");
+		            numeric[0].value = dt.toLocaleDateString();
+		        }
 		    });
 
 		    return self;

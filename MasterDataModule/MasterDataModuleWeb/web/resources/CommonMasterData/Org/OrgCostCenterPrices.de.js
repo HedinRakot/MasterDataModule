@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,17 +9,29 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Zuordnung Preise zu Kostenstelle',
 		pleaseSelect: 'Bitte auswählen',
+
 		insCoreDataProductId: 'Produkt ',	
+
 		salesOffice: 'Verkaufsbüro (ersten 4 Stellen der Kostenstelle)',	
+
 		minPrice: 'Minimaler Preis',	
+
 		maxPrice: 'Maximaler Preis',	
+
 		standartPrice: 'Standartpreis',	
+
 		quantity: 'verkaufte Menge ',	
+
 		unitOfMeasure: 'Mengeneinheit (Kombobox) mit folgenden Werten „ST“ = Stück, „H“ = Stunde',	
+
 		sysCurrencyId: 'Währungskennzeichen',	
+
 		changeAbilityType: 'Preisänderung (Kombobox mit folgenden Werten 0= “nicht änderbar“, 1= “änderbar mit Begründung“, 2= “änderbar ohne Begründung“)',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

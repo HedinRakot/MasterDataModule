@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,8 +9,11 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Zuordnung Alt-Klasse zu einer FE-Klasse',
 		pleaseSelect: 'Bitte auswählen',
+
 		examClassIdOld: 'Verweis auf die Alt-Klasse ',	
+
 		examClassIdActual: 'Klasse, der eine Alt-Klasse zugeordnet wird',	
+
 	};
 
 	return resources;

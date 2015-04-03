@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Bundeslandgruppe',
 		pleaseSelect: 'Bitte auswählen',
+
 		name: 'Kürzel der Bundeslandgruppe',	
+
 		description: 'Beschreibung der Bundeslandgruppe',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

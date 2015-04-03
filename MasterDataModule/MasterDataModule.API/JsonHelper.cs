@@ -73,7 +73,7 @@ namespace MasterDataModule.API
             //TODO another fields
 
             var service = (ISysTableManager)resolver.GetService(typeof(ISysTableManager));
-            var tables = service.GetEntities().ToList();
+            var tables = new List<MasterDataModule.Contracts.Entities.Configuration.SysTable>();// service.GetEntities().ToList();
 
             var result = new GlobalSysTableModel
             {

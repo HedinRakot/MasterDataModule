@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Zuordnung FE-Klasse zu einer FE-Auflage',
 		pleaseSelect: 'Bitte auswählen',
+
 		examConstraintId: 'FE-Auflage, der eine FE-Klasse zugeordnet wird ',	
+
 		examClassId: 'zugeordnete FE-Klasse ',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

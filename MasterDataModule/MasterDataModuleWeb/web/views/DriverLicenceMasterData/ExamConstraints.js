@@ -3,7 +3,6 @@ define([
 'collections/DriverLicenceMasterData/ExamConstraints',
 'l!t!DriverLicenceMasterData/FilterExamConstraint',
 'l!t!DriverLicenceMasterData/ExamConstraintRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -28,6 +27,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;

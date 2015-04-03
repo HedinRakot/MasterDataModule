@@ -3,7 +3,6 @@ define([
 'collections/CommonMasterData/Employee/EmpOrgAssociationTypes',
 'l!t!CommonMasterData/Employee/FilterEmpOrgAssociationType',
 'l!t!CommonMasterData/Employee/EmpOrgAssociationTypeRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -28,6 +27,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;

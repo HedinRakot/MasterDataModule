@@ -1,7 +1,7 @@
-define([
-	'base/related-object-grid-view',
-    'collections/DriverLicenceMasterData/ExamClassArgeMaps',
-    'l!t!DriverLicenceMasterData/AddExamClassArgeMap'
+define([	
+    'base/related-object-grid-view',
+'collections/DriverLicenceMasterData/ExamClassArgeMaps',
+'l!t!DriverLicenceMasterData/AddExamClassArgeMap'
 ], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
@@ -23,7 +23,8 @@ define([
 		},
 
 		columns: function () {
-		    return [
+		   
+		   return [
 				{ field: 'examNameArge', title: this.resources.examNameArge },
 			];
 		},

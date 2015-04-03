@@ -3,7 +3,6 @@ define([
 'collections/CommonMasterData/System/SysLanguages',
 'l!t!CommonMasterData/System/FilterSysLanguage',
 'l!t!CommonMasterData/System/SysLanguageRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -28,6 +27,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;

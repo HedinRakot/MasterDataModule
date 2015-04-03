@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,11 +9,17 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Zuordnung Arbeitsgebiet zu Anerkennung',
 		pleaseSelect: 'Bitte auswählen',
+
 		ordRecognitionId: 'Anerkennung ',	
+
 		ordAreaOfWorkId: 'Arbeitsgebiet ',	
+
 		priority: 'Anzeigereihenfolge der Arbeitsgebiete bei der Leistungsauswahl',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

@@ -3,7 +3,6 @@ define([
 'collections/DriverLicenceMasterData/Holidays',
 'l!t!DriverLicenceMasterData/FilterHoliday',
 'l!t!DriverLicenceMasterData/HolidayRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -26,6 +25,7 @@ define([
 				{ field: 'date', title: this.resources.date , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;

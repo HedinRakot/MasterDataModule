@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,9 +9,13 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Fehlermeldung',
 		pleaseSelect: 'Bitte auswählen',
+
 		validationErrorNumber: 'Fehlernummer',	
+
 		sysLanguageId: 'Sprachschlüssel ',	
+
 		message: 'Meldungstext',	
+
 	};
 
 	return resources;

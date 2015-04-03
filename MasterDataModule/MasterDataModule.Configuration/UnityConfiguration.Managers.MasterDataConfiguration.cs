@@ -23,6 +23,7 @@ namespace MasterDataModule.Configuration
             container.RegisterType<IPermissionManager, PermissionManager>(new PerRequestLifetimeManager());
             container.RegisterType<IMasterDataRolePermissionRspManager, MasterDataRolePermissionRspManager>(new PerRequestLifetimeManager());
             container.RegisterType<IUserManager, UserManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IMasterDataSiteInfoManager, MasterDataSiteInfoManager>(new PerRequestLifetimeManager());
         }
 
     }

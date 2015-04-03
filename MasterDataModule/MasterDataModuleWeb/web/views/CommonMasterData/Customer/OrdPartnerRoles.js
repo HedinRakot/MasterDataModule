@@ -3,7 +3,6 @@ define([
 'collections/CommonMasterData/Customer/OrdPartnerRoles',
 'l!t!CommonMasterData/Customer/FilterOrdPartnerRole',
 'l!t!CommonMasterData/Customer/OrdPartnerRoleRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -27,6 +26,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;

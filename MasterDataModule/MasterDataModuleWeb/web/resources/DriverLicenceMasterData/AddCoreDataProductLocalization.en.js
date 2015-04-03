@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,12 +9,19 @@ define(function () {
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Localization',
 		pleaseSelect: 'Please select',
+
 		coreDataProductId: 'Product',	
+
 		sysLanguageId: 'Language',	
+
 		productName: 'Name',	
+
 		description: 'Description',	
+
 		fromDate: 'From date',	
+
 		toDate: 'To date',	
+
 	};
 
 	return resources;

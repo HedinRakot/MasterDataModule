@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,8 +9,11 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Zuordnung Bundesland zu einem Feiertag',
 		pleaseSelect: 'Bitte auswählen',
+
 		holidayId: 'Feiertag ',	
+
 		ordFederalStateId: 'zugeordnete Bundesland ',	
+
 	};
 
 	return resources;

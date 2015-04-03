@@ -3,7 +3,6 @@ define([
 'collections/DriverLicenceMasterData/Communities',
 'l!t!DriverLicenceMasterData/FilterCommunity',
 'l!t!DriverLicenceMasterData/CommunityRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -27,6 +26,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;

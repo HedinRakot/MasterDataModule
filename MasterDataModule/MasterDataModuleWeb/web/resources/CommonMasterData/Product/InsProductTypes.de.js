@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,9 +9,13 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Produkt-Produkttypen',
 		pleaseSelect: 'Bitte auswählen',
+
 		name: 'Beschreibung des Produkttyps',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

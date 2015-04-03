@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -9,11 +10,17 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'OBD status',
 		pleaseSelect: 'Please select',
+
 		name: 'Name',	
+
 		description: 'Description',	
+
 		auView: 'AU View',	
+
 		fromDate: 'From date',	
+
 		toDate: 'To date',	
+
 	};
 
 	return resources;

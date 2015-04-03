@@ -3,7 +3,6 @@ define([
 'collections/TechnicalInspectionMasterData/InsValidPeriods',
 'l!t!TechnicalInspectionMasterData/FilterInsValidPeriod',
 'l!t!TechnicalInspectionMasterData/InsValidPeriodRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -28,6 +27,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;

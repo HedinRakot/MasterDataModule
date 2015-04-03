@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'TP Stammdaten',
 	    pageTitle: 'Zuordnung Verfügbarer Prüfschritt zu Prüfschritt',
 		pleaseSelect: 'Bitte auswählen',
+
 		insInspectionStepId: 'Beschreibung des Prüfschritts ',	
+
 		isMandatory: 'Angabe, ob Prüfschritt ein Pflichtprüfschritt ist',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

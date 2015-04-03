@@ -3,7 +3,6 @@ define([
 'collections/DriverLicenceMasterData/ExamRooms',
 'l!t!DriverLicenceMasterData/FilterExamRoom',
 'l!t!DriverLicenceMasterData/ExamRoomRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -30,6 +29,7 @@ define([
 				{ field: 'city', title: this.resources.city },
 			];
 		}
+
 	});
 
 	return view;

@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Mitglied der Fahrschulgemeinschaft',
 		pleaseSelect: 'Bitte auswählen',
+
 		driverSchoolIdParticipant: 'Mitglied Fahrschule',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 		driverSchoolIdLead: 'führende Fahrschule',	
+
 	};
 
 	return resources;

@@ -3,7 +3,6 @@ define([
 'collections/DriverLicenceMasterData/MessageLocalizations',
 'l!t!DriverLicenceMasterData/FilterMessageLocalization',
 'l!t!DriverLicenceMasterData/MessageLocalizationRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -27,6 +26,7 @@ define([
 				{ field: 'message', title: this.resources.message },
 			];
 		}
+
 	});
 
 	return view;

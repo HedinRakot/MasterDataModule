@@ -23,10 +23,6 @@ namespace MasterDataModule.Lib.Data
             HasKey(t => t.Id);
 
             //Properties
-            Property(t => t.Id)
-                .HasColumnName(ExamPossibleResult.Fields.Id)
-                .IsRequired();
-
             Property(t => t.Name)
                 .HasColumnName(ExamPossibleResult.Fields.Name)
                 .IsRequired()
@@ -91,6 +87,11 @@ namespace MasterDataModule.Lib.Data
 
             Property(t => t.IsMedicalAttestRequired)
                 .HasColumnName(ExamPossibleResult.Fields.IsMedicalAttestRequired)
+                .IsRequired();
+
+            Property(t => t.Id)
+                .HasColumnName(ExamPossibleResult.Fields.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
                 .IsRequired();
 
 

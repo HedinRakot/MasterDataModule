@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,8 +9,11 @@ define(function () {
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Holiday',
 		pleaseSelect: 'Please select',
+
 		name: 'Message language',	
+
 		date: 'Validation error number',	
+
 	};
 
 	return resources;

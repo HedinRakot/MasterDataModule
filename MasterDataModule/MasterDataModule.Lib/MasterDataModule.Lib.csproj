@@ -283,6 +283,9 @@
     <Compile Include="Data\Configuration\MasterDataRolePermissionRspMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\Configuration\MasterDataSiteInfoMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\Configuration\PermissionMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
@@ -670,6 +673,9 @@
     <Compile Include="Managers\Base\ReadOnlyEntityManager.cs" />
     <Compile Include="Managers\Base\ReadOnlyManagerBase.cs" />
     <Compile Include="Managers\Configuration\MasterDataRolePermissionRspManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\MasterDataSiteInfoManager.cs">
       <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Configuration\PermissionManager.cs">

@@ -1,7 +1,7 @@
-define([
-	'base/related-object-grid-view',
-    'collections/DriverLicenceMasterData/ExamStationExamRecognitionTypes',
-    'l!t!DriverLicenceMasterData/AddExamStationExamRecognitionType'
+define([	
+    'base/related-object-grid-view',
+'collections/DriverLicenceMasterData/ExamStationExamRecognitionTypes',
+'l!t!DriverLicenceMasterData/AddExamStationExamRecognitionType'
 ], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
@@ -23,7 +23,8 @@ define([
 		},
 
 		columns: function () {
-		    return [
+		   
+		   return [
 				{ field: 'examRecognitionTypeId', title: this.resources.examRecognitionTypeId , collection: this.options.examRecognitionType, defaultText: this.resources.pleaseSelect},
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},

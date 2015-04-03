@@ -8,6 +8,7 @@ define(function () {
         Permissions: 'Stammdaten Berechtigung',
         MasterDataRolePermissionRsps: 'Stammdaten Berechtigung',
         Users: 'Stammdaten Benutzer',
+        MasterDataSiteInfos: 'Web-Site Überwachung',
 	};
 
 	return resources;

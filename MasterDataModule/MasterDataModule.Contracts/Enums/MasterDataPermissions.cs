@@ -34,6 +34,10 @@ namespace MasterDataModule.Contracts.Enums
     		/// Grant for edit MASTER_DATA_USER table
     		///</summary>
     		public const int User = 6;
+    		///<summary>
+    		/// Grant for edit MASTER_DATA_SITE_INFO table
+    		///</summary>
+    		public const int MasterDataSiteInfo = 7;
     	}
 }
 

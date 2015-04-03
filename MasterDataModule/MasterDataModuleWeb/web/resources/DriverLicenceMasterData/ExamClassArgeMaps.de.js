@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,8 +9,11 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'ARGE-Klassenbezeichnung ',
 		pleaseSelect: 'Bitte auswählen',
+
 		examNameArge: 'ARGE-Klassenbezeichnung',	
+
 		examClassId: 'übergeordnete Klasse ',	
+
 	};
 
 	return resources;

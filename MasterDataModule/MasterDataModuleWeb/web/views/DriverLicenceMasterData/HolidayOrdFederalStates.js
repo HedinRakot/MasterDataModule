@@ -1,7 +1,7 @@
-define([
-	'base/related-object-grid-view',
-    'collections/DriverLicenceMasterData/HolidayOrdFederalStates',
-    'l!t!DriverLicenceMasterData/AddHolidayOrdFederalState'
+define([	
+    'base/related-object-grid-view',
+'collections/DriverLicenceMasterData/HolidayOrdFederalStates',
+'l!t!DriverLicenceMasterData/AddHolidayOrdFederalState'
 ], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
@@ -23,7 +23,8 @@ define([
 		},
 
 		columns: function () {
-		    return [
+		   
+		   return [
 				{ field: 'ordFederalStateId', title: this.resources.ordFederalStateId , collection: this.options.ordFederalState, defaultText: this.resources.pleaseSelect},
 			];
 		},

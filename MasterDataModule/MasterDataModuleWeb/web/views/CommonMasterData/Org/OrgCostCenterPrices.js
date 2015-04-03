@@ -1,7 +1,7 @@
-define([
-	'base/related-object-grid-view',
-    'collections/CommonMasterData/Org/OrgCostCenterPrices',
-    'l!t!CommonMasterData/Org/AddOrgCostCenterPrice'
+define([	
+    'base/related-object-grid-view',
+'collections/CommonMasterData/Org/OrgCostCenterPrices',
+'l!t!CommonMasterData/Org/AddOrgCostCenterPrice'
 ], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
@@ -23,7 +23,8 @@ define([
 		},
 
 		columns: function () {
-		    return [
+		   
+		   return [
 				{ field: 'insCoreDataProductId', title: this.resources.insCoreDataProductId },
 				{ field: 'salesOffice', title: this.resources.salesOffice },
 				{ field: 'minPrice', title: this.resources.minPrice },
@@ -45,6 +46,13 @@ define([
 
 		    self.grid.bind('edit', function (e) {
 		        e.model.orgCostCenterId = self.model.id;
+
+				if (e.model.isNew()) {
+                    var dt = new Date(2070, 11, 31);
+		            e.model.toDate = dt;
+		            var numeric = e.container.find("input[name=toDate]");
+		            numeric[0].value = dt.toLocaleDateString();
+		        }
 		    });
 
 		    return self;

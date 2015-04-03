@@ -81,6 +81,9 @@
     <Compile Include="Entities\Configuration\MasterDataRolePermissionRsp.cs">
       <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Configuration\MasterDataSiteInfo.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Drl\CommunityParticipant.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
@@ -128,6 +131,9 @@
       <DependentUpon>Common.IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Configuration\IMasterDataRolePermissionRspManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IMasterDataSiteInfoManager.cs">
       <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Configuration\IUserManager.Custom.cs" />

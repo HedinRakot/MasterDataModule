@@ -3,7 +3,6 @@ define([
 'collections/CommonMasterData/Org/OrgCostCenters',
 'l!t!CommonMasterData/Org/FilterOrgCostCenter',
 'l!t!CommonMasterData/Org/OrgCostCenterRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -28,6 +27,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;
