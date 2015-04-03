@@ -19,7 +19,6 @@
             data: kendo.stringify(self.model.toJSON()),
             contentType: 'application/json',
             success: function () {
-
                 Backbone.trigger('logged-in');
             },
             error: function (model, xhr) {
@@ -44,20 +43,14 @@
 		},
 
 		events: {
-			'click .login': function () {
+		    'click .login': function (e) {
+		        e.preventDefault();
 			    login.call(this);
 			}
 		},
 
 		render: function () {
 			view.__super__.render.apply(this, arguments);
-
-			var self = this;
-			self.$el.delegate('button[type=submit]', 'click.login', function (e) {
-			    e.preventDefault();
-
-			    login.call(self);
-			});
 
 			this.stickit();
 
