@@ -43,10 +43,13 @@
     <Compile Include="Base\BaseManagersService.cs" />
     <Compile Include="Base\CheckingModule.cs" />
     <Compile Include="Base\CheckingModuleWithLastResult.cs" />
+    <Compile Include="Base\CheckModuleType.cs" />
     <Compile Include="Contracts\ICheckingModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ConfigurationService.cs" />
     <Compile Include="Contracts\IConfigurationService.cs" />
+    <Compile Include="Contracts\INotificationService.cs" />
+    <Compile Include="Services\NotificationService.cs" />
     <Compile Include="SqlServer\ScriptEngine.cs" />
   </ItemGroup>
   <ItemGroup>

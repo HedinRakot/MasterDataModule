@@ -76,13 +76,25 @@
     <Compile Include="Data\Managers\MasterDataJobInfoManager.cs">
       <DependentUpon>Managers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\Managers\MasterDataMonitorableInfoMasterDataNotificationsRspManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\Managers\MasterDataMonitorStateManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Managers\MasterDataNotificationsManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Managers\MasterDataNotificationsMasterDataSubscribersRspManager.cs">
       <DependentUpon>Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Managers\MasterDataSiteCheckResultsManager.cs">
       <DependentUpon>Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Managers\MasterDataSiteInfoManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Managers\MasterDataSubscribersManager.cs">
       <DependentUpon>Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Managers\MasterDataWcfCheckResultsManager.cs">
@@ -105,13 +117,25 @@
     <Compile Include="Data\MasterDataJobInfoConfiguration.cs">
       <DependentUpon>MasterDataContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\MasterDataMonitorableInfoMasterDataNotificationsRspConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\MasterDataMonitorStateConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MasterDataNotificationsConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MasterDataNotificationsMasterDataSubscribersRspConfiguration.cs">
       <DependentUpon>MasterDataContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\MasterDataSiteCheckResultsConfiguration.cs">
       <DependentUpon>MasterDataContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\MasterDataSiteInfoConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MasterDataSubscribersConfiguration.cs">
       <DependentUpon>MasterDataContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\MasterDataWcfCheckResultsConfiguration.cs">

@@ -62,13 +62,25 @@
     <Compile Include="Entities\MasterDataJobInfo.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\MasterDataMonitorableInfoMasterDataNotificationsRsp.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\MasterDataMonitorState.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterDataNotifications.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterDataNotificationsMasterDataSubscribersRsp.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\MasterDataSiteCheckResults.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\MasterDataSiteInfo.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterDataSubscribers.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\MasterDataWcfCheckResults.cs">
@@ -90,13 +102,25 @@
     <Compile Include="Managers\IMasterDataJobInfoManager.cs">
       <DependentUpon>IManagers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Managers\IMasterDataMonitorableInfoMasterDataNotificationsRspManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\IMasterDataMonitorStateManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\IMasterDataNotificationsManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\IMasterDataNotificationsMasterDataSubscribersRspManager.cs">
       <DependentUpon>IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\IMasterDataSiteCheckResultsManager.cs">
       <DependentUpon>IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\IMasterDataSiteInfoManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\IMasterDataSubscribersManager.cs">
       <DependentUpon>IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\IMasterDataWcfCheckResultsManager.cs">

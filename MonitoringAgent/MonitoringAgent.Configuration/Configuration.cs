@@ -18,8 +18,9 @@ namespace MonitoringAgent.Configuration
 
         public void Initialize()
         {
-            container.RegisterType<IManagersProvider, ManagersProvider>();
+            container.RegisterType<IManagersProvider, ManagersProvider>(new PerResolveLifetimeManager());
             container.RegisterType<IConfigurationService, ConfigurationService>();
+            container.RegisterType<INotificationService, NotificationService>();
 
             container.RegisterType<IWcfPingService, WcfPingService>();
             container.RegisterType<ICheckingModule, WcfServicePingModule>("wcfPing");

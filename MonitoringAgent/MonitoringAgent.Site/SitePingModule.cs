@@ -2,37 +2,55 @@
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using MonitoringAgent.Data.Interfaces.Entities;
-using MonitoringAgent.Services.Common;
 using MonitoringAgent.Services.Common.Base;
+using MonitoringAgent.Services.Common.Contracts;
 using MonitoringAgent.Site.Interfaces.Services;
 
 namespace MonitoringAgent.Site
 {
+    /// <summary>
+    /// Module for checking sites
+    /// </summary>
     public sealed class SitePingModule : CheckingModuleWithLastResult<MasterDataSiteInfo, MasterDataSiteCheckResults>
     {
         private readonly ISitePingService sitePingService;
-
-        public SitePingModule(ISitePingService sitePingService)
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="sitePingService">Site ping service</param>
+        /// <param name="notificationService">Notification service</param>
+        public SitePingModule(ISitePingService sitePingService, INotificationService notificationService): base(notificationService)
         {
             this.sitePingService = sitePingService;
         }
-
+        /// <summary>
+        /// Gets all monitorable objects for checking
+        /// </summary>
+        /// <returns>List of monitorble objects</returns>
         protected override IList<MasterDataSiteInfo> ServiceExtractor()
         {
             return sitePingService.GetAllSitesForCheck();
         }
-
-        protected override void SaveResult(MasterDataSiteCheckResults result)
+        /// <summary>
+        /// Save result
+        /// </summary>
+        protected override void SaveCheckingResult(MasterDataSiteCheckResults result)
         {
             sitePingService.SetCheckingResult(result);
         }
-
+        /// <summary>
+        /// Gets previous result of checking
+        /// </summary>
+        /// <param name="serviceInfo">Info about monitorable object</param>
         protected override MasterDataSiteCheckResults LastResultExtractor(MasterDataSiteInfo serviceInfo)
         {
             return sitePingService.GetLastResult(serviceInfo.Id);
         }
-
-        protected override MasterDataSiteCheckResults CheckService(MasterDataSiteInfo serviceInfo)
+        /// <summary>
+        /// Checks monitorable object
+        /// </summary>
+        /// <param name="serviceInfo">Monitorable object info</param>
+        protected override MasterDataSiteCheckResults CheckServiceWithLastResult(MasterDataSiteInfo serviceInfo)
         {
             var ping = new Ping();
             var result = ping.Send(serviceInfo.SitePath);
@@ -41,8 +59,15 @@ namespace MonitoringAgent.Site
                 Attempt = 1,
                 CheckDate = DateTime.Now,
                 MasterDataSiteInfoId = serviceInfo.Id,
-                CheckStatus = result.Status == IPStatus.Success ? 1 : 0,
+                CheckStatus = result != null && result.Status == IPStatus.Success ? 1 : 0,
             };
+        }
+        /// <summary>
+        /// Module type
+        /// </summary>
+        protected override CheckModuleType CheckModuleType
+        {
+            get { return CheckModuleType.Site; }
         }
     }
 }
