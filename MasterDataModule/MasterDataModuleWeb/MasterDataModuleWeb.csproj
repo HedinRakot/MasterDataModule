@@ -201,6 +201,7 @@
     <Content Include="css\kendo\images\wp8_inverseicons.png" />
     <Content Include="css\site.css" />
     <Content Include="Global.asax" />
+    <Content Include="web\collections\AdminService\WcfServiceStatuses.js" />
     <Content Include="web\collections\CommonMasterData\Customer\InsTaxClasses.js">
       <DependentUpon>web.customer.collections.tt</DependentUpon>
     </Content>
@@ -548,6 +549,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>web.tp.collections.tt</DependentUpon>
     </Content>
+    <Content Include="web\models\AdminService\WebServiceMonitor\WcfServiceStatus.js" />
     <Content Include="web\models\CommonMasterData\Customer\FilterInsTaxClass.js">
       <DependentUpon>web.customer.models.tt</DependentUpon>
     </Content>

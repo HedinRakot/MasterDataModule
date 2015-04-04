@@ -490,6 +490,7 @@
     <Compile Include="Controllers\Drl\SchoolInfosController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\Monitor\WebServiceMonitorController.cs" />
     <Compile Include="Controllers\ReadOnlyClientBaseController.cs" />
     <Compile Include="Controllers\GridArgs.cs" />
     <Compile Include="Controllers\GridArgsModelBinder.cs" />
@@ -805,6 +806,7 @@
     <Compile Include="Models\GlobalSysTableModel.cs" />
     <Compile Include="Models\ISystemModelFields.cs" />
     <Compile Include="Models\IModelIntervalFields.cs" />
+    <Compile Include="Models\Monitor\WcfServiceStatusModel.cs" />
     <Compile Include="Models\Settings\Custom.RoleModel.cs" />
     <Compile Include="Models\Settings\Custom.SysColumnModel.cs" />
     <Compile Include="Models\Settings\Custom.SysTableModel.cs" />

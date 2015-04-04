@@ -5,10 +5,10 @@
 
 
 
-using MasterDataModule.Contracts.Managers;
 using MasterDataModule.Contracts.Managers.Configuration;
-using MasterDataModule.Lib.Managers;
+using MasterDataModule.Contracts.Managers.Monitor;
 using MasterDataModule.Lib.Managers.Configuration;
+using MasterDataModule.Lib.Managers.Monitor;
 using Microsoft.Practices.Unity;
 
 namespace MasterDataModule.Configuration
@@ -24,6 +24,7 @@ namespace MasterDataModule.Configuration
             container.RegisterType<IMasterDataRolePermissionRspManager, MasterDataRolePermissionRspManager>(new PerRequestLifetimeManager());
             container.RegisterType<IUserManager, UserManager>(new PerRequestLifetimeManager());
             container.RegisterType<IMasterDataSiteInfoManager, MasterDataSiteInfoManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IWcfStatusInfoManager, WcfStatusInfoManager>(new PerRequestLifetimeManager());
         }
 
     }

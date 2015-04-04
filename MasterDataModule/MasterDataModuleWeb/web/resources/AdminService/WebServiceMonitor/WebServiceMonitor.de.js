@@ -2,7 +2,9 @@ define(function () {
 	'use strict';
 
 	var resources = {
-	    MasterDataSiteInfo: 'Web Sites'
+	    AdminService: 'Administration Dienst',
+	    WebServiceMonitorAdjustment: 'Einstellungen',
+        WebServicesTitle: 'Der Status der Webservice Uberwachung'
 	};
 
 	return resources;

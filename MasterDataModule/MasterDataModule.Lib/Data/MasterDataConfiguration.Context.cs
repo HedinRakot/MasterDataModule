@@ -27,6 +27,7 @@ namespace MasterDataModule.Lib.Data
             modelBuilder.Configurations.Add(MasterDataRolePermissionRspMapping.Instance);
             modelBuilder.Configurations.Add(UserMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataSiteInfoMapping.Instance);
+            modelBuilder.Configurations.Add(WebServicesInfoMapping.Instance);
         }
 
         /// <summary>
