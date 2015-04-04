@@ -1,0 +1,30 @@
+USE SettingsData
+GO
+CREATE VIEW .dbo.[GET_WCF_SERVICES_STATUS] 
+AS
+SELECT 
+	res.ID
+	,res.CHECK_STATUS
+	,res.CHECK_DATE
+	,res.[MESSAGE]
+	,res.ATTEMPT
+	,inf.[NAME]
+	,inf.WSDL_PATH
+	,CAST(NULL AS DATETIME) AS DELETE_DATE
+	,GETDATE() AS CREATE_DATE
+	,GETDATE() AS CHANGE_DATE
+	
+FROM 
+	[dbo].[MASTER_DATA_WCF_CHECK_RESULTS] res INNER JOIN
+	[dbo].[MASTER_DATA_WCF_INFO] inf ON res.[MASTER_DATA_WCF_INFO_ID] = inf.ID
+
+GO
+ALTER TABLE [dbo].[MASTER_DATA_WCF_INFO]
+ADD [CHANGE_DATE] datetime2(3) not null default (getdate()),
+[CREATE_DATE] datetime2(3) not null default (getdate()),
+[DELETE_DATE] datetime2(3) null 
+
+GO
+
+
+

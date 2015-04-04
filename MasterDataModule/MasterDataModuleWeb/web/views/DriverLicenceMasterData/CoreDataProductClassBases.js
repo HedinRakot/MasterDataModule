@@ -1,7 +1,7 @@
-define([
-	'base/related-object-grid-view',
-    'collections/DriverLicenceMasterData/CoreDataProductClassBases',
-    'l!t!DriverLicenceMasterData/AddCoreDataProductClassBasis'
+define([	
+    'base/related-object-grid-view',
+'collections/DriverLicenceMasterData/CoreDataProductClassBases',
+'l!t!DriverLicenceMasterData/AddCoreDataProductClassBasis'
 ], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
@@ -23,7 +23,8 @@ define([
 		},
 
 		columns: function () {
-		    return [
+		   
+		   return [
 				{ field: 'examClassId', title: this.resources.examClassId , collection: this.options.examClass, defaultText: this.resources.pleaseSelect},
 				{ field: 'legalBasisId', title: this.resources.legalBasisId , collection: this.options.legalBasis, defaultText: this.resources.pleaseSelect},
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},

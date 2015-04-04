@@ -17,7 +17,7 @@
             var managerName = tbl.NameHumanCase + "Manager";
             fileManager.StartNewFile(managerName + FileExtension);
 #>
-
+using System.Data.Entity;
 using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Data.Interfaces.Managers;
 
@@ -25,7 +25,7 @@ namespace MonitoringAgent.Common.Data.Managers
 {
     public partial class <#=managerName #>: BaseManager<<#=tbl.NameHumanCase #>>, I<#=managerName #>
     {
-		public <#=managerName #>(DbContextProvider contextProvider): base(contextProvider)
+		public <#=managerName #>(DbContext context): base(context)
 		{
 		}
 	}

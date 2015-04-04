@@ -3,7 +3,6 @@ define([
 'collections/DriverLicenceMasterData/ExamStations',
 'l!t!DriverLicenceMasterData/FilterExamStation',
 'l!t!DriverLicenceMasterData/ExamStationRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -30,6 +29,7 @@ define([
 				{ field: 'sortOrder', title: this.resources.sortOrder },
 			];
 		}
+
 	});
 
 	return view;

@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Zuordnungsarten zwischen Mitarbeiter und OE',
 		pleaseSelect: 'Bitte auswählen',
+
 		name: 'Kurzbezeichnung der Zuordnungsart',	
+
 		description: 'Beschreibung der Zuordnungsart',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

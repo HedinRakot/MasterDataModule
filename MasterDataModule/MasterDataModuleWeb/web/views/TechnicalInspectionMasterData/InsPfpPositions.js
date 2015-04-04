@@ -3,7 +3,6 @@ define([
 'collections/TechnicalInspectionMasterData/InsPfpPositions',
 'l!t!TechnicalInspectionMasterData/FilterInsPfpPosition',
 'l!t!TechnicalInspectionMasterData/InsPfpPositionRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -27,6 +26,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;

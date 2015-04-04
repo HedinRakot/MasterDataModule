@@ -1,7 +1,7 @@
-define([
-	'base/related-object-grid-view',
-    'collections/DriverLicenceMasterData/CoreDataProductLocalizations',
-    'l!t!DriverLicenceMasterData/AddCoreDataProductLocalization'
+define([	
+    'base/related-object-grid-view',
+'collections/DriverLicenceMasterData/CoreDataProductLocalizations',
+'l!t!DriverLicenceMasterData/AddCoreDataProductLocalization'
 ], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
@@ -23,7 +23,8 @@ define([
 		},
 
 		columns: function () {
-		    return [
+		   
+		   return [
 				{ field: 'sysLanguageId', title: this.resources.sysLanguageId , collection: this.options.sysLanguage, defaultText: this.resources.pleaseSelect},
 				{ field: 'productName', title: this.resources.productName },
 				{ field: 'description', title: this.resources.description },

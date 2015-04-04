@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,11 +9,17 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Systemrolle',
 		pleaseSelect: 'Bitte auswählen',
+
 		roleNumber: 'Rollenschlüssel',	
+
 		name: 'Kurzbezeichnung der Rolle',	
+
 		description: 'Beschreibung der Rolle',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

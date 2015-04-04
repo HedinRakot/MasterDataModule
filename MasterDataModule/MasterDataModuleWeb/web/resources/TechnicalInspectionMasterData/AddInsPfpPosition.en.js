@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'TP masterdata',
 	    pageTitle: 'PFP position',
 		pleaseSelect: 'Please select',
+
 		text: 'Text',	
+
 		topId: 'Top id',	
+
 		fromDate: 'From date',	
+
 		toDate: 'To date',	
+
 	};
 
 	return resources;

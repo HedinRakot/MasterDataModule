@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,11 +9,17 @@ define(function () {
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Tax code',
 		pleaseSelect: 'Please select',
+
 		description: 'Description',	
+
 		taxCode: 'Tax code',	
+
 		percent: 'Percent',	
+
 		fromDate: 'From date',	
+
 		toDate: 'To date',	
+
 	};
 
 	return resources;

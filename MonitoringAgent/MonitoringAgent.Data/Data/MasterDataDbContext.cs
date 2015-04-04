@@ -26,13 +26,25 @@ namespace MonitoringAgent.Common.Data
         public IDbSet<MasterDataJobInfo> MasterDataJobInfoes { get; set; } // MASTER_DATA_JOB_INFO
 
         [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
+        public IDbSet<MasterDataMonitorableInfoMasterDataNotificationsRsp> MasterDataMonitorableInfoMasterDataNotificationsRsps { get; set; } // MASTER_DATA_MONITORABLE_INFO_MASTER_DATA_NOTIFICATIONS_RSP
+
+        [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
         public IDbSet<MasterDataMonitorState> MasterDataMonitorStates { get; set; } // MASTER_DATA_MONITOR_STATE
+
+        [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
+        public IDbSet<MasterDataNotifications> MasterDataNotifications { get; set; } // MASTER_DATA_NOTIFICATIONS
+
+        [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
+        public IDbSet<MasterDataNotificationsMasterDataSubscribersRsp> MasterDataNotificationsMasterDataSubscribersRsps { get; set; } // MASTER_DATA_NOTIFICATIONS_MASTER_DATA_SUBSCRIBERS_RSP
 
         [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
         public IDbSet<MasterDataSiteCheckResults> MasterDataSiteCheckResults { get; set; } // MASTER_DATA_SITE_CHECK_RESULTS
 
         [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
         public IDbSet<MasterDataSiteInfo> MasterDataSiteInfoes { get; set; } // MASTER_DATA_SITE_INFO
+
+        [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
+        public IDbSet<MasterDataSubscribers> MasterDataSubscribers { get; set; } // MASTER_DATA_SUBSCRIBERS
 
         [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
         public IDbSet<MasterDataWcfCheckResults> MasterDataWcfCheckResults { get; set; } // MASTER_DATA_WCF_CHECK_RESULTS
@@ -72,9 +84,13 @@ namespace MonitoringAgent.Common.Data
 
             modelBuilder.Configurations.Add(new MasterDataJobCheckResultsConfiguration());
             modelBuilder.Configurations.Add(new MasterDataJobInfoConfiguration());
+            modelBuilder.Configurations.Add(new MasterDataMonitorableInfoMasterDataNotificationsRspConfiguration());
             modelBuilder.Configurations.Add(new MasterDataMonitorStateConfiguration());
+            modelBuilder.Configurations.Add(new MasterDataNotificationsConfiguration());
+            modelBuilder.Configurations.Add(new MasterDataNotificationsMasterDataSubscribersRspConfiguration());
             modelBuilder.Configurations.Add(new MasterDataSiteCheckResultsConfiguration());
             modelBuilder.Configurations.Add(new MasterDataSiteInfoConfiguration());
+            modelBuilder.Configurations.Add(new MasterDataSubscribersConfiguration());
             modelBuilder.Configurations.Add(new MasterDataWcfCheckResultsConfiguration());
             modelBuilder.Configurations.Add(new MasterDataWcfInfoConfiguration());
 
@@ -86,9 +102,13 @@ namespace MonitoringAgent.Common.Data
         {
             modelBuilder.Configurations.Add(new MasterDataJobCheckResultsConfiguration(schema));
             modelBuilder.Configurations.Add(new MasterDataJobInfoConfiguration(schema));
+            modelBuilder.Configurations.Add(new MasterDataMonitorableInfoMasterDataNotificationsRspConfiguration(schema));
             modelBuilder.Configurations.Add(new MasterDataMonitorStateConfiguration(schema));
+            modelBuilder.Configurations.Add(new MasterDataNotificationsConfiguration(schema));
+            modelBuilder.Configurations.Add(new MasterDataNotificationsMasterDataSubscribersRspConfiguration(schema));
             modelBuilder.Configurations.Add(new MasterDataSiteCheckResultsConfiguration(schema));
             modelBuilder.Configurations.Add(new MasterDataSiteInfoConfiguration(schema));
+            modelBuilder.Configurations.Add(new MasterDataSubscribersConfiguration(schema));
             modelBuilder.Configurations.Add(new MasterDataWcfCheckResultsConfiguration(schema));
             modelBuilder.Configurations.Add(new MasterDataWcfInfoConfiguration(schema));
             return modelBuilder;

@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,8 +9,11 @@ define(function () {
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Holiday to federal state',
 		pleaseSelect: 'Please select',
+
 		holidayId: 'Holiday',	
+
 		ordFederalStateId: 'Federal State',	
+
 	};
 
 	return resources;

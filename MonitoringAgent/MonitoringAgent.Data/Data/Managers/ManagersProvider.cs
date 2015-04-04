@@ -19,13 +19,17 @@ namespace MonitoringAgent.Common.Data.Managers
 	{
 		protected void RegisterManagers(IUnityContainer container)
 		{
-					container.RegisterType<IMasterDataJobCheckResultsManager, MasterDataJobCheckResultsManager>(new PerResolveLifetimeManager());
-			container.RegisterType<IMasterDataJobInfoManager, MasterDataJobInfoManager>(new PerResolveLifetimeManager());
-			container.RegisterType<IMasterDataMonitorStateManager, MasterDataMonitorStateManager>(new PerResolveLifetimeManager());
-			container.RegisterType<IMasterDataSiteCheckResultsManager, MasterDataSiteCheckResultsManager>(new PerResolveLifetimeManager());
-			container.RegisterType<IMasterDataSiteInfoManager, MasterDataSiteInfoManager>(new PerResolveLifetimeManager());
-			container.RegisterType<IMasterDataWcfCheckResultsManager, MasterDataWcfCheckResultsManager>(new PerResolveLifetimeManager());
-			container.RegisterType<IMasterDataWcfInfoManager, MasterDataWcfInfoManager>(new PerResolveLifetimeManager());
+					container.RegisterType<IMasterDataJobCheckResultsManager, MasterDataJobCheckResultsManager>();
+			container.RegisterType<IMasterDataJobInfoManager, MasterDataJobInfoManager>();
+			container.RegisterType<IMasterDataMonitorableInfoMasterDataNotificationsRspManager, MasterDataMonitorableInfoMasterDataNotificationsRspManager>();
+			container.RegisterType<IMasterDataMonitorStateManager, MasterDataMonitorStateManager>();
+			container.RegisterType<IMasterDataNotificationsManager, MasterDataNotificationsManager>();
+			container.RegisterType<IMasterDataNotificationsMasterDataSubscribersRspManager, MasterDataNotificationsMasterDataSubscribersRspManager>();
+			container.RegisterType<IMasterDataSiteCheckResultsManager, MasterDataSiteCheckResultsManager>();
+			container.RegisterType<IMasterDataSiteInfoManager, MasterDataSiteInfoManager>();
+			container.RegisterType<IMasterDataSubscribersManager, MasterDataSubscribersManager>();
+			container.RegisterType<IMasterDataWcfCheckResultsManager, MasterDataWcfCheckResultsManager>();
+			container.RegisterType<IMasterDataWcfInfoManager, MasterDataWcfInfoManager>();
 	
 		}
 	}

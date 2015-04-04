@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,13 +9,21 @@ define(function () {
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Class',
 		pleaseSelect: 'Please select',
+
 		name: 'Class',	
+
 		description: 'Description',	
+
 		isMofa: 'Indication that it is MOFA',	
+
 		fromDate: 'From date',	
+
 		toDate: 'To date',	
+
 		isFsClass: 'Indication whether class should be showed as driver licence class',	
+
 		sortOrder: 'Sort order',	
+
 	};
 
 	return resources;

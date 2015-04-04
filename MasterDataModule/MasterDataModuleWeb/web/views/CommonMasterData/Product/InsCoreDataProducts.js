@@ -2,8 +2,8 @@ define([
 	'base/base-object-grid-view',
 'collections/CommonMasterData/Product/InsCoreDataProducts',
 'l!t!CommonMasterData/Product/FilterInsCoreDataProduct',
-'l!t!CommonMasterData/Product/InsCoreDataProductRelationships'
-,'CommonMasterData/Product/Custom.InsCoreDataProduct'
+'l!t!CommonMasterData/Product/InsCoreDataProductRelationships',
+'CommonMasterData/Product/Custom.InsCoreDataProduct'
 ], function (BaseView, Collection, FilterView, DetailView, CustomColumns) {
 	'use strict';
 
@@ -29,6 +29,7 @@ define([
 				{ field: 'oldProductNumber', title: this.resources.oldProductNumber },
 			]);
 		}
+
 	});
 
 	return view;

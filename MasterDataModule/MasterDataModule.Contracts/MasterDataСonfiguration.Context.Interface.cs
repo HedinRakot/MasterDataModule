@@ -20,6 +20,10 @@ namespace MasterDataModule.Contracts
         /// </summary>
         IQueryable<SysColumn> SysColumn{get;}
         /// <summary>
+        ///     Set of <see cref="SysTable"/> entities from table dbo.SYS_TABLES
+        /// </summary>
+        IQueryable<SysTable> SysTable{get;}
+        /// <summary>
         ///     Set of <see cref="Role"/> entities from table dbo.MASTER_DATA_ROLE
         /// </summary>
         IQueryable<Role> Role{get;}
@@ -28,10 +32,6 @@ namespace MasterDataModule.Contracts
         /// </summary>
         IQueryable<Permission> Permission{get;}
         /// <summary>
-        ///     Set of <see cref="SysTable"/> entities from table dbo.SYS_TABLES
-        /// </summary>
-        IQueryable<SysTable> SysTable{get;}
-        /// <summary>
         ///     Set of <see cref="MasterDataRolePermissionRsp"/> entities from table dbo.MASTER_DATA_ROLE_PERMISSION_RSP
         /// </summary>
         IQueryable<MasterDataRolePermissionRsp> MasterDataRolePermissionRsp{get;}
@@ -39,5 +39,9 @@ namespace MasterDataModule.Contracts
         ///     Set of <see cref="User"/> entities from table dbo.MASTER_DATA_USER
         /// </summary>
         IQueryable<User> User{get;}
+        /// <summary>
+        ///     Set of <see cref="MasterDataSiteInfo"/> entities from table dbo.MASTER_DATA_SITE_INFO
+        /// </summary>
+        IQueryable<MasterDataSiteInfo> MasterDataSiteInfo{get;}
     }
 }

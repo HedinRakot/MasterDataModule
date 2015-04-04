@@ -3,7 +3,6 @@ define([
 'collections/CommonMasterData/Employee/EmpEmployees',
 'l!t!CommonMasterData/Employee/FilterEmpEmployee',
 'l!t!CommonMasterData/Employee/EmpEmployeeRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -30,6 +29,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;

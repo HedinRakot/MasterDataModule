@@ -8,6 +8,7 @@ define(function () {
         Permissions: 'Master data permission',
         MasterDataRolePermissionRsps: 'Master data permissiom',
         Users: 'Master data user',
+        MasterDataSiteInfos: 'Master data sites',
 	};
 
 	return resources;

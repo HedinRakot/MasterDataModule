@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,11 +9,17 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Land ',
 		pleaseSelect: 'Bitte auswählen',
+
 		sapId: 'Länderschlüssel ',	
+
 		name: 'Landesbezeichnung',	
+
 		isEu: 'Angabe, ob das Land in der EU liegt ',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

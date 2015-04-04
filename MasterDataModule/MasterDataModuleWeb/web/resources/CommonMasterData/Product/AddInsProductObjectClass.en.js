@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Product object class',
 		pleaseSelect: 'Please select',
+
 		description: 'Description',	
+
 		weightFrom: 'Weight from',	
+
 		fromDate: 'From date',	
+
 		toDate: 'To date',	
+
 	};
 
 	return resources;

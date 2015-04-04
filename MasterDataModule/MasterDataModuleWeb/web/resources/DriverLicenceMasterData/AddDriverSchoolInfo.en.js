@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Driverschool info',
 		pleaseSelect: 'Please select',
+
 		schoolInfoId: 'Info',	
+
 		driverSchoolId: 'Driverschool',	
+
 		fromDate: 'From date',	
+
 		toDate: 'To date',	
+
 	};
 
 	return resources;

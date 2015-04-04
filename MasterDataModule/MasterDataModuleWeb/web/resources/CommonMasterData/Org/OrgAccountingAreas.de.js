@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Buchungskreis',
 		pleaseSelect: 'Bitte auswählen',
+
 		accountingArea: 'Nummer des Buchungskreises',	
+
 		maxOrderSum: 'Maximale Auftragssumme im Buchungskreis',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

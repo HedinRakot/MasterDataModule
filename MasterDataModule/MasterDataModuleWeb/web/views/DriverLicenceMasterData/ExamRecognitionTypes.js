@@ -3,7 +3,6 @@ define([
 'collections/DriverLicenceMasterData/ExamRecognitionTypes',
 'l!t!DriverLicenceMasterData/FilterExamRecognitionType',
 'l!t!DriverLicenceMasterData/ExamRecognitionTypeRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -28,6 +27,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;

@@ -1,7 +1,7 @@
-define([
-	'base/related-object-grid-view',
-    'collections/DriverLicenceMasterData/MeetingPointOrganizationalUnits',
-    'l!t!DriverLicenceMasterData/AddMeetingPointOrganizationalUnit'
+define([	
+    'base/related-object-grid-view',
+'collections/DriverLicenceMasterData/MeetingPointOrganizationalUnits',
+'l!t!DriverLicenceMasterData/AddMeetingPointOrganizationalUnit'
 ], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
@@ -23,7 +23,8 @@ define([
 		},
 
 		columns: function () {
-		    return [
+		   
+		   return [
 				{ field: 'orgOrganizationalUnitId', title: this.resources.orgOrganizationalUnitId , collection: this.options.orgOrganizationalUnit, defaultText: this.resources.pleaseSelect},
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},

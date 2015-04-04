@@ -1,7 +1,7 @@
-define([
-	'base/related-object-grid-view',
-    'collections/DriverLicenceMasterData/CommunityParticipants',
-    'l!t!DriverLicenceMasterData/AddCommunityParticipant'
+define([	
+    'base/related-object-grid-view',
+'collections/DriverLicenceMasterData/CommunityParticipants',
+'l!t!DriverLicenceMasterData/AddCommunityParticipant'
 ], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
@@ -23,7 +23,8 @@ define([
 		},
 
 		columns: function () {
-		    return [
+		   
+		   return [
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 				{ field: 'driverSchoolIdLead', title: this.resources.driverSchoolIdLead },

@@ -1,7 +1,7 @@
-define([
-	'base/related-object-grid-view',
-    'collections/DriverLicenceMasterData/DriverSchoolInfos',
-    'l!t!DriverLicenceMasterData/AddDriverSchoolInfo'
+define([	
+    'base/related-object-grid-view',
+'collections/DriverLicenceMasterData/DriverSchoolInfos',
+'l!t!DriverLicenceMasterData/AddDriverSchoolInfo'
 ], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
@@ -23,7 +23,8 @@ define([
 		},
 
 		columns: function () {
-		    return [
+		   
+		   return [
 				{ field: 'schoolInfoId', title: this.resources.schoolInfoId , collection: this.options.schoolInfo, defaultText: this.resources.pleaseSelect},
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},

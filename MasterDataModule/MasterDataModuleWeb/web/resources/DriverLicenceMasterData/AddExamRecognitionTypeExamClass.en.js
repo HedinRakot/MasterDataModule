@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Exam class to recognition',
 		pleaseSelect: 'Please select',
+
 		examRecognitionTypeId: 'Recognition Type',	
+
 		examClassId: 'Class',	
+
 		fromDate: 'From date',	
+
 		toDate: 'To date',	
+
 	};
 
 	return resources;

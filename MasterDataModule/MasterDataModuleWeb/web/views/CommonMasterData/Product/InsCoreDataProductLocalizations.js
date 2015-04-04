@@ -1,7 +1,7 @@
-define([
-	'base/related-object-grid-view',
-    'collections/CommonMasterData/Product/InsCoreDataProductLocalizations',
-    'l!t!CommonMasterData/Product/AddInsCoreDataProductLocalization'
+define([	
+    'base/related-object-grid-view',
+'collections/CommonMasterData/Product/InsCoreDataProductLocalizations',
+'l!t!CommonMasterData/Product/AddInsCoreDataProductLocalization'
 ], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
@@ -23,7 +23,8 @@ define([
 		},
 
 		columns: function () {
-		    return [
+		   
+		   return [
 				{ field: 'sysLanguageId', title: this.resources.sysLanguageId , collection: this.options.sysLanguage, defaultText: this.resources.pleaseSelect},
 				{ field: 'productName', title: this.resources.productName },
 				{ field: 'description', title: this.resources.description },
@@ -39,6 +40,13 @@ define([
 
 		    self.grid.bind('edit', function (e) {
 		        e.model.insCoreDataProductId = self.model.id;
+
+				if (e.model.isNew()) {
+                    var dt = new Date(2070, 11, 31);
+		            e.model.toDate = dt;
+		            var numeric = e.container.find("input[name=toDate]");
+		            numeric[0].value = dt.toLocaleDateString();
+		        }
 		    });
 
 		    return self;

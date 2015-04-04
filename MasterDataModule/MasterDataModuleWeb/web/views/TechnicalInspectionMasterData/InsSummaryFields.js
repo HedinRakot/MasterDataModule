@@ -3,7 +3,6 @@ define([
 'collections/TechnicalInspectionMasterData/InsSummaryFields',
 'l!t!TechnicalInspectionMasterData/FilterInsSummaryField',
 'l!t!TechnicalInspectionMasterData/InsSummaryFieldRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -27,6 +26,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;

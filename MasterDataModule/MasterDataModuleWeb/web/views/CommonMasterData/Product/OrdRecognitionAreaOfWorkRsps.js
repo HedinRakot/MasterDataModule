@@ -1,7 +1,7 @@
-define([
-	'base/related-object-grid-view',
-    'collections/CommonMasterData/Product/OrdRecognitionAreaOfWorkRsps',
-    'l!t!CommonMasterData/Product/AddOrdRecognitionAreaOfWorkRsp'
+define([	
+    'base/related-object-grid-view',
+'collections/CommonMasterData/Product/OrdRecognitionAreaOfWorkRsps',
+'l!t!CommonMasterData/Product/AddOrdRecognitionAreaOfWorkRsp'
 ], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
@@ -23,7 +23,8 @@ define([
 		},
 
 		columns: function () {
-		    return [
+		   
+		   return [
 				{ field: 'ordAreaOfWorkId', title: this.resources.ordAreaOfWorkId },
 				{ field: 'priority', title: this.resources.priority },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
@@ -38,6 +39,13 @@ define([
 
 		    self.grid.bind('edit', function (e) {
 		        e.model.ordRecognitionId = self.model.id;
+
+				if (e.model.isNew()) {
+                    var dt = new Date(2070, 11, 31);
+		            e.model.toDate = dt;
+		            var numeric = e.container.find("input[name=toDate]");
+		            numeric[0].value = dt.toLocaleDateString();
+		        }
 		    });
 
 		    return self;

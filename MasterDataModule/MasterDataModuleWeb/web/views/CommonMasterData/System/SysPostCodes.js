@@ -3,7 +3,6 @@ define([
 'collections/CommonMasterData/System/SysPostCodes',
 'l!t!CommonMasterData/System/FilterSysPostCode',
 'l!t!CommonMasterData/System/SysPostCodeRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -29,6 +28,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;

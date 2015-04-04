@@ -36,7 +36,7 @@
                 //'roles': _.partial(BaseRouter.showView, this, 'l!t!settings/roles', { permissions: true }),
                 'users': _.partial(BaseRouter.showView, this, 'l!t!settings/users', { roles: true }),
                 'systemLog': _.partial(BaseRouter.showView, this, 't!settings/systemLog'),
-
+                'MasterDataSiteInfo': _.partial(BaseRouter.showView, this, 't!Settings/MasterDataSiteInfos'),
 
                 'CommonMasterData': _.partial(BaseRouter.showView, this, 'l!t!CommonMasterData/CommonMasterData'),
                 'AdminService': _.partial(BaseRouter.showView, this, 'l!t!AdminService/AdminService'),

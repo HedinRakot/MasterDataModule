@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -9,10 +10,15 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'PFP inspection type to position',
 		pleaseSelect: 'Please select',
+
 		insPfpPositionId: 'Position',	
+
 		insPfpInspectionTypeId: 'Inspection type',	
+
 		fromDate: 'From date',	
+
 		toDate: 'To date',	
+
 	};
 
 	return resources;

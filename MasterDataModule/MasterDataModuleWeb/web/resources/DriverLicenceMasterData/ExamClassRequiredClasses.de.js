@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Voraussetzungsklasse ',
 		pleaseSelect: 'Bitte auswählen',
+
 		examClassId: 'übergeordnete Klasse ',	
+
 		examClassIdRequired: 'Voraussetzungsklasse',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

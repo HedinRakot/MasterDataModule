@@ -3,7 +3,6 @@ define([
 'collections/CommonMasterData/Product/InsProductObjectClasses',
 'l!t!CommonMasterData/Product/FilterInsProductObjectClass',
 'l!t!CommonMasterData/Product/InsProductObjectClassRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -28,6 +27,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;

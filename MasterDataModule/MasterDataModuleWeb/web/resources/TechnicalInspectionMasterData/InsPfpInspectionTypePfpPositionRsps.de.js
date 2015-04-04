@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'TP Stammdaten',
 	    pageTitle: 'Zuordnung PFP-Prüfpositionen zu PFP-Baugruppe',
 		pleaseSelect: 'Bitte auswählen',
+
 		insPfpPositionId: 'PFP-Prüfposition ',	
+
 		insPfpInspectionTypeId: 'PFP-Baugruppe ',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Anerkennung der Fahrschule',
 		pleaseSelect: 'Bitte auswählen',
+
 		driverSchoolId: 'Fahrschule',	
+
 		examRecognitionTypeId: 'Anerkennung',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

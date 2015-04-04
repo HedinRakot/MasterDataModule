@@ -117,15 +117,13 @@ namespace MasterDataModule.API.Controllers
             if (!String.IsNullOrEmpty(sorting.Field))
             {
                 var entityType = (typeof (TEntity));
-                var property = entityType.GetProperty(sorting.Field, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);
-
-                if (typeof (IHasId<TId>).IsAssignableFrom(property.PropertyType))
+                var property = entityType.GetProperty(sorting.Field,
+                    BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);
+                if (property != null)
                 {
-                    result = entities.OrderBy(sorting.Field + ".ID " + sorting.Direction);
-                }
-                else
-                {
-                    result = entities.OrderBy(sorting.Field + " " + sorting.Direction);
+                    result = (typeof (IHasId<TId>).IsAssignableFrom(property.PropertyType))
+                        ? entities.OrderBy(sorting.Field + ".ID " + sorting.Direction)
+                        : entities.OrderBy(sorting.Field + " " + sorting.Direction);
                 }
             }
             else

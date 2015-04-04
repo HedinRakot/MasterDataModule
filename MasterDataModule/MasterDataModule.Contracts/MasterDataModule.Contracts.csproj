@@ -81,6 +81,9 @@
     <Compile Include="Entities\Configuration\MasterDataRolePermissionRsp.cs">
       <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Configuration\MasterDataSiteInfo.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Drl\CommunityParticipant.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
@@ -104,6 +107,8 @@
     <Compile Include="Entities\Drl\DriverSchoolInfo.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Monitor\MasterDataWcfInfo.cs" />
+    <Compile Include="Entities\Monitor\WcfServiceStatus.cs" />
     <Compile Include="Enums\MasterDataPermissions.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -130,6 +135,9 @@
     <Compile Include="Managers\Configuration\IMasterDataRolePermissionRspManager.cs">
       <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Managers\Configuration\IMasterDataSiteInfoManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\Configuration\IUserManager.Custom.cs" />
     <Compile Include="Managers\Drl\ICommunityParticipantManager.cs">
       <DependentUpon>Drl.IManagers.tt</DependentUpon>
@@ -152,6 +160,8 @@
     <Compile Include="Managers\Drl\IDriverSchoolManager.cs">
       <DependentUpon>Drl.IManagers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Managers\Monitor\IMasterDataWcfInfoManager.cs" />
+    <Compile Include="Managers\Monitor\IWcfStatusInfoManager.cs" />
     <Compile Include="MasterDataConfiguration.Context.Interface.Custom.cs" />
     <Compile Include="Entities\Configuration\Permission.cs">
       <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>

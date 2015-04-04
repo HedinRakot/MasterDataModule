@@ -3,7 +3,6 @@ define([
 'collections/CommonMasterData/Product/OrdRecognitions',
 'l!t!CommonMasterData/Product/FilterOrdRecognition',
 'l!t!CommonMasterData/Product/OrdRecognitionRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -28,6 +27,7 @@ define([
 				{ field: 'orgAccountingAreaId', title: this.resources.orgAccountingAreaId },
 			];
 		}
+
 	});
 
 	return view;

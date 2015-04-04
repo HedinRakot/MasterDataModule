@@ -283,6 +283,9 @@
     <Compile Include="Data\Configuration\MasterDataRolePermissionRspMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\Configuration\MasterDataSiteInfoMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\Configuration\PermissionMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
@@ -414,6 +417,8 @@
     <Compile Include="Data\AsPro.Context.Custom.cs" />
     <Compile Include="Data\Drl.Context.Custom.cs" />
     <Compile Include="Data\Drl.Context.Configuration.cs" />
+    <Compile Include="Data\Monitor\MasterDataWcfInfoMapping.cs" />
+    <Compile Include="Data\Monitor\WebServicesInfoMapping.cs" />
     <Compile Include="Data\SaveActors\AsPro\AsProSaveActorManager.cs" />
     <Compile Include="Data\SaveActors\Base\SaveActorManager.cs" />
     <Compile Include="Data\SaveActors\Drl\DrlSaveActorManager.cs" />
@@ -672,6 +677,9 @@
     <Compile Include="Managers\Configuration\MasterDataRolePermissionRspManager.cs">
       <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Managers\Configuration\MasterDataSiteInfoManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\Configuration\PermissionManager.cs">
       <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
     </Compile>
@@ -787,6 +795,8 @@
       <DependentUpon>Drl.Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Configuration\UserManager.Custom.cs" />
+    <Compile Include="Managers\Monitor\MasterDataWcfInfoManager.cs" />
+    <Compile Include="Managers\Monitor\WcfStatusInfoManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

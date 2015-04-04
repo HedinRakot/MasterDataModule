@@ -490,6 +490,8 @@
     <Compile Include="Controllers\Drl\SchoolInfosController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\Monitor\MasterDataWcfInfoController.cs" />
+    <Compile Include="Controllers\Monitor\WebServiceMonitorController.cs" />
     <Compile Include="Controllers\ReadOnlyClientBaseController.cs" />
     <Compile Include="Controllers\GridArgs.cs" />
     <Compile Include="Controllers\GridArgsModelBinder.cs" />
@@ -499,6 +501,9 @@
     <Compile Include="Controllers\Settings\Custom.SysTablesController.cs" />
     <Compile Include="Controllers\Settings\Custom.UserController.cs" />
     <Compile Include="Controllers\Settings\MasterDataRolePermissionRspsController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\MasterDataSiteInfosController.cs">
       <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Settings\MasterDataViewCollectionControllerFactory.cs">
@@ -802,6 +807,8 @@
     <Compile Include="Models\GlobalSysTableModel.cs" />
     <Compile Include="Models\ISystemModelFields.cs" />
     <Compile Include="Models\IModelIntervalFields.cs" />
+    <Compile Include="Models\Monitor\MasterDataWcfInfoModel.cs" />
+    <Compile Include="Models\Monitor\WcfServiceStatusModel.cs" />
     <Compile Include="Models\Settings\Custom.RoleModel.cs" />
     <Compile Include="Models\Settings\Custom.SysColumnModel.cs" />
     <Compile Include="Models\Settings\Custom.SysTableModel.cs" />
@@ -809,6 +816,9 @@
       <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Settings\Custom.UserModel.cs" />
+    <Compile Include="Models\Settings\MasterDataSiteInfoModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Settings\SysColumnModel.cs">
       <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
     </Compile>

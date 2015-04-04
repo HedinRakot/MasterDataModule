@@ -3,7 +3,6 @@ define([
 'collections/CommonMasterData/Org/OrgAccountingAreas',
 'l!t!CommonMasterData/Org/FilterOrgAccountingArea',
 'l!t!CommonMasterData/Org/OrgAccountingAreaRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -28,6 +27,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;

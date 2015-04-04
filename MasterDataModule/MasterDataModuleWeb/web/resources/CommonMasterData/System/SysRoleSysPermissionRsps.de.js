@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Zuordnung Rechte zu einer Rolle',
 		pleaseSelect: 'Bitte auswählen',
+
 		sysRoleId: 'Rolle ',	
+
 		sysPermissionId: 'Recht ',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

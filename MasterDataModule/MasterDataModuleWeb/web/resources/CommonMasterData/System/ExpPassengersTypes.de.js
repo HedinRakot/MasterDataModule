@@ -1,3 +1,4 @@
+
 define(function () {
 	'use strict';
 
@@ -8,10 +9,15 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Mitfahrerart',
 		pleaseSelect: 'Bitte auswählen',
+
 		text: 'Beschreibung der Mitfahrerart',	
+
 		code: 'Mitfahrerart',	
+
 		fromDate: 'Von Datum',	
+
 		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

@@ -3,7 +3,6 @@ define([
 'collections/CommonMasterData/System/OrdFederalGroups',
 'l!t!CommonMasterData/System/FilterOrdFederalGroup',
 'l!t!CommonMasterData/System/OrdFederalGroupRelationships'
-
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -28,6 +27,7 @@ define([
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
 		}
+
 	});
 
 	return view;
