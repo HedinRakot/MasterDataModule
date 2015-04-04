@@ -49,6 +49,11 @@ namespace MasterDataModule.Contracts.Entities.Monitor
             /// </summary>
             public static readonly string WsdlPath = "WSDL_PATH";
 
+            public static readonly string DeleteDate = "DELETE_DATE";
+            public static readonly string CreateDate = "CREATE_DATE";
+            public static readonly string ChangeDate = "CHANGE_DATE";
+
+
            
         }
 
@@ -63,6 +68,9 @@ namespace MasterDataModule.Contracts.Entities.Monitor
         public string Name { get; set; }
         public string WsdlPath { get; set; }
         public DateTime? DeleteDate { get; set; }
+
+        public DateTime CreateDate { get; set; }
+        public DateTime ChangeDate { get; set; }
 
         /// <summary>
         /// Shallow copy of object. Exclude navigation properties and PK properties
@@ -80,8 +88,7 @@ namespace MasterDataModule.Contracts.Entities.Monitor
             };
         }
 
-        public DateTime CreateDate { get; set; }
-        public DateTime ChangeDate { get; set; }
+       
     }
 }
 

@@ -28,7 +28,7 @@
                 { field: "checkStatus", title: 'Status' },
                 { field: "checkDate", title: 'Datum' },
                 { field: "attempt", title: 'Versuch' },
-                { field: "message", title: 'Datum' }
+                { field: "message", title: 'Meldung' }
             ];
         }
     });

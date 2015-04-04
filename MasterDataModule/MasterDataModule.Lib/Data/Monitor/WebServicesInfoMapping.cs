@@ -38,9 +38,16 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.WsdlPath)
                 .HasColumnName(WcfServiceStatus.Fields.WsdlPath);
 
-            Ignore(t => t.DeleteDate);
-            Ignore(t => t.ChangeDate);
-            Ignore(t => t.CreateDate);
+            Property(t => t.DeleteDate)
+            .HasColumnName(WcfServiceStatus.Fields.DeleteDate);
+
+            Property(t => t.ChangeDate)
+                .HasColumnName(WcfServiceStatus.Fields.ChangeDate);
+
+            Property(t => t.CreateDate)
+            .HasColumnName(WcfServiceStatus.Fields.CreateDate);
+
+         
             //Relationships
         }
     }
