@@ -24,11 +24,15 @@
 
         columns: function () {
             return [
-                { field: "name", title: 'WCF Name', width: '150px' },
-                { field: "checkStatus", title: 'Status' },
-                { field: "checkDate", title: 'Datum' },
-                { field: "attempt", title: 'Versuch' },
-                { field: "message", title: 'Meldung' }
+                { field: "name", title: this.resources.name, width: '150px' },
+                { field: "checkStatus", title: this.resources.checkStatus },
+                {
+                    field: "checkDate", title: this.resources.checkDate,
+                    template: "#= kendo.toString(kendo.parseDate(checkDate, 'yyyy-MM-ddTHH:mm:ss'), 'MM.dd.yyyy HH:mm:ss') #"
+                    
+                },
+                { field: "attempt", title: this.resources.attempt },
+                { field: "message", title: this.resources.message }
             ];
         }
     });

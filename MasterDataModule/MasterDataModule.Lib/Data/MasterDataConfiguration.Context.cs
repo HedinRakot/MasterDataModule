@@ -20,6 +20,7 @@ namespace MasterDataModule.Lib.Data
     {
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Configurations.Add(MasterDataWcfInfoMapping.Instance);
             modelBuilder.Configurations.Add(SysColumnMapping.Instance);
             modelBuilder.Configurations.Add(SysTableMapping.Instance);
             modelBuilder.Configurations.Add(RoleMapping.Instance);
@@ -28,6 +29,7 @@ namespace MasterDataModule.Lib.Data
             modelBuilder.Configurations.Add(UserMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataSiteInfoMapping.Instance);
             modelBuilder.Configurations.Add(WebServicesInfoMapping.Instance);
+            
         }
 
         /// <summary>

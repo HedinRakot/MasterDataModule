@@ -107,6 +107,7 @@
     <Compile Include="Entities\Drl\DriverSchoolInfo.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Monitor\MasterDataWcfInfo.cs" />
     <Compile Include="Entities\Monitor\WcfServiceStatus.cs" />
     <Compile Include="Enums\MasterDataPermissions.cs">
       <AutoGen>True</AutoGen>
@@ -159,6 +160,7 @@
     <Compile Include="Managers\Drl\IDriverSchoolManager.cs">
       <DependentUpon>Drl.IManagers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Managers\Monitor\IMasterDataWcfInfoManager.cs" />
     <Compile Include="Managers\Monitor\IWcfStatusInfoManager.cs" />
     <Compile Include="MasterDataConfiguration.Context.Interface.Custom.cs" />
     <Compile Include="Entities\Configuration\Permission.cs">

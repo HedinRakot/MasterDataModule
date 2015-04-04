@@ -1,3 +1,6 @@
+USE SettingsData
+GO;
+
 CREATE VIEW dbo.[GET_WCF_SERVICES_STATUS] 
 AS
 SELECT 
@@ -15,6 +18,14 @@ SELECT
 FROM 
 	[dbo].[MASTER_DATA_WCF_CHECK_RESULTS] res INNER JOIN
 	[dbo].[MASTER_DATA_WCF_INFO] inf ON res.[MASTER_DATA_WCF_INFO_ID] = inf.ID
+GO;
+
+ALTER TABLE [dbo].[MASTER_DATA_WCF_INFO]
+ADD [CHANGE_DATE] datetime2(3) not null default (getdate()),
+[CREATE_DATE] datetime2(3) not null default (getdate()),
+[DELETE_DATE] datetime2(3) null 
+
 GO
+
 
 

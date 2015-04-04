@@ -25,6 +25,7 @@ namespace MasterDataModule.Configuration
             container.RegisterType<IUserManager, UserManager>(new PerRequestLifetimeManager());
             container.RegisterType<IMasterDataSiteInfoManager, MasterDataSiteInfoManager>(new PerRequestLifetimeManager());
             container.RegisterType<IWcfStatusInfoManager, WcfStatusInfoManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IMasterDataWcfInfoManager, MasterDataWcfInfoManager>(new PerRequestLifetimeManager());
         }
 
     }

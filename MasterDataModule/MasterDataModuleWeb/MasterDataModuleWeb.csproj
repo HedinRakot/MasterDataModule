@@ -201,6 +201,7 @@
     <Content Include="css\kendo\images\wp8_inverseicons.png" />
     <Content Include="css\site.css" />
     <Content Include="Global.asax" />
+    <Content Include="web\collections\AdminService\MasterDataWcfInfos.js" />
     <Content Include="web\collections\AdminService\WcfServiceStatuses.js" />
     <Content Include="web\collections\CommonMasterData\Customer\InsTaxClasses.js">
       <DependentUpon>web.customer.collections.tt</DependentUpon>
@@ -549,6 +550,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>web.tp.collections.tt</DependentUpon>
     </Content>
+    <Content Include="web\models\AdminService\WebServiceMonitor\MasterDataWcfInfo.js" />
     <Content Include="web\models\AdminService\WebServiceMonitor\WcfServiceStatus.js" />
     <Content Include="web\models\CommonMasterData\Customer\FilterInsTaxClass.js">
       <DependentUpon>web.customer.models.tt</DependentUpon>
@@ -1209,7 +1211,9 @@
     <Content Include="web\resources\AdminService\AdminService.en.js" />
     <Content Include="web\resources\AdminService\JobMonitor\JobMonitor.de.js" />
     <Content Include="web\resources\AdminService\JobMonitor\JobMonitor.en.js" />
+    <Content Include="web\resources\AdminService\WebServiceMonitor\MasterDataWcfInfos.de.js" />
     <Content Include="web\resources\AdminService\WebServiceMonitor\WebServiceMonitor.de.js" />
+    <Content Include="web\resources\AdminService\WebServiceMonitor\MasterDataWcfInfos.en.js" />
     <Content Include="web\resources\AdminService\WebServiceMonitor\WebServiceMonitor.en.js" />
     <Content Include="web\resources\CommonMasterData\CommonMasterData.de.js" />
     <Content Include="web\resources\CommonMasterData\CommonMasterData.en.js" />
@@ -3960,6 +3964,8 @@
     <Content Include="web\router.js" />
     <Content Include="web\templates\AdminService\AdminService.html" />
     <Content Include="web\templates\AdminService\JobMonitor\JobMonitor.html" />
+    <Content Include="web\templates\AdminService\WebServiceMonitor\AddMasterDataWcfInfo.html" />
+    <Content Include="web\templates\AdminService\WebServiceMonitor\MasterDataWcfInfos.html" />
     <Content Include="web\templates\AdminService\WebServiceMonitor\WebServiceMonitor.html" />
     <Content Include="web\templates\CommonMasterData\CommonMasterData.html" />
     <Content Include="web\templates\CommonMasterData\Customer\AddInsTaxClass.html">
@@ -5385,6 +5391,7 @@
     <Content Include="web\application-start.js" />
     <Content Include="web\views\AdminService\AdminService.js" />
     <Content Include="web\views\AdminService\JobMonitor\JobMonitor.js" />
+    <Content Include="web\views\AdminService\WebServiceMonitor\MasterDataWcfInfos.js" />
     <Content Include="web\views\AdminService\WebServiceMonitor\WebServiceMonitor.js" />
     <Content Include="web\views\CommonMasterData\CommonMasterData.js" />
     <Content Include="web\views\CommonMasterData\Customer\AddInsTaxClass.js">

@@ -8,7 +8,10 @@
         getAllMasterDataRoutes: function (baseRouter) {
             var routes = {
                 'WebServiceMonitor': _.partial(BaseRouter.showView, baseRouter, 'l!t!AdminService/WebServiceMonitor/WebServiceMonitor', { SysLanguage: true }),
-                'JobMonitor': _.partial(BaseRouter.showView, baseRouter, 'l!t!AdminService/JobMonitor/JobMonitor', { SysLanguage: true })
+                'JobMonitor': _.partial(BaseRouter.showView, baseRouter, 'l!t!AdminService/JobMonitor/JobMonitor', { SysLanguage: true }),
+                'WebServiceMonitorAdjustment': _.partial(BaseRouter.showView, baseRouter, 'l!t!AdminService/WebServiceMonitor/MasterDataWcfInfos', { SysLanguage: true })
+
+                
             }
 
             return routes;
