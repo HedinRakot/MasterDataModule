@@ -40,8 +40,7 @@ namespace MasterDataModule.Lib.Data.Configuration
             Property(t => t.Message)
                 .HasColumnName(ApplicationLogs.Fields.Message)
                 .IsRequired()
-                .IsUnicode()
-                .HasMaxLength(0);
+                .IsUnicode();
 
             Property(t => t.DeleteDate)
                 .HasColumnName(ApplicationLogs.Fields.DeleteDate);

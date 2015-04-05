@@ -42,6 +42,17 @@ namespace MasterDataModule.Lib.Data.Configuration
                 .IsRequired()
                 .IsUnicode();
 
+            Property(t => t.CreateDate)
+                .HasColumnName(MasterDataSiteInfo.Fields.CreateDate)
+                .IsRequired();
+
+            Property(t => t.DeleteDate)
+                .HasColumnName(MasterDataSiteInfo.Fields.DeleteDate);
+
+            Property(t => t.ChangeDate)
+                .HasColumnName(MasterDataSiteInfo.Fields.ChangeDate)
+                .IsRequired();
+
 
             //Relationships
         }

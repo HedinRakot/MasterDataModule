@@ -809,6 +809,9 @@
     <Compile Include="Models\IModelIntervalFields.cs" />
     <Compile Include="Models\Monitor\MasterDataWcfInfoModel.cs" />
     <Compile Include="Models\Monitor\WcfServiceStatusModel.cs" />
+    <Compile Include="Models\Settings\ApplicationLogsModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Settings\Custom.RoleModel.cs" />
     <Compile Include="Models\Settings\Custom.SysColumnModel.cs" />
     <Compile Include="Models\Settings\Custom.SysTableModel.cs" />

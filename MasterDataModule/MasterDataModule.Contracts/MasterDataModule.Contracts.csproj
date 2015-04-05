@@ -78,6 +78,9 @@
     <Compile Include="Entities\AsPro\Common\InsCoreDataProductLocalization.cs">
       <DependentUpon>Common.Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Configuration\ApplicationLogs.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Configuration\MasterDataRolePermissionRsp.cs">
       <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
     </Compile>
@@ -131,6 +134,9 @@
     </Compile>
     <Compile Include="Managers\AsPro\Common\IInsCoreDataProductLocalizationManager.cs">
       <DependentUpon>Common.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IApplicationLogsManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Configuration\IMasterDataRolePermissionRspManager.cs">
       <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>

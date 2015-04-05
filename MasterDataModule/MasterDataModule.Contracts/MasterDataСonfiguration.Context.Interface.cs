@@ -16,6 +16,10 @@ namespace MasterDataModule.Contracts
     public partial interface IMasterDataConfigurationEntities
     {
         /// <summary>
+        ///     Set of <see cref="ApplicationLogs"/> entities from table dbo.APPLICATION_LOGS
+        /// </summary>
+        IQueryable<ApplicationLogs> ApplicationLogs{get;}
+        /// <summary>
         ///     Set of <see cref="SysColumn"/> entities from table dbo.SYS_COLUMNS
         /// </summary>
         IQueryable<SysColumn> SysColumn{get;}

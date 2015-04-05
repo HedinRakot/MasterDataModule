@@ -20,7 +20,7 @@ namespace MasterDataModule.Lib.Data
     {
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(MasterDataWcfInfoMapping.Instance);
+            modelBuilder.Configurations.Add(ApplicationLogsMapping.Instance);
             modelBuilder.Configurations.Add(SysColumnMapping.Instance);
             modelBuilder.Configurations.Add(SysTableMapping.Instance);
             modelBuilder.Configurations.Add(RoleMapping.Instance);
@@ -28,10 +28,12 @@ namespace MasterDataModule.Lib.Data
             modelBuilder.Configurations.Add(MasterDataRolePermissionRspMapping.Instance);
             modelBuilder.Configurations.Add(UserMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataSiteInfoMapping.Instance);
-            modelBuilder.Configurations.Add(WebServicesInfoMapping.Instance);
-            
         }
 
+        /// <summary>
+        ///     Set of <see cref="ApplicationLogs"/> entities from table dbo.APPLICATION_LOGS
+        /// </summary>
+        public IQueryable<ApplicationLogs> ApplicationLogs{ get; set; }
         /// <summary>
         ///     Set of <see cref="SysColumn"/> entities from table dbo.SYS_COLUMNS
         /// </summary>
