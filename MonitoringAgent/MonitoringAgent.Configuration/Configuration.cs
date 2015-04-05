@@ -5,6 +5,8 @@ using MonitoringAgent.Job;
 using MonitoringAgent.Job.Interfaces;
 using MonitoringAgent.Notifications;
 using MonitoringAgent.Notifications.Interfaces;
+using MonitoringAgent.Notifications.Interfaces.Services;
+using MonitoringAgent.Notifications.Services;
 using MonitoringAgent.Services.Common.Contracts;
 using MonitoringAgent.Services.Common.Services;
 using MonitoringAgent.Site;
@@ -26,6 +28,7 @@ namespace MonitoringAgent.Configuration
             container.RegisterType<INotificationService, NotificationService>();
             container.RegisterType<ISubscribersService, SubscribersService>();
             container.RegisterType<INotificationsModule, NotificationsModule>();
+            container.RegisterType<IMailNotificationSendService, MailNotificationSendService>();
 
             container.RegisterType<IWcfPingService, WcfPingService>();
             container.RegisterType<ICheckingModule, WcfServicePingModule>("wcfPing");

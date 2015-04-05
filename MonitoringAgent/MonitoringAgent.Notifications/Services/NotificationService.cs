@@ -4,9 +4,10 @@ using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Data.Interfaces.Enums;
 using MonitoringAgent.Data.Interfaces.Managers;
 using MonitoringAgent.Notifications.Interfaces;
+using MonitoringAgent.Notifications.Interfaces.Services;
 using MonitoringAgent.Services.Common.Base;
 
-namespace MonitoringAgent.Notifications
+namespace MonitoringAgent.Notifications.Services
 {
     /// <summary>
     /// Service for working with notifications

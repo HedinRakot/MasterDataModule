@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Data.Interfaces.Enums;
 
-namespace MonitoringAgent.Notifications.Interfaces
+namespace MonitoringAgent.Notifications.Interfaces.Services
 {
     /// <summary>
     /// Service for working with notifications

@@ -33,8 +33,6 @@ namespace MonitoringAgent.Common.Data
             Property(x => x.CreateDate).HasColumnName("CREATE_DATE").IsRequired();
             Property(x => x.ChangeDate).HasColumnName("CHANGE_DATE").IsRequired();
             Property(x => x.DeleteDate).HasColumnName("DELETE_DATE").IsOptional();
-
-            // Foreign keys
             InitializePartial();
         }
         partial void InitializePartial();

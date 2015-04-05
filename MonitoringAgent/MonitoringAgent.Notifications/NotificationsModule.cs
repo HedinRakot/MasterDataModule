@@ -2,6 +2,8 @@
 using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Data.Interfaces.Enums;
 using MonitoringAgent.Notifications.Interfaces;
+using MonitoringAgent.Notifications.Interfaces.Services;
+using MonitoringAgent.Notifications.Services;
 
 namespace MonitoringAgent.Notifications
 {
@@ -10,14 +12,18 @@ namespace MonitoringAgent.Notifications
     /// </summary>
     internal sealed class NotificationsModule : INotificationsModule
     {
+        private readonly IMailNotificationSendService mailNotificationSendService;
         private readonly INotificationService notificationService;
         private readonly ISubscribersService subscribersService;
 
         /// <summary>
         /// Ctor
         /// </summary>
-        public NotificationsModule(INotificationService notificationService, ISubscribersService subscribersService)
+        public NotificationsModule(IMailNotificationSendService mailNotificationSendService, 
+                                    INotificationService notificationService,
+                                    ISubscribersService subscribersService)
         {
+            this.mailNotificationSendService = mailNotificationSendService;
             this.notificationService = notificationService;
             this.subscribersService = subscribersService;
         }
@@ -37,7 +43,8 @@ namespace MonitoringAgent.Notifications
         /// <param name="notification">Notification</param>
         public void Notify(MasterDataNotifications notification)
         {
-            //TODO Notify subscribers
+            var subscribers = subscribersService.GetSubscribers(notification.Id);
+            mailNotificationSendService.SendNotification(notification, subscribers);
         }
     }
 }

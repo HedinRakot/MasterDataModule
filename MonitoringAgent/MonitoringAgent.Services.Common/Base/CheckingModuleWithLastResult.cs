@@ -43,7 +43,7 @@ namespace MonitoringAgent.Services.Common.Base
         /// <param name="notification">Notification</param>
         protected override bool NeedNotify(TCheckingResult result, MasterDataNotifications notification)
         {
-            return result.Attempt == notification.AlertAttemptCount && result.CheckStatus == notification.AlertCheckStatus;
+            return result.Attempt >= notification.AlertAttemptCount && result.CheckStatus == notification.AlertCheckStatus;
         }
         /// <summary>
         /// Gets previous result of checking

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using MonitoringAgent.Data.Interfaces.Entities;
 
-namespace MonitoringAgent.Notifications.Interfaces
+namespace MonitoringAgent.Notifications.Interfaces.Services
 {
     /// <summary>
     /// Service for working with subscribers

@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="INotificationService.cs" />
+    <Compile Include="Services\INotificationService.cs" />
     <Compile Include="INotificationsModule.cs" />
-    <Compile Include="ISubscribersService.cs" />
+    <Compile Include="Services\ISubscribersService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

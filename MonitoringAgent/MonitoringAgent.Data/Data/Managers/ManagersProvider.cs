@@ -19,7 +19,7 @@ namespace MonitoringAgent.Common.Data.Managers
 	{
 		private void RegisterManagers(IUnityContainer container)
 		{
-			container.RegisterType<IMasterDataJobCheckResultsManager, MasterDataJobCheckResultsManager>();
+					container.RegisterType<IMasterDataJobCheckResultsManager, MasterDataJobCheckResultsManager>();
 			container.RegisterType<IMasterDataJobInfoManager, MasterDataJobInfoManager>();
 			container.RegisterType<IMasterDataMonitorableInfoMasterDataNotificationsRspManager, MasterDataMonitorableInfoMasterDataNotificationsRspManager>();
 			container.RegisterType<IMasterDataMonitorStateManager, MasterDataMonitorStateManager>();

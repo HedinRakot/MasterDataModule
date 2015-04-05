@@ -31,10 +31,11 @@ namespace MonitoringAgent.Common.Data
             Property(x => x.IsAlertOn).HasColumnName("IS_ALERT_ON").IsRequired();
             Property(x => x.AlertCheckStatus).HasColumnName("ALERT_CHECK_STATUS").IsRequired();
             Property(x => x.AlertAttemptCount).HasColumnName("ALERT_ATTEMPT_COUNT").IsRequired();
-            Property(x => x.Message).HasColumnName("MESSAGE").IsOptional();
+            Property(x => x.Message).HasColumnName("MESSAGE").IsRequired();
             Property(x => x.CreateDate).HasColumnName("CREATE_DATE").IsRequired();
             Property(x => x.ChangeDate).HasColumnName("CHANGE_DATE").IsRequired();
             Property(x => x.DeleteDate).HasColumnName("DELETE_DATE").IsOptional();
+            Property(x => x.Subject).HasColumnName("SUBJECT").IsRequired();
             InitializePartial();
         }
         partial void InitializePartial();
