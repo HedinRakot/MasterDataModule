@@ -5,6 +5,8 @@ GO
 -- --------------------------------------------------
 -- Creating all tables
 -- --------------------------------------------------
+IF EXISTS (SELECT OBJECT_ID FROM SYS.TABLES WHERE NAME = 'APPLICATION_LOGS')
+  DROP TABLE [dbo].[APPLICATION_LOGS];
 
 -- Creating table 'APPLICATION_LOGS'
 CREATE TABLE [dbo].[APPLICATION_LOGS] (
