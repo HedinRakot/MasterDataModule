@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using MonitoringAgent.Data.Interfaces.Entities;
+using MonitoringAgent.Data.Interfaces.Enums;
+using MonitoringAgent.Notifications.Interfaces;
 using MonitoringAgent.Services.Common.Base;
-using MonitoringAgent.Services.Common.Contracts;
 using MonitoringAgent.WcfServices.Interfaces.Services;
 
 namespace MonitoringAgent.WcfServices
@@ -10,15 +11,16 @@ namespace MonitoringAgent.WcfServices
     /// <summary>
     /// Module for checking WCF services
     /// </summary>
-    public sealed class WcfServicePingModule : CheckingModuleWithLastResult<MasterDataWcfInfo, MasterDataWcfCheckResults>
+    internal sealed class WcfServicePingModule : CheckingModuleWithLastResult<MasterDataWcfInfo, MasterDataWcfCheckResults>
     {
         private readonly IWcfPingService service;
         /// <summary>
         /// Ctor
         /// </summary>
         /// <param name="service">Service for checking WCF</param>
-        /// <param name="notificationService">Notification service</param>
-        public WcfServicePingModule(IWcfPingService service, INotificationService notificationService): base(notificationService)
+        /// <param name="notificationsModule">Notification module</param>
+        public WcfServicePingModule(IWcfPingService service, INotificationsModule notificationsModule)
+            : base(notificationsModule)
         {
             this.service = service;
         }

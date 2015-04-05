@@ -1,16 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using MonitoringAgent.Data.Interfaces.Entities;
+using MonitoringAgent.Data.Interfaces.Enums;
 using MonitoringAgent.Data.Interfaces.Managers;
+using MonitoringAgent.Notifications.Interfaces;
 using MonitoringAgent.Services.Common.Base;
-using MonitoringAgent.Services.Common.Contracts;
 
-namespace MonitoringAgent.Services.Common.Services
+namespace MonitoringAgent.Notifications
 {
     /// <summary>
     /// Service for working with notifications
     /// </summary>
-    public sealed class NotificationService: BaseManagersService, INotificationService
+    internal sealed class NotificationService: BaseManagersService, INotificationService
     {
         /// <summary>
         /// Ctor
@@ -39,15 +40,5 @@ namespace MonitoringAgent.Services.Common.Services
 
             return query.ToDictionary(t => t.Key, t => t.g.ToList());
         }
-
-        /// <summary>
-        /// Notified to all subscribers about event
-        /// </summary>
-        /// <param name="notification">Notification</param>
-        public void Notify(MasterDataNotifications notification)
-        {
-            //TODO Notify subscribers
-        }
-
     }
 }

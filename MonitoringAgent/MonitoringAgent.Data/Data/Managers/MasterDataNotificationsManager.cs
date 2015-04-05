@@ -4,7 +4,7 @@ using MonitoringAgent.Data.Interfaces.Managers;
 
 namespace MonitoringAgent.Common.Data.Managers
 {
-    public partial class MasterDataNotificationsManager: BaseManager<MasterDataNotifications>, IMasterDataNotificationsManager
+    internal sealed partial class MasterDataNotificationsManager: BaseManager<MasterDataNotifications>, IMasterDataNotificationsManager
     {
 		public MasterDataNotificationsManager(DbContext context): base(context)
 		{

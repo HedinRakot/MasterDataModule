@@ -4,7 +4,7 @@ using MonitoringAgent.Data.Interfaces.Managers;
 
 namespace MonitoringAgent.Common.Data.Managers
 {
-    public partial class MasterDataMonitorableInfoMasterDataNotificationsRspManager: BaseManager<MasterDataMonitorableInfoMasterDataNotificationsRsp>, IMasterDataMonitorableInfoMasterDataNotificationsRspManager
+    internal sealed partial class MasterDataMonitorableInfoMasterDataNotificationsRspManager: BaseManager<MasterDataMonitorableInfoMasterDataNotificationsRsp>, IMasterDataMonitorableInfoMasterDataNotificationsRspManager
     {
 		public MasterDataMonitorableInfoMasterDataNotificationsRspManager(DbContext context): base(context)
 		{

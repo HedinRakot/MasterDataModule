@@ -89,6 +89,7 @@
     <Compile Include="Entities\MasterDataWcfInfo.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Enums\CheckModuleType.cs" />
     <Compile Include="Managers\IBaseManager.cs" />
     <Compile Include="Managers\IManagers.cs">
       <AutoGen>True</AutoGen>

@@ -1,4 +1,4 @@
-namespace MonitoringAgent.Services.Common.Base
+namespace MonitoringAgent.Data.Interfaces.Enums
 {
     public enum CheckModuleType
     {

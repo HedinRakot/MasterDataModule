@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{920C610B-F26D-4FF1-A330-5F4EC671BC8A}</ProjectGuid>
+    <ProjectGuid>{3DF8B3E3-0342-4F69-839F-61623E8510C4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MonitoringAgent.Site</RootNamespace>
-    <AssemblyName>MonitoringAgent.Site</AssemblyName>
+    <RootNamespace>MonitoringAgent.Notifications.Interfaces</RootNamespace>
+    <AssemblyName>MonitoringAgent.Notifications.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -33,7 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,26 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SitePingModule.cs" />
-    <Compile Include="SitePingService.cs" />
+    <Compile Include="INotificationService.cs" />
+    <Compile Include="INotificationsModule.cs" />
+    <Compile Include="ISubscribersService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MonitoringAgent.Data.Interfaces\MonitoringAgent.Data.Interfaces.csproj">
       <Project>{60706078-76E4-4402-8AC4-C14D94138946}</Project>
       <Name>MonitoringAgent.Data.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MonitoringAgent.Notifications.Interfaces\MonitoringAgent.Notifications.Interfaces.csproj">
-      <Project>{3DF8B3E3-0342-4F69-839F-61623E8510C4}</Project>
-      <Name>MonitoringAgent.Notifications.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MonitoringAgent.Services.Common\MonitoringAgent.Services.Common.csproj">
-      <Project>{57E0112C-5F5D-4AF8-9249-406030775DF7}</Project>
-      <Name>MonitoringAgent.Services.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MonitoringAgent.Site.Interfaces\MonitoringAgent.Site.Interfaces.csproj">
-      <Project>{4B3C304C-5F5C-4B6A-922B-FB0782C9056E}</Project>
-      <Name>MonitoringAgent.Site.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

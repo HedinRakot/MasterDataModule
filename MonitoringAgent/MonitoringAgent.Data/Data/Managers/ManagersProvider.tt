@@ -15,9 +15,9 @@ using MonitoringAgent.Data.Interfaces.Managers;
 
 namespace MonitoringAgent.Common.Data.Managers
 {
-	public partial class ManagersProvider
+	internal sealed partial class ManagersProvider
 	{
-		protected void RegisterManagers(IUnityContainer container)
+		private void RegisterManagers(IUnityContainer container)
 		{
 		<#
         foreach (Table tbl in from t in tables.Where(t => !t.IsMapping).OrderBy(x => x.NameHumanCase) select t)

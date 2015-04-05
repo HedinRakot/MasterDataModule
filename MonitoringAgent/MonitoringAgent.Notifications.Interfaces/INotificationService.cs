@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using MonitoringAgent.Data.Interfaces.Entities;
-using MonitoringAgent.Services.Common.Base;
+using MonitoringAgent.Data.Interfaces.Enums;
 
-namespace MonitoringAgent.Services.Common.Contracts
+namespace MonitoringAgent.Notifications.Interfaces
 {
     /// <summary>
     /// Service for working with notifications
@@ -15,10 +15,5 @@ namespace MonitoringAgent.Services.Common.Contracts
         /// <param name="serviceIds">List of monitorable objects</param>
         /// <param name="checkModuleType">Module type</param>
         Dictionary<int, List<MasterDataNotifications>> GetAllNotifications(IList<int> serviceIds, CheckModuleType checkModuleType);
-        /// <summary>
-        /// Notified to all subscribers about event
-        /// </summary>
-        /// <param name="notification">Notification</param>
-        void Notify(MasterDataNotifications notification);
     }
 }

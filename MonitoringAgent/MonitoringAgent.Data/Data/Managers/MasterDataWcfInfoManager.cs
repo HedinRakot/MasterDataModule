@@ -4,7 +4,7 @@ using MonitoringAgent.Data.Interfaces.Managers;
 
 namespace MonitoringAgent.Common.Data.Managers
 {
-    public partial class MasterDataWcfInfoManager: BaseManager<MasterDataWcfInfo>, IMasterDataWcfInfoManager
+    internal sealed partial class MasterDataWcfInfoManager: BaseManager<MasterDataWcfInfo>, IMasterDataWcfInfoManager
     {
 		public MasterDataWcfInfoManager(DbContext context): base(context)
 		{

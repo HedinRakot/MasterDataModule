@@ -15,11 +15,11 @@ using MonitoringAgent.Data.Interfaces.Managers;
 
 namespace MonitoringAgent.Common.Data.Managers
 {
-	public partial class ManagersProvider
+	internal sealed partial class ManagersProvider
 	{
-		protected void RegisterManagers(IUnityContainer container)
+		private void RegisterManagers(IUnityContainer container)
 		{
-					container.RegisterType<IMasterDataJobCheckResultsManager, MasterDataJobCheckResultsManager>();
+			container.RegisterType<IMasterDataJobCheckResultsManager, MasterDataJobCheckResultsManager>();
 			container.RegisterType<IMasterDataJobInfoManager, MasterDataJobInfoManager>();
 			container.RegisterType<IMasterDataMonitorableInfoMasterDataNotificationsRspManager, MasterDataMonitorableInfoMasterDataNotificationsRspManager>();
 			container.RegisterType<IMasterDataMonitorStateManager, MasterDataMonitorStateManager>();

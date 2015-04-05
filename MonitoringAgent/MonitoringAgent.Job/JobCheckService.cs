@@ -10,19 +10,29 @@ using MonitoringAgent.Services.Common.SqlServer;
 
 namespace MonitoringAgent.Job
 {
-    public class JobCheckService: BaseManagersService, IJobCheckService
+    /// <summary>
+    /// Service for checking jobs
+    /// </summary>
+    internal sealed class JobCheckService: BaseManagersService, IJobCheckService
     {
+        /// <summary>
+        /// Ctor
+        /// </summary>
         public JobCheckService(IManagersProvider managersProvider)
             : base(managersProvider)
         {
         }
-
+        /// <summary>
+        /// Get all jobs for checking
+        /// </summary>
         public List<MasterDataJobInfo> GetAllJobContainersToCheck()
         {
             var manager = ManagersProvider.GetManager<IMasterDataJobInfoManager>();
             return manager.GetAllEntities().ToList();
         }
-
+        /// <summary>
+        /// Check job
+        /// </summary>
         public MasterDataJobCheckResults CheckJob(MasterDataJobInfo jobInfo)
         {
             var scriptEngine = new ScriptEngine(jobInfo.ConnectionString);
@@ -44,8 +54,9 @@ namespace MonitoringAgent.Job
             }
             return null;
         }
-
-
+        /// <summary>
+        /// Saves cheking results
+        /// </summary>
         public void SaveResults(MasterDataJobCheckResults result)
         {
             var manager = ManagersProvider.GetManager<IMasterDataJobCheckResultsManager>();

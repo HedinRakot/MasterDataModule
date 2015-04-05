@@ -43,19 +43,20 @@
     <Compile Include="Base\BaseManagersService.cs" />
     <Compile Include="Base\CheckingModule.cs" />
     <Compile Include="Base\CheckingModuleWithLastResult.cs" />
-    <Compile Include="Base\CheckModuleType.cs" />
     <Compile Include="Contracts\ICheckingModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ConfigurationService.cs" />
     <Compile Include="Contracts\IConfigurationService.cs" />
-    <Compile Include="Contracts\INotificationService.cs" />
-    <Compile Include="Services\NotificationService.cs" />
     <Compile Include="SqlServer\ScriptEngine.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MonitoringAgent.Data.Interfaces\MonitoringAgent.Data.Interfaces.csproj">
       <Project>{60706078-76E4-4402-8AC4-C14D94138946}</Project>
       <Name>MonitoringAgent.Data.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonitoringAgent.Notifications.Interfaces\MonitoringAgent.Notifications.Interfaces.csproj">
+      <Project>{3DF8B3E3-0342-4F69-839F-61623E8510C4}</Project>
+      <Name>MonitoringAgent.Notifications.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\MonitoringAgent.Site.Interfaces\MonitoringAgent.Site.Interfaces.csproj">
       <Project>{4B3C304C-5F5C-4B6A-922B-FB0782C9056E}</Project>

@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Threading;
 using MonitoringAgent.Data.Interfaces.Entities;
+using MonitoringAgent.Data.Interfaces.Enums;
+using MonitoringAgent.Notifications.Interfaces;
 using MonitoringAgent.Services.Common.Contracts;
 
 namespace MonitoringAgent.Services.Common.Base
@@ -14,15 +16,14 @@ namespace MonitoringAgent.Services.Common.Base
     public abstract class CheckingModule<TServiceInfo, TCheckingResult> : ICheckingModule
         where TServiceInfo : class, ICheckServiceInfo
     {
-        private readonly INotificationService notificationService;
-
+        private readonly INotificationsModule notificationsModule;
         /// <summary>
         /// Ctor
         /// </summary>
-        /// <param name="notificationService">Service for get info about notifications </param>
-        protected CheckingModule(INotificationService notificationService)
+        /// <param name="notificationsModule">Module for get info about notifications </param>
+        protected CheckingModule(INotificationsModule notificationsModule)
         {
-            this.notificationService = notificationService;
+            this.notificationsModule = notificationsModule;
         }
 
         readonly Dictionary<string, ServiceInfo> checkServices = new Dictionary<string, ServiceInfo>(); 
@@ -57,7 +58,7 @@ namespace MonitoringAgent.Services.Common.Base
                     {
                         if (NeedNotify(checkingResult, notification))
                         {
-                            notificationService.Notify(notification);
+                            notificationsModule.Notify(notification);
                         }
                     }
                 }
@@ -80,7 +81,7 @@ namespace MonitoringAgent.Services.Common.Base
         public void Initialize()
         {
             var services = ServiceExtractor();
-            var notifications = notificationService.GetAllNotifications(services.Select(s => s.Id).ToList(), CheckModuleType);
+            var notifications = notificationsModule.GetAllNotifications(services.Select(s => s.Id).ToList(), CheckModuleType);
 
             foreach (var service in services)
             {

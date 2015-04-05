@@ -4,7 +4,7 @@ using MonitoringAgent.Data.Interfaces.Managers;
 
 namespace MonitoringAgent.Common.Data.Managers
 {
-    public partial class MasterDataJobCheckResultsManager: BaseManager<MasterDataJobCheckResults>, IMasterDataJobCheckResultsManager
+    internal sealed partial class MasterDataJobCheckResultsManager: BaseManager<MasterDataJobCheckResults>, IMasterDataJobCheckResultsManager
     {
 		public MasterDataJobCheckResultsManager(DbContext context): base(context)
 		{

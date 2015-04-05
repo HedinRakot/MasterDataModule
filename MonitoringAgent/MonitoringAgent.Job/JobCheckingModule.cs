@@ -1,23 +1,24 @@
 ﻿using System.Collections.Generic;
 using MonitoringAgent.Data.Interfaces.Entities;
+using MonitoringAgent.Data.Interfaces.Enums;
+using MonitoringAgent.Notifications.Interfaces;
 using MonitoringAgent.Services.Common.Base;
-using MonitoringAgent.Services.Common.Contracts;
 
 namespace MonitoringAgent.Job
 {
     /// <summary>
     /// Module for checking jobs
     /// </summary>
-    public sealed class JobCheckingModule : CheckingModule<MasterDataJobInfo, MasterDataJobCheckResults>
+    internal sealed class JobCheckingModule : CheckingModule<MasterDataJobInfo, MasterDataJobCheckResults>
     {
         private readonly JobCheckService jobCheckService;
         /// <summary>
         /// Ctor
         /// </summary>
         /// <param name="jobCheckService">Job service</param>
-        /// <param name="notificationService">Notification service</param>
-        public JobCheckingModule(JobCheckService jobCheckService, INotificationService notificationService)
-            : base(notificationService)
+        /// <param name="notificationModule">Notification module</param>
+        public JobCheckingModule(JobCheckService jobCheckService, INotificationsModule notificationModule)
+            : base(notificationModule)
         {
             this.jobCheckService = jobCheckService;
         }

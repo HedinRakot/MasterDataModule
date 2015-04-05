@@ -1,18 +1,26 @@
 ﻿using System;
 using System.ServiceModel.Description;
-using MonitoringAgent.Services.Common;
 
 namespace MonitoringAgent.WcfServices
 {
-    public class WcfMetadataLoader
+    /// <summary>
+    /// Class for try to load metadata from WCF
+    /// </summary>
+    internal sealed class WcfMetadataLoader
     {
         private readonly string url;
-
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="url">Wcf service wsdl path</param>
         public WcfMetadataLoader(string url)
         {
             this.url = url;
         }
-
+        /// <summary>
+        /// Test connection to WCF service
+        /// </summary>
+        /// <returns></returns>
         public PingResult Ping()
         {
             // Define the metadata address, contract name, operation name, 

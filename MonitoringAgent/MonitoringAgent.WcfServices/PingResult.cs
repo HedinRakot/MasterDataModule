@@ -1,13 +1,27 @@
 namespace MonitoringAgent.WcfServices
 {
-    public class PingResult
+    /// <summary>
+    /// Result of ping WCF service
+    /// </summary>
+    internal sealed class PingResult
     {
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="result">Result</param>
+        /// <param name="message">Message</param>
         public PingResult(bool result, string message = "")
         {
             Message = message;
             Result = result;
         }
-        public string Message { get; set; }
-        public bool Result { get; set; }
+        /// <summary>
+        /// Message
+        /// </summary>
+        public string Message { get; private set; }
+        /// <summary>
+        /// Result, true is ok, false is bad result
+        /// </summary>
+        public bool Result { get; private set; }
     }
 }

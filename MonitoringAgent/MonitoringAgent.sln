@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringAgent.Job", "Moni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringAgent.Job.Interfaces", "MonitoringAgent.Job.Interfaces\MonitoringAgent.Job.Interfaces.csproj", "{C023387A-ED3A-40FE-B8FD-B95F88273C5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringAgent.Notifications", "MonitoringAgent.Notifications\MonitoringAgent.Notifications.csproj", "{7AC41AED-6AF6-466A-8EED-266A184AB70A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringAgent.Notifications.Interfaces", "MonitoringAgent.Notifications.Interfaces\MonitoringAgent.Notifications.Interfaces.csproj", "{3DF8B3E3-0342-4F69-839F-61623E8510C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{C023387A-ED3A-40FE-B8FD-B95F88273C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C023387A-ED3A-40FE-B8FD-B95F88273C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C023387A-ED3A-40FE-B8FD-B95F88273C5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AC41AED-6AF6-466A-8EED-266A184AB70A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AC41AED-6AF6-466A-8EED-266A184AB70A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AC41AED-6AF6-466A-8EED-266A184AB70A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AC41AED-6AF6-466A-8EED-266A184AB70A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DF8B3E3-0342-4F69-839F-61623E8510C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF8B3E3-0342-4F69-839F-61623E8510C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF8B3E3-0342-4F69-839F-61623E8510C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF8B3E3-0342-4F69-839F-61623E8510C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

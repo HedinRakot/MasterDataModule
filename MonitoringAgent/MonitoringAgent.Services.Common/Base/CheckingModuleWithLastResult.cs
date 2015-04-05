@@ -1,5 +1,5 @@
 ﻿using MonitoringAgent.Data.Interfaces.Entities;
-using MonitoringAgent.Services.Common.Contracts;
+using MonitoringAgent.Notifications.Interfaces;
 
 namespace MonitoringAgent.Services.Common.Base
 {
@@ -15,9 +15,9 @@ namespace MonitoringAgent.Services.Common.Base
         /// <summary>
         /// Ctor
         /// </summary>
-        /// <param name="notificationService">Notification service</param>
-        protected CheckingModuleWithLastResult(INotificationService notificationService)
-            : base(notificationService)
+        /// <param name="notficationModule">Notification module</param>
+        protected CheckingModuleWithLastResult(INotificationsModule notficationModule)
+            : base(notficationModule)
         {
         }
         /// <summary>

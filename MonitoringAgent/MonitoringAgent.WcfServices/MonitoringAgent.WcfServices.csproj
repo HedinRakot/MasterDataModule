@@ -52,6 +52,10 @@
       <Project>{60706078-76E4-4402-8AC4-C14D94138946}</Project>
       <Name>MonitoringAgent.Data.Interfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MonitoringAgent.Notifications.Interfaces\MonitoringAgent.Notifications.Interfaces.csproj">
+      <Project>{3DF8B3E3-0342-4F69-839F-61623E8510C4}</Project>
+      <Name>MonitoringAgent.Notifications.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MonitoringAgent.Services.Common\MonitoringAgent.Services.Common.csproj">
       <Project>{57E0112C-5F5D-4AF8-9249-406030775DF7}</Project>
       <Name>MonitoringAgent.Services.Common</Name>

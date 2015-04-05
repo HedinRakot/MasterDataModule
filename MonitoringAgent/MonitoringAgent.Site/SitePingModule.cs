@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using MonitoringAgent.Data.Interfaces.Entities;
+using MonitoringAgent.Data.Interfaces.Enums;
+using MonitoringAgent.Notifications.Interfaces;
 using MonitoringAgent.Services.Common.Base;
-using MonitoringAgent.Services.Common.Contracts;
 using MonitoringAgent.Site.Interfaces.Services;
 
 namespace MonitoringAgent.Site
@@ -11,15 +12,16 @@ namespace MonitoringAgent.Site
     /// <summary>
     /// Module for checking sites
     /// </summary>
-    public sealed class SitePingModule : CheckingModuleWithLastResult<MasterDataSiteInfo, MasterDataSiteCheckResults>
+    internal sealed class SitePingModule : CheckingModuleWithLastResult<MasterDataSiteInfo, MasterDataSiteCheckResults>
     {
         private readonly ISitePingService sitePingService;
         /// <summary>
         /// Ctor
         /// </summary>
         /// <param name="sitePingService">Site ping service</param>
-        /// <param name="notificationService">Notification service</param>
-        public SitePingModule(ISitePingService sitePingService, INotificationService notificationService): base(notificationService)
+        /// <param name="notificationsModule">Notification module</param>
+        public SitePingModule(ISitePingService sitePingService, INotificationsModule notificationsModule)
+            : base(notificationsModule)
         {
             this.sitePingService = sitePingService;
         }

@@ -3,6 +3,8 @@ using MonitoringAgent.Common.Data.Managers;
 using MonitoringAgent.Data.Interfaces.Managers;
 using MonitoringAgent.Job;
 using MonitoringAgent.Job.Interfaces;
+using MonitoringAgent.Notifications;
+using MonitoringAgent.Notifications.Interfaces;
 using MonitoringAgent.Services.Common.Contracts;
 using MonitoringAgent.Services.Common.Services;
 using MonitoringAgent.Site;
@@ -20,7 +22,10 @@ namespace MonitoringAgent.Configuration
         {
             container.RegisterType<IManagersProvider, ManagersProvider>(new PerResolveLifetimeManager());
             container.RegisterType<IConfigurationService, ConfigurationService>();
+
             container.RegisterType<INotificationService, NotificationService>();
+            container.RegisterType<ISubscribersService, SubscribersService>();
+            container.RegisterType<INotificationsModule, NotificationsModule>();
 
             container.RegisterType<IWcfPingService, WcfPingService>();
             container.RegisterType<ICheckingModule, WcfServicePingModule>("wcfPing");

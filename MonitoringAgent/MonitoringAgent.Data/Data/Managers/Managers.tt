@@ -23,7 +23,7 @@ using MonitoringAgent.Data.Interfaces.Managers;
 
 namespace MonitoringAgent.Common.Data.Managers
 {
-    public partial class <#=managerName #>: BaseManager<<#=tbl.NameHumanCase #>>, I<#=managerName #>
+    internal sealed partial class <#=managerName #>: BaseManager<<#=tbl.NameHumanCase #>>, I<#=managerName #>
     {
 		public <#=managerName #>(DbContext context): base(context)
 		{
