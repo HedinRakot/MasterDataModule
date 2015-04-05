@@ -32,6 +32,9 @@ namespace MonitoringAgent.Common.Data
             Property(x => x.Message).HasColumnName("MESSAGE").IsOptional();
             Property(x => x.Attempt).HasColumnName("ATTEMPT").IsOptional();
             Property(x => x.MasterDataSiteInfoId).HasColumnName("MASTER_DATA_SITE_INFO_ID").IsRequired();
+            Property(x => x.CreateDate).HasColumnName("CREATE_DATE").IsRequired();
+            Property(x => x.DeleteDate).HasColumnName("DELETE_DATE").IsOptional();
+            Property(x => x.ChangeDate).HasColumnName("CHANGE_DATE").IsRequired();
 
             // Foreign keys
             InitializePartial();

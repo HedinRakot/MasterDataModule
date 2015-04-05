@@ -30,7 +30,7 @@ namespace MonitoringAgent.Notifications.Services
             }
         }
 
-        private void SendMail(string smtpServer, string from, string password, string mailto, string caption, string message, string attachFile = null)
+        private void SendMail(string smtpServer, string from, string password, string mailto, string caption, string message)
         {
             try
             {
@@ -39,8 +39,6 @@ namespace MonitoringAgent.Notifications.Services
                 mail.To.Add(new MailAddress(mailto));
                 mail.Subject = caption;
                 mail.Body = message;
-                if (!string.IsNullOrEmpty(attachFile))
-                    mail.Attachments.Add(new Attachment(attachFile));
                 SmtpClient client = new SmtpClient
                 {
                     Host = smtpServer,

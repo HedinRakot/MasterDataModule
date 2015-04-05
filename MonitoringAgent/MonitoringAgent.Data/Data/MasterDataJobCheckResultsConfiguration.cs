@@ -31,6 +31,9 @@ namespace MonitoringAgent.Common.Data
             Property(x => x.CheckDate).HasColumnName("CHECK_DATE").IsOptional();
             Property(x => x.CheckStatus).HasColumnName("CHECK_STATUS").IsOptional();
             Property(x => x.MasterDataJobInfoId).HasColumnName("MASTER_DATA_JOB_INFO_ID").IsRequired();
+            Property(x => x.CreateDate).HasColumnName("CREATE_DATE").IsRequired();
+            Property(x => x.DeleteDate).HasColumnName("DELETE_DATE").IsOptional();
+            Property(x => x.ChangeDate).HasColumnName("CHANGE_DATE").IsRequired();
             InitializePartial();
         }
         partial void InitializePartial();

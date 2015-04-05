@@ -9,5 +9,8 @@ namespace MonitoringAgent.Data.Interfaces.Entities
         public DateTime? CheckDate { get; set; } // CHECK_DATE
         public int? CheckStatus { get; set; } // CHECK_STATUS
         public int MasterDataJobInfoId { get; set; } // MASTER_DATA_JOB_INFO_ID
+        public DateTime CreateDate { get; set; } // CREATE_DATE
+        public DateTime? DeleteDate { get; set; } // DELETE_DATE
+        public DateTime ChangeDate { get; set; } // CHANGE_DATE
 	}
 }

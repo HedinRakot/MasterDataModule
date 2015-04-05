@@ -29,6 +29,9 @@ namespace MonitoringAgent.Common.Data
             Property(x => x.Id).HasColumnName("ID").IsRequired().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(x => x.Reconfigure).HasColumnName("RECONFIGURE").IsOptional();
             Property(x => x.ReconfigureCheckingTimeout).HasColumnName("RECONFIGURE_CHECKING_TIMEOUT").IsRequired();
+            Property(x => x.CreateDate).HasColumnName("CREATE_DATE").IsRequired();
+            Property(x => x.DeleteDate).HasColumnName("DELETE_DATE").IsOptional();
+            Property(x => x.ChangeDate).HasColumnName("CHANGE_DATE").IsRequired();
             InitializePartial();
         }
         partial void InitializePartial();

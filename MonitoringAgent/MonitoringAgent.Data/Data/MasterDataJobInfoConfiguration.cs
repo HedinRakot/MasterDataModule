@@ -32,6 +32,9 @@ namespace MonitoringAgent.Common.Data
             Property(x => x.TimeoutChecking).HasColumnName("TIMEOUT_CHECKING").IsRequired();
             Property(x => x.Name).HasColumnName("NAME").IsRequired();
             Property(x => x.JobName).HasColumnName("JOB_NAME").IsRequired();
+            Property(x => x.CreateDate).HasColumnName("CREATE_DATE").IsRequired();
+            Property(x => x.DeleteDate).HasColumnName("DELETE_DATE").IsOptional();
+            Property(x => x.ChangeDate).HasColumnName("CHANGE_DATE").IsRequired();
             InitializePartial();
         }
         partial void InitializePartial();
