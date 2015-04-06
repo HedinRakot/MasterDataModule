@@ -31,6 +31,7 @@
 
 	code.WriteLine("protected override void OnModelCreating(DbModelBuilder modelBuilder)");
 	code.StartArea(); //Area: OnModelCreating
+	code.WriteLine("base.OnModelCreating(modelBuilder);");
     foreach (var entityInfo in context.Entities)
     {
         code.WriteLine("modelBuilder.Configurations.Add({0}.Instance);", entityInfo.Mapping.Name);
