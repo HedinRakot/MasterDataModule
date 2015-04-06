@@ -41,8 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\BaseManagersService.cs" />
+    <Compile Include="Base\BasePingService.cs" />
+    <Compile Include="Base\BasePingServiceWithLastResultWithLastResult.cs" />
     <Compile Include="Base\CheckingModule.cs" />
     <Compile Include="Base\CheckingModuleWithLastResult.cs" />
+    <Compile Include="Contracts\IBasePingService.cs" />
+    <Compile Include="Contracts\IBasePingServiceWithLastResult.cs" />
     <Compile Include="Contracts\ICheckingModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ConfigurationService.cs" />
@@ -57,10 +61,6 @@
     <ProjectReference Include="..\MonitoringAgent.Notifications.Interfaces\MonitoringAgent.Notifications.Interfaces.csproj">
       <Project>{3DF8B3E3-0342-4F69-839F-61623E8510C4}</Project>
       <Name>MonitoringAgent.Notifications.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MonitoringAgent.Site.Interfaces\MonitoringAgent.Site.Interfaces.csproj">
-      <Project>{4B3C304C-5F5C-4B6A-922B-FB0782C9056E}</Project>
-      <Name>MonitoringAgent.Site.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

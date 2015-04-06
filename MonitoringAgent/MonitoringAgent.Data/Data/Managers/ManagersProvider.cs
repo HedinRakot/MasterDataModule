@@ -19,7 +19,9 @@ namespace MonitoringAgent.Common.Data.Managers
 	{
 		private void RegisterManagers(IUnityContainer container)
 		{
-					container.RegisterType<IMasterDataJobCheckResultsManager, MasterDataJobCheckResultsManager>();
+					container.RegisterType<IApplicationLogsManager, ApplicationLogsManager>();
+			container.RegisterType<IGetWcfServicesStatusManager, GetWcfServicesStatusManager>();
+			container.RegisterType<IMasterDataJobCheckResultsManager, MasterDataJobCheckResultsManager>();
 			container.RegisterType<IMasterDataJobInfoManager, MasterDataJobInfoManager>();
 			container.RegisterType<IMasterDataMonitorableInfoMasterDataNotificationsRspManager, MasterDataMonitorableInfoMasterDataNotificationsRspManager>();
 			container.RegisterType<IMasterDataMonitorStateManager, MasterDataMonitorStateManager>();
@@ -30,6 +32,8 @@ namespace MonitoringAgent.Common.Data.Managers
 			container.RegisterType<IMasterDataSubscribersManager, MasterDataSubscribersManager>();
 			container.RegisterType<IMasterDataWcfCheckResultsManager, MasterDataWcfCheckResultsManager>();
 			container.RegisterType<IMasterDataWcfInfoManager, MasterDataWcfInfoManager>();
+			container.RegisterType<IMasterDataWindowsServiceCheckResultsManager, MasterDataWindowsServiceCheckResultsManager>();
+			container.RegisterType<IMasterDataWindowsServiceInfoManager, MasterDataWindowsServiceInfoManager>();
 	
 		}
 	}

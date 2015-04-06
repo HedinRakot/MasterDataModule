@@ -2,8 +2,12 @@ using System;
 
 namespace MonitoringAgent.Data.Interfaces.Entities
 {
-    public partial class MasterDataNotifications
+    public partial class MasterDataNotifications: ISystemFields
     {
+		public MasterDataNotifications()
+		{
+			ChangeDate = CreateDate = DateTime.Now;
+		}
         public int Id { get; set; } // ID (Primary key)
         public int NotificationType { get; set; } // NOTIFICATION_TYPE
         public bool IsAlertOn { get; set; } // IS_ALERT_ON

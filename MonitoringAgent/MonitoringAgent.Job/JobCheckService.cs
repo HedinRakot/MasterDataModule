@@ -13,7 +13,7 @@ namespace MonitoringAgent.Job
     /// <summary>
     /// Service for checking jobs
     /// </summary>
-    internal sealed class JobCheckService: BaseManagersService, IJobCheckService
+    internal sealed class JobCheckService: BasePingService<IMasterDataJobInfoManager, MasterDataJobInfo>, IJobCheckService
     {
         /// <summary>
         /// Ctor
@@ -21,14 +21,6 @@ namespace MonitoringAgent.Job
         public JobCheckService(IManagersProvider managersProvider)
             : base(managersProvider)
         {
-        }
-        /// <summary>
-        /// Get all jobs for checking
-        /// </summary>
-        public List<MasterDataJobInfo> GetAllJobContainersToCheck()
-        {
-            var manager = ManagersProvider.GetManager<IMasterDataJobInfoManager>();
-            return manager.GetAllEntities().ToList();
         }
         /// <summary>
         /// Check job

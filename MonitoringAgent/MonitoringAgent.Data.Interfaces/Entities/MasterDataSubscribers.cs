@@ -2,8 +2,12 @@ using System;
 
 namespace MonitoringAgent.Data.Interfaces.Entities
 {
-    public partial class MasterDataSubscribers
+    public partial class MasterDataSubscribers: ISystemFields
     {
+		public MasterDataSubscribers()
+		{
+			ChangeDate = CreateDate = DateTime.Now;
+		}
         public int Id { get; set; } // ID (Primary key)
         public string Email { get; set; } // EMAIL
         public DateTime CreateDate { get; set; } // CREATE_DATE

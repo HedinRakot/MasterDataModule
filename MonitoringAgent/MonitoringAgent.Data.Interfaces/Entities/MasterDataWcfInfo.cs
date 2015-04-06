@@ -2,8 +2,12 @@ using System;
 
 namespace MonitoringAgent.Data.Interfaces.Entities
 {
-    public partial class MasterDataWcfInfo
+    public partial class MasterDataWcfInfo: ISystemFields
     {
+		public MasterDataWcfInfo()
+		{
+			ChangeDate = CreateDate = DateTime.Now;
+		}
         public int Id { get; set; } // ID (Primary key)
         public string Name { get; set; } // NAME
         public string WsdlPath { get; set; } // WSDL_PATH

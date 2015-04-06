@@ -44,11 +44,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\ApplicationLogs.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Custom.MasterDataJobInfo.cs" />
     <Compile Include="Entities\Custom.MasterDataSiteInfo.cs" />
     <Compile Include="Entities\Custom.MasterDataWcfInfo.cs" />
+    <Compile Include="Entities\Custom.MasterDataWindowsServiceCheckResults.cs" />
+    <Compile Include="Entities\Custom.MasterDataWindowsServiceInfo.cs" />
     <Compile Include="Entities\Custom.WcfServiceInfoCheckResult.cs" />
     <Compile Include="Entities\Custom.SiteInfoCheckResult.cs" />
+    <Compile Include="Entities\GetWcfServicesStatus.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\ICheckResult.cs" />
     <Compile Include="Entities\ICheckServiceInfo.cs" />
     <Compile Include="Entities\Entities.cs">
@@ -56,6 +64,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Entities\ISystemFields.cs" />
     <Compile Include="Entities\MasterDataJobCheckResults.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
@@ -89,8 +98,20 @@
     <Compile Include="Entities\MasterDataWcfInfo.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\MasterDataWindowsServiceCheckResults.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterDataWindowsServiceInfo.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Enums\CheckModuleType.cs" />
+    <Compile Include="Managers\IApplicationLogsManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\IBaseManager.cs" />
+    <Compile Include="Managers\IGetWcfServicesStatusManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\IManagers.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -128,6 +149,12 @@
       <DependentUpon>IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\IMasterDataWcfInfoManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\IMasterDataWindowsServiceCheckResultsManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\IMasterDataWindowsServiceInfoManager.cs">
       <DependentUpon>IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

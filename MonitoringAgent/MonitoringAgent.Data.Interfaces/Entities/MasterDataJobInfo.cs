@@ -2,8 +2,12 @@ using System;
 
 namespace MonitoringAgent.Data.Interfaces.Entities
 {
-    public partial class MasterDataJobInfo
+    public partial class MasterDataJobInfo: ISystemFields
     {
+		public MasterDataJobInfo()
+		{
+			ChangeDate = CreateDate = DateTime.Now;
+		}
         public int Id { get; set; } // ID (Primary key)
         public string ConnectionString { get; set; } // CONNECTION_STRING
         public string TableName { get; set; } // TABLE_NAME

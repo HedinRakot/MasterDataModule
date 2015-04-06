@@ -2,8 +2,12 @@ using System;
 
 namespace MonitoringAgent.Data.Interfaces.Entities
 {
-    public partial class MasterDataMonitorableInfoMasterDataNotificationsRsp
+    public partial class MasterDataMonitorableInfoMasterDataNotificationsRsp: ISystemFields
     {
+		public MasterDataMonitorableInfoMasterDataNotificationsRsp()
+		{
+			ChangeDate = CreateDate = DateTime.Now;
+		}
         public int Id { get; set; } // ID (Primary key)
         public int MonitorableInfoType { get; set; } // MONITORABLE_INFO_TYPE
         public int MonitorableInfoId { get; set; } // MONITORABLE_INFO_ID

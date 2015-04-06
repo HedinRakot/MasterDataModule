@@ -54,12 +54,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\ApplicationLogsConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Custom.MasterDataDbContext.cs" />
     <Compile Include="Data\DbContextProvider.cs" />
+    <Compile Include="Data\GetWcfServicesStatusConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\IMasterDataDbContext.cs">
       <DependentUpon>MasterDataContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\Managers\ApplicationLogsManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\Managers\BaseManager.cs" />
     <Compile Include="Data\Managers\Custom.ManagersProvider.cs" />
+    <Compile Include="Data\Managers\GetWcfServicesStatusManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\Managers\Managers.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -103,10 +116,11 @@
     <Compile Include="Data\Managers\MasterDataWcfInfoManager.cs">
       <DependentUpon>Managers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\MasterDataContext.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    <Compile Include="Data\Managers\MasterDataWindowsServiceCheckResultsManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Managers\MasterDataWindowsServiceInfoManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\MasterDataDbContext.cs">
       <DependentUpon>MasterDataContext.tt</DependentUpon>
@@ -142,6 +156,12 @@
       <DependentUpon>MasterDataContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\MasterDataWcfInfoConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MasterDataWindowsServiceCheckResultsConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MasterDataWindowsServiceInfoConfiguration.cs">
       <DependentUpon>MasterDataContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

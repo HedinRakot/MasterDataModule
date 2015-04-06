@@ -2,8 +2,12 @@ using System;
 
 namespace MonitoringAgent.Data.Interfaces.Entities
 {
-    public partial class MasterDataJobCheckResults
+    public partial class MasterDataJobCheckResults: ISystemFields
     {
+		public MasterDataJobCheckResults()
+		{
+			ChangeDate = CreateDate = DateTime.Now;
+		}
         public int Id { get; set; } // ID (Primary key)
         public DateTime? LastRunTime { get; set; } // LAST_RUN_TIME
         public DateTime? CheckDate { get; set; } // CHECK_DATE

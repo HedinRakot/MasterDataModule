@@ -30,7 +30,7 @@ namespace MonitoringAgent.WcfServices
         /// <returns>List of monitorble objects</returns>
         protected override IList<MasterDataWcfInfo> ServiceExtractor()
         {
-            return service.GetAllServicesToCheck();
+            return service.GetAllInfos();
         }
         /// <summary>
         /// Save results of checking

@@ -28,7 +28,7 @@ namespace MonitoringAgent.Job
         /// <returns>List of monitorble objects</returns>
         protected override IList<MasterDataJobInfo> ServiceExtractor()
         {
-            return jobCheckService.GetAllJobContainersToCheck();
+            return jobCheckService.GetAllInfos();
         }
         /// <summary>
         /// Checks monitorable object

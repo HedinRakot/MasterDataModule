@@ -20,8 +20,12 @@ using System;
 
 namespace MonitoringAgent.Data.Interfaces.Entities
 {
-    public partial class <#=tbl.NameHumanCase #>
+    public partial class <#=tbl.NameHumanCase #>: ISystemFields
     {
+		public <#=tbl.NameHumanCase #>()
+		{
+			ChangeDate = CreateDate = DateTime.Now;
+		}
 <#			int DataMemberOrder = 1;
             foreach (Column col in tbl.Columns.OrderBy(x => x.Ordinal).Where(x => !x.Hidden))
             {

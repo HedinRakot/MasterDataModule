@@ -20,6 +20,12 @@ namespace MonitoringAgent.Common.Data
     public partial class MasterDataDbContext : DbContext, IMasterDataDbContext
     {
         [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
+        public IDbSet<ApplicationLogs> ApplicationLogs { get; set; } // APPLICATION_LOGS
+
+        [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
+        public IDbSet<GetWcfServicesStatus> GetWcfServicesStatus { get; set; } // GET_WCF_SERVICES_STATUS
+
+        [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
         public IDbSet<MasterDataJobCheckResults> MasterDataJobCheckResults { get; set; } // MASTER_DATA_JOB_CHECK_RESULTS
 
         [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
@@ -53,6 +59,12 @@ namespace MonitoringAgent.Common.Data
         public IDbSet<MasterDataWcfInfo> MasterDataWcfInfoes { get; set; } // MASTER_DATA_WCF_INFO
 
         [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
+        public IDbSet<MasterDataWindowsServiceCheckResults> MasterDataWindowsServiceCheckResults { get; set; } // MASTER_DATA_WINDOWS_SERVICE_CHECK_RESULTS
+
+        [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
+        public IDbSet<MasterDataWindowsServiceInfo> MasterDataWindowsServiceInfoes { get; set; } // MASTER_DATA_WINDOWS_SERVICE_INFO
+
+        [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
         static MasterDataDbContext()
         {
             Database.SetInitializer<MasterDataDbContext>(null);
@@ -82,6 +94,8 @@ namespace MonitoringAgent.Common.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Configurations.Add(new ApplicationLogsConfiguration());
+            modelBuilder.Configurations.Add(new GetWcfServicesStatusConfiguration());
             modelBuilder.Configurations.Add(new MasterDataJobCheckResultsConfiguration());
             modelBuilder.Configurations.Add(new MasterDataJobInfoConfiguration());
             modelBuilder.Configurations.Add(new MasterDataMonitorableInfoMasterDataNotificationsRspConfiguration());
@@ -93,6 +107,8 @@ namespace MonitoringAgent.Common.Data
             modelBuilder.Configurations.Add(new MasterDataSubscribersConfiguration());
             modelBuilder.Configurations.Add(new MasterDataWcfCheckResultsConfiguration());
             modelBuilder.Configurations.Add(new MasterDataWcfInfoConfiguration());
+            modelBuilder.Configurations.Add(new MasterDataWindowsServiceCheckResultsConfiguration());
+            modelBuilder.Configurations.Add(new MasterDataWindowsServiceInfoConfiguration());
 
             OnModelCreatingPartial(modelBuilder);
         }
@@ -100,6 +116,8 @@ namespace MonitoringAgent.Common.Data
         [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
         public static DbModelBuilder CreateModel(DbModelBuilder modelBuilder, string schema)
         {
+            modelBuilder.Configurations.Add(new ApplicationLogsConfiguration(schema));
+            modelBuilder.Configurations.Add(new GetWcfServicesStatusConfiguration(schema));
             modelBuilder.Configurations.Add(new MasterDataJobCheckResultsConfiguration(schema));
             modelBuilder.Configurations.Add(new MasterDataJobInfoConfiguration(schema));
             modelBuilder.Configurations.Add(new MasterDataMonitorableInfoMasterDataNotificationsRspConfiguration(schema));
@@ -111,6 +129,8 @@ namespace MonitoringAgent.Common.Data
             modelBuilder.Configurations.Add(new MasterDataSubscribersConfiguration(schema));
             modelBuilder.Configurations.Add(new MasterDataWcfCheckResultsConfiguration(schema));
             modelBuilder.Configurations.Add(new MasterDataWcfInfoConfiguration(schema));
+            modelBuilder.Configurations.Add(new MasterDataWindowsServiceCheckResultsConfiguration(schema));
+            modelBuilder.Configurations.Add(new MasterDataWindowsServiceInfoConfiguration(schema));
             return modelBuilder;
         }
 

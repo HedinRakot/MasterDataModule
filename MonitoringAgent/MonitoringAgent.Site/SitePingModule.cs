@@ -14,16 +14,16 @@ namespace MonitoringAgent.Site
     /// </summary>
     internal sealed class SitePingModule : CheckingModuleWithLastResult<MasterDataSiteInfo, MasterDataSiteCheckResults>
     {
-        private readonly ISitePingService sitePingService;
+        private readonly ISitePingServiceWithLastResult sitePingServiceWithLastResult;
         /// <summary>
         /// Ctor
         /// </summary>
-        /// <param name="sitePingService">Site ping service</param>
+        /// <param name="sitePingServiceWithLastResult">Site ping service</param>
         /// <param name="notificationsModule">Notification module</param>
-        public SitePingModule(ISitePingService sitePingService, INotificationsModule notificationsModule)
+        public SitePingModule(ISitePingServiceWithLastResult sitePingServiceWithLastResult, INotificationsModule notificationsModule)
             : base(notificationsModule)
         {
-            this.sitePingService = sitePingService;
+            this.sitePingServiceWithLastResult = sitePingServiceWithLastResult;
         }
         /// <summary>
         /// Gets all monitorable objects for checking
@@ -31,14 +31,14 @@ namespace MonitoringAgent.Site
         /// <returns>List of monitorble objects</returns>
         protected override IList<MasterDataSiteInfo> ServiceExtractor()
         {
-            return sitePingService.GetAllSitesForCheck();
+            return sitePingServiceWithLastResult.GetAllInfos();
         }
         /// <summary>
         /// Save result
         /// </summary>
         protected override void SaveCheckingResult(MasterDataSiteCheckResults result)
         {
-            sitePingService.SetCheckingResult(result);
+            sitePingServiceWithLastResult.SetCheckingResult(result);
         }
         /// <summary>
         /// Gets previous result of checking
@@ -46,7 +46,7 @@ namespace MonitoringAgent.Site
         /// <param name="serviceInfo">Info about monitorable object</param>
         protected override MasterDataSiteCheckResults LastResultExtractor(MasterDataSiteInfo serviceInfo)
         {
-            return sitePingService.GetLastResult(serviceInfo.Id);
+            return sitePingServiceWithLastResult.GetLastResult(serviceInfo.Id);
         }
         /// <summary>
         /// Checks monitorable object

@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System;
+using System.Linq.Expressions;
 using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Data.Interfaces.Managers;
 using MonitoringAgent.Services.Common.Base;
@@ -10,43 +10,21 @@ namespace MonitoringAgent.Site
     /// <summary>
     /// Service for working with sites
     /// </summary>
-    internal sealed class SitePingService :BaseManagersService, ISitePingService
+    internal sealed class SitePingServiceWithLastResultWithLastResult : BasePingServiceWithLastResultWithLastResult<IMasterDataSiteInfoManager, MasterDataSiteInfo, IMasterDataSiteCheckResultsManager, MasterDataSiteCheckResults>, ISitePingServiceWithLastResult
     {
         /// <summary>
         /// Ctor
         /// </summary>
         /// <param name="managerProvider">Managers provider</param>
-        public SitePingService(IManagersProvider managerProvider): base(managerProvider)
+        public SitePingServiceWithLastResultWithLastResult(IManagersProvider managerProvider): base(managerProvider)
         {
         }
         /// <summary>
-        /// Gets all sites for checking
+        /// Gets id of info
         /// </summary>
-        /// <returns></returns>
-        public List<MasterDataSiteInfo> GetAllSitesForCheck()
+        protected override Expression<Func<MasterDataSiteCheckResults, int>> InfoIdExtractor
         {
-            var siteInfoManager = ManagersProvider.GetManager<IMasterDataSiteInfoManager>();
-            return siteInfoManager.GetAllEntities().ToList();
-        }
-        /// <summary>
-        /// Gets last result of checking
-        /// </summary>
-        /// <param name="siteId">Id of monitorable object</param>
-        /// <returns></returns>
-        public MasterDataSiteCheckResults GetLastResult(int siteId)
-        {
-            var checkResultManager = ManagersProvider.GetManager<IMasterDataSiteCheckResultsManager>();
-            return checkResultManager.GetAllEntities().Where(s => s.MasterDataSiteInfoId == siteId).OrderByDescending(s => s.CheckDate).FirstOrDefault();
-        }
-        /// <summary>
-        /// Saves checking result
-        /// </summary>
-        /// <param name="result">Result</param>
-        public void SetCheckingResult(MasterDataSiteCheckResults result)
-        {
-            var checkResultManager = ManagersProvider.GetManager<IMasterDataSiteCheckResultsManager>();
-            checkResultManager.AddOrUpdateEntities(new[] { result });
-            checkResultManager.SaveChanges();
+            get { return results => results.MasterDataSiteInfoId; }
         }
     }
 }

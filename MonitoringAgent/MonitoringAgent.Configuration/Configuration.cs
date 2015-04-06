@@ -13,6 +13,8 @@ using MonitoringAgent.Site;
 using MonitoringAgent.Site.Interfaces.Services;
 using MonitoringAgent.WcfServices;
 using MonitoringAgent.WcfServices.Interfaces.Services;
+using MonitoringAgent.WindowsService;
+using MonitoringAgent.WindowsService.Interfaces;
 
 namespace MonitoringAgent.Configuration
 {
@@ -33,11 +35,14 @@ namespace MonitoringAgent.Configuration
             container.RegisterType<IWcfPingService, WcfPingService>();
             container.RegisterType<ICheckingModule, WcfServicePingModule>("wcfPing");
 
-            container.RegisterType<ISitePingService, SitePingService>();
+            container.RegisterType<ISitePingServiceWithLastResult, SitePingServiceWithLastResultWithLastResult>();
             container.RegisterType<ICheckingModule, SitePingModule>("sitePing");
 
             container.RegisterType<IJobCheckService, JobCheckService>();
             container.RegisterType<ICheckingModule, JobCheckingModule>("jobPing");
+
+            container.RegisterType<IWindowsServicePingService, WindowsServicePingService>();
+            container.RegisterType<ICheckingModule, WindowsServiceCheckingModule>("winServicePing");
         }
 
         public IUnityContainer Container

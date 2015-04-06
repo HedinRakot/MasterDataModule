@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringAgent.Notificatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringAgent.Notifications.Interfaces", "MonitoringAgent.Notifications.Interfaces\MonitoringAgent.Notifications.Interfaces.csproj", "{3DF8B3E3-0342-4F69-839F-61623E8510C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringAgent.WindowsService", "MonitoringAgent.WindowsService\MonitoringAgent.WindowsService.csproj", "{ADF1F3D4-C038-493C-B899-360839DB5D38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringAgent.WindowsService.Interfaces", "MonitoringAgent.WindowsService.Interfaces\MonitoringAgent.WindowsService.Interfaces.csproj", "{C28C1972-BDE2-4610-9AA1-B9F1E7325F34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,14 @@ Global
 		{3DF8B3E3-0342-4F69-839F-61623E8510C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DF8B3E3-0342-4F69-839F-61623E8510C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DF8B3E3-0342-4F69-839F-61623E8510C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADF1F3D4-C038-493C-B899-360839DB5D38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF1F3D4-C038-493C-B899-360839DB5D38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF1F3D4-C038-493C-B899-360839DB5D38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF1F3D4-C038-493C-B899-360839DB5D38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C28C1972-BDE2-4610-9AA1-B9F1E7325F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C28C1972-BDE2-4610-9AA1-B9F1E7325F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C28C1972-BDE2-4610-9AA1-B9F1E7325F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C28C1972-BDE2-4610-9AA1-B9F1E7325F34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

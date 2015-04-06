@@ -20,6 +20,10 @@ namespace MonitoringAgent.Data.Interfaces.Enums
         /// <summary>
         /// Jobs
         /// </summary>
-        Job = 3
+        Job = 3,
+        /// <summary>
+        /// Windows service
+        /// </summary>
+        WindowsService = 4
     }
 }
