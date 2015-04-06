@@ -1,5 +1,6 @@
 ﻿using System.Configuration;
 using MasterDataModule.Contracts;
+using MasterDataModule.Contracts.Managers.Monitor;
 using MasterDataModule.Contracts.SaveActors.Aspro;
 using MasterDataModule.Contracts.SaveActors.Drl;
 using MasterDataModule.Contracts.SaveActors.MasterDataConfiguration;
@@ -10,6 +11,7 @@ using MasterDataModule.Lib.Data.SaveActors.MasterDataConfiguration;
 using MasterDataModule.Lib.DuplicateCheckers.Aspro;
 using MasterDataModule.Lib.DuplicateCheckers.Drl;
 using MasterDataModule.Lib.DuplicateCheckers.MasterDataConfiguration;
+using MasterDataModule.Lib.Managers.Monitor;
 using Microsoft.Practices.Unity;
 
 namespace MasterDataModule.Configuration
@@ -52,6 +54,8 @@ namespace MasterDataModule.Configuration
             InitializeAsProCommon(container);
             InitializeAsProTP(container);
             InitializeMasterDataConfiguration(container);
+
+            container.RegisterType<IWcfStatusInfoManager, WcfStatusInfoManager>(new PerRequestLifetimeManager());
         }
     }
 }

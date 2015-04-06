@@ -29,13 +29,13 @@ namespace MasterDataModule.Configuration
             container.RegisterType<ISysColumnManager, SysColumnManager>(new PerRequestLifetimeManager());
             container.RegisterType<IMasterDataWindowsServiceCheckResultsManager, MasterDataWindowsServiceCheckResultsManager>(new PerRequestLifetimeManager());
             container.RegisterType<ISysTableManager, SysTableManager>(new PerRequestLifetimeManager());
-            container.RegisterType<IMasterDataSubscribersManager, MasterDataSubscribersManager>(new PerRequestLifetimeManager());
-            container.RegisterType<IMasterDataMonitorableInfoMasterDataNotificationsRspManager, MasterDataMonitorableInfoMasterDataNotificationsRspManager>(new PerRequestLifetimeManager());
-            container.RegisterType<IMasterDataNotificationsMasterDataSubscribersRspManager, MasterDataNotificationsMasterDataSubscribersRspManager>(new PerRequestLifetimeManager());
             container.RegisterType<IRoleManager, RoleManager>(new PerRequestLifetimeManager());
             container.RegisterType<IPermissionManager, PermissionManager>(new PerRequestLifetimeManager());
             container.RegisterType<IMasterDataRolePermissionRspManager, MasterDataRolePermissionRspManager>(new PerRequestLifetimeManager());
             container.RegisterType<IUserManager, UserManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IMasterDataSubscribersManager, MasterDataSubscribersManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IMasterDataMonitorableInfoMasterDataNotificationsRspManager, MasterDataMonitorableInfoMasterDataNotificationsRspManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IMasterDataNotificationsMasterDataSubscribersRspManager, MasterDataNotificationsMasterDataSubscribersRspManager>(new PerRequestLifetimeManager());
             container.RegisterType<IMasterDataNotificationsManager, MasterDataNotificationsManager>(new PerRequestLifetimeManager());
         }
 
