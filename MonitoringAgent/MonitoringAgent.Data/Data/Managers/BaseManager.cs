@@ -18,7 +18,7 @@ namespace MonitoringAgent.Common.Data.Managers
 
         public IQueryable<TEntity> GetAllEntities()
         {
-            return context.Set<TEntity>();
+            return context.Set<TEntity>().AsNoTracking();
         }
 
         public void AddOrUpdateEntities(TEntity[] entities)
