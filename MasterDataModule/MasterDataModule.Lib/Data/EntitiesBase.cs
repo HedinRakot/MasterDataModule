@@ -169,5 +169,15 @@ namespace MasterDataModule.Lib.Data
                 }
             }
         }
+
+        protected virtual void RegisterCustomMappings(DbModelBuilder modelBuilder)
+        {
+            
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            RegisterCustomMappings(modelBuilder);
+        }
     }
 }

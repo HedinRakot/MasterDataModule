@@ -20,6 +20,7 @@ namespace MasterDataModule.Lib.Data
     {
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Configurations.Add(ApplicationLogsMapping.Instance);
             modelBuilder.Configurations.Add(SysColumnMapping.Instance);
             modelBuilder.Configurations.Add(SysTableMapping.Instance);

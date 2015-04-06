@@ -1,5 +1,7 @@
-﻿using System.Data.Entity;
+﻿using MasterDataModule.Contracts.Entities.Monitor;
 using MasterDataModule.Contracts.SaveActors.Base;
+using System.Data.Entity;
+using System.Linq;
 
 namespace MasterDataModule.Lib.Data
 {
@@ -30,5 +32,13 @@ namespace MasterDataModule.Lib.Data
             : base(saveActorManager, "name=MasterDataConfigurationEntities")
         {
         }
+
+        
+
+
+        /// <summary>
+        ///     Set of <see cref="Contracts.Entities.Monitor.MasterDataWcfInfo"/> entities from table dbo.MASTER_DATA_WCF_INFO
+        /// </summary>
+        public IQueryable<MasterDataWcfInfo> MasterDataWcfInfo { get; set; }
     }
 }
