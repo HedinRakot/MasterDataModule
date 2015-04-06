@@ -1,17 +1,16 @@
 using MasterDataModule.Contracts;
 using System;
-using System.Collections.Generic;
 
 namespace MasterDataModule.Contracts.Entities.Configuration
 {
-    public partial class MasterDataSiteInfo: IHasId<int>
+    public partial class MasterDataJobInfo: IHasId<int>
         ,IRemovable
         ,ISystemFields
     {
         /// <summary>
         /// Table name
         /// </summary>
-        public static readonly string EntityTableName = "dbo.MASTER_DATA_SITE_INFO";
+        public static readonly string EntityTableName = "dbo.MASTER_DATA_JOB_INFO";
         #region Fields
         /// <summary>
         /// Columns names
@@ -19,44 +18,53 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public static class Fields
         {
             /// <summary>
-            /// Column name 'ID' for property <see cref="MasterDataSiteInfo.Id"/>
+            /// Column name 'ID' for property <see cref="MasterDataJobInfo.Id"/>
             /// </summary>
             public static readonly string Id = "ID";
             /// <summary>
-            /// Column name 'NAME' for property <see cref="MasterDataSiteInfo.Name"/>
+            /// Column name 'CONNECTION_STRING' for property <see cref="MasterDataJobInfo.ConnectionString"/>
             /// </summary>
-            public static readonly string Name = "NAME";
+            public static readonly string ConnectionString = "CONNECTION_STRING";
             /// <summary>
-            /// Column name 'TIMEOUT_CHECKING' for property <see cref="MasterDataSiteInfo.TimeoutChecking"/>
+            /// Column name 'TABLE_NAME' for property <see cref="MasterDataJobInfo.TableName"/>
+            /// </summary>
+            public static readonly string TableName = "TABLE_NAME";
+            /// <summary>
+            /// Column name 'TIMEOUT_CHECKING' for property <see cref="MasterDataJobInfo.TimeoutChecking"/>
             /// </summary>
             public static readonly string TimeoutChecking = "TIMEOUT_CHECKING";
             /// <summary>
-            /// Column name 'SITE_PATH' for property <see cref="MasterDataSiteInfo.SitePath"/>
+            /// Column name 'NAME' for property <see cref="MasterDataJobInfo.Name"/>
             /// </summary>
-            public static readonly string SitePath = "SITE_PATH";
+            public static readonly string Name = "NAME";
             /// <summary>
-            /// Column name 'CREATE_DATE' for property <see cref="MasterDataSiteInfo.CreateDate"/>
+            /// Column name 'JOB_NAME' for property <see cref="MasterDataJobInfo.JobName"/>
+            /// </summary>
+            public static readonly string JobName = "JOB_NAME";
+            /// <summary>
+            /// Column name 'CREATE_DATE' for property <see cref="MasterDataJobInfo.CreateDate"/>
             /// </summary>
             public static readonly string CreateDate = "CREATE_DATE";
             /// <summary>
-            /// Column name 'DELETE_DATE' for property <see cref="MasterDataSiteInfo.DeleteDate"/>
+            /// Column name 'DELETE_DATE' for property <see cref="MasterDataJobInfo.DeleteDate"/>
             /// </summary>
             public static readonly string DeleteDate = "DELETE_DATE";
             /// <summary>
-            /// Column name 'CHANGE_DATE' for property <see cref="MasterDataSiteInfo.ChangeDate"/>
+            /// Column name 'CHANGE_DATE' for property <see cref="MasterDataJobInfo.ChangeDate"/>
             /// </summary>
             public static readonly string ChangeDate = "CHANGE_DATE";
           
         }
         #endregion
         public int Id{ get; set; }
-        public string Name{ get; set; }
+        public string ConnectionString{ get; set; }
+        public string TableName{ get; set; }
         public int TimeoutChecking{ get; set; }
-        public string SitePath{ get; set; }
+        public string Name{ get; set; }
+        public string JobName{ get; set; }
         public DateTime CreateDate{ get; set; }
         public DateTime? DeleteDate{ get; set; }
         public DateTime ChangeDate{ get; set; }
-        public virtual ICollection<MasterDataSiteCheckResults> MasterDataSiteCheckResults{ get; set; }
         DateTime ISystemFields.CreateDate
         {
             get { return CreateDate; }
@@ -72,12 +80,14 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         /// <summary>
         /// Shallow copy of object. Exclude navigation properties and PK properties
         /// </summary>
-        public MasterDataSiteInfo ShallowCopy()
+        public MasterDataJobInfo ShallowCopy()
         {
-            return new MasterDataSiteInfo {
-                       Name = Name,
+            return new MasterDataJobInfo {
+                       ConnectionString = ConnectionString,
+                       TableName = TableName,
                        TimeoutChecking = TimeoutChecking,
-                       SitePath = SitePath,
+                       Name = Name,
+                       JobName = JobName,
                        CreateDate = CreateDate,
                        DeleteDate = DeleteDate,
                        ChangeDate = ChangeDate,

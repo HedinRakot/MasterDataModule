@@ -81,10 +81,46 @@
     <Compile Include="Entities\Configuration\ApplicationLogs.cs">
       <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Configuration\MasterDataJobCheckResults.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\MasterDataJobInfo.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\MasterDataMonitorableInfoMasterDataNotificationsRsp.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\MasterDataMonitorState.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\MasterDataNotifications.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\MasterDataNotificationsMasterDataSubscribersRsp.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Configuration\MasterDataRolePermissionRsp.cs">
       <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Configuration\MasterDataSiteCheckResults.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Configuration\MasterDataSiteInfo.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\MasterDataSubscribers.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\MasterDataWcfCheckResults.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\MasterDataWcfInfo.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\MasterDataWindowsServiceCheckResults.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\MasterDataWindowsServiceInfo.cs">
       <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Drl\CommunityParticipant.cs">
@@ -110,7 +146,6 @@
     <Compile Include="Entities\Drl\DriverSchoolInfo.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Monitor\MasterDataWcfInfo.cs" />
     <Compile Include="Entities\Monitor\WcfServiceStatus.cs" />
     <Compile Include="Enums\LogLevelEnum.cs" />
     <Compile Include="Enums\LogTypeEnum.cs" />
@@ -140,10 +175,46 @@
     <Compile Include="Managers\Configuration\IApplicationLogsManager.cs">
       <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Managers\Configuration\IMasterDataJobCheckResultsManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IMasterDataJobInfoManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IMasterDataMonitorableInfoMasterDataNotificationsRspManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IMasterDataMonitorStateManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IMasterDataNotificationsManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IMasterDataNotificationsMasterDataSubscribersRspManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\Configuration\IMasterDataRolePermissionRspManager.cs">
       <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Managers\Configuration\IMasterDataSiteCheckResultsManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\Configuration\IMasterDataSiteInfoManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IMasterDataSubscribersManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IMasterDataWcfCheckResultsManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IMasterDataWcfInfoManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IMasterDataWindowsServiceCheckResultsManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IMasterDataWindowsServiceInfoManager.cs">
       <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Configuration\IUserManager.Custom.cs" />
@@ -168,7 +239,6 @@
     <Compile Include="Managers\Drl\IDriverSchoolManager.cs">
       <DependentUpon>Drl.IManagers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Managers\Monitor\IMasterDataWcfInfoManager.cs" />
     <Compile Include="Managers\Monitor\IWcfStatusInfoManager.cs" />
     <Compile Include="MasterDataConfiguration.Context.Interface.Custom.cs" />
     <Compile Include="Entities\Configuration\Permission.cs">

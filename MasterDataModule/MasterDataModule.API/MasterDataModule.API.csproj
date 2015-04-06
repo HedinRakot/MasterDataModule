@@ -490,24 +490,62 @@
     <Compile Include="Controllers\Drl\SchoolInfosController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\Monitor\MasterDataWcfInfoController.cs" />
     <Compile Include="Controllers\Monitor\WebServiceMonitorController.cs" />
     <Compile Include="Controllers\ReadOnlyClientBaseController.cs" />
     <Compile Include="Controllers\GridArgs.cs" />
     <Compile Include="Controllers\GridArgsModelBinder.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\LogoutController.cs" />
+    <Compile Include="Controllers\Settings\ApplicationLogsController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Settings\Custom.SysColumnsController.cs" />
     <Compile Include="Controllers\Settings\Custom.SysTablesController.cs" />
     <Compile Include="Controllers\Settings\Custom.UserController.cs" />
+    <Compile Include="Controllers\Settings\MasterDataJobCheckResultsController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\MasterDataJobInfosController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\MasterDataMonitorableInfoMasterDataNotificationsRspsController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\MasterDataMonitorStatesController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\MasterDataNotificationsController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\MasterDataNotificationsMasterDataSubscribersRspsController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Settings\MasterDataRolePermissionRspsController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\MasterDataSiteCheckResultsController.cs">
       <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Settings\MasterDataSiteInfosController.cs">
       <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\Settings\MasterDataSubscribersController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Settings\MasterDataViewCollectionControllerFactory.cs">
       <DependentUpon>MasterDataConfiguration.ViewCollectionFactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\MasterDataWcfCheckResultsController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\MasterDataWcfInfosController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\MasterDataWindowsServiceCheckResultsController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\MasterDataWindowsServiceInfosController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Settings\SysTablesController.cs">
       <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
@@ -809,7 +847,6 @@
     <Compile Include="Models\GlobalSysTableModel.cs" />
     <Compile Include="Models\ISystemModelFields.cs" />
     <Compile Include="Models\IModelIntervalFields.cs" />
-    <Compile Include="Models\Monitor\MasterDataWcfInfoModel.cs" />
     <Compile Include="Models\Monitor\WcfServiceStatusModel.cs" />
     <Compile Include="Models\Settings\ApplicationLogsModel.cs">
       <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
@@ -817,11 +854,47 @@
     <Compile Include="Models\Settings\Custom.RoleModel.cs" />
     <Compile Include="Models\Settings\Custom.SysColumnModel.cs" />
     <Compile Include="Models\Settings\Custom.SysTableModel.cs" />
+    <Compile Include="Models\Settings\MasterDataJobCheckResultsModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings\MasterDataJobInfoModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings\MasterDataMonitorableInfoMasterDataNotificationsRspModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings\MasterDataMonitorStateModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings\MasterDataNotificationsMasterDataSubscribersRspModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings\MasterDataNotificationsModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Settings\MasterDataRolePermissionRspModel.cs">
       <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Settings\Custom.UserModel.cs" />
+    <Compile Include="Models\Settings\MasterDataSiteCheckResultsModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Settings\MasterDataSiteInfoModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings\MasterDataSubscribersModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings\MasterDataWcfCheckResultsModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings\MasterDataWcfInfoModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings\MasterDataWindowsServiceCheckResultsModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings\MasterDataWindowsServiceInfoModel.cs">
       <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Settings\SysColumnModel.cs">

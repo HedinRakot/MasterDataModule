@@ -1,17 +1,16 @@
 using MasterDataModule.Contracts;
 using System;
-using System.Collections.Generic;
 
 namespace MasterDataModule.Contracts.Entities.Configuration
 {
-    public partial class MasterDataSiteInfo: IHasId<int>
+    public partial class MasterDataMonitorState: IHasId<int>
         ,IRemovable
         ,ISystemFields
     {
         /// <summary>
         /// Table name
         /// </summary>
-        public static readonly string EntityTableName = "dbo.MASTER_DATA_SITE_INFO";
+        public static readonly string EntityTableName = "dbo.MASTER_DATA_MONITOR_STATE";
         #region Fields
         /// <summary>
         /// Columns names
@@ -19,44 +18,38 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public static class Fields
         {
             /// <summary>
-            /// Column name 'ID' for property <see cref="MasterDataSiteInfo.Id"/>
+            /// Column name 'ID' for property <see cref="MasterDataMonitorState.Id"/>
             /// </summary>
             public static readonly string Id = "ID";
             /// <summary>
-            /// Column name 'NAME' for property <see cref="MasterDataSiteInfo.Name"/>
+            /// Column name 'RECONFIGURE' for property <see cref="MasterDataMonitorState.Reconfigure"/>
             /// </summary>
-            public static readonly string Name = "NAME";
+            public static readonly string Reconfigure = "RECONFIGURE";
             /// <summary>
-            /// Column name 'TIMEOUT_CHECKING' for property <see cref="MasterDataSiteInfo.TimeoutChecking"/>
+            /// Column name 'RECONFIGURE_CHECKING_TIMEOUT' for property <see cref="MasterDataMonitorState.ReconfigureCheckingTimeout"/>
             /// </summary>
-            public static readonly string TimeoutChecking = "TIMEOUT_CHECKING";
+            public static readonly string ReconfigureCheckingTimeout = "RECONFIGURE_CHECKING_TIMEOUT";
             /// <summary>
-            /// Column name 'SITE_PATH' for property <see cref="MasterDataSiteInfo.SitePath"/>
-            /// </summary>
-            public static readonly string SitePath = "SITE_PATH";
-            /// <summary>
-            /// Column name 'CREATE_DATE' for property <see cref="MasterDataSiteInfo.CreateDate"/>
+            /// Column name 'CREATE_DATE' for property <see cref="MasterDataMonitorState.CreateDate"/>
             /// </summary>
             public static readonly string CreateDate = "CREATE_DATE";
             /// <summary>
-            /// Column name 'DELETE_DATE' for property <see cref="MasterDataSiteInfo.DeleteDate"/>
+            /// Column name 'DELETE_DATE' for property <see cref="MasterDataMonitorState.DeleteDate"/>
             /// </summary>
             public static readonly string DeleteDate = "DELETE_DATE";
             /// <summary>
-            /// Column name 'CHANGE_DATE' for property <see cref="MasterDataSiteInfo.ChangeDate"/>
+            /// Column name 'CHANGE_DATE' for property <see cref="MasterDataMonitorState.ChangeDate"/>
             /// </summary>
             public static readonly string ChangeDate = "CHANGE_DATE";
           
         }
         #endregion
         public int Id{ get; set; }
-        public string Name{ get; set; }
-        public int TimeoutChecking{ get; set; }
-        public string SitePath{ get; set; }
+        public bool? Reconfigure{ get; set; }
+        public int ReconfigureCheckingTimeout{ get; set; }
         public DateTime CreateDate{ get; set; }
         public DateTime? DeleteDate{ get; set; }
         public DateTime ChangeDate{ get; set; }
-        public virtual ICollection<MasterDataSiteCheckResults> MasterDataSiteCheckResults{ get; set; }
         DateTime ISystemFields.CreateDate
         {
             get { return CreateDate; }
@@ -72,12 +65,11 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         /// <summary>
         /// Shallow copy of object. Exclude navigation properties and PK properties
         /// </summary>
-        public MasterDataSiteInfo ShallowCopy()
+        public MasterDataMonitorState ShallowCopy()
         {
-            return new MasterDataSiteInfo {
-                       Name = Name,
-                       TimeoutChecking = TimeoutChecking,
-                       SitePath = SitePath,
+            return new MasterDataMonitorState {
+                       Reconfigure = Reconfigure,
+                       ReconfigureCheckingTimeout = ReconfigureCheckingTimeout,
                        CreateDate = CreateDate,
                        DeleteDate = DeleteDate,
                        ChangeDate = ChangeDate,

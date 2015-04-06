@@ -283,10 +283,46 @@
     <Compile Include="Data\Configuration\ApplicationLogsMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\Configuration\MasterDataJobCheckResultsMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\MasterDataJobInfoMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\MasterDataMonitorableInfoMasterDataNotificationsRspMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\MasterDataMonitorStateMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\MasterDataNotificationsMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\MasterDataNotificationsMasterDataSubscribersRspMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\Configuration\MasterDataRolePermissionRspMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\Configuration\MasterDataSiteCheckResultsMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\Configuration\MasterDataSiteInfoMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\MasterDataSubscribersMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\MasterDataWcfCheckResultsMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\MasterDataWcfInfoMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\MasterDataWindowsServiceCheckResultsMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\MasterDataWindowsServiceInfoMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Configuration\PermissionMapping.cs">
@@ -420,7 +456,6 @@
     <Compile Include="Data\AsPro.Context.Custom.cs" />
     <Compile Include="Data\Drl.Context.Custom.cs" />
     <Compile Include="Data\Drl.Context.Configuration.cs" />
-    <Compile Include="Data\Monitor\MasterDataWcfInfoMapping.cs" />
     <Compile Include="Data\Monitor\WebServicesInfoMapping.cs" />
     <Compile Include="Data\SaveActors\AsPro\AsProSaveActorManager.cs" />
     <Compile Include="Data\SaveActors\Base\SaveActorManager.cs" />
@@ -680,10 +715,46 @@
     <Compile Include="Managers\Configuration\ApplicationLogsManager.cs">
       <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Managers\Configuration\MasterDataJobCheckResultsManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\MasterDataJobInfoManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\MasterDataMonitorableInfoMasterDataNotificationsRspManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\MasterDataMonitorStateManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\MasterDataNotificationsManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\MasterDataNotificationsMasterDataSubscribersRspManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\Configuration\MasterDataRolePermissionRspManager.cs">
       <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Managers\Configuration\MasterDataSiteCheckResultsManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\Configuration\MasterDataSiteInfoManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\MasterDataSubscribersManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\MasterDataWcfCheckResultsManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\MasterDataWcfInfoManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\MasterDataWindowsServiceCheckResultsManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\MasterDataWindowsServiceInfoManager.cs">
       <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Configuration\PermissionManager.cs">
@@ -801,7 +872,6 @@
       <DependentUpon>Drl.Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Configuration\UserManager.Custom.cs" />
-    <Compile Include="Managers\Monitor\MasterDataWcfInfoManager.cs" />
     <Compile Include="Managers\Monitor\WcfStatusInfoManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -36,13 +36,7 @@ namespace MasterDataModule.Lib.Data
 
         protected override void RegisterCustomMappings(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(MasterDataWcfInfoMapping.Instance);
             modelBuilder.Configurations.Add(WebServicesInfoMapping.Instance);
         }
-
-        /// <summary>
-        ///     Set of <see cref="Contracts.Entities.Monitor.MasterDataWcfInfo"/> entities from table dbo.MASTER_DATA_WCF_INFO
-        /// </summary>
-        public IQueryable<MasterDataWcfInfo> MasterDataWcfInfo { get; set; }
     }
 }
