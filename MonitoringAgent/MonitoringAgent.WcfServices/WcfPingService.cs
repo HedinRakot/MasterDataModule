@@ -10,7 +10,7 @@ namespace MonitoringAgent.WcfServices
     /// <summary>
     /// Service for checking WCF services
     /// </summary>
-    internal sealed class WcfPingService : BasePingServiceWithLastResultWithLastResult<IMasterDataWcfInfoManager, MasterDataWcfInfo, IMasterDataWcfCheckResultsManager, MasterDataWcfCheckResults>, IWcfPingService
+    internal sealed class WcfPingService : BasePingServiceWithLastResult<IMasterDataWcfInfoManager, MasterDataWcfInfo, IMasterDataWcfCheckResultsManager, MasterDataWcfCheckResults>, IWcfPingService
     {
         /// <summary>
         /// Ctor

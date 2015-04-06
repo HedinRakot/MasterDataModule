@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="Base\BaseManagersService.cs" />
     <Compile Include="Base\BasePingService.cs" />
-    <Compile Include="Base\BasePingServiceWithLastResultWithLastResult.cs" />
+    <Compile Include="Base\BasePingServiceWithLastResult.cs" />
     <Compile Include="Base\CheckingModule.cs" />
     <Compile Include="Base\CheckingModuleWithLastResult.cs" />
     <Compile Include="Contracts\IBasePingService.cs" />

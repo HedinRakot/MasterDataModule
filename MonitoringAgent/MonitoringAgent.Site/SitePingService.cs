@@ -10,13 +10,13 @@ namespace MonitoringAgent.Site
     /// <summary>
     /// Service for working with sites
     /// </summary>
-    internal sealed class SitePingServiceWithLastResultWithLastResult : BasePingServiceWithLastResultWithLastResult<IMasterDataSiteInfoManager, MasterDataSiteInfo, IMasterDataSiteCheckResultsManager, MasterDataSiteCheckResults>, ISitePingServiceWithLastResult
+    internal sealed class SitePingServiceWithLastResult : BasePingServiceWithLastResult<IMasterDataSiteInfoManager, MasterDataSiteInfo, IMasterDataSiteCheckResultsManager, MasterDataSiteCheckResults>, ISitePingServiceWithLastResult
     {
         /// <summary>
         /// Ctor
         /// </summary>
         /// <param name="managerProvider">Managers provider</param>
-        public SitePingServiceWithLastResultWithLastResult(IManagersProvider managerProvider): base(managerProvider)
+        public SitePingServiceWithLastResult(IManagersProvider managerProvider): base(managerProvider)
         {
         }
         /// <summary>

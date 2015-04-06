@@ -15,7 +15,7 @@ namespace MonitoringAgent.Services.Common.Base
     /// <typeparam name="TServiceInfo">Type of monitorable objects</typeparam>
     /// <typeparam name="TResultManager">Manager for gets checking results</typeparam>
     /// <typeparam name="TCheckResult">Checking result</typeparam>
-    public abstract class BasePingServiceWithLastResultWithLastResult<TManager, TServiceInfo, TResultManager, TCheckResult>:
+    public abstract class BasePingServiceWithLastResult<TManager, TServiceInfo, TResultManager, TCheckResult>:
         BasePingService<TManager, TServiceInfo>, IBasePingServiceWithLastResult<TServiceInfo, TCheckResult> 
         where TManager: IBaseManager<TServiceInfo> where TServiceInfo : class
         where TResultManager : IBaseManager<TCheckResult> where TCheckResult : class, ICheckResult
@@ -24,7 +24,7 @@ namespace MonitoringAgent.Services.Common.Base
         /// Ctor
         /// </summary>
         /// <param name="managersProvider">Provides managers</param>
-        protected BasePingServiceWithLastResultWithLastResult(IManagersProvider managersProvider) : base(managersProvider)
+        protected BasePingServiceWithLastResult(IManagersProvider managersProvider) : base(managersProvider)
         {
         }
 

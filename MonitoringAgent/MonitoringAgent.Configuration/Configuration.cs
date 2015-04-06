@@ -35,7 +35,7 @@ namespace MonitoringAgent.Configuration
             container.RegisterType<IWcfPingService, WcfPingService>();
             container.RegisterType<ICheckingModule, WcfServicePingModule>("wcfPing");
 
-            container.RegisterType<ISitePingServiceWithLastResult, SitePingServiceWithLastResultWithLastResult>();
+            container.RegisterType<ISitePingServiceWithLastResult, SitePingServiceWithLastResult>();
             container.RegisterType<ICheckingModule, SitePingModule>("sitePing");
 
             container.RegisterType<IJobCheckService, JobCheckService>();

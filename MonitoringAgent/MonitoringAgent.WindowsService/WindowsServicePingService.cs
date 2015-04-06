@@ -12,7 +12,7 @@ namespace MonitoringAgent.WindowsService
     /// <summary>
     /// Service for working with Windows services
     /// </summary>
-    internal sealed class WindowsServicePingService : BasePingServiceWithLastResultWithLastResult<IMasterDataWindowsServiceInfoManager, MasterDataWindowsServiceInfo, IMasterDataWindowsServiceCheckResultsManager, MasterDataWindowsServiceCheckResults>, IWindowsServicePingService
+    internal sealed class WindowsServicePingService : BasePingServiceWithLastResult<IMasterDataWindowsServiceInfoManager, MasterDataWindowsServiceInfo, IMasterDataWindowsServiceCheckResultsManager, MasterDataWindowsServiceCheckResults>, IWindowsServicePingService
     {
         /// <summary>
         /// Ctor
