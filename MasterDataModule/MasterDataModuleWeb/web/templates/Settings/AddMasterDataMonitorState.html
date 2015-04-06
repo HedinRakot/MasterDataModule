@@ -1,0 +1,35 @@
+<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#Settings" data-localized="masterData"></a> / 
+	<a href="#MasterDataMonitorStates" data-localized="pageTitle"></a> / <%= title %></span>
+
+<form method="post" class="add-model">
+    <div class="inline-block" style="width: 520px;">
+		<div class="editor-label">
+			<label for="reconfigure" data-localized="reconfigure"></label>
+            <input type="checkbox" id="reconfigure" name="reconfigure" />
+		</div>   
+		<div class="editor-label">
+			<label for="reconfigureCheckingTimeout" data-localized="reconfigureCheckingTimeout"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="reconfigureCheckingTimeout" name="reconfigureCheckingTimeout" />
+		</div>   
+	</div>
+	<div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>

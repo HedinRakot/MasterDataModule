@@ -1,18 +1,24 @@
+
 define(function () {
 	'use strict';
 
 	var resources = {
 
-		add: 'Add Application logs',
-	    edit: 'Edit Application logs',
+		add: 'Add Applications logs',
+	    edit: 'Edit Applications logs',
 	    masterData: 'Settings',
 		driverLicenceMasterData: 'Driver licence masterdata',
-	    pageTitle: 'Application logs',
+	    pageTitle: 'Applications logs',
 		pleaseSelect: 'Please select',
+
 		logType: 'Logs type',	
-		logLevel: 'Logs level',	
+
+		logLevel: 'logs level',	
+
 		date: 'Date',	
+
 		message: 'Text',	
+
 	};
 
 	return resources;

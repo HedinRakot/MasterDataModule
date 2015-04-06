@@ -59,7 +59,7 @@
       <Name>MonitoringAgent.Services.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\MonitoringAgent.WindowsService.Interfaces\MonitoringAgent.WindowsService.Interfaces.csproj">
-      <Project>{C28C1972-BDE2-4610-9AA1-B9F1E7325F34}</Project>
+      <Project>{c28c1972-bde2-4610-9aa1-b9f1e7325f34}</Project>
       <Name>MonitoringAgent.WindowsService.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>

@@ -19,7 +19,8 @@ namespace MonitoringAgent.WindowsService
         /// </summary>
         /// <param name="pingService">Ping service</param>
         /// <param name="notficationModule">Notification module</param>
-        public WindowsServiceCheckingModule(IWindowsServicePingService pingService, INotificationsModule notficationModule) : base(notficationModule)
+        public WindowsServiceCheckingModule(IWindowsServicePingService pingService, INotificationsModule notficationModule)
+            : base(notficationModule)
         {
             this.pingService = pingService;
         }

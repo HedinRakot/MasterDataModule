@@ -478,10 +478,43 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Content>
+    <Content Include="web\collections\Settings\ApplicationLogs.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\Settings\MasterDataJobCheckResults.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\Settings\MasterDataJobInfos.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\Settings\MasterDataMonitorableInfoMasterDataNotificationsRsps.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\Settings\MasterDataMonitorStates.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\Settings\MasterDataNotifications.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\Settings\MasterDataNotificationsMasterDataSubscribersRsps.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
     <Content Include="web\collections\Settings\MasterDataRolePermissionRsps.js">
       <DependentUpon>web.masterdata.collections.tt</DependentUpon>
     </Content>
+    <Content Include="web\collections\Settings\MasterDataSiteCheckResults.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
     <Content Include="web\collections\Settings\MasterDataSiteInfos.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\Settings\MasterDataSubscribers.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\Settings\MasterDataWcfCheckResults.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\Settings\MasterDataWcfInfos.js">
       <DependentUpon>web.masterdata.collections.tt</DependentUpon>
     </Content>
     <Content Include="web\collections\Settings\Permissions.js">
@@ -1071,10 +1104,46 @@
       <DependentUpon>web.drl.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\login.js" />
+    <Content Include="web\models\Settings\ApplicationLogs.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\FilterApplicationLogs.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\FilterMasterDataJobCheckResults.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\FilterMasterDataJobInfo.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\FilterMasterDataMonitorableInfoMasterDataNotificationsRsp.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\FilterMasterDataMonitorState.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\FilterMasterDataNotifications.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\FilterMasterDataNotificationsMasterDataSubscribersRsp.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
     <Content Include="web\models\Settings\FilterMasterDataRolePermissionRsp.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
+    <Content Include="web\models\Settings\FilterMasterDataSiteCheckResults.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
     <Content Include="web\models\Settings\FilterMasterDataSiteInfo.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\FilterMasterDataSubscribers.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\FilterMasterDataWcfCheckResults.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\FilterMasterDataWcfInfo.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\Settings\FilterPermission.js">
@@ -1092,10 +1161,40 @@
     <Content Include="web\models\Settings\FilterUser.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
+    <Content Include="web\models\Settings\MasterDataJobCheckResults.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\MasterDataJobInfo.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\MasterDataMonitorableInfoMasterDataNotificationsRsp.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\MasterDataMonitorState.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\MasterDataNotifications.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\MasterDataNotificationsMasterDataSubscribersRsp.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
     <Content Include="web\models\Settings\MasterDataRolePermissionRsp.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
+    <Content Include="web\models\Settings\MasterDataSiteCheckResults.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
     <Content Include="web\models\Settings\MasterDataSiteInfo.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\MasterDataSubscribers.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\MasterDataWcfCheckResults.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\MasterDataWcfInfo.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\Settings\Permission.js">
@@ -3373,16 +3472,82 @@
     <Content Include="web\resources\Home\Login.en.js" />
     <Content Include="web\resources\master.de.js" />
     <Content Include="web\resources\master.en.js" />
+    <Content Include="web\resources\Settings\AddApplicationLogs.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddApplicationLogs.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataJobCheckResults.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataJobCheckResults.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataJobInfo.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataJobInfo.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataMonitorableInfoMasterDataNotificationsRsp.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataMonitorableInfoMasterDataNotificationsRsp.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataMonitorState.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataMonitorState.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataNotifications.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataNotifications.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataNotificationsMasterDataSubscribersRsp.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataNotificationsMasterDataSubscribersRsp.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\AddMasterDataRolePermissionRsp.de.js">
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\AddMasterDataRolePermissionRsp.en.js">
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\Settings\AddMasterDataSiteCheckResults.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataSiteCheckResults.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\AddMasterDataSiteInfo.de.js">
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\AddMasterDataSiteInfo.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataSubscribers.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataSubscribers.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataWcfCheckResults.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataWcfCheckResults.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataWcfInfo.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataWcfInfo.en.js">
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\AddPermission.de.js">
@@ -3415,6 +3580,18 @@
     <Content Include="web\resources\Settings\AddUser.en.js">
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\Settings\ApplicationLogs.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\ApplicationLogs.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\ApplicationLogsRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\ApplicationLogsRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\Custom.ChangePassword.de.js" />
     <Content Include="web\resources\Settings\Custom.SysColumns.de.js" />
     <Content Include="web\resources\Settings\Custom.SysColumns.en.js" />
@@ -3423,16 +3600,82 @@
     <Content Include="web\resources\Settings\Custom.User.en.js" />
     <Content Include="web\resources\Settings\Custom.SysTables.de.js" />
     <Content Include="web\resources\Settings\Custom.SysTables.en.js" />
+    <Content Include="web\resources\Settings\FilterApplicationLogs.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterApplicationLogs.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataJobCheckResults.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataJobCheckResults.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataJobInfo.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataJobInfo.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataMonitorableInfoMasterDataNotificationsRsp.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataMonitorableInfoMasterDataNotificationsRsp.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataMonitorState.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataMonitorState.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataNotifications.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataNotifications.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataNotificationsMasterDataSubscribersRsp.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataNotificationsMasterDataSubscribersRsp.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\FilterMasterDataRolePermissionRsp.de.js">
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\FilterMasterDataRolePermissionRsp.en.js">
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataSiteCheckResults.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataSiteCheckResults.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\FilterMasterDataSiteInfo.de.js">
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\FilterMasterDataSiteInfo.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataSubscribers.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataSubscribers.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataWcfCheckResults.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataWcfCheckResults.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataWcfInfo.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterMasterDataWcfInfo.en.js">
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\FilterPermission.de.js">
@@ -3467,6 +3710,78 @@
     <Content Include="web\resources\Settings\FilterUser.en.js">
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\Settings\MasterDataJobCheckResults.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataJobCheckResults.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataJobCheckResultsRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataJobCheckResultsRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataJobInfoRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataJobInfoRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataJobInfos.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataJobInfos.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataMonitorableInfoMasterDataNotificationsRspRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataMonitorableInfoMasterDataNotificationsRspRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataMonitorableInfoMasterDataNotificationsRsps.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataMonitorableInfoMasterDataNotificationsRsps.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataMonitorStateRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataMonitorStateRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataMonitorStates.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataMonitorStates.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataNotifications.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataNotifications.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataNotificationsMasterDataSubscribersRspRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataNotificationsMasterDataSubscribersRspRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataNotificationsMasterDataSubscribersRsps.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataNotificationsMasterDataSubscribersRsps.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataNotificationsRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataNotificationsRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\MasterDataRolePermissionRspRelationships.de.js">
       <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
     </Content>
@@ -3479,6 +3794,18 @@
     <Content Include="web\resources\Settings\MasterDataRolePermissionRsps.en.js">
       <DependentUpon>web.masterdata.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\Settings\MasterDataSiteCheckResults.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataSiteCheckResults.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataSiteCheckResultsRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataSiteCheckResultsRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\MasterDataSiteInfoRelationships.de.js">
       <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
     </Content>
@@ -3489,6 +3816,42 @@
       <DependentUpon>web.masterdata.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\MasterDataSiteInfos.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataSubscribers.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataSubscribers.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataSubscribersRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataSubscribersRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataWcfCheckResults.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataWcfCheckResults.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataWcfCheckResultsRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataWcfCheckResultsRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataWcfInfoRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataWcfInfoRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataWcfInfos.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataWcfInfos.en.js">
       <DependentUpon>web.masterdata.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\PermissionRelationships.de.js">
@@ -5088,10 +5451,43 @@
     <Content Include="web\templates\Home\Login.html" />
     <Content Include="web\templates\master-footer.html" />
     <Content Include="web\templates\master.html" />
+    <Content Include="web\templates\Settings\AddApplicationLogs.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\AddMasterDataJobCheckResults.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\AddMasterDataJobInfo.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\AddMasterDataMonitorableInfoMasterDataNotificationsRsp.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\AddMasterDataMonitorState.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\AddMasterDataNotifications.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\AddMasterDataNotificationsMasterDataSubscribersRsp.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\Settings\AddMasterDataRolePermissionRsp.html">
       <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\Settings\AddMasterDataSiteCheckResults.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\Settings\AddMasterDataSiteInfo.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\AddMasterDataSubscribers.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\AddMasterDataWcfCheckResults.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\AddMasterDataWcfInfo.html">
       <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\Settings\AddPermission.html">
@@ -5109,11 +5505,50 @@
     <Content Include="web\templates\Settings\AddUser.html">
       <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\Settings\ApplicationLogs.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\ApplicationLogsRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\Settings\ChangePassword.html" />
+    <Content Include="web\templates\Settings\FilterApplicationLogs.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\FilterMasterDataJobCheckResults.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\FilterMasterDataJobInfo.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\FilterMasterDataMonitorableInfoMasterDataNotificationsRsp.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\FilterMasterDataMonitorState.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\FilterMasterDataNotifications.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\FilterMasterDataNotificationsMasterDataSubscribersRsp.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\Settings\FilterMasterDataRolePermissionRsp.html">
       <DependentUpon>web.masterdata.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\Settings\FilterMasterDataSiteCheckResults.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\Settings\FilterMasterDataSiteInfo.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\FilterMasterDataSubscribers.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\FilterMasterDataWcfCheckResults.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\FilterMasterDataWcfInfo.html">
       <DependentUpon>web.masterdata.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\Settings\FilterPermission.html">
@@ -5132,16 +5567,76 @@
     <Content Include="web\templates\Settings\FilterUser.html">
       <DependentUpon>web.masterdata.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\Settings\MasterDataJobCheckResults.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataJobCheckResultsRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataJobInfoRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataJobInfos.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataMonitorableInfoMasterDataNotificationsRspRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataMonitorableInfoMasterDataNotificationsRsps.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataMonitorStateRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataMonitorStates.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataNotifications.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataNotificationsMasterDataSubscribersRspRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataNotificationsMasterDataSubscribersRsps.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataNotificationsRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\Settings\MasterDataRolePermissionRspRelationships.html">
       <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\Settings\MasterDataRolePermissionRsps.html">
       <DependentUpon>web.masterdata.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\Settings\MasterDataSiteCheckResults.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataSiteCheckResultsRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\Settings\MasterDataSiteInfoRelationships.html">
       <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\Settings\MasterDataSiteInfos.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataSubscribers.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataSubscribersRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataWcfCheckResults.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataWcfCheckResultsRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataWcfInfoRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataWcfInfos.html">
       <DependentUpon>web.masterdata.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\Settings\PermissionRelationships.html">
@@ -6432,10 +6927,43 @@
     <Content Include="web\views\Home\Login.js" />
     <Content Include="web\master-footer.js" />
     <Content Include="web\master.js" />
+    <Content Include="web\views\Settings\AddApplicationLogs.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\AddMasterDataJobCheckResults.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\AddMasterDataJobInfo.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\AddMasterDataMonitorableInfoMasterDataNotificationsRsp.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\AddMasterDataMonitorState.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\AddMasterDataNotifications.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\AddMasterDataNotificationsMasterDataSubscribersRsp.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\Settings\AddMasterDataRolePermissionRsp.js">
       <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\Settings\AddMasterDataSiteCheckResults.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\Settings\AddMasterDataSiteInfo.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\AddMasterDataSubscribers.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\AddMasterDataWcfCheckResults.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\AddMasterDataWcfInfo.js">
       <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\AddPermission.js">
@@ -6453,11 +6981,50 @@
     <Content Include="web\views\Settings\AddUser.js">
       <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\Settings\ApplicationLogs.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\ApplicationLogsRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\Settings\ChangePassword.js" />
     <Content Include="web\views\Settings\Custom.Events.User.js" />
     <Content Include="web\views\Settings\Custom.SysColumn.js" />
     <Content Include="web\views\Settings\Custom.User.js" />
+    <Content Include="web\views\Settings\FilterApplicationLogs.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\FilterMasterDataJobCheckResults.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\FilterMasterDataJobInfo.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\FilterMasterDataMonitorableInfoMasterDataNotificationsRsp.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\FilterMasterDataMonitorState.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\FilterMasterDataNotifications.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\FilterMasterDataNotificationsMasterDataSubscribersRsp.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\FilterMasterDataSiteCheckResults.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\Settings\FilterMasterDataSiteInfo.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\FilterMasterDataSubscribers.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\FilterMasterDataWcfCheckResults.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\FilterMasterDataWcfInfo.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\FilterPermission.js">
@@ -6473,16 +7040,76 @@
     <Content Include="web\views\Settings\FilterUser.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\Settings\MasterDataJobCheckResults.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataJobCheckResultsRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataJobInfoRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataJobInfos.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataMonitorableInfoMasterDataNotificationsRspRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataMonitorableInfoMasterDataNotificationsRsps.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataMonitorStateRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataMonitorStates.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataNotifications.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataNotificationsMasterDataSubscribersRspRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataNotificationsMasterDataSubscribersRsps.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataNotificationsRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\Settings\MasterDataRolePermissionRspRelationships.js">
       <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\MasterDataRolePermissionRsps.js">
       <DependentUpon>web.masterdata.related.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\Settings\MasterDataSiteCheckResults.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataSiteCheckResultsRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\Settings\MasterDataSiteInfoRelationships.js">
       <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\MasterDataSiteInfos.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataSubscribers.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataSubscribersRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataWcfCheckResults.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataWcfCheckResultsRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataWcfInfoRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataWcfInfos.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\PermissionRelationships.js">
@@ -6513,14 +7140,14 @@
     <Content Include="web\views\Settings\Users.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\Settings\SystemLog.js" />
+    <Content Include="web\views\Settings\UserRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\Settings\web.masterdata.add.views1.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\Settings\SystemLog.js" />
-    <Content Include="web\views\Settings\UserRelationships.js">
-      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\web.masterdata.related.views1.txt">
       <AutoGen>True</AutoGen>
