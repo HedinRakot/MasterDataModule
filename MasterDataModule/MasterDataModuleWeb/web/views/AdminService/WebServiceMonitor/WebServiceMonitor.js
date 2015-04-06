@@ -25,7 +25,16 @@
         columns: function () {
             return [
                 { field: "name", title: this.resources.name, width: '150px' },
-                { field: "checkStatus", title: this.resources.checkStatus },
+                {
+                    field: "checkStatus",
+                    title: this.resources.checkStatus,
+                    attributes: {style:"text-align:center"},
+                    template: function (dataItem) {
+                        var image =
+                        (dataItem.checkStatus == 1) ? "success.png" : "fail.png";
+                        return "<img src='../css/images/" + image + "' width='20' height='20'></img>";
+                    }
+                },
                 {
                     field: "checkDate", title: this.resources.checkDate,
                     template: "#= kendo.toString(kendo.parseDate(checkDate, 'yyyy-MM-ddTHH:mm:ss'), 'MM.dd.yyyy HH:mm:ss') #"

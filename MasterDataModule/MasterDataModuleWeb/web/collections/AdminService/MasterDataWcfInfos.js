@@ -5,7 +5,7 @@
     'use strict';
 
     var collection = BaseCollection.extend({
-        url: 'api/MasterDataWcfInfo',
+        url: 'api/MasterDataWcfInfos',
         model: Model
     });
 

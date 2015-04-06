@@ -131,7 +131,9 @@
     <Content Include="css\images\Auftrag_290x200-inaktiv.png" />
     <Content Include="css\images\Einstellungen_290x200-inaktiv.png" />
     <Content Include="css\images\Fahrerlaubnis_290x200-inaktiv.png" />
+    <Content Include="css\images\fail.png" />
     <Content Include="css\images\Kostenstellenverantw_290x200-inaktiv.png" />
+    <Content Include="css\images\success.png" />
     <Content Include="css\images\Techpruefung_290x200-inaktiv.png" />
     <Content Include="css\images\tuevsuedlogo.png" />
     <Content Include="css\jquery-ui\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
@@ -3964,7 +3966,6 @@
     <Content Include="web\router.js" />
     <Content Include="web\templates\AdminService\AdminService.html" />
     <Content Include="web\templates\AdminService\JobMonitor\JobMonitor.html" />
-    <Content Include="web\templates\AdminService\WebServiceMonitor\AddMasterDataWcfInfo.html" />
     <Content Include="web\templates\AdminService\WebServiceMonitor\MasterDataWcfInfos.html" />
     <Content Include="web\templates\AdminService\WebServiceMonitor\WebServiceMonitor.html" />
     <Content Include="web\templates\CommonMasterData\CommonMasterData.html" />
