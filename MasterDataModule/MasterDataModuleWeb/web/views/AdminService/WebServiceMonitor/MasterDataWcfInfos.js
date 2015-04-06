@@ -27,9 +27,9 @@
         columns: function () {
 
             return [
-				{ field: 'name', title: this.resources.name },
-				{ field: 'wsdlPath', title: this.resources.wsdlPath },
-				{ field: 'timeoutChecking', title: this.resources.timeoutChecking }
+				{ field: 'name', title: this.resources.name, width: 350 },
+				{ field: 'wsdlPath', title: this.resources.wsdlPath, width: 350 },
+				{ field: 'timeoutChecking', title: this.resources.timeoutChecking, width: 50 }
 				
             ];
         }

@@ -24,9 +24,10 @@
 
         columns: function () {
             return [
-                { field: "name", title: this.resources.name, width: '150px' },
+                { field: "name", title: this.resources.name, width: 200 },
                 {
                     field: "checkStatus",
+                    width: 50,
                     title: this.resources.checkStatus,
                     attributes: {style:"text-align:center"},
                     template: function (dataItem) {
@@ -36,12 +37,14 @@
                     }
                 },
                 {
-                    field: "checkDate", title: this.resources.checkDate,
+                    field: "checkDate",
+                    title: this.resources.checkDate,
+                    width: 150,
                     template: "#= kendo.toString(kendo.parseDate(checkDate, 'yyyy-MM-ddTHH:mm:ss'), 'MM.dd.yyyy HH:mm:ss') #"
                     
                 },
-                { field: "attempt", title: this.resources.attempt },
-                { field: "message", title: this.resources.message }
+                { field: "attempt", title: this.resources.attempt, width: 50 },
+                { field: "message", title: this.resources.message, width: 350 }
             ];
         }
     });
