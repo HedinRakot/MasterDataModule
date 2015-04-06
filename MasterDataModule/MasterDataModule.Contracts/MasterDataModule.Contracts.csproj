@@ -112,6 +112,8 @@
     </Compile>
     <Compile Include="Entities\Monitor\MasterDataWcfInfo.cs" />
     <Compile Include="Entities\Monitor\WcfServiceStatus.cs" />
+    <Compile Include="Enums\LogLevelEnum.cs" />
+    <Compile Include="Enums\LogTypeEnum.cs" />
     <Compile Include="Enums\MasterDataPermissions.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

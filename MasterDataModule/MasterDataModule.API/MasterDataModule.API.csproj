@@ -517,6 +517,8 @@
     </Compile>
     <Compile Include="Controllers\ViewCollectionFactoryBase.cs" />
     <Compile Include="JsonHelper.Classes.cs" />
+    <Compile Include="LogFileProcessor\AbstractFileProcessor.cs" />
+    <Compile Include="LogFileProcessor\LogFileProcessor.cs" />
     <Compile Include="Models\AsPro\Common\Custom.InsCoreDataProductModel.cs" />
     <Compile Include="Models\AsPro\Common\EmpCashPermissionTypeModel.cs">
       <DependentUpon>Common.Models.tt</DependentUpon>
@@ -886,6 +888,10 @@
     <ProjectReference Include="..\MasterDataModule.Contracts\MasterDataModule.Contracts.csproj">
       <Project>{2e9c34f0-651a-4b2f-9a9a-0c6c6ec11f4b}</Project>
       <Name>MasterDataModule.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterDataModule.Lib\MasterDataModule.Lib.csproj">
+      <Project>{A61D4577-F99E-4516-8E15-0B63F6894F53}</Project>
+      <Name>MasterDataModule.Lib</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
