@@ -98,7 +98,27 @@ SET IDENTITY_INSERT [dbo].[MASTER_DATA_PERMISSION] ON;
 
 INSERT INTO [dbo].[MASTER_DATA_PERMISSION] ([ID], [SYSTEM_NAME], [NAME], [CREATE_DATE], [CHANGE_DATE], [DELETE_DATE], [OWNER_ORG_ID], [VISIBILITY_ORG_ID], [CREATE_EMPLOYEE_ID], [CHANGE_EMPLOYEE_ID], [SOURCE], [FROM_DATE], [TO_DATE])
 VALUES
-(1000, 'ASPRO' ,'InsNextSpInterval' ,GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+(1,'SettingsData', 'MasterDataWcfInfo',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(2,'SettingsData', 'MasterDataWcfCheckResults',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(3,'SettingsData', 'MasterDataSiteInfo',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(4,'SettingsData', 'MasterDataSiteCheckResults',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(5,'SettingsData', 'MasterDataMonitorState',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(6,'SettingsData', 'ApplicationLogs',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(7,'SettingsData', 'MasterDataJobInfo',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(8,'SettingsData', 'MasterDataJobCheckResults',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(9,'SettingsData', 'MasterDataWindowsServiceInfo',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(10,'SettingsData', 'SysColumn',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(11,'SettingsData', 'MasterDataWindowsServiceCheckResults',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(12,'SettingsData', 'SysTable',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(13,'SettingsData', 'MasterDataSubscribers',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(14,'SettingsData', 'MasterDataMonitorableInfoMasterDataNotificationsRsp',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(15,'SettingsData', 'MasterDataNotificationsMasterDataSubscribersRsp',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(16,'SettingsData', 'Role',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(17,'SettingsData', 'Permission',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(18,'SettingsData', 'MasterDataRolePermissionRsp',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(19,'SettingsData', 'User',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(20,'SettingsData', 'MasterDataNotifications',GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
+,(1000, 'ASPRO' ,'InsNextSpInterval' ,GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
 ,(1001, 'ASPRO' ,'InsObdStatus' ,GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
 ,(1002, 'ASPRO' ,'InsOpticalDefect' ,GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
 ,(1003, 'ASPRO' ,'InsProductClassGroup' ,GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()))
@@ -201,7 +221,28 @@ INSERT INTO dbo.MASTER_DATA_ROLE([NAME] ,CREATE_DATE ,CHANGE_DATE ,FROM_DATE ,TO
 VALUES (N'Administrator', getdate(), getdate(), getdate() ,dateadd(year, 1, getdate()));
 
 INSERT INTO dbo.MASTER_DATA_ROLE_PERMISSION_RSP(MASTER_DATA_ROLE_ID,MASTER_DATA_PERMISSION_ID,CREATE_DATE,CHANGE_DATE,FROM_DATE,TO_DATE) 
-VALUES (1,1000,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+VALUES 
+(1,1,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,2,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,3,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,4,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,5,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,6,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,7,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,8,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,9,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,10,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,11,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,12,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,13,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,14,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,15,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,16,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,17,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,18,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,19,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,20,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
+(1,1000,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
 (1,1001,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
 (1,1002,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
 (1,1003,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
@@ -302,28 +343,6 @@ VALUES (1,1000,getdate(),getdate(),getdate(),dateadd(year, 1, getdate())),
 
 INSERT INTO [dbo].[MASTER_DATA_USER] ([CREATE_DATE], [CHANGE_DATE], [FROM_DATE], [TO_DATE], [LOGIN], [CHANGE_EMPLOYEE_ID], [OWNER_ORG_ID], [NAME], [VISIBILITY_ORG_ID], [MASTER_DATA_ROLE_ID], [SOURCE], [PASSWORD], [DELETE_DATE], [CREATE_EMPLOYEE_ID])
 VALUES ('2015-02-06T00:00:00', '2015-02-06T00:00:00', '2015-02-06', '2075-02-06', N'admin', NULL, NULL, N'Administrator', NULL, 1, NULL, N'27493c09676e5512a6b61e1826ff728a', NULL, NULL);
-
-INSERT INTO [dbo].[MASTER_DATA_PERMISSION] ([ID], [SYSTEM_NAME], [NAME], [CREATE_DATE], [CHANGE_DATE], [DELETE_DATE], [OWNER_ORG_ID], [VISIBILITY_ORG_ID], [CREATE_EMPLOYEE_ID], [CHANGE_EMPLOYEE_ID], [SOURCE], [FROM_DATE], [TO_DATE])
-VALUES (1, 'MASTERDATACONFIGURATION' ,'SysColumn' ,GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, -1, GETDATE()))
-,(2, 'MASTERDATACONFIGURATION' ,'Role' ,GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, -1, GETDATE()))
-,(3, 'MASTERDATACONFIGURATION' ,'Permission' ,GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, -1, GETDATE()))
-,(4, 'MASTERDATACONFIGURATION' ,'SysTable' ,GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, -1, GETDATE()))
-,(5, 'MASTERDATACONFIGURATION' ,'MasterDataRolePermissionRsp' ,GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, -1, GETDATE()))
-,(6, 'MASTERDATACONFIGURATION' ,'User' ,GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, -1, GETDATE()));
-
-INSERT INTO [dbo].[MASTER_DATA_ROLE_PERMISSION_RSP] ( [CREATE_DATE], [OWNER_ORG_ID], [CHANGE_EMPLOYEE_ID], [TO_DATE], [MASTER_DATA_ROLE_ID], [VISIBILITY_ORG_ID], [SOURCE], [CHANGE_DATE], [FROM_DATE], [DELETE_DATE], [MASTER_DATA_PERMISSION_ID], [CREATE_EMPLOYEE_ID])
-VALUES ('2015-03-24T16:50:18.54', NULL, NULL, '2016-03-24', 1, NULL, NULL, '2015-03-24T16:50:18.54', '2015-03-24', NULL, 1, NULL)
-INSERT INTO [dbo].[MASTER_DATA_ROLE_PERMISSION_RSP] ( [CREATE_DATE], [OWNER_ORG_ID], [CHANGE_EMPLOYEE_ID], [TO_DATE], [MASTER_DATA_ROLE_ID], [VISIBILITY_ORG_ID], [SOURCE], [CHANGE_DATE], [FROM_DATE], [DELETE_DATE], [MASTER_DATA_PERMISSION_ID], [CREATE_EMPLOYEE_ID])
-VALUES ('2015-03-24T16:50:18.54', NULL, NULL, '2016-03-24', 1, NULL, NULL, '2015-03-24T16:50:18.54', '2015-03-24', NULL, 2, NULL)
-INSERT INTO [dbo].[MASTER_DATA_ROLE_PERMISSION_RSP] ( [CREATE_DATE], [OWNER_ORG_ID], [CHANGE_EMPLOYEE_ID], [TO_DATE], [MASTER_DATA_ROLE_ID], [VISIBILITY_ORG_ID], [SOURCE], [CHANGE_DATE], [FROM_DATE], [DELETE_DATE], [MASTER_DATA_PERMISSION_ID], [CREATE_EMPLOYEE_ID])
-VALUES ('2015-03-24T16:50:18.54', NULL, NULL, '2016-03-24', 1, NULL, NULL, '2015-03-24T16:50:18.54', '2015-03-24', NULL, 3, NULL)
-INSERT INTO [dbo].[MASTER_DATA_ROLE_PERMISSION_RSP] ( [CREATE_DATE], [OWNER_ORG_ID], [CHANGE_EMPLOYEE_ID], [TO_DATE], [MASTER_DATA_ROLE_ID], [VISIBILITY_ORG_ID], [SOURCE], [CHANGE_DATE], [FROM_DATE], [DELETE_DATE], [MASTER_DATA_PERMISSION_ID], [CREATE_EMPLOYEE_ID])
-VALUES ('2015-03-24T16:50:18.54', NULL, NULL, '2016-03-24', 1, NULL, NULL, '2015-03-24T16:50:18.54', '2015-03-24', NULL, 4, NULL)
-INSERT INTO [dbo].[MASTER_DATA_ROLE_PERMISSION_RSP] ( [CREATE_DATE], [OWNER_ORG_ID], [CHANGE_EMPLOYEE_ID], [TO_DATE], [MASTER_DATA_ROLE_ID], [VISIBILITY_ORG_ID], [SOURCE], [CHANGE_DATE], [FROM_DATE], [DELETE_DATE], [MASTER_DATA_PERMISSION_ID], [CREATE_EMPLOYEE_ID])
-VALUES ('2015-03-24T16:50:18.54', NULL, NULL, '2016-03-24', 1, NULL, NULL, '2015-03-24T16:50:18.54', '2015-03-24', NULL, 5, NULL)
-INSERT INTO [dbo].[MASTER_DATA_ROLE_PERMISSION_RSP] ( [CREATE_DATE], [OWNER_ORG_ID], [CHANGE_EMPLOYEE_ID], [TO_DATE], [MASTER_DATA_ROLE_ID], [VISIBILITY_ORG_ID], [SOURCE], [CHANGE_DATE], [FROM_DATE], [DELETE_DATE], [MASTER_DATA_PERMISSION_ID], [CREATE_EMPLOYEE_ID])
-VALUES ('2015-03-24T16:50:18.54', NULL, NULL, '2016-03-24', 1, NULL, NULL, '2015-03-24T16:50:18.54', '2015-03-24', NULL, 6, NULL)
-
 
 SET IDENTITY_INSERT [dbo].[MASTER_DATA_PERMISSION] OFF;
 
