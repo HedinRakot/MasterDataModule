@@ -27,22 +27,29 @@ namespace MonitoringAgent.Job
         /// </summary>
         public MasterDataJobCheckResults CheckJob(MasterDataJobInfo jobInfo)
         {
-            var scriptEngine = new ScriptEngine(jobInfo.ConnectionString);
-            var result = scriptEngine.ExecuteQuery(string.Format("SELECT [LastLaunchTime] FROM {0} WHERE NAME = @JobName", jobInfo.TableName),
-                new SqlParameter("@JobName", jobInfo.JobName));
-            if (result != null && result.Rows.Count > 0)
+            try
             {
-                var checkResult = new MasterDataJobCheckResults
+                var scriptEngine = new ScriptEngine(jobInfo.ConnectionString);
+                var result = scriptEngine.ExecuteQuery(string.Format("SELECT [LastLaunchTime] FROM {0} WHERE NAME = @JobName", jobInfo.TableName),
+                    new SqlParameter("@JobName", jobInfo.JobName));
+                if (result != null && result.Rows.Count > 0)
                 {
-                    CheckStatus = 1,
-                    CheckDate = DateTime.Now,
-                    MasterDataJobInfoId = jobInfo.Id
-                };
-                if (!(result.Rows[0][0] is DBNull))
-                {
-                    checkResult.LastRunTime = Convert.ToDateTime(result.Rows[0][0]);
+                    var checkResult = new MasterDataJobCheckResults
+                    {
+                        CheckStatus = 1,
+                        CheckDate = DateTime.Now,
+                        MasterDataJobInfoId = jobInfo.Id
+                    };
+                    if (!(result.Rows[0][0] is DBNull))
+                    {
+                        checkResult.LastRunTime = Convert.ToDateTime(result.Rows[0][0]);
+                    }
+                    return checkResult;
                 }
-                return checkResult;
+            }
+            catch (Exception)
+            {
+                return null;
             }
             return null;
         }
