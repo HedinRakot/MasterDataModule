@@ -204,6 +204,7 @@
     <Content Include="css\site.css" />
     <Content Include="Global.asax" />
     <Content Include="web\collections\AdminService\MasterDataWcfInfos.js" />
+    <Content Include="web\collections\AdminService\JobStatuses.js" />
     <Content Include="web\collections\AdminService\WcfServiceStatuses.js" />
     <Content Include="web\collections\CommonMasterData\Customer\InsTaxClasses.js">
       <DependentUpon>web.customer.collections.tt</DependentUpon>
@@ -585,6 +586,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>web.tp.collections.tt</DependentUpon>
     </Content>
+    <Content Include="web\models\AdminService\JobMonitor\JobStatus.js" />
     <Content Include="web\models\AdminService\WebServiceMonitor\MasterDataWcfInfo.js" />
     <Content Include="web\models\AdminService\WebServiceMonitor\WcfServiceStatus.js" />
     <Content Include="web\models\CommonMasterData\Customer\FilterInsTaxClass.js">

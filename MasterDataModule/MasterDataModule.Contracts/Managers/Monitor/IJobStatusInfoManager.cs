@@ -4,7 +4,7 @@ using MasterDataModule.Contracts.Managers.Base;
 
 namespace MasterDataModule.Contracts.Managers.Monitor
 {
-    public interface IWcfStatusInfoManager : IEntityManager<WcfServiceStatus, int>
+    public interface IJobStatusInfoManager : IEntityManager<JobStatus, int>
     {
     }
 }

@@ -56,6 +56,7 @@ namespace MasterDataModule.Configuration
             InitializeMasterDataConfiguration(container);
 
             container.RegisterType<IWcfStatusInfoManager, WcfStatusInfoManager>(new PerRequestLifetimeManager());
+            container.RegisterType<IJobStatusInfoManager, JobStatusInfoManager>(new PerRequestLifetimeManager());
         }
     }
 }

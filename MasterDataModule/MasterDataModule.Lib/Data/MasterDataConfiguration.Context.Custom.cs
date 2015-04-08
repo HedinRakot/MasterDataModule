@@ -37,6 +37,7 @@ namespace MasterDataModule.Lib.Data
         protected override void RegisterCustomMappings(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(WebServicesInfoMapping.Instance);
+            modelBuilder.Configurations.Add(JobsInfoMapping.Instance);
         }
     }
 }
