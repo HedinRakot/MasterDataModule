@@ -1,4 +1,5 @@
-﻿using MonitoringAgent.Data.Interfaces.Entities;
+﻿using System;
+using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Notifications.Interfaces;
 
 namespace MonitoringAgent.Services.Common.Base
@@ -10,7 +11,7 @@ namespace MonitoringAgent.Services.Common.Base
     /// <typeparam name="TCheckingResult">Type of result of checking</typeparam>
     public abstract class CheckingModuleWithLastResult<TServiceInfo, TCheckingResult>: CheckingModule<TServiceInfo, TCheckingResult>
         where TServiceInfo : class, ICheckServiceInfo
-        where TCheckingResult: class, ICheckResult
+        where TCheckingResult: class, ICheckResult, new()
     {
         /// <summary>
         /// Ctor
@@ -26,7 +27,16 @@ namespace MonitoringAgent.Services.Common.Base
         /// <param name="serviceInfo">Monitorable object info</param>
         protected sealed override TCheckingResult CheckService(TServiceInfo serviceInfo)
         {
-            var result = CheckServiceWithLastResult(serviceInfo);
+            TCheckingResult result;
+            try
+            {
+                result = CheckServiceWithLastResult(serviceInfo);
+            }
+            catch (Exception ex)
+            {
+                result = new TCheckingResult {CheckStatus = 0, Message = ex.Message, CheckDate = DateTime.Now, Attempt = 1};
+            }
+            
             var lastResult = LastResultExtractor(serviceInfo);
             if (lastResult != null && result.CheckStatus == lastResult.CheckStatus && result.Message == lastResult.Message)
             {
