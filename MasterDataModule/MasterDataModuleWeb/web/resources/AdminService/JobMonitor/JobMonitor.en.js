@@ -2,8 +2,9 @@ define(function () {
 	'use strict';
 
 	var resources = {
-	    WebServiceMonitor: 'Web services monitor',
+	    AdminService: 'Administration services',
 	    JobMonitor: 'Jobs monitor',
+	    JobMonitorAdjustment: 'Adjustments'
 	};
         
 	return resources;
