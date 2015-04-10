@@ -56,12 +56,12 @@
 			self.$el.html(template(self.model ? self.model.toJSON() : {}));
 
 			self.$('[data-permission]').each(function (index, elem) {
-			    debugger;
+
 				var $elem = $(elem),
 					permission = $elem.data('permission'),
 					userPermissions = Application.user.get('permissions');
 
-				if (!userPermissions || userPermissions.indexOf(permission) === -1)
+				if (!userPermissions || userPermissions.indexOf(permission) == -1)
 					$elem.hide();
 			});
 

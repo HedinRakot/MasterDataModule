@@ -33,7 +33,7 @@ namespace MasterDataModule.API
                 result.Name = user.Name;
                 var permissionsQuery = from permissionRsp in permissionsRspManager.GetEntities()
                     join permission in permissionsManager.GetEntities() on permissionRsp.MasterDataPermissionId equals permission.Id
-                    where permissionRsp.MasterDataRoleId == user.MasterDataRoleId
+                    where permissionRsp.MasterDataRoleId == user.MasterDataRoleId && !permissionRsp.DeleteDate.HasValue
                     select permission.Name;
                 result.Permissions = permissionsQuery.ToList();
             }
