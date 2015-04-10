@@ -68,11 +68,11 @@
                     <a href="#Holidays" data-localized="Holidays"></a>
                 </li>
 				<%}%>
-				<% if (Application.hasPermission('ExamClass')) { %>
-                <li>
+				
+                <li data-permission="ExamClass">
                     <a href="#ExamClasses" data-localized="ExamClasses"></a>
                 </li>
-				<%}%>
+
 				<% if (Application.hasPermission('Language')) { %>
                 <li>
                     <a href="#Languages" data-localized="Languages"></a>

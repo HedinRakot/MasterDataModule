@@ -3,6 +3,7 @@
 	'use strict';
 
     var createView = function (baseRouter, viewPath, collectionTypes, options) {
+
         var d = $.Deferred(); 
 	    require([viewPath], function (View) {
 

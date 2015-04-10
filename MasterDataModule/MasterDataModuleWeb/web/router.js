@@ -20,7 +20,7 @@
 				location.reload();
 			});
 			this.listenTo(Backbone, 'forbidden', function () {
-			    BaseRouter.showView.call(self, 'l!t!errors/forbidden');
+			    BaseRouter.showView.call(self, self, 'l!t!errors/forbidden');
 			});
 		},
 
