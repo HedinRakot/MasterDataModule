@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
@@ -49,7 +50,11 @@ namespace MasterDataModule.API.Security
                 return false;
             }
 
-            var userPermissionIds = rolePermissionRspManager.GetEntities().Where(e => user.MasterDataRoleId == e.MasterDataRoleId && PermissionTypes.Contains(e.MasterDataPermissionId));
+            var userPermissionIds = rolePermissionRspManager.GetEntities().Where(e =>
+                !e.DeleteDate.HasValue 
+                && user.MasterDataRoleId == e.MasterDataRoleId 
+                && PermissionTypes.Contains(e.MasterDataPermissionId));
+
             return userPermissionIds.Any();
         }
 
