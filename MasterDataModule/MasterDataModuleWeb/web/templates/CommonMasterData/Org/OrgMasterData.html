@@ -3,61 +3,39 @@
     <tr>        
         <td>
             <ul>
-				<% if (Application.hasPermission('OrgAccountType')) { %>
-                <li>
+                <li data-permission="OrgAccountType">
                     <a href="#OrgAccountTypes" data-localized="OrgAccountTypes"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('OrgAccountingArea')) { %>
-                <li>
+                <li data-permission="OrgAccountingArea">
                     <a href="#OrgAccountingAreas" data-localized="OrgAccountingAreas"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('OrgBankInformation')) { %>
-                <li>
+                <li data-permission="OrgBankInformation">
                     <a href="#OrgBankInformation" data-localized="OrgBankInformation"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('OrgCostCenter')) { %>
-                <li>
+                <li data-permission="OrgCostCenter">
                     <a href="#OrgCostCenters" data-localized="OrgCostCenters"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('OrgCostCenterResponsibleEmployeeRsp')) { %>
-                <li>
+                <li data-permission="OrgCostCenterResponsibleEmployeeRsp">
                     <a href="#OrgCostCenterResponsibleEmployeeRsps" data-localized="OrgCostCenterResponsibleEmployeeRsps"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('OrgCostCenterPrice')) { %>
-                <li>
+                <li data-permission="OrgCostCenterPrice">
                     <a href="#OrgCostCenterPrices" data-localized="OrgCostCenterPrices"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('OrgRelationshipType')) { %>
-                <li>
+                <li data-permission="OrgRelationshipType">
                     <a href="#OrgRelationshipTypes" data-localized="OrgRelationshipTypes"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('OrgInformation')) { %>
-                <li>
+                <li data-permission="OrgInformation">
                     <a href="#OrgInformation" data-localized="OrgInformation"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('OrgType')) { %>
-                <li>
+                <li data-permission="OrgType">
                     <a href="#OrgTypes" data-localized="OrgTypes"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('OrgInspectionDevice')) { %>
-                <li>
+                <li data-permission="OrgInspectionDevice">
                     <a href="#OrgInspectionDevices" data-localized="OrgInspectionDevices"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('OrgOrganizationalUnit')) { %>
-                <li>
+                <li data-permission="OrgOrganizationalUnit">
                     <a href="#OrgOrganizationalUnits" data-localized="OrgOrganizationalUnits"></a>
                 </li>
-				<%}%>
 			</ul>
         </td>
     </tr>
