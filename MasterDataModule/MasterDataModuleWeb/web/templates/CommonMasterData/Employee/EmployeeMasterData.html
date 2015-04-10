@@ -3,41 +3,27 @@
     <tr>        
         <td>
             <ul>
-				<% if (Application.hasPermission('EmpEmployee')) { %>
-                <li>
+                <li data-permission="EmpEmployee">
                     <a href="#EmpEmployees" data-localized="EmpEmployees"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('EmpCashPermissionType')) { %>
-                <li>
+                <li data-permission="EmpCashPermissionType">
                     <a href="#EmpCashPermissionTypes" data-localized="EmpCashPermissionTypes"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('EmpOrgAssociationType')) { %>
-                <li>
+                <li data-permission="EmpOrgAssociationType">
                     <a href="#EmpOrgAssociationTypes" data-localized="EmpOrgAssociationTypes"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('EmpEmployeeOrgCostCenterRsp')) { %>
-                <li>
+                <li data-permission="EmpEmployeeOrgCostCenterRsp">
                     <a href="#EmpEmployeeOrgCostCenterRsps" data-localized="EmpEmployeeOrgCostCenterRsps"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('EmpEmployeeOrgOrganizationalUnitRsp')) { %>
-                <li>
+                <li data-permission="EmpEmployeeOrgOrganizationalUnitRsp">
                     <a href="#EmpEmployeeOrgOrganizationalUnitRsps" data-localized="EmpEmployeeOrgOrganizationalUnitRsps"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('EmpEmployeeTopEmployeeRsp')) { %>
-                <li>
+                <li data-permission="EmpEmployeeTopEmployeeRsp">
                     <a href="#EmpEmployeeTopEmployeeRsps" data-localized="EmpEmployeeTopEmployeeRsps"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('EmpEmployeeSysRoleRsp')) { %>
-                <li>
+                <li data-permission="EmpEmployeeSysRoleRsp">
                     <a href="#EmpEmployeeSysRoleRsps" data-localized="EmpEmployeeSysRoleRsps"></a>
                 </li>
-				<%}%>
 			</ul>
         </td>
     </tr>

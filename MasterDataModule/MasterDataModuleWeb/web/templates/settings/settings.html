@@ -3,26 +3,57 @@
     <tr>        
         <td>
             <ul>
-				<% if (Application.hasPermission('SysTable')) { %>
-                <li>
+                <li data-permission="MasterDataWcfInfo">
+                    <a href="#MasterDataWcfInfos" data-localized="MasterDataWcfInfos"></a>
+                </li>
+                <li data-permission="MasterDataWcfCheckResults">
+                    <a href="#MasterDataWcfCheckResults" data-localized="MasterDataWcfCheckResults"></a>
+                </li>
+                <li data-permission="MasterDataSiteInfo">
+                    <a href="#MasterDataSiteInfos" data-localized="MasterDataSiteInfos"></a>
+                </li>
+                <li data-permission="MasterDataSiteCheckResults">
+                    <a href="#MasterDataSiteCheckResults" data-localized="MasterDataSiteCheckResults"></a>
+                </li>
+                <li data-permission="MasterDataMonitorState">
+                    <a href="#MasterDataMonitorStates" data-localized="MasterDataMonitorStates"></a>
+                </li>
+                <li data-permission="MasterDataJobInfo">
+                    <a href="#MasterDataJobInfos" data-localized="MasterDataJobInfos"></a>
+                </li>
+                <li data-permission="MasterDataJobCheckResults">
+                    <a href="#MasterDataJobCheckResults" data-localized="MasterDataJobCheckResults"></a>
+                </li>
+                <li data-permission="MasterDataWindowsServiceInfo">
+                    <a href="#MasterDataWindowsServiceInfos" data-localized="MasterDataWindowsServiceInfos"></a>
+                </li>
+                <li data-permission="MasterDataWindowsServiceCheckResults">
+                    <a href="#MasterDataWindowsServiceCheckResults" data-localized="MasterDataWindowsServiceCheckResults"></a>
+                </li>
+                <li data-permission="SysTable">
                     <a href="#SysTables" data-localized="SysTables"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('Role')) { %>
-                <li>
+                <li data-permission="Role">
                     <a href="#Roles" data-localized="Roles"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('Permission')) { %>
-                <li>
+                <li data-permission="Permission">
                     <a href="#Permissions" data-localized="Permissions"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('User')) { %>
-                <li>
+                <li data-permission="User">
                     <a href="#Users" data-localized="Users"></a>
                 </li>
-				<%}%>
+                <li data-permission="MasterDataSubscribers">
+                    <a href="#MasterDataSubscribers" data-localized="MasterDataSubscribers"></a>
+                </li>
+                <li data-permission="MasterDataMonitorableInfoMasterDataNotificationsRsp">
+                    <a href="#MasterDataMonitorableInfoMasterDataNotificationsRsps" data-localized="MasterDataMonitorableInfoMasterDataNotificationsRsps"></a>
+                </li>
+                <li data-permission="MasterDataNotificationsMasterDataSubscribersRsp">
+                    <a href="#MasterDataNotificationsMasterDataSubscribersRsps" data-localized="MasterDataNotificationsMasterDataSubscribersRsps"></a>
+                </li>
+                <li data-permission="MasterDataNotifications">
+                    <a href="#MasterDataNotifications" data-localized="MasterDataNotifications"></a>
+                </li>
 			</ul>
         </td>
     </tr>

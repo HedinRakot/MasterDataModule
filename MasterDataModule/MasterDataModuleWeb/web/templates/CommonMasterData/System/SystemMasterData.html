@@ -3,66 +3,42 @@
     <tr>        
         <td>
             <ul>
-				<% if (Application.hasPermission('SysLanguage')) { %>
-                <li>
+                <li data-permission="SysLanguage">
                     <a href="#SysLanguages" data-localized="SysLanguages"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('SysLocation')) { %>
-                <li>
+                <li data-permission="SysLocation">
                     <a href="#SysLocations" data-localized="SysLocations"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('SysRole')) { %>
-                <li>
+                <li data-permission="SysRole">
                     <a href="#SysRoles" data-localized="SysRoles"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('SysRoleSysPermissionRsp')) { %>
-                <li>
+                <li data-permission="SysRoleSysPermissionRsp">
                     <a href="#SysRoleSysPermissionRsps" data-localized="SysRoleSysPermissionRsps"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('OrdFederalGroup')) { %>
-                <li>
+                <li data-permission="OrdFederalGroup">
                     <a href="#OrdFederalGroups" data-localized="OrdFederalGroups"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('OrdFederalState')) { %>
-                <li>
+                <li data-permission="OrdFederalState">
                     <a href="#OrdFederalStates" data-localized="OrdFederalStates"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('SysCountry')) { %>
-                <li>
+                <li data-permission="SysCountry">
                     <a href="#SysCountries" data-localized="SysCountries"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('SysPostCode')) { %>
-                <li>
+                <li data-permission="SysPostCode">
                     <a href="#SysPostCodes" data-localized="SysPostCodes"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('OrdOrderCancelationReason')) { %>
-                <li>
+                <li data-permission="OrdOrderCancelationReason">
                     <a href="#OrdOrderCancelationReasons" data-localized="OrdOrderCancelationReasons"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('KssExpenseGround')) { %>
-                <li>
+                <li data-permission="KssExpenseGround">
                     <a href="#KssExpenseGrounds" data-localized="KssExpenseGrounds"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('ExpPassengersType')) { %>
-                <li>
+                <li data-permission="ExpPassengersType">
                     <a href="#ExpPassengersTypes" data-localized="ExpPassengersTypes"></a>
                 </li>
-				<%}%>
-				<% if (Application.hasPermission('InsVatType')) { %>
-                <li>
+                <li data-permission="InsVatType">
                     <a href="#InsVatTypes" data-localized="InsVatTypes"></a>
                 </li>
-				<%}%>
 			</ul>
         </td>
     </tr>
