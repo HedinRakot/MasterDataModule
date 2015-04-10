@@ -10,7 +10,8 @@
 		</div>
 		<div class="editor-field">
             <input type="text" data-role="numerictextbox" id="roomNumber" name="roomNumber" />
-			<span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg" data-for="modelName" role="alert"></span>
+			<input type="hidden" id="duplicateModelName" name="duplicateModelName" />
+            <span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg" data-for="duplicateModelName" role="alert" style="display: none"></span>
 		</div>   
 		<div class="editor-label">
 			<label for="placeAmount" data-localized="placeAmount"></label>

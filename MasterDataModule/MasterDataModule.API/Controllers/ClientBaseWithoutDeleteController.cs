@@ -75,7 +75,7 @@ namespace MasterDataModule.API.Controllers
             }
             catch(DuplicateEntityException ex)
             {
-                ModelState.AddModelError("modelname", "Die Entität muss im System eindeutig sein.");
+                ModelState.AddModelError("model.duplicateModelName", "Die Entität muss im System eindeutig sein.");
                 return BadRequest(ModelState);
             }
 
@@ -107,7 +107,7 @@ namespace MasterDataModule.API.Controllers
             }
             catch(DuplicateEntityException ex)
             {
-                ModelState.AddModelError("modelname", "Die Entität muss im System eindeutig sein.");
+                ModelState.AddModelError("model.duplicateModelName", "Die Entität muss im System eindeutig sein.");
                 return BadRequest(ModelState);
             }
 
