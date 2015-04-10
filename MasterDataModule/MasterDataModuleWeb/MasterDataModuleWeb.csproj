@@ -7971,6 +7971,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>web.customer.relationships.resources.txt</LastGenOutput>
     </Content>
+    <None Include="Properties\PublishProfiles\test.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
