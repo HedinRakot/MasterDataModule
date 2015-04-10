@@ -6,19 +6,19 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,examClassId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('examClassInclusiveClass', 'examClassId'), 
+			                        editable: Application.canTableItemBeEdit('ExamClassInclusiveClass', 'examClassId'), 
 				                    validation: { required: true } }			
 			,examClassIdInclusive: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('examClassInclusiveClass', 'examClassIdInclusive'), 
+			                        editable: Application.canTableItemBeEdit('ExamClassInclusiveClass', 'examClassIdInclusive'), 
 				                    validation: { required: true } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('examClassInclusiveClass', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('ExamClassInclusiveClass', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('examClassInclusiveClass', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('ExamClassInclusiveClass', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 			,isConditional: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('examClassInclusiveClass', 'isConditional'), 
+			                        editable: Application.canTableItemBeEdit('ExamClassInclusiveClass', 'isConditional'), 
 				                    validation: { required: false } }			
 		},
 		defaults: function () {

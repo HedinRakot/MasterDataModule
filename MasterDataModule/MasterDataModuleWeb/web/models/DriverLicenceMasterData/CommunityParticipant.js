@@ -6,16 +6,16 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,driverSchoolIdParticipant: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('communityParticipant', 'driverSchoolIdParticipant'), 
+			                        editable: Application.canTableItemBeEdit('CommunityParticipant', 'driverSchoolIdParticipant'), 
 				                    validation: { required: true } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('communityParticipant', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('CommunityParticipant', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('communityParticipant', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('CommunityParticipant', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 			,driverSchoolIdLead: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('communityParticipant', 'driverSchoolIdLead'), 
+			                        editable: Application.canTableItemBeEdit('CommunityParticipant', 'driverSchoolIdLead'), 
 				                    validation: { required: true } }			
 		},
 		defaults: function () {

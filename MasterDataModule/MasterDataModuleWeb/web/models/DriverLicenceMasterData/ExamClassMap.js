@@ -6,10 +6,10 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,examClassIdOld: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('examClassMap', 'examClassIdOld'), 
+			                        editable: Application.canTableItemBeEdit('ExamClassMap', 'examClassIdOld'), 
 				                    validation: { required: true } }			
 			,examClassIdActual: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('examClassMap', 'examClassIdActual'), 
+			                        editable: Application.canTableItemBeEdit('ExamClassMap', 'examClassIdActual'), 
 				                    validation: { required: true } }			
 		},
 		defaults: function () {

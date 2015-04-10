@@ -52,9 +52,9 @@ namespace MasterDataModule.API
             var mappings = new Dictionary<string, TableMapping>();
 
             //TODO UNCOMMENT!!!!
-            //DrlTableMappings(mappings);
-            //AsProCommonTableMappings(mappings);
-            //AsProTPTableMappings(mappings);
+            DrlTableMappings(mappings);
+            AsProCommonTableMappings(mappings);
+            AsProTPTableMappings(mappings);
 
             return mappings;
         }
@@ -62,16 +62,6 @@ namespace MasterDataModule.API
         //TODO Need to be removed
         public static string GetSystemTablesJson(IDependencyResolver resolver)
         {
-            //driver licence master data
-            
-
-            
-            //FeMasterDataColumnsMapping(columnsMappingNames);
-            //CommonMasterDataColumnsMapping(columnsMappingNames);
-
-
-            //TODO another fields
-
             var service = (ISysTableManager)resolver.GetService(typeof(ISysTableManager));
             var tables = service.GetEntities().ToList();
 
@@ -100,7 +90,7 @@ namespace MasterDataModule.API
                 };
                 result.TableNames.Add(tableMapping.CodeName, model);
             }
-            return JsonConvert.SerializeObject(result, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            return JsonConvert.SerializeObject(result, new JsonSerializerSettings {  });
         }
     }
 }

@@ -6,16 +6,16 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('meetingPoint', 'name'), 
+			                        editable: Application.canTableItemBeEdit('MeetingPoint', 'name'), 
 				                    validation: { required: true, maxLength: 100 } }			
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('meetingPoint', 'description'), 
+			                        editable: Application.canTableItemBeEdit('MeetingPoint', 'description'), 
 				                    validation: { required: true, maxLength: 250 } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('meetingPoint', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('MeetingPoint', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('meetingPoint', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('MeetingPoint', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

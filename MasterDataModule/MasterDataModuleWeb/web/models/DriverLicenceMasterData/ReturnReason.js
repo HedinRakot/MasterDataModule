@@ -6,22 +6,22 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('returnReason', 'name'), 
+			                        editable: Application.canTableItemBeEdit('ReturnReason', 'name'), 
 				                    validation: { required: true, maxLength: 50 } }			
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('returnReason', 'description'), 
+			                        editable: Application.canTableItemBeEdit('ReturnReason', 'description'), 
 				                    validation: { required: true, maxLength: 250 } }			
 			,text1: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('returnReason', 'text1'), 
+			                        editable: Application.canTableItemBeEdit('ReturnReason', 'text1'), 
 				                    validation: { required: false, maxLength: 200 } }			
 			,text2: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('returnReason', 'text2'), 
+			                        editable: Application.canTableItemBeEdit('ReturnReason', 'text2'), 
 				                    validation: { required: false, maxLength: 200 } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('returnReason', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('ReturnReason', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('returnReason', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('ReturnReason', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

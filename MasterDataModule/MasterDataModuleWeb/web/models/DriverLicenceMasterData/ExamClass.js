@@ -6,25 +6,25 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('examClass', 'name'), 
+			                        editable: Application.canTableItemBeEdit('ExamClass', 'name'), 
 				                    validation: { required: true, maxLength: 10 } }			
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('examClass', 'description'), 
+			                        editable: Application.canTableItemBeEdit('ExamClass', 'description'), 
 				                    validation: { required: true, maxLength: 250 } }			
 			,isMofa: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('examClass', 'isMofa'), 
+			                        editable: Application.canTableItemBeEdit('ExamClass', 'isMofa'), 
 				                    validation: { required: false } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('examClass', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('ExamClass', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('examClass', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('ExamClass', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 			,isFsClass: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('examClass', 'isFsClass'), 
+			                        editable: Application.canTableItemBeEdit('ExamClass', 'isFsClass'), 
 				                    validation: { required: false } }			
 			,sortOrder: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('examClass', 'sortOrder'), 
+			                        editable: Application.canTableItemBeEdit('ExamClass', 'sortOrder'), 
 				                    validation: { required: false } }			
 		},
 		defaults: function () {

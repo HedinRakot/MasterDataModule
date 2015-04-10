@@ -6,16 +6,16 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,examStationId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('examStationExamRecognitionType', 'examStationId'), 
+			                        editable: Application.canTableItemBeEdit('ExamStationExamRecognitionType', 'examStationId'), 
 				                    validation: { required: true } }			
 			,examRecognitionTypeId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('examStationExamRecognitionType', 'examRecognitionTypeId'), 
+			                        editable: Application.canTableItemBeEdit('ExamStationExamRecognitionType', 'examRecognitionTypeId'), 
 				                    validation: { required: true } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('examStationExamRecognitionType', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('ExamStationExamRecognitionType', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('examStationExamRecognitionType', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('ExamStationExamRecognitionType', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

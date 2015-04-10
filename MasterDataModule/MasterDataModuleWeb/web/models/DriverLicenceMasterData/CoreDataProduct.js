@@ -6,58 +6,58 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,insCoreDataProductId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'insCoreDataProductId'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'insCoreDataProductId'), 
 				                    validation: { required: true } }			
 			,minAge: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'minAge'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'minAge'), 
 				                    validation: { required: true } }			
 			,maxAge: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'maxAge'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'maxAge'), 
 				                    validation: { required: false } }			
 			,examType: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'examType'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'examType'), 
 				                    validation: { required: true } }			
 			,priorTimeInMonths: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'priorTimeInMonths'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'priorTimeInMonths'), 
 				                    validation: { required: true } }			
 			,expirationInMonth: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'expirationInMonth'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'expirationInMonth'), 
 				                    validation: { required: true } }			
 			,repeatTimeInDays: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'repeatTimeInDays'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'repeatTimeInDays'), 
 				                    validation: { required: true } }			
 			,trainingCertFlag: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'trainingCertFlag'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'trainingCertFlag'), 
 				                    validation: { required: false } }			
 			,resultFlag: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'resultFlag'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'resultFlag'), 
 				                    validation: { required: false } }			
 			,multiplyFlag: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'multiplyFlag'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'multiplyFlag'), 
 				                    validation: { required: false } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 			,isMofaPrint: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'isMofaPrint'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'isMofaPrint'), 
 				                    validation: { required: false } }			
 			,isAdditionalProduct: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'isAdditionalProduct'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'isAdditionalProduct'), 
 				                    validation: { required: false } }			
 			,isPrepaymentRequired: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'isPrepaymentRequired'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'isPrepaymentRequired'), 
 				                    validation: { required: false } }			
 			,isMandatory: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'isMandatory'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'isMandatory'), 
 				                    validation: { required: false } }			
 			,feProductNumber: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'feProductNumber'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'feProductNumber'), 
 				                    validation: { required: true, maxLength: 10 } }			
 			,repeatTimeInDaysReduced: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('coreDataProduct', 'repeatTimeInDaysReduced'), 
+			                        editable: Application.canTableItemBeEdit('CoreDataProduct', 'repeatTimeInDaysReduced'), 
 				                    validation: { required: true } }			
 		},
 		defaults: function () {

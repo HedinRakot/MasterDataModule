@@ -6,13 +6,13 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,driverSchoolId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('community', 'driverSchoolId'), 
+			                        editable: Application.canTableItemBeEdit('Community', 'driverSchoolId'), 
 				                    validation: { required: true } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('community', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('Community', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('community', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('Community', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

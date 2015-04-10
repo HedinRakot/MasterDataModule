@@ -6,19 +6,19 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,programmName: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('argeVersion', 'programmName'), 
+			                        editable: Application.canTableItemBeEdit('ArgeVersion', 'programmName'), 
 				                    validation: { required: true, maxLength: 30 } }			
 			,versionSystem: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('argeVersion', 'versionSystem'), 
+			                        editable: Application.canTableItemBeEdit('ArgeVersion', 'versionSystem'), 
 				                    validation: { required: true, maxLength: 10 } }			
 			,expirationDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('argeVersion', 'expirationDate'), 
+			                        editable: Application.canTableItemBeEdit('ArgeVersion', 'expirationDate'), 
 				                    validation: { required: false, date: true } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('argeVersion', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('ArgeVersion', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('argeVersion', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('ArgeVersion', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

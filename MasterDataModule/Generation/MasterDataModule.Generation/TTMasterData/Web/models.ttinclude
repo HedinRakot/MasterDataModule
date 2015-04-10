@@ -24,7 +24,7 @@ define(function () {
             var validation = GetPropertyValidation(context, property);
 #>
 			,<#=property.Name #>: { type: "<#=type#>", 
-			                        editable: Application.canTableItemBeEdit('<#=entityContent.CodeNameCamelCase #>', '<#=property.Name #>'), 
+			                        editable: Application.canTableItemBeEdit('<#=entityContent.CodeName #>', '<#=property.Name #>'), 
 				                    validation: { required: <#=propContent.IsModelRequired.ToString().ToLower()#><#=validation.Prefix(", ") #> } }			
 <#
         }

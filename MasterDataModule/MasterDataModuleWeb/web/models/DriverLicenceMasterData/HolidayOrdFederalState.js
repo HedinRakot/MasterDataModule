@@ -6,10 +6,10 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,holidayId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('holidayOrdFederalState', 'holidayId'), 
+			                        editable: Application.canTableItemBeEdit('HolidayOrdFederalState', 'holidayId'), 
 				                    validation: { required: true } }			
 			,ordFederalStateId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('holidayOrdFederalState', 'ordFederalStateId'), 
+			                        editable: Application.canTableItemBeEdit('HolidayOrdFederalState', 'ordFederalStateId'), 
 				                    validation: { required: false } }			
 		},
 		defaults: function () {

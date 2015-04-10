@@ -6,22 +6,22 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,ordFederalStateId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('examStation', 'ordFederalStateId'), 
+			                        editable: Application.canTableItemBeEdit('ExamStation', 'ordFederalStateId'), 
 				                    validation: { required: false } }			
 			,place: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('examStation', 'place'), 
+			                        editable: Application.canTableItemBeEdit('ExamStation', 'place'), 
 				                    validation: { required: true, maxLength: 50 } }			
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('examStation', 'description'), 
+			                        editable: Application.canTableItemBeEdit('ExamStation', 'description'), 
 				                    validation: { required: false, maxLength: 250 } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('examStation', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('ExamStation', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('examStation', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('ExamStation', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 			,sortOrder: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('examStation', 'sortOrder'), 
+			                        editable: Application.canTableItemBeEdit('ExamStation', 'sortOrder'), 
 				                    validation: { required: false } }			
 		},
 		defaults: function () {

@@ -6,34 +6,34 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('legalBasis', 'name'), 
+			                        editable: Application.canTableItemBeEdit('LegalBasis', 'name'), 
 				                    validation: { required: true, maxLength: 50 } }			
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('legalBasis', 'description'), 
+			                        editable: Application.canTableItemBeEdit('LegalBasis', 'description'), 
 				                    validation: { required: true, maxLength: 250 } }			
 			,educationCertificateRequired: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('legalBasis', 'educationCertificateRequired'), 
+			                        editable: Application.canTableItemBeEdit('LegalBasis', 'educationCertificateRequired'), 
 				                    validation: { required: false } }			
 			,firstAssignation: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('legalBasis', 'firstAssignation'), 
+			                        editable: Application.canTableItemBeEdit('LegalBasis', 'firstAssignation'), 
 				                    validation: { required: true } }			
 			,messageReason: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('legalBasis', 'messageReason'), 
+			                        editable: Application.canTableItemBeEdit('LegalBasis', 'messageReason'), 
 				                    validation: { required: true, maxLength: 50 } }			
 			,messageReasonStyle: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('legalBasis', 'messageReasonStyle'), 
+			                        editable: Application.canTableItemBeEdit('LegalBasis', 'messageReasonStyle'), 
 				                    validation: { required: true, maxLength: 50 } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('legalBasis', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('LegalBasis', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('legalBasis', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('LegalBasis', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 			,replacementId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('legalBasis', 'replacementId'), 
+			                        editable: Application.canTableItemBeEdit('LegalBasis', 'replacementId'), 
 				                    validation: { required: false } }			
 			,printName: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('legalBasis', 'printName'), 
+			                        editable: Application.canTableItemBeEdit('LegalBasis', 'printName'), 
 				                    validation: { required: true, maxLength: 50 } }			
 		},
 		defaults: function () {

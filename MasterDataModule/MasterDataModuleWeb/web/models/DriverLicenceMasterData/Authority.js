@@ -6,49 +6,49 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,authorityNumber: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('authority', 'authorityNumber'), 
+			                        editable: Application.canTableItemBeEdit('Authority', 'authorityNumber'), 
 				                    validation: { required: true, maxLength: 13 } }			
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('authority', 'name'), 
+			                        editable: Application.canTableItemBeEdit('Authority', 'name'), 
 				                    validation: { required: true, maxLength: 100 } }			
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('authority', 'description'), 
+			                        editable: Application.canTableItemBeEdit('Authority', 'description'), 
 				                    validation: { required: false, maxLength: 250 } }			
 			,isCertificateRequired: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('authority', 'isCertificateRequired'), 
+			                        editable: Application.canTableItemBeEdit('Authority', 'isCertificateRequired'), 
 				                    validation: { required: false } }			
 			,returnType: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('authority', 'returnType'), 
+			                        editable: Application.canTableItemBeEdit('Authority', 'returnType'), 
 				                    validation: { required: true } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('authority', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('Authority', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('authority', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('Authority', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 			,name2: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('authority', 'name2'), 
+			                        editable: Application.canTableItemBeEdit('Authority', 'name2'), 
 				                    validation: { required: false, maxLength: 100 } }			
 			,streetHouseNumber: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('authority', 'streetHouseNumber'), 
+			                        editable: Application.canTableItemBeEdit('Authority', 'streetHouseNumber'), 
 				                    validation: { required: false, maxLength: 220 } }			
 			,zipCode: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('authority', 'zipCode'), 
+			                        editable: Application.canTableItemBeEdit('Authority', 'zipCode'), 
 				                    validation: { required: false, maxLength: 90 } }			
 			,city: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('authority', 'city'), 
+			                        editable: Application.canTableItemBeEdit('Authority', 'city'), 
 				                    validation: { required: false, maxLength: 160 } }			
 			,sysCountryId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('authority', 'sysCountryId'), 
+			                        editable: Application.canTableItemBeEdit('Authority', 'sysCountryId'), 
 				                    validation: { required: false } }			
 			,phone1: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('authority', 'phone1'), 
+			                        editable: Application.canTableItemBeEdit('Authority', 'phone1'), 
 				                    validation: { required: false, maxLength: 90 } }			
 			,phone2: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('authority', 'phone2'), 
+			                        editable: Application.canTableItemBeEdit('Authority', 'phone2'), 
 				                    validation: { required: false, maxLength: 90 } }			
 			,fax: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('authority', 'fax'), 
+			                        editable: Application.canTableItemBeEdit('Authority', 'fax'), 
 				                    validation: { required: false, maxLength: 90 } }			
 		},
 		defaults: function () {

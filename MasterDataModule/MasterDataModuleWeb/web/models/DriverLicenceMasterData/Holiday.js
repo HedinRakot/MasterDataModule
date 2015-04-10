@@ -6,10 +6,10 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('holiday', 'name'), 
+			                        editable: Application.canTableItemBeEdit('Holiday', 'name'), 
 				                    validation: { required: false, maxLength: 90 } }			
 			,date: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('holiday', 'date'), 
+			                        editable: Application.canTableItemBeEdit('Holiday', 'date'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

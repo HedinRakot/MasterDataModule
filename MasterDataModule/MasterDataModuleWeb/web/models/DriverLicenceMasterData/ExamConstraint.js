@@ -6,19 +6,19 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('examConstraint', 'name'), 
+			                        editable: Application.canTableItemBeEdit('ExamConstraint', 'name'), 
 				                    validation: { required: true, maxLength: 50 } }			
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('examConstraint', 'description'), 
+			                        editable: Application.canTableItemBeEdit('ExamConstraint', 'description'), 
 				                    validation: { required: true, maxLength: 250 } }			
 			,constraintType: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('examConstraint', 'constraintType'), 
+			                        editable: Application.canTableItemBeEdit('ExamConstraint', 'constraintType'), 
 				                    validation: { required: true } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('examConstraint', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('ExamConstraint', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('examConstraint', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('ExamConstraint', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

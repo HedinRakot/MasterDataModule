@@ -6,13 +6,13 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,validationErrorNumber: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('messageLocalization', 'validationErrorNumber'), 
+			                        editable: Application.canTableItemBeEdit('MessageLocalization', 'validationErrorNumber'), 
 				                    validation: { required: true } }			
 			,sysLanguageId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('messageLocalization', 'sysLanguageId'), 
+			                        editable: Application.canTableItemBeEdit('MessageLocalization', 'sysLanguageId'), 
 				                    validation: { required: true } }			
 			,message: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('messageLocalization', 'message'), 
+			                        editable: Application.canTableItemBeEdit('MessageLocalization', 'message'), 
 				                    validation: { required: true, maxLength: 500 } }			
 		},
 		defaults: function () {
