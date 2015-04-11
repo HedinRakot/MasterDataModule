@@ -6,22 +6,22 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,masterDataRoleId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('user', 'masterDataRoleId'), 
+			                        editable: Application.canTableItemBeEdit('User', 'masterDataRoleId'), 
 				                    validation: { required: true } }			
 			,login: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('user', 'login'), 
+			                        editable: Application.canTableItemBeEdit('User', 'login'), 
 				                    validation: { required: true, maxLength: 128 } }			
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('user', 'name'), 
+			                        editable: Application.canTableItemBeEdit('User', 'name'), 
 				                    validation: { required: true, maxLength: 256 } }			
 			,password: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('user', 'password'), 
+			                        editable: Application.canTableItemBeEdit('User', 'password'), 
 				                    validation: { required: true, maxLength: 128 } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('user', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('User', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('user', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('User', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

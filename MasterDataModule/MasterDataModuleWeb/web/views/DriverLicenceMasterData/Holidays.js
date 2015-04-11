@@ -1,5 +1,5 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/DriverLicenceMasterData/Holidays',
 'l!t!DriverLicenceMasterData/FilterHoliday',
 'l!t!DriverLicenceMasterData/HolidayRelationships'
@@ -13,6 +13,10 @@ define([
         filterView: FilterView,
         tableName: 'Holiday',
         editUrl: '#Holidays',
+		addNewModelInline: true,
+		showAddButton: true,
+		showEditButton: true,
+		showDeleteButton: true,
 
 	    editItemTitle: function () {
 	        return this.resources.edit

@@ -1,18 +1,21 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/Settings/MasterDataSiteCheckResults',
-'l!t!Settings/FilterMasterDataSiteCheckResults',
-'l!t!Settings/MasterDataSiteCheckResultsRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
+'l!t!Settings/FilterMasterDataSiteCheckResults'
+], function (BaseView, Collection, FilterView) {
 	'use strict';
 
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'MasterDataSiteCheckResults',
         editUrl: '#MasterDataSiteCheckResults',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
 	        return this.resources.edit

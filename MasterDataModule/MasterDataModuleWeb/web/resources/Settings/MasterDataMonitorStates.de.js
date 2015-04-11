@@ -4,15 +4,15 @@ define(function () {
 
 	var resources = {
 
-		add: 'DE: Monitor settings anlegen',
-	    edit: 'DE: Monitor settings editieren',
+		add: 'Monitor Einstellungen anlegen',
+	    edit: 'Monitor Einstellungen editieren',
 	    masterData: 'Einstellungen',
-	    pageTitle: 'DE: Monitor settings',
+	    pageTitle: 'Monitor Einstellungen',
 		pleaseSelect: 'Bitte auswählen',
 
-		reconfigure: 'DE: Reconfigure',	
+		reconfigure: 'Neue Konfiguration',	
 
-		reconfigureCheckingTimeout: 'DE: Reconfigure flag checking timeout',	
+		reconfigureCheckingTimeout: 'Neue Konfiguration Timeout',	
 
 	};
 

@@ -4,21 +4,21 @@ define(function () {
 
 	var resources = {
 
-		add: 'DE: Job info anlegen',
-	    edit: 'DE: Job info editieren',
+		add: 'Hintergrundprozess Einstellungen anlegen',
+	    edit: 'Hintergrundprozess Einstellungen editieren',
 	    masterData: 'Einstellungen',
-	    pageTitle: 'DE: Job info',
+	    pageTitle: 'Hintergrundprozess Einstellungen',
 		pleaseSelect: 'Bitte auswählen',
 
-		connectionString: 'DE: Connection string',	
+		connectionString: 'Connection string',	
 
-		tableName: 'DE: Table name',	
+		tableName: 'Tabelle',	
 
-		timeoutChecking: 'DE: Timeout checking',	
+		timeoutChecking: 'Timeout checking',	
 
-		name: 'DE: Name',	
+		name: 'Name',	
 
-		jobName: 'DE: Job name',	
+		jobName: 'Hintergrundprozess Name',	
 
 	};
 

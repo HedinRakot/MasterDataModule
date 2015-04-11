@@ -70,7 +70,7 @@ define([
         {
             var propContent = property.Column.Content;
             var type = GetPropertyType(context, property);
-			if(String.IsNullOrEmpty(propContent.CustomView))
+			if(String.IsNullOrEmpty(propContent.CustomView) && propContent.ShowInAddView)
 			{
 #>
 			this.disableInput(this, '<#= property.Name #>'<#= type #>);

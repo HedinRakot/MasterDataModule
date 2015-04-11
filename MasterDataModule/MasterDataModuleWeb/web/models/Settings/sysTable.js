@@ -6,13 +6,13 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('sysTable', 'name'), 
+			                        editable: Application.canTableItemBeEdit('SysTable', 'name'), 
 				                    validation: { required: true, maxLength: 128 } }			
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('sysTable', 'description'), 
+			                        editable: Application.canTableItemBeEdit('SysTable', 'description'), 
 				                    validation: { required: false, maxLength: 256 } }			
 			,editMode: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('sysTable', 'editMode'), 
+			                        editable: Application.canTableItemBeEdit('SysTable', 'editMode'), 
 				                    validation: { required: false } }			
 		},
 		defaults: function () {

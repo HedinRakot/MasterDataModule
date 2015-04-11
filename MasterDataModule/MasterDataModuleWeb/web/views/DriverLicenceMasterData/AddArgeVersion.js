@@ -31,7 +31,6 @@ define([
 			//TODO foreach model field
 			this.disableInput(this, 'programmName');
 			this.disableInput(this, 'versionSystem');
-			this.disableInput(this, 'expirationDate', 'date');
 			this.disableInput(this, 'fromDate', 'date');
 			this.disableInput(this, 'toDate', 'date');
 

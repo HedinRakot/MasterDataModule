@@ -1,8 +1,7 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/DriverLicenceMasterData/MessageLocalizations',
-'l!t!DriverLicenceMasterData/FilterMessageLocalization',
-'l!t!DriverLicenceMasterData/MessageLocalizationRelationships'
+'l!t!DriverLicenceMasterData/FilterMessageLocalization'
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -13,6 +12,10 @@ define([
         filterView: FilterView,
         tableName: 'MessageLocalization',
         editUrl: '#MessageLocalizations',
+		addNewModelInline: true,
+		showAddButton: true,
+		showEditButton: true,
+		showDeleteButton: true,
 
 	    editItemTitle: function () {
 	        return this.resources.edit

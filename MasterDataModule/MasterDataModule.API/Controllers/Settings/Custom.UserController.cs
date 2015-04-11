@@ -36,9 +36,12 @@ namespace MasterDataModule.API.Controllers.Settings
             }
 
             if (actionType == ActionTypes.Add)
-                ValidatePassword(model);
+            {
+                if (string.IsNullOrEmpty(model.password))
+                    ModelState.AddModelError("model.password", "required");
+            }
         }
-
+        
         private void ValidatePassword(IPasswordModel model)
         {
             if (string.IsNullOrEmpty(model.password))
@@ -49,14 +52,17 @@ namespace MasterDataModule.API.Controllers.Settings
 
             if (model.password != model.passwordConfirmation)
             {
-                ModelState.AddModelError("model.password", "password-confirmation-match");
-                ModelState.AddModelError("model.passwordConfirmation", "password-match");
+                ModelState.AddModelError("model.password", "required");
+                ModelState.AddModelError("model.passwordConfirmation", "Passwort und Passwortwiederholung müssen übereinstimmen!");
             }
         }
 
         protected void ExtraModelToEntity(User entity, UserModel model, ActionTypes actionType)
         {
-            entity.Password = StringHelper.GetMD5Hash(model.password);
+            if (actionType == ActionTypes.Add)
+            {
+                entity.Password = StringHelper.GetMD5Hash(model.password);
+            }
         }
     }
 }

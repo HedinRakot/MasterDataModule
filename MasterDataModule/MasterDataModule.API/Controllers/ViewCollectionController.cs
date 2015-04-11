@@ -18,6 +18,7 @@ namespace MasterDataModule.API.Controllers
         public bool EditModeType { get; set; }
         public bool AssignationType { get; set; }
         public bool ExamType { get; set; }
+        public bool ExamConstraintType { get; set; }
     }
 
     public class IdNameModel<TId>
@@ -76,6 +77,13 @@ namespace MasterDataModule.API.Controllers
                 {
                     new { id = 1, name = "Theorie"},
                     new { id = 2, name = "Praxis"},
+                });
+
+            if (model.ExamConstraintType)
+                result.Add("ExamConstraintType", new[]
+                {
+                    new { id = 1, name = "Auftrag"},
+                    new { id = 2, name = "Position"},
                 });
 			
 			return Ok(result);

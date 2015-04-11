@@ -1,18 +1,21 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/Settings/MasterDataJobInfos',
-'l!t!Settings/FilterMasterDataJobInfo',
-'l!t!Settings/MasterDataJobInfoRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
+'l!t!Settings/FilterMasterDataJobInfo'
+], function (BaseView, Collection, FilterView) {
 	'use strict';
 
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'MasterDataJobInfo',
         editUrl: '#MasterDataJobInfos',
+		addNewModelInline: true,
+		showAddButton: true,
+		showEditButton: true,
+		showDeleteButton: true,
 
 	    editItemTitle: function () {
 	        return this.resources.edit

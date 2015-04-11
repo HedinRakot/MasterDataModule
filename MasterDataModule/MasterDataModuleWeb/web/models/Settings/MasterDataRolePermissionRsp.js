@@ -6,16 +6,16 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,masterDataRoleId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('masterDataRolePermissionRsp', 'masterDataRoleId'), 
+			                        editable: Application.canTableItemBeEdit('MasterDataRolePermissionRsp', 'masterDataRoleId'), 
 				                    validation: { required: true } }			
 			,masterDataPermissionId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('masterDataRolePermissionRsp', 'masterDataPermissionId'), 
+			                        editable: Application.canTableItemBeEdit('MasterDataRolePermissionRsp', 'masterDataPermissionId'), 
 				                    validation: { required: true } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('masterDataRolePermissionRsp', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('MasterDataRolePermissionRsp', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('masterDataRolePermissionRsp', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('MasterDataRolePermissionRsp', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

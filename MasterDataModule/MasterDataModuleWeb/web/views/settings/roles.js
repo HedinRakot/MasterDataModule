@@ -1,5 +1,5 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/Settings/Roles',
 'l!t!Settings/FilterRole',
 'l!t!Settings/RoleRelationships'
@@ -13,6 +13,10 @@ define([
         filterView: FilterView,
         tableName: 'Role',
         editUrl: '#Roles',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
 	        return this.resources.edit

@@ -3,10 +3,7 @@ using MasterDataModule.API.Validation;
 
 namespace MasterDataModule.API.Models.Settings
 {
-	public partial class UserModel : IPasswordModel
+	public partial class UserModel
 	{
-        [DataMember]
-        [Required]
-		public string passwordConfirmation { get; set; }
 	}
 }

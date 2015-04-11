@@ -1,5 +1,5 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/DriverLicenceMasterData/ExamClasses',
 'l!t!DriverLicenceMasterData/FilterExamClass',
 'l!t!DriverLicenceMasterData/ExamClassRelationships'
@@ -13,6 +13,10 @@ define([
         filterView: FilterView,
         tableName: 'ExamClass',
         editUrl: '#ExamClasses',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
 	        return this.resources.edit

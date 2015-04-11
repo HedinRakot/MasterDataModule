@@ -1,5 +1,5 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/Settings/SysTables',
 'l!t!Settings/FilterSysTable',
 'l!t!Settings/SysTableRelationships',
@@ -14,6 +14,10 @@ define([
         filterView: FilterView,
         tableName: 'SysTable',
         editUrl: '#SysTables',
+		addNewModelInline: true,
+		
+		showEditButton: true,
+		
 
 	    editItemTitle: function () {
 	        return this.resources.edit

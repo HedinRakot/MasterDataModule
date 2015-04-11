@@ -12,11 +12,15 @@
 
             require(['models/settings/user', 't!Settings/ChangePassword'], function (Model, View) {
                 var view = new View({ model: new Model({ id: dataItem.id }) });
-                //view.resources = self.resources;
+
+                self.listenTo(view, 'passwordChangedEvent', function (item) {
+                    self.grid.dataSource.read();
+                    self.grid.refresh();
+                });
 
                 self.addView(view);
                 self.$el.append(view.render().$el);
-            });
+            });            
         }
     };
 

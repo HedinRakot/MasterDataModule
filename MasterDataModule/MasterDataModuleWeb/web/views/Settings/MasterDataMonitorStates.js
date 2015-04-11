@@ -1,18 +1,21 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/Settings/MasterDataMonitorStates',
-'l!t!Settings/FilterMasterDataMonitorState',
-'l!t!Settings/MasterDataMonitorStateRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
+'l!t!Settings/FilterMasterDataMonitorState'
+], function (BaseView, Collection, FilterView) {
 	'use strict';
 
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'MasterDataMonitorState',
         editUrl: '#MasterDataMonitorStates',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
 	        return this.resources.edit

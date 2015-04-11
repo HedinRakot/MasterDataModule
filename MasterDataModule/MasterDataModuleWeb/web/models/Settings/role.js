@@ -6,13 +6,13 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('role', 'name'), 
+			                        editable: Application.canTableItemBeEdit('Role', 'name'), 
 				                    validation: { required: true, maxLength: 256 } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('role', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('Role', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('role', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('Role', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

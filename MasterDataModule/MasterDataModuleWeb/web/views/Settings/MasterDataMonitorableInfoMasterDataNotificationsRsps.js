@@ -1,18 +1,21 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/Settings/MasterDataMonitorableInfoMasterDataNotificationsRsps',
-'l!t!Settings/FilterMasterDataMonitorableInfoMasterDataNotificationsRsp',
-'l!t!Settings/MasterDataMonitorableInfoMasterDataNotificationsRspRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
+'l!t!Settings/FilterMasterDataMonitorableInfoMasterDataNotificationsRsp'
+], function (BaseView, Collection, FilterView) {
 	'use strict';
 
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'MasterDataMonitorableInfoMasterDataNotificationsRsp',
         editUrl: '#MasterDataMonitorableInfoMasterDataNotificationsRsps',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
 	        return this.resources.edit

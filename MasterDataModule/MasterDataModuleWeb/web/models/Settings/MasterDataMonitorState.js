@@ -6,10 +6,10 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,reconfigure: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('masterDataMonitorState', 'reconfigure'), 
+			                        editable: Application.canTableItemBeEdit('MasterDataMonitorState', 'reconfigure'), 
 				                    validation: { required: false } }			
 			,reconfigureCheckingTimeout: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('masterDataMonitorState', 'reconfigureCheckingTimeout'), 
+			                        editable: Application.canTableItemBeEdit('MasterDataMonitorState', 'reconfigureCheckingTimeout'), 
 				                    validation: { required: false } }			
 		},
 		defaults: function () {

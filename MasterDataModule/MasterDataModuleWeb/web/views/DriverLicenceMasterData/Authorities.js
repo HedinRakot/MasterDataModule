@@ -1,8 +1,7 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/DriverLicenceMasterData/Authorities',
-'l!t!DriverLicenceMasterData/FilterAuthority',
-'l!t!DriverLicenceMasterData/AuthorityRelationships'
+'l!t!DriverLicenceMasterData/FilterAuthority'
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -13,6 +12,10 @@ define([
         filterView: FilterView,
         tableName: 'Authority',
         editUrl: '#Authorities',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
 	        return this.resources.edit

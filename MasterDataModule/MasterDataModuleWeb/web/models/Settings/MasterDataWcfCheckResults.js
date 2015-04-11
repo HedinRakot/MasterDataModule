@@ -6,19 +6,19 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,checkStatus: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('masterDataWcfCheckResults', 'checkStatus'), 
+			                        editable: Application.canTableItemBeEdit('MasterDataWcfCheckResults', 'checkStatus'), 
 				                    validation: { required: false } }			
 			,checkDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('masterDataWcfCheckResults', 'checkDate'), 
+			                        editable: Application.canTableItemBeEdit('MasterDataWcfCheckResults', 'checkDate'), 
 				                    validation: { required: false, date: true } }			
 			,message: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('masterDataWcfCheckResults', 'message'), 
-				                    validation: { required: false, maxLength: 0 } }			
+			                        editable: Application.canTableItemBeEdit('MasterDataWcfCheckResults', 'message'), 
+				                    validation: { required: false } }			
 			,attempt: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('masterDataWcfCheckResults', 'attempt'), 
+			                        editable: Application.canTableItemBeEdit('MasterDataWcfCheckResults', 'attempt'), 
 				                    validation: { required: false } }			
 			,masterDataWcfInfoId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('masterDataWcfCheckResults', 'masterDataWcfInfoId'), 
+			                        editable: Application.canTableItemBeEdit('MasterDataWcfCheckResults', 'masterDataWcfInfoId'), 
 				                    validation: { required: false } }			
 		},
 		defaults: function () {

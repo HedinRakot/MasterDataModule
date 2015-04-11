@@ -1,5 +1,5 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/DriverLicenceMasterData/ExamConstraints',
 'l!t!DriverLicenceMasterData/FilterExamConstraint',
 'l!t!DriverLicenceMasterData/ExamConstraintRelationships'
@@ -13,6 +13,10 @@ define([
         filterView: FilterView,
         tableName: 'ExamConstraint',
         editUrl: '#ExamConstraints',
+		addNewModelInline: true,
+		showAddButton: true,
+		showEditButton: true,
+		showDeleteButton: true,
 
 	    editItemTitle: function () {
 	        return this.resources.edit
@@ -23,6 +27,7 @@ define([
 			return [
 				{ field: 'name', title: this.resources.name },
 				{ field: 'description', title: this.resources.description },
+				{ field: 'constraintType', title: this.resources.constraintType , collection: this.options.examConstraintType, defaultText: this.resources.pleaseSelect},
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];

@@ -1,8 +1,7 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/DriverLicenceMasterData/SchoolInfos',
-'l!t!DriverLicenceMasterData/FilterSchoolInfo',
-'l!t!DriverLicenceMasterData/SchoolInfoRelationships'
+'l!t!DriverLicenceMasterData/FilterSchoolInfo'
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -13,6 +12,10 @@ define([
         filterView: FilterView,
         tableName: 'SchoolInfo',
         editUrl: '#SchoolInfos',
+		addNewModelInline: true,
+		showAddButton: true,
+		showEditButton: true,
+		showDeleteButton: true,
 
 	    editItemTitle: function () {
 	        return this.resources.edit

@@ -1,5 +1,5 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/DriverLicenceMasterData/Communities',
 'l!t!DriverLicenceMasterData/FilterCommunity',
 'l!t!DriverLicenceMasterData/CommunityRelationships'
@@ -13,6 +13,10 @@ define([
         filterView: FilterView,
         tableName: 'Community',
         editUrl: '#Communities',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
 	        return this.resources.edit

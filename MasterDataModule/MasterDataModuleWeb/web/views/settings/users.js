@@ -1,20 +1,23 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/Settings/Users',
 'l!t!Settings/FilterUser',
-'l!t!Settings/UserRelationships',
 'Settings/Custom.User',
 'Settings/Custom.Events.User'
-], function (BaseView, Collection, FilterView, DetailView, CustomColumns, CustomEvents) {
+], function (BaseView, Collection, FilterView, CustomColumns, CustomEvents) {
 	'use strict';
 
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'User',
         editUrl: '#Users',
+		
+		
+		showEditButton: true,
+		showDeleteButton: true,
 
 	    editItemTitle: function () {
 	        return this.resources.edit

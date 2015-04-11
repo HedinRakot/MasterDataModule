@@ -1,8 +1,7 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/DriverLicenceMasterData/ExamRooms',
-'l!t!DriverLicenceMasterData/FilterExamRoom',
-'l!t!DriverLicenceMasterData/ExamRoomRelationships'
+'l!t!DriverLicenceMasterData/FilterExamRoom'
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -13,6 +12,10 @@ define([
         filterView: FilterView,
         tableName: 'ExamRoom',
         editUrl: '#ExamRooms',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
 	        return this.resources.edit

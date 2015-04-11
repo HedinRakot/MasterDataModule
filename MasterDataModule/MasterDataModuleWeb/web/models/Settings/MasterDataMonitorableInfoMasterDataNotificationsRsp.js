@@ -6,13 +6,13 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,monitorableInfoType: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('masterDataMonitorableInfoMasterDataNotificationsRsp', 'monitorableInfoType'), 
+			                        editable: Application.canTableItemBeEdit('MasterDataMonitorableInfoMasterDataNotificationsRsp', 'monitorableInfoType'), 
 				                    validation: { required: false } }			
 			,monitorableInfoId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('masterDataMonitorableInfoMasterDataNotificationsRsp', 'monitorableInfoId'), 
+			                        editable: Application.canTableItemBeEdit('MasterDataMonitorableInfoMasterDataNotificationsRsp', 'monitorableInfoId'), 
 				                    validation: { required: false } }			
 			,masterDataNotificationsId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('masterDataMonitorableInfoMasterDataNotificationsRsp', 'masterDataNotificationsId'), 
+			                        editable: Application.canTableItemBeEdit('MasterDataMonitorableInfoMasterDataNotificationsRsp', 'masterDataNotificationsId'), 
 				                    validation: { required: false } }			
 		},
 		defaults: function () {

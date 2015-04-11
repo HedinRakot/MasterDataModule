@@ -1,18 +1,21 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/Settings/ApplicationLogs',
-'l!t!Settings/FilterApplicationLogs',
-'l!t!Settings/ApplicationLogsRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
+'l!t!Settings/FilterApplicationLogs'
+], function (BaseView, Collection, FilterView) {
 	'use strict';
 
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'ApplicationLogs',
         editUrl: '#ApplicationLogs',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
 	        return this.resources.edit

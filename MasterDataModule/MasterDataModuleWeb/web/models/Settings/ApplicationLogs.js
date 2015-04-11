@@ -6,17 +6,17 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,logType: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('applicationLogs', 'logType'), 
+			                        editable: Application.canTableItemBeEdit('ApplicationLogs', 'logType'), 
 				                    validation: { required: true } }			
 			,logLevel: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('applicationLogs', 'logLevel'), 
+			                        editable: Application.canTableItemBeEdit('ApplicationLogs', 'logLevel'), 
 				                    validation: { required: true } }			
 			,date: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('applicationLogs', 'date'), 
+			                        editable: Application.canTableItemBeEdit('ApplicationLogs', 'date'), 
 				                    validation: { required: true, date: true } }			
 			,message: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('applicationLogs', 'message'), 
-				                    validation: { required: true, maxLength: 0 } }			
+			                        editable: Application.canTableItemBeEdit('ApplicationLogs', 'message'), 
+				                    validation: { required: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

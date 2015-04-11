@@ -14,17 +14,19 @@
 		
 		context.FileManager.StartNewFile(entityContent.CodeNamePlural + ".js");
 		//Model
-		var defines = String.Format("{0}\n{1}\n{2}\n{3}{4}{5}",
+		var defines = String.Format("{0}\n{1}\n{2}{3}{4}{5}",
 			"'base/base-object-grid-view',",
 			"'collections/" + context.CurrentRelatedWebPath + "/" + entityContent.CodeNamePlural + "',",
-			"'l!t!" + context.CurrentRelatedWebPath + "/Filter" + entityContent.CodeName + "',",
-			"'l!t!" + context.CurrentRelatedWebPath + "/" + entityContent.CodeName + "Relationships'",
+			"'l!t!" + context.CurrentRelatedWebPath + "/Filter" + entityContent.CodeName + "'",
+			!String.IsNullOrEmpty(entityContent.RelationShips) ?
+				",\n'l!t!" + context.CurrentRelatedWebPath + "/" + entityContent.CodeName + "Relationships'" : "",
 			entityContent.ShowExtraFields ? 
 				",\n'" + context.CurrentRelatedWebPath+ "/Custom." + entityContent.CodeName + "'" : "",
 			entityContent.CustomEvents ? 
 				",\n'" + context.CurrentRelatedWebPath+ "/Custom.Events." + entityContent.CodeName + "'" : "");
 
-		var defineMembers = String.Format("{0}{1}", 
+		var defineMembers = String.Format("{0}{1}{2}",
+				!String.IsNullOrEmpty(entityContent.RelationShips) ? ", DetailView" : "", 
 				entityContent.ShowExtraFields ? ", CustomColumns" : "",
 				entityContent.CustomEvents ? ", CustomEvents" : "");
 
@@ -32,17 +34,21 @@
 		var columnsCloseText = entityContent.ShowExtraFields ? "]);" : "];";
 #>
 define([
-	<#= defines #>
-], function (BaseView, Collection, FilterView, DetailView<#= defineMembers #>) {
+<#= defines #>
+], function (BaseView, Collection, FilterView<#= defineMembers #>) {
 	'use strict';
 
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        <#= !String.IsNullOrEmpty(entityContent.RelationShips) ? "detailView: DetailView," : "" #>
         filterView: FilterView,
         tableName: '<#=entityContent.CodeName#>',
         editUrl: '#<#=entityContent.CodeNamePlural#>',
+		<#= entityContent.AddNewItemInline ? "addNewModelInline: true," : "" #>
+		<#= entityContent.ShowAddButton ? "showAddButton: true," : "" #>
+		<#= entityContent.ShowEditButton ? "showEditButton: true," : "" #>
+		<#= entityContent.ShowDeleteButton ? "showDeleteButton: true," : "" #>
 
 	    editItemTitle: function () {
 	        return this.resources.edit

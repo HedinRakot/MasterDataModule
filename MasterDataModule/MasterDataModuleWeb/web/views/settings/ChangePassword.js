@@ -25,6 +25,7 @@
 					}, {
 						patch: true,
 						success: function () {
+						    self.trigger('passwordChangedEvent', self.model);
 							self.close();
 						},
 						error: function (model, response) {

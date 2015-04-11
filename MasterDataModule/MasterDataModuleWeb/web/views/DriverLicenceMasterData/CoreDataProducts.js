@@ -1,5 +1,5 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/DriverLicenceMasterData/CoreDataProducts',
 'l!t!DriverLicenceMasterData/FilterCoreDataProduct',
 'l!t!DriverLicenceMasterData/CoreDataProductRelationships',
@@ -14,6 +14,10 @@ define([
         filterView: FilterView,
         tableName: 'CoreDataProduct',
         editUrl: '#CoreDataProducts',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
 	        return this.resources.edit

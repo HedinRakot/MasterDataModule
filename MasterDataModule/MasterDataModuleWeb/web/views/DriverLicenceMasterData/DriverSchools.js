@@ -1,5 +1,5 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/DriverLicenceMasterData/DriverSchools',
 'l!t!DriverLicenceMasterData/FilterDriverSchool',
 'l!t!DriverLicenceMasterData/DriverSchoolRelationships'
@@ -13,6 +13,10 @@ define([
         filterView: FilterView,
         tableName: 'DriverSchool',
         editUrl: '#DriverSchools',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
 	        return this.resources.edit

@@ -1,8 +1,7 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/DriverLicenceMasterData/LegalBases',
-'l!t!DriverLicenceMasterData/FilterLegalBasis',
-'l!t!DriverLicenceMasterData/LegalBasisRelationships'
+'l!t!DriverLicenceMasterData/FilterLegalBasis'
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -13,6 +12,10 @@ define([
         filterView: FilterView,
         tableName: 'LegalBasis',
         editUrl: '#LegalBases',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
 	        return this.resources.edit

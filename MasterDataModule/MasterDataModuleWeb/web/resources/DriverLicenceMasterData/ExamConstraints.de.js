@@ -14,7 +14,7 @@ define(function () {
 
 		description: 'Beschreibung der FE-Auflage',	
 
-		constraintType: 'Auflagentyp („1“ = „Auflage für Auftrag“, „2“ = „Auflage für Position“)',	
+		constraintType: 'Auflagentyp',	
 
 		fromDate: 'Von Datum',	
 

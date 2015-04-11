@@ -25,9 +25,9 @@ define([
 		columns: function () {
 		   
 		   return [
+				{ field: 'driverSchoolIdParticipant', title: this.resources.driverSchoolIdParticipant },
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
-				{ field: 'driverSchoolIdLead', title: this.resources.driverSchoolIdLead },
 			];
 		},
 		

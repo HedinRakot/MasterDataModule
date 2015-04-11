@@ -4,21 +4,21 @@ define(function () {
 
 	var resources = {
 
-		add: 'DE: Wcf check result anlegen',
-	    edit: 'DE: Wcf check result editieren',
+		add: 'Web-Services Monitor anlegen',
+	    edit: 'Web-Services Monitor editieren',
 	    masterData: 'Einstellungen',
-	    pageTitle: 'DE: Wcf check result',
+	    pageTitle: 'Web-Services Monitor',
 		pleaseSelect: 'Bitte auswählen',
 
-		checkStatus: 'DE: Status',	
+		checkStatus: 'Status',	
 
-		checkDate: 'DE: Check date',	
+		checkDate: 'Datum',	
 
-		message: 'DE: Message',	
+		message: 'Nachricht',	
 
-		attempt: 'DE: Attempt',	
+		attempt: 'Zähler',	
 
-		masterDataWcfInfoId: 'DE: Wcf info',	
+		masterDataWcfInfoId: 'Web Service',	
 
 	};
 

@@ -33,5 +33,9 @@ namespace MasterDataModule.Generation
         public bool GenerateViewCollection { get; set; }
         public bool ShowExtraFields { get; set; }
         public bool CustomEvents { get; set; }
+        public bool AddNewItemInline { get; set; }
+        public bool ShowAddButton { get; set; }
+        public bool ShowEditButton { get; set; }
+        public bool ShowDeleteButton { get; set; }
     }
 }

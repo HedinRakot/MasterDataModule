@@ -6,13 +6,13 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('masterDataWcfInfo', 'name'), 
-				                    validation: { required: false, maxLength: 0 } }			
+			                        editable: Application.canTableItemBeEdit('MasterDataWcfInfo', 'name'), 
+				                    validation: { required: false } }			
 			,wsdlPath: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('masterDataWcfInfo', 'wsdlPath'), 
-				                    validation: { required: false, maxLength: 0 } }			
+			                        editable: Application.canTableItemBeEdit('MasterDataWcfInfo', 'wsdlPath'), 
+				                    validation: { required: false } }			
 			,timeoutChecking: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('masterDataWcfInfo', 'timeoutChecking'), 
+			                        editable: Application.canTableItemBeEdit('MasterDataWcfInfo', 'timeoutChecking'), 
 				                    validation: { required: false } }			
 		},
 		defaults: function () {

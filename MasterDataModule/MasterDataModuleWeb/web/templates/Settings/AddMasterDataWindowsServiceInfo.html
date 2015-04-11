@@ -1,0 +1,49 @@
+<% var title = typeof id !== 'undefined' ? '<label data-localized="edit"></label>' : '<label data-localized="add"></label>'; %>
+
+<span class="breadcrumbs"><a href="#Settings" data-localized="masterData"></a> / 
+	<a href="#MasterDataWindowsServiceInfos" data-localized="pageTitle"></a> / <%= title %></span>
+
+<form method="post" class="add-model">
+    <div class="inline-block" style="width: 520px;">
+		<div class="editor-label">
+			<label for="name" data-localized="name"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="name" name="name" />
+		</div>   
+		<div class="editor-label">
+			<label for="machineName" data-localized="machineName"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="machineName" name="machineName" />
+		</div>   
+		<div class="editor-label">
+			<label for="serviceName" data-localized="serviceName"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" class="k-textbox" style="width: 362px" id="serviceName" name="serviceName" />
+		</div>   
+		<div class="editor-label">
+			<label for="timeoutChecking" data-localized="timeoutChecking"></label>
+		</div>
+		<div class="editor-field">
+            <input type="text" data-role="numerictextbox" id="timeoutChecking" name="timeoutChecking" />
+		</div>   
+	</div>
+	<div class="inline-block">        
+    </div>      
+
+    <br />
+    <br />
+
+    <div class="relations-container">
+    </div>
+
+    <br />
+
+    <div>
+        <button class="k-primary k-button save" data-localized="save"></button>
+        <button class="k-button remove" data-localized="delete"></button>
+        <button class="k-button cancel" data-localized="cancel"></button>
+    </div>
+</form>

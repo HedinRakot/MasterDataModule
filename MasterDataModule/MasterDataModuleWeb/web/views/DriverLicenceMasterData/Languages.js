@@ -1,8 +1,7 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/DriverLicenceMasterData/Languages',
-'l!t!DriverLicenceMasterData/FilterLanguage',
-'l!t!DriverLicenceMasterData/LanguageRelationships'
+'l!t!DriverLicenceMasterData/FilterLanguage'
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -13,6 +12,10 @@ define([
         filterView: FilterView,
         tableName: 'Language',
         editUrl: '#Languages',
+		addNewModelInline: true,
+		showAddButton: true,
+		showEditButton: true,
+		showDeleteButton: true,
 
 	    editItemTitle: function () {
 	        return this.resources.edit

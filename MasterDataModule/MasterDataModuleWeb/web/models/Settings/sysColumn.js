@@ -6,16 +6,16 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,sysTableId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('sysColumn', 'sysTableId'), 
+			                        editable: Application.canTableItemBeEdit('SysColumn', 'sysTableId'), 
 				                    validation: { required: false } }			
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('sysColumn', 'name'), 
+			                        editable: Application.canTableItemBeEdit('SysColumn', 'name'), 
 				                    validation: { required: true, maxLength: 128 } }			
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('sysColumn', 'description'), 
+			                        editable: Application.canTableItemBeEdit('SysColumn', 'description'), 
 				                    validation: { required: false, maxLength: 256 } }			
 			,readOnly: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('sysColumn', 'readOnly'), 
+			                        editable: Application.canTableItemBeEdit('SysColumn', 'readOnly'), 
 				                    validation: { required: false } }			
 		},
 		defaults: function () {

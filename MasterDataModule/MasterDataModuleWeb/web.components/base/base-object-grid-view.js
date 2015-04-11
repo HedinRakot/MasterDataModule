@@ -38,6 +38,7 @@
 		editItemTitle: null,
 	    gridSelector: '.grid',
 	    filterSelector: '.filter',
+	    addNewModelInline: false,
 
 	    initDetailView: initDetailView,
 
@@ -49,8 +50,10 @@
 		        var result = [
                     {
                         template: function () {
-                            return '<a class="k-button k-button-icontext" href="' + self.editUrl +
-                                '/create" data-localized="' + self.createNewItemTitle + '"></a>';
+                            return self.addNewModelInline ? 
+                                '<a class="k-button k-button-icontext k-grid-create-inline" href="#" data-localized="add"></a>' :
+                                '<a class="k-button k-button-icontext" href="' + self.editUrl +
+                                    '/create" data-localized="' + self.createNewItemTitle + '"></a>';
                         }
                     }
 		        ];
@@ -60,7 +63,7 @@
 		},
 
 		events: {
-		    'dblclick .k-grid tbody tr.k-master-row td:not(.k-hierarchy-cell)': function (e) {
+		    'dblclick .k-grid tbody tr:not(k-detail-row) td:not(.k-hierarchy-cell,.k-detail-cell)': function (e) {
 		        
 		        var self = this,
 		            dataItem = self.grid.dataItem(e.currentTarget.parentElement);
@@ -83,6 +86,14 @@
 
 		    self.showView(new self.filterView({ grid: self.grid }),
                 self.filterSelector);
+
+		    if (self.addNewModelInline) {
+		        if (self.showDeleteButton)
+		            self.showDeleteButton = Application.canTableItemBeDeleted(self.tableName);
+
+		        if (self.showEditButton)
+		            self.showEditButton = Application.canTableItemBeEdit(self.tableName);
+		    }
 
 		    return self;
 		},

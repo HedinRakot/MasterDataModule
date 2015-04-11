@@ -6,8 +6,8 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,email: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('masterDataSubscribers', 'email'), 
-				                    validation: { required: false, maxLength: 0 } }			
+			                        editable: Application.canTableItemBeEdit('MasterDataSubscribers', 'email'), 
+				                    validation: { required: false } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

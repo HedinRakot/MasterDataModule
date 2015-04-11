@@ -15,7 +15,7 @@ define(function () {
 
 		description: 'Description',	
 
-		constraintType: 'Type of the Contraint(1 - General, 2 - Class level)',	
+		constraintType: 'Type of the Contraint',	
 
 		fromDate: 'From date',	
 

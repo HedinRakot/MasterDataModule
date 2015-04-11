@@ -127,7 +127,8 @@ define(function () {
                 break;
             case "string":
             {
-                if (property.Property.Length.HasValue && !property.Property.IsMaxLength)
+                if (property.Property.Length.HasValue && !property.Property.IsMaxLength &&
+					property.Property.Length.Value > 0)
                 {
                     standardValidation = String.Format("maxLength: {0}", property.Property.Length);
                 }

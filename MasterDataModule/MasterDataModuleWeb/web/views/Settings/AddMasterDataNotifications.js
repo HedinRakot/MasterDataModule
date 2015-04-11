@@ -19,6 +19,7 @@ define([
 			'#alertCheckStatus': 'alertCheckStatus',
 			'#alertAttemptCount': 'alertAttemptCount',
 			'#message': 'message',
+			'#subject': 'subject',
 			};
 
             return result;
@@ -34,6 +35,7 @@ define([
 			this.disableInput(this, 'alertCheckStatus', 'numeric');
 			this.disableInput(this, 'alertAttemptCount', 'numeric');
 			this.disableInput(this, 'message');
+			this.disableInput(this, 'subject');
 
             return this;
         }

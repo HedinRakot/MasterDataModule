@@ -1,5 +1,5 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/DriverLicenceMasterData/ExamStations',
 'l!t!DriverLicenceMasterData/FilterExamStation',
 'l!t!DriverLicenceMasterData/ExamStationRelationships'
@@ -13,6 +13,10 @@ define([
         filterView: FilterView,
         tableName: 'ExamStation',
         editUrl: '#ExamStations',
+		addNewModelInline: true,
+		showAddButton: true,
+		showEditButton: true,
+		showDeleteButton: true,
 
 	    editItemTitle: function () {
 	        return this.resources.edit

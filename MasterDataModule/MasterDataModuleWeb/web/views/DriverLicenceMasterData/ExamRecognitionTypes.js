@@ -1,5 +1,5 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/DriverLicenceMasterData/ExamRecognitionTypes',
 'l!t!DriverLicenceMasterData/FilterExamRecognitionType',
 'l!t!DriverLicenceMasterData/ExamRecognitionTypeRelationships'
@@ -13,6 +13,10 @@ define([
         filterView: FilterView,
         tableName: 'ExamRecognitionType',
         editUrl: '#ExamRecognitionTypes',
+		addNewModelInline: true,
+		showAddButton: true,
+		showEditButton: true,
+		showDeleteButton: true,
 
 	    editItemTitle: function () {
 	        return this.resources.edit

@@ -6,10 +6,10 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,masterDataNotificationsId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('masterDataNotificationsMasterDataSubscribersRsp', 'masterDataNotificationsId'), 
+			                        editable: Application.canTableItemBeEdit('MasterDataNotificationsMasterDataSubscribersRsp', 'masterDataNotificationsId'), 
 				                    validation: { required: false } }			
 			,masterDataSubscribersId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('masterDataNotificationsMasterDataSubscribersRsp', 'masterDataSubscribersId'), 
+			                        editable: Application.canTableItemBeEdit('MasterDataNotificationsMasterDataSubscribersRsp', 'masterDataSubscribersId'), 
 				                    validation: { required: false } }			
 		},
 		defaults: function () {

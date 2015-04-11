@@ -1,18 +1,21 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/Settings/MasterDataWcfCheckResults',
-'l!t!Settings/FilterMasterDataWcfCheckResults',
-'l!t!Settings/MasterDataWcfCheckResultsRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
+'l!t!Settings/FilterMasterDataWcfCheckResults'
+], function (BaseView, Collection, FilterView) {
 	'use strict';
 
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'MasterDataWcfCheckResults',
         editUrl: '#MasterDataWcfCheckResults',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
 	        return this.resources.edit

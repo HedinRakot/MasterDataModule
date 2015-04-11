@@ -1,8 +1,7 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/DriverLicenceMasterData/ArgeVersions',
-'l!t!DriverLicenceMasterData/FilterArgeVersion',
-'l!t!DriverLicenceMasterData/ArgeVersionRelationships'
+'l!t!DriverLicenceMasterData/FilterArgeVersion'
 ], function (BaseView, Collection, FilterView, DetailView) {
 	'use strict';
 
@@ -13,6 +12,10 @@ define([
         filterView: FilterView,
         tableName: 'ArgeVersion',
         editUrl: '#ArgeVersions',
+		addNewModelInline: true,
+		showAddButton: true,
+		showEditButton: true,
+		showDeleteButton: true,
 
 	    editItemTitle: function () {
 	        return this.resources.edit
@@ -23,7 +26,6 @@ define([
 			return [
 				{ field: 'programmName', title: this.resources.programmName },
 				{ field: 'versionSystem', title: this.resources.versionSystem },
-				{ field: 'expirationDate', title: this.resources.expirationDate , format: '{0:d}'},
 				{ field: 'fromDate', title: this.resources.fromDate , format: '{0:d}'},
 				{ field: 'toDate', title: this.resources.toDate , format: '{0:d}'},
 			];
