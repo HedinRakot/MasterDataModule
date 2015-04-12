@@ -10,7 +10,7 @@ define(function () {
 				                    validation: { required: false } }			
 			,reconfigureCheckingTimeout: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('MasterDataMonitorState', 'reconfigureCheckingTimeout'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

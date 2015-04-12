@@ -7,13 +7,13 @@ define(function () {
 			id: { type: "number", editable: false }
 			,monitorableInfoType: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('MasterDataMonitorableInfoMasterDataNotificationsRsp', 'monitorableInfoType'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 			,monitorableInfoId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('MasterDataMonitorableInfoMasterDataNotificationsRsp', 'monitorableInfoId'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 			,masterDataNotificationsId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('MasterDataMonitorableInfoMasterDataNotificationsRsp', 'masterDataNotificationsId'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

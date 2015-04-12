@@ -2,11 +2,12 @@
     'use strict';
 
     var resources = {
-        changePassword: 'Passwort ändern',
-        change: 'ändern',
-        cancel: 'Abbruch',
-        password: 'Passwort',
-        passwordConfirmation: 'Passwortwiederholung',
+                
+        changePassword: 'change password',
+        change: 'change',
+        cancel: 'cancel',
+        password: 'Password',
+        passwordConfirmation: 'password confirmation',
         'login-unique': 'Login muss eindeutig sein',
         'password-confirmation-match': 'Passwort und Wiederholung müssen gleich sein',
         'password-match': 'Passwort und Wiederholung müssen gleich sein',

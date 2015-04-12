@@ -7,16 +7,16 @@ define(function () {
 			id: { type: "number", editable: false }
 			,name: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('MasterDataWindowsServiceInfo', 'name'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 			,machineName: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('MasterDataWindowsServiceInfo', 'machineName'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 			,serviceName: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('MasterDataWindowsServiceInfo', 'serviceName'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 			,timeoutChecking: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('MasterDataWindowsServiceInfo', 'timeoutChecking'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

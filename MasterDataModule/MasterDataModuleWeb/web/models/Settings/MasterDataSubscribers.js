@@ -7,7 +7,7 @@ define(function () {
 			id: { type: "number", editable: false }
 			,email: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('MasterDataSubscribers', 'email'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

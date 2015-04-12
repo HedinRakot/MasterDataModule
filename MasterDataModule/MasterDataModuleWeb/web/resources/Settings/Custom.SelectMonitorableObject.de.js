@@ -2,6 +2,7 @@
     'use strict';
 
     var resources = {
+                        
         changePassword: 'Passwort ändern',
         change: 'ändern',
         cancel: 'Abbruch',

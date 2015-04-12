@@ -2,8 +2,9 @@ define([
 'base/base-object-grid-view',
 'collections/Settings/MasterDataMonitorableInfoMasterDataNotificationsRsps',
 'l!t!Settings/FilterMasterDataMonitorableInfoMasterDataNotificationsRsp',
-'Settings/Custom.MasterDataMonitorableInfoMasterDataNotificationsRsp'
-], function (BaseView, Collection, FilterView, CustomColumns) {
+'Settings/Custom.MasterDataMonitorableInfoMasterDataNotificationsRsp',
+'Settings/Custom.Events.MasterDataMonitorableInfoMasterDataNotificationsRsp'
+], function (BaseView, Collection, FilterView, CustomColumns, CustomEvents) {
 	'use strict';
 
 	var view = BaseView.extend({
@@ -26,12 +27,11 @@ define([
 			
 			return $.merge( CustomColumns(),
 [
-				{ field: 'monitorableInfoType', title: this.resources.monitorableInfoType , collection: this.options.checkModuleType, defaultText: this.resources.pleaseSelect},
-				{ field: 'monitorableInfoId', title: this.resources.monitorableInfoId },
 				{ field: 'masterDataNotificationsId', title: this.resources.masterDataNotificationsId , collection: this.options.masterDataNotifications, defaultText: this.resources.pleaseSelect},
 			]);
 		}
 
+		,events: CustomEvents
 	});
 
 	return view;

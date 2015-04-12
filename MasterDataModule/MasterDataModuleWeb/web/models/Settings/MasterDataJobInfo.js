@@ -7,19 +7,19 @@ define(function () {
 			id: { type: "number", editable: false }
 			,connectionString: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('MasterDataJobInfo', 'connectionString'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 			,tableName: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('MasterDataJobInfo', 'tableName'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 			,timeoutChecking: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('MasterDataJobInfo', 'timeoutChecking'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 			,name: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('MasterDataJobInfo', 'name'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 			,jobName: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('MasterDataJobInfo', 'jobName'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

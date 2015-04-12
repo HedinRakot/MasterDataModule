@@ -1,13 +1,25 @@
 ﻿define([
-	'lr!resources/Settings/Custom.User',
+	'lr!resources/Settings/Custom.MasterDataMonitorableInfoMasterDataNotificationsRsp',
 ], function (Resources) {
     'use strict';
 
     var extraColumns = function () {
-        return [
+        return [		
             {
-                attributes: { 'class': 'change-password' },
-                command: { name: 'change-password', text: Resources.changePassword }
+                attributes: { 'class': 'select-monitorable-object' },
+                command: { name: 'select-monitorable-object', text: Resources.selectMonitorableObject }
+            },
+            {
+                title: Resources.monitorableInfoType,
+                template: function (dataItem) {
+                    return dataItem.monitorableInfoTypeText;
+                }
+            },
+            {
+                title: Resources.monitorableInfoObject,
+                template: function (dataItem) {
+                    return dataItem.monitorableInfoObject;
+                }
             }
         ];
     };

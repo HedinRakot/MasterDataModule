@@ -13,10 +13,7 @@ define(function () {
 				                    validation: { required: false, maxLength: 256 } }			
 			,editMode: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('SysTable', 'editMode'), 
-				                    validation: { required: false } }		
-            
-            ,tableDescription: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('SysTable', 'tableDescription') }			
+				                    validation: { required: false } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

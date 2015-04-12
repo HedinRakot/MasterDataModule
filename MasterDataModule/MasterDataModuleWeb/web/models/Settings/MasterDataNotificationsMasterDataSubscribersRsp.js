@@ -7,10 +7,10 @@ define(function () {
 			id: { type: "number", editable: false }
 			,masterDataNotificationsId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('MasterDataNotificationsMasterDataSubscribersRsp', 'masterDataNotificationsId'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 			,masterDataSubscribersId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('MasterDataNotificationsMasterDataSubscribersRsp', 'masterDataSubscribersId'), 
-				                    validation: { required: false } }			
+				                    validation: { required: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

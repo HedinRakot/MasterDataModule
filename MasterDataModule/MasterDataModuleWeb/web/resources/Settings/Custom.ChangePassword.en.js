@@ -2,7 +2,6 @@
     'use strict';
 
     var resources = {
-                
         changePassword: 'change password',
         change: 'change',
         cancel: 'cancel',

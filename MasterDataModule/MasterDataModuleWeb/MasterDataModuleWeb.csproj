@@ -3620,11 +3620,15 @@
     <Content Include="web\resources\Settings\ApplicationLogsRelationships.en.js">
       <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\Settings\Custom.SelectMonitorableObject.de.js" />
     <Content Include="web\resources\Settings\Custom.ChangePassword.de.js" />
+    <Content Include="web\resources\Settings\Custom.SelectMonitorableObject.en.js" />
     <Content Include="web\resources\Settings\Custom.SysColumns.de.js" />
     <Content Include="web\resources\Settings\Custom.SysColumns.en.js" />
+    <Content Include="web\resources\Settings\Custom.MasterDataMonitorableInfoMasterDataNotificationsRsp.de.js" />
     <Content Include="web\resources\Settings\Custom.User.de.js" />
     <Content Include="web\resources\Settings\Custom.ChangePassword.en.js" />
+    <Content Include="web\resources\Settings\Custom.MasterDataMonitorableInfoMasterDataNotificationsRsp.en.js" />
     <Content Include="web\resources\Settings\Custom.User.en.js" />
     <Content Include="web\resources\Settings\Custom.SysTables.de.js" />
     <Content Include="web\resources\Settings\Custom.SysTables.en.js" />
@@ -5580,6 +5584,7 @@
     <Content Include="web\templates\Settings\ApplicationLogsRelationships.html">
       <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\Settings\SelectMonitorableObject.html" />
     <Content Include="web\templates\Settings\ChangePassword.html" />
     <Content Include="web\templates\Settings\FilterApplicationLogs.html">
       <DependentUpon>web.masterdata.templates.tt</DependentUpon>
@@ -7079,8 +7084,10 @@
     <Content Include="web\views\Settings\ApplicationLogsRelationships.js">
       <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\Settings\SelectMonitorableObject.js" />
     <Content Include="web\views\Settings\ChangePassword.js" />
     <Content Include="web\views\Settings\Custom.Events.User.js" />
+    <Content Include="web\views\Settings\Custom.Events.MasterDataMonitorableInfoMasterDataNotificationsRsp.js" />
     <Content Include="web\views\Settings\Custom.SysColumn.js" />
     <Content Include="web\views\Settings\Custom.MasterDataMonitorableInfoMasterDataNotificationsRsp.js" />
     <Content Include="web\views\Settings\Custom.User.js" />

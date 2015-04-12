@@ -27,6 +27,8 @@ namespace MasterDataModule.API.Controllers.Settings
             model.masterDataNotificationsId = entity.MasterDataNotificationsId;
             model.createDate = ((ISystemFields)entity).CreateDate;
             model.changeDate = ((ISystemFields)entity).ChangeDate;
+
+            ExtraEntityToModel(entity, model);
         }
         protected override void ModelToEntity(MasterDataMonitorableInfoMasterDataNotificationsRspModel model, MasterDataMonitorableInfoMasterDataNotificationsRsp entity, ActionTypes actionType)
         {
