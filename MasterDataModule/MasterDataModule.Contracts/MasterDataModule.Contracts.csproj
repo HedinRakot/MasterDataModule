@@ -81,6 +81,7 @@
     <Compile Include="Entities\Configuration\ApplicationLogs.cs">
       <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Configuration\Custom.MasterDataNotification.cs" />
     <Compile Include="Entities\Configuration\MasterDataJobCheckResults.cs">
       <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
     </Compile>

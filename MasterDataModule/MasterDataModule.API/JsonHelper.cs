@@ -51,10 +51,15 @@ namespace MasterDataModule.API
         {
             var mappings = new Dictionary<string, TableMapping>();
 
-            //TODO UNCOMMENT!!!!
             DrlTableMappings(mappings);
             AsProCommonTableMappings(mappings);
             AsProTPTableMappings(mappings);
+            MasterDataConfigurationTableMappings(mappings);
+
+            if (mappings.ContainsKey("SYS_TABLES"))
+            {
+                mappings["SYS_TABLES"].Add("TABLE_DESCRIPTION", "tableDescription");
+            }
 
             return mappings;
         }

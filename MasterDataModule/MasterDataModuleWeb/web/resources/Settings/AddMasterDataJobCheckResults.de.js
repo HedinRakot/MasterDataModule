@@ -4,19 +4,19 @@ define(function () {
 
 	var resources = {
 
-		add: 'DE: Job check result anlegen',
-	    edit: 'DE: Job check result editieren',
+		add: 'Hintergrundprozess Monitor anlegen',
+	    edit: 'Hintergrundprozess Monitor editieren',
 	    masterData: 'Einstellungen',
-	    pageTitle: 'DE: Job check result',
+	    pageTitle: 'Hintergrundprozess Monitor',
 		pleaseSelect: 'Bitte auswählen',
 
-		lastRunTime: 'DE: Last run time',	
+		lastRunTime: 'Letztes Prüfungsdatum',	
 
-		checkDate: 'DE: Check date',	
+		checkDate: 'Prüfungsdatum',	
 
-		checkStatus: 'DE: Status',	
+		checkStatus: 'Status',	
 
-		masterDataJobInfoId: 'DE: Job info',	
+		masterDataJobInfoId: 'Hintergrundprozess',	
 
 	};
 

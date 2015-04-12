@@ -4,7 +4,6 @@ define(function () {
 	var resources = {
 	     title: 'Relationships',
 		 dataLoading: 'Data is loading. Please wait...',
-	    masterDataNotificationsMasterDataSubscribersRsp: 'Recipient',
 	};
 
 	return resources;

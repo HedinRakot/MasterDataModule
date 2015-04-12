@@ -4,15 +4,15 @@ define(function () {
 
 	var resources = {
 
-		add: 'DE: Notification to subscriber anlegen',
-	    edit: 'DE: Notification to subscriber editieren',
+		add: 'Überwachungsnachrichten Empfänger anlegen',
+	    edit: 'Überwachungsnachrichten Empfänger editieren',
 	    masterData: 'Einstellungen',
-	    pageTitle: 'DE: Notification to subscriber',
+	    pageTitle: 'Überwachungsnachrichten Empfänger',
 		pleaseSelect: 'Bitte auswählen',
 
-		masterDataNotificationsId: 'DE: Notification',	
+		masterDataNotificationsId: 'Überwachungsnachricht',	
 
-		masterDataSubscribersId: 'DE: Subscriber',	
+		masterDataSubscribersId: 'Empfänger',	
 
 	};
 

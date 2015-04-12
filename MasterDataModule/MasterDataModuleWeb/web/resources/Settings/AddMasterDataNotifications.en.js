@@ -20,6 +20,8 @@ define(function () {
 
 		message: 'Message',	
 
+		subject: 'Subject',	
+
 	};
 
 	return resources;

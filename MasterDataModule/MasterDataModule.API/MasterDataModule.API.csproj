@@ -500,6 +500,9 @@
     <Compile Include="Controllers\Settings\ApplicationLogsController.cs">
       <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\Settings\CollectionTypesModel.cs">
+      <DependentUpon>MasterDataConfiguration.CollectionTypes.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Settings\Custom.SysColumnsController.cs" />
     <Compile Include="Controllers\Settings\Custom.SysTablesController.cs" />
     <Compile Include="Controllers\Settings\Custom.UserController.cs" />
@@ -556,6 +559,11 @@
     </Compile>
     <Compile Include="Controllers\ViewCollectionFactoryBase.cs" />
     <Compile Include="JsonHelper.Classes.cs" />
+    <Compile Include="JsonHelper.TableMappings.MasterDataConfiguration.cs">
+      <DependentUpon>JsonHelper.TableMappings.MasterDataConfiguration.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="LogFileProcessor\AbstractFileProcessor.cs" />
     <Compile Include="LogFileProcessor\LogFileProcessor.cs" />
     <Compile Include="Models\AsPro\Common\Custom.InsCoreDataProductModel.cs" />
@@ -1007,6 +1015,10 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TP.CollectionTypes.txt</LastGenOutput>
     </None>
+    <None Include="Controllers\Settings\MasterDataConfiguration.CollectionTypes.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MasterDataConfiguration.CollectionTypes.txt</LastGenOutput>
+    </None>
     <None Include="Controllers\Settings\MasterDataConfiguration.Controllers.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MasterDataConfiguration.Controllers.txt</LastGenOutput>
@@ -1014,6 +1026,10 @@
     <None Include="Controllers\Settings\MasterDataConfiguration.ViewCollectionFactory.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MasterDataConfiguration.ViewCollectionFactory.txt</LastGenOutput>
+    </None>
+    <None Include="JsonHelper.TableMappings.MasterDataConfiguration.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>JsonHelper.TableMappings.MasterDataConfiguration.cs</LastGenOutput>
     </None>
     <None Include="Models\AsPro\Common\Common.Models.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -1090,6 +1106,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
+    </Content>
+    <Content Include="Controllers\Settings\MasterDataConfiguration.CollectionTypes.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasterDataConfiguration.CollectionTypes.tt</DependentUpon>
     </Content>
     <Content Include="Controllers\Settings\MasterDataConfiguration.Controllers.txt">
       <AutoGen>True</AutoGen>

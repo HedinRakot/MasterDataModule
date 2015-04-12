@@ -13,10 +13,10 @@ define([
         filterView: FilterView,
         tableName: 'Role',
         editUrl: '#Roles',
-		
-		
-		
-		
+		addNewModelInline: true,
+		showAddButton: true,
+		showEditButton: true,
+		showDeleteButton: true,
 
 	    editItemTitle: function () {
 	        return this.resources.edit

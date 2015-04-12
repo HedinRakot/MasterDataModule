@@ -9,8 +9,7 @@ define([
         tabs: function () {
             
             var result = [
-				{ view: 'l!t!Settings/MasterDataNotificationsMasterDataSubscribersRsps', selector: '.masterDataNotificationsMasterDataSubscribersRsp'},
-                
+				                
             ];
             
             return result;

@@ -68,7 +68,10 @@
 		        var self = this,
 		            dataItem = self.grid.dataItem(e.currentTarget.parentElement);
 
-		        location.href = self.editUrl + '/' + dataItem.id;
+		        if (dataItem != undefined && dataItem.id != undefined &&
+                    dataItem.id != 0) {
+		            location.href = self.editUrl + '/' + dataItem.id;
+		        }
 			}
 		},
 

@@ -4,21 +4,21 @@ define(function () {
 
 	var resources = {
 
-		add: 'Web-Services Monitor anlegen',
-	    edit: 'Web-Services Monitor editieren',
+		add: 'Windows Services Monitor anlegen',
+	    edit: 'Windows Services Monitor editieren',
 	    masterData: 'Einstellungen',
-	    pageTitle: 'Web-Services Monitor',
+	    pageTitle: 'Windows Services Monitor',
 		pleaseSelect: 'Bitte auswählen',
 
 		checkStatus: 'Status',	
 
-		checkDate: 'Datum',	
+		checkDate: 'Prüfungsdatum',	
 
 		message: 'Nachricht',	
 
 		attempt: 'Zähler',	
 
-		masterDataWcfInfoId: 'Web Service',	
+		masterDataWindowsServiceInfoId: 'Windows-Service',	
 
 	};
 

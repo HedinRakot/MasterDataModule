@@ -1,9 +1,11 @@
 using MasterDataModule.Contracts;
 using System;
+using System.Collections.Generic;
 
 namespace MasterDataModule.Contracts.Entities.Configuration
 {
     public partial class MasterDataNotifications: IHasId<int>
+        ,IHasTitle
         ,IRemovable
         ,ISystemFields
     {
@@ -42,6 +44,10 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             /// </summary>
             public static readonly string Message = "MESSAGE";
             /// <summary>
+            /// Column name 'SUBJECT' for property <see cref="MasterDataNotifications.Subject"/>
+            /// </summary>
+            public static readonly string Subject = "SUBJECT";
+            /// <summary>
             /// Column name 'CREATE_DATE' for property <see cref="MasterDataNotifications.CreateDate"/>
             /// </summary>
             public static readonly string CreateDate = "CREATE_DATE";
@@ -53,10 +59,6 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             /// Column name 'DELETE_DATE' for property <see cref="MasterDataNotifications.DeleteDate"/>
             /// </summary>
             public static readonly string DeleteDate = "DELETE_DATE";
-            /// <summary>
-            /// Column name 'SUBJECT' for property <see cref="MasterDataNotifications.Subject"/>
-            /// </summary>
-            public static readonly string Subject = "SUBJECT";
           
         }
         #endregion
@@ -66,10 +68,16 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int AlertCheckStatus{ get; set; }
         public int AlertAttemptCount{ get; set; }
         public string Message{ get; set; }
+        public string Subject{ get; set; }
         public DateTime CreateDate{ get; set; }
         public DateTime ChangeDate{ get; set; }
         public DateTime? DeleteDate{ get; set; }
-        public string Subject{ get; set; }
+        public virtual ICollection<MasterDataMonitorableInfoMasterDataNotificationsRsp> MasterDataMonitorableInfoMasterDataNotificationsRsps{ get; set; }
+        public virtual ICollection<MasterDataNotificationsMasterDataSubscribersRsp> MasterDataNotificationsMasterDataSubscribersRsps{ get; set; }
+        string IHasTitle.EntityTitle
+        {
+            get { return Name; }
+        }
         DateTime ISystemFields.CreateDate
         {
             get { return CreateDate; }
@@ -93,10 +101,10 @@ namespace MasterDataModule.Contracts.Entities.Configuration
                        AlertCheckStatus = AlertCheckStatus,
                        AlertAttemptCount = AlertAttemptCount,
                        Message = Message,
+                       Subject = Subject,
                        CreateDate = CreateDate,
                        ChangeDate = ChangeDate,
                        DeleteDate = DeleteDate,
-                       Subject = Subject,
         	           };
         }
     }

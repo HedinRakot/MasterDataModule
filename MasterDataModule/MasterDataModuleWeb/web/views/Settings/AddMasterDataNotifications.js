@@ -14,9 +14,15 @@ define([
 
             var self = this;
             var result = {
-			'#notificationType': 'notificationType',
+			'#notificationType': { observe: 'notificationType',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.notificationType
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#isAlertOn': 'isAlertOn',
-			'#alertCheckStatus': 'alertCheckStatus',
+			'#alertCheckStatus': { observe: 'alertCheckStatus',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.alertCheckStatus
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#alertAttemptCount': 'alertAttemptCount',
 			'#message': 'message',
 			'#subject': 'subject',
@@ -30,9 +36,9 @@ define([
             view.__super__.render.apply(this, arguments);
 
 			//TODO foreach model field
-			this.disableInput(this, 'notificationType', 'numeric');
+			this.disableInput(this, 'notificationType', 'select');
 			this.disableInput(this, 'isAlertOn');
-			this.disableInput(this, 'alertCheckStatus', 'numeric');
+			this.disableInput(this, 'alertCheckStatus', 'select');
 			this.disableInput(this, 'alertAttemptCount', 'numeric');
 			this.disableInput(this, 'message');
 			this.disableInput(this, 'subject');

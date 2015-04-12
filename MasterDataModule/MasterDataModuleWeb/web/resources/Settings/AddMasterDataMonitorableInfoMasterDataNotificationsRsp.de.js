@@ -4,17 +4,17 @@ define(function () {
 
 	var resources = {
 
-		add: 'DE: Monitorable object to notification anlegen',
-	    edit: 'DE: Monitorable object to notification editieren',
+		add: 'Überwachungsnachrichten Einstellungen anlegen',
+	    edit: 'Überwachungsnachrichten Einstellungen editieren',
 	    masterData: 'Einstellungen',
-	    pageTitle: 'DE: Monitorable object to notification',
+	    pageTitle: 'Überwachungsnachrichten Einstellungen',
 		pleaseSelect: 'Bitte auswählen',
 
-		monitorableInfoType: 'DE: Monitorable object type',	
+		monitorableInfoType: 'Überwachungsobjekt Typ',	
 
-		monitorableInfoId: 'DE: Monitorable object id',	
+		monitorableInfoId: 'Überwachungsobjekt',	
 
-		masterDataNotificationsId: 'DE: Notification',	
+		masterDataNotificationsId: 'Überwachungsnachricht',	
 
 	};
 

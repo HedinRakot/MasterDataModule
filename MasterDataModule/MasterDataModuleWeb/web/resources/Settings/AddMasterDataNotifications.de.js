@@ -4,21 +4,23 @@ define(function () {
 
 	var resources = {
 
-		add: 'DE: Notifications anlegen',
-	    edit: 'DE: Notifications editieren',
+		add: 'Überwachungsnachrichten anlegen',
+	    edit: 'Überwachungsnachrichten editieren',
 	    masterData: 'Einstellungen',
-	    pageTitle: 'DE: Notifications',
+	    pageTitle: 'Überwachungsnachrichten',
 		pleaseSelect: 'Bitte auswählen',
 
-		notificationType: 'DE: Notification type',	
+		notificationType: 'Überwachungsnachricht Typ',	
 
-		isAlertOn: 'DE: Is alert on',	
+		isAlertOn: 'Aktiv',	
 
-		alertCheckStatus: 'DE: Check status for alert',	
+		alertCheckStatus: 'Status',	
 
-		alertAttemptCount: 'DE: Attempt count for alert',	
+		alertAttemptCount: 'Versuchanzahl',	
 
-		message: 'DE: Message',	
+		message: 'Nachricht',	
+
+		subject: 'Thema',	
 
 	};
 

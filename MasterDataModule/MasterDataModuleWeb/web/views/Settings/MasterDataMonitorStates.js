@@ -12,9 +12,9 @@ define([
         filterView: FilterView,
         tableName: 'MasterDataMonitorState',
         editUrl: '#MasterDataMonitorStates',
+		addNewModelInline: true,
 		
-		
-		
+		showEditButton: true,
 		
 
 	    editItemTitle: function () {

@@ -12,9 +12,9 @@ define([
         filterView: FilterView,
         tableName: 'Permission',
         editUrl: '#Permissions',
+		addNewModelInline: true,
 		
-		
-		
+		showEditButton: true,
 		
 
 	    editItemTitle: function () {

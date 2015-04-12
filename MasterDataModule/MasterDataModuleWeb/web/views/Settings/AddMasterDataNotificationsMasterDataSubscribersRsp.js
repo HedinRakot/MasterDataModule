@@ -15,7 +15,10 @@ define([
             var self = this;
             var result = {
 			'#masterDataNotificationsId': 'masterDataNotificationsId',
-			'#masterDataSubscribersId': 'masterDataSubscribersId',
+			'#masterDataSubscribersId': { observe: 'masterDataSubscribersId',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.masterDataSubscribers
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			};
 
             return result;
@@ -27,7 +30,7 @@ define([
 
 			//TODO foreach model field
 			this.disableInput(this, 'masterDataNotificationsId', 'numeric');
-			this.disableInput(this, 'masterDataSubscribersId', 'numeric');
+			this.disableInput(this, 'masterDataSubscribersId', 'select');
 
             return this;
         }

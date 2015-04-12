@@ -4,17 +4,17 @@ define(function () {
 
 	var resources = {
 
-		add: 'DE: Wcf info anlegen',
-	    edit: 'DE: Wcf info editieren',
+		add: 'Web-Services Einstellungen anlegen',
+	    edit: 'Web-Services Einstellungen editieren',
 	    masterData: 'Einstellungen',
-	    pageTitle: 'DE: Wcf info',
+	    pageTitle: 'Web-Services Einstellungen',
 		pleaseSelect: 'Bitte auswählen',
 
-		name: 'DE: Name',	
+		name: 'Name',	
 
-		wsdlPath: 'DE: Path to wsdl ',	
+		wsdlPath: 'Pfad to Wsdl',	
 
-		timeoutChecking: 'DE: Timeout checking',	
+		timeoutChecking: 'Timeout',	
 
 	};
 

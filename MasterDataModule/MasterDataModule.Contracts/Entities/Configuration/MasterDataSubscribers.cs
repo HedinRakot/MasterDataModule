@@ -5,6 +5,7 @@ using System.Collections.Generic;
 namespace MasterDataModule.Contracts.Entities.Configuration
 {
     public partial class MasterDataSubscribers: IHasId<int>
+        ,IHasTitle
         ,IRemovable
         ,ISystemFields
     {
@@ -47,6 +48,10 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public DateTime ChangeDate{ get; set; }
         public DateTime? DeleteDate{ get; set; }
         public virtual ICollection<MasterDataNotificationsMasterDataSubscribersRsp> MasterDataNotificationsMasterDataSubscribersRsps{ get; set; }
+        string IHasTitle.EntityTitle
+        {
+            get { return Email; }
+        }
         DateTime ISystemFields.CreateDate
         {
             get { return CreateDate; }

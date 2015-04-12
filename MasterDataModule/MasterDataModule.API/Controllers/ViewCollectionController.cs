@@ -13,12 +13,13 @@ namespace MasterDataModule.API.Controllers
 {
     public partial class CollectionTypesModel
     {
-        public bool Permission { get; set;}
-        public bool Role { get; set; }
         public bool EditModeType { get; set; }
         public bool AssignationType { get; set; }
         public bool ExamType { get; set; }
         public bool ExamConstraintType { get; set; }
+        public bool NotificationType { get; set; }
+        public bool AlertCheckStatus { get; set; }
+        public bool CheckModuleType { get; set; }
     }
 
     public class IdNameModel<TId>
@@ -84,6 +85,28 @@ namespace MasterDataModule.API.Controllers
                 {
                     new { id = 1, name = "Auftrag"},
                     new { id = 2, name = "Position"},
+                });
+
+            if (model.NotificationType)
+                result.Add("NotificationType", new[]
+                {
+                    new { id = 1, name = "Email"},
+                });
+
+            if (model.AlertCheckStatus)
+                result.Add("AlertCheckStatus", new[]
+                {
+                    new { id = 0, name = "Fehler"},
+                    new { id = 1, name = "Erfolgreich"},
+                });
+
+            if (model.CheckModuleType)
+                result.Add("CheckModuleType", new[]
+                {
+                    new { id = 1, name = "Web-Service"},
+                    new { id = 2, name = "Web-Site"},
+                    new { id = 3, name = "Hintergrundprozess"},
+                    new { id = 4, name = "Windows-Service"},
                 });
 			
 			return Ok(result);

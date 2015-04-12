@@ -4,10 +4,10 @@ define(function () {
 
 	var resources = {
 
-		add: 'Web-Site Überwachung anlegen',
-	    edit: 'Web-Site Überwachung editieren',
+		add: 'Web-Site Einstellungen anlegen',
+	    edit: 'Web-Site Einstellungen editieren',
 	    masterData: 'Einstellungen',
-	    pageTitle: 'Web-Site Überwachung',
+	    pageTitle: 'Web-Site Einstellungen',
 		pleaseSelect: 'Bitte auswählen',
 
 		name: 'Site-Name',	

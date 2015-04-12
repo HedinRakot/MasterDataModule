@@ -4,13 +4,13 @@ define(function () {
 
 	var resources = {
 
-		add: 'DE: Subscribers anlegen',
-	    edit: 'DE: Subscribers editieren',
+		add: 'Monitor Empfänger anlegen',
+	    edit: 'Monitor Empfänger editieren',
 	    masterData: 'Einstellungen',
-	    pageTitle: 'DE: Subscribers',
+	    pageTitle: 'Monitor Empfänger',
 		pleaseSelect: 'Bitte auswählen',
 
-		email: 'DE: E-mail',	
+		email: 'E-mail',	
 
 	};
 

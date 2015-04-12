@@ -3566,6 +3566,18 @@
     <Content Include="web\resources\Settings\AddMasterDataWcfInfo.en.js">
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\Settings\AddMasterDataWindowsServiceCheckResults.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataWindowsServiceCheckResults.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataWindowsServiceInfo.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddMasterDataWindowsServiceInfo.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\AddPermission.de.js">
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
@@ -3887,6 +3899,18 @@
     </Content>
     <Content Include="web\resources\Settings\MasterDataWindowsServiceCheckResults.en.js">
       <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataWindowsServiceCheckResultsRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataWindowsServiceCheckResultsRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataWindowsServiceInfoRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\MasterDataWindowsServiceInfoRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\MasterDataWindowsServiceInfos.de.js">
       <DependentUpon>web.masterdata.resources.tt</DependentUpon>
@@ -5693,6 +5717,12 @@
     <Content Include="web\templates\Settings\MasterDataWindowsServiceCheckResults.html">
       <DependentUpon>web.masterdata.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\Settings\MasterDataWindowsServiceCheckResultsRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\MasterDataWindowsServiceInfoRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\Settings\MasterDataWindowsServiceInfos.html">
       <DependentUpon>web.masterdata.templates.tt</DependentUpon>
     </Content>
@@ -7052,6 +7082,7 @@
     <Content Include="web\views\Settings\ChangePassword.js" />
     <Content Include="web\views\Settings\Custom.Events.User.js" />
     <Content Include="web\views\Settings\Custom.SysColumn.js" />
+    <Content Include="web\views\Settings\Custom.MasterDataMonitorableInfoMasterDataNotificationsRsp.js" />
     <Content Include="web\views\Settings\Custom.User.js" />
     <Content Include="web\views\Settings\FilterApplicationLogs.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
@@ -7069,9 +7100,6 @@
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\FilterMasterDataNotifications.js">
-      <DependentUpon>web.masterdata.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\Settings\FilterMasterDataNotificationsMasterDataSubscribersRsp.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\FilterMasterDataSiteCheckResults.js">
@@ -7139,7 +7167,7 @@
       <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\MasterDataNotificationsMasterDataSubscribersRsps.js">
-      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+      <DependentUpon>web.masterdata.related.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\MasterDataNotificationsRelationships.js">
       <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
@@ -7182,6 +7210,12 @@
     </Content>
     <Content Include="web\views\Settings\MasterDataWindowsServiceCheckResults.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataWindowsServiceCheckResultsRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\MasterDataWindowsServiceInfoRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\MasterDataWindowsServiceInfos.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>

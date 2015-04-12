@@ -4,21 +4,21 @@ define(function () {
 
 	var resources = {
 
-		add: 'DE: Site check result anlegen',
-	    edit: 'DE: Site check result editieren',
+		add: 'Web-Site Monitor anlegen',
+	    edit: 'Web-Site Monitor editieren',
 	    masterData: 'Einstellungen',
-	    pageTitle: 'DE: Site check result',
+	    pageTitle: 'Web-Site Monitor',
 		pleaseSelect: 'Bitte auswählen',
 
-		checkStatus: 'DE: Status',	
+		checkStatus: 'Status',	
 
-		checkDate: 'DE: Check date',	
+		checkDate: 'Datum',	
 
-		message: 'DE: Message',	
+		message: 'Nachricht',	
 
-		attempt: 'DE: Attempt',	
+		attempt: 'Zähler',	
 
-		masterDataSiteInfoId: 'DE: Site info',	
+		masterDataSiteInfoId: 'Web-Site',	
 
 	};
 

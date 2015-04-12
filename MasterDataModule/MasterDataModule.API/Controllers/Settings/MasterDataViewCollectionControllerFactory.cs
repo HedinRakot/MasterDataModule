@@ -24,6 +24,14 @@ namespace MasterDataModule.API.Controllers
             	result.Add("Permission", GetViewCollection<Permission, int, IPermissionManager>(
             		(IPermissionManager)resolver.GetService(typeof(IPermissionManager))));
 
+            if (model.MasterDataSubscribers)
+            	result.Add("MasterDataSubscribers", GetViewCollection<MasterDataSubscribers, int, IMasterDataSubscribersManager>(
+            		(IMasterDataSubscribersManager)resolver.GetService(typeof(IMasterDataSubscribersManager))));
+
+            if (model.MasterDataNotifications)
+            	result.Add("MasterDataNotifications", GetViewCollection<MasterDataNotifications, int, IMasterDataNotificationsManager>(
+            		(IMasterDataNotificationsManager)resolver.GetService(typeof(IMasterDataNotificationsManager))));
+
         }
     }
 }

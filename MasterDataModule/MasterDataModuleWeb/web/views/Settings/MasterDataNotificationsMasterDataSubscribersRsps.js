@@ -1,34 +1,52 @@
-define([
-'base/base-object-grid-view',
+define([	
+    'base/related-object-grid-view',
 'collections/Settings/MasterDataNotificationsMasterDataSubscribersRsps',
-'l!t!Settings/FilterMasterDataNotificationsMasterDataSubscribersRsp'
-], function (BaseView, Collection, FilterView) {
+'l!t!Settings/AddMasterDataNotificationsMasterDataSubscribersRsp'
+], function (BaseView, Collection, AddNewModelView) {
 	'use strict';
 
 	var view = BaseView.extend({
 
-        collectionType: Collection,
+		addNewModelView: AddNewModelView,
+		collectionType: Collection,
+		gridSelector: '.grid',
+		tableName: 'MasterDataNotificationsMasterDataSubscribersRsps',
         
-        filterView: FilterView,
-        tableName: 'MasterDataNotificationsMasterDataSubscribersRsp',
-        editUrl: '#MasterDataNotificationsMasterDataSubscribersRsps',
-		
-		
-		
-		
+        addingInPopup: false,
 
-	    editItemTitle: function () {
-	        return this.resources.edit
-	    },
+		initialize: function() {
+			view.__super__.initialize.apply(this, arguments);
+
+			this.defaultFiltering = { field: 'masterDataNotificationsId', operator: 'eq', value: this.model.id };
+
+			this.collection = new Collection();
+		},
 
 		columns: function () {
-			
-			return [
-				{ field: 'masterDataNotificationsId', title: this.resources.masterDataNotificationsId },
-				{ field: 'masterDataSubscribersId', title: this.resources.masterDataSubscribersId },
+		   
+		   return [
+				{ field: 'masterDataSubscribersId', title: this.resources.masterDataSubscribersId , collection: this.options.masterDataSubscribers, defaultText: this.resources.pleaseSelect},
 			];
-		}
+		},
+		
+		render: function () {
+		    var self = this;
 
+		    view.__super__.render.apply(self, arguments);
+
+		    self.grid.bind('edit', function (e) {
+		        e.model.masterDataNotificationsId = self.model.id;
+
+				if (e.model.isNew()) {
+                    var dt = new Date(2070, 11, 31);
+		            e.model.toDate = dt;
+		            var numeric = e.container.find("input[name=toDate]");
+		            numeric[0].value = dt.toLocaleDateString();
+		        }
+		    });
+
+		    return self;
+		}
 	});
 
 	return view;
