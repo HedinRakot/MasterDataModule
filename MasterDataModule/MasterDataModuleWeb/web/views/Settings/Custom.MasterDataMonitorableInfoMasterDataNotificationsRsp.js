@@ -12,13 +12,13 @@
             {
                 title: Resources.monitorableInfoType,
                 template: function (dataItem) {
-                    return dataItem.monitorableInfoTypeText;
+                    return dataItem.monitorableInfoTypeText != undefined ? dataItem.monitorableInfoTypeText : '';
                 }
             },
             {
                 title: Resources.monitorableInfoObject,
                 template: function (dataItem) {
-                    return dataItem.monitorableInfoObject;
+                    return dataItem.monitorableInfoObject != undefined ? dataItem.monitorableInfoObject : '';
                 }
             }
         ];

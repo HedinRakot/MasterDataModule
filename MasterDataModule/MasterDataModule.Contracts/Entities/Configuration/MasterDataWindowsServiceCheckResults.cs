@@ -71,27 +71,22 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int Id{ get; set; }
         /// <summary>
         ///     DE: Status  EN: Status
-
         /// </summary>
         public int? CheckStatus{ get; set; }
         /// <summary>
         ///     DE: Prüfungsdatum  EN: Check date
-
         /// </summary>
         public DateTime? CheckDate{ get; set; }
         /// <summary>
         ///     DE: Nachricht  EN: Message
-
         /// </summary>
         public string Message{ get; set; }
         /// <summary>
         ///     DE: Zähler  EN: Attempt
-
         /// </summary>
         public int? Attempt{ get; set; }
         /// <summary>
         ///     DE: Windows-Service  EN: Windows service info
-
         /// </summary>
         public int MasterDataWindowsServiceInfoId{ get; set; }
         public DateTime CreateDate{ get; set; }

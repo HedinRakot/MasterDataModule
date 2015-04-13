@@ -64,28 +64,25 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int Id{ get; set; }
         /// <summary>
         ///     DE: Name  EN: Name
-
         /// </summary>
         public string Name{ get; set; }
         public DateTime CreateDate{ get; set; }
         public DateTime? DeleteDate{ get; set; }
         /// <summary>
         ///     DE: Beschreibung  EN: Description
-
         /// </summary>
         public string Description{ get; set; }
         /// <summary>
         ///     DE: Editiebarkeit  EN: Edit mode
-
         /// </summary>
         public int EditMode{ get; set; }
         public DateTime ChangeDate{ get; set; }
         /// <summary>
-        ///     DE:Von Datum  EN:  Date from
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     DE:Bis Datum  EN:  Date to
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         public virtual ICollection<SysColumn> SysColumns{ get; set; }

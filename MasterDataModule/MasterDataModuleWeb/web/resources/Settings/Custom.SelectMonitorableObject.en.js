@@ -3,14 +3,12 @@
 
     var resources = {
                 
-        changePassword: 'change password',
-        change: 'change',
+        title: 'Select object',
+        select: 'save',
         cancel: 'cancel',
-        password: 'Password',
-        passwordConfirmation: 'password confirmation',
-        'login-unique': 'Login muss eindeutig sein',
-        'password-confirmation-match': 'Passwort und Wiederholung müssen gleich sein',
-        'password-match': 'Passwort und Wiederholung müssen gleich sein',
+        monitorableInfoTypeTitle: 'Monitorable object type',
+        monitorableInfoIdTitle: 'Monitorable object',
+        masterDataNotificationsIdTitle: 'Notification message'
     };
 
     return resources;

@@ -79,12 +79,10 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int Id{ get; set; }
         /// <summary>
         ///     DE: Rolle  EN: Master data role
-
         /// </summary>
         public int MasterDataRoleId{ get; set; }
         /// <summary>
         ///     DE: Berechtigung  EN: Master data permission
-
         /// </summary>
         public int MasterDataPermissionId{ get; set; }
         public DateTime CreateDate{ get; set; }
@@ -97,12 +95,10 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public string Source{ get; set; }
         /// <summary>
         ///     DE: Von Datum  EN: From date
-
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
         ///     DE: Bis Datum  EN: To date
-
         /// </summary>
         public DateTime ToDate{ get; set; }
         public virtual Permission Permission{ get; set; }

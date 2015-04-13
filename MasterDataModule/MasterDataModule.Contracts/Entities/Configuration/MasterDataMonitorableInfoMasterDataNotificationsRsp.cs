@@ -63,17 +63,14 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int Id{ get; set; }
         /// <summary>
         ///     DE: Überwachungsobjekt Typ  EN: Monitorable object type
-
         /// </summary>
         public int MonitorableInfoType{ get; set; }
         /// <summary>
         ///     DE: Überwachungsobjekt  EN: Monitorable object id
-
         /// </summary>
         public int MonitorableInfoId{ get; set; }
         /// <summary>
         ///     DE: Überwachungsnachricht  EN: Notification
-
         /// </summary>
         public int MasterDataNotificationsId{ get; set; }
         public DateTime CreateDate{ get; set; }
@@ -87,6 +84,11 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         ///     DE:Bis Datum  EN:  Date to
         /// </summary>
         public DateTime ToDate{ get; set; }
+        public virtual MasterDataNotifications MasterDataNotifications{ get; set; }
+        public bool HasMasterDataNotifications
+        {
+            get { return !ReferenceEquals(MasterDataNotifications, null); }
+        }
         DateTime? IIntervalFields.FromDate
         {
             get { return FromDate; }

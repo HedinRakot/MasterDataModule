@@ -3,14 +3,12 @@
 
     var resources = {
                         
-        changePassword: 'Passwort ändern',
-        change: 'ändern',
+        title: 'Objekt auswählen',
+        select: 'Speichern',
         cancel: 'Abbruch',
-        password: 'Passwort',
-        passwordConfirmation: 'Passwortwiederholung',
-        'login-unique': 'Login muss eindeutig sein',
-        'password-confirmation-match': 'Passwort und Wiederholung müssen gleich sein',
-        'password-match': 'Passwort und Wiederholung müssen gleich sein',
+        monitorableInfoTypeTitle: 'Überwachungsobjekt Typ',
+        monitorableInfoIdTitle: 'Überwachungsobjekt',
+        masterDataNotificationsIdTitle: 'Überwachungsnachricht'
     };
 
     return resources;

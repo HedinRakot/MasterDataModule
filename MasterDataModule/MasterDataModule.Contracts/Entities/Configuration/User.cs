@@ -87,22 +87,18 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int Id{ get; set; }
         /// <summary>
         ///     DE: Rolle  EN: Role
-
         /// </summary>
         public int? MasterDataRoleId{ get; set; }
         /// <summary>
         ///     DE: Login  EN: Login
-
         /// </summary>
         public string Login{ get; set; }
         /// <summary>
         ///     DE: Name  EN: Name
-
         /// </summary>
         public string Name{ get; set; }
         /// <summary>
         ///     DE: Passwort  EN: Password
-
         /// </summary>
         public string Password{ get; set; }
         public DateTime CreateDate{ get; set; }
@@ -115,12 +111,10 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public string Source{ get; set; }
         /// <summary>
         ///     DE: Von Datum  EN: From date
-
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
         ///     DE: Bis Datum  EN: To date
-
         /// </summary>
         public DateTime ToDate{ get; set; }
         public virtual Role Role{ get; set; }

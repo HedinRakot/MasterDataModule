@@ -77,7 +77,6 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int Id{ get; set; }
         /// <summary>
         ///     DE: Name  EN: Name
-
         /// </summary>
         public string Name{ get; set; }
         public DateTime CreateDate{ get; set; }
@@ -90,12 +89,10 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public string Source{ get; set; }
         /// <summary>
         ///     DE: Von Datum  EN: From date
-
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
         ///     DE: Bis Datum  EN: To date
-
         /// </summary>
         public DateTime ToDate{ get; set; }
         public virtual ICollection<MasterDataRolePermissionRsp> MasterDataRolePermissionRsps{ get; set; }

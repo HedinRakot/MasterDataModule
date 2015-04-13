@@ -59,12 +59,10 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int Id{ get; set; }
         /// <summary>
         ///     DE: Neue Konfiguration  EN: Reconfigure
-
         /// </summary>
         public bool? Reconfigure{ get; set; }
         /// <summary>
         ///     DE: Neue Konfiguration Timeout  EN: Reconfigure flag checking timeout
-
         /// </summary>
         public int ReconfigureCheckingTimeout{ get; set; }
         public DateTime CreateDate{ get; set; }

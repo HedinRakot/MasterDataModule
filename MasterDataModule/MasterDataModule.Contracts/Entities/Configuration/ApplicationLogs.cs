@@ -67,22 +67,18 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int Id{ get; set; }
         /// <summary>
         ///     DE: Log-Typ  EN: Logs type
-
         /// </summary>
         public int LogType{ get; set; }
         /// <summary>
         ///     DE: Log-Stufe  EN: logs level
-
         /// </summary>
         public int LogLevel{ get; set; }
         /// <summary>
         ///     DE: Datum  EN: Date
-
         /// </summary>
         public DateTime? Date{ get; set; }
         /// <summary>
         ///     DE: Text  EN: Text
-
         /// </summary>
         public string Message{ get; set; }
         public DateTime? DeleteDate{ get; set; }

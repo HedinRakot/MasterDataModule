@@ -59,12 +59,10 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int Id{ get; set; }
         /// <summary>
         ///     DE: Überwachungsnachricht  EN: Notification
-
         /// </summary>
         public int MasterDataNotificationsId{ get; set; }
         /// <summary>
         ///     DE: Empfänger  EN: Subscriber
-
         /// </summary>
         public int MasterDataSubscribersId{ get; set; }
         public DateTime CreateDate{ get; set; }
@@ -78,7 +76,12 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         ///     DE:Bis Datum  EN:  Date to
         /// </summary>
         public DateTime ToDate{ get; set; }
+        public virtual MasterDataNotifications MasterDataNotifications{ get; set; }
         public virtual MasterDataSubscribers MasterDataSubscribers{ get; set; }
+        public bool HasMasterDataNotifications
+        {
+            get { return !ReferenceEquals(MasterDataNotifications, null); }
+        }
         public bool HasMasterDataSubscribers
         {
             get { return !ReferenceEquals(MasterDataSubscribers, null); }

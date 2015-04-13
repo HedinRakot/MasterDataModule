@@ -71,27 +71,22 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int Id{ get; set; }
         /// <summary>
         ///     DE: Status  EN: Status
-
         /// </summary>
         public int? CheckStatus{ get; set; }
         /// <summary>
         ///     DE: Datum  EN: Check date
-
         /// </summary>
         public DateTime? CheckDate{ get; set; }
         /// <summary>
         ///     DE: Nachricht  EN: Message
-
         /// </summary>
         public string Message{ get; set; }
         /// <summary>
         ///     DE: Zähler  EN: Attempt
-
         /// </summary>
         public int? Attempt{ get; set; }
         /// <summary>
         ///     DE: Web-Site  EN: Site info
-
         /// </summary>
         public int MasterDataSiteInfoId{ get; set; }
         public DateTime CreateDate{ get; set; }

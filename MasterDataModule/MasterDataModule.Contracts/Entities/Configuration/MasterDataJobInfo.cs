@@ -7,6 +7,7 @@ namespace MasterDataModule.Contracts.Entities.Configuration
     ///     DE: Hintergrundprozess Einstellungen  EN: Job info
     /// </summary>
     public partial class MasterDataJobInfo: IHasId<int>
+        ,IHasTitle
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -71,27 +72,22 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int Id{ get; set; }
         /// <summary>
         ///     DE: Connection string  EN: Connection string
-
         /// </summary>
         public string ConnectionString{ get; set; }
         /// <summary>
         ///     DE: Tabelle  EN: Table name
-
         /// </summary>
         public string TableName{ get; set; }
         /// <summary>
         ///     DE: Timeout checking  EN: Timeout checking
-
         /// </summary>
         public int TimeoutChecking{ get; set; }
         /// <summary>
         ///     DE: Name  EN: Name
-
         /// </summary>
         public string Name{ get; set; }
         /// <summary>
         ///     DE: Hintergrundprozess Name  EN:  Job name
-
         /// </summary>
         public string JobName{ get; set; }
         public DateTime CreateDate{ get; set; }
@@ -114,6 +110,10 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        string IHasTitle.EntityTitle
+        {
+            get { return Name; }
         }
         DateTime ISystemFields.CreateDate
         {

@@ -67,22 +67,18 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int Id{ get; set; }
         /// <summary>
         ///     DE: Letztes Prüfungsdatum  EN: Last run time
-
         /// </summary>
         public DateTime? LastRunTime{ get; set; }
         /// <summary>
         ///     DE: Prüfungsdatum  EN: Check date
-
         /// </summary>
         public DateTime? CheckDate{ get; set; }
         /// <summary>
         ///     DE: Status  EN: Status
-
         /// </summary>
         public int? CheckStatus{ get; set; }
         /// <summary>
         ///     DE: Hintergrundprozess  EN: Job info
-
         /// </summary>
         public int MasterDataJobInfoId{ get; set; }
         public DateTime CreateDate{ get; set; }

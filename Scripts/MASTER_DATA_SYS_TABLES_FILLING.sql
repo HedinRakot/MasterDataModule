@@ -1,4 +1,4 @@
-DECLARE @databases nvarchar(MAX) = 'CommonMasterData;FeMasterData;'
+DECLARE @databases nvarchar(MAX) = 'CommonMasterData;FeMasterData;SettingsData;'
 
 DELETE FROM SettingsData.dbo.SYS_COLUMNS;
 DELETE FROM SettingsData.dbo.SYS_TABLES;

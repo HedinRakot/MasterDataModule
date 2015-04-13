@@ -57,7 +57,6 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int Id{ get; set; }
         /// <summary>
         ///     DE: E-mail  EN: E-mail
-
         /// </summary>
         public string Email{ get; set; }
         public DateTime CreateDate{ get; set; }

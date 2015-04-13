@@ -8,6 +8,7 @@ namespace MasterDataModule.Contracts.Entities.Configuration
     ///     DE: Windows Services Einstellungen  EN: Windows service info
     /// </summary>
     public partial class MasterDataWindowsServiceInfo: IHasId<int>
+        ,IHasTitle
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -68,22 +69,18 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int Id{ get; set; }
         /// <summary>
         ///     DE: Name  EN: Name
-
         /// </summary>
         public string Name{ get; set; }
         /// <summary>
         ///     DE: Machine Name  EN: Machine name
-
         /// </summary>
         public string MachineName{ get; set; }
         /// <summary>
         ///     DE: Windows-Service Name  EN: Service name
-
         /// </summary>
         public string ServiceName{ get; set; }
         /// <summary>
         ///     DE: Timeout  EN: Timeout checking
-
         /// </summary>
         public int TimeoutChecking{ get; set; }
         public DateTime CreateDate{ get; set; }
@@ -107,6 +104,10 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        string IHasTitle.EntityTitle
+        {
+            get { return Name; }
         }
         DateTime ISystemFields.CreateDate
         {

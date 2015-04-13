@@ -67,24 +67,20 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int Id{ get; set; }
         /// <summary>
         ///     DE: Tabelle  EN: Table
-
         /// </summary>
         public int SysTableId{ get; set; }
         /// <summary>
         ///     DE: Name  EN: Name
-
         /// </summary>
         public string Name{ get; set; }
         public DateTime CreateDate{ get; set; }
         public DateTime? DeleteDate{ get; set; }
         /// <summary>
         ///     DE: Beschreibung  EN: Description
-
         /// </summary>
         public string Description{ get; set; }
         /// <summary>
         ///     DE: Nicht editierbar  EN: Readonly
-
         /// </summary>
         public bool ReadOnly{ get; set; }
         public DateTime ChangeDate{ get; set; }

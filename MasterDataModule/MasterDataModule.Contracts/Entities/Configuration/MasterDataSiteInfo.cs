@@ -8,6 +8,7 @@ namespace MasterDataModule.Contracts.Entities.Configuration
     ///     DE: Web-Site Einstellungen  EN: Master data sites
     /// </summary>
     public partial class MasterDataSiteInfo: IHasId<int>
+        ,IHasTitle
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -64,17 +65,14 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int Id{ get; set; }
         /// <summary>
         ///     DE: Site-Name  EN: Site name
-
         /// </summary>
         public string Name{ get; set; }
         /// <summary>
         ///     DE: Timeout  EN: Timeout
-
         /// </summary>
         public int TimeoutChecking{ get; set; }
         /// <summary>
         ///     DE: Url  EN: Url
-
         /// </summary>
         public string SitePath{ get; set; }
         public DateTime CreateDate{ get; set; }
@@ -98,6 +96,10 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         {
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        string IHasTitle.EntityTitle
+        {
+            get { return Name; }
         }
         DateTime ISystemFields.CreateDate
         {

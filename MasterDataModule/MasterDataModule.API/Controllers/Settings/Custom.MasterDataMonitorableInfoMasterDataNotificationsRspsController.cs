@@ -83,5 +83,26 @@ namespace MasterDataModule.API.Controllers.Settings
             model.monitorableInfoObject = monitorableInfoObject;
             model.monitorableInfoTypeText = monitorableInfoTypeText;
         }
+
+        public IHttpActionResult Patch(MasterDataMonitorableInfoMasterDataNotificationsRspModel model)
+        {
+            var entity = Manager.GetById(model.Id) ?? new MasterDataMonitorableInfoMasterDataNotificationsRsp();          
+
+            if (ModelState.IsValid)
+            {
+                ModelToEntity(model, entity, ActionTypes.Update);
+
+                if(entity.Id == 0)
+                {
+                    Manager.AddEntity(entity);
+                }
+
+                Manager.SaveChanges();
+
+                return Ok(model);
+            }
+            else
+                return BadRequest(ModelState);
+        }
     }
 }
