@@ -5,7 +5,12 @@
 
     var extraColumns = function () {
         return [
-            { field: 'tableDescription', title: Resources.tableDescription, filterable: false }
+            {
+                title: Resources.tableDescription, filterable: false,
+                template: function (dataItem) {
+                    return dataItem.tableDescription;
+                }
+            }
         ];
     };
 
