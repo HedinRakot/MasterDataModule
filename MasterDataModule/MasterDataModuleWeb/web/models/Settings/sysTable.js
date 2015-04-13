@@ -14,6 +14,12 @@ define(function () {
 			,editMode: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('SysTable', 'editMode'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('SysTable', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('SysTable', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

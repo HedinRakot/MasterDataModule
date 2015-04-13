@@ -20,6 +20,12 @@ define(function () {
 			,masterDataWcfInfoId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('MasterDataWcfCheckResults', 'masterDataWcfInfoId'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataWcfCheckResults', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataWcfCheckResults', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

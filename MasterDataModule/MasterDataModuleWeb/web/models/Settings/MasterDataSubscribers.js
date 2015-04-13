@@ -8,6 +8,12 @@ define(function () {
 			,email: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('MasterDataSubscribers', 'email'), 
 				                    validation: { required: true } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataSubscribers', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataSubscribers', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

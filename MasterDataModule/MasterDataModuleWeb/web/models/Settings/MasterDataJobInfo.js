@@ -20,6 +20,12 @@ define(function () {
 			,jobName: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('MasterDataJobInfo', 'jobName'), 
 				                    validation: { required: true } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataJobInfo', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataJobInfo', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

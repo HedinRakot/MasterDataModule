@@ -14,6 +14,12 @@ define(function () {
 			,sitePath: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('MasterDataSiteInfo', 'sitePath'), 
 				                    validation: { required: true } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataSiteInfo', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataSiteInfo', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

@@ -17,6 +17,12 @@ define(function () {
 			,message: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('ApplicationLogs', 'message'), 
 				                    validation: { required: true } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('ApplicationLogs', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('ApplicationLogs', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

@@ -14,6 +14,12 @@ define(function () {
 			,masterDataNotificationsId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('MasterDataMonitorableInfoMasterDataNotificationsRsp', 'masterDataNotificationsId'), 
 				                    validation: { required: true } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataMonitorableInfoMasterDataNotificationsRsp', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataMonitorableInfoMasterDataNotificationsRsp', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

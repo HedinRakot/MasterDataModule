@@ -17,6 +17,12 @@ define(function () {
 			,masterDataJobInfoId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('MasterDataJobCheckResults', 'masterDataJobInfoId'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataJobCheckResults', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataJobCheckResults', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

@@ -11,6 +11,12 @@ define(function () {
 			,masterDataSubscribersId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('MasterDataNotificationsMasterDataSubscribersRsp', 'masterDataSubscribersId'), 
 				                    validation: { required: true } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataNotificationsMasterDataSubscribersRsp', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataNotificationsMasterDataSubscribersRsp', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

@@ -20,6 +20,12 @@ define(function () {
 			,masterDataWindowsServiceInfoId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('MasterDataWindowsServiceCheckResults', 'masterDataWindowsServiceInfoId'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataWindowsServiceCheckResults', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataWindowsServiceCheckResults', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

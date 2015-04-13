@@ -17,6 +17,12 @@ define(function () {
 			,timeoutChecking: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('MasterDataWindowsServiceInfo', 'timeoutChecking'), 
 				                    validation: { required: true } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataWindowsServiceInfo', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataWindowsServiceInfo', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

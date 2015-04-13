@@ -20,6 +20,12 @@ define(function () {
 			,masterDataSiteInfoId: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('MasterDataSiteCheckResults', 'masterDataSiteInfoId'), 
 				                    validation: { required: false } }			
+			,fromDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataSiteCheckResults', 'fromDate'), 
+				                    validation: { required: true, date: true } }			
+			,toDate: { type: "date", 
+			                        editable: Application.canTableItemBeEdit('MasterDataSiteCheckResults', 'toDate'), 
+				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();
