@@ -1,11 +1,11 @@
 ﻿define([
 	'base/base-collection',
-	'models/AdminService/WcfServiceStatus'
+	'models/AdminService/WinServiceStatus'
 ], function (BaseCollection, Model) {
     'use strict';
 
     var collection = BaseCollection.extend({
-        url: 'api/WebServiceMonitor',
+        url: 'api/WinServiceMonitor',
         model: Model
     });
 

@@ -1,6 +1,6 @@
 ﻿define([
 	'base/base-collection',
-	'models/AdminService/JobMonitor/JobStatus'
+	'models/AdminService/JobStatus'
 ], function (BaseCollection, Model) {
     'use strict';
 

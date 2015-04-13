@@ -491,6 +491,8 @@
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Monitor\JobMonitorController.cs" />
+    <Compile Include="Controllers\Monitor\WebSiteMonitorController.cs" />
+    <Compile Include="Controllers\Monitor\WinServiceMonitorController.cs" />
     <Compile Include="Controllers\Monitor\WebServiceMonitorController.cs" />
     <Compile Include="Controllers\ReadOnlyClientBaseController.cs" />
     <Compile Include="Controllers\GridArgs.cs" />
@@ -858,6 +860,8 @@
     <Compile Include="Models\ISystemModelFields.cs" />
     <Compile Include="Models\IModelIntervalFields.cs" />
     <Compile Include="Models\Monitor\JobStatusModel.cs" />
+    <Compile Include="Models\Monitor\WinServiceStatusModel.cs" />
+    <Compile Include="Models\Monitor\WebSiteStatusModel.cs" />
     <Compile Include="Models\Monitor\WcfServiceStatusModel.cs" />
     <Compile Include="Models\Settings\ApplicationLogsModel.cs">
       <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>

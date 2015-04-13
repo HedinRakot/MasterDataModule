@@ -204,6 +204,8 @@
     <Content Include="css\site.css" />
     <Content Include="Global.asax" />
     <Content Include="web\collections\AdminService\JobStatuses.js" />
+    <Content Include="web\collections\AdminService\WebSiteStatuses.js" />
+    <Content Include="web\collections\AdminService\WinServiceStatuses.js" />
     <Content Include="web\collections\AdminService\WcfServiceStatuses.js" />
     <Content Include="web\collections\CommonMasterData\Customer\InsTaxClasses.js">
       <DependentUpon>web.customer.collections.tt</DependentUpon>
@@ -591,8 +593,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>web.tp.collections.tt</DependentUpon>
     </Content>
-    <Content Include="web\models\AdminService\JobMonitor\JobStatus.js" />
-    <Content Include="web\models\AdminService\WebServiceMonitor\WcfServiceStatus.js" />
+    <Content Include="web\models\AdminService\JobStatus.js" />
+    <Content Include="web\models\AdminService\WebSiteStatus.js" />
+    <Content Include="web\models\AdminService\WinServiceStatus.js" />
+    <Content Include="web\models\AdminService\WcfServiceStatus.js" />
     <Content Include="web\models\CommonMasterData\Customer\FilterInsTaxClass.js">
       <DependentUpon>web.customer.models.tt</DependentUpon>
     </Content>
@@ -1328,10 +1332,14 @@
     <Content Include="web\models\view-collection.js" />
     <Content Include="web\resources\AdminService\AdminService.de.js" />
     <Content Include="web\resources\AdminService\AdminService.en.js" />
-    <Content Include="web\resources\AdminService\JobMonitor\JobMonitor.de.js" />
-    <Content Include="web\resources\AdminService\JobMonitor\JobMonitor.en.js" />
-    <Content Include="web\resources\AdminService\WebServiceMonitor\WebServiceMonitor.de.js" />
-    <Content Include="web\resources\AdminService\WebServiceMonitor\WebServiceMonitor.en.js" />
+    <Content Include="web\resources\AdminService\WinServiceMonitor.de.js" />
+    <Content Include="web\resources\AdminService\WebSiteMonitor.de.js" />
+    <Content Include="web\resources\AdminService\JobMonitor.de.js" />
+    <Content Include="web\resources\AdminService\WebSiteMonitor.en.js" />
+    <Content Include="web\resources\AdminService\WinServiceMonitor.en.js" />
+    <Content Include="web\resources\AdminService\JobMonitor.en.js" />
+    <Content Include="web\resources\AdminService\WebServiceMonitor.de.js" />
+    <Content Include="web\resources\AdminService\WebServiceMonitor.en.js" />
     <Content Include="web\resources\CommonMasterData\CommonMasterData.de.js" />
     <Content Include="web\resources\CommonMasterData\CommonMasterData.en.js" />
     <Content Include="web\resources\CommonMasterData\Customer\AddInsTaxClass.de.js">
@@ -4396,8 +4404,10 @@
     </Content>
     <Content Include="web\router.js" />
     <Content Include="web\templates\AdminService\AdminService.html" />
-    <Content Include="web\templates\AdminService\JobMonitor\JobMonitor.html" />
-    <Content Include="web\templates\AdminService\WebServiceMonitor\WebServiceMonitor.html" />
+    <Content Include="web\templates\AdminService\JobMonitor.html" />
+    <Content Include="web\templates\AdminService\WebSiteMonitor.html" />
+    <Content Include="web\templates\AdminService\WinServiceMonitor.html" />
+    <Content Include="web\templates\AdminService\WebServiceMonitor.html" />
     <Content Include="web\templates\CommonMasterData\CommonMasterData.html" />
     <Content Include="web\templates\CommonMasterData\Customer\AddInsTaxClass.html">
       <DependentUpon>web.customer.add.templates.tt</DependentUpon>
@@ -5978,8 +5988,10 @@
     </Content>
     <Content Include="web\application-start.js" />
     <Content Include="web\views\AdminService\AdminService.js" />
-    <Content Include="web\views\AdminService\JobMonitor\JobMonitor.js" />
-    <Content Include="web\views\AdminService\WebServiceMonitor\WebServiceMonitor.js" />
+    <Content Include="web\views\AdminService\JobMonitor.js" />
+    <Content Include="web\views\AdminService\WebSiteMonitor.js" />
+    <Content Include="web\views\AdminService\WinServiceMonitor.js" />
+    <Content Include="web\views\AdminService\WebServiceMonitor.js" />
     <Content Include="web\views\CommonMasterData\CommonMasterData.js" />
     <Content Include="web\views\CommonMasterData\Customer\AddInsTaxClass.js">
       <DependentUpon>web.customer.add.views.tt</DependentUpon>

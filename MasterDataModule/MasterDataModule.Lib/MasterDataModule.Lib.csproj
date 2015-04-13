@@ -457,6 +457,8 @@
     <Compile Include="Data\Drl.Context.Custom.cs" />
     <Compile Include="Data\Drl.Context.Configuration.cs" />
     <Compile Include="Data\Monitor\JobsInfoMapping.cs" />
+    <Compile Include="Data\Monitor\WinServicesInfoMapping.cs" />
+    <Compile Include="Data\Monitor\WebSitesInfoMapping.cs" />
     <Compile Include="Data\Monitor\WebServicesInfoMapping.cs" />
     <Compile Include="Data\SaveActors\AsPro\AsProSaveActorManager.cs" />
     <Compile Include="Data\SaveActors\Base\SaveActorManager.cs" />
@@ -874,6 +876,8 @@
     </Compile>
     <Compile Include="Managers\Configuration\UserManager.Custom.cs" />
     <Compile Include="Managers\Monitor\JobStatusInfoManager.cs" />
+    <Compile Include="Managers\Monitor\WebSiteStatusInfoManager.cs" />
+    <Compile Include="Managers\Monitor\WinServiceStatusInfoManager.cs" />
     <Compile Include="Managers\Monitor\WcfStatusInfoManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
