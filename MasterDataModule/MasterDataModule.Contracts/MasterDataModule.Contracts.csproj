@@ -148,6 +148,8 @@
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Monitor\JobStatus.cs" />
+    <Compile Include="Entities\Monitor\WinServiceStatus.cs" />
+    <Compile Include="Entities\Monitor\WebSiteStatus.cs" />
     <Compile Include="Entities\Monitor\WcfServiceStatus.cs" />
     <Compile Include="Enums\LogLevelEnum.cs" />
     <Compile Include="Enums\LogTypeEnum.cs" />
@@ -242,6 +244,8 @@
       <DependentUpon>Drl.IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Monitor\IJobStatusInfoManager.cs" />
+    <Compile Include="Managers\Monitor\IWebSiteStatusInfoManager.cs" />
+    <Compile Include="Managers\Monitor\IWinServiceStatusInfoManager.cs" />
     <Compile Include="Managers\Monitor\IWcfStatusInfoManager.cs" />
     <Compile Include="MasterDataConfiguration.Context.Interface.Custom.cs" />
     <Compile Include="Entities\Configuration\Permission.cs">

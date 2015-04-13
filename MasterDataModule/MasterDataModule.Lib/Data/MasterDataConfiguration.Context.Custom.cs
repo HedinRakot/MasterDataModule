@@ -38,6 +38,8 @@ namespace MasterDataModule.Lib.Data
         {
             modelBuilder.Configurations.Add(WebServicesInfoMapping.Instance);
             modelBuilder.Configurations.Add(JobsInfoMapping.Instance);
+            modelBuilder.Configurations.Add(WebSitesInfoMapping.Instance);
+            modelBuilder.Configurations.Add(WinServicesInfoMapping.Instance);
         }
     }
 }
