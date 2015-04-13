@@ -25,7 +25,7 @@
         columns: function () {
             return [
                 { field: "name", title: this.resources.name, width: 200 },
-                { field: "jobName", title: this.resources.name, width: 200 },
+                { field: "jobName", title: this.resources.jobName, width: 200 },
                 {
                     field: "checkStatus",
                     width: 50,
@@ -46,7 +46,7 @@
                 },
                 {
                     field: "lastRunTime",
-                    title: this.resources.lasrRunTime,
+                    title: this.resources.lastRunTime,
                     width: 150,
                     template: "#= kendo.toString(kendo.parseDate(lastRunTime, 'yyyy-MM-ddTHH:mm:ss'), 'MM.dd.yyyy HH:mm:ss') #"
 

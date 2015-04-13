@@ -3,7 +3,12 @@ define(function () {
 
 	var resources = {
 	    AdminService: 'Administration services',
-	    WebSiteMonitorAdjustment: 'Adjustments'
+	    WebSiteMonitorAdjustment: 'Adjustments',
+	    name: "Name",
+	    checkStatus: "Status",
+	    checkDate: "Check time",
+	    attempt: "Attempt counter",
+	    message: "Message"
 	};
         
 	return resources;

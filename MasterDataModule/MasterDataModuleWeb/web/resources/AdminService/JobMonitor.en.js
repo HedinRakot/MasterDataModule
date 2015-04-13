@@ -4,7 +4,14 @@ define(function () {
 	var resources = {
 	    AdminService: 'Administration services',
 	    JobMonitor: 'Jobs monitor',
-	    JobMonitorAdjustment: 'Adjustments'
+	    JobMonitorAdjustment: 'Adjustments',
+	    name: 'Name',
+	    checkStatus: 'Status',
+	    checkDate: 'Check time',
+	    attempt: 'Attempt counter',
+	    message: 'Message',
+	    jobName: 'Job name',
+	    lastRunTime: 'Last run time'
 	};
         
 	return resources;

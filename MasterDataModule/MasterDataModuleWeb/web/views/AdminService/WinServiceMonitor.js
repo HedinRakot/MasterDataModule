@@ -25,7 +25,7 @@
         columns: function () {
             return [
                 { field: "name", title: this.resources.name, width: 200 },
-                { field: "machineName", title: this.resources.name, width: 200 },
+                { field: "machineName", title: this.resources.machineName, width: 200 },
                 {
                     field: "checkStatus",
                     width: 50,

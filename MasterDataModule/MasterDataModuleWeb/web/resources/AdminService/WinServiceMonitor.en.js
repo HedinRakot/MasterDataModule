@@ -3,7 +3,13 @@ define(function () {
 
 	var resources = {
 	    AdminService: 'Administration services',
-	    WinServiceMonitorAdjustment: 'Adjustments'
+	    WinServiceMonitorAdjustment: 'Adjustments',
+	    name: "Name",
+	    checkStatus: "Status",
+	    checkDate: "Check time",
+	    attempt: "Attempt counter",
+	    message: "Message",
+	    machineName: 'Machine name'
 	};
         
 	return resources;
