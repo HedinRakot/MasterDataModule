@@ -5,6 +5,7 @@ using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Data.Interfaces.Enums;
 using MonitoringAgent.Notifications.Interfaces;
 using MonitoringAgent.Services.Common.Contracts;
+using MonitoringAgent.Services.Common.SignalRNotification;
 
 namespace MonitoringAgent.Services.Common.Base
 {
@@ -51,6 +52,9 @@ namespace MonitoringAgent.Services.Common.Base
                 timer.Change(Timeout.Infinite, Timeout.Infinite);
 
                 var checkingResult = CheckService(info.Info);
+
+                //var hub = new HubNotificator();
+                //hub.SendNotification(CheckModuleType, 1, "bla", "bla");
 
                 if (info.Notifications.Count > 0)
                 {
