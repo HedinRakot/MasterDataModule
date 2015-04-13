@@ -27,6 +27,8 @@ namespace MasterDataModule.API.Controllers.Settings
             model.message = entity.Message;
             model.attempt = entity.Attempt;
             model.masterDataSiteInfoId = entity.MasterDataSiteInfoId;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
             model.createDate = ((ISystemFields)entity).CreateDate;
             model.changeDate = ((ISystemFields)entity).ChangeDate;
         }
@@ -37,6 +39,8 @@ namespace MasterDataModule.API.Controllers.Settings
             entity.Message = model.message;
             entity.Attempt = model.attempt;
             entity.MasterDataSiteInfoId = model.masterDataSiteInfoId;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

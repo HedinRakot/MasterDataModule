@@ -27,6 +27,8 @@ namespace MasterDataModule.API.Controllers.Settings
             model.timeoutChecking = entity.TimeoutChecking;
             model.name = entity.Name;
             model.jobName = entity.JobName;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
             model.createDate = ((ISystemFields)entity).CreateDate;
             model.changeDate = ((ISystemFields)entity).ChangeDate;
         }
@@ -37,6 +39,8 @@ namespace MasterDataModule.API.Controllers.Settings
             entity.TimeoutChecking = model.timeoutChecking;
             entity.Name = model.name;
             entity.JobName = model.jobName;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

@@ -1,3 +1,4 @@
+using MasterDataModule.API.Validation;
 using MasterDataModule.Contracts.Entities;
 using MasterDataModule.Contracts.Entities.Configuration;
 using System;
@@ -38,6 +39,18 @@ namespace MasterDataModule.API.Models.Settings
         /// </summary>
         [DataMember]
         public int masterDataSiteInfoId{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="MasterDataSiteCheckResults.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="MasterDataSiteCheckResults.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

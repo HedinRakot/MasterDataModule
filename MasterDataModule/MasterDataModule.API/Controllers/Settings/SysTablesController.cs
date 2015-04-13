@@ -25,6 +25,8 @@ namespace MasterDataModule.API.Controllers.Settings
             model.name = entity.Name;
             model.description = entity.Description;
             model.editMode = entity.EditMode;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
             model.createDate = ((ISystemFields)entity).CreateDate;
             model.changeDate = ((ISystemFields)entity).ChangeDate;
 
@@ -35,6 +37,8 @@ namespace MasterDataModule.API.Controllers.Settings
             entity.Name = model.name;
             entity.Description = model.description;
             entity.EditMode = model.editMode;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

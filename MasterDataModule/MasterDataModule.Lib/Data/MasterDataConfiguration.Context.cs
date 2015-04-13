@@ -33,13 +33,13 @@ namespace MasterDataModule.Lib.Data
             modelBuilder.Configurations.Add(SysColumnMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataWindowsServiceCheckResultsMapping.Instance);
             modelBuilder.Configurations.Add(SysTableMapping.Instance);
-            modelBuilder.Configurations.Add(MasterDataSubscribersMapping.Instance);
-            modelBuilder.Configurations.Add(MasterDataMonitorableInfoMasterDataNotificationsRspMapping.Instance);
-            modelBuilder.Configurations.Add(MasterDataNotificationsMasterDataSubscribersRspMapping.Instance);
             modelBuilder.Configurations.Add(RoleMapping.Instance);
             modelBuilder.Configurations.Add(PermissionMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataRolePermissionRspMapping.Instance);
             modelBuilder.Configurations.Add(UserMapping.Instance);
+            modelBuilder.Configurations.Add(MasterDataSubscribersMapping.Instance);
+            modelBuilder.Configurations.Add(MasterDataMonitorableInfoMasterDataNotificationsRspMapping.Instance);
+            modelBuilder.Configurations.Add(MasterDataNotificationsMasterDataSubscribersRspMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataNotificationsMapping.Instance);
         }
 
@@ -92,18 +92,6 @@ namespace MasterDataModule.Lib.Data
         /// </summary>
         public IQueryable<SysTable> SysTable{ get; set; }
         /// <summary>
-        ///     Set of <see cref="MasterDataSubscribers"/> entities from table dbo.MASTER_DATA_SUBSCRIBERS
-        /// </summary>
-        public IQueryable<MasterDataSubscribers> MasterDataSubscribers{ get; set; }
-        /// <summary>
-        ///     Set of <see cref="MasterDataMonitorableInfoMasterDataNotificationsRsp"/> entities from table dbo.MASTER_DATA_MONITORABLE_INFO_MASTER_DATA_NOTIFICATIONS_RSP
-        /// </summary>
-        public IQueryable<MasterDataMonitorableInfoMasterDataNotificationsRsp> MasterDataMonitorableInfoMasterDataNotificationsRsp{ get; set; }
-        /// <summary>
-        ///     Set of <see cref="MasterDataNotificationsMasterDataSubscribersRsp"/> entities from table dbo.MASTER_DATA_NOTIFICATIONS_MASTER_DATA_SUBSCRIBERS_RSP
-        /// </summary>
-        public IQueryable<MasterDataNotificationsMasterDataSubscribersRsp> MasterDataNotificationsMasterDataSubscribersRsp{ get; set; }
-        /// <summary>
         ///     Set of <see cref="Role"/> entities from table dbo.MASTER_DATA_ROLE
         /// </summary>
         public IQueryable<Role> Role{ get; set; }
@@ -119,6 +107,18 @@ namespace MasterDataModule.Lib.Data
         ///     Set of <see cref="User"/> entities from table dbo.MASTER_DATA_USER
         /// </summary>
         public IQueryable<User> User{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="MasterDataSubscribers"/> entities from table dbo.MASTER_DATA_SUBSCRIBERS
+        /// </summary>
+        public IQueryable<MasterDataSubscribers> MasterDataSubscribers{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="MasterDataMonitorableInfoMasterDataNotificationsRsp"/> entities from table dbo.MASTER_DATA_MONITORABLE_INFO_MASTER_DATA_NOTIFICATIONS_RSP
+        /// </summary>
+        public IQueryable<MasterDataMonitorableInfoMasterDataNotificationsRsp> MasterDataMonitorableInfoMasterDataNotificationsRsp{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="MasterDataNotificationsMasterDataSubscribersRsp"/> entities from table dbo.MASTER_DATA_NOTIFICATIONS_MASTER_DATA_SUBSCRIBERS_RSP
+        /// </summary>
+        public IQueryable<MasterDataNotificationsMasterDataSubscribersRsp> MasterDataNotificationsMasterDataSubscribersRsp{ get; set; }
         /// <summary>
         ///     Set of <see cref="MasterDataNotifications"/> entities from table dbo.MASTER_DATA_NOTIFICATIONS
         /// </summary>

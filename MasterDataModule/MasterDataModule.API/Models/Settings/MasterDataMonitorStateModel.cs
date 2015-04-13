@@ -1,3 +1,4 @@
+using MasterDataModule.API.Validation;
 using MasterDataModule.Contracts.Entities;
 using MasterDataModule.Contracts.Entities.Configuration;
 using System;
@@ -21,6 +22,7 @@ namespace MasterDataModule.API.Models.Settings
         /// <summary>
         ///     Model property for <see cref="MasterDataMonitorState.ReconfigureCheckingTimeout"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public int reconfigureCheckingTimeout{ get; set; }
 

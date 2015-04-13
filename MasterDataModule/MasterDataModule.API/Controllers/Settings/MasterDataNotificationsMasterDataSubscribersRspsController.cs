@@ -24,6 +24,8 @@ namespace MasterDataModule.API.Controllers.Settings
         {
             model.masterDataNotificationsId = entity.MasterDataNotificationsId;
             model.masterDataSubscribersId = entity.MasterDataSubscribersId;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
             model.createDate = ((ISystemFields)entity).CreateDate;
             model.changeDate = ((ISystemFields)entity).ChangeDate;
         }
@@ -31,6 +33,8 @@ namespace MasterDataModule.API.Controllers.Settings
         {
             entity.MasterDataNotificationsId = model.masterDataNotificationsId;
             entity.MasterDataSubscribersId = model.masterDataSubscribersId;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

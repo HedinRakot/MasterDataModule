@@ -47,6 +47,14 @@ namespace MasterDataModule.Lib.Data.Configuration
             Property(t => t.DeleteDate)
                 .HasColumnName(MasterDataNotificationsMasterDataSubscribersRsp.Fields.DeleteDate);
 
+            Property(t => t.FromDate)
+                .HasColumnName(MasterDataNotificationsMasterDataSubscribersRsp.Fields.FromDate)
+                .IsRequired();
+
+            Property(t => t.ToDate)
+                .HasColumnName(MasterDataNotificationsMasterDataSubscribersRsp.Fields.ToDate)
+                .IsRequired();
+
 
             //Relationships
             HasRequired(m => m.MasterDataSubscribers)

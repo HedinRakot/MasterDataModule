@@ -25,6 +25,8 @@ namespace MasterDataModule.API.Controllers.Settings
             model.monitorableInfoType = entity.MonitorableInfoType;
             model.monitorableInfoId = entity.MonitorableInfoId;
             model.masterDataNotificationsId = entity.MasterDataNotificationsId;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
             model.createDate = ((ISystemFields)entity).CreateDate;
             model.changeDate = ((ISystemFields)entity).ChangeDate;
 
@@ -35,6 +37,8 @@ namespace MasterDataModule.API.Controllers.Settings
             entity.MonitorableInfoType = model.monitorableInfoType;
             entity.MonitorableInfoId = model.monitorableInfoId;
             entity.MasterDataNotificationsId = model.masterDataNotificationsId;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

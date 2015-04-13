@@ -23,12 +23,16 @@ namespace MasterDataModule.API.Controllers.Settings
         protected override void EntityToModel(MasterDataSubscribers entity, MasterDataSubscribersModel model)
         {
             model.email = entity.Email;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
             model.createDate = ((ISystemFields)entity).CreateDate;
             model.changeDate = ((ISystemFields)entity).ChangeDate;
         }
         protected override void ModelToEntity(MasterDataSubscribersModel model, MasterDataSubscribers entity, ActionTypes actionType)
         {
             entity.Email = model.email;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

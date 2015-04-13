@@ -64,18 +64,6 @@ namespace MasterDataModule.Contracts
         /// </summary>
         IQueryable<SysTable> SysTable{get;}
         /// <summary>
-        ///     Set of <see cref="MasterDataSubscribers"/> entities from table dbo.MASTER_DATA_SUBSCRIBERS
-        /// </summary>
-        IQueryable<MasterDataSubscribers> MasterDataSubscribers{get;}
-        /// <summary>
-        ///     Set of <see cref="MasterDataMonitorableInfoMasterDataNotificationsRsp"/> entities from table dbo.MASTER_DATA_MONITORABLE_INFO_MASTER_DATA_NOTIFICATIONS_RSP
-        /// </summary>
-        IQueryable<MasterDataMonitorableInfoMasterDataNotificationsRsp> MasterDataMonitorableInfoMasterDataNotificationsRsp{get;}
-        /// <summary>
-        ///     Set of <see cref="MasterDataNotificationsMasterDataSubscribersRsp"/> entities from table dbo.MASTER_DATA_NOTIFICATIONS_MASTER_DATA_SUBSCRIBERS_RSP
-        /// </summary>
-        IQueryable<MasterDataNotificationsMasterDataSubscribersRsp> MasterDataNotificationsMasterDataSubscribersRsp{get;}
-        /// <summary>
         ///     Set of <see cref="Role"/> entities from table dbo.MASTER_DATA_ROLE
         /// </summary>
         IQueryable<Role> Role{get;}
@@ -91,6 +79,18 @@ namespace MasterDataModule.Contracts
         ///     Set of <see cref="User"/> entities from table dbo.MASTER_DATA_USER
         /// </summary>
         IQueryable<User> User{get;}
+        /// <summary>
+        ///     Set of <see cref="MasterDataSubscribers"/> entities from table dbo.MASTER_DATA_SUBSCRIBERS
+        /// </summary>
+        IQueryable<MasterDataSubscribers> MasterDataSubscribers{get;}
+        /// <summary>
+        ///     Set of <see cref="MasterDataMonitorableInfoMasterDataNotificationsRsp"/> entities from table dbo.MASTER_DATA_MONITORABLE_INFO_MASTER_DATA_NOTIFICATIONS_RSP
+        /// </summary>
+        IQueryable<MasterDataMonitorableInfoMasterDataNotificationsRsp> MasterDataMonitorableInfoMasterDataNotificationsRsp{get;}
+        /// <summary>
+        ///     Set of <see cref="MasterDataNotificationsMasterDataSubscribersRsp"/> entities from table dbo.MASTER_DATA_NOTIFICATIONS_MASTER_DATA_SUBSCRIBERS_RSP
+        /// </summary>
+        IQueryable<MasterDataNotificationsMasterDataSubscribersRsp> MasterDataNotificationsMasterDataSubscribersRsp{get;}
         /// <summary>
         ///     Set of <see cref="MasterDataNotifications"/> entities from table dbo.MASTER_DATA_NOTIFICATIONS
         /// </summary>

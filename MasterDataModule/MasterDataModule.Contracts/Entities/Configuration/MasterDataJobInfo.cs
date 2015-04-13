@@ -3,7 +3,11 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities.Configuration
 {
+    /// <summary>
+    ///     DE: Hintergrundprozess Einstellungen  EN: Job info
+    /// </summary>
     public partial class MasterDataJobInfo: IHasId<int>
+        ,IIntervalFields
         ,IRemovable
         ,ISystemFields
     {
@@ -53,18 +57,64 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             /// Column name 'CHANGE_DATE' for property <see cref="MasterDataJobInfo.ChangeDate"/>
             /// </summary>
             public static readonly string ChangeDate = "CHANGE_DATE";
+            /// <summary>
+            /// Column name 'FROM_DATE' for property <see cref="MasterDataJobInfo.FromDate"/>
+            /// </summary>
+            public static readonly string FromDate = "FROM_DATE";
+            /// <summary>
+            /// Column name 'TO_DATE' for property <see cref="MasterDataJobInfo.ToDate"/>
+            /// </summary>
+            public static readonly string ToDate = "TO_DATE";
           
         }
         #endregion
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Connection string  EN: Connection string
+
+        /// </summary>
         public string ConnectionString{ get; set; }
+        /// <summary>
+        ///     DE: Tabelle  EN: Table name
+
+        /// </summary>
         public string TableName{ get; set; }
+        /// <summary>
+        ///     DE: Timeout checking  EN: Timeout checking
+
+        /// </summary>
         public int TimeoutChecking{ get; set; }
+        /// <summary>
+        ///     DE: Name  EN: Name
+
+        /// </summary>
         public string Name{ get; set; }
+        /// <summary>
+        ///     DE: Hintergrundprozess Name  EN:  Job name
+
+        /// </summary>
         public string JobName{ get; set; }
         public DateTime CreateDate{ get; set; }
         public DateTime? DeleteDate{ get; set; }
         public DateTime ChangeDate{ get; set; }
+        /// <summary>
+        ///     DE:Von Datum  EN:  Date from
+        /// </summary>
+        public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE:Bis Datum  EN:  Date to
+        /// </summary>
+        public DateTime ToDate{ get; set; }
+        DateTime? IIntervalFields.FromDate
+        {
+            get { return FromDate; }
+            set { if(value.HasValue)FromDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        DateTime? IIntervalFields.ToDate
+        {
+            get { return ToDate; }
+            set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
         DateTime ISystemFields.CreateDate
         {
             get { return CreateDate; }
@@ -91,6 +141,8 @@ namespace MasterDataModule.Contracts.Entities.Configuration
                        CreateDate = CreateDate,
                        DeleteDate = DeleteDate,
                        ChangeDate = ChangeDate,
+                       FromDate = FromDate,
+                       ToDate = ToDate,
         	           };
         }
     }

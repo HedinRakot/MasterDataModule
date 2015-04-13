@@ -51,6 +51,14 @@ namespace MasterDataModule.Lib.Data.Configuration
             Property(t => t.DeleteDate)
                 .HasColumnName(MasterDataMonitorableInfoMasterDataNotificationsRsp.Fields.DeleteDate);
 
+            Property(t => t.FromDate)
+                .HasColumnName(MasterDataMonitorableInfoMasterDataNotificationsRsp.Fields.FromDate)
+                .IsRequired();
+
+            Property(t => t.ToDate)
+                .HasColumnName(MasterDataMonitorableInfoMasterDataNotificationsRsp.Fields.ToDate)
+                .IsRequired();
+
 
             //Relationships
         }

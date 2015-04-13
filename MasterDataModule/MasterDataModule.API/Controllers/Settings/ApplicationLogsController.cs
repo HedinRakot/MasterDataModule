@@ -26,6 +26,8 @@ namespace MasterDataModule.API.Controllers.Settings
             model.logLevel = entity.LogLevel;
             model.date = entity.Date;
             model.message = entity.Message;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
             model.createDate = ((ISystemFields)entity).CreateDate;
             model.changeDate = ((ISystemFields)entity).ChangeDate;
         }
@@ -35,6 +37,8 @@ namespace MasterDataModule.API.Controllers.Settings
             entity.LogLevel = model.logLevel;
             entity.Date = model.date;
             entity.Message = model.message;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

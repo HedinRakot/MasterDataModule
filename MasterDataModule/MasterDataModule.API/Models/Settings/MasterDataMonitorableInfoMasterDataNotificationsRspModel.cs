@@ -1,3 +1,4 @@
+using MasterDataModule.API.Validation;
 using MasterDataModule.Contracts.Entities;
 using MasterDataModule.Contracts.Entities.Configuration;
 using System;
@@ -16,18 +17,33 @@ namespace MasterDataModule.API.Models.Settings
         /// <summary>
         ///     Model property for <see cref="MasterDataMonitorableInfoMasterDataNotificationsRsp.MonitorableInfoType"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public int monitorableInfoType{ get; set; }
         /// <summary>
         ///     Model property for <see cref="MasterDataMonitorableInfoMasterDataNotificationsRsp.MonitorableInfoId"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public int monitorableInfoId{ get; set; }
         /// <summary>
         ///     Model property for <see cref="MasterDataMonitorableInfoMasterDataNotificationsRsp.MasterDataNotificationsId"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public int masterDataNotificationsId{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="MasterDataMonitorableInfoMasterDataNotificationsRsp.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="MasterDataMonitorableInfoMasterDataNotificationsRsp.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

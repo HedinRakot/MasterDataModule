@@ -4,8 +4,12 @@ using System.Collections.Generic;
 
 namespace MasterDataModule.Contracts.Entities.Configuration
 {
+    /// <summary>
+    ///     DE: Monitor Empfänger  EN: Subscribers
+    /// </summary>
     public partial class MasterDataSubscribers: IHasId<int>
         ,IHasTitle
+        ,IIntervalFields
         ,IRemovable
         ,ISystemFields
     {
@@ -39,15 +43,45 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             /// Column name 'DELETE_DATE' for property <see cref="MasterDataSubscribers.DeleteDate"/>
             /// </summary>
             public static readonly string DeleteDate = "DELETE_DATE";
+            /// <summary>
+            /// Column name 'FROM_DATE' for property <see cref="MasterDataSubscribers.FromDate"/>
+            /// </summary>
+            public static readonly string FromDate = "FROM_DATE";
+            /// <summary>
+            /// Column name 'TO_DATE' for property <see cref="MasterDataSubscribers.ToDate"/>
+            /// </summary>
+            public static readonly string ToDate = "TO_DATE";
           
         }
         #endregion
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: E-mail  EN: E-mail
+
+        /// </summary>
         public string Email{ get; set; }
         public DateTime CreateDate{ get; set; }
         public DateTime ChangeDate{ get; set; }
         public DateTime? DeleteDate{ get; set; }
+        /// <summary>
+        ///     DE:Von Datum  EN:  Date from
+        /// </summary>
+        public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE:Bis Datum  EN:  Date to
+        /// </summary>
+        public DateTime ToDate{ get; set; }
         public virtual ICollection<MasterDataNotificationsMasterDataSubscribersRsp> MasterDataNotificationsMasterDataSubscribersRsps{ get; set; }
+        DateTime? IIntervalFields.FromDate
+        {
+            get { return FromDate; }
+            set { if(value.HasValue)FromDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        DateTime? IIntervalFields.ToDate
+        {
+            get { return ToDate; }
+            set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
         string IHasTitle.EntityTitle
         {
             get { return Email; }
@@ -74,6 +108,8 @@ namespace MasterDataModule.Contracts.Entities.Configuration
                        CreateDate = CreateDate,
                        ChangeDate = ChangeDate,
                        DeleteDate = DeleteDate,
+                       FromDate = FromDate,
+                       ToDate = ToDate,
         	           };
         }
     }

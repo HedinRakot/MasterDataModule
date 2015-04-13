@@ -53,6 +53,14 @@ namespace MasterDataModule.Lib.Data.Configuration
                 .HasColumnName(ApplicationLogs.Fields.CreateDate)
                 .IsRequired();
 
+            Property(t => t.FromDate)
+                .HasColumnName(ApplicationLogs.Fields.FromDate)
+                .IsRequired();
+
+            Property(t => t.ToDate)
+                .HasColumnName(ApplicationLogs.Fields.ToDate)
+                .IsRequired();
+
 
             //Relationships
         }

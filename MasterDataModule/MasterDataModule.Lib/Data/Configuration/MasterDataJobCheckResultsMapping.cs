@@ -52,6 +52,14 @@ namespace MasterDataModule.Lib.Data.Configuration
                 .HasColumnName(MasterDataJobCheckResults.Fields.ChangeDate)
                 .IsRequired();
 
+            Property(t => t.FromDate)
+                .HasColumnName(MasterDataJobCheckResults.Fields.FromDate)
+                .IsRequired();
+
+            Property(t => t.ToDate)
+                .HasColumnName(MasterDataJobCheckResults.Fields.ToDate)
+                .IsRequired();
+
 
             //Relationships
         }

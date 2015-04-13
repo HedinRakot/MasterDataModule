@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities.Configuration
 {
+    /// <summary>
+    ///     DE: Stammdaten Berechtigung  EN: Master data permissiom
+    /// </summary>
     public partial class MasterDataRolePermissionRsp: IHasId<int>
         ,IIntervalFields
         ,IRemovable
@@ -74,7 +77,15 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         }
         #endregion
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Rolle  EN: Master data role
+
+        /// </summary>
         public int MasterDataRoleId{ get; set; }
+        /// <summary>
+        ///     DE: Berechtigung  EN: Master data permission
+
+        /// </summary>
         public int MasterDataPermissionId{ get; set; }
         public DateTime CreateDate{ get; set; }
         public DateTime ChangeDate{ get; set; }
@@ -84,7 +95,15 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int? CreateEmployeeId{ get; set; }
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+
+        /// </summary>
         public DateTime ToDate{ get; set; }
         public virtual Permission Permission{ get; set; }
         public virtual Role Role{ get; set; }

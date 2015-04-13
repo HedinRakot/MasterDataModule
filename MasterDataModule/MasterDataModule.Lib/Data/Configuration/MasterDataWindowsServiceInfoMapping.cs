@@ -58,6 +58,14 @@ namespace MasterDataModule.Lib.Data.Configuration
                 .HasColumnName(MasterDataWindowsServiceInfo.Fields.ChangeDate)
                 .IsRequired();
 
+            Property(t => t.FromDate)
+                .HasColumnName(MasterDataWindowsServiceInfo.Fields.FromDate)
+                .IsRequired();
+
+            Property(t => t.ToDate)
+                .HasColumnName(MasterDataWindowsServiceInfo.Fields.ToDate)
+                .IsRequired();
+
 
             //Relationships
         }

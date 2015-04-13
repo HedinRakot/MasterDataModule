@@ -56,6 +56,14 @@ namespace MasterDataModule.Lib.Data.Configuration
                 .HasColumnName(MasterDataWcfCheckResults.Fields.ChangeDate)
                 .IsRequired();
 
+            Property(t => t.FromDate)
+                .HasColumnName(MasterDataWcfCheckResults.Fields.FromDate)
+                .IsRequired();
+
+            Property(t => t.ToDate)
+                .HasColumnName(MasterDataWcfCheckResults.Fields.ToDate)
+                .IsRequired();
+
 
             //Relationships
             HasRequired(m => m.MasterDataWcfInfo)

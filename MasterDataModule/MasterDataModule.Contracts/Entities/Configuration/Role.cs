@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace MasterDataModule.Contracts.Entities.Configuration
 {
+    /// <summary>
+    ///     DE: Stammdaten Rolle  EN: Master data role
+    /// </summary>
     public partial class Role: IHasId<int>
         ,IHasTitle
         ,IIntervalFields
@@ -72,6 +75,10 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         }
         #endregion
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Name  EN: Name
+
+        /// </summary>
         public string Name{ get; set; }
         public DateTime CreateDate{ get; set; }
         public DateTime ChangeDate{ get; set; }
@@ -81,7 +88,15 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public int? CreateEmployeeId{ get; set; }
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+
+        /// </summary>
         public DateTime ToDate{ get; set; }
         public virtual ICollection<MasterDataRolePermissionRsp> MasterDataRolePermissionRsps{ get; set; }
         public virtual ICollection<User> Users{ get; set; }

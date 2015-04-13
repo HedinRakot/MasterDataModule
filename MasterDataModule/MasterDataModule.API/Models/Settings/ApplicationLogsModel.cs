@@ -38,6 +38,18 @@ namespace MasterDataModule.API.Models.Settings
         [Required]
         [DataMember]
         public string message{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="ApplicationLogs.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="ApplicationLogs.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

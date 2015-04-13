@@ -30,6 +30,18 @@ namespace MasterDataModule.API.Models.Settings
         /// </summary>
         [DataMember]
         public int editMode{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="SysTable.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="SysTable.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

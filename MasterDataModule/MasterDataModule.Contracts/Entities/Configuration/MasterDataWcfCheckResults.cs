@@ -3,7 +3,11 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities.Configuration
 {
+    /// <summary>
+    ///     DE: Web-Services Monitor  EN: Wcf check result
+    /// </summary>
     public partial class MasterDataWcfCheckResults: IHasId<int>
+        ,IIntervalFields
         ,IRemovable
         ,ISystemFields
     {
@@ -53,22 +57,68 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             /// Column name 'CHANGE_DATE' for property <see cref="MasterDataWcfCheckResults.ChangeDate"/>
             /// </summary>
             public static readonly string ChangeDate = "CHANGE_DATE";
+            /// <summary>
+            /// Column name 'FROM_DATE' for property <see cref="MasterDataWcfCheckResults.FromDate"/>
+            /// </summary>
+            public static readonly string FromDate = "FROM_DATE";
+            /// <summary>
+            /// Column name 'TO_DATE' for property <see cref="MasterDataWcfCheckResults.ToDate"/>
+            /// </summary>
+            public static readonly string ToDate = "TO_DATE";
           
         }
         #endregion
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Status  EN: Status
+
+        /// </summary>
         public int? CheckStatus{ get; set; }
+        /// <summary>
+        ///     DE: Datum  EN: Check date
+
+        /// </summary>
         public DateTime? CheckDate{ get; set; }
+        /// <summary>
+        ///     DE: Nachricht  EN: Message
+
+        /// </summary>
         public string Message{ get; set; }
+        /// <summary>
+        ///     DE: Zähler  EN: Attempt
+
+        /// </summary>
         public int? Attempt{ get; set; }
+        /// <summary>
+        ///     DE: Web Service  EN: Wcf info
+
+        /// </summary>
         public int MasterDataWcfInfoId{ get; set; }
         public DateTime CreateDate{ get; set; }
         public DateTime? DeleteDate{ get; set; }
         public DateTime ChangeDate{ get; set; }
+        /// <summary>
+        ///     DE:Von Datum  EN:  Date from
+        /// </summary>
+        public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE:Bis Datum  EN:  Date to
+        /// </summary>
+        public DateTime ToDate{ get; set; }
         public virtual MasterDataWcfInfo MasterDataWcfInfo{ get; set; }
         public bool HasMasterDataWcfInfo
         {
             get { return !ReferenceEquals(MasterDataWcfInfo, null); }
+        }
+        DateTime? IIntervalFields.FromDate
+        {
+            get { return FromDate; }
+            set { if(value.HasValue)FromDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        DateTime? IIntervalFields.ToDate
+        {
+            get { return ToDate; }
+            set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
         DateTime ISystemFields.CreateDate
         {
@@ -96,6 +146,8 @@ namespace MasterDataModule.Contracts.Entities.Configuration
                        CreateDate = CreateDate,
                        DeleteDate = DeleteDate,
                        ChangeDate = ChangeDate,
+                       FromDate = FromDate,
+                       ToDate = ToDate,
         	           };
         }
     }

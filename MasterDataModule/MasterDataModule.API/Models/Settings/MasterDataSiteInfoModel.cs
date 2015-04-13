@@ -31,6 +31,18 @@ namespace MasterDataModule.API.Models.Settings
         [Required]
         [DataMember]
         public string sitePath{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="MasterDataSiteInfo.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="MasterDataSiteInfo.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

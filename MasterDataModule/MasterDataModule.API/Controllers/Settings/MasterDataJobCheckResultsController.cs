@@ -26,6 +26,8 @@ namespace MasterDataModule.API.Controllers.Settings
             model.checkDate = entity.CheckDate;
             model.checkStatus = entity.CheckStatus;
             model.masterDataJobInfoId = entity.MasterDataJobInfoId;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
             model.createDate = ((ISystemFields)entity).CreateDate;
             model.changeDate = ((ISystemFields)entity).ChangeDate;
         }
@@ -35,6 +37,8 @@ namespace MasterDataModule.API.Controllers.Settings
             entity.CheckDate = model.checkDate;
             entity.CheckStatus = model.checkStatus;
             entity.MasterDataJobInfoId = model.masterDataJobInfoId;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

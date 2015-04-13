@@ -46,6 +46,14 @@ namespace MasterDataModule.Lib.Data.Configuration
                 .HasColumnName(MasterDataMonitorState.Fields.ChangeDate)
                 .IsRequired();
 
+            Property(t => t.FromDate)
+                .HasColumnName(MasterDataMonitorState.Fields.FromDate)
+                .IsRequired();
+
+            Property(t => t.ToDate)
+                .HasColumnName(MasterDataMonitorState.Fields.ToDate)
+                .IsRequired();
+
 
             //Relationships
         }

@@ -4,7 +4,11 @@ using System.Collections.Generic;
 
 namespace MasterDataModule.Contracts.Entities.Configuration
 {
+    /// <summary>
+    ///     DE: Windows Services Einstellungen  EN: Windows service info
+    /// </summary>
     public partial class MasterDataWindowsServiceInfo: IHasId<int>
+        ,IIntervalFields
         ,IRemovable
         ,ISystemFields
     {
@@ -50,18 +54,60 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             /// Column name 'CHANGE_DATE' for property <see cref="MasterDataWindowsServiceInfo.ChangeDate"/>
             /// </summary>
             public static readonly string ChangeDate = "CHANGE_DATE";
+            /// <summary>
+            /// Column name 'FROM_DATE' for property <see cref="MasterDataWindowsServiceInfo.FromDate"/>
+            /// </summary>
+            public static readonly string FromDate = "FROM_DATE";
+            /// <summary>
+            /// Column name 'TO_DATE' for property <see cref="MasterDataWindowsServiceInfo.ToDate"/>
+            /// </summary>
+            public static readonly string ToDate = "TO_DATE";
           
         }
         #endregion
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Name  EN: Name
+
+        /// </summary>
         public string Name{ get; set; }
+        /// <summary>
+        ///     DE: Machine Name  EN: Machine name
+
+        /// </summary>
         public string MachineName{ get; set; }
+        /// <summary>
+        ///     DE: Windows-Service Name  EN: Service name
+
+        /// </summary>
         public string ServiceName{ get; set; }
+        /// <summary>
+        ///     DE: Timeout  EN: Timeout checking
+
+        /// </summary>
         public int TimeoutChecking{ get; set; }
         public DateTime CreateDate{ get; set; }
         public DateTime? DeleteDate{ get; set; }
         public DateTime ChangeDate{ get; set; }
+        /// <summary>
+        ///     DE:Von Datum  EN:  Date from
+        /// </summary>
+        public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE:Bis Datum  EN:  Date to
+        /// </summary>
+        public DateTime ToDate{ get; set; }
         public virtual ICollection<MasterDataWindowsServiceCheckResults> MasterDataWindowsServiceCheckResults{ get; set; }
+        DateTime? IIntervalFields.FromDate
+        {
+            get { return FromDate; }
+            set { if(value.HasValue)FromDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        DateTime? IIntervalFields.ToDate
+        {
+            get { return ToDate; }
+            set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
         DateTime ISystemFields.CreateDate
         {
             get { return CreateDate; }
@@ -87,6 +133,8 @@ namespace MasterDataModule.Contracts.Entities.Configuration
                        CreateDate = CreateDate,
                        DeleteDate = DeleteDate,
                        ChangeDate = ChangeDate,
+                       FromDate = FromDate,
+                       ToDate = ToDate,
         	           };
         }
     }

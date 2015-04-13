@@ -3,7 +3,11 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities.Configuration
 {
+    /// <summary>
+    ///     DE: Applikation-Logs  EN: Applications logs
+    /// </summary>
     public partial class ApplicationLogs: IHasId<int>
+        ,IIntervalFields
         ,IRemovable
         ,ISystemFields
     {
@@ -49,17 +53,59 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             /// Column name 'CREATE_DATE' for property <see cref="ApplicationLogs.CreateDate"/>
             /// </summary>
             public static readonly string CreateDate = "CREATE_DATE";
+            /// <summary>
+            /// Column name 'FROM_DATE' for property <see cref="ApplicationLogs.FromDate"/>
+            /// </summary>
+            public static readonly string FromDate = "FROM_DATE";
+            /// <summary>
+            /// Column name 'TO_DATE' for property <see cref="ApplicationLogs.ToDate"/>
+            /// </summary>
+            public static readonly string ToDate = "TO_DATE";
           
         }
         #endregion
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Log-Typ  EN: Logs type
+
+        /// </summary>
         public int LogType{ get; set; }
+        /// <summary>
+        ///     DE: Log-Stufe  EN: logs level
+
+        /// </summary>
         public int LogLevel{ get; set; }
+        /// <summary>
+        ///     DE: Datum  EN: Date
+
+        /// </summary>
         public DateTime? Date{ get; set; }
+        /// <summary>
+        ///     DE: Text  EN: Text
+
+        /// </summary>
         public string Message{ get; set; }
         public DateTime? DeleteDate{ get; set; }
         public DateTime ChangeDate{ get; set; }
         public DateTime CreateDate{ get; set; }
+        /// <summary>
+        ///     DE:Von Datum  EN:  Date from
+        /// </summary>
+        public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE:Bis Datum  EN:  Date to
+        /// </summary>
+        public DateTime ToDate{ get; set; }
+        DateTime? IIntervalFields.FromDate
+        {
+            get { return FromDate; }
+            set { if(value.HasValue)FromDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        DateTime? IIntervalFields.ToDate
+        {
+            get { return ToDate; }
+            set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
         DateTime ISystemFields.CreateDate
         {
             get { return CreateDate; }
@@ -86,6 +132,8 @@ namespace MasterDataModule.Contracts.Entities.Configuration
                        DeleteDate = DeleteDate,
                        ChangeDate = ChangeDate,
                        CreateDate = CreateDate,
+                       FromDate = FromDate,
+                       ToDate = ToDate,
         	           };
         }
     }

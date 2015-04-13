@@ -4,7 +4,11 @@ using System.Collections.Generic;
 
 namespace MasterDataModule.Contracts.Entities.Configuration
 {
+    /// <summary>
+    ///     DE: Web-Site Einstellungen  EN: Master data sites
+    /// </summary>
     public partial class MasterDataSiteInfo: IHasId<int>
+        ,IIntervalFields
         ,IRemovable
         ,ISystemFields
     {
@@ -46,17 +50,55 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             /// Column name 'CHANGE_DATE' for property <see cref="MasterDataSiteInfo.ChangeDate"/>
             /// </summary>
             public static readonly string ChangeDate = "CHANGE_DATE";
+            /// <summary>
+            /// Column name 'FROM_DATE' for property <see cref="MasterDataSiteInfo.FromDate"/>
+            /// </summary>
+            public static readonly string FromDate = "FROM_DATE";
+            /// <summary>
+            /// Column name 'TO_DATE' for property <see cref="MasterDataSiteInfo.ToDate"/>
+            /// </summary>
+            public static readonly string ToDate = "TO_DATE";
           
         }
         #endregion
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Site-Name  EN: Site name
+
+        /// </summary>
         public string Name{ get; set; }
+        /// <summary>
+        ///     DE: Timeout  EN: Timeout
+
+        /// </summary>
         public int TimeoutChecking{ get; set; }
+        /// <summary>
+        ///     DE: Url  EN: Url
+
+        /// </summary>
         public string SitePath{ get; set; }
         public DateTime CreateDate{ get; set; }
         public DateTime? DeleteDate{ get; set; }
         public DateTime ChangeDate{ get; set; }
+        /// <summary>
+        ///     DE:Von Datum  EN:  Date from
+        /// </summary>
+        public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE:Bis Datum  EN:  Date to
+        /// </summary>
+        public DateTime ToDate{ get; set; }
         public virtual ICollection<MasterDataSiteCheckResults> MasterDataSiteCheckResults{ get; set; }
+        DateTime? IIntervalFields.FromDate
+        {
+            get { return FromDate; }
+            set { if(value.HasValue)FromDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
+        DateTime? IIntervalFields.ToDate
+        {
+            get { return ToDate; }
+            set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
+        }
         DateTime ISystemFields.CreateDate
         {
             get { return CreateDate; }
@@ -81,6 +123,8 @@ namespace MasterDataModule.Contracts.Entities.Configuration
                        CreateDate = CreateDate,
                        DeleteDate = DeleteDate,
                        ChangeDate = ChangeDate,
+                       FromDate = FromDate,
+                       ToDate = ToDate,
         	           };
         }
     }

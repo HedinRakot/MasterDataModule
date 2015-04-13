@@ -1,3 +1,4 @@
+using MasterDataModule.API.Validation;
 using MasterDataModule.Contracts.Entities;
 using MasterDataModule.Contracts.Entities.Configuration;
 using System;
@@ -16,8 +17,21 @@ namespace MasterDataModule.API.Models.Settings
         /// <summary>
         ///     Model property for <see cref="MasterDataSubscribers.Email"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public string email{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="MasterDataSubscribers.FromDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime fromDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="MasterDataSubscribers.ToDate"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public DateTime toDate{ get; set; }
 
     }
 }

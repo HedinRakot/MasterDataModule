@@ -28,6 +28,8 @@ namespace MasterDataModule.API.Controllers.Settings
             model.alertAttemptCount = entity.AlertAttemptCount;
             model.message = entity.Message;
             model.subject = entity.Subject;
+            model.fromDate = entity.FromDate;
+            model.toDate = entity.ToDate;
             model.createDate = ((ISystemFields)entity).CreateDate;
             model.changeDate = ((ISystemFields)entity).ChangeDate;
         }
@@ -39,6 +41,8 @@ namespace MasterDataModule.API.Controllers.Settings
             entity.AlertAttemptCount = model.alertAttemptCount;
             entity.Message = model.message;
             entity.Subject = model.subject;
+            entity.FromDate = model.fromDate;
+            entity.ToDate = model.toDate;
         }
     }
 }

@@ -65,6 +65,14 @@ namespace MasterDataModule.Lib.Data.Configuration
                 .IsRequired()
                 .IsUnicode();
 
+            Property(t => t.FromDate)
+                .HasColumnName(MasterDataNotifications.Fields.FromDate)
+                .IsRequired();
+
+            Property(t => t.ToDate)
+                .HasColumnName(MasterDataNotifications.Fields.ToDate)
+                .IsRequired();
+
 
             //Relationships
         }
