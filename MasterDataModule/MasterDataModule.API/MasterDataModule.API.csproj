@@ -956,6 +956,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="JsonHelper.cs" />
     <Compile Include="Security\AuthorizeByPermissionsAttribute.cs" />
+    <Compile Include="SignalR\MonitorableObjectsHub.cs" />
     <Compile Include="SignalR\Startup.cs" />
     <Compile Include="SystemLog\EntityLogger.cs" />
     <Compile Include="SystemLog\EntityLoggerAttribute.cs" />
