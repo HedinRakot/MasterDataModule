@@ -53,8 +53,8 @@ namespace MonitoringAgent.Services.Common.Base
 
                 var checkingResult = CheckService(info.Info);
 
-                var hub = new HubNotificator();
-                hub.SendNotification(CheckModuleType, 1, "bla", "bla");
+                //var hub = new HubNotificator();
+                //hub.SendNotification(CheckModuleType, 1, "bla", "bla");
 
                 if (info.Notifications.Count > 0)
                 {
