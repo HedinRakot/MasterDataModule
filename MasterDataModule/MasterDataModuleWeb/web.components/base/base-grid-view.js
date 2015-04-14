@@ -45,7 +45,7 @@
                 var dropDownListCollection = column.collection;
                 if (column.defaultText) {
                     var dropDownListCollection = column.collection.clone();
-                    dropDownListCollection.unshift(new Backbone.Model({ id: null, name: column.defaultText }));
+                    dropDownListCollection.unshift(new Backbone.Model({ id: '', name: column.defaultText }));
                 }
                 _.extend(column, {
                     editor: _.bind(editorFactory.dropDownList, editorFactory),
@@ -262,6 +262,8 @@
 	        return toolbar.length ? toolbar : null;
 	    },
 
+        excel: null,
+
 	    render: function () {
 	        view.__super__.render.apply(this, arguments);
 
@@ -320,6 +322,7 @@
 	        self.grid = self.gridSelector.kendoGrid({
 	            dataSource: dataSource,
 	            toolbar: _.result(self, 'toolbar'),
+	            excel: self.excel,
 	            columns: processColumns.call(self, _.result(self, 'columns')),
 	            editable: {
 	                mode: 'inline'

@@ -4,7 +4,7 @@
     'use strict';
 
     var editor = function (container, options) {
-        $('<select />').appendTo(container).attr('name', options.field).kendoDropDownList({
+        $('<select required="required" />').appendTo(container).attr('name', options.field).kendoDropDownList({
             dataSource: options.values,
             dataTextField: 'text',
             dataValueField: 'value',
