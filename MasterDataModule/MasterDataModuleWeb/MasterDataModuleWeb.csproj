@@ -223,6 +223,7 @@
     <Content Include="Global.asax" />
     <Content Include="web.libs\jquery.signalR-2.2.0.js" />
     <Content Include="web.libs\jquery.signalR-2.2.0.min.js" />
+    <Content Include="web.libs\jszip.js" />
     <Content Include="web\collections\AdminService\JobStatuses.js" />
     <Content Include="web\collections\AdminService\WebSiteStatuses.js" />
     <Content Include="web\collections\AdminService\WinServiceStatuses.js" />
