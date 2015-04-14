@@ -5,6 +5,7 @@ using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Data.Interfaces.Enums;
 using MonitoringAgent.Notifications.Interfaces;
 using MonitoringAgent.Services.Common.Contracts;
+using MonitoringAgent.Services.Common.Helpers;
 using MonitoringAgent.Services.Common.SignalRNotification;
 
 namespace MonitoringAgent.Services.Common.Base
@@ -17,7 +18,9 @@ namespace MonitoringAgent.Services.Common.Base
     public abstract class CheckingModule<TServiceInfo, TCheckingResult> : ICheckingModule
         where TServiceInfo : class, ICheckServiceInfo
     {
+        private readonly HubNotificator hubNotificator;
         private readonly INotificationsModule notificationsModule;
+
         /// <summary>
         /// Ctor
         /// </summary>
@@ -25,6 +28,12 @@ namespace MonitoringAgent.Services.Common.Base
         protected CheckingModule(INotificationsModule notificationsModule)
         {
             this.notificationsModule = notificationsModule;
+            var hubUrl = SettingsHelper.HubUrl;
+            var hubName = SettingsHelper.HubName;
+            if (!string.IsNullOrWhiteSpace(hubUrl) && !string.IsNullOrWhiteSpace(hubName))
+            {
+                hubNotificator = new HubNotificator(hubUrl, hubName);
+            }
         }
 
         readonly Dictionary<string, ServiceInfo> checkServices = new Dictionary<string, ServiceInfo>(); 
@@ -53,8 +62,10 @@ namespace MonitoringAgent.Services.Common.Base
 
                 var checkingResult = CheckService(info.Info);
 
-                //var hub = new HubNotificator();
-                //hub.SendNotification(CheckModuleType, 1, "bla", "bla");
+                if (hubNotificator != null)
+                {
+                    hubNotificator.SendNotification(CheckModuleType, 1, "bla", "bla");    
+                }
 
                 if (info.Notifications.Count > 0)
                 {
@@ -86,6 +97,7 @@ namespace MonitoringAgent.Services.Common.Base
         {
             var services = ServiceExtractor();
             var notifications = notificationsModule.GetAllNotifications(services.Select(s => s.Id).ToList(), CheckModuleType);
+            hubNotificator.Initialize();
 
             foreach (var service in services)
             {
