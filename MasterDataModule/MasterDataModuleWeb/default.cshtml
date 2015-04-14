@@ -17,9 +17,7 @@
     <link href="/css/site.css" rel="stylesheet" />
 </head>
 <body>
-    <script src="../web.libs/jquery-2.1.1.js"></script>
     <script src="../web.libs/jszip.js"></script>
-    <script src="/web.libs/jquery.signalR-2.2.0.js"></script>
     <script src="/web.libs/require.js"></script>
     <script>
         require.config({
@@ -30,6 +28,8 @@
                 underscore: '../web.libs/underscore',
                 jquery: '../web.libs/jquery-2.1.1',
                 jqueryui: '../web.libs/jquery-ui',
+                jquerySignalR: '../web.libs/jquery.signalR-2.2.0',
+                signalrHubs: '../signalr/hubs?noext',
                 backbone: '../web.libs/backbone',
                 'backbone.stickit': '../web.libs/backbone.stickit',
                 'globalize': '../web.libs/globalize/globalize',
@@ -67,7 +67,11 @@
                 },
                 'jqueryui': {
                     exports: '$'
+                },
+                'signalrHubs': {
+                    deps: ['jquerySignalR']
                 }
+
             }
         });
         require(['backbone'], function() {

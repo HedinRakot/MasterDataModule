@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,21 +9,64 @@ using MonitoringAgent.Data.Interfaces.Enums;
 
 namespace MonitoringAgent.Services.Common.SignalRNotification
 {
-    public class HubNotificator
+    /// <summary>
+    /// Notified hub about checking
+    /// </summary>
+    public sealed class HubNotificator
     {
-        private bool already = false;
-        public void SendNotification(CheckModuleType type, int result, string message, string name)
+        private readonly IHubProxy myHub;
+        private readonly HubConnection connection;
+        private readonly object connectionSyncObject = new object();
+
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        public HubNotificator(string siteUrl, string hubName)
         {
-            if (already)
-                return;
-            already = true;
+            connection = new HubConnection(siteUrl);//new HubConnection("http://localhost:49991/");
+            myHub = connection.CreateHubProxy(hubName); //connection.CreateHubProxy("monitorableObjects");
+        }
 
-            var connection = new HubConnection("http://localhost:49991/");
-            var myHub = connection.CreateHubProxy("monitorableObjects");
+        /// <summary>
+        /// Initialize connection to hub
+        /// </summary>
+        public async void Initialize()
+        {
+            try
+            {
+                await TryStart();
+            }
+            catch
+            {
+            }
+        }
 
-            connection.Start().Wait(); // not sure if you need this if you are simply posting to the hub
-
-            myHub.Invoke("StatusChanged", type, result, message, name); 
+        private Task TryStart()
+        {
+            return connection.Start();
+        }
+        /// <summary>
+        /// Send notification about result of checking
+        /// </summary>
+        public async void SendNotification(CheckModuleType type, int result, string message, string name)
+        {
+            try
+            {
+                if (connection.State != ConnectionState.Connected || connection.State != ConnectionState.Connected)
+                {
+                    lock (connectionSyncObject)
+                    {
+                        if (connection.State != ConnectionState.Connected || connection.State != ConnectionState.Connected)
+                        {
+                            TryStart().Wait();
+                        }
+                    }
+                }
+                await myHub.Invoke("StatusChanged", string.Format("Name: {0}, Module: {1}, result: {2}, Message: {3} ", name, type, result, message));
+            }
+            catch
+            {
+            }
         }
     }
 }
