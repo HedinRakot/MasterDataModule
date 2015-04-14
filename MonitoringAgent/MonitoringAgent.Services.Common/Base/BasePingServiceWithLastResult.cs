@@ -16,9 +16,11 @@ namespace MonitoringAgent.Services.Common.Base
     /// <typeparam name="TResultManager">Manager for gets checking results</typeparam>
     /// <typeparam name="TCheckResult">Checking result</typeparam>
     public abstract class BasePingServiceWithLastResult<TManager, TServiceInfo, TResultManager, TCheckResult>:
-        BasePingService<TManager, TServiceInfo>, IBasePingServiceWithLastResult<TServiceInfo, TCheckResult> 
-        where TManager: IBaseManager<TServiceInfo> where TServiceInfo : class
-        where TResultManager : IBaseManager<TCheckResult> where TCheckResult : class, ICheckResult
+        BasePingService<TManager, TServiceInfo>, IBasePingServiceWithLastResult<TServiceInfo, TCheckResult>
+        where TManager : IBaseManager<TServiceInfo>
+        where TServiceInfo : class, ISystemFields
+        where TResultManager : IBaseManager<TCheckResult>
+        where TCheckResult : class, ICheckResult, ISystemFields
     {
         /// <summary>
         /// Ctor

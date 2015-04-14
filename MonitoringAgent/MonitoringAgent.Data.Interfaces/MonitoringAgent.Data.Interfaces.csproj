@@ -47,6 +47,7 @@
     <Compile Include="Entities\ApplicationLogs.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Custom.MasterDataJobCheckResults.cs" />
     <Compile Include="Entities\Custom.MasterDataJobInfo.cs" />
     <Compile Include="Entities\Custom.MasterDataSiteInfo.cs" />
     <Compile Include="Entities\Custom.MasterDataWcfInfo.cs" />

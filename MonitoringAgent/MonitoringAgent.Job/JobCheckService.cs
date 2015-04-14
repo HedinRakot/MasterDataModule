@@ -58,6 +58,9 @@ namespace MonitoringAgent.Job
         /// </summary>
         public void SaveResults(MasterDataJobCheckResults result)
         {
+            if (result == null)
+                return;
+
             var manager = ManagersProvider.GetManager<IMasterDataJobCheckResultsManager>();
             var entity = manager.GetAllEntities().FirstOrDefault(e => e.MasterDataJobInfoId == result.MasterDataJobInfoId);
             if (entity != null)

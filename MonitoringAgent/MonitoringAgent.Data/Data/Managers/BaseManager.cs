@@ -7,7 +7,7 @@ using MonitoringAgent.Data.Interfaces.Entities;
 
 namespace MonitoringAgent.Common.Data.Managers
 {
-    public abstract class BaseManager<TEntity> : IBaseManager<TEntity> where TEntity : class
+    public abstract class BaseManager<TEntity> : IBaseManager<TEntity> where TEntity : class, ISystemFields
     {
         private readonly DbContext context;
 
@@ -18,7 +18,7 @@ namespace MonitoringAgent.Common.Data.Managers
 
         public IQueryable<TEntity> GetAllEntities()
         {
-            return context.Set<TEntity>().AsNoTracking();
+            return context.Set<TEntity>().Where(o => !o.DeleteDate.HasValue).AsNoTracking();
         }
 
         public void AddOrUpdateEntities(TEntity[] entities)

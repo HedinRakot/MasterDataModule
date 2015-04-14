@@ -1,6 +1,6 @@
 ﻿namespace MonitoringAgent.Data.Interfaces.Entities
 {
-    public partial class MasterDataWindowsServiceCheckResults: ICheckResult
+    public partial class MasterDataWindowsServiceCheckResults : ICheckResult, ISystemFields
     {
     }
 }

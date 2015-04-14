@@ -2,6 +2,7 @@
 using System.Linq;
 using MonitoringAgent.Data.Interfaces.Managers;
 using MonitoringAgent.Services.Common.Contracts;
+using MonitoringAgent.Data.Interfaces.Entities;
 
 namespace MonitoringAgent.Services.Common.Base
 {
@@ -10,8 +11,10 @@ namespace MonitoringAgent.Services.Common.Base
     /// </summary>
     /// <typeparam name="TManager">Manager for get info about monitorable objects</typeparam>
     /// <typeparam name="TServiceInfo">Type of monitorable objects</typeparam>
-    public abstract class BasePingService<TManager, TServiceInfo>: BaseManagersService, 
-        IBasePingService<TServiceInfo> where TManager: IBaseManager<TServiceInfo> where TServiceInfo : class
+    public abstract class BasePingService<TManager, TServiceInfo>: BaseManagersService,
+        IBasePingService<TServiceInfo>
+        where TManager : IBaseManager<TServiceInfo>
+        where TServiceInfo : class, ISystemFields
     {
         /// <summary>
         /// Ctor 
