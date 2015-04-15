@@ -26,11 +26,16 @@ namespace MonitoringAgent.Notifications.Services
                     NotificationServerConfigSection.Instance.SmtpServerAccountPassword,
                     subscriber.Email,
                     notification.Subject,
-                    notification.Message);
+                    notification.Message,
+                    NotificationServerConfigSection.Instance.SmtpServerPort,
+                    NotificationServerConfigSection.Instance.EnableSsl,
+                    NotificationServerConfigSection.Instance.SmtpDeliveryMethod
+                    );
             }
         }
 
-        private void SendMail(string smtpServer, string from, string password, string mailto, string caption, string message)
+        private void SendMail(string smtpServer, string from, string password, string mailto, string caption,
+            string message, int port, bool enableSsl, SmtpDeliveryMethod smtpDeliveryMethod)
         {
             try
             {
@@ -42,10 +47,10 @@ namespace MonitoringAgent.Notifications.Services
                 SmtpClient client = new SmtpClient
                 {
                     Host = smtpServer,
-                    Port = 587,
-                    EnableSsl = true,
+                    Port = port,
+                    EnableSsl = enableSsl,
                     Credentials = new NetworkCredential(@from.Split('@')[0], password),
-                    DeliveryMethod = SmtpDeliveryMethod.Network
+                    DeliveryMethod = smtpDeliveryMethod
                 };
                 client.Send(mail);
                 mail.Dispose();

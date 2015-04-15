@@ -1,4 +1,6 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
+using System.Net.Mail;
 using System.Reflection;
 
 namespace MonitoringAgent.Notifications.Config
@@ -13,6 +15,9 @@ namespace MonitoringAgent.Notifications.Config
         private const string SmtpServerSettingName = "SmtpServer";
         private const string SmtpServerAccountSettingName = "SmtpServerAccountName";
         private const string SmtpServerAccountPasswordSettingName = "SmtpServerAccountPassword";
+        private const string SmtpServerPortSettingName = "SmtpServerPort";
+        private const string EnableSslSettingName = "EnableSsl";
+        private const string SmtpDeliveryMethodSettingName = "SmtpDeliveryMethod";
         private const string SectionName = "notificationServer";
 
         /// <summary>
@@ -41,6 +46,57 @@ namespace MonitoringAgent.Notifications.Config
         {
             get { return this[SmtpServerAccountPasswordSettingName] as string; }
             set { this[SmtpServerAccountPasswordSettingName] = value; }
+        }
+
+        /// <summary>
+        /// Port
+        /// </summary>
+        [ConfigurationProperty(SmtpServerPortSettingName, IsRequired = true)]
+        public int SmtpServerPort
+        {
+            get 
+            {
+                var result = 587;
+                Int32.TryParse(this[SmtpServerPortSettingName].ToString(), out result);
+
+                return result;
+            }
+            set { this[SmtpServerPortSettingName] = value; }
+        }
+
+        /// <summary>
+        /// EnableSsl
+        /// </summary>
+        [ConfigurationProperty(EnableSslSettingName, IsRequired = true)]
+        public bool EnableSsl
+        {
+            get {
+                var result = true;
+                bool.TryParse(this[EnableSslSettingName].ToString(), out result);
+
+                return result;
+            }
+            set { this[EnableSslSettingName] = value; }
+        }
+
+        /// <summary>
+        /// SmtpDeliveryMethod
+        /// </summary>
+        [ConfigurationProperty(SmtpDeliveryMethodSettingName, IsRequired = true)]
+        public SmtpDeliveryMethod SmtpDeliveryMethod
+        {
+            get {
+                var result = SmtpDeliveryMethod.Network;
+                var temp = 0;
+
+                if (Int32.TryParse(this[SmtpDeliveryMethodSettingName].ToString(), out temp))
+                {
+                    result = (SmtpDeliveryMethod)temp;
+                }
+
+                return result;
+            }
+            set { this[SmtpDeliveryMethodSettingName] = value; }
         }
 
         /// <summary>
