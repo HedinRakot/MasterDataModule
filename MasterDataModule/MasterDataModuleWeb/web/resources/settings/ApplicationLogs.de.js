@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,15 +8,12 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Applikation-Logs',
 		pleaseSelect: 'Bitte auswählen',
-
-		logType: 'Log-Typ',	
-
 		logLevel: 'Log-Stufe',	
-
 		date: 'Datum',	
-
 		message: 'Text',	
-
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
+		logTypeInfoId: 'Log-Typ',	
 	};
 
 	return resources;

@@ -41,7 +41,7 @@ namespace MasterDataModule.API.LogFileProcessor
                 return null;
             }
             entity.LogLevel = (int)logLevel;
-            entity.LogType = (int)LogTypeEnum.FeServiceMain;
+            //entity.LogType = (int)LogTypeEnum.FeServiceMain;
             entity.Date = CreateDate(parsed);
             entity.Message = parsed.Groups["text"].Value;
             return entity;

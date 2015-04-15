@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,13 +8,11 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Überwachungsnachrichten Einstellungen',
 		pleaseSelect: 'Bitte auswählen',
-
 		monitorableInfoType: 'Überwachungsobjekt Typ',	
-
 		monitorableInfoId: 'Überwachungsobjekt',	
-
 		masterDataNotificationsId: 'Überwachungsnachricht',	
-
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

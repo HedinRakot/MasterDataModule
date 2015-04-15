@@ -20,6 +20,9 @@ define(function () {
 			,toDate: { type: "date", 
 			                        editable: Application.canTableItemBeEdit('MasterDataSiteInfo', 'toDate'), 
 				                    validation: { required: true, date: true } }			
+			,logTypeInfoId: { type: "number", 
+			                        editable: Application.canTableItemBeEdit('MasterDataSiteInfo', 'logTypeInfoId'), 
+				                    validation: { required: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

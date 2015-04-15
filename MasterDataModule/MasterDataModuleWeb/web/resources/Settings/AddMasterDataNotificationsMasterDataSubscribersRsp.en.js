@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,11 +8,10 @@ define(function () {
 	    masterData: 'Settings',
 	    pageTitle: 'Notification to subscriber',
 		pleaseSelect: 'Please select',
-
 		masterDataNotificationsId: 'Notification',	
-
 		masterDataSubscribersId: 'Subscriber',	
-
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

@@ -14,10 +14,15 @@ define([
 
             var self = this;
             var result = {
-			'#logType': 'logType',
 			'#logLevel': 'logLevel',
 			'#date': 'date',
 			'#message': 'message',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
+			'#logTypeInfoId': { observe: 'logTypeInfoId',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.logTypeInfos
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			};
 
             return result;
@@ -28,10 +33,12 @@ define([
             view.__super__.render.apply(this, arguments);
 
 			//TODO foreach model field
-			this.disableInput(this, 'logType', 'numeric');
 			this.disableInput(this, 'logLevel', 'numeric');
 			this.disableInput(this, 'date', 'date');
 			this.disableInput(this, 'message');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
+			this.disableInput(this, 'logTypeInfoId', 'select');
 
             return this;
         }

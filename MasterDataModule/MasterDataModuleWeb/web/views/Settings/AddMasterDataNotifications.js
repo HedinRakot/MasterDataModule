@@ -26,6 +26,8 @@ define([
 			'#alertAttemptCount': 'alertAttemptCount',
 			'#message': 'message',
 			'#subject': 'subject',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 			};
 
             return result;
@@ -42,6 +44,8 @@ define([
 			this.disableInput(this, 'alertAttemptCount', 'numeric');
 			this.disableInput(this, 'message');
 			this.disableInput(this, 'subject');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

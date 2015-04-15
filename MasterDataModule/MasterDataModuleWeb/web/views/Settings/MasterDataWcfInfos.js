@@ -27,6 +27,7 @@ define([
 				{ field: 'name', title: this.resources.name },
 				{ field: 'wsdlPath', title: this.resources.wsdlPath },
 				{ field: 'timeoutChecking', title: this.resources.timeoutChecking },
+				{ field: 'logTypeInfoId', title: this.resources.logTypeInfoId , collection: this.options.logTypeInfo, defaultText: this.resources.pleaseSelect},
 			];
 		}
 

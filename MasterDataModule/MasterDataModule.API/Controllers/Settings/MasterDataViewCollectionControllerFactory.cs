@@ -16,14 +16,6 @@ namespace MasterDataModule.API.Controllers
     {
         public void GetViewCollections(IDependencyResolver resolver, CollectionTypesModel model, Dictionary<string, IEnumerable<object>> result)
         {
-            if (model.MasterDataWcfInfo)
-            	result.Add("MasterDataWcfInfo", GetViewCollection<MasterDataWcfInfo, int, IMasterDataWcfInfoManager>(
-            		(IMasterDataWcfInfoManager)resolver.GetService(typeof(IMasterDataWcfInfoManager))));
-
-            if (model.MasterDataSiteInfo)
-            	result.Add("MasterDataSiteInfo", GetViewCollection<MasterDataSiteInfo, int, IMasterDataSiteInfoManager>(
-            		(IMasterDataSiteInfoManager)resolver.GetService(typeof(IMasterDataSiteInfoManager))));
-
             if (model.MasterDataJobInfo)
             	result.Add("MasterDataJobInfo", GetViewCollection<MasterDataJobInfo, int, IMasterDataJobInfoManager>(
             		(IMasterDataJobInfoManager)resolver.GetService(typeof(IMasterDataJobInfoManager))));
@@ -47,6 +39,18 @@ namespace MasterDataModule.API.Controllers
             if (model.MasterDataNotifications)
             	result.Add("MasterDataNotifications", GetViewCollection<MasterDataNotifications, int, IMasterDataNotificationsManager>(
             		(IMasterDataNotificationsManager)resolver.GetService(typeof(IMasterDataNotificationsManager))));
+
+            if (model.MasterDataWcfInfo)
+            	result.Add("MasterDataWcfInfo", GetViewCollection<MasterDataWcfInfo, int, IMasterDataWcfInfoManager>(
+            		(IMasterDataWcfInfoManager)resolver.GetService(typeof(IMasterDataWcfInfoManager))));
+
+            if (model.MasterDataSiteInfo)
+            	result.Add("MasterDataSiteInfo", GetViewCollection<MasterDataSiteInfo, int, IMasterDataSiteInfoManager>(
+            		(IMasterDataSiteInfoManager)resolver.GetService(typeof(IMasterDataSiteInfoManager))));
+
+            if (model.LogTypeInfo)
+            	result.Add("LogTypeInfo", GetViewCollection<LogTypeInfo, int, ILogTypeInfoManager>(
+            		(ILogTypeInfoManager)resolver.GetService(typeof(ILogTypeInfoManager))));
 
         }
     }

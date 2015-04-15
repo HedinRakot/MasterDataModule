@@ -28,6 +28,7 @@ namespace MasterDataModule.API.Controllers.Settings
             model.timeoutChecking = entity.TimeoutChecking;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
+            model.logTypeInfoId = entity.LogTypeInfoId;
             model.createDate = ((ISystemFields)entity).CreateDate;
             model.changeDate = ((ISystemFields)entity).ChangeDate;
         }
@@ -39,6 +40,7 @@ namespace MasterDataModule.API.Controllers.Settings
             entity.TimeoutChecking = model.timeoutChecking;
             entity.FromDate = model.fromDate;
             entity.ToDate = model.toDate;
+            entity.LogTypeInfoId = model.logTypeInfoId;
         }
     }
 }

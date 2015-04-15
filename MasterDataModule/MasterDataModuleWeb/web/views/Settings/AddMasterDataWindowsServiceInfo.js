@@ -18,6 +18,12 @@ define([
 			'#machineName': 'machineName',
 			'#serviceName': 'serviceName',
 			'#timeoutChecking': 'timeoutChecking',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
+			'#logTypeInfoId': { observe: 'logTypeInfoId',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.logTypeInfo
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			};
 
             return result;
@@ -32,6 +38,9 @@ define([
 			this.disableInput(this, 'machineName');
 			this.disableInput(this, 'serviceName');
 			this.disableInput(this, 'timeoutChecking', 'numeric');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
+			this.disableInput(this, 'logTypeInfoId', 'select');
 
             return this;
         }

@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -10,19 +9,14 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Notifications',
 		pleaseSelect: 'Please select',
-
 		notificationType: 'Notification type',	
-
 		isAlertOn: 'Is alert on',	
-
 		alertCheckStatus: 'Check status for alert',	
-
 		alertAttemptCount: 'Attempt count for alert',	
-
 		message: 'Message',	
-
 		subject: 'Subject',	
-
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

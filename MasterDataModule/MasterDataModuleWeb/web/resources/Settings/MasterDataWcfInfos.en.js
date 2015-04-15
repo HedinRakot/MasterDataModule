@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -10,13 +9,12 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Wcf info',
 		pleaseSelect: 'Please select',
-
 		name: 'Name',	
-
 		wsdlPath: 'Path to wsdl ',	
-
 		timeoutChecking: 'Timeout checking',	
-
+		fromDate: 'From date',	
+		toDate: 'To date',	
+		logTypeInfoId: 'Log file',	
 	};
 
 	return resources;

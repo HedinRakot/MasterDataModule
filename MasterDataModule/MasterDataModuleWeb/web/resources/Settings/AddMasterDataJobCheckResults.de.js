@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,15 +8,12 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Hintergrundprozess Monitor',
 		pleaseSelect: 'Bitte auswählen',
-
 		lastRunTime: 'Letztes Prüfungsdatum',	
-
 		checkDate: 'Prüfungsdatum',	
-
 		checkStatus: 'Status',	
-
 		masterDataJobInfoId: 'Hintergrundprozess',	
-
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

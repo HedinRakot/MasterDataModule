@@ -63,6 +63,10 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             /// Column name 'TO_DATE' for property <see cref="MasterDataWindowsServiceInfo.ToDate"/>
             /// </summary>
             public static readonly string ToDate = "TO_DATE";
+            /// <summary>
+            /// Column name 'LOG_TYPE_INFO_ID' for property <see cref="MasterDataWindowsServiceInfo.LogTypeInfoId"/>
+            /// </summary>
+            public static readonly string LogTypeInfoId = "LOG_TYPE_INFO_ID";
           
         }
         #endregion
@@ -94,7 +98,13 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         ///     DE:Bis Datum  EN:  Date to
         /// </summary>
         public DateTime ToDate{ get; set; }
+        public int? LogTypeInfoId{ get; set; }
+        public virtual LogTypeInfo LogTypeInfo{ get; set; }
         public virtual ICollection<MasterDataWindowsServiceCheckResults> MasterDataWindowsServiceCheckResults{ get; set; }
+        public bool HasLogTypeInfo
+        {
+            get { return !ReferenceEquals(LogTypeInfo, null); }
+        }
         DateTime? IIntervalFields.FromDate
         {
             get { return FromDate; }
@@ -136,6 +146,7 @@ namespace MasterDataModule.Contracts.Entities.Configuration
                        ChangeDate = ChangeDate,
                        FromDate = FromDate,
                        ToDate = ToDate,
+                       LogTypeInfoId = LogTypeInfoId,
         	           };
         }
     }

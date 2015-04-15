@@ -14,9 +14,17 @@ define([
 
             var self = this;
             var result = {
-			'#monitorableInfoType': 'monitorableInfoType',
+			'#monitorableInfoType': { observe: 'monitorableInfoType',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.checkModuleType
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
 			'#monitorableInfoId': 'monitorableInfoId',
-			'#masterDataNotificationsId': 'masterDataNotificationsId',
+			'#masterDataNotificationsId': { observe: 'masterDataNotificationsId',
+				selectOptions: { labelPath: 'name', valuePath: 'id',
+				collection: self.options.masterDataNotifications
+				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 			};
 
             return result;
@@ -27,9 +35,9 @@ define([
             view.__super__.render.apply(this, arguments);
 
 			//TODO foreach model field
-			this.disableInput(this, 'monitorableInfoType', 'numeric');
-			this.disableInput(this, 'monitorableInfoId', 'numeric');
-			this.disableInput(this, 'masterDataNotificationsId', 'numeric');
+			this.disableInput(this, 'masterDataNotificationsId', 'select');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

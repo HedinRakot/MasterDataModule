@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,17 +8,13 @@ define(function () {
 	    masterData: 'Settings',
 	    pageTitle: 'Site check result',
 		pleaseSelect: 'Please select',
-
 		checkStatus: 'Status',	
-
 		checkDate: 'Check date',	
-
 		message: 'Message',	
-
 		attempt: 'Attempt',	
-
 		masterDataSiteInfoId: 'Site info',	
-
+		fromDate: 'From date',	
+		toDate: 'To date',	
 	};
 
 	return resources;

@@ -44,6 +44,12 @@ namespace MasterDataModule.API.Models.Settings
         [Required]
         [DataMember]
         public DateTime toDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="MasterDataWcfInfo.LogTypeInfoId"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public int? logTypeInfoId{ get; set; }
 
     }
 }

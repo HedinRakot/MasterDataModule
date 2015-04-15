@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,11 +8,8 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Monitor Einstellungen',
 		pleaseSelect: 'Bitte auswählen',
-
 		reconfigure: 'Neue Konfiguration',	
-
 		reconfigureCheckingTimeout: 'Neue Konfiguration Timeout',	
-
 	};
 
 	return resources;

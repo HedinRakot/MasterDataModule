@@ -19,6 +19,8 @@ define([
 			'#message': 'message',
 			'#attempt': 'attempt',
 			'#masterDataSiteInfoId': 'masterDataSiteInfoId',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 			};
 
             return result;
@@ -34,6 +36,8 @@ define([
 			this.disableInput(this, 'message');
 			this.disableInput(this, 'attempt', 'numeric');
 			this.disableInput(this, 'masterDataSiteInfoId', 'numeric');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

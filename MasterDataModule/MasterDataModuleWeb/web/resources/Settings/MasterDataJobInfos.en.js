@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -10,17 +9,14 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Job info',
 		pleaseSelect: 'Please select',
-
 		connectionString: 'Connection string',	
-
 		tableName: 'Table name',	
-
 		timeoutChecking: 'Timeout checking',	
-
 		name: 'Name',	
-
 		jobName: ' Job name',	
-
+		fromDate: 'From date',	
+		toDate: 'To date',	
+		logTypeInfoId: 'Log file',	
 	};
 
 	return resources;

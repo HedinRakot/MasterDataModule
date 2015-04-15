@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,9 +8,9 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Monitor Empfänger',
 		pleaseSelect: 'Bitte auswählen',
-
 		email: 'E-mail',	
-
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

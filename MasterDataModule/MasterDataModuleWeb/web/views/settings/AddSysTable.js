@@ -20,6 +20,8 @@ define([
 				selectOptions: { labelPath: 'name', valuePath: 'id',
 				collection: self.options.editModeType
 				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 			};
 
             return result;
@@ -33,6 +35,8 @@ define([
 			this.disableInput(this, 'name');
 			this.disableInput(this, 'description');
 			this.disableInput(this, 'editMode', 'select');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

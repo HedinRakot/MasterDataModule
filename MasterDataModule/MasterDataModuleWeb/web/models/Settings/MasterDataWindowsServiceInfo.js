@@ -23,6 +23,9 @@ define(function () {
 			,toDate: { type: "date", 
 			                        editable: Application.canTableItemBeEdit('MasterDataWindowsServiceInfo', 'toDate'), 
 				                    validation: { required: true, date: true } }			
+			,logTypeInfoId: { type: "number", 
+			                        editable: Application.canTableItemBeEdit('MasterDataWindowsServiceInfo', 'logTypeInfoId'), 
+				                    validation: { required: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

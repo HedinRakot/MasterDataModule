@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,17 +8,13 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Web-Site Monitor',
 		pleaseSelect: 'Bitte auswählen',
-
 		checkStatus: 'Status',	
-
 		checkDate: 'Datum',	
-
 		message: 'Nachricht',	
-
 		attempt: 'Zähler',	
-
 		masterDataSiteInfoId: 'Web-Site',	
-
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

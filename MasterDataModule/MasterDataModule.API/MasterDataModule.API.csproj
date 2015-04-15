@@ -524,6 +524,9 @@
     <Compile Include="Controllers\Settings\Custom.SysTablesController.cs" />
     <Compile Include="Controllers\Settings\Custom.MasterDataMonitorableInfoMasterDataNotificationsRspsController.cs" />
     <Compile Include="Controllers\Settings\Custom.UserController.cs" />
+    <Compile Include="Controllers\Settings\LogTypeInfosController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Settings\MasterDataJobCheckResultsController.cs">
       <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
     </Compile>
@@ -885,6 +888,9 @@
     <Compile Include="Models\Settings\Custom.SysColumnModel.cs" />
     <Compile Include="Models\Settings\Custom.SysTableModel.cs" />
     <Compile Include="Models\Settings\Custom.MasterDataMonitorableInfoMasterDataNotificationsRspModel.cs" />
+    <Compile Include="Models\Settings\LogTypeInfoModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Settings\MasterDataJobCheckResultsModel.cs">
       <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
     </Compile>

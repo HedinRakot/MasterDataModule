@@ -26,10 +26,6 @@ namespace MasterDataModule.Lib.Data.Configuration
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
                 .IsRequired();
 
-            Property(t => t.LogType)
-                .HasColumnName(ApplicationLogs.Fields.LogType)
-                .IsRequired();
-
             Property(t => t.LogLevel)
                 .HasColumnName(ApplicationLogs.Fields.LogLevel)
                 .IsRequired();
@@ -61,8 +57,15 @@ namespace MasterDataModule.Lib.Data.Configuration
                 .HasColumnName(ApplicationLogs.Fields.ToDate)
                 .IsRequired();
 
+            Property(t => t.LogTypeInfoId)
+                .HasColumnName(ApplicationLogs.Fields.LogTypeInfoId)
+                .IsRequired();
+
 
             //Relationships
+            HasRequired(a => a.LogTypeInfo)
+                .WithMany(l => l.ApplicationLogs)
+                .HasForeignKey(t => t.LogTypeInfoId);
         }
     }
 }

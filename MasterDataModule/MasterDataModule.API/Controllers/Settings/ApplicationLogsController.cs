@@ -22,23 +22,23 @@ namespace MasterDataModule.API.Controllers.Settings
 
         protected override void EntityToModel(ApplicationLogs entity, ApplicationLogsModel model)
         {
-            model.logType = entity.LogType;
             model.logLevel = entity.LogLevel;
             model.date = entity.Date;
             model.message = entity.Message;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
+            model.logTypeInfoId = entity.LogTypeInfoId;
             model.createDate = ((ISystemFields)entity).CreateDate;
             model.changeDate = ((ISystemFields)entity).ChangeDate;
         }
         protected override void ModelToEntity(ApplicationLogsModel model, ApplicationLogs entity, ActionTypes actionType)
         {
-            entity.LogType = model.logType;
             entity.LogLevel = model.logLevel;
             entity.Date = model.date;
             entity.Message = model.message;
             entity.FromDate = model.fromDate;
             entity.ToDate = model.toDate;
+            entity.LogTypeInfoId = model.logTypeInfoId;
         }
     }
 }

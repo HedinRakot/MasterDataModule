@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -10,15 +9,12 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Applications logs',
 		pleaseSelect: 'Please select',
-
-		logType: 'Logs type',	
-
 		logLevel: 'logs level',	
-
 		date: 'Date',	
-
 		message: 'Text',	
-
+		fromDate: 'From date',	
+		toDate: 'To date',	
+		logTypeInfoId: 'Logs type',	
 	};
 
 	return resources;
