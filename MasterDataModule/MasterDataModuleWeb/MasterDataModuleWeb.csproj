@@ -149,6 +149,9 @@
   <ItemGroup>
     <Content Include="css\images\admin_290x200-inaktiv.png" />
     <Content Include="css\images\Auftrag_290x200-inaktiv.png" />
+    <Content Include="css\images\Circle_Green.png" />
+    <Content Include="css\images\Circle_Grey.png" />
+    <Content Include="css\images\Circle_Red.png" />
     <Content Include="css\images\Einstellungen_290x200-inaktiv.png" />
     <Content Include="css\images\Fahrerlaubnis_290x200-inaktiv.png" />
     <Content Include="css\images\fail.png" />

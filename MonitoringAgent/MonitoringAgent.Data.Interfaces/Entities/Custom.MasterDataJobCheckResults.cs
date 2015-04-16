@@ -1,6 +1,6 @@
 ﻿namespace MonitoringAgent.Data.Interfaces.Entities
 {
-    public partial class MasterDataJobCheckResults : ISystemFields
+    public partial class MasterDataJobCheckResults : ISystemFields, IHasCheckStatus
     {
     }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNet.SignalR.Client;
 using MonitoringAgent.Data.Interfaces.Enums;
 
@@ -23,8 +18,8 @@ namespace MonitoringAgent.Services.Common.SignalRNotification
         /// </summary>
         public HubNotificator(string siteUrl, string hubName)
         {
-            connection = new HubConnection(siteUrl);//new HubConnection("http://localhost:49991/");
-            myHub = connection.CreateHubProxy(hubName); //connection.CreateHubProxy("monitorableObjects");
+            connection = new HubConnection(siteUrl);
+            myHub = connection.CreateHubProxy(hubName);
         }
 
         /// <summary>
@@ -48,7 +43,7 @@ namespace MonitoringAgent.Services.Common.SignalRNotification
         /// <summary>
         /// Send notification about result of checking
         /// </summary>
-        public async void SendNotification(CheckModuleType type, int result, string message, string name)
+        public async void SendNotification(CheckModuleType type, int infoId, int? checkStatus)
         {
             try
             {
@@ -62,7 +57,8 @@ namespace MonitoringAgent.Services.Common.SignalRNotification
                         }
                     }
                 }
-                await myHub.Invoke("StatusChanged", string.Format("Name: {0}, Module: {1}, result: {2}, Message: {3} ", name, type, result, message));
+
+                await myHub.Invoke("StatusChanged", type, infoId, checkStatus);
             }
             catch
             {

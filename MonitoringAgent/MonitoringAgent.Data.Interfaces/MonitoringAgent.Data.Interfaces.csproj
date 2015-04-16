@@ -65,6 +65,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Entities\IHasCheckStatus.cs" />
     <Compile Include="Entities\ISystemFields.cs" />
     <Compile Include="Entities\MasterDataJobCheckResults.cs">
       <DependentUpon>Entities.tt</DependentUpon>

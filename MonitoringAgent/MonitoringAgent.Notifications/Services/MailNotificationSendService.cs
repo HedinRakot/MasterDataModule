@@ -57,7 +57,7 @@ namespace MonitoringAgent.Notifications.Services
             }
             catch (Exception e)
             {
-                throw new Exception("Mail.Send: " + e.Message);
+                //throw new Exception("Mail.Send: " + e.Message);
             }
         }
     }
