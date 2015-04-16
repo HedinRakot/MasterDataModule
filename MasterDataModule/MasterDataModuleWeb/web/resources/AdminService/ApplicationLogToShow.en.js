@@ -8,6 +8,7 @@ define(function () {
 	    logLevel: "Log Level",
 	    messageDate: "Check date",
 	    message: "Text",
+	    Title: "Application logs",
 	};
         
 	return resources;
