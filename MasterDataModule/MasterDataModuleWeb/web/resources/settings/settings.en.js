@@ -2,6 +2,10 @@ define(function () {
 	'use strict';
 
 	var resources = {
+        SiteInfosWithLastResults: 'Site infos with last result',
+        WcfInfosWithLastResults: 'Wcf infos with last result',
+        WinserviceInfosWithLastResults: 'Win service infos with last result',
+        JobsInfosWithLastResults: 'Job infos with last result',
         MasterDataWcfInfos: 'Wcf info',
         MasterDataWcfCheckResults: 'Wcf check result',
         MasterDataSiteInfos: 'Master data sites',
@@ -18,15 +22,10 @@ define(function () {
         Permissions: 'Master data permission',
         MasterDataRolePermissionRsps: 'Master data permissiom',
         Users: 'Master data user',
-        GetWcfServicesStatuses: 'Wcf service status',
         MasterDataSubscribers: 'Subscribers',
         MasterDataMonitorableInfoMasterDataNotificationsRsps: 'Monitorable object to notification',
         MasterDataNotificationsMasterDataSubscribersRsps: 'Notification to subscriber',
-        SiteInfosWithLastResults: 'Site infos with last result',
-        WcfInfosWithLastResults: 'Wcf infos with last result',
         MasterDataNotifications: 'Notifications',
-        WinserviceInfosWithLastResults: 'Win service infos with last result',
-        JobsInfosWithLastResults: 'Job infos with last result',
         LogTypeInfos: 'Log-file configuration',
 	};
 
