@@ -74,11 +74,11 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public string FileName{ get; set; }
         public string FilePattern{ get; set; }
         public string FilePath{ get; set; }
-        public virtual ICollection<MasterDataJobInfo> MasterDataJobInfos{ get; set; }
-        public virtual ICollection<MasterDataWindowsServiceInfo> MasterDataWindowsServiceInfos{ get; set; }
-        public virtual ICollection<ApplicationLogs> ApplicationLogs{ get; set; }
         public virtual ICollection<MasterDataWcfInfo> MasterDataWcfInfos{ get; set; }
         public virtual ICollection<MasterDataSiteInfo> MasterDataSiteInfos{ get; set; }
+        public virtual ICollection<ApplicationLogs> ApplicationLogs{ get; set; }
+        public virtual ICollection<MasterDataJobInfo> MasterDataJobInfos{ get; set; }
+        public virtual ICollection<MasterDataWindowsServiceInfo> MasterDataWindowsServiceInfos{ get; set; }
         DateTime? IIntervalFields.FromDate
         {
             get { return FromDate; }

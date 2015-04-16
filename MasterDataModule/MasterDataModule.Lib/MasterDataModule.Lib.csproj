@@ -283,6 +283,9 @@
     <Compile Include="Data\Configuration\ApplicationLogsMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\Configuration\JobsInfosWithLastResultMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\Configuration\LogTypeInfoMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
@@ -334,6 +337,9 @@
     <Compile Include="Data\Configuration\RoleMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\Configuration\SiteInfosWithLastResultMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\Configuration\SysColumnMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
@@ -341,6 +347,12 @@
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Configuration\UserMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\WcfInfosWithLastResultMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\WinserviceInfosWithLastResultMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Drl\CommunityParticipantMapping.cs">
@@ -722,6 +734,9 @@
     <Compile Include="Managers\Configuration\ApplicationLogsManager.cs">
       <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Managers\Configuration\JobsInfosWithLastResultManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\Configuration\LogTypeInfoManager.cs">
       <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
     </Compile>
@@ -773,6 +788,9 @@
     <Compile Include="Managers\Configuration\RoleManager.cs">
       <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Managers\Configuration\SiteInfosWithLastResultManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\Configuration\SysColumnManager.cs">
       <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
     </Compile>
@@ -780,6 +798,12 @@
       <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Configuration\UserManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\WcfInfosWithLastResultManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\WinserviceInfosWithLastResultManager.cs">
       <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Drl\ArgeVersionManager.cs">

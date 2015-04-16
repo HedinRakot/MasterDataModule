@@ -1,0 +1,20 @@
+define(function () {
+	'use strict';
+
+	var resources = {
+
+		add: 'Add Wcf service status',
+	    edit: 'Edit Wcf service status',
+	    masterData: 'Settings',
+	    pageTitle: 'Wcf service status',
+		pleaseSelect: 'Please select',
+		checkStatus: 'Status',	
+		checkDate: 'Check date',	
+		message: 'Message',	
+		attempt: 'Attempt',	
+		name: 'Name',	
+		wsdlPath: 'Path to wsdl ',	
+	};
+
+	return resources;
+});

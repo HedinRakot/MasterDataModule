@@ -6,9 +6,9 @@ namespace MasterDataModule.API.SignalR
     [HubName("monitorableObjects")]
     public class MonitorableObjectsHub : Hub
     {
-        public void StatusChanged(string message)
+        public void StatusChanged(int checkModuleType, int infoId, int result)
         {
-            Clients.All.statusChanged(message);
+            Clients.All.statusChanged(checkModuleType, infoId, result);
         }
     }
 }

@@ -78,7 +78,7 @@ namespace MasterDataModule.Generation
 
                 rows = rows.AddFilter(_tableContext, 2).AddFilter(_tableGroup, 3).AddFilter(_tableSubGroup, 4);
                 var tableNames = rows.Select(row => GetFullTableName(row[0].ToString(), row[1].ToString())).ToArray();
-                tables = _loader.Load(tableFilter: table => !table.IsView && tableNames.Contains(GetFullTableName(table.Schema, table.Name)));
+                tables = _loader.Load(tableFilter: table => /*!table.IsView &&*/ tableNames.Contains(GetFullTableName(table.Schema, table.Name)));
             }
             #endregion
             #region Prepare content

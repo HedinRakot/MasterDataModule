@@ -61,9 +61,6 @@ namespace MasterDataModule.Lib.Data.Configuration
 
 
             //Relationships
-            HasRequired(m => m.MasterDataNotifications)
-                .WithMany(m => m.MasterDataMonitorableInfoMasterDataNotificationsRsps)
-                .HasForeignKey(t => t.MasterDataNotificationsId);
         }
     }
 }

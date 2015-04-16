@@ -1,61 +1,53 @@
 ﻿define([
     'base/base-view',
     'kendo.backbone/backbone.datasource',
-    'collections/Settings/MasterDataSiteInfos',
+    'collections/Settings/WcfInfosWithLastResults',
+    'collections/Settings/SiteInfosWithLastResults',
+    'collections/Settings/WinserviceInfosWithLastResults',
+    'collections/Settings/JobsInfosWithLastResults',
     'jquerySignalR',
     'signalrHubs',
-    'lr!mixins/resources/kendo-validator-form',
-	'kendo.editors/editor-factory',
-	'kendo.filters/filter-factory',
 	'lk!kendo/kendo.grid'
-], function (BaseView, DataSource, MasterDataInfos) {
+], function (BaseView, DataSource, WcfInfos, SiteInfos, WindowsServiceInfos, JobInfos) {
     'use strict';
 
-    var createDataSource = function(collection) {
-        return new DataSource({
-            collection: collection,
-            schema: {
-                model: {
-                    id: collection.model.prototype.idAttribute,
-                    fields: collection.model.prototype.fields
-                },
-                data: 'data',
-                total: 'total'
-            },
-            remoteDataSource: true
-        });
+    var getSelectorForImage = function (type, id) {
+        return 'href_' + type.toString() + '_' + id.toString();
+    }
+
+    var getImageByResult = function (result) {
+        if (result === null)
+            return "Circle_Grey.png";
+
+        return result === 1 ? "Circle_Green.png" : "Circle_Red.png";
     };
 
-    var getStatusTemplate = function(dataItem) {
-        var image =
-        (dataItem.status === 1) ? "success.png" : "fail.png";
-        return "<img src='../css/images/" + image + "' width='20' height='20'></img>";
-    };
+    var fillInfos = function(selector, type, collection, view, href) {
+        var col = new collection();
+        col.fetch().done(function (result) {
+            $.each(result.data, function (index, item) {
+                view.$('#' + selector).append("<tr><td><img id='" + getSelectorForImage(type, item.id) + "' src='../../css/images/" + getImageByResult(item.lastResult) + "' width='20' height='20'/></td><td><a href = '#" + href + "'>" + item.name + "</a></td></tr>");
+            });
+        });
+    }
 
     var view = BaseView.extend({
         initialize: function() {
             view.__super__.initialize.apply(this, arguments);
 
             var hub = $.connection.monitorableObjects;
-            hub.client.statusChanged = function(message) {
-                $("#messages").append("<li> " + message + " </li>");
+            hub.client.statusChanged = function (checkModuleType, infoId, result) {
+                var selector = getSelectorForImage(checkModuleType, infoId);
+                var image = 
+                $('#' + selector).attr('src', "../../css/images/" + getImageByResult(result));
             };
 
+            fillInfos('wcfServices', 1, WcfInfos, this, 'WebServiceMonitor');
+            fillInfos('sites', 2, SiteInfos, this, 'WebSiteMonitor');
+            fillInfos('windowsServices', 4, WindowsServiceInfos, this, 'WinServiceMonitor');
+            fillInfos('jobs', 3, JobInfos, this, 'JobMonitor');
+
             $.connection.hub.start();
-       },
-
-        render: function() {
-            view.__super__.render.apply(this, arguments);
-
-            this.$('#siteInfosGrid').kendoGrid({
-                scrollable: false,
-                columns: [
-                    { field: "name", title: this.resources.name },
-                    { field: "status", title: this.resources.status, template: getStatusTemplate }],
-                dataSource: createDataSource(new MasterDataInfos())
-            });
-            
-            return this;
         }
     });
 

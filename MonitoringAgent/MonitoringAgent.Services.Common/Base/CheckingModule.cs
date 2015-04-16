@@ -17,6 +17,7 @@ namespace MonitoringAgent.Services.Common.Base
     /// <typeparam name="TCheckingResult">Type of result</typeparam>
     public abstract class CheckingModule<TServiceInfo, TCheckingResult> : ICheckingModule
         where TServiceInfo : class, ICheckServiceInfo
+        where TCheckingResult : class, IHasCheckStatus
     {
         private readonly HubNotificator hubNotificator;
         private readonly INotificationsModule notificationsModule;
@@ -64,7 +65,7 @@ namespace MonitoringAgent.Services.Common.Base
 
                 if (hubNotificator != null)
                 {
-                    hubNotificator.SendNotification(CheckModuleType, 1, "bla", "bla");    
+                    hubNotificator.SendNotification(CheckModuleType, info.Info.Id, checkingResult.CheckStatus);    
                 }
 
                 if (info.Notifications.Count > 0)

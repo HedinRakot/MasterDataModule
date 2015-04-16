@@ -55,7 +55,16 @@ namespace MonitoringAgent.Site
         protected override MasterDataSiteCheckResults CheckServiceWithLastResult(MasterDataSiteInfo serviceInfo)
         {
             var ping = new Ping();
-            var result = ping.Send(serviceInfo.SitePath);
+            PingReply result;
+            try
+            {
+                result = ping.Send(serviceInfo.SitePath);
+            }
+            catch (Exception)
+            {
+                result = null;
+            }
+            
             return new MasterDataSiteCheckResults
             {
                 Attempt = 1,
