@@ -510,9 +510,6 @@
     <Content Include="web\collections\Settings\ApplicationLogs.js">
       <DependentUpon>web.masterdata.collections.tt</DependentUpon>
     </Content>
-    <Content Include="web\collections\Settings\GetWcfServicesStatuses.js">
-      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
-    </Content>
     <Content Include="web\collections\Settings\JobsInfosWithLastResults.js">
       <DependentUpon>web.masterdata.collections.tt</DependentUpon>
     </Content>
@@ -1166,9 +1163,6 @@
     <Content Include="web\models\Settings\FilterApplicationLogs.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
-    <Content Include="web\models\Settings\FilterGetWcfServicesStatus.js">
-      <DependentUpon>web.masterdata.models.tt</DependentUpon>
-    </Content>
     <Content Include="web\models\Settings\FilterJobsInfosWithLastResult.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
@@ -1239,9 +1233,6 @@
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\Settings\FilterWinserviceInfosWithLastResult.js">
-      <DependentUpon>web.masterdata.models.tt</DependentUpon>
-    </Content>
-    <Content Include="web\models\Settings\GetWcfServicesStatus.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\Settings\JobsInfosWithLastResult.js">
@@ -3587,12 +3578,6 @@
     <Content Include="web\resources\Settings\AddApplicationLogs.en.js">
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\Settings\AddGetWcfServicesStatus.de.js">
-      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\Settings\AddGetWcfServicesStatus.en.js">
-      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
-    </Content>
     <Content Include="web\resources\Settings\AddJobsInfosWithLastResult.de.js">
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
@@ -3767,12 +3752,6 @@
     <Content Include="web\resources\Settings\FilterApplicationLogs.en.js">
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\Settings\FilterGetWcfServicesStatus.de.js">
-      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\Settings\FilterGetWcfServicesStatus.en.js">
-      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
-    </Content>
     <Content Include="web\resources\Settings\FilterJobsInfosWithLastResult.de.js">
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
     </Content>
@@ -3918,18 +3897,6 @@
     </Content>
     <Content Include="web\resources\Settings\FilterWinserviceInfosWithLastResult.en.js">
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\Settings\GetWcfServicesStatuses.de.js">
-      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\Settings\GetWcfServicesStatuses.en.js">
-      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\Settings\GetWcfServicesStatusRelationships.de.js">
-      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\Settings\GetWcfServicesStatusRelationships.en.js">
-      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\JobsInfosWithLastResultRelationships.de.js">
       <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
@@ -5762,9 +5729,6 @@
     <Content Include="web\templates\Settings\AddApplicationLogs.html">
       <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
     </Content>
-    <Content Include="web\templates\Settings\AddGetWcfServicesStatus.html">
-      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
-    </Content>
     <Content Include="web\templates\Settings\AddJobsInfosWithLastResult.html">
       <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
     </Content>
@@ -5843,9 +5807,6 @@
     <Content Include="web\templates\Settings\ApplicationLogsRelationships.html">
       <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
     </Content>
-    <Content Include="web\templates\Settings\FilterGetWcfServicesStatus.html">
-      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
-    </Content>
     <Content Include="web\templates\Settings\FilterJobsInfosWithLastResult.html">
       <DependentUpon>web.masterdata.templates.tt</DependentUpon>
     </Content>
@@ -5860,12 +5821,6 @@
     </Content>
     <Content Include="web\templates\Settings\FilterWinserviceInfosWithLastResult.html">
       <DependentUpon>web.masterdata.templates.tt</DependentUpon>
-    </Content>
-    <Content Include="web\templates\Settings\GetWcfServicesStatuses.html">
-      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
-    </Content>
-    <Content Include="web\templates\Settings\GetWcfServicesStatusRelationships.html">
-      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\Settings\JobsInfosWithLastResultRelationships.html">
       <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
@@ -7338,9 +7293,6 @@
     <Content Include="web\views\Settings\AddApplicationLogs.js">
       <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
     </Content>
-    <Content Include="web\views\Settings\AddGetWcfServicesStatus.js">
-      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
-    </Content>
     <Content Include="web\views\Settings\AddJobsInfosWithLastResult.js">
       <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
     </Content>
@@ -7419,9 +7371,6 @@
     <Content Include="web\views\Settings\ApplicationLogsRelationships.js">
       <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
     </Content>
-    <Content Include="web\views\Settings\FilterGetWcfServicesStatus.js">
-      <DependentUpon>web.masterdata.views.tt</DependentUpon>
-    </Content>
     <Content Include="web\views\Settings\FilterJobsInfosWithLastResult.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
     </Content>
@@ -7436,12 +7385,6 @@
     </Content>
     <Content Include="web\views\Settings\FilterWinserviceInfosWithLastResult.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\Settings\GetWcfServicesStatuses.js">
-      <DependentUpon>web.masterdata.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\Settings\GetWcfServicesStatusRelationships.js">
-      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\JobsInfosWithLastResultRelationships.js">
       <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
