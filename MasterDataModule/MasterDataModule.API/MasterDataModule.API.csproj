@@ -507,6 +507,7 @@
     </Compile>
     <Compile Include="Controllers\Monitor\JobMonitorController.cs" />
     <Compile Include="Controllers\Monitor\WebSiteMonitorController.cs" />
+    <Compile Include="Controllers\Monitor\ApplicationLogToShowController.cs" />
     <Compile Include="Controllers\Monitor\WinServiceMonitorController.cs" />
     <Compile Include="Controllers\Monitor\WebServiceMonitorController.cs" />
     <Compile Include="Controllers\ReadOnlyClientBaseController.cs" />
@@ -890,6 +891,7 @@
     <Compile Include="Models\ISystemModelFields.cs" />
     <Compile Include="Models\IModelIntervalFields.cs" />
     <Compile Include="Models\Monitor\JobStatusModel.cs" />
+    <Compile Include="Models\Monitor\ApplicationLogToShowModel.cs" />
     <Compile Include="Models\Monitor\WinServiceStatusModel.cs" />
     <Compile Include="Models\Monitor\WebSiteStatusModel.cs" />
     <Compile Include="Models\Monitor\WcfServiceStatusModel.cs" />

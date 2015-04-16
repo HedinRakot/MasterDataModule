@@ -22,15 +22,6 @@
             this.collection = new Collection();
         },
 
-        events: {
-            'click .select-monitorable-object a': function (e) {
-                e.preventDefault();
-                var self = this,
-                dataItem = self.grid.dataItem($(e.target).closest('tr'));
-                location.href = '/#LogTypeInfos' + '/' + dataItem.logTypeInfoId;
-            }
-        },
-
         columns: function () {
             return [
                 { field: "name", title: this.resources.name, width: 200 },
@@ -56,8 +47,13 @@
                 { field: "message", title: this.resources.message, width: 350 },
                 {
                     title: this.resources.logRef,
-                    attributes: { 'class': 'select-monitorable-object' },
-                    command: { name: 'select-monitorable-object', text: this.resources.logButton }
+                    field: "logTypeInfoId",
+                    attributes: { style: "text-align:center" },
+                    template: function (dataItem) {
+                        return (dataItem.logTypeInfoId == null) ?
+                            "" :
+                        "<a href='/#ApplicationLogToShow/" + dataItem.logTypeInfoId + "'><img src='../css/images/log_file_icon.png' width='30'></img></a>";
+                    }
                 }
             ];
         }

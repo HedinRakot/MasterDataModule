@@ -40,6 +40,7 @@ namespace MasterDataModule.Lib.Data
             modelBuilder.Configurations.Add(JobsInfoMapping.Instance);
             modelBuilder.Configurations.Add(WebSitesInfoMapping.Instance);
             modelBuilder.Configurations.Add(WinServicesInfoMapping.Instance);
+            modelBuilder.Configurations.Add(ApplicationLogToShowMapping.Instance);
         }
     }
 }
