@@ -82,6 +82,9 @@
       <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Configuration\Custom.MasterDataNotification.cs" />
+    <Compile Include="Entities\Configuration\JobsInfosWithLastResult.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Configuration\LogTypeInfo.cs">
       <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
     </Compile>
@@ -125,6 +128,15 @@
       <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Configuration\MasterDataWindowsServiceInfo.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\SiteInfosWithLastResult.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\WcfInfosWithLastResult.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\WinserviceInfosWithLastResult.cs">
       <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Drl\CommunityParticipant.cs">
@@ -182,6 +194,9 @@
     <Compile Include="Managers\Configuration\IApplicationLogsManager.cs">
       <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Managers\Configuration\IJobsInfosWithLastResultManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\Configuration\ILogTypeInfoManager.cs">
       <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
     </Compile>
@@ -227,7 +242,16 @@
     <Compile Include="Managers\Configuration\IMasterDataWindowsServiceInfoManager.cs">
       <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Managers\Configuration\ISiteInfosWithLastResultManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\Configuration\IUserManager.Custom.cs" />
+    <Compile Include="Managers\Configuration\IWcfInfosWithLastResultManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IWinserviceInfosWithLastResultManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\Drl\ICommunityParticipantManager.cs">
       <DependentUpon>Drl.IManagers.tt</DependentUpon>
     </Compile>

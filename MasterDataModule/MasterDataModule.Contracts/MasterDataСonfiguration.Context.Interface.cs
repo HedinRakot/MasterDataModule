@@ -16,6 +16,46 @@ namespace MasterDataModule.Contracts
     public partial interface IMasterDataConfigurationEntities
     {
         /// <summary>
+        ///     Set of <see cref="SiteInfosWithLastResult"/> entities from table dbo.SITE_INFOS_WITH_LAST_RESULT
+        /// </summary>
+        IQueryable<SiteInfosWithLastResult> SiteInfosWithLastResult{get;}
+        /// <summary>
+        ///     Set of <see cref="WcfInfosWithLastResult"/> entities from table dbo.WCF_INFOS_WITH_LAST_RESULT
+        /// </summary>
+        IQueryable<WcfInfosWithLastResult> WcfInfosWithLastResult{get;}
+        /// <summary>
+        ///     Set of <see cref="WinserviceInfosWithLastResult"/> entities from table dbo.WINSERVICE_INFOS_WITH_LAST_RESULT
+        /// </summary>
+        IQueryable<WinserviceInfosWithLastResult> WinserviceInfosWithLastResult{get;}
+        /// <summary>
+        ///     Set of <see cref="JobsInfosWithLastResult"/> entities from table dbo.JOBS_INFOS_WITH_LAST_RESULT
+        /// </summary>
+        IQueryable<JobsInfosWithLastResult> JobsInfosWithLastResult{get;}
+        /// <summary>
+        ///     Set of <see cref="MasterDataWcfInfo"/> entities from table dbo.MASTER_DATA_WCF_INFO
+        /// </summary>
+        IQueryable<MasterDataWcfInfo> MasterDataWcfInfo{get;}
+        /// <summary>
+        ///     Set of <see cref="MasterDataWcfCheckResults"/> entities from table dbo.MASTER_DATA_WCF_CHECK_RESULTS
+        /// </summary>
+        IQueryable<MasterDataWcfCheckResults> MasterDataWcfCheckResults{get;}
+        /// <summary>
+        ///     Set of <see cref="MasterDataSiteInfo"/> entities from table dbo.MASTER_DATA_SITE_INFO
+        /// </summary>
+        IQueryable<MasterDataSiteInfo> MasterDataSiteInfo{get;}
+        /// <summary>
+        ///     Set of <see cref="MasterDataSiteCheckResults"/> entities from table dbo.MASTER_DATA_SITE_CHECK_RESULTS
+        /// </summary>
+        IQueryable<MasterDataSiteCheckResults> MasterDataSiteCheckResults{get;}
+        /// <summary>
+        ///     Set of <see cref="MasterDataMonitorState"/> entities from table dbo.MASTER_DATA_MONITOR_STATE
+        /// </summary>
+        IQueryable<MasterDataMonitorState> MasterDataMonitorState{get;}
+        /// <summary>
+        ///     Set of <see cref="ApplicationLogs"/> entities from table dbo.APPLICATION_LOGS
+        /// </summary>
+        IQueryable<ApplicationLogs> ApplicationLogs{get;}
+        /// <summary>
         ///     Set of <see cref="MasterDataJobInfo"/> entities from table dbo.MASTER_DATA_JOB_INFO
         /// </summary>
         IQueryable<MasterDataJobInfo> MasterDataJobInfo{get;}
@@ -28,9 +68,17 @@ namespace MasterDataModule.Contracts
         /// </summary>
         IQueryable<MasterDataWindowsServiceInfo> MasterDataWindowsServiceInfo{get;}
         /// <summary>
+        ///     Set of <see cref="SysColumn"/> entities from table dbo.SYS_COLUMNS
+        /// </summary>
+        IQueryable<SysColumn> SysColumn{get;}
+        /// <summary>
         ///     Set of <see cref="MasterDataWindowsServiceCheckResults"/> entities from table dbo.MASTER_DATA_WINDOWS_SERVICE_CHECK_RESULTS
         /// </summary>
         IQueryable<MasterDataWindowsServiceCheckResults> MasterDataWindowsServiceCheckResults{get;}
+        /// <summary>
+        ///     Set of <see cref="SysTable"/> entities from table dbo.SYS_TABLES
+        /// </summary>
+        IQueryable<SysTable> SysTable{get;}
         /// <summary>
         ///     Set of <see cref="Role"/> entities from table dbo.MASTER_DATA_ROLE
         /// </summary>
@@ -52,52 +100,20 @@ namespace MasterDataModule.Contracts
         /// </summary>
         IQueryable<MasterDataSubscribers> MasterDataSubscribers{get;}
         /// <summary>
-        ///     Set of <see cref="MasterDataNotifications"/> entities from table dbo.MASTER_DATA_NOTIFICATIONS
-        /// </summary>
-        IQueryable<MasterDataNotifications> MasterDataNotifications{get;}
-        /// <summary>
-        ///     Set of <see cref="SysColumn"/> entities from table dbo.SYS_COLUMNS
-        /// </summary>
-        IQueryable<SysColumn> SysColumn{get;}
-        /// <summary>
         ///     Set of <see cref="MasterDataMonitorableInfoMasterDataNotificationsRsp"/> entities from table dbo.MASTER_DATA_MONITORABLE_INFO_MASTER_DATA_NOTIFICATIONS_RSP
         /// </summary>
         IQueryable<MasterDataMonitorableInfoMasterDataNotificationsRsp> MasterDataMonitorableInfoMasterDataNotificationsRsp{get;}
-        /// <summary>
-        ///     Set of <see cref="SysTable"/> entities from table dbo.SYS_TABLES
-        /// </summary>
-        IQueryable<SysTable> SysTable{get;}
         /// <summary>
         ///     Set of <see cref="MasterDataNotificationsMasterDataSubscribersRsp"/> entities from table dbo.MASTER_DATA_NOTIFICATIONS_MASTER_DATA_SUBSCRIBERS_RSP
         /// </summary>
         IQueryable<MasterDataNotificationsMasterDataSubscribersRsp> MasterDataNotificationsMasterDataSubscribersRsp{get;}
         /// <summary>
-        ///     Set of <see cref="ApplicationLogs"/> entities from table dbo.APPLICATION_LOGS
+        ///     Set of <see cref="MasterDataNotifications"/> entities from table dbo.MASTER_DATA_NOTIFICATIONS
         /// </summary>
-        IQueryable<ApplicationLogs> ApplicationLogs{get;}
-        /// <summary>
-        ///     Set of <see cref="MasterDataWcfInfo"/> entities from table dbo.MASTER_DATA_WCF_INFO
-        /// </summary>
-        IQueryable<MasterDataWcfInfo> MasterDataWcfInfo{get;}
-        /// <summary>
-        ///     Set of <see cref="MasterDataWcfCheckResults"/> entities from table dbo.MASTER_DATA_WCF_CHECK_RESULTS
-        /// </summary>
-        IQueryable<MasterDataWcfCheckResults> MasterDataWcfCheckResults{get;}
-        /// <summary>
-        ///     Set of <see cref="MasterDataSiteInfo"/> entities from table dbo.MASTER_DATA_SITE_INFO
-        /// </summary>
-        IQueryable<MasterDataSiteInfo> MasterDataSiteInfo{get;}
-        /// <summary>
-        ///     Set of <see cref="MasterDataSiteCheckResults"/> entities from table dbo.MASTER_DATA_SITE_CHECK_RESULTS
-        /// </summary>
-        IQueryable<MasterDataSiteCheckResults> MasterDataSiteCheckResults{get;}
+        IQueryable<MasterDataNotifications> MasterDataNotifications{get;}
         /// <summary>
         ///     Set of <see cref="LogTypeInfo"/> entities from table dbo.LOG_TYPE_INFO
         /// </summary>
         IQueryable<LogTypeInfo> LogTypeInfo{get;}
-        /// <summary>
-        ///     Set of <see cref="MasterDataMonitorState"/> entities from table dbo.MASTER_DATA_MONITOR_STATE
-        /// </summary>
-        IQueryable<MasterDataMonitorState> MasterDataMonitorState{get;}
     }
 }

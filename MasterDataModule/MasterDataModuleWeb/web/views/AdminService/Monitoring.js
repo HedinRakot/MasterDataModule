@@ -1,10 +1,10 @@
 ﻿define([
     'base/base-view',
     'kendo.backbone/backbone.datasource',
-    'collections/Settings/MasterDataWcfInfos',
-    'collections/Settings/MasterDataSiteInfos',
-    'collections/Settings/MasterDataWindowsServiceInfos',
-    'collections/Settings/MasterDataJobInfos',
+    'collections/Settings/WcfInfosWithLastResults',
+    'collections/Settings/SiteInfosWithLastResults',
+    'collections/Settings/WinserviceInfosWithLastResults',
+    'collections/Settings/JobsInfosWithLastResults',
     'jquerySignalR',
     'signalrHubs',
 	'lk!kendo/kendo.grid'
@@ -15,11 +15,18 @@
         return 'href_' + type.toString() + '_' + id.toString();
     }
 
+    var getImageByResult = function (result) {
+        if (result === null)
+            return "Circle_Grey.png";
+
+        return result === 1 ? "Circle_Green.png" : "Circle_Red.png";
+    };
+
     var fillInfos = function(selector, type, collection, view, href) {
         var col = new collection();
         col.fetch().done(function (result) {
             $.each(result.data, function (index, item) {
-                view.$('#' + selector).append("<tr><td><img id='" + getSelectorForImage(type, item.id) + "' src='../../css/images/" + "Circle_Grey.png" + "' width='20' height='20'/></td><td><a href = '#" + href + "'>" + item.name + "</a></td></tr>");
+                view.$('#' + selector).append("<tr><td><img id='" + getSelectorForImage(type, item.id) + "' src='../../css/images/" + getImageByResult(item.lastResult) + "' width='20' height='20'/></td><td><a href = '#" + href + "'>" + item.name + "</a></td></tr>");
             });
         });
     }
@@ -31,8 +38,8 @@
             var hub = $.connection.monitorableObjects;
             hub.client.statusChanged = function (checkModuleType, infoId, result) {
                 var selector = getSelectorForImage(checkModuleType, infoId);
-                var image = result === 1 ? "Circle_Green.png" : "Circle_Red.png";
-                $('#' + selector).attr('src', "../../css/images/" + image);
+                var image = 
+                $('#' + selector).attr('src', "../../css/images/" + getImageByResult(result));
             };
 
             fillInfos('wcfServices', 1, WcfInfos, this, 'WebServiceMonitor');

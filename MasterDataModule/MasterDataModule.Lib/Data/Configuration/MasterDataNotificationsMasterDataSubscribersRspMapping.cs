@@ -57,9 +57,6 @@ namespace MasterDataModule.Lib.Data.Configuration
 
 
             //Relationships
-            HasRequired(m => m.MasterDataNotifications)
-                .WithMany(m => m.MasterDataNotificationsMasterDataSubscribersRsps)
-                .HasForeignKey(t => t.MasterDataNotificationsId);
             HasRequired(m => m.MasterDataSubscribers)
                 .WithMany(m => m.MasterDataNotificationsMasterDataSubscribersRsps)
                 .HasForeignKey(t => t.MasterDataSubscribersId);
