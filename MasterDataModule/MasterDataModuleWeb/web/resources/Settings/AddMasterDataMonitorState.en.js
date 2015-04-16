@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,11 +8,8 @@ define(function () {
 	    masterData: 'Settings',
 	    pageTitle: 'Monitor settings',
 		pleaseSelect: 'Please select',
-
 		reconfigure: 'Reconfigure',	
-
 		reconfigureCheckingTimeout: 'Reconfigure flag checking timeout',	
-
 	};
 
 	return resources;

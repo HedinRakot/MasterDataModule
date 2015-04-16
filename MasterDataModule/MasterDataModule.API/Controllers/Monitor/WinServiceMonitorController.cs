@@ -17,6 +17,8 @@ namespace MasterDataModule.API.Controllers.Monitor
             model.checkStatus = entity.CheckStatus;
             model.message = entity.Message;
             model.machineName = entity.MachineName;
+            model.logTypeInfoId = entity.LogTypeInfoId;
+            
             
         }
         protected override void ModelToEntity(WinServiceStatusModel model, WinServiceStatus entity, ActionTypes actionType)
@@ -27,6 +29,7 @@ namespace MasterDataModule.API.Controllers.Monitor
             entity.CheckStatus = model.checkStatus;
             entity.Message = model.message;
             entity.MachineName = model.machineName;
+            entity.LogTypeInfoId = model.logTypeInfoId;
         }
     }
 }

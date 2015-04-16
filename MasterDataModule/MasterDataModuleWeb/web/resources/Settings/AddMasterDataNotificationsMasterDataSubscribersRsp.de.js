@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,11 +8,10 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Überwachungsnachrichten Empfänger',
 		pleaseSelect: 'Bitte auswählen',
-
 		masterDataNotificationsId: 'Überwachungsnachricht',	
-
 		masterDataSubscribersId: 'Empfänger',	
-
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

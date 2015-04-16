@@ -44,6 +44,9 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.CreateDate)
             .HasColumnName(JobStatus.Fields.CreateDate);
 
+            Property(t => t.LogTypeInfoId)
+         .HasColumnName(JobStatus.Fields.LogTypeInfoId);
+
          
             //Relationships
         }

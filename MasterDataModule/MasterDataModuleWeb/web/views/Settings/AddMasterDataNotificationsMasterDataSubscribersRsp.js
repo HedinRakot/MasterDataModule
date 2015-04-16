@@ -19,6 +19,8 @@ define([
 				selectOptions: { labelPath: 'name', valuePath: 'id',
 				collection: self.options.masterDataSubscribers
 				,defaultOption: {label: self.resources.pleaseSelect,value: null}},},
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 			};
 
             return result;
@@ -31,6 +33,8 @@ define([
 			//TODO foreach model field
 			this.disableInput(this, 'masterDataNotificationsId', 'numeric');
 			this.disableInput(this, 'masterDataSubscribersId', 'select');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

@@ -9,7 +9,9 @@ define(function () {
 	    checkDate: "Check time",
 	    attempt: "Attempt counter",
 	    message: "Message",
-	    machineName: 'Machine name'
+	    machineName: 'Machine name',
+	    logRef: 'Show log',
+	    logButton: 'Log...'
 	};
         
 	return resources;

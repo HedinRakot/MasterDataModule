@@ -17,6 +17,7 @@ namespace MasterDataModule.API.Controllers.Monitor
             model.checkStatus = entity.CheckStatus;
             model.message = entity.Message;
             model.sitePath = entity.SitePath;
+            model.logTypeInfoId = entity.LogTypeInfoId;
             
         }
         protected override void ModelToEntity(WebSiteStatusModel model, WebSiteStatus entity, ActionTypes actionType)
@@ -27,6 +28,7 @@ namespace MasterDataModule.API.Controllers.Monitor
             entity.CheckStatus = model.checkStatus;
             entity.Message = model.message;
             entity.SitePath = model.sitePath;
+            entity.LogTypeInfoId = model.logTypeInfoId;
         }
     }
 }

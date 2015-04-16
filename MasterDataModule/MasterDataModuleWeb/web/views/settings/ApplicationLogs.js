@@ -24,10 +24,10 @@ define([
 		columns: function () {
 			
 			return [
-				{ field: 'logType', title: this.resources.logType },
 				{ field: 'logLevel', title: this.resources.logLevel },
 				{ field: 'date', title: this.resources.date , format: '{0:d}'},
 				{ field: 'message', title: this.resources.message },
+				{ field: 'logTypeInfoId', title: this.resources.logTypeInfoId , collection: this.options.logTypeInfos, defaultText: this.resources.pleaseSelect},
 			];
 		}
 

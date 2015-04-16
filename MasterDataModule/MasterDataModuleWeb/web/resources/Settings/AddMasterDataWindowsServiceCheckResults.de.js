@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,17 +8,13 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Windows Services Monitor',
 		pleaseSelect: 'Bitte auswählen',
-
 		checkStatus: 'Status',	
-
 		checkDate: 'Prüfungsdatum',	
-
 		message: 'Nachricht',	
-
 		attempt: 'Zähler',	
-
 		masterDataWindowsServiceInfoId: 'Windows-Service',	
-
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
 	};
 
 	return resources;

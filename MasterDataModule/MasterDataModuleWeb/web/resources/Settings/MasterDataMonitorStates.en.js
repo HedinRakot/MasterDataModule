@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -10,11 +9,8 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Monitor settings',
 		pleaseSelect: 'Please select',
-
 		reconfigure: 'Reconfigure',	
-
 		reconfigureCheckingTimeout: 'Reconfigure flag checking timeout',	
-
 	};
 
 	return resources;

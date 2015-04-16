@@ -5,9 +5,6 @@ define(function () {
 	    urlRoot: 'api/ApplicationLogs',
 		fields: {
 			id: { type: "number", editable: false }
-			,logType: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('ApplicationLogs', 'logType'), 
-				                    validation: { required: true } }			
 			,logLevel: { type: "number", 
 			                        editable: Application.canTableItemBeEdit('ApplicationLogs', 'logLevel'), 
 				                    validation: { required: true } }			
@@ -23,6 +20,9 @@ define(function () {
 			,toDate: { type: "date", 
 			                        editable: Application.canTableItemBeEdit('ApplicationLogs', 'toDate'), 
 				                    validation: { required: true, date: true } }			
+			,logTypeInfoId: { type: "number", 
+			                        editable: Application.canTableItemBeEdit('ApplicationLogs', 'logTypeInfoId'), 
+				                    validation: { required: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

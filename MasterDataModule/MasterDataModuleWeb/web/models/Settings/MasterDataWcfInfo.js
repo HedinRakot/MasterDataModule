@@ -20,6 +20,9 @@ define(function () {
 			,toDate: { type: "date", 
 			                        editable: Application.canTableItemBeEdit('MasterDataWcfInfo', 'toDate'), 
 				                    validation: { required: true, date: true } }			
+			,logTypeInfoId: { type: "number", 
+			                        editable: Application.canTableItemBeEdit('MasterDataWcfInfo', 'logTypeInfoId'), 
+				                    validation: { required: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

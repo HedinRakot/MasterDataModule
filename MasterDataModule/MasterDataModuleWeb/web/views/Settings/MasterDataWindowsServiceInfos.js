@@ -28,6 +28,7 @@ define([
 				{ field: 'machineName', title: this.resources.machineName },
 				{ field: 'serviceName', title: this.resources.serviceName },
 				{ field: 'timeoutChecking', title: this.resources.timeoutChecking },
+				{ field: 'logTypeInfoId', title: this.resources.logTypeInfoId , collection: this.options.logTypeInfo, defaultText: this.resources.pleaseSelect},
 			];
 		}
 

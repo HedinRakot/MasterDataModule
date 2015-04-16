@@ -15,12 +15,6 @@ namespace MasterDataModule.API.Models.Settings
     {
 
         /// <summary>
-        ///     Model property for <see cref="ApplicationLogs.LogType"/> entity
-        /// </summary>
-        [Required]
-        [DataMember]
-        public int logType{ get; set; }
-        /// <summary>
         ///     Model property for <see cref="ApplicationLogs.LogLevel"/> entity
         /// </summary>
         [Required]
@@ -50,6 +44,12 @@ namespace MasterDataModule.API.Models.Settings
         [Required]
         [DataMember]
         public DateTime toDate{ get; set; }
+        /// <summary>
+        ///     Model property for <see cref="ApplicationLogs.LogTypeInfoId"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public int logTypeInfoId{ get; set; }
 
     }
 }

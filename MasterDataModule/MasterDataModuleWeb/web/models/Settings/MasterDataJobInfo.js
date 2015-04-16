@@ -26,6 +26,9 @@ define(function () {
 			,toDate: { type: "date", 
 			                        editable: Application.canTableItemBeEdit('MasterDataJobInfo', 'toDate'), 
 				                    validation: { required: true, date: true } }			
+			,logTypeInfoId: { type: "number", 
+			                        editable: Application.canTableItemBeEdit('MasterDataJobInfo', 'logTypeInfoId'), 
+				                    validation: { required: true } }			
 		},
 		defaults: function () {
 			var dnf = new Date();

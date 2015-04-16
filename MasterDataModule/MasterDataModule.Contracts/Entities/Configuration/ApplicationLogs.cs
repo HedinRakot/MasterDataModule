@@ -26,10 +26,6 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             /// </summary>
             public static readonly string Id = "ID";
             /// <summary>
-            /// Column name 'LOG_TYPE' for property <see cref="ApplicationLogs.LogType"/>
-            /// </summary>
-            public static readonly string LogType = "LOG_TYPE";
-            /// <summary>
             /// Column name 'LOG_LEVEL' for property <see cref="ApplicationLogs.LogLevel"/>
             /// </summary>
             public static readonly string LogLevel = "LOG_LEVEL";
@@ -61,14 +57,14 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             /// Column name 'TO_DATE' for property <see cref="ApplicationLogs.ToDate"/>
             /// </summary>
             public static readonly string ToDate = "TO_DATE";
+            /// <summary>
+            /// Column name 'LOG_TYPE_INFO_ID' for property <see cref="ApplicationLogs.LogTypeInfoId"/>
+            /// </summary>
+            public static readonly string LogTypeInfoId = "LOG_TYPE_INFO_ID";
           
         }
         #endregion
         public int Id{ get; set; }
-        /// <summary>
-        ///     DE: Log-Typ  EN: Logs type
-        /// </summary>
-        public int LogType{ get; set; }
         /// <summary>
         ///     DE: Log-Stufe  EN: logs level
         /// </summary>
@@ -92,6 +88,12 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         ///     DE:Bis Datum  EN:  Date to
         /// </summary>
         public DateTime ToDate{ get; set; }
+        public int LogTypeInfoId{ get; set; }
+        public virtual LogTypeInfo LogTypeInfo{ get; set; }
+        public bool HasLogTypeInfo
+        {
+            get { return !ReferenceEquals(LogTypeInfo, null); }
+        }
         DateTime? IIntervalFields.FromDate
         {
             get { return FromDate; }
@@ -121,7 +123,6 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         {
             return new ApplicationLogs {
                        Id = Id,
-                       LogType = LogType,
                        LogLevel = LogLevel,
                        Date = Date,
                        Message = Message,
@@ -130,6 +131,7 @@ namespace MasterDataModule.Contracts.Entities.Configuration
                        CreateDate = CreateDate,
                        FromDate = FromDate,
                        ToDate = ToDate,
+                       LogTypeInfoId = LogTypeInfoId,
         	           };
         }
     }

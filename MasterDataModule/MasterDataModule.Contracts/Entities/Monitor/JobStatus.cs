@@ -45,7 +45,10 @@ namespace MasterDataModule.Contracts.Entities.Monitor
             /// </summary>
             public static readonly string JobName = "JOB_NAME";
 
-           
+            /// <summary>
+            /// Column name 'LOG_TYPE_INFO_ID' 
+            /// </summary>
+            public static readonly string LogTypeInfoId = "LOG_TYPE_INFO_ID";
 
             public static readonly string DeleteDate = "DELETE_DATE";
             public static readonly string CreateDate = "CREATE_DATE";
@@ -60,6 +63,9 @@ namespace MasterDataModule.Contracts.Entities.Monitor
         public int Id { get; set; }
 
         public int? CheckStatus { get; set; }
+
+        public int? LogTypeInfoId { get; set; }
+
         public DateTime? CheckDate { get; set; }
 
         public DateTime? LastRunTime { get; set; }
@@ -82,7 +88,8 @@ namespace MasterDataModule.Contracts.Entities.Monitor
                 CheckDate = CheckDate,
                 CheckStatus = CheckStatus,
                 LastRunTime = LastRunTime,
-                JobName = JobName
+                JobName = JobName,
+                LogTypeInfoId = LogTypeInfoId
             };
         }
 

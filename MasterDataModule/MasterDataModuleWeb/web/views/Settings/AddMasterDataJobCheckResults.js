@@ -18,6 +18,8 @@ define([
 			'#checkDate': 'checkDate',
 			'#checkStatus': 'checkStatus',
 			'#masterDataJobInfoId': 'masterDataJobInfoId',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 			};
 
             return result;
@@ -32,6 +34,8 @@ define([
 			this.disableInput(this, 'checkDate', 'date');
 			this.disableInput(this, 'checkStatus', 'numeric');
 			this.disableInput(this, 'masterDataJobInfoId', 'numeric');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

@@ -506,6 +506,9 @@
     <Content Include="web\collections\Settings\ApplicationLogs.js">
       <DependentUpon>web.masterdata.collections.tt</DependentUpon>
     </Content>
+    <Content Include="web\collections\Settings\LogTypeInfos.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
     <Content Include="web\collections\Settings\MasterDataJobCheckResults.js">
       <DependentUpon>web.masterdata.collections.tt</DependentUpon>
     </Content>
@@ -1143,6 +1146,9 @@
     <Content Include="web\models\Settings\FilterApplicationLogs.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
+    <Content Include="web\models\Settings\FilterLogTypeInfo.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
     <Content Include="web\models\Settings\FilterMasterDataJobCheckResults.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
@@ -1198,6 +1204,9 @@
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\Settings\FilterUser.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\LogTypeInfo.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\Settings\MasterDataJobCheckResults.js">
@@ -3526,6 +3535,12 @@
     <Content Include="web\resources\Settings\AddApplicationLogs.en.js">
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\Settings\AddLogTypeInfo.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddLogTypeInfo.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\AddMasterDataJobCheckResults.de.js">
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
@@ -3670,6 +3685,12 @@
     <Content Include="web\resources\Settings\FilterApplicationLogs.en.js">
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\Settings\FilterLogTypeInfo.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterLogTypeInfo.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\FilterMasterDataJobCheckResults.de.js">
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
     </Content>
@@ -3785,6 +3806,18 @@
     </Content>
     <Content Include="web\resources\Settings\FilterUser.en.js">
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\LogTypeInfoRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\LogTypeInfoRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\LogTypeInfos.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\LogTypeInfos.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\MasterDataJobCheckResults.de.js">
       <DependentUpon>web.masterdata.resources.tt</DependentUpon>
@@ -5556,6 +5589,9 @@
     <Content Include="web\templates\Settings\AddApplicationLogs.html">
       <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\Settings\AddLogTypeInfo.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\Settings\AddMasterDataJobCheckResults.html">
       <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
     </Content>
@@ -5618,6 +5654,15 @@
     </Content>
     <Content Include="web\templates\Settings\ApplicationLogsRelationships.html">
       <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\FilterLogTypeInfo.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\LogTypeInfoRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\LogTypeInfos.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\Settings\SelectMonitorableObject.html" />
     <Content Include="web\templates\Settings\ChangePassword.html" />
@@ -7059,6 +7104,9 @@
     <Content Include="web\views\Settings\AddApplicationLogs.js">
       <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\Settings\AddLogTypeInfo.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\Settings\AddMasterDataJobCheckResults.js">
       <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
     </Content>
@@ -7121,6 +7169,15 @@
     </Content>
     <Content Include="web\views\Settings\ApplicationLogsRelationships.js">
       <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\FilterLogTypeInfo.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\LogTypeInfoRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\LogTypeInfos.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\SelectMonitorableObject.js" />
     <Content Include="web\views\Settings\ChangePassword.js" />

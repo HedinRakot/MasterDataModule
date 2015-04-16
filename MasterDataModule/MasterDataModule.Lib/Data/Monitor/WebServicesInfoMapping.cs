@@ -47,6 +47,9 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.CreateDate)
             .HasColumnName(WcfServiceStatus.Fields.CreateDate);
 
+            Property(t => t.LogTypeInfoId)
+         .HasColumnName(WcfServiceStatus.Fields.LogTypeInfoId);
+
          
             //Relationships
         }

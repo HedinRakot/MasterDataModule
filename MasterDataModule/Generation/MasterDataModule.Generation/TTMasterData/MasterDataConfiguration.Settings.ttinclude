@@ -1,5 +1,5 @@
 ﻿<#
-    const string conn = @"Data Source=SPBNB-PRC199\SQL2012;Initial Catalog=SettingsData;Integrated Security=True;MultipleActiveResultSets=True";
+    const string conn = @"Data Source=.;Initial Catalog=SettingsData;Integrated Security=True;MultipleActiveResultSets=True";
     const string contextName = "MasterDataConfiguration";
 	const string tableContext = "Configuration";
 	var tableGroup = "";

@@ -61,8 +61,14 @@ namespace MasterDataModule.Lib.Data.Configuration
                 .HasColumnName(MasterDataWcfInfo.Fields.ToDate)
                 .IsRequired();
 
+            Property(t => t.LogTypeInfoId)
+                .HasColumnName(MasterDataWcfInfo.Fields.LogTypeInfoId);
+
 
             //Relationships
+            HasOptional(m => m.LogTypeInfo)
+                .WithMany(l => l.MasterDataWcfInfos)
+                .HasForeignKey(t => t.LogTypeInfoId);
         }
     }
 }

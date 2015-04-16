@@ -15,6 +15,8 @@ define([
             var self = this;
             var result = {
 			'#email': 'email',
+			'#fromDate': 'fromDate',
+			'#toDate': 'toDate',
 			};
 
             return result;
@@ -26,6 +28,8 @@ define([
 
 			//TODO foreach model field
 			this.disableInput(this, 'email');
+			this.disableInput(this, 'fromDate', 'date');
+			this.disableInput(this, 'toDate', 'date');
 
             return this;
         }

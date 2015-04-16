@@ -29,6 +29,7 @@ define([
 				{ field: 'timeoutChecking', title: this.resources.timeoutChecking },
 				{ field: 'name', title: this.resources.name },
 				{ field: 'jobName', title: this.resources.jobName },
+				{ field: 'logTypeInfoId', title: this.resources.logTypeInfoId , collection: this.options.logTypeInfo, defaultText: this.resources.pleaseSelect},
 			];
 		}
 

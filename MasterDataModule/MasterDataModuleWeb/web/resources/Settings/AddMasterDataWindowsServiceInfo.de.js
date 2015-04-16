@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,15 +8,13 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Windows Services Einstellungen',
 		pleaseSelect: 'Bitte auswählen',
-
 		name: 'Name',	
-
 		machineName: 'Machine Name',	
-
 		serviceName: 'Windows-Service Name',	
-
 		timeoutChecking: 'Timeout',	
-
+		fromDate: 'Von Datum',	
+		toDate: 'Bis Datum',	
+		logTypeInfoId: 'Log Datei',	
 	};
 
 	return resources;

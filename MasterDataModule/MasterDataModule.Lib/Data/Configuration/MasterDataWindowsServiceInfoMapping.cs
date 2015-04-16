@@ -66,8 +66,14 @@ namespace MasterDataModule.Lib.Data.Configuration
                 .HasColumnName(MasterDataWindowsServiceInfo.Fields.ToDate)
                 .IsRequired();
 
+            Property(t => t.LogTypeInfoId)
+                .HasColumnName(MasterDataWindowsServiceInfo.Fields.LogTypeInfoId);
+
 
             //Relationships
+            HasOptional(m => m.LogTypeInfo)
+                .WithMany(l => l.MasterDataWindowsServiceInfos)
+                .HasForeignKey(t => t.LogTypeInfoId);
         }
     }
 }

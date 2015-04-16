@@ -17,6 +17,7 @@ namespace MasterDataModule.API.Controllers.Monitor
             model.checkStatus = entity.CheckStatus;
             model.message = entity.Message;
             model.wsdlPath = entity.WsdlPath;
+            model.logTypeInfoId = entity.LogTypeInfoId;
             
         }
         protected override void ModelToEntity(WcfServiceStatusModel model, WcfServiceStatus entity, ActionTypes actionType)
@@ -27,6 +28,7 @@ namespace MasterDataModule.API.Controllers.Monitor
             entity.CheckStatus = model.checkStatus;
             entity.Message = model.message;
             entity.WsdlPath = model.wsdlPath;
+            entity.LogTypeInfoId = model.logTypeInfoId;
         }
     }
 }

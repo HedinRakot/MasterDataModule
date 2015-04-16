@@ -283,6 +283,9 @@
     <Compile Include="Data\Configuration\ApplicationLogsMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\Configuration\LogTypeInfoMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\Configuration\MasterDataJobCheckResultsMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
@@ -716,6 +719,9 @@
     <Compile Include="Managers\Base\ReadOnlyEntityManager.cs" />
     <Compile Include="Managers\Base\ReadOnlyManagerBase.cs" />
     <Compile Include="Managers\Configuration\ApplicationLogsManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\LogTypeInfoManager.cs">
       <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Configuration\MasterDataJobCheckResultsManager.cs">
