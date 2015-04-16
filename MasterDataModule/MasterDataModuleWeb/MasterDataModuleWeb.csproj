@@ -228,6 +228,7 @@
     <Content Include="web.libs\jszip.js" />
     <Content Include="web\collections\AdminService\JobStatuses.js" />
     <Content Include="web\collections\AdminService\WebSiteStatuses.js" />
+    <Content Include="web\collections\AdminService\ApplicationLogsToShow.js" />
     <Content Include="web\collections\AdminService\WinServiceStatuses.js" />
     <Content Include="web\collections\AdminService\WcfServiceStatuses.js" />
     <Content Include="web\collections\CommonMasterData\Customer\InsTaxClasses.js">
@@ -621,6 +622,7 @@
     </Content>
     <Content Include="web\models\AdminService\JobStatus.js" />
     <Content Include="web\models\AdminService\WebSiteStatus.js" />
+    <Content Include="web\models\AdminService\ApplicationLogToShow.js" />
     <Content Include="web\models\AdminService\WinServiceStatus.js" />
     <Content Include="web\models\AdminService\WcfServiceStatus.js" />
     <Content Include="web\models\CommonMasterData\Customer\FilterInsTaxClass.js">
@@ -1365,10 +1367,12 @@
     <Content Include="web\resources\AdminService\AdminService.de.js" />
     <Content Include="web\resources\AdminService\AdminService.en.js" />
     <Content Include="web\resources\AdminService\Monitoring.de.js" />
+    <Content Include="web\resources\AdminService\ApplicationLogToShow.de.js" />
     <Content Include="web\resources\AdminService\WinServiceMonitor.de.js" />
     <Content Include="web\resources\AdminService\WebSiteMonitor.de.js" />
     <Content Include="web\resources\AdminService\JobMonitor.de.js" />
     <Content Include="web\resources\AdminService\WebSiteMonitor.en.js" />
+    <Content Include="web\resources\AdminService\ApplicationLogToShow.en.js" />
     <Content Include="web\resources\AdminService\WinServiceMonitor.en.js" />
     <Content Include="web\resources\AdminService\JobMonitor.en.js" />
     <Content Include="web\resources\AdminService\WebServiceMonitor.de.js" />
@@ -4464,6 +4468,7 @@
     <Content Include="web\templates\AdminService\JobMonitor.html" />
     <Content Include="web\templates\AdminService\Monitoring.html" />
     <Content Include="web\templates\AdminService\WebSiteMonitor.html" />
+    <Content Include="web\templates\AdminService\ApplicationLogToShow.html" />
     <Content Include="web\templates\AdminService\WinServiceMonitor.html" />
     <Content Include="web\templates\AdminService\WebServiceMonitor.html" />
     <Content Include="web\templates\CommonMasterData\CommonMasterData.html" />
@@ -6061,6 +6066,7 @@
     <Content Include="web\views\AdminService\JobMonitor.js" />
     <Content Include="web\views\AdminService\Monitoring.js" />
     <Content Include="web\views\AdminService\WebSiteMonitor.js" />
+    <Content Include="web\views\AdminService\ApplicationLogToShow.js" />
     <Content Include="web\views\AdminService\WinServiceMonitor.js" />
     <Content Include="web\views\AdminService\WebServiceMonitor.js" />
     <Content Include="web\views\CommonMasterData\CommonMasterData.js" />

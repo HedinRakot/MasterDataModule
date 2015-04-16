@@ -62,7 +62,7 @@
                     template: function (dataItem) {
                         return (dataItem.logTypeInfoId == null) ?
                             "" :
-                        "<a href='/#LogTypeInfos/" + dataItem.logTypeInfoId + "'><img src='../css/images/log_file_icon.png' width='30'></img></a>";
+                        "<a href='/#ApplicationLogToShow/" + dataItem.logTypeInfoId + "'><img src='../css/images/log_file_icon.png' width='30'></img></a>";
                     }
                 }
             ];
