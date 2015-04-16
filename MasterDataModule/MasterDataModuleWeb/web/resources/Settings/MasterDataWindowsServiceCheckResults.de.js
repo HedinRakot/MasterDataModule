@@ -20,6 +20,10 @@ define(function () {
 
 		masterDataWindowsServiceInfoId: 'Windows-Service',	
 
+		fromDate: 'Von Datum',	
+
+		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

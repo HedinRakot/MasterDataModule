@@ -22,6 +22,10 @@ define(function () {
 
 		subject: 'Thema',	
 
+		fromDate: 'Von Datum',	
+
+		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

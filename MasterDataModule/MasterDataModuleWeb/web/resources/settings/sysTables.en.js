@@ -17,6 +17,10 @@ define(function () {
 
 		editMode: 'Edit mode',	
 
+		fromDate: 'From date',	
+
+		toDate: 'To date',	
+
 	};
 
 	return resources;

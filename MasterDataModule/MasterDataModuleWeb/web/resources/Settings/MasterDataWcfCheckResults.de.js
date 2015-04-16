@@ -20,6 +20,10 @@ define(function () {
 
 		masterDataWcfInfoId: 'Web Service',	
 
+		fromDate: 'Von Datum',	
+
+		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

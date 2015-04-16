@@ -18,6 +18,10 @@ define(function () {
 
 		masterDataJobInfoId: 'Hintergrundprozess',	
 
+		fromDate: 'Von Datum',	
+
+		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

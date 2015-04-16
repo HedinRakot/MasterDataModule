@@ -89,10 +89,10 @@ namespace MonitoringAgent.Notifications.Config
                 var result = SmtpDeliveryMethod.Network;
                 var temp = 0;
 
-                if (Int32.TryParse(this[SmtpDeliveryMethodSettingName].ToString(), out temp))
-                {
-                    result = (SmtpDeliveryMethod)temp;
-                }
+                //if (Int32.TryParse(this[SmtpDeliveryMethodSettingName].ToString(), out temp))
+                //{
+                //    result = (SmtpDeliveryMethod)temp;
+                //}
 
                 return result;
             }

@@ -21,6 +21,10 @@ define(function () {
 
 		masterDataWindowsServiceInfoId: 'Windows service info',	
 
+		fromDate: 'From date',	
+
+		toDate: 'To date',	
+
 	};
 
 	return resources;

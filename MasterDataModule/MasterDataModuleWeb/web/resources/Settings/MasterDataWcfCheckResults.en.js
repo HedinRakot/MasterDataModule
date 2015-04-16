@@ -21,6 +21,10 @@ define(function () {
 
 		masterDataWcfInfoId: 'Wcf info',	
 
+		fromDate: 'From date',	
+
+		toDate: 'To date',	
+
 	};
 
 	return resources;

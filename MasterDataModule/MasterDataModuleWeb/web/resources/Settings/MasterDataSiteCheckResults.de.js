@@ -20,6 +20,10 @@ define(function () {
 
 		masterDataSiteInfoId: 'Web-Site',	
 
+		fromDate: 'Von Datum',	
+
+		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

@@ -13,6 +13,10 @@ define(function () {
 
 		email: 'E-mail',	
 
+		fromDate: 'From date',	
+
+		toDate: 'To date',	
+
 	};
 
 	return resources;

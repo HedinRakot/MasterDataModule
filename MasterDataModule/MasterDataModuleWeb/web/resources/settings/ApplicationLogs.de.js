@@ -18,6 +18,10 @@ define(function () {
 
 		message: 'Text',	
 
+		fromDate: 'Von Datum',	
+
+		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

@@ -20,6 +20,10 @@ define(function () {
 
 		jobName: 'Hintergrundprozess Name',	
 
+		fromDate: 'Von Datum',	
+
+		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

@@ -17,6 +17,10 @@ define(function () {
 
 		sitePath: 'Url',	
 
+		fromDate: 'From date',	
+
+		toDate: 'To date',	
+
 	};
 
 	return resources;

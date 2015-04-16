@@ -16,6 +16,10 @@ define(function () {
 
 		editMode: 'Editiebarkeit',	
 
+		fromDate: 'Von Datum',	
+
+		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

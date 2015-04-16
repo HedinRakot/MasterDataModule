@@ -12,6 +12,10 @@ define(function () {
 
 		email: 'E-mail',	
 
+		fromDate: 'Von Datum',	
+
+		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

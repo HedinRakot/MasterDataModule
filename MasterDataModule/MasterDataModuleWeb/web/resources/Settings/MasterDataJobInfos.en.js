@@ -21,6 +21,10 @@ define(function () {
 
 		jobName: ' Job name',	
 
+		fromDate: 'From date',	
+
+		toDate: 'To date',	
+
 	};
 
 	return resources;

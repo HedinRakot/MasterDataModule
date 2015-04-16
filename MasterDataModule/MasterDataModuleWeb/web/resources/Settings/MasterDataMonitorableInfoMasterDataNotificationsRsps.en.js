@@ -17,6 +17,10 @@ define(function () {
 
 		masterDataNotificationsId: 'Notification',	
 
+		fromDate: 'From date',	
+
+		toDate: 'To date',	
+
 	};
 
 	return resources;

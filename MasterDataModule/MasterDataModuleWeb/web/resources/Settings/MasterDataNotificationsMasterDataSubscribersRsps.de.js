@@ -14,6 +14,10 @@ define(function () {
 
 		masterDataSubscribersId: 'Empfänger',	
 
+		fromDate: 'Von Datum',	
+
+		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

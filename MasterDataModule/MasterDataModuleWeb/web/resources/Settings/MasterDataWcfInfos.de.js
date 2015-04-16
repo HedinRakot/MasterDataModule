@@ -16,6 +16,10 @@ define(function () {
 
 		timeoutChecking: 'Timeout',	
 
+		fromDate: 'Von Datum',	
+
+		toDate: 'Bis Datum',	
+
 	};
 
 	return resources;

@@ -23,6 +23,10 @@ define(function () {
 
 		subject: 'Subject',	
 
+		fromDate: 'From date',	
+
+		toDate: 'To date',	
+
 	};
 
 	return resources;
