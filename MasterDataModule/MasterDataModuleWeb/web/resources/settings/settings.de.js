@@ -2,6 +2,10 @@ define(function () {
 	'use strict';
 
 	var resources = {
+        SiteInfosWithLastResults: 'Site infos with last result',
+        WcfInfosWithLastResults: 'Wcf infos with last result',
+        WinserviceInfosWithLastResults: 'Win service infos with last result',
+        JobsInfosWithLastResults: 'Job infos with last result',
         MasterDataWcfInfos: 'Web-Services Einstellungen',
         MasterDataWcfCheckResults: 'Web-Services Monitor',
         MasterDataSiteInfos: 'Web-Site Einstellungen',
@@ -18,15 +22,10 @@ define(function () {
         Permissions: 'Stammdaten Berechtigung',
         MasterDataRolePermissionRsps: 'Stammdaten Berechtigung',
         Users: 'Stammdaten Benutzer',
-        GetWcfServicesStatuses: 'DE: Wcf service status',
         MasterDataSubscribers: 'Monitor Empfänger',
         MasterDataMonitorableInfoMasterDataNotificationsRsps: 'Überwachungsnachrichten Einstellungen',
         MasterDataNotificationsMasterDataSubscribersRsps: 'Überwachungsnachrichten Empfänger',
-        SiteInfosWithLastResults: 'Site infos with last result',
-        WcfInfosWithLastResults: 'Wcf infos with last result',
         MasterDataNotifications: 'Überwachungsnachrichten',
-        WinserviceInfosWithLastResults: 'Win service infos with last result',
-        JobsInfosWithLastResults: 'Job infos with last result',
         LogTypeInfos: 'Log-Datei Konfiguration',
 	};
 

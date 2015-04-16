@@ -18,7 +18,7 @@ define([
 		showDeleteButton: true,
 
 	    editItemTitle: function () {
-	        return this.resources.edit
+	        return this.resources.edit;
 	    },
 
 		columns: function () {
