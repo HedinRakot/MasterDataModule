@@ -18,18 +18,12 @@
 
         initialize: function () {
             view.__super__.initialize.apply(this, arguments);
-
+            //debugger;
+            //alert(location.search);
+            this.defaultFiltering = { field: 'logTypeInfoId', operator: 'eq', value: 7 };
             this.collection = new Collection();
         },
-
-        events:{
-            'click .select-monitorable-object a': function (e) {
-                e.preventDefault();
-                var self = this,
-                dataItem = self.grid.dataItem($(e.target).closest('tr'));
-                location.href = '/#LogTypeInfos' + '/' + dataItem.logTypeInfoId;
-            }
-        },
+        
       
         columns: function() {
             return [

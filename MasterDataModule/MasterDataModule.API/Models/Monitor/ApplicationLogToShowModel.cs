@@ -18,6 +18,6 @@ namespace MasterDataModule.API.Models.Monitor
         public string message { get; set; }
         
         [DataMember]
-        public int? logTypeInfoId { get; set; }
+        public int logTypeInfoId { get; set; }
     }
 }

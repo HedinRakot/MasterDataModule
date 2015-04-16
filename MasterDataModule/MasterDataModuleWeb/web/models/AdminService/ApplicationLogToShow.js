@@ -23,7 +23,7 @@
                 editable: false
             },
             logTypeInfoId: {
-                type: "int?",
+                type: "int",
                 editable: false
             }
         },

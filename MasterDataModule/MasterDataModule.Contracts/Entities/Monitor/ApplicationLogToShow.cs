@@ -56,7 +56,7 @@ namespace MasterDataModule.Contracts.Entities.Monitor
 
         public int Id { get; set; }
 
-        public int? LogTypeInfoId { get; set; }
+        public int LogTypeInfoId { get; set; }
         public int LogLevel { get; set; }
         public DateTime? MessageDate { get; set; }
         public string Message { get; set; }
