@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,23 +8,14 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Überwachungsnachrichten',
 		pleaseSelect: 'Bitte auswählen',
-
 		notificationType: 'Überwachungsnachricht Typ',	
-
 		isAlertOn: 'Aktiv',	
-
 		alertCheckStatus: 'Status',	
-
 		alertAttemptCount: 'Versuchanzahl',	
-
 		message: 'Nachricht',	
-
 		subject: 'Thema',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

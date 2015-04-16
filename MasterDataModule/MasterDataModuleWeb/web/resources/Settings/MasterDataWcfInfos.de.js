@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,17 +8,12 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Web-Services Einstellungen',
 		pleaseSelect: 'Bitte auswählen',
-
 		name: 'Name',	
-
 		wsdlPath: 'Pfad to Wsdl',	
-
 		timeoutChecking: 'Timeout',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
+		logTypeInfoId: 'Log Datei',	
 	};
 
 	return resources;

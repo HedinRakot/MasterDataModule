@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,17 +8,12 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Web-Site Einstellungen',
 		pleaseSelect: 'Bitte auswählen',
-
 		name: 'Site-Name',	
-
 		timeoutChecking: 'Timeout',	
-
 		sitePath: 'Url',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
+		logTypeInfoId: 'Log Datei',	
 	};
 
 	return resources;

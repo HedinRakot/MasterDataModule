@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -10,17 +9,11 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Monitorable object to notification',
 		pleaseSelect: 'Please select',
-
 		monitorableInfoType: 'Monitorable object type',	
-
 		monitorableInfoId: 'Monitorable object id',	
-
 		masterDataNotificationsId: 'Notification',	
-
 		fromDate: 'From date',	
-
 		toDate: 'To date',	
-
 	};
 
 	return resources;

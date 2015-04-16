@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,21 +8,14 @@ define(function () {
 	    masterData: 'Einstellungen',
 	    pageTitle: 'Hintergrundprozess Einstellungen',
 		pleaseSelect: 'Bitte auswählen',
-
 		connectionString: 'Connection string',	
-
 		tableName: 'Tabelle',	
-
 		timeoutChecking: 'Timeout checking',	
-
 		name: 'Name',	
-
 		jobName: 'Hintergrundprozess Name',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
+		logTypeInfoId: 'Log Datei',	
 	};
 
 	return resources;

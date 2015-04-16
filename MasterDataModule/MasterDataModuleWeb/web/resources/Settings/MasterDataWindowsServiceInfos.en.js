@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -10,19 +9,13 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Windows service info',
 		pleaseSelect: 'Please select',
-
 		name: 'Name',	
-
 		machineName: 'Machine name',	
-
 		serviceName: 'Service name',	
-
 		timeoutChecking: 'Timeout checking',	
-
 		fromDate: 'From date',	
-
 		toDate: 'To date',	
-
+		logTypeInfoId: 'Log file',	
 	};
 
 	return resources;

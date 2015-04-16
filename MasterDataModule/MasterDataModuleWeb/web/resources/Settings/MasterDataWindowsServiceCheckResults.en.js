@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -10,21 +9,13 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Windows service check results',
 		pleaseSelect: 'Please select',
-
 		checkStatus: 'Status',	
-
 		checkDate: 'Check date',	
-
 		message: 'Message',	
-
 		attempt: 'Attempt',	
-
 		masterDataWindowsServiceInfoId: 'Windows service info',	
-
 		fromDate: 'From date',	
-
 		toDate: 'To date',	
-
 	};
 
 	return resources;
