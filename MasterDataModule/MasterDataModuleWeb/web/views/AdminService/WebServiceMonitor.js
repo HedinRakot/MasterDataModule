@@ -22,24 +22,17 @@
             this.collection = new Collection();
         },
 
-        events: {
-            'click .select-monitorable-object a': function (e) {
-                e.preventDefault();
-                var self = this,
-                dataItem = self.grid.dataItem($(e.target).closest('tr'));
-                location.href = '/#LogTypeInfos' + '/' + dataItem.logTypeInfoId;
-            }
-        },
+       
 
-        columns: function () {
+        columns: function() {
             return [
                 { field: "name", title: this.resources.name, width: 200 },
                 {
                     field: "checkStatus",
                     width: 50,
                     title: this.resources.checkStatus,
-                    attributes: {style:"text-align:center"},
-                    template: function (dataItem) {
+                    attributes: { style: "text-align:center" },
+                    template: function(dataItem) {
                         var image =
                         (dataItem.checkStatus == 1) ? "success.png" : "fail.png";
                         return "<img src='../css/images/" + image + "' width='20' height='20'></img>";
@@ -50,14 +43,19 @@
                     title: this.resources.checkDate,
                     width: 150,
                     template: "#= kendo.toString(kendo.parseDate(checkDate, 'yyyy-MM-ddTHH:mm:ss'), 'MM.dd.yyyy HH:mm:ss') #"
-                    
+
                 },
                 { field: "attempt", title: this.resources.attempt, width: 50 },
                 { field: "message", title: this.resources.message, width: 350 },
                 {
                     title: this.resources.logRef,
-                    attributes: { 'class': 'select-monitorable-object' },
-                    command: { name: 'select-monitorable-object', text: this.resources.logButton }
+                    field: "logTypeInfoId",
+                    attributes: { style: "text-align:center" },
+                    template: function(dataItem) {
+                        return (dataItem.logTypeInfoId == null) ?
+                            "" :
+                            "<a href='/#LogTypeInfos/" + dataItem.logTypeInfoId + "'><img src='../css/images/log_file_icon.jpg' width='20'></img></a>";
+                    }
                 }
             ];
         }
