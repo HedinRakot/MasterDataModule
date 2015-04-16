@@ -20,5 +20,8 @@ namespace MasterDataModule.API.Models.Monitor
         [DataMember]
         public string jobName { get; set; }
 
+        [DataMember]
+        public int? logTypeInfoId { get; set; }
+
     }
 }

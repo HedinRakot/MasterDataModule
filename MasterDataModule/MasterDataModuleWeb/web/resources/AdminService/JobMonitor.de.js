@@ -11,7 +11,9 @@
 	    attempt: "Versuchzahl",
 	    message: "Meldung",
 	    jobName: 'Job Name',
-        lastRunTime: 'Letzte Ausführung'
+	    lastRunTime: 'Letzte Ausführung',
+	    logRef: 'Log zeigen',
+	    logButton: 'Log...'
 	};
 
 	return resources;

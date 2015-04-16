@@ -4,32 +4,35 @@
     var model = Backbone.Model.extend({
         urlRoot: 'api/WinServiceMonitor',
         fields: {
-            id: { type: "number", editable: false }
-			, name: {
+            id: { type: "number", editable: false },
+            name: {
                 type: "string",
                 editable: false
-			}
-           , attempt: {
+            },
+            attempt: {
                 type: "int?",
                 editable: false
-           }
-           , checkStatus: {
-               type: "int",
-               editable: false
-           }
-           , checkDate: {
-               type: "DateTime?",
-               editable: false
-           }
-           , message: {
-               type: "string",
-               editable: false
-           }
-           , machineName: {
+            },
+            checkStatus: {
+                type: "int",
+                editable: false
+            },
+            checkDate: {
+                type: "DateTime?",
+                editable: false
+            },
+            message: {
                 type: "string",
                 editable: false
+            },
+            machineName: {
+                type: "string",
+                editable: false
+            },
+            logTypeInfoId: {
+                type: "int?",
+                editable: false
             }
-			
         },
         
     });

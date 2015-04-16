@@ -8,7 +8,9 @@ define(function () {
 	    checkStatus: "Status",
 	    checkDate: "Pruefungzeit",
 	    attempt: "Versuchzahl",
-	    message: "Meldung"
+	    message: "Meldung",
+	    logRef: 'Log zeigen',
+	    logButton: 'Log...'
 	};
 
 	return resources;

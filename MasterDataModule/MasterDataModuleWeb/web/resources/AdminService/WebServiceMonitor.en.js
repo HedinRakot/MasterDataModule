@@ -9,7 +9,9 @@ define(function () {
 	    checkStatus: "Status",
 	    checkDate: "Check time",
 	    attempt: "Attempt counter",
-	    message: "Message"
+	    message: "Message",
+	    logRef: 'Show log',
+	    logButton: 'Log...'
 
 	};
         

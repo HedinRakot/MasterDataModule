@@ -50,6 +50,11 @@ namespace MasterDataModule.Contracts.Entities.Monitor
             /// </summary>
             public static readonly string WsdlPath = "WSDL_PATH";
 
+            /// <summary>
+            /// Column name 'LOG_TYPE_INFO_ID' 
+            /// </summary>
+            public static readonly string LogTypeInfoId = "LOG_TYPE_INFO_ID";
+
             public static readonly string DeleteDate = "DELETE_DATE";
             public static readonly string CreateDate = "CREATE_DATE";
             public static readonly string ChangeDate = "CHANGE_DATE";
@@ -62,6 +67,7 @@ namespace MasterDataModule.Contracts.Entities.Monitor
 
         public int Id { get; set; }
 
+        public int? LogTypeInfoId { get; set; }
         public int? CheckStatus { get; set; }
         public DateTime? CheckDate { get; set; }
         public string Message { get; set; }
@@ -85,7 +91,8 @@ namespace MasterDataModule.Contracts.Entities.Monitor
                 CheckStatus = CheckStatus,
                 Attempt = Attempt,
                 Message = Message,
-                WsdlPath = WsdlPath
+                WsdlPath = WsdlPath,
+                LogTypeInfoId = LogTypeInfoId
             };
         }
 

@@ -22,5 +22,8 @@ namespace MasterDataModule.API.Models.Monitor
 
         [DataMember]
         public string machineName { get; set; }
+
+        [DataMember]
+        public int? logTypeInfoId { get; set; }
     }
 }

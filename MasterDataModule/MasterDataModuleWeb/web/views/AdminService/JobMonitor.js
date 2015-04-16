@@ -22,6 +22,15 @@
             this.collection = new Collection();
         },
 
+        events: {
+            'click .select-monitorable-object a': function (e) {
+                e.preventDefault();
+                var self = this,
+                dataItem = self.grid.dataItem($(e.target).closest('tr'));
+                location.href = '/#LogTypeInfos' + '/' + dataItem.logTypeInfoId;
+            }
+        },
+
         columns: function () {
             return [
                 { field: "name", title: this.resources.name, width: 200 },
@@ -50,6 +59,11 @@
                     width: 150,
                     template: "#= kendo.toString(kendo.parseDate(lastRunTime, 'yyyy-MM-ddTHH:mm:ss'), 'MM.dd.yyyy HH:mm:ss') #"
 
+                },
+                {
+                    title: this.resources.logRef,
+                    attributes: { 'class': 'select-monitorable-object' },
+                    command: { name: 'select-monitorable-object', text: this.resources.logButton }
                 }
             ];
         }

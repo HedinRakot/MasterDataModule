@@ -16,6 +16,7 @@ namespace MasterDataModule.API.Controllers.Monitor
             model.checkDate = entity.CheckDate;
             model.checkStatus = entity.CheckStatus;
             model.lastRunTime = entity.LastRunTime;
+            model.logTypeInfoId = entity.LogTypeInfoId;
             
             
         }
@@ -26,7 +27,8 @@ namespace MasterDataModule.API.Controllers.Monitor
             entity.CheckDate = model.checkDate;
             entity.CheckStatus = model.checkStatus;
             entity.LastRunTime = model.lastRunTime;
-            
+            entity.LogTypeInfoId = model.logTypeInfoId;
+
         }
     }
 }

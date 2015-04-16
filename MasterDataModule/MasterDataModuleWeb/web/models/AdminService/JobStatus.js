@@ -4,30 +4,33 @@
     var model = Backbone.Model.extend({
         urlRoot: 'api/JobMonitor',
         fields: {
-            id: { type: "number", editable: false }
-			, name: {
+            id: { type: "number", editable: false },
+            name: {
                 type: "string",
                 editable: false
-			}
-           , jobName: {
+            },
+            jobName: {
                 type: "string",
                 editable: false
-           }
-           , checkStatus: {
-               type: "int",
-               editable: false
-           }
-           , checkDate: {
-               type: "DateTime?",
-               editable: false
-           }
-           , lastRunTime: {
-               type: "DateTime?",
-               editable: false
-           }
-        
+            },
+            checkStatus: {
+                type: "int",
+                editable: false
+            },
+            checkDate: {
+                type: "DateTime?",
+                editable: false
+            },
+            lastRunTime: {
+                type: "DateTime?",
+                editable: false
+            },
+            logTypeInfoId: {
+                type: "int?",
+                editable: false
+            }
         }
-        
+
     });
     return model;
 });

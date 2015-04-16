@@ -11,7 +11,9 @@ define(function () {
 	    attempt: 'Attempt counter',
 	    message: 'Message',
 	    jobName: 'Job name',
-	    lastRunTime: 'Last run time'
+	    lastRunTime: 'Last run time',
+	    logRef: 'Show log',
+	    logButton: 'Log...'
 	};
         
 	return resources;

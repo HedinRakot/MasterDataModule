@@ -46,6 +46,11 @@ namespace MasterDataModule.Contracts.Entities.Monitor
             public static readonly string Name = "NAME";
 
             /// <summary>
+            /// Column name 'LOG_TYPE_INFO_ID' 
+            /// </summary>
+            public static readonly string LogTypeInfoId = "LOG_TYPE_INFO_ID";
+
+            /// <summary>
             /// Column name 'MACHINE_NAME' 
             /// </summary>
             public static readonly string MachineName = "MACHINE_NAME";
@@ -62,6 +67,7 @@ namespace MasterDataModule.Contracts.Entities.Monitor
 
         public int Id { get; set; }
 
+        public int? LogTypeInfoId { get; set; }
         public int? CheckStatus { get; set; }
         public DateTime? CheckDate { get; set; }
         public string Message { get; set; }
@@ -85,7 +91,8 @@ namespace MasterDataModule.Contracts.Entities.Monitor
                 CheckStatus = CheckStatus,
                 Attempt = Attempt,
                 Message = Message,
-                MachineName = MachineName
+                MachineName = MachineName,
+                LogTypeInfoId = LogTypeInfoId
             };
         }
 

@@ -47,6 +47,9 @@ namespace MasterDataModule.Lib.Data
             Property(t => t.CreateDate)
             .HasColumnName(WebSiteStatus.Fields.CreateDate);
 
+            Property(t => t.LogTypeInfoId)
+         .HasColumnName(WebSiteStatus.Fields.LogTypeInfoId);
+
          
             //Relationships
         }
