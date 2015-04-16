@@ -18,9 +18,12 @@
 
         initialize: function () {
             view.__super__.initialize.apply(this, arguments);
-            //debugger;
-            //alert(location.search);
-            this.defaultFiltering = { field: 'logTypeInfoId', operator: 'eq', value: 7 };
+            if (arguments.length > 0) {
+                var typeId = parseInt(arguments[0][0]);
+                if (!isNaN(typeId)) {
+                    this.defaultFiltering = { field: 'logTypeInfoId', operator: 'eq', value: typeId };
+                }
+            }
             this.collection = new Collection();
         },
         
