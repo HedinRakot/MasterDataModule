@@ -63,7 +63,7 @@ namespace MonitoringAgent.Services.Common.Base
 
                 var checkingResult = CheckService(info.Info);
 
-                if (hubNotificator != null)
+                if (hubNotificator != null && checkingResult != null)
                 {
                     hubNotificator.SendNotification(CheckModuleType, info.Info.Id, checkingResult.CheckStatus);    
                 }
