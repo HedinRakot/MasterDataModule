@@ -2,7 +2,7 @@
     'use strict';
 
     var model = Backbone.Model.extend({
-        urlRoot: 'api/WebServiceMonitor',
+        urlRoot: 'api/MasterDataWcfInfos',
         fields: {
             id: { type: "number", editable: false },
             name: {
