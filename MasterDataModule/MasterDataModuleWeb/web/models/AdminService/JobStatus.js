@@ -2,7 +2,7 @@
     'use strict';
 
     var model = Backbone.Model.extend({
-        urlRoot: 'api/JobMonitor',
+        urlRoot: 'api/MasterDataJobInfos',
         fields: {
             id: { type: "number", editable: false },
             name: {

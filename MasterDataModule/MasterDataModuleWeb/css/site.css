@@ -21,17 +21,15 @@ body {
 
 #wrapperbody {
 	margin: 0 auto;
-	width: 1110px;
 	background-color: #ffffff;
 	position: relative;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	/*margin-top: 20px;
-	margin-bottom: 20px;*/
+    margin-left: 30px;
+	margin-right: 30px;
 	padding: 10px;
-	/*//min-height: 670px;*/
 	border-radius: 7px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }

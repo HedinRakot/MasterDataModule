@@ -505,11 +505,7 @@
     <Compile Include="Controllers\Drl\SchoolInfosController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\Monitor\JobMonitorController.cs" />
-    <Compile Include="Controllers\Monitor\WebSiteMonitorController.cs" />
     <Compile Include="Controllers\Monitor\ApplicationLogToShowController.cs" />
-    <Compile Include="Controllers\Monitor\WinServiceMonitorController.cs" />
-    <Compile Include="Controllers\Monitor\WebServiceMonitorController.cs" />
     <Compile Include="Controllers\ReadOnlyClientBaseController.cs" />
     <Compile Include="Controllers\GridArgs.cs" />
     <Compile Include="Controllers\GridArgsModelBinder.cs" />
