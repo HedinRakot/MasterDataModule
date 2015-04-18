@@ -5,7 +5,7 @@
     'use strict';
 
     var collection = BaseCollection.extend({
-        url: 'api/WebSiteMonitor',
+        url: 'api/GetSitesStatuses',
         model: Model
     });
 

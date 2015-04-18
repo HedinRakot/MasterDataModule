@@ -18,6 +18,7 @@
 
         initialize: function () {
             view.__super__.initialize.apply(this, arguments);
+
             if (arguments.length > 0) {
                 var typeId = parseInt(arguments[0][0]);
                 if (!isNaN(typeId)) {

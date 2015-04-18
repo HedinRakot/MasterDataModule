@@ -17,13 +17,12 @@
         },
 
         initialize: function () {
+
             view.__super__.initialize.apply(this, arguments);
 
             this.collection = new Collection();
         },
-
        
-
         columns: function() {
             return [
                 { field: "name", title: this.resources.name, width: 200 },
@@ -50,6 +49,7 @@
                 {
                     title: this.resources.logRef,
                     field: "logTypeInfoId",
+                    width: 100,
                     attributes: { style: "text-align:center" },
                     template: function(dataItem) {
                         return (dataItem.logTypeInfoId == null) ?

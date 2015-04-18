@@ -76,9 +76,9 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public string FilePath{ get; set; }
         public virtual ICollection<MasterDataWcfInfo> MasterDataWcfInfos{ get; set; }
         public virtual ICollection<MasterDataSiteInfo> MasterDataSiteInfos{ get; set; }
-        public virtual ICollection<ApplicationLogs> ApplicationLogs{ get; set; }
         public virtual ICollection<MasterDataJobInfo> MasterDataJobInfos{ get; set; }
         public virtual ICollection<MasterDataWindowsServiceInfo> MasterDataWindowsServiceInfos{ get; set; }
+        public virtual ICollection<ApplicationLogs> ApplicationLogs{ get; set; }
         DateTime? IIntervalFields.FromDate
         {
             get { return FromDate; }

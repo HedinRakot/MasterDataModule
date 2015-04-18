@@ -2,7 +2,7 @@
     'use strict';
 
     var model = Backbone.Model.extend({
-        urlRoot: 'api/MasterDataSiteInfos',
+        urlRoot: 'api/GetSitesStatuses',
         fields: {
             id: { type: "number", editable: false },
             name: {

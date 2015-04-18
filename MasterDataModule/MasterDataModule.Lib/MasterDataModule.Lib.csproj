@@ -283,6 +283,21 @@
     <Compile Include="Data\Configuration\ApplicationLogsMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\Configuration\GetApplicationLogsMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\GetJobsStatusMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\GetSitesStatusMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\GetWcfServicesStatusMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration\GetWinServicesStatusMapping.cs">
+      <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\Configuration\JobsInfosWithLastResultMapping.cs">
       <DependentUpon>MasterDataConfiguration.EntityMapping.tt</DependentUpon>
     </Compile>
@@ -471,11 +486,6 @@
     <Compile Include="Data\AsPro.Context.Custom.cs" />
     <Compile Include="Data\Drl.Context.Custom.cs" />
     <Compile Include="Data\Drl.Context.Configuration.cs" />
-    <Compile Include="Data\Monitor\JobsInfoMapping.cs" />
-    <Compile Include="Data\Monitor\ApplicationLogToShowMapping.cs" />
-    <Compile Include="Data\Monitor\WinServicesInfoMapping.cs" />
-    <Compile Include="Data\Monitor\WebSitesInfoMapping.cs" />
-    <Compile Include="Data\Monitor\WebServicesInfoMapping.cs" />
     <Compile Include="Data\SaveActors\AsPro\AsProSaveActorManager.cs" />
     <Compile Include="Data\SaveActors\Base\SaveActorManager.cs" />
     <Compile Include="Data\SaveActors\Drl\DrlSaveActorManager.cs" />
@@ -734,6 +744,21 @@
     <Compile Include="Managers\Configuration\ApplicationLogsManager.cs">
       <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Managers\Configuration\GetApplicationLogsManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\GetJobsStatusManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\GetSitesStatusManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\GetWcfServicesStatusManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\GetWinServicesStatusManager.cs">
+      <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\Configuration\JobsInfosWithLastResultManager.cs">
       <DependentUpon>MasterDataConfiguration.Managers.tt</DependentUpon>
     </Compile>
@@ -906,11 +931,6 @@
       <DependentUpon>Drl.Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Configuration\UserManager.Custom.cs" />
-    <Compile Include="Managers\Monitor\JobStatusInfoManager.cs" />
-    <Compile Include="Managers\Monitor\WebSiteStatusInfoManager.cs" />
-    <Compile Include="Managers\Monitor\ApplicationLogToShowManager.cs" />
-    <Compile Include="Managers\Monitor\WinServiceStatusInfoManager.cs" />
-    <Compile Include="Managers\Monitor\WcfStatusInfoManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

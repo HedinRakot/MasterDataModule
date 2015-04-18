@@ -7,12 +7,12 @@
 	    JobMonitorAdjustment: 'Einstellungen',
 	    name: 'Name',
 	    checkStatus: "Status",
-	    checkDate: "Pruefungzeit",
+	    checkDate: "Prüfungszeit",
 	    attempt: "Versuchzahl",
 	    message: "Meldung",
 	    jobName: 'Job Name',
 	    lastRunTime: 'Letzte Ausführung',
-	    logRef: 'Log zeigen',
+	    logRef: 'Log anzeigen',
 	    logButton: 'Log...'
 	};
 

@@ -1,5 +1,4 @@
-﻿using MasterDataModule.Contracts.Entities.Monitor;
-using MasterDataModule.Contracts.SaveActors.Base;
+﻿using MasterDataModule.Contracts.SaveActors.Base;
 using System.Data.Entity;
 using System.Linq;
 
@@ -36,11 +35,6 @@ namespace MasterDataModule.Lib.Data
 
         protected override void RegisterCustomMappings(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(WebServicesInfoMapping.Instance);
-            modelBuilder.Configurations.Add(JobsInfoMapping.Instance);
-            modelBuilder.Configurations.Add(WebSitesInfoMapping.Instance);
-            modelBuilder.Configurations.Add(WinServicesInfoMapping.Instance);
-            modelBuilder.Configurations.Add(ApplicationLogToShowMapping.Instance);
         }
     }
 }

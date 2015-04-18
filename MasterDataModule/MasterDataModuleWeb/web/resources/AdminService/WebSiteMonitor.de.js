@@ -1,4 +1,4 @@
-define(function () {
+﻿define(function () {
 	'use strict';
 
 	var resources = {
@@ -6,10 +6,10 @@ define(function () {
 	    WebSiteMonitorAdjustment: 'Einstellungen',
 	    name: 'Name',
 	    checkStatus: "Status",
-	    checkDate: "Pruefungzeit",
+	    checkDate: "Prüfungszeit",
 	    attempt: "Versuchzahl",
 	    message: "Meldung",
-	    logRef: 'Log zeigen',
+	    logRef: 'Log anzeigen',
 	    logButton: 'Log...'
 	};
 

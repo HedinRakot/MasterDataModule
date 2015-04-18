@@ -5,7 +5,7 @@
     'use strict';
 
     var collection = BaseCollection.extend({
-        url: 'api/ApplicationLogToShow',
+        url: 'api/GetApplicationLogs',
         model: Model
     });
 

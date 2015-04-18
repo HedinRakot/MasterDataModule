@@ -46,6 +46,10 @@ namespace MasterDataModule.Lib.Data.Configuration
 
             Property(t => t.Message)
                 .HasColumnName(MasterDataNotifications.Fields.Message)
+                .IsUnicode();
+
+            Property(t => t.Subject)
+                .HasColumnName(MasterDataNotifications.Fields.Subject)
                 .IsRequired()
                 .IsUnicode();
 
@@ -59,11 +63,6 @@ namespace MasterDataModule.Lib.Data.Configuration
 
             Property(t => t.DeleteDate)
                 .HasColumnName(MasterDataNotifications.Fields.DeleteDate);
-
-            Property(t => t.Subject)
-                .HasColumnName(MasterDataNotifications.Fields.Subject)
-                .IsRequired()
-                .IsUnicode();
 
             Property(t => t.FromDate)
                 .HasColumnName(MasterDataNotifications.Fields.FromDate)

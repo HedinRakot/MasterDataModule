@@ -505,7 +505,6 @@
     <Compile Include="Controllers\Drl\SchoolInfosController.cs">
       <DependentUpon>Drl.Controllers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\Monitor\ApplicationLogToShowController.cs" />
     <Compile Include="Controllers\ReadOnlyClientBaseController.cs" />
     <Compile Include="Controllers\GridArgs.cs" />
     <Compile Include="Controllers\GridArgsModelBinder.cs" />
@@ -521,6 +520,21 @@
     <Compile Include="Controllers\Settings\Custom.SysTablesController.cs" />
     <Compile Include="Controllers\Settings\Custom.MasterDataMonitorableInfoMasterDataNotificationsRspsController.cs" />
     <Compile Include="Controllers\Settings\Custom.UserController.cs" />
+    <Compile Include="Controllers\Settings\GetApplicationLogsController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\GetJobsStatusesController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\GetSitesStatusesController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\GetWcfServicesStatusesController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\GetWinServicesStatusesController.cs">
+      <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Settings\JobsInfosWithLastResultsController.cs">
       <DependentUpon>MasterDataConfiguration.Controllers.tt</DependentUpon>
     </Compile>
@@ -886,11 +900,6 @@
     <Compile Include="Models\GlobalSysTableModel.cs" />
     <Compile Include="Models\ISystemModelFields.cs" />
     <Compile Include="Models\IModelIntervalFields.cs" />
-    <Compile Include="Models\Monitor\JobStatusModel.cs" />
-    <Compile Include="Models\Monitor\ApplicationLogToShowModel.cs" />
-    <Compile Include="Models\Monitor\WinServiceStatusModel.cs" />
-    <Compile Include="Models\Monitor\WebSiteStatusModel.cs" />
-    <Compile Include="Models\Monitor\WcfServiceStatusModel.cs" />
     <Compile Include="Models\Settings\ApplicationLogsModel.cs">
       <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
     </Compile>
@@ -898,6 +907,21 @@
     <Compile Include="Models\Settings\Custom.SysColumnModel.cs" />
     <Compile Include="Models\Settings\Custom.SysTableModel.cs" />
     <Compile Include="Models\Settings\Custom.MasterDataMonitorableInfoMasterDataNotificationsRspModel.cs" />
+    <Compile Include="Models\Settings\GetApplicationLogsModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings\GetJobsStatusModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings\GetSitesStatusModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings\GetWcfServicesStatusModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings\GetWinServicesStatusModel.cs">
+      <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Settings\JobsInfosWithLastResultModel.cs">
       <DependentUpon>MasterDataConfiguration.Models.tt</DependentUpon>
     </Compile>

@@ -2,7 +2,7 @@
     'use strict';
 
     var model = Backbone.Model.extend({
-        urlRoot: 'api/MasterDataWindowsServiceInfos',
+        urlRoot: 'api/GetWinServicesStatuses',
         fields: {
             id: { type: "number", editable: false },
             name: {

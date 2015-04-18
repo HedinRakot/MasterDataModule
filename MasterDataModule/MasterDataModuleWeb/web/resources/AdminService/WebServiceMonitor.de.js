@@ -1,16 +1,16 @@
-define(function () {
+﻿define(function () {
 	'use strict';
 
 	var resources = {
 	    AdminService: 'Administration Dienst',
 	    WebServiceMonitorAdjustment: 'Einstellungen',
-	    WebServicesTitle: 'Der Status der Webservice Uberwachung',
+	    WebServicesTitle: 'Der Status der Webservice Überwachung',
 	    name: 'Name',
 	    checkStatus: "Status",
-	    checkDate: "Pruefungzeit",
+	    checkDate: "Prüfungszeit",
 	    attempt: "Versuchzahl",
 	    message: "Meldung",
-	    logRef: 'Log zeigen',
+	    logRef: 'Log anzeigen',
 	    logButton: 'Log...'
 	};
 

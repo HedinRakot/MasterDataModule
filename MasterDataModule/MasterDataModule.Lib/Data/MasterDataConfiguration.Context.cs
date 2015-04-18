@@ -21,49 +21,42 @@ namespace MasterDataModule.Lib.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Configurations.Add(SiteInfosWithLastResultMapping.Instance);
-            modelBuilder.Configurations.Add(WcfInfosWithLastResultMapping.Instance);
-            modelBuilder.Configurations.Add(WinserviceInfosWithLastResultMapping.Instance);
-            modelBuilder.Configurations.Add(JobsInfosWithLastResultMapping.Instance);
+            modelBuilder.Configurations.Add(LogTypeInfoMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataWcfInfoMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataWcfCheckResultsMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataSiteInfoMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataSiteCheckResultsMapping.Instance);
-            modelBuilder.Configurations.Add(MasterDataMonitorStateMapping.Instance);
-            modelBuilder.Configurations.Add(ApplicationLogsMapping.Instance);
-            modelBuilder.Configurations.Add(MasterDataJobInfoMapping.Instance);
-            modelBuilder.Configurations.Add(MasterDataJobCheckResultsMapping.Instance);
-            modelBuilder.Configurations.Add(MasterDataWindowsServiceInfoMapping.Instance);
             modelBuilder.Configurations.Add(SysColumnMapping.Instance);
-            modelBuilder.Configurations.Add(MasterDataWindowsServiceCheckResultsMapping.Instance);
+            modelBuilder.Configurations.Add(MasterDataMonitorStateMapping.Instance);
+            modelBuilder.Configurations.Add(MasterDataJobInfoMapping.Instance);
+            modelBuilder.Configurations.Add(GetApplicationLogsMapping.Instance);
             modelBuilder.Configurations.Add(SysTableMapping.Instance);
+            modelBuilder.Configurations.Add(SiteInfosWithLastResultMapping.Instance);
+            modelBuilder.Configurations.Add(WcfInfosWithLastResultMapping.Instance);
+            modelBuilder.Configurations.Add(MasterDataJobCheckResultsMapping.Instance);
+            modelBuilder.Configurations.Add(WinserviceInfosWithLastResultMapping.Instance);
+            modelBuilder.Configurations.Add(JobsInfosWithLastResultMapping.Instance);
+            modelBuilder.Configurations.Add(MasterDataWindowsServiceInfoMapping.Instance);
+            modelBuilder.Configurations.Add(MasterDataWindowsServiceCheckResultsMapping.Instance);
             modelBuilder.Configurations.Add(RoleMapping.Instance);
             modelBuilder.Configurations.Add(PermissionMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataRolePermissionRspMapping.Instance);
             modelBuilder.Configurations.Add(UserMapping.Instance);
+            modelBuilder.Configurations.Add(ApplicationLogsMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataSubscribersMapping.Instance);
+            modelBuilder.Configurations.Add(MasterDataNotificationsMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataMonitorableInfoMasterDataNotificationsRspMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataNotificationsMasterDataSubscribersRspMapping.Instance);
-            modelBuilder.Configurations.Add(MasterDataNotificationsMapping.Instance);
-            modelBuilder.Configurations.Add(LogTypeInfoMapping.Instance);
+            modelBuilder.Configurations.Add(GetWinServicesStatusMapping.Instance);
+            modelBuilder.Configurations.Add(GetSitesStatusMapping.Instance);
+            modelBuilder.Configurations.Add(GetJobsStatusMapping.Instance);
+            modelBuilder.Configurations.Add(GetWcfServicesStatusMapping.Instance);
         }
 
         /// <summary>
-        ///     Set of <see cref="SiteInfosWithLastResult"/> entities from table dbo.SITE_INFOS_WITH_LAST_RESULT
+        ///     Set of <see cref="LogTypeInfo"/> entities from table dbo.LOG_TYPE_INFO
         /// </summary>
-        public IQueryable<SiteInfosWithLastResult> SiteInfosWithLastResult{ get; set; }
-        /// <summary>
-        ///     Set of <see cref="WcfInfosWithLastResult"/> entities from table dbo.WCF_INFOS_WITH_LAST_RESULT
-        /// </summary>
-        public IQueryable<WcfInfosWithLastResult> WcfInfosWithLastResult{ get; set; }
-        /// <summary>
-        ///     Set of <see cref="WinserviceInfosWithLastResult"/> entities from table dbo.WINSERVICE_INFOS_WITH_LAST_RESULT
-        /// </summary>
-        public IQueryable<WinserviceInfosWithLastResult> WinserviceInfosWithLastResult{ get; set; }
-        /// <summary>
-        ///     Set of <see cref="JobsInfosWithLastResult"/> entities from table dbo.JOBS_INFOS_WITH_LAST_RESULT
-        /// </summary>
-        public IQueryable<JobsInfosWithLastResult> JobsInfosWithLastResult{ get; set; }
+        public IQueryable<LogTypeInfo> LogTypeInfo{ get; set; }
         /// <summary>
         ///     Set of <see cref="MasterDataWcfInfo"/> entities from table dbo.MASTER_DATA_WCF_INFO
         /// </summary>
@@ -81,37 +74,53 @@ namespace MasterDataModule.Lib.Data
         /// </summary>
         public IQueryable<MasterDataSiteCheckResults> MasterDataSiteCheckResults{ get; set; }
         /// <summary>
+        ///     Set of <see cref="SysColumn"/> entities from table dbo.SYS_COLUMNS
+        /// </summary>
+        public IQueryable<SysColumn> SysColumn{ get; set; }
+        /// <summary>
         ///     Set of <see cref="MasterDataMonitorState"/> entities from table dbo.MASTER_DATA_MONITOR_STATE
         /// </summary>
         public IQueryable<MasterDataMonitorState> MasterDataMonitorState{ get; set; }
-        /// <summary>
-        ///     Set of <see cref="ApplicationLogs"/> entities from table dbo.APPLICATION_LOGS
-        /// </summary>
-        public IQueryable<ApplicationLogs> ApplicationLogs{ get; set; }
         /// <summary>
         ///     Set of <see cref="MasterDataJobInfo"/> entities from table dbo.MASTER_DATA_JOB_INFO
         /// </summary>
         public IQueryable<MasterDataJobInfo> MasterDataJobInfo{ get; set; }
         /// <summary>
+        ///     Set of <see cref="GetApplicationLogs"/> entities from table dbo.GET_APPLICATION_LOGS
+        /// </summary>
+        public IQueryable<GetApplicationLogs> GetApplicationLogs{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="SysTable"/> entities from table dbo.SYS_TABLES
+        /// </summary>
+        public IQueryable<SysTable> SysTable{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="SiteInfosWithLastResult"/> entities from table dbo.SITE_INFOS_WITH_LAST_RESULT
+        /// </summary>
+        public IQueryable<SiteInfosWithLastResult> SiteInfosWithLastResult{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="WcfInfosWithLastResult"/> entities from table dbo.WCF_INFOS_WITH_LAST_RESULT
+        /// </summary>
+        public IQueryable<WcfInfosWithLastResult> WcfInfosWithLastResult{ get; set; }
+        /// <summary>
         ///     Set of <see cref="MasterDataJobCheckResults"/> entities from table dbo.MASTER_DATA_JOB_CHECK_RESULTS
         /// </summary>
         public IQueryable<MasterDataJobCheckResults> MasterDataJobCheckResults{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="WinserviceInfosWithLastResult"/> entities from table dbo.WINSERVICE_INFOS_WITH_LAST_RESULT
+        /// </summary>
+        public IQueryable<WinserviceInfosWithLastResult> WinserviceInfosWithLastResult{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="JobsInfosWithLastResult"/> entities from table dbo.JOBS_INFOS_WITH_LAST_RESULT
+        /// </summary>
+        public IQueryable<JobsInfosWithLastResult> JobsInfosWithLastResult{ get; set; }
         /// <summary>
         ///     Set of <see cref="MasterDataWindowsServiceInfo"/> entities from table dbo.MASTER_DATA_WINDOWS_SERVICE_INFO
         /// </summary>
         public IQueryable<MasterDataWindowsServiceInfo> MasterDataWindowsServiceInfo{ get; set; }
         /// <summary>
-        ///     Set of <see cref="SysColumn"/> entities from table dbo.SYS_COLUMNS
-        /// </summary>
-        public IQueryable<SysColumn> SysColumn{ get; set; }
-        /// <summary>
         ///     Set of <see cref="MasterDataWindowsServiceCheckResults"/> entities from table dbo.MASTER_DATA_WINDOWS_SERVICE_CHECK_RESULTS
         /// </summary>
         public IQueryable<MasterDataWindowsServiceCheckResults> MasterDataWindowsServiceCheckResults{ get; set; }
-        /// <summary>
-        ///     Set of <see cref="SysTable"/> entities from table dbo.SYS_TABLES
-        /// </summary>
-        public IQueryable<SysTable> SysTable{ get; set; }
         /// <summary>
         ///     Set of <see cref="Role"/> entities from table dbo.MASTER_DATA_ROLE
         /// </summary>
@@ -129,9 +138,17 @@ namespace MasterDataModule.Lib.Data
         /// </summary>
         public IQueryable<User> User{ get; set; }
         /// <summary>
+        ///     Set of <see cref="ApplicationLogs"/> entities from table dbo.APPLICATION_LOGS
+        /// </summary>
+        public IQueryable<ApplicationLogs> ApplicationLogs{ get; set; }
+        /// <summary>
         ///     Set of <see cref="MasterDataSubscribers"/> entities from table dbo.MASTER_DATA_SUBSCRIBERS
         /// </summary>
         public IQueryable<MasterDataSubscribers> MasterDataSubscribers{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="MasterDataNotifications"/> entities from table dbo.MASTER_DATA_NOTIFICATIONS
+        /// </summary>
+        public IQueryable<MasterDataNotifications> MasterDataNotifications{ get; set; }
         /// <summary>
         ///     Set of <see cref="MasterDataMonitorableInfoMasterDataNotificationsRsp"/> entities from table dbo.MASTER_DATA_MONITORABLE_INFO_MASTER_DATA_NOTIFICATIONS_RSP
         /// </summary>
@@ -141,12 +158,20 @@ namespace MasterDataModule.Lib.Data
         /// </summary>
         public IQueryable<MasterDataNotificationsMasterDataSubscribersRsp> MasterDataNotificationsMasterDataSubscribersRsp{ get; set; }
         /// <summary>
-        ///     Set of <see cref="MasterDataNotifications"/> entities from table dbo.MASTER_DATA_NOTIFICATIONS
+        ///     Set of <see cref="GetWinServicesStatus"/> entities from table dbo.GET_WIN_SERVICES_STATUS
         /// </summary>
-        public IQueryable<MasterDataNotifications> MasterDataNotifications{ get; set; }
+        public IQueryable<GetWinServicesStatus> GetWinServicesStatus{ get; set; }
         /// <summary>
-        ///     Set of <see cref="LogTypeInfo"/> entities from table dbo.LOG_TYPE_INFO
+        ///     Set of <see cref="GetSitesStatus"/> entities from table dbo.GET_SITES_STATUS
         /// </summary>
-        public IQueryable<LogTypeInfo> LogTypeInfo{ get; set; }
+        public IQueryable<GetSitesStatus> GetSitesStatus{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="GetJobsStatus"/> entities from table dbo.GET_JOBS_STATUS
+        /// </summary>
+        public IQueryable<GetJobsStatus> GetJobsStatus{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="GetWcfServicesStatus"/> entities from table dbo.GET_WCF_SERVICES_STATUS
+        /// </summary>
+        public IQueryable<GetWcfServicesStatus> GetWcfServicesStatus{ get; set; }
     }
 }

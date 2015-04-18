@@ -1,5 +1,6 @@
 using MasterDataModule.Contracts;
 using System;
+using System.Collections.Generic;
 
 namespace MasterDataModule.Contracts.Entities.Configuration
 {
@@ -47,6 +48,10 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             /// </summary>
             public static readonly string Message = "MESSAGE";
             /// <summary>
+            /// Column name 'SUBJECT' for property <see cref="MasterDataNotifications.Subject"/>
+            /// </summary>
+            public static readonly string Subject = "SUBJECT";
+            /// <summary>
             /// Column name 'CREATE_DATE' for property <see cref="MasterDataNotifications.CreateDate"/>
             /// </summary>
             public static readonly string CreateDate = "CREATE_DATE";
@@ -58,10 +63,6 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             /// Column name 'DELETE_DATE' for property <see cref="MasterDataNotifications.DeleteDate"/>
             /// </summary>
             public static readonly string DeleteDate = "DELETE_DATE";
-            /// <summary>
-            /// Column name 'SUBJECT' for property <see cref="MasterDataNotifications.Subject"/>
-            /// </summary>
-            public static readonly string Subject = "SUBJECT";
             /// <summary>
             /// Column name 'FROM_DATE' for property <see cref="MasterDataNotifications.FromDate"/>
             /// </summary>
@@ -94,13 +95,13 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         ///     DE: Nachricht  EN: Message
         /// </summary>
         public string Message{ get; set; }
-        public DateTime CreateDate{ get; set; }
-        public DateTime ChangeDate{ get; set; }
-        public DateTime? DeleteDate{ get; set; }
         /// <summary>
         ///     DE: Thema  EN: Subject
         /// </summary>
         public string Subject{ get; set; }
+        public DateTime CreateDate{ get; set; }
+        public DateTime ChangeDate{ get; set; }
+        public DateTime? DeleteDate{ get; set; }
         /// <summary>
         ///     DE:Von Datum  EN:  Date from
         /// </summary>
@@ -109,6 +110,8 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         ///     DE:Bis Datum  EN:  Date to
         /// </summary>
         public DateTime ToDate{ get; set; }
+        public virtual ICollection<MasterDataMonitorableInfoMasterDataNotificationsRsp> MasterDataMonitorableInfoMasterDataNotificationsRsps{ get; set; }
+        public virtual ICollection<MasterDataNotificationsMasterDataSubscribersRsp> MasterDataNotificationsMasterDataSubscribersRsps{ get; set; }
         DateTime? IIntervalFields.FromDate
         {
             get { return FromDate; }
@@ -146,10 +149,10 @@ namespace MasterDataModule.Contracts.Entities.Configuration
                        AlertCheckStatus = AlertCheckStatus,
                        AlertAttemptCount = AlertAttemptCount,
                        Message = Message,
+                       Subject = Subject,
                        CreateDate = CreateDate,
                        ChangeDate = ChangeDate,
                        DeleteDate = DeleteDate,
-                       Subject = Subject,
                        FromDate = FromDate,
                        ToDate = ToDate,
         	           };

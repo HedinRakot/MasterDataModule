@@ -82,6 +82,21 @@
       <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Configuration\Custom.MasterDataNotification.cs" />
+    <Compile Include="Entities\Configuration\GetApplicationLogs.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\GetJobsStatus.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\GetSitesStatus.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\GetWcfServicesStatus.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration\GetWinServicesStatus.cs">
+      <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Configuration\JobsInfosWithLastResult.cs">
       <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>
     </Compile>
@@ -162,11 +177,6 @@
     <Compile Include="Entities\Drl\DriverSchoolInfo.cs">
       <DependentUpon>Drl.Entities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Monitor\JobStatus.cs" />
-    <Compile Include="Entities\Monitor\ApplicationLogToShow.cs" />
-    <Compile Include="Entities\Monitor\WinServiceStatus.cs" />
-    <Compile Include="Entities\Monitor\WebSiteStatus.cs" />
-    <Compile Include="Entities\Monitor\WcfServiceStatus.cs" />
     <Compile Include="Enums\LogLevelEnum.cs" />
     <Compile Include="Enums\LogTypeEnum.cs" />
     <Compile Include="Enums\MasterDataPermissions.cs">
@@ -193,6 +203,21 @@
       <DependentUpon>Common.IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Configuration\IApplicationLogsManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IGetApplicationLogsManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IGetJobsStatusManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IGetSitesStatusManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IGetWcfServicesStatusManager.cs">
+      <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\Configuration\IGetWinServicesStatusManager.cs">
       <DependentUpon>MasterDataConfiguration.IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\Configuration\IJobsInfosWithLastResultManager.cs">
@@ -274,11 +299,6 @@
     <Compile Include="Managers\Drl\IDriverSchoolManager.cs">
       <DependentUpon>Drl.IManagers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Managers\Monitor\IJobStatusInfoManager.cs" />
-    <Compile Include="Managers\Monitor\IWebSiteStatusInfoManager.cs" />
-    <Compile Include="Managers\Monitor\IApplicationLogToShowManager.cs" />
-    <Compile Include="Managers\Monitor\IWinServiceStatusInfoManager.cs" />
-    <Compile Include="Managers\Monitor\IWcfStatusInfoManager.cs" />
     <Compile Include="MasterDataConfiguration.Context.Interface.Custom.cs" />
     <Compile Include="Entities\Configuration\Permission.cs">
       <DependentUpon>MasterDataСonfiguration.Entities.tt</DependentUpon>

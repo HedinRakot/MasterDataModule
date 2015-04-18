@@ -1,4 +1,4 @@
-define(function () {
+﻿define(function () {
 	'use strict';
 
 	var resources = {
@@ -6,7 +6,7 @@ define(function () {
 	    WinServiceMonitorAdjustment: 'Einstellungen',
 	    fileName: 'Dateiname',
 	    logLevel: "Log Level",
-	    messageDate: "Pruefungzeit",
+	    messageDate: "Prüfungszeit",
 	    message: "Meldung",
 	    Title: "Application Log",
 	};

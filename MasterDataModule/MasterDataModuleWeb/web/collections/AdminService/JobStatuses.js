@@ -5,7 +5,7 @@
     'use strict';
 
     var collection = BaseCollection.extend({
-        url: 'api/JobMonitor',
+        url: 'api/GetJobsStatuses',
         model: Model
     });
 
