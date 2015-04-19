@@ -13,5 +13,7 @@
         }
 
         protected abstract bool HasDuplicate(TEntity entity);
+
+        public abstract string[] BusinessKeys { get; }
     }
 }
