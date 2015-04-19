@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.Http;
+using System.Web.Http.ModelBinding;
 using MasterDataModule.API.Models;
 using MasterDataModule.Contracts;
 using MasterDataModule.Contracts.Managers.Base;
@@ -75,7 +76,7 @@ namespace MasterDataModule.API.Controllers
             }
             catch(DuplicateEntityException ex)
             {
-                ModelState.AddModelError("model.duplicateModelName", "Die Entität muss im System eindeutig sein.");
+                SetDuplicateErrorsToModelState(ModelState, ex);
                 return BadRequest(ModelState);
             }
 
@@ -107,10 +108,9 @@ namespace MasterDataModule.API.Controllers
             }
             catch(DuplicateEntityException ex)
             {
-                ModelState.AddModelError("model.duplicateModelName", "Die Entität muss im System eindeutig sein.");
+                SetDuplicateErrorsToModelState(ModelState, ex);
                 return BadRequest(ModelState);
             }
-
 
             model = new TModel
             {
@@ -122,6 +122,14 @@ namespace MasterDataModule.API.Controllers
             EntityToModel(entity, model);
 
             return Ok(model);
+        }
+
+        private void SetDuplicateErrorsToModelState(ModelStateDictionary modelState, DuplicateEntityException exception)
+        {
+            foreach (var businessKey in exception.BusinessKeys)
+            {
+                modelState.AddModelError("model." + businessKey, "Die Entität muss im System eindeutig sein.");
+            }
         }
 
         private void SetChangeDate(ISystemFields entity)

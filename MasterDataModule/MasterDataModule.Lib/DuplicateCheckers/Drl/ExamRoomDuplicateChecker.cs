@@ -16,6 +16,17 @@ namespace MasterDataModule.Lib.DuplicateCheckers.Drl
     			this.manager = manager;
     		}
     
+    		public override string[] BusinessKeys 
+    		{
+    			get 
+    			{
+    				return new[] 
+    				{
+    					 "roomNumber"
+    				};
+    			}
+    		}
+    
     		protected override bool HasDuplicate(ExamRoom entity)
     		{
     			var query = manager.Value.GetEntities().Where(o => o.Id != entity.Id &&

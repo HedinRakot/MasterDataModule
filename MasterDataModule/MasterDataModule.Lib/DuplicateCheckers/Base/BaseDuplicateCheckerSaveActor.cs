@@ -41,7 +41,7 @@ namespace MasterDataModule.Lib.DuplicateCheckers.Base
             var checker = checkers[GetEntityTypeName(entity)];
             if (checker.HasDuplicate(entity))
             {
-                throw new DuplicateEntityException(string.Format("Database contains entity of type {0} with the same business keys.", GetEntityTypeName(entity)));
+                throw new DuplicateEntityException(checker.BusinessKeys, string.Format("Database contains entity of type {0} with the same business keys.", GetEntityTypeName(entity)));
             }
         }
     }

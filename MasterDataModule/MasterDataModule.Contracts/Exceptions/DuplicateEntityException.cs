@@ -12,10 +12,15 @@ namespace MasterDataModule.Contracts.Exceptions
     /// </summary>
     public class DuplicateEntityException : DbEntityValidationException
     {
-        public DuplicateEntityException(string message) :
+        public DuplicateEntityException(string[] businessKeys, string message) :
             base(message)
         {
-
+            BusinessKeys = businessKeys;
         }
+
+        /// <summary>
+        /// Keys for checking entity on duplicates
+        /// </summary>
+        public string[] BusinessKeys { get; private set; }
     }
 }

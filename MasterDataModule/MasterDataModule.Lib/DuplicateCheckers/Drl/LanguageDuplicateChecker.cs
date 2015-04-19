@@ -16,6 +16,19 @@ namespace MasterDataModule.Lib.DuplicateCheckers.Drl
     			this.manager = manager;
     		}
     
+    		public override string[] BusinessKeys 
+    		{
+    			get 
+    			{
+    				return new[] 
+    				{
+    					 "sysLanguageId"
+    							,
+    					 "oldAbbr"
+    				};
+    			}
+    		}
+    
     		protected override bool HasDuplicate(Language entity)
     		{
     			var query = manager.Value.GetEntities().Where(o => o.Id != entity.Id &&

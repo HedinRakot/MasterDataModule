@@ -29,6 +29,34 @@
 			this.manager = manager;
 		}
 
+		public override string[] BusinessKeys 
+		{
+			get 
+			{
+				return new[] 
+				{
+<#                  bool first = true;
+					foreach(var column in table.Columns)
+					{ 
+				
+						var content = column.Content;	
+						if (content.IsBusinessKey)
+						{
+						    if (!first)
+						    { #>
+							,
+<#							}
+#>
+					 "<#=content.CodeNameCamelCase#>"
+<#							first = false;
+					}
+
+					}
+#>
+				};
+			}
+		}
+
 		protected override bool HasDuplicate(<#=table.Content.CodeName#> entity)
 		{
 			var query = manager.Value.GetEntities().Where(o => o.Id != entity.Id &&
