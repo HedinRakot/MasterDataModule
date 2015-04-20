@@ -3,6 +3,9 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using MonitoringAgent.Data.Interfaces.Managers;
 using System;
+using System.Data.Entity.Infrastructure;
+using System.Data.Entity.Validation;
+using System.Diagnostics;
 using MonitoringAgent.Data.Interfaces.Entities;
 
 namespace MonitoringAgent.Common.Data.Managers
@@ -32,7 +35,24 @@ namespace MonitoringAgent.Common.Data.Managers
             {
                 ((ISystemFields)entry.Entity).ChangeDate = DateTime.Now;
             }
-            context.SaveChanges();
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (DbUpdateConcurrencyException exc)
+            {
+            }
+            catch (DbEntityValidationException exc)
+            {
+#if DEBUG
+                foreach (var error in exc.EntityValidationErrors)
+                {
+                    Debug.WriteLine(error);
+                }
+#endif
+                throw;
+            }
+
         }
     }
 }

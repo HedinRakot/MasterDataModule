@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Data.Interfaces.Enums;
 using MonitoringAgent.Notifications.Interfaces;
-using MonitoringAgent.Services.Common.Contracts;
 using MonitoringAgent.Services.Common.Helpers;
 using MonitoringAgent.Services.Common.SignalRNotification;
 
@@ -15,7 +13,7 @@ namespace MonitoringAgent.Services.Common.Base
     /// </summary>
     /// <typeparam name="TServiceInfo">Info about monitorable object</typeparam>
     /// <typeparam name="TCheckingResult">Type of result</typeparam>
-    public abstract class CheckingModule<TServiceInfo, TCheckingResult> : ICheckingModule
+    public abstract class CheckingModule<TServiceInfo, TCheckingResult> : BaseTimerModule<TServiceInfo>
         where TServiceInfo : class, ICheckServiceInfo
         where TCheckingResult : class, IHasCheckStatus
     {
@@ -37,64 +35,38 @@ namespace MonitoringAgent.Services.Common.Base
             }
         }
 
-        readonly Dictionary<string, ServiceInfo> checkServices = new Dictionary<string, ServiceInfo>(); 
-
-        private void AddService(TServiceInfo serviceInfo, string name, int timeout, List<MasterDataNotifications> notifications)
+        /// <summary>
+        /// Action which will be invoked when timer elapsed
+        /// </summary>
+        /// <param name="info">Info about monitorable object which is associated with current timer</param>
+        /// <param name="notifications">List of notifications for monitorable object</param>
+        protected override void TimerAction(TServiceInfo info, List<MasterDataNotifications> notifications)
         {
-            var info = new ServiceInfo
+            var checkingResult = CheckService(info);
+
+            if (hubNotificator != null && checkingResult != null)
             {
-                Notifications = notifications ?? new List<MasterDataNotifications>(),
-                Info = serviceInfo,
-                Timeout = timeout,
-                Timer = new Timer(TimerElapsed, name, Timeout.Infinite, Timeout.Infinite)
-            };
+                hubNotificator.SendNotification(CheckModuleType, info.Id, checkingResult.CheckStatus);
+            }
 
-            checkServices.Add(name, info);
-        }
-
-        private void TimerElapsed(object state)
-        {
-            var serviceName = state as string;
-            ServiceInfo info;
-            if (!string.IsNullOrEmpty(serviceName) && checkServices.TryGetValue(serviceName, out info))
+            if (notifications.Count > 0)
             {
-                var timer = info.Timer;
-                timer.Change(Timeout.Infinite, Timeout.Infinite);
-
-                var checkingResult = CheckService(info.Info);
-
-                if (hubNotificator != null && checkingResult != null)
+                foreach (var notification in notifications)
                 {
-                    hubNotificator.SendNotification(CheckModuleType, info.Info.Id, checkingResult.CheckStatus);    
-                }
-
-                if (info.Notifications.Count > 0)
-                {
-                    foreach (var notification in info.Notifications)
+                    if (NeedNotify(checkingResult, notification))
                     {
-                        if (NeedNotify(checkingResult, notification))
-                        {
-                            notificationsModule.Notify(notification);
-                        }
-                    }
-                }
-
-                SaveCheckingResult(checkingResult);
-
-                lock (info.SyncObject)
-                {
-                    if (info.CanStart)
-                    {
-                        timer.Change(info.Timeout, info.Timeout);
+                        notificationsModule.Notify(notification);
                     }
                 }
             }
+
+            SaveCheckingResult(checkingResult);
         }
 
         /// <summary>
         /// Initialize module
         /// </summary>
-        public void Initialize()
+        public override void Initialize()
         {
             var services = ServiceExtractor();
             var notifications = notificationsModule.GetAllNotifications(services.Select(s => s.Id).ToList(), CheckModuleType);
@@ -107,57 +79,6 @@ namespace MonitoringAgent.Services.Common.Base
                 AddService(service, service.Name, service.TimeoutChecking, serviceNotifications);
             }
         }
-
-
-        /// <summary>
-        /// Reinitialize module
-        /// </summary>
-        public void Reinitialize()
-        {
-            foreach (var checkService in checkServices.Values)
-            {
-                lock (checkService.SyncObject)
-                {
-                    checkService.Timer.Change(Timeout.Infinite, Timeout.Infinite);
-                    checkService.Timer.Dispose();
-                    checkService.Timer = null;
-                    checkService.CanStart = false;
-                }
-            }
-            checkServices.Clear();
-            Initialize();
-        }
-
-        /// <summary>
-        /// Starts all checkings
-        /// </summary>
-        public void StartAllChecks()
-        {
-            foreach (var value in checkServices.Values)
-            {
-                lock (value.SyncObject)
-                {
-                    value.CanStart = true;
-                    value.Timer.Change(value.Timeout, value.Timeout);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Stops all checkings
-        /// </summary>
-        public void StopAllChecks()
-        {
-            foreach (var value in checkServices.Values)
-            {
-                lock (value.SyncObject)
-                {
-                    value.CanStart = false;
-                    value.Timer.Change(Timeout.Infinite, Timeout.Infinite);
-                }
-            }
-        }
-
         /// <summary>
         /// Gets all monitorable objects for checking
         /// </summary>
@@ -183,25 +104,5 @@ namespace MonitoringAgent.Services.Common.Base
         /// <param name="result">Result</param>
         /// <param name="notification">Notification</param>
         protected abstract bool NeedNotify(TCheckingResult result, MasterDataNotifications notification);
-
-        #region Nested types
-
-        private class ServiceInfo
-        {
-            private readonly object syncObject = new object();
-
-            public TServiceInfo Info { get; set; }
-            public int Timeout { get; set; }
-            public List<MasterDataNotifications> Notifications { get; set; }
-            public Timer Timer { get; set; }
-            public object SyncObject
-            {
-                get { return syncObject; }
-            }
-            public bool CanStart { get; set; }
-        }
-
-        #endregion Nested types
-
     }
 }

@@ -23,7 +23,25 @@ namespace MonitoringAgent.Common.Data
         public IDbSet<ApplicationLogs> ApplicationLogs { get; set; } // APPLICATION_LOGS
 
         [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
+        public IDbSet<GetApplicationLogs> GetApplicationLogs { get; set; } // GET_APPLICATION_LOGS
+
+        [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
+        public IDbSet<GetJobsStatus> GetJobsStatus { get; set; } // GET_JOBS_STATUS
+
+        [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
+        public IDbSet<GetSitesStatus> GetSitesStatus { get; set; } // GET_SITES_STATUS
+
+        [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
         public IDbSet<GetWcfServicesStatus> GetWcfServicesStatus { get; set; } // GET_WCF_SERVICES_STATUS
+
+        [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
+        public IDbSet<GetWinServicesStatus> GetWinServicesStatus { get; set; } // GET_WIN_SERVICES_STATUS
+
+        [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
+        public IDbSet<JobsInfosWithLastResult> JobsInfosWithLastResults { get; set; } // JOBS_INFOS_WITH_LAST_RESULT
+
+        [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
+        public IDbSet<LogTypeInfo> LogTypeInfoes { get; set; } // LOG_TYPE_INFO
 
         [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
         public IDbSet<MasterDataJobCheckResults> MasterDataJobCheckResults { get; set; } // MASTER_DATA_JOB_CHECK_RESULTS
@@ -65,6 +83,15 @@ namespace MonitoringAgent.Common.Data
         public IDbSet<MasterDataWindowsServiceInfo> MasterDataWindowsServiceInfoes { get; set; } // MASTER_DATA_WINDOWS_SERVICE_INFO
 
         [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
+        public IDbSet<SiteInfosWithLastResult> SiteInfosWithLastResults { get; set; } // SITE_INFOS_WITH_LAST_RESULT
+
+        [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
+        public IDbSet<WcfInfosWithLastResult> WcfInfosWithLastResults { get; set; } // WCF_INFOS_WITH_LAST_RESULT
+
+        [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
+        public IDbSet<WinserviceInfosWithLastResult> WinserviceInfosWithLastResults { get; set; } // WINSERVICE_INFOS_WITH_LAST_RESULT
+
+        [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "1.0.0.0")]
         static MasterDataDbContext()
         {
             Database.SetInitializer<MasterDataDbContext>(null);
@@ -95,7 +122,13 @@ namespace MonitoringAgent.Common.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Configurations.Add(new ApplicationLogsConfiguration());
+            modelBuilder.Configurations.Add(new GetApplicationLogsConfiguration());
+            modelBuilder.Configurations.Add(new GetJobsStatusConfiguration());
+            modelBuilder.Configurations.Add(new GetSitesStatusConfiguration());
             modelBuilder.Configurations.Add(new GetWcfServicesStatusConfiguration());
+            modelBuilder.Configurations.Add(new GetWinServicesStatusConfiguration());
+            modelBuilder.Configurations.Add(new JobsInfosWithLastResultConfiguration());
+            modelBuilder.Configurations.Add(new LogTypeInfoConfiguration());
             modelBuilder.Configurations.Add(new MasterDataJobCheckResultsConfiguration());
             modelBuilder.Configurations.Add(new MasterDataJobInfoConfiguration());
             modelBuilder.Configurations.Add(new MasterDataMonitorableInfoMasterDataNotificationsRspConfiguration());
@@ -109,6 +142,9 @@ namespace MonitoringAgent.Common.Data
             modelBuilder.Configurations.Add(new MasterDataWcfInfoConfiguration());
             modelBuilder.Configurations.Add(new MasterDataWindowsServiceCheckResultsConfiguration());
             modelBuilder.Configurations.Add(new MasterDataWindowsServiceInfoConfiguration());
+            modelBuilder.Configurations.Add(new SiteInfosWithLastResultConfiguration());
+            modelBuilder.Configurations.Add(new WcfInfosWithLastResultConfiguration());
+            modelBuilder.Configurations.Add(new WinserviceInfosWithLastResultConfiguration());
 
             OnModelCreatingPartial(modelBuilder);
         }
@@ -117,7 +153,13 @@ namespace MonitoringAgent.Common.Data
         public static DbModelBuilder CreateModel(DbModelBuilder modelBuilder, string schema)
         {
             modelBuilder.Configurations.Add(new ApplicationLogsConfiguration(schema));
+            modelBuilder.Configurations.Add(new GetApplicationLogsConfiguration(schema));
+            modelBuilder.Configurations.Add(new GetJobsStatusConfiguration(schema));
+            modelBuilder.Configurations.Add(new GetSitesStatusConfiguration(schema));
             modelBuilder.Configurations.Add(new GetWcfServicesStatusConfiguration(schema));
+            modelBuilder.Configurations.Add(new GetWinServicesStatusConfiguration(schema));
+            modelBuilder.Configurations.Add(new JobsInfosWithLastResultConfiguration(schema));
+            modelBuilder.Configurations.Add(new LogTypeInfoConfiguration(schema));
             modelBuilder.Configurations.Add(new MasterDataJobCheckResultsConfiguration(schema));
             modelBuilder.Configurations.Add(new MasterDataJobInfoConfiguration(schema));
             modelBuilder.Configurations.Add(new MasterDataMonitorableInfoMasterDataNotificationsRspConfiguration(schema));
@@ -131,6 +173,9 @@ namespace MonitoringAgent.Common.Data
             modelBuilder.Configurations.Add(new MasterDataWcfInfoConfiguration(schema));
             modelBuilder.Configurations.Add(new MasterDataWindowsServiceCheckResultsConfiguration(schema));
             modelBuilder.Configurations.Add(new MasterDataWindowsServiceInfoConfiguration(schema));
+            modelBuilder.Configurations.Add(new SiteInfosWithLastResultConfiguration(schema));
+            modelBuilder.Configurations.Add(new WcfInfosWithLastResultConfiguration(schema));
+            modelBuilder.Configurations.Add(new WinserviceInfosWithLastResultConfiguration(schema));
             return modelBuilder;
         }
 

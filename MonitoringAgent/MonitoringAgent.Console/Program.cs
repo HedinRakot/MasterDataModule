@@ -12,7 +12,7 @@ namespace MonitoringAgent
             var config = new Configuration.Configuration();
             config.Initialize();
 
-            var checkingModules = config.Container.ResolveAll<ICheckingModule>().ToArray();
+            var checkingModules = config.Container.ResolveAll<ITimerModule>().ToArray();
             foreach (var checkingModule in checkingModules)
             {
                 checkingModule.Initialize();

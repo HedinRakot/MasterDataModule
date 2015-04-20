@@ -20,7 +20,13 @@ namespace MonitoringAgent.Common.Data
     public interface IMasterDataDbContext : IDisposable
     {
         IDbSet<ApplicationLogs> ApplicationLogs { get; set; } // APPLICATION_LOGS
+        IDbSet<GetApplicationLogs> GetApplicationLogs { get; set; } // GET_APPLICATION_LOGS
+        IDbSet<GetJobsStatus> GetJobsStatus { get; set; } // GET_JOBS_STATUS
+        IDbSet<GetSitesStatus> GetSitesStatus { get; set; } // GET_SITES_STATUS
         IDbSet<GetWcfServicesStatus> GetWcfServicesStatus { get; set; } // GET_WCF_SERVICES_STATUS
+        IDbSet<GetWinServicesStatus> GetWinServicesStatus { get; set; } // GET_WIN_SERVICES_STATUS
+        IDbSet<JobsInfosWithLastResult> JobsInfosWithLastResults { get; set; } // JOBS_INFOS_WITH_LAST_RESULT
+        IDbSet<LogTypeInfo> LogTypeInfoes { get; set; } // LOG_TYPE_INFO
         IDbSet<MasterDataJobCheckResults> MasterDataJobCheckResults { get; set; } // MASTER_DATA_JOB_CHECK_RESULTS
         IDbSet<MasterDataJobInfo> MasterDataJobInfoes { get; set; } // MASTER_DATA_JOB_INFO
         IDbSet<MasterDataMonitorableInfoMasterDataNotificationsRsp> MasterDataMonitorableInfoMasterDataNotificationsRsps { get; set; } // MASTER_DATA_MONITORABLE_INFO_MASTER_DATA_NOTIFICATIONS_RSP
@@ -34,6 +40,9 @@ namespace MonitoringAgent.Common.Data
         IDbSet<MasterDataWcfInfo> MasterDataWcfInfoes { get; set; } // MASTER_DATA_WCF_INFO
         IDbSet<MasterDataWindowsServiceCheckResults> MasterDataWindowsServiceCheckResults { get; set; } // MASTER_DATA_WINDOWS_SERVICE_CHECK_RESULTS
         IDbSet<MasterDataWindowsServiceInfo> MasterDataWindowsServiceInfoes { get; set; } // MASTER_DATA_WINDOWS_SERVICE_INFO
+        IDbSet<SiteInfosWithLastResult> SiteInfosWithLastResults { get; set; } // SITE_INFOS_WITH_LAST_RESULT
+        IDbSet<WcfInfosWithLastResult> WcfInfosWithLastResults { get; set; } // WCF_INFOS_WITH_LAST_RESULT
+        IDbSet<WinserviceInfosWithLastResult> WinserviceInfosWithLastResults { get; set; } // WINSERVICE_INFOS_WITH_LAST_RESULT
 
         int SaveChanges();
     }

@@ -20,7 +20,13 @@ namespace MonitoringAgent.Common.Data.Managers
 		private void RegisterManagers(IUnityContainer container)
 		{
 					container.RegisterType<IApplicationLogsManager, ApplicationLogsManager>();
+			container.RegisterType<IGetApplicationLogsManager, GetApplicationLogsManager>();
+			container.RegisterType<IGetJobsStatusManager, GetJobsStatusManager>();
+			container.RegisterType<IGetSitesStatusManager, GetSitesStatusManager>();
 			container.RegisterType<IGetWcfServicesStatusManager, GetWcfServicesStatusManager>();
+			container.RegisterType<IGetWinServicesStatusManager, GetWinServicesStatusManager>();
+			container.RegisterType<IJobsInfosWithLastResultManager, JobsInfosWithLastResultManager>();
+			container.RegisterType<ILogTypeInfoManager, LogTypeInfoManager>();
 			container.RegisterType<IMasterDataJobCheckResultsManager, MasterDataJobCheckResultsManager>();
 			container.RegisterType<IMasterDataJobInfoManager, MasterDataJobInfoManager>();
 			container.RegisterType<IMasterDataMonitorableInfoMasterDataNotificationsRspManager, MasterDataMonitorableInfoMasterDataNotificationsRspManager>();
@@ -34,6 +40,9 @@ namespace MonitoringAgent.Common.Data.Managers
 			container.RegisterType<IMasterDataWcfInfoManager, MasterDataWcfInfoManager>();
 			container.RegisterType<IMasterDataWindowsServiceCheckResultsManager, MasterDataWindowsServiceCheckResultsManager>();
 			container.RegisterType<IMasterDataWindowsServiceInfoManager, MasterDataWindowsServiceInfoManager>();
+			container.RegisterType<ISiteInfosWithLastResultManager, SiteInfosWithLastResultManager>();
+			container.RegisterType<IWcfInfosWithLastResultManager, WcfInfosWithLastResultManager>();
+			container.RegisterType<IWinserviceInfosWithLastResultManager, WinserviceInfosWithLastResultManager>();
 	
 		}
 	}

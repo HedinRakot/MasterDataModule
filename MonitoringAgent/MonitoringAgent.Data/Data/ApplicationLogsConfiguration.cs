@@ -24,16 +24,20 @@ namespace MonitoringAgent.Common.Data
         public ApplicationLogsConfiguration(string schema = "dbo")
         {
             ToTable(schema + ".APPLICATION_LOGS");
-            HasKey(x => new { x.Id, x.LogType, x.LogLevel, x.Message, x.ChangeDate, x.CreateDate });
+            HasKey(x => x.Id);
 
             Property(x => x.Id).HasColumnName("ID").IsRequired().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(x => x.LogType).HasColumnName("LOG_TYPE").IsRequired();
             Property(x => x.LogLevel).HasColumnName("LOG_LEVEL").IsRequired();
             Property(x => x.Date).HasColumnName("DATE").IsOptional();
             Property(x => x.Message).HasColumnName("MESSAGE").IsRequired();
             Property(x => x.DeleteDate).HasColumnName("DELETE_DATE").IsOptional();
             Property(x => x.ChangeDate).HasColumnName("CHANGE_DATE").IsRequired();
             Property(x => x.CreateDate).HasColumnName("CREATE_DATE").IsRequired();
+            Property(x => x.FromDate).HasColumnName("FROM_DATE").IsRequired();
+            Property(x => x.ToDate).HasColumnName("TO_DATE").IsRequired();
+            Property(x => x.LogTypeInfoId).HasColumnName("LOG_TYPE_INFO_ID").IsRequired();
+
+            // Foreign keys
             InitializePartial();
         }
         partial void InitializePartial();

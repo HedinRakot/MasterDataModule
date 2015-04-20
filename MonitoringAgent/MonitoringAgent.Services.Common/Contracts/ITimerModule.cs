@@ -1,6 +1,6 @@
 ﻿namespace MonitoringAgent.Services.Common.Contracts
 {
-    public interface ICheckingModule
+    public interface ITimerModule
     {
         /// <summary>
         /// Initialize module

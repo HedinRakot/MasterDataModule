@@ -36,6 +36,7 @@ namespace MonitoringAgent.Common.Data
             Property(x => x.DeleteDate).HasColumnName("DELETE_DATE").IsOptional();
             Property(x => x.CreateDate).HasColumnName("CREATE_DATE").IsRequired();
             Property(x => x.ChangeDate).HasColumnName("CHANGE_DATE").IsRequired();
+            Property(x => x.LogTypeInfoId).HasColumnName("LOG_TYPE_INFO_ID").IsOptional();
             InitializePartial();
         }
         partial void InitializePartial();
