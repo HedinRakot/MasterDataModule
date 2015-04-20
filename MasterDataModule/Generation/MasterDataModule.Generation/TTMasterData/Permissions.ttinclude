@@ -11,12 +11,13 @@
 	 
 <#
 	foreach (var entity in context.Entities)
-    {
+	{
+	    var content = context.GetTableContent(entity);
 #>
 		///<summary>
 		/// Grant for edit <#=entity.TableName#> table
 		///</summary>
-		public const int <#=entity.Name#> = <#=startId++#>;
+		public const int <#=entity.Name#> = <#=content.PermissionId#>;
 <#
 	}
 #>

@@ -4,7 +4,6 @@
 <# 
     const string filesDir = @"..\..\Generation\MasterDataModule.Generation\Declarations\";
     extraUsages = new[] {"MasterDataModule.Contracts.Entities"};
-	var startId = 2000;
 #>
 <#@ include file="..\..\Generation\MasterDataModule.Generation\TTMasterData\MasterData.GenerationContext.ttinclude" once="true"#>
 <#@ include file="..\..\Generation\MasterDataModule.Generation\TTMasterData\Permissions.ttinclude"  once="true"#>

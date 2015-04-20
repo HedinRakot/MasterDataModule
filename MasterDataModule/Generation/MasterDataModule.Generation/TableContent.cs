@@ -37,5 +37,9 @@ namespace MasterDataModule.Generation
         public bool ShowAddButton { get; set; }
         public bool ShowEditButton { get; set; }
         public bool ShowDeleteButton { get; set; }
+        public int PermissionId { get; set; }
+        public string PermissionDescription { get; set; }
+
+
     }
 }
