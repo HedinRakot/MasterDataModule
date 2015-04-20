@@ -19,6 +19,11 @@
 	INSERT INTO [SettingsData].dbo.MASTER_DATA_ROLE_PERMISSION_RSP(MASTER_DATA_ROLE_ID ,MASTER_DATA_PERMISSION_ID ,CREATE_DATE ,CHANGE_DATE ,FROM_DATE ,TO_DATE) 
 	VALUES (1 ,<#=content.PermissionId#> ,getdate() ,getdate() ,getdate() ,DATEADD(year, 1, GETDATE()));
 	END;
+	ELSE
+	BEGIN
+	UPDATE [SettingsData].[dbo].[MASTER_DATA_PERMISSION] SET DESCRIPTION = '<#=description#>' WHERE ID = <#=content.PermissionId#>;
+	END;
+
 <#
 	}
 #>
