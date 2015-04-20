@@ -4,10 +4,10 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: 5.3.2.3 Exam Room  DE: 5.3.2.3 Fahrschule - Pruefplatz zuordnen
+    ///     DE: Prüfraum  EN: Exam room
     /// </summary>
     public partial class ExamRoom: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -134,15 +134,15 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     DE: Pruefplatznummer (Primaerschluessel im Altsystem) EN: Exam Room Number (PK in old system)
+        ///     DE: Prüfraum-Nummer  EN: Exam Room Number
         /// </summary>
         public long RoomNumber{ get; set; }
         /// <summary>
-        ///     EN: Amount of places  DE: Anzahl Plaetze
+        ///     DE: Anzahl der Plätze  EN: Amount of places
         /// </summary>
         public int PlaceAmount{ get; set; }
         /// <summary>
-        ///     EN: Organizational Unit  DE: TSC
+        ///     DE: Organisationseinheit   EN: Organizational Unit
         /// </summary>
         public int OrgOrganizationalUnitId{ get; set; }
         /// <summary>
@@ -178,59 +178,59 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         /// <summary>
-        ///     DE: Name 1 EN: Name 1
+        ///     DE: Name 1  EN: Name 1
         /// </summary>
         public string Name1{ get; set; }
         /// <summary>
-        ///     DE: Name 2 EN: Name 2
+        ///     DE: Name 2  EN: Name 2
         /// </summary>
         public string Name2{ get; set; }
         /// <summary>
-        ///     DE: Name 3 EN: Name 3
+        ///     DE: Name 3  EN: Name 3
         /// </summary>
         public string Name3{ get; set; }
         /// <summary>
-        ///     DE: Strasse und Hausnummer EN: Street and house number
+        ///     DE: Strasse und Hausnummer  EN: Street and house number
         /// </summary>
         public string StreetHouseNumber{ get; set; }
         /// <summary>
-        ///     DE: PLZ EN: Zip code
+        ///     DE: PLZ  EN: Zip code
         /// </summary>
         public string ZipCode{ get; set; }
         /// <summary>
-        ///     DE: PLZ EN: Zip code of postal box
+        ///     DE: PLZ  EN: Zip code of postal box
         /// </summary>
         public string ZipBox{ get; set; }
         /// <summary>
-        ///     DE: Postfach EN: Postal box
+        ///     DE: Postfach  EN: Postal box
         /// </summary>
         public string Box{ get; set; }
         /// <summary>
-        ///     DE: Ort EN: City
+        ///     DE: Ort  EN: City
         /// </summary>
         public string City{ get; set; }
         /// <summary>
-        ///     DE: Telefonnummer 1 EN: Phone number 1
+        ///     DE: Telefonnummer 1  EN: Phone number 1
         /// </summary>
         public string Phone1{ get; set; }
         /// <summary>
-        ///     DE: Fax EN: Fax
+        ///     DE: Fax  EN: Fax
         /// </summary>
         public string Fax{ get; set; }
         /// <summary>
-        ///     DE: E-Mail EN: Email
+        ///     DE: E-Mail  EN: Email
         /// </summary>
         public string Email{ get; set; }
         /// <summary>
-        ///     EN: Country
+        ///     DE: Land  EN: Country
         /// </summary>
         public int SysCountryId{ get; set; }
         DateTime? IIntervalFields.FromDate
@@ -243,7 +243,7 @@ namespace MasterDataModule.Contracts.Entities
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return Name1; }
         }

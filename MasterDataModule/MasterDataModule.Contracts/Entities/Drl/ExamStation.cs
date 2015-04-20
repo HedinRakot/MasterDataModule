@@ -5,10 +5,10 @@ using System.Collections.Generic;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: Exam Location5.2.2.4 Theory Exam Location5.2.2.3 Exam Location  DE: Prueforte5.2.2.4 Fahrschule - FE-Theorie-Pruefort5.2.2.3 Fahrschule - FE-Prueforte
+    ///     DE: FE-Prüfort  EN: FE exam station
     /// </summary>
     public partial class ExamStation: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -91,15 +91,15 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Federal State  DE: Bundesland
+        ///     DE: Bundesland   EN: Federal State
         /// </summary>
         public int? OrdFederalStateId{ get; set; }
         /// <summary>
-        ///     EN: Location (Place)  DE: Ort
+        ///     DE: Prüforts-Bezeichnung   EN: Location (Place)
         /// </summary>
         public string Place{ get; set; }
         /// <summary>
-        ///     EN: Description  DE: Beschreibung
+        ///     DE: Beschreibung des FE-Prüforts  EN: Description
         /// </summary>
         public string Description{ get; set; }
         /// <summary>
@@ -135,15 +135,15 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         /// <summary>
-        ///     DE: Sortier-Reihenfolge fuer die GUI EN: Field for sorting in GUI
+        ///     DE: Sortier-Reihenfolge  EN: Sort order
         /// </summary>
         public int SortOrder{ get; set; }
         public virtual ICollection<ExamStationExamRecognitionType> ExamStationExamRecognitionTypes{ get; set; }
@@ -157,7 +157,7 @@ namespace MasterDataModule.Contracts.Entities
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return Place; }
         }

@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Produktklasse-PFP-Prüfpositionen  EN: PFP position
+    /// </summary>
     public partial class InsPfpPosition: IHasId<int>
         ,IIntervalFields
         ,IRemovable
@@ -73,7 +76,13 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: Text der PFP-Prüfposition  EN: Text
+        /// </summary>
         public string Text{ get; set; }
+        /// <summary>
+        ///     DE: Top id  EN: Top id
+        /// </summary>
         public int? TopId{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -84,7 +93,13 @@ namespace MasterDataModule.Contracts.Entities
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
         DateTime? IIntervalFields.FromDate
         {

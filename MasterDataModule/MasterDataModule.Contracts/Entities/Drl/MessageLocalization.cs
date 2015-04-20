@@ -4,10 +4,10 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     Validation errors localization messages
+    ///     DE: Fehlermeldung  EN: Error message
     /// </summary>
     public partial class MessageLocalization: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IRemovable
         ,ISystemFields
     {
@@ -77,15 +77,15 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Validation error number
+        ///     DE: Fehlernummer  EN: Validation error number
         /// </summary>
         public int ValidationErrorNumber{ get; set; }
         /// <summary>
-        ///     EN: Message language
+        ///     DE: Sprachschlüssel   EN: Message language
         /// </summary>
         public int SysLanguageId{ get; set; }
         /// <summary>
-        ///     EN: Message text
+        ///     DE: Meldungstext  EN: Message text
         /// </summary>
         public string Message{ get; set; }
         /// <summary>
@@ -120,7 +120,7 @@ namespace MasterDataModule.Contracts.Entities
         ///     QUELLSYSTEM
         /// </summary>
         public string Source{ get; set; }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return Message; }
         }

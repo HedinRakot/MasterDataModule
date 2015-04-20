@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Produktklasse-SP-Intervall  EN: Next SP-Interval
+    /// </summary>
     public partial class InsNextSpInterval: IHasId<int>
         ,IIntervalFields
         ,IRemovable
@@ -85,10 +88,25 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: Objekttyp   EN: Object type
+        /// </summary>
         public int InsProductObjectTypeId{ get; set; }
+        /// <summary>
+        ///     DE: Gewichtsklasse   EN: Object class
+        /// </summary>
         public int InsProductObjectClassId{ get; set; }
+        /// <summary>
+        ///     DE: Minimales Alter des Fahrzeugs in Monaten  EN: Age month from
+        /// </summary>
         public int AgeMonthFrom{ get; set; }
+        /// <summary>
+        ///     DE: Maximales Alter des Fahrzeugs in Monaten  EN: Age month to
+        /// </summary>
         public int? AgeMonthTo{ get; set; }
+        /// <summary>
+        ///     DE: Intervall in Monaten  EN: SP interval
+        /// </summary>
         public int SpInterval{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -99,7 +117,13 @@ namespace MasterDataModule.Contracts.Entities
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
         DateTime? IIntervalFields.FromDate
         {

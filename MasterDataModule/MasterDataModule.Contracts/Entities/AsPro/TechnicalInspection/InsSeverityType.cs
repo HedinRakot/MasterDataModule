@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Produktklasse-Mangelbewertungen  EN: Severity type
+    /// </summary>
     public partial class InsSeverityType: IHasId<int>
         ,IIntervalFields
         ,IRemovable
@@ -81,7 +84,13 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: Schlüsselwert der Mangelbewertung   EN: Name
+        /// </summary>
         public string Name{ get; set; }
+        /// <summary>
+        ///     DE: Beschreibung der Mangelbewertung  EN: Description
+        /// </summary>
         public string Description{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -91,10 +100,22 @@ namespace MasterDataModule.Contracts.Entities
         public int? CreateEmployeeId{ get; set; }
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
+        /// <summary>
+        ///     DE: deleted?  EN: 
+        /// </summary>
         public string SpSeverity{ get; set; }
+        /// <summary>
+        ///     DE: deleted?  EN: 
+        /// </summary>
         public int? SpTestMarkPreset{ get; set; }
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
         DateTime? IIntervalFields.FromDate
         {

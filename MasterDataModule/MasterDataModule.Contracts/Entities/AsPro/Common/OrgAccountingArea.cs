@@ -3,8 +3,11 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Buchungskreis  EN: Accounting area
+    /// </summary>
     public partial class OrgAccountingArea: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -74,7 +77,13 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: Nummer des Buchungskreises  EN: Number
+        /// </summary>
         public string AccountingArea{ get; set; }
+        /// <summary>
+        ///     DE: Maximale Auftragssumme im Buchungskreis  EN: Max order sum
+        /// </summary>
         public decimal MaxOrderSum{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -85,7 +94,13 @@ namespace MasterDataModule.Contracts.Entities
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
         DateTime? IIntervalFields.FromDate
         {
@@ -97,7 +112,7 @@ namespace MasterDataModule.Contracts.Entities
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return AccountingArea; }
         }

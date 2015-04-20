@@ -8,7 +8,7 @@ namespace MasterDataModule.Contracts.Entities.Configuration
     ///     DE: Stammdaten Berechtigung  EN: Master data permission
     /// </summary>
     public partial class Permission: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -75,6 +75,10 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             /// Column name 'TO_DATE' for property <see cref="Permission.ToDate"/>
             /// </summary>
             public static readonly string ToDate = "TO_DATE";
+            /// <summary>
+            /// Column name 'DESCRIPTION' for property <see cref="Permission.Description"/>
+            /// </summary>
+            public static readonly string Description = "DESCRIPTION";
           
         }
         #endregion
@@ -103,6 +107,7 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
+        public string Description{ get; set; }
         public virtual ICollection<MasterDataRolePermissionRsp> MasterDataRolePermissionRsps{ get; set; }
         DateTime? IIntervalFields.FromDate
         {
@@ -114,9 +119,9 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
-            get { return Name; }
+            get { return Description; }
         }
         DateTime ISystemFields.CreateDate
         {
@@ -148,6 +153,7 @@ namespace MasterDataModule.Contracts.Entities.Configuration
                        Source = Source,
                        FromDate = FromDate,
                        ToDate = ToDate,
+                       Description = Description,
         	           };
         }
     }

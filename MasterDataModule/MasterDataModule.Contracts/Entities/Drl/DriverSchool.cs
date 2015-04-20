@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: 5.1.2 Driver School  DE: 5.1.2 Fahrschule
+    ///     DE: Fahrschule  EN: Driverschool
     /// </summary>
     public partial class DriverSchool: IHasId<int>
         ,IIntervalFields
@@ -86,11 +86,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Driver School Number (PK in old system)  DE: Fahrschulnummer (Primaerschluessel im Altsystem)
+        ///     DE: Fahrschulnummer  EN: Driverschool number
         /// </summary>
         public string DriverSchoolNumber{ get; set; }
         /// <summary>
-        ///     EN: Customer DE: Kunde
+        ///     DE: Kunde  EN: Customer
         /// </summary>
         public int OrdCustomerId{ get; set; }
         /// <summary>
@@ -126,11 +126,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         /// <summary>

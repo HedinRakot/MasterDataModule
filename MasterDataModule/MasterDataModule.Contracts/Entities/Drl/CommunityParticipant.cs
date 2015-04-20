@@ -4,7 +4,7 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: Reference table: Driver Schools which participate in Driver School Community  DE: Fahrschulen, die in der Fahrschulgemeinschaft teil nehmen
+    ///     DE: Mitglied der Fahrschulgemeinschaft  EN: Community participant
     /// </summary>
     public partial class CommunityParticipant: IHasId<int>
         ,IIntervalFields
@@ -81,7 +81,7 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Driver School which participates in community  DE: An der Gemeinschaft teilnehmende Fahrschule
+        ///     DE: Mitglied Fahrschule  EN: Participant
         /// </summary>
         public int DriverSchoolIdParticipant{ get; set; }
         /// <summary>
@@ -117,15 +117,15 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         /// <summary>
-        ///     -- DE: Fuehrende Fahrschule EN: Lead school of community
+        ///     DE: führende Fahrschule  EN: Driverschool lead
         /// </summary>
         public int DriverSchoolIdLead{ get; set; }
         public virtual DriverSchool DriverSchool{ get; set; }

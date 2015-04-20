@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Mitfahrerart  EN: Passenger type
+    /// </summary>
     public partial class ExpPassengersType: IHasId<int>
         ,IIntervalFields
         ,IRemovable
@@ -73,7 +76,13 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: Beschreibung der Mitfahrerart  EN: Text
+        /// </summary>
         public string Text{ get; set; }
+        /// <summary>
+        ///     DE: Mitfahrerart  EN: Code
+        /// </summary>
         public string Code{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -84,7 +93,13 @@ namespace MasterDataModule.Contracts.Entities
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
         DateTime? IIntervalFields.FromDate
         {

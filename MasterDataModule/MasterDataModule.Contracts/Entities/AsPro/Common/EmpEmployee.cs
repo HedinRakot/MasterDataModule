@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Mitarbeiter  EN: Employee
+    /// </summary>
     public partial class EmpEmployee: IHasId<int>
         ,IIntervalFields
         ,IRemovable
@@ -125,20 +128,62 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: Personalnummer  EN: Personal number
+        /// </summary>
         public string PersonalNumber{ get; set; }
+        /// <summary>
+        ///     DE: Domäne des Users (z.B. „DE001“)  EN: Domain
+        /// </summary>
         public string Domain{ get; set; }
+        /// <summary>
+        ///     DE: Anmeldenamen für ASPRO-Anmeldung  EN: User name
+        /// </summary>
         public string UserName{ get; set; }
+        /// <summary>
+        ///     DE: Anmeldenamen für Single-Sign-On-Anmeldung  EN: Windows user name
+        /// </summary>
         public string WindowsUserName{ get; set; }
+        /// <summary>
+        ///     DE: Single-Sign-On-Anmeldung möglich   EN: Is SSO allowed
+        /// </summary>
         public bool? IsSsoAllowed{ get; set; }
+        /// <summary>
+        ///     DE: User/Passwort-Anmeldung möglich   EN: Is password login allowed
+        /// </summary>
         public bool? IsPasswordLoginAllowed{ get; set; }
+        /// <summary>
+        ///     DE: Notfallanmeldung möglich   EN: Is emergency login allowed
+        /// </summary>
         public bool? IsEmergencyLoginAllowed{ get; set; }
         public int? EmpCoreAddressId{ get; set; }
+        /// <summary>
+        ///     DE: Vorname  EN: Name
+        /// </summary>
         public string Name{ get; set; }
+        /// <summary>
+        ///     DE: Zweiter Vorname  EN: Description
+        /// </summary>
         public string MiddleName{ get; set; }
+        /// <summary>
+        ///     DE: Nachname  EN: Lastname
+        /// </summary>
         public string LastName{ get; set; }
+        /// <summary>
+        ///     DE: Bemerkung  EN: Comment
+        /// </summary>
         public string Comment{ get; set; }
+        /// <summary>
+        ///     DE: Geschlecht   EN: Sex
+        /// </summary>
         public int? SexType{ get; set; }
+        /// <summary>
+        ///     DE: Titel  EN: Title
+        /// </summary>
         public string Title{ get; set; }
+        /// <summary>
+        ///     DE: Geburtsdatum  EN: Birthdate
+        /// </summary>
         public DateTime Birthdate{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -148,7 +193,13 @@ namespace MasterDataModule.Contracts.Entities
         public int? CreateEmployeeId{ get; set; }
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
         public int Id{ get; set; }
         DateTime? IIntervalFields.FromDate

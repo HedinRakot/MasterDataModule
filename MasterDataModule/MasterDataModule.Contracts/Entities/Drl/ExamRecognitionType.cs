@@ -5,10 +5,10 @@ using System.Collections.Generic;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: 5.2.2.1 Recognition Type  DE: 5.2.2.1 Fahrschule - Anerkennungsgrad
+    ///     DE: FE-Anerkennung  EN: FE recognition
     /// </summary>
     public partial class ExamRecognitionType: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -83,11 +83,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Recognition Type (PK in old system)  DE: Anerkennungsgrad (Primaerschluessel im Altsystem)
+        ///     DE: Beschreibung der Anerkennung  EN: Description
         /// </summary>
         public string Name{ get; set; }
         /// <summary>
-        ///     EN: Description  DE: Beschreibung
+        ///     DE: Beschreibung der Anerkennung  EN: Description
         /// </summary>
         public string Description{ get; set; }
         /// <summary>
@@ -123,11 +123,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         public virtual ICollection<ExamRecognitionTypeExamClass> ExamRecognitionTypeExamClasses{ get; set; }
@@ -143,7 +143,7 @@ namespace MasterDataModule.Contracts.Entities
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return Name; }
         }

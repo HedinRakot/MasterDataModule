@@ -4,10 +4,10 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: 5.2.12.9 Language  DE: 5.2.12.9 Fahrerlaubnis - Sprachen
+    ///     DE: FE-Sprache  EN: FE language
     /// </summary>
     public partial class Language: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -86,11 +86,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Language  DE: Sprache
+        ///     DE: Sprachschlüssel   EN: Language
         /// </summary>
         public int SysLanguageId{ get; set; }
         /// <summary>
-        ///     EN: Abbreviation in old System (PK in old system)  DE: Abkuerzung im Alt-System (Primaerschluessel im Altsystem)
+        ///     DE: Alter Sprachschlüssel aus VF97  EN: Abbreviation in old System
         /// </summary>
         public string OldAbbr{ get; set; }
         /// <summary>
@@ -126,11 +126,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         /// <summary>
@@ -147,7 +147,7 @@ namespace MasterDataModule.Contracts.Entities
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return OldAbbr; }
         }

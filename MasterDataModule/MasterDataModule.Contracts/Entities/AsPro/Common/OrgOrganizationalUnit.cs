@@ -3,8 +3,11 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Organisationseinheit  EN: Organizational unit
+    /// </summary>
     public partial class OrgOrganizationalUnit: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -106,14 +109,41 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: OE-Nummer  EN: Org Number
+        /// </summary>
         public int OrgNumber{ get; set; }
+        /// <summary>
+        ///     DE: OE-Bezeichnung  EN: Name
+        /// </summary>
         public string Name{ get; set; }
+        /// <summary>
+        ///     DE: OE-Kürzel  EN: Abbreviation
+        /// </summary>
         public string Abbr{ get; set; }
+        /// <summary>
+        ///     DE: Standortcode-Kürzel  EN: Location abbreviation
+        /// </summary>
         public string LocationAbbr{ get; set; }
+        /// <summary>
+        ///     DE: Standortcode   EN: Location
+        /// </summary>
         public int? SysLocationId{ get; set; }
+        /// <summary>
+        ///     DE: OE-Typ   EN: Org type
+        /// </summary>
         public int OrgTypeId{ get; set; }
+        /// <summary>
+        ///     DE: Email von  EN: Email from
+        /// </summary>
         public string EmailFrom{ get; set; }
+        /// <summary>
+        ///     DE: Email bis  EN: Email to
+        /// </summary>
         public string EmailTo{ get; set; }
+        /// <summary>
+        ///     DE: Angabe, ob EGDok-Dokumente für diese OE auch bei negativem Ergebnis gedruckt werden können  EN: EGDok print always
+        /// </summary>
         public bool IsEgdokPrintAlways{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -123,8 +153,17 @@ namespace MasterDataModule.Contracts.Entities
         public int? CreateEmployeeId{ get; set; }
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
+        /// <summary>
+        ///     DE: Buchungskreis  EN: Accounting area
+        /// </summary>
         public int? OrgAccountingAreaId{ get; set; }
         public int Id{ get; set; }
         DateTime? IIntervalFields.FromDate
@@ -137,7 +176,7 @@ namespace MasterDataModule.Contracts.Entities
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return Name; }
         }

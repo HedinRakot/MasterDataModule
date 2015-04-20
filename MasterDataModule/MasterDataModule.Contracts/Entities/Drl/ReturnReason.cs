@@ -4,10 +4,10 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: 5.2.12.4 Return Reason (Reason for giving back the Driver Licence to the Authority)  DE: 5.2.12.4 Fahrerlaubnis - Rueckgabegruende
+    ///     DE: Rückgabegrund  EN: Return reason
     /// </summary>
     public partial class ReturnReason: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -90,19 +90,19 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Reason for returning the Driver Licence to Authority (PK in old system)  DE: Rueckgabegrund (Primaerschluessel im Altsystem)
+        ///     DE: Kurzbezeichnung  EN: Reason for returning the Driver Licence to Authority
         /// </summary>
         public string Name{ get; set; }
         /// <summary>
-        ///     EN: Description  DE: Beschreibung
+        ///     DE: Beschreibung des Rückgabegrunds  EN: Description
         /// </summary>
         public string Description{ get; set; }
         /// <summary>
-        ///     EN: Text1  DE: Text1
+        ///     DE: Zusatztext 1  EN: Text 1
         /// </summary>
         public string Text1{ get; set; }
         /// <summary>
-        ///     EN: Text2  DE: Text2
+        ///     DE: Zusatztext 2  EN: Text 2
         /// </summary>
         public string Text2{ get; set; }
         /// <summary>
@@ -138,11 +138,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         DateTime? IIntervalFields.FromDate
@@ -155,7 +155,7 @@ namespace MasterDataModule.Contracts.Entities
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return Name; }
         }

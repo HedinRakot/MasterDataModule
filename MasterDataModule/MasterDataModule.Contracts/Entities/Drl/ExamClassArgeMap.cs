@@ -4,10 +4,10 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     DE: Zuordnungstabelle fuer die Klassen, die im ARGE verwendet werden EN: Reference table: ASPro exam class - ARGE exam class
+    ///     DE: ARGE-Klassenbezeichnung   EN: Arge class map
     /// </summary>
     public partial class ExamClassArgeMap: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IRemovable
         ,ISystemFields
     {
@@ -73,11 +73,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     DE: FE-Klasse ARGE EN: ARGE exam class	
+        ///     DE: ARGE-Klassenbezeichnung  EN: ARGE exam class
         /// </summary>
         public string ExamNameArge{ get; set; }
         /// <summary>
-        ///     DE: FE-Klasse ASPro EN: ASPro exam class
+        ///     DE: übergeordnete Klasse   EN: Class
         /// </summary>
         public int ExamClassId{ get; set; }
         /// <summary>
@@ -117,7 +117,7 @@ namespace MasterDataModule.Contracts.Entities
         {
             get { return !ReferenceEquals(ExamClass, null); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return ExamNameArge; }
         }

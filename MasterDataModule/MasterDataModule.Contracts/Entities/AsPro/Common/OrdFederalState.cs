@@ -3,8 +3,11 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Bundesland  EN: Federal state
+    /// </summary>
     public partial class OrdFederalState: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -82,9 +85,18 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: Kürzel des Bundesland (offizieller ISO-Schlüssel)  EN: Name
+        /// </summary>
         public string FederalStateName{ get; set; }
+        /// <summary>
+        ///     DE: Beschreibung des Bundeslands  EN: Description
+        /// </summary>
         public string Description{ get; set; }
         public int? StatistikKey{ get; set; }
+        /// <summary>
+        ///     DE: Länderschlüssel   EN: Country
+        /// </summary>
         public int? SysCountryId{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -94,7 +106,13 @@ namespace MasterDataModule.Contracts.Entities
         public int? CreateEmployeeId{ get; set; }
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
         public int Id{ get; set; }
         DateTime? IIntervalFields.FromDate
@@ -107,7 +125,7 @@ namespace MasterDataModule.Contracts.Entities
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return FederalStateName; }
         }

@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Zuordnung Preise zu Kostenstelle  EN: Cost center price
+    /// </summary>
     public partial class OrgCostCenterPrice: IHasId<int>
         ,IIntervalFields
         ,IRemovable
@@ -109,17 +112,53 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: Produkt   EN: Product
+        /// </summary>
         public int InsCoreDataProductId{ get; set; }
+        /// <summary>
+        ///     DE: Verkaufsbüro (ersten 4 Stellen der Kostenstelle)  EN: Sales office
+        /// </summary>
         public string SalesOffice{ get; set; }
+        /// <summary>
+        ///     DE: Verkäufergruppe (letzten 3 Stellen der Kostenstelle), dieser Wert kann auch leer sein, dann gilt der Preis für das ganze Verkaufsbüro (Niederlassung)  EN: Sales group
+        /// </summary>
         public string SalesGroup{ get; set; }
+        /// <summary>
+        ///     DE: Minimaler Preis  EN: Min price
+        /// </summary>
         public decimal? MinPrice{ get; set; }
+        /// <summary>
+        ///     DE: Maximaler Preis  EN: Max price
+        /// </summary>
         public decimal? MaxPrice{ get; set; }
+        /// <summary>
+        ///     DE: Standartpreis  EN: Standart prict
+        /// </summary>
         public decimal? StandartPrice{ get; set; }
+        /// <summary>
+        ///     DE: verkaufte Menge   EN: Quantity
+        /// </summary>
         public int Quantity{ get; set; }
+        /// <summary>
+        ///     DE: Mengeneinheit (Kombobox) mit folgenden Werten „ST“ = Stück, „H“ = Stunde  EN: Unit of measure
+        /// </summary>
         public string UnitOfMeasure{ get; set; }
+        /// <summary>
+        ///     DE: Währungskennzeichen  EN: Currency
+        /// </summary>
         public int? SysCurrencyId{ get; set; }
+        /// <summary>
+        ///     DE: Preisänderung (Kombobox mit folgenden Werten 0= “nicht änderbar“, 1= “änderbar mit Begründung“, 2= “änderbar ohne Begründung“)  EN: Change ability type
+        /// </summary>
         public int? ChangeAbilityType{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }

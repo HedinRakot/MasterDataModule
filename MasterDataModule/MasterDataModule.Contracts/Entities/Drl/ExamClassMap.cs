@@ -4,7 +4,7 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: Reference table: Old Class - New Class  DE: Alte FE-Klasse - neue FE-Klasse Zuordnungen
+    ///     DE: Zuordnung Alt-Klasse zu einer FE-Klasse  EN: Old class to actual map
     /// </summary>
     public partial class ExamClassMap: IHasId<int>
         ,IRemovable
@@ -72,11 +72,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Class old  DE: FE-Klasse alt
+        ///     DE: Verweis auf die Alt-Klasse   EN: Actual class
         /// </summary>
         public int ExamClassIdOld{ get; set; }
         /// <summary>
-        ///     EN: Actual class DE: FE-Klasse neu
+        ///     DE: Klasse, der eine Alt-Klasse zugeordnet wird  EN: Class old
         /// </summary>
         public int ExamClassIdActual{ get; set; }
         /// <summary>

@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Produkt-Arbeitsgebiet  EN: Area of work
+    /// </summary>
     public partial class OrdAreaOfWork: IHasId<int>
         ,IIntervalFields
         ,IRemovable

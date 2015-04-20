@@ -7,7 +7,7 @@ namespace MasterDataModule.Contracts.Entities.Configuration
     ///     DE: Hintergrundprozess Einstellungen  EN: Job info
     /// </summary>
     public partial class MasterDataJobInfo: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -121,7 +121,7 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return Name; }
         }

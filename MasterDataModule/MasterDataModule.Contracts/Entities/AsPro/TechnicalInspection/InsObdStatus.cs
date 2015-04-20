@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Produktklasse-AU-OBD-Status  EN: OBD status
+    /// </summary>
     public partial class InsObdStatus: IHasId<int>
         ,IIntervalFields
         ,IRemovable
@@ -77,8 +80,17 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: Schlüsselwert des OBD-Status  EN: Name
+        /// </summary>
         public string Name{ get; set; }
+        /// <summary>
+        ///     DE: Beschreibung des OBD-Status  EN: Description
+        /// </summary>
         public string Description{ get; set; }
+        /// <summary>
+        ///     DE: Gültig für Benzin (b) oder Diesel (d), Auswahl über Kombobox  EN: AU View
+        /// </summary>
         public string AuView{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -89,7 +101,13 @@ namespace MasterDataModule.Contracts.Entities
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
         DateTime? IIntervalFields.FromDate
         {

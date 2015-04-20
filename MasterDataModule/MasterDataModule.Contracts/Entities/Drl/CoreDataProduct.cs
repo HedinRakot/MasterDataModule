@@ -5,10 +5,10 @@ using System.Collections.Generic;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: 5.3.5.15 Product - assign Additional Details  DE: 5.3.5.15 Produkt - FE-Zusatzdaten zuordnen
+    ///     DE: FE-Produkt  EN: FE-Product
     /// </summary>
     public partial class CoreDataProduct: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -143,47 +143,47 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Product  DE: FE-Produkt
+        ///     DE: Produkt  EN: Product
         /// </summary>
         public int InsCoreDataProductId{ get; set; }
         /// <summary>
-        ///     EN: Point Amount  DE: Punkte
+        ///     DE: Anzahl der Punkte des Produkts  EN: Point amount
         /// </summary>
         public decimal PointAmount{ get; set; }
         /// <summary>
-        ///     EN: Minimum Age  DE: Mindestalter
+        ///     DE: Mindestalter des Bewerbers  EN: Min age
         /// </summary>
         public byte MinAge{ get; set; }
         /// <summary>
-        ///     EN: Maximum Age  DE: Hoechstalter
+        ///     DE: Höchstalter des Bewerbers  EN: Max age
         /// </summary>
         public byte? MaxAge{ get; set; }
         /// <summary>
-        ///     EN: Exam Type (Enum: 1 - Theorie, 2 - Praxis, 3 - Theorie und Praxis, 4 - not relevant)  DE: Pruefart (Enum: 1 - Theorie, 2 - Praxis, 3 - Theorie und Praxis, 4 - nicht relevant)
+        ///     DE: Prüfungsart  EN: Exam type
         /// </summary>
         public int ExamType{ get; set; }
         /// <summary>
-        ///     EN: Prior Time in Months  DE: Vorzeit in Monaten
+        ///     DE: Vorzeitige Prüfung in Monaten  EN: Prior time in month
         /// </summary>
         public short PriorTimeInMonths{ get; set; }
         /// <summary>
-        ///     EN: Exparation date in months  DE: Verfallsfrist in Monaten
+        ///     DE: Verfallsfrist der Leistung in Monaten  EN: Expiration in month
         /// </summary>
         public short ExpirationInMonth{ get; set; }
         /// <summary>
-        ///     EN: Repetition time in days  DE: Wiederholungsfrist in Tagen
+        ///     DE: Wiederholungsfrist in Tagen  EN: Repeat time in days
         /// </summary>
         public short RepeatTimeInDays{ get; set; }
         /// <summary>
-        ///     EN: Indication whether Attestation is possible  DE: Angabe ob Ausbildungsbescheinigung moeglich
+        ///     DE: Ausbildungsbescheinigung notwendig  EN: Training certificate required
         /// </summary>
         public bool TrainingCertFlag{ get; set; }
         /// <summary>
-        ///     EN: Indication whether Result is possible  DE: Angabe ob Ergebnis moglich
+        ///     DE: Ergebnis notwendig  EN: Result required
         /// </summary>
         public bool ResultFlag{ get; set; }
         /// <summary>
-        ///     EN: Indication whether Product is possible several time per position  DE: Angabe ob Leistung mehrfach pro Position moeglich
+        ///     DE: Leistung mehrfach möglich  EN: Can be multiple
         /// </summary>
         public bool MultiplyFlag{ get; set; }
         /// <summary>
@@ -219,35 +219,35 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         /// <summary>
-        ///     DE: Zeigt an, ob Mofa Pruefbescheinigung zu druecken ist EN: Indication whether Mofa certificate should be printed
+        ///     DE: Mofaprüfbescheinigung  EN: Is Mofa print product
         /// </summary>
         public bool IsMofaPrint{ get; set; }
         /// <summary>
-        ///     DE: Zeigt an, ob es eine Zusatzleistung ist EN: Additional product indication
+        ///     DE: Zusatzleistung  EN: Is additional product
         /// </summary>
         public bool IsAdditionalProduct{ get; set; }
         /// <summary>
-        ///     DE: Zeigt an, ob Vorzahlung im  Vorinkasso-Fall notwendig ist EN: Indication whether pre-payment is necessary
+        ///     DE: Vorzahlung erforderlich  EN: Prepayment required
         /// </summary>
         public bool IsPrepaymentRequired{ get; set; }
         /// <summary>
-        ///     EN: Indication whether Exam Product is mandatory DE: Angabe ob es eine pflicht Pruefleistung
+        ///     DE: Pflicht Produkt  EN: Is mandatory
         /// </summary>
         public bool IsMandatory{ get; set; }
         /// <summary>
-        ///     DE: Eindeutige Nummer der FE Pruefleistung EN: FE Produkt Number , unique
+        ///     DE: FE-Produktnummer  EN: FE product number
         /// </summary>
         public string FeProductNumber{ get; set; }
         /// <summary>
-        ///     EN: Reduced repetition time in days  DE: Abgekuerzte Wiederholungsfrist in Tagen
+        ///     DE: abgekürzte Wiederholungsfrist in Tagen  EN: Reduced repeat time in days
         /// </summary>
         public short RepeatTimeInDaysReduced{ get; set; }
         public virtual ICollection<CoreDataProductClassBasis> CoreDataProductClassBases{ get; set; }
@@ -262,7 +262,7 @@ namespace MasterDataModule.Contracts.Entities
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return ProductName; }
         }

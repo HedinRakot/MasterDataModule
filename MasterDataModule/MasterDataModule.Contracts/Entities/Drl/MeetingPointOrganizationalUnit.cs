@@ -4,7 +4,7 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: 5.3.4.6 Reference table: Organizational Unit - Meeting Point  DE: 5.3.4.6 Organisationseinheit - FE-Treffpunkt zuordnen
+    ///     DE: Zuordnung FE-Treffpunkt zu einer Organisationseinheit  EN: Meeting point to org unit
     /// </summary>
     public partial class MeetingPointOrganizationalUnit: IHasId<int>
         ,IIntervalFields
@@ -81,11 +81,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Meeting Point  DE: Treffpunkt
+        ///     DE: FE-Treffpunkt   EN: Meeting Point
         /// </summary>
         public int MeetingPointId{ get; set; }
         /// <summary>
-        ///     EN: Organizational Unit  DE: Organisationseinheit (TSC)
+        ///     DE: zugeordnete Organisationseinheit   EN: Organizational Unit
         /// </summary>
         public int OrgOrganizationalUnitId{ get; set; }
         /// <summary>
@@ -121,11 +121,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         public virtual MeetingPoint MeetingPoint{ get; set; }

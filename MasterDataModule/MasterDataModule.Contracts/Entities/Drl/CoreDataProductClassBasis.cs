@@ -4,7 +4,7 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: 5.3.5.20 Reference table: Assignment of the Legal_Basis/Class to the Product  DE: 5.3.5.20 Produkt - FE-Rechtsgrund/Klasse zuordnen
+    ///     DE: Rechtsgrund/Klasse  EN: Legal basis/class
     /// </summary>
     public partial class CoreDataProductClassBasis: IHasId<int>
         ,IIntervalFields
@@ -89,15 +89,15 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Class  DE: FE-Klasse
+        ///     DE: Klasse   EN: Class
         /// </summary>
         public int ExamClassId{ get; set; }
         /// <summary>
-        ///     EN: Product  DE: FE-Produkt
+        ///     DE: Produkt  EN: Product
         /// </summary>
         public int CoreDataProductId{ get; set; }
         /// <summary>
-        ///     EN: Legal Bases  DE: Rechtsgrund
+        ///     DE: Rechtsgrund  EN: Legalbasis
         /// </summary>
         public int LegalBasisId{ get; set; }
         /// <summary>
@@ -133,15 +133,15 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         /// <summary>
-        ///     DE: Reihenfolge fuer die Anzeige im GUI EN: Sort Order for GUI
+        ///     DE: Sortierreihenfolge  EN: Sort order
         /// </summary>
         public int SortOrder{ get; set; }
         public virtual ExamClass ExamClass{ get; set; }

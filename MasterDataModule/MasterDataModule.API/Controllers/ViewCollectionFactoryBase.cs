@@ -26,16 +26,20 @@ namespace MasterDataModule.API.Controllers
             where TId : struct, IEquatable<TId>
             where TManager : IEntityManager<TEntity, TId>
         {
-            var result = manager.GetEntities().Where(o => !o.DeleteDate.HasValue)
-                .Select(o => { return ToCollectionItem<TId>(o); });
-            return result.ToList();
+            var result = manager.GetEntities().Where(o => !o.DeleteDate.HasValue);
+
+            if (typeof(IHasTitle<TId>).IsAssignableFrom(typeof(TEntity)))
+                return result.ToList().Cast<IHasTitle<TId>>().OrderBy(o => o.EntityTitle)
+                    .Select(o => new IdNameModel<TId> { id = o.Id, name = o.EntityTitle });
+            else
+                return result.Select(o => { return ToCollectionItem<TId>(o); }).ToList();
         }
 
         protected IdNameModel<TId> ToCollectionItem<TId>(IHasId<TId> item)
             where TId : struct, IEquatable<TId>
         {
-            if (item is IHasTitle)
-                return new IdNameModel<TId> { id = item.Id, name = ((IHasTitle)item).EntityTitle };
+            if (item is IHasTitle<TId>)
+                return new IdNameModel<TId> { id = item.Id, name = ((IHasTitle<TId>)item).EntityTitle };
 
             return new IdNameModel<TId> { id = item.Id, name = item.Id.ToString() };
         }

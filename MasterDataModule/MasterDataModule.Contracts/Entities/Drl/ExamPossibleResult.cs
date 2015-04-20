@@ -4,10 +4,10 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: 5.2.12.6 Possible Exam Results  DE: 5.2.12.6 Fahrerlaubnis - Pruefleistungsergebnisse
+    ///     DE: Prüfleistungsergebnis  EN: Exam result
     /// </summary>
     public partial class ExamPossibleResult: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -98,27 +98,27 @@ namespace MasterDataModule.Contracts.Entities
         }
         #endregion
         /// <summary>
-        ///     EN: Exam Result (for example 90, --, 1, 2, ...)  DE: Pruefleistungsergebnis (z.B. 90, --, 1, 2, ...)
+        ///     DE: Kurzbeschreibung des Prüfleistungsergebnisses  EN: Exam Result
         /// </summary>
         public string Name{ get; set; }
         /// <summary>
-        ///     EN: Description  DE: Beschreibung
+        ///     DE: Beschreibung des Prüfleistungsergebnisses  EN: Description
         /// </summary>
         public string Description{ get; set; }
         /// <summary>
-        ///     EN: Indication whether fee is due  DE: Angabe, ob Gebuehr faellig
+        ///     DE: Angabe, ob die Gebühr bei diesem Ergebnis fällig wird   EN: Indication whether fee is due
         /// </summary>
         public bool IsFeePayable{ get; set; }
         /// <summary>
-        ///     EN: Indication whether exam counter increases  DE: Angabe, ob Pruefungszaehler hochgesetzt wird
+        ///     DE: Angabe, ob der Prüfleistungszähler bei diesem Ergebnis hochgesetzt werden muss   EN: Indication whether exam counter increases
         /// </summary>
         public bool ExamCounterFlag{ get; set; }
         /// <summary>
-        ///     EN: Indication whether next exam product is required  DE: Angabe, ob Folgeleistung angelegt wird
+        ///     DE: Angabe, ob bei diesem Ergebnis eine Folgeleistung angelegt werden muss   EN: Indication whether next exam product is required
         /// </summary>
         public bool NextExamProductFlag{ get; set; }
         /// <summary>
-        ///     EN: Indication whether Driver Licence can be handed over  DE: Angabe, ob Fuehrerschein ausgehaendigt werden kann
+        ///     DE: Angabe, ob bei diesem Ergebnis der Führerschein ausgehändig werden kann   EN: Indication whether Driver Licence can be handed over
         /// </summary>
         public bool DriverLicenceFlag{ get; set; }
         /// <summary>
@@ -154,15 +154,15 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         /// <summary>
-        ///     Is medical attest requared
+        ///     DE: Angabe, ob bei diesem Ergebnis ein ärztliches Attest notwendig ist  EN: Is medical attest required
         /// </summary>
         public bool IsMedicalAttestRequired{ get; set; }
         public int Id{ get; set; }
@@ -176,7 +176,7 @@ namespace MasterDataModule.Contracts.Entities
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return Name; }
         }

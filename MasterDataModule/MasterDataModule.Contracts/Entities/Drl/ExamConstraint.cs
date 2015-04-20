@@ -5,10 +5,10 @@ using System.Collections.Generic;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: 5.2.12.10 Constraints  DE: 5.2.12.10 Fahrerlaubnis - Auflagen/Beschraenkungen
+    ///     DE: Auflagen/Beschränkungen  EN: Exam constraints
     /// </summary>
     public partial class ExamConstraint: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -87,15 +87,15 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Constraint Name (PK in old system)  DE: Auflage\Beschraenkung Name (Primaerschluessel im Altsystem)
+        ///     DE: Kurzbeschreibung der FE-Auflage  EN: Constraint Name
         /// </summary>
         public string Name{ get; set; }
         /// <summary>
-        ///     EN: Description  DE: Beschreibung
+        ///     DE: Beschreibung der FE-Auflage  EN: Description
         /// </summary>
         public string Description{ get; set; }
         /// <summary>
-        ///     EN: Type of the Contraint (1 - General, 2 - Class level)  DE: Typ der Auflage/Beschraenkung (1 - Algemein, 2 - FE-Klasse)
+        ///     DE: Auflagentyp  EN: Type of the Contraint
         /// </summary>
         public int ConstraintType{ get; set; }
         /// <summary>
@@ -131,11 +131,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         public virtual ICollection<ExamConstraintExamClass> ExamConstraintExamClasses{ get; set; }
@@ -149,7 +149,7 @@ namespace MasterDataModule.Contracts.Entities
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return Name; }
         }

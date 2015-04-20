@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Bankverbindung  EN: Bank information
+    /// </summary>
     public partial class OrgBankInformation: IHasId<int>
         ,IIntervalFields
         ,IRemovable
@@ -85,8 +88,17 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: Bankname  EN: Bank name
+        /// </summary>
         public string BankName{ get; set; }
+        /// <summary>
+        ///     DE: Bankleitzahl bzw. BIC  EN: Bank code
+        /// </summary>
         public string BankCode{ get; set; }
+        /// <summary>
+        ///     DE: Kontonummer bzw. IBAN  EN: Account number
+        /// </summary>
         public string BankAccount{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -96,10 +108,22 @@ namespace MasterDataModule.Contracts.Entities
         public int? CreateEmployeeId{ get; set; }
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
+        /// <summary>
+        ///     DE:   EN: 
+        /// </summary>
         public string TransferValue{ get; set; }
+        /// <summary>
+        ///     DE:   EN: 
+        /// </summary>
         public string TransferXValue{ get; set; }
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
         DateTime? IIntervalFields.FromDate
         {

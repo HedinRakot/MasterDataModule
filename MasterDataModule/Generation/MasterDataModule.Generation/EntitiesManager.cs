@@ -39,7 +39,7 @@ namespace MasterDataModule.Generation
             var ihasid = TypeUsageInfo.CreateInterface("IHasId", "MasterDataModule.Contracts", new[] {typeof (int).ToUsageInfo()});
             var iintervalfields = TypeUsageInfo.CreateInterface("IIntervalFields", "MasterDataModule.Contracts");
             var isystemfields = TypeUsageInfo.CreateInterface("ISystemFields", "MasterDataModule.Contracts");
-            var ihastitle = TypeUsageInfo.CreateInterface("IHasTitle", "MasterDataModule.Contracts");
+            var ihastitle = TypeUsageInfo.CreateInterface("IHasTitle", "MasterDataModule.Contracts", new[] { typeof(int).ToUsageInfo() });
    
             foreach (var entity in entities)
             {

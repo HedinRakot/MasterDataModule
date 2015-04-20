@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Produkt  EN: Product
+    /// </summary>
     public partial class InsCoreDataProduct: IHasId<int>
         ,IIntervalFields
         ,IRemovable
@@ -137,20 +140,65 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: Produktnummer  EN: Product number
+        /// </summary>
         public string ProductNumber{ get; set; }
+        /// <summary>
+        ///     DE: Angabe, ob Produkt eine Nachprüfung ist  EN: Is next inspection product
+        /// </summary>
         public bool? IsNextInspectionProduct{ get; set; }
+        /// <summary>
+        ///     DE: Angabe, ob für Produkt Gestellungskosten verrechnet werden können  EN: Is provision cost may be calculated
+        /// </summary>
         public bool? IsProvisionCostMayBeCalculated{ get; set; }
+        /// <summary>
+        ///     DE: Zahlungsbericht erforderlich  EN: Price report required
+        /// </summary>
         public bool? PriceReportRequired{ get; set; }
+        /// <summary>
+        ///     DE: Produkttyp   EN: Product type
+        /// </summary>
         public int InsProductTypeId{ get; set; }
+        /// <summary>
+        ///     DE: Gewichtsklasse  EN: Object class
+        /// </summary>
         public int? InsProductObjectClassId{ get; set; }
+        /// <summary>
+        ///     DE: Objekttyp    EN: Object type
+        /// </summary>
         public int? InsProductObjectTypeId{ get; set; }
+        /// <summary>
+        ///     DE: Materialgruppe  EN: Material group
+        /// </summary>
         public int? InsProductMaterialGroupId{ get; set; }
+        /// <summary>
+        ///     DE: Produktklasse  EN: Product class
+        /// </summary>
         public int? InsProductClassId{ get; set; }
+        /// <summary>
+        ///     DE: Arbeitswert/Zeitdauer  EN: Product group
+        /// </summary>
         public int? InsCoreDataProductGroupId{ get; set; }
+        /// <summary>
+        ///     DE: Angabe, ob Produkt eine Ingenieursleistung ist  EN: Is ingeneur
+        /// </summary>
         public bool? IsIngener{ get; set; }
+        /// <summary>
+        ///     DE: Angabe, ob Produkt eine Produktivleistung ist („0“ = Aufwandserfassung unproduktiv, „1“ = Produktiv (TP), „2“ = Aufwandserfassung produktiv)  EN: Is productive
+        /// </summary>
         public int IsProductive{ get; set; }
+        /// <summary>
+        ///     DE: Angabe, ob Produkt eine Kilometergeld-Leistung für den Verkauf an Kunden ist  EN: Is KM Geld
+        /// </summary>
         public bool IsKmGeld{ get; set; }
+        /// <summary>
+        ///     DE: Angabe, ob Produkt eine besondere Leistung ist  EN: Is other material
+        /// </summary>
         public bool IsOtherMaterial{ get; set; }
+        /// <summary>
+        ///     DE: Produkt ist Reisezeitprodukt für Aufwandsrückmeldung  EN: Is trip
+        /// </summary>
         public bool IsTrip{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -160,10 +208,25 @@ namespace MasterDataModule.Contracts.Entities
         public int? CreateEmployeeId{ get; set; }
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
+        /// <summary>
+        ///     DE: Angabe, ob Produkt mehrfach in einem Auftrag erbracht werden kann („0“ = Anzahl immer 1, „1“ = Mehrfach ganzzahlig, „2“ = Mehrfach (>0) mit 2 Nachkommastellen  EN: Reusage type
+        /// </summary>
         public int ReusageType{ get; set; }
+        /// <summary>
+        ///     DE: Steuerkennzeichen  EN: Tax code
+        /// </summary>
         public int? InsTaxCodeId{ get; set; }
+        /// <summary>
+        ///     DE: Alte VF97-Produktnummer  EN: Old product number
+        /// </summary>
         public string OldProductNumber{ get; set; }
         public int Id{ get; set; }
         DateTime? IIntervalFields.FromDate

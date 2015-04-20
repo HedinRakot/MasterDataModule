@@ -4,10 +4,10 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: Versions of ARGE Exam-Programm  DE: ARGE-Versionen
+    ///     DE: ARGE-Version  EN: ARGE-Version
     /// </summary>
     public partial class ArgeVersion: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -86,15 +86,15 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     DE: Anwendung EN: Name of Exam-Programm
+        ///     DE: Programm-Name  EN: Exam-Programm
         /// </summary>
         public string ProgrammName{ get; set; }
         /// <summary>
-        ///     EN: Version of Exam-Programm  DE: VERSION_SYSTEM
+        ///     DE: Version  EN: Version of Exam-Programm
         /// </summary>
         public string VersionSystem{ get; set; }
         /// <summary>
-        ///     EN: Expiration Date  DE: ZWINGEND_AB
+        ///     DE: Version gültig bis  EN: Expiration Date
         /// </summary>
         public DateTime ExpirationDate{ get; set; }
         /// <summary>
@@ -130,11 +130,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         DateTime? IIntervalFields.FromDate
@@ -147,7 +147,7 @@ namespace MasterDataModule.Contracts.Entities
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return ProgrammName; }
         }

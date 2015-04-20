@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: OE-Prüfmittel  EN: Organization inspection device
+    /// </summary>
     public partial class OrgInspectionDevice: IHasId<int>
         ,IIntervalFields
         ,IRemovable
@@ -113,17 +116,53 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: Debitornummer des Kunden  EN: Debitor number
+        /// </summary>
         public string DebitorCustomerNumber{ get; set; }
+        /// <summary>
+        ///     DE: Identifizierung des Prüfmittels  EN: Identification
+        /// </summary>
         public string Identification{ get; set; }
+        /// <summary>
+        ///     DE: Neue Identifizierung des Prüfmittels  EN: New identification
+        /// </summary>
         public string NewIdentification{ get; set; }
+        /// <summary>
+        ///     DE: Alte Identifizierung des Prüfmittels  EN: Old identification
+        /// </summary>
         public string OldIdentification{ get; set; }
+        /// <summary>
+        ///     DE: Prüfmitteltyp  EN: Type
+        /// </summary>
         public string Type{ get; set; }
+        /// <summary>
+        ///     DE: Seriennummer  EN: Serial number
+        /// </summary>
         public string SerialNumber{ get; set; }
+        /// <summary>
+        ///     DE: Name der Prüfmittel-Prüfung  EN: Name
+        /// </summary>
         public string Name{ get; set; }
+        /// <summary>
+        ///     DE: Beschreibung der Prüfmittel-Prüfung  EN: Description
+        /// </summary>
         public string Description{ get; set; }
+        /// <summary>
+        ///     DE: Letztes Prüfungsdatum  EN: Last inspection date
+        /// </summary>
         public DateTime? LastInspectionDate{ get; set; }
+        /// <summary>
+        ///     DE: Ergebnis der letzten Prüfung  EN: Last inspection result
+        /// </summary>
         public string LastInspectionResult{ get; set; }
+        /// <summary>
+        ///     DE: Prüfungsdatum  EN: Inspection date
+        /// </summary>
         public DateTime? InspectionDate{ get; set; }
+        /// <summary>
+        ///     DE: Prüfungsintervall  EN: Inspection interval
+        /// </summary>
         public int? InspectionInterval{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -134,7 +173,13 @@ namespace MasterDataModule.Contracts.Entities
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
         DateTime? IIntervalFields.FromDate
         {

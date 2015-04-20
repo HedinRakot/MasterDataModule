@@ -3,8 +3,11 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Sprache  EN: Language
+    /// </summary>
     public partial class SysLanguage: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -86,9 +89,21 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: Sprachschlüssel   EN: SAP ID
+        /// </summary>
         public string SapId{ get; set; }
+        /// <summary>
+        ///     DE: ISO-Sprachbezeichnung  EN: SAP ID ISO
+        /// </summary>
         public string SapIdIso{ get; set; }
+        /// <summary>
+        ///     DE: Dateiname mit Oberflächentextenfür die Sprache  EN: Resource file name
+        /// </summary>
         public string ResourceFileName{ get; set; }
+        /// <summary>
+        ///     DE: Angabe, ob Datei für Oberflächentexte vorhanden ist  EN: Is available
+        /// </summary>
         public bool IsAvailable{ get; set; }
         public string Description{ get; set; }
         public DateTime? CreateDate{ get; set; }
@@ -100,7 +115,13 @@ namespace MasterDataModule.Contracts.Entities
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
         DateTime? IIntervalFields.FromDate
         {
@@ -112,7 +133,7 @@ namespace MasterDataModule.Contracts.Entities
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return Description; }
         }

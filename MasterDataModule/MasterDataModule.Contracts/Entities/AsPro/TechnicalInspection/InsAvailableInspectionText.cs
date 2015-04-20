@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Systemtext  EN: Available inspection text
+    /// </summary>
     public partial class InsAvailableInspectionText: IHasId<int>
         ,IIntervalFields
         ,IRemovable

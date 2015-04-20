@@ -4,7 +4,7 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: Reference table: Driver School - Recognition Type  DE: 5.2.2.1 Fahrschule - Anerkennungsgrad
+    ///     DE: Anerkennung der Fahrschule  EN: Driverschool recognition
     /// </summary>
     public partial class DriverSchoolExamRecognitionType: IHasId<int>
         ,IIntervalFields
@@ -81,11 +81,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Driver School  DE: Fahrschule
+        ///     DE: Fahrschule  EN: Driverschool
         /// </summary>
         public int DriverSchoolId{ get; set; }
         /// <summary>
-        ///     EN: Recognition Type  DE: Anerkennungsgrad
+        ///     DE: Anerkennung  EN: Recognition
         /// </summary>
         public int ExamRecognitionTypeId{ get; set; }
         /// <summary>
@@ -121,11 +121,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         public virtual DriverSchool DriverSchool{ get; set; }

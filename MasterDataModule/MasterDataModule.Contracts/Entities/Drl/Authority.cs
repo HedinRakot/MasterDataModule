@@ -4,10 +4,10 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: 5.1.8 Authority  DE: 5.1.8 FE-Behoerde
+    ///     DE: Behörde  EN: Authority
     /// </summary>
     public partial class Authority: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -130,23 +130,23 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Authority Number (PK in old system)  DE: FE-Behoerdennummer (Primaerschluessel im Altsystem)
+        ///     DE: Behördenschlüssel  EN: Authority Number
         /// </summary>
         public string AuthorityNumber{ get; set; }
         /// <summary>
-        ///     EN: Authority Name  DE: Behoerdenname
+        ///     DE: Name der Behörde  EN: Authority Name
         /// </summary>
         public string Name{ get; set; }
         /// <summary>
-        ///     EN: Description  DE: Bezeichnung
+        ///     DE: Beschreibung der Behörde  EN: Description
         /// </summary>
         public string Description{ get; set; }
         /// <summary>
-        ///     EN: indication whether Education Certificates should to be sent back prematurely  DE: Angabe, ob Ausbildungsbescheinigungen vorzeitig zurueckgeschickt werden sollen
+        ///     DE: Angabe, ob Ausbildungsbescheinigung von der Behörde gefordert wird   EN: indication whether Education Certificates should to be sent back prematurely
         /// </summary>
         public bool IsCertificateRequired{ get; set; }
         /// <summary>
-        ///     EN: way to return information back to Authority (1 - Online, 2 - Paper dokument, 3 - Disk)  DE: Ruecksendeart (1 - Online, 2 - Papier, 3 - Diskette)
+        ///     DE: Rückmeldeweg von Prüfaufträgen an die Behörde („1“ = „Online“, „2“ = „Papier“)  EN: way to return information back to Authority(1 - Online, 2 - Paper)
         /// </summary>
         public int ReturnType{ get; set; }
         /// <summary>
@@ -182,11 +182,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         /// <summary>
@@ -194,35 +194,35 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public byte[] RowVersion{ get; set; }
         /// <summary>
-        ///     DE: Name 2 EN: Name 2
+        ///     DE: Name 2  EN: Name 2
         /// </summary>
         public string Name2{ get; set; }
         /// <summary>
-        ///     DE: Strasse und Hausnummer EN: Street and house number
+        ///     DE: Strasse und Hausnummer  EN: Street and house number
         /// </summary>
         public string StreetHouseNumber{ get; set; }
         /// <summary>
-        ///     DE: PLZ EN: Zip code
+        ///     DE: PLZ  EN: Zip code
         /// </summary>
         public string ZipCode{ get; set; }
         /// <summary>
-        ///     DE: Ort EN: City
+        ///     DE: Ort  EN: City
         /// </summary>
         public string City{ get; set; }
         /// <summary>
-        ///     DE: Land EN: Country
+        ///     DE: Land  EN: Country
         /// </summary>
         public int? SysCountryId{ get; set; }
         /// <summary>
-        ///     DE: Telefonnummer 1 EN: Phone number 1
+        ///     DE: Telefonnummer 1  EN: Phone number 1
         /// </summary>
         public string Phone1{ get; set; }
         /// <summary>
-        ///     DE: Telefonnummer 2 EN: Phone number 2
+        ///     DE: Telefonnummer 2  EN: Phone number 2
         /// </summary>
         public string Phone2{ get; set; }
         /// <summary>
-        ///     DE: Fax EN: Fax
+        ///     DE: Fax  EN: Fax
         /// </summary>
         public string Fax{ get; set; }
         DateTime? IIntervalFields.FromDate
@@ -235,7 +235,7 @@ namespace MasterDataModule.Contracts.Entities
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return Name; }
         }

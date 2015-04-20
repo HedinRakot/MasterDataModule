@@ -4,7 +4,7 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: Reference table: Constraint - Class  DE: Zuordnungstabelle Auflagen/Beschraenkungen - FE-Klassen
+    ///     DE: Zuordnung FE-Klasse zu einer FE-Auflage  EN: Exam class to constraint
     /// </summary>
     public partial class ExamConstraintExamClass: IHasId<int>
         ,IIntervalFields
@@ -81,11 +81,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Constraint  DE: Auflage\Beschraenkung
+        ///     DE: FE-Auflage, der eine FE-Klasse zugeordnet wird   EN: Constraint
         /// </summary>
         public int ExamConstraintId{ get; set; }
         /// <summary>
-        ///     EN: Class  DE: FE-Klasse
+        ///     DE: zugeordnete FE-Klasse   EN: Class
         /// </summary>
         public int ExamClassId{ get; set; }
         /// <summary>
@@ -121,11 +121,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         public virtual ExamClass ExamClass{ get; set; }

@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Produkt-Gewichtsklassen  EN: Product object class
+    /// </summary>
     public partial class InsProductObjectClass: IHasId<int>
         ,IIntervalFields
         ,IRemovable
@@ -77,8 +80,17 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: Kurz-Beschreibung der Gewichtsklasse  EN: Description
+        /// </summary>
         public string Description{ get; set; }
+        /// <summary>
+        ///     DE: Minimalgewicht  EN: Weight from
+        /// </summary>
         public int? WeightFrom{ get; set; }
+        /// <summary>
+        ///     DE: Maximalgewicht  EN: Weight to
+        /// </summary>
         public int? WeightTo{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -89,7 +101,13 @@ namespace MasterDataModule.Contracts.Entities
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
         DateTime? IIntervalFields.FromDate
         {

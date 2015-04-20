@@ -14,11 +14,17 @@
 #>	
 	IF NOT EXISTS (SELECT ID FROM [SettingsData].[dbo].[MASTER_DATA_PERMISSION] WHERE ID = <#=content.PermissionId#> )
 	BEGIN
-	INSERT INTO [SettingsData].[dbo].[MASTER_DATA_PERMISSION] ([ID], [SYSTEM_NAME], [NAME], [DESCRIPTION], [CREATE_DATE], [CHANGE_DATE], [DELETE_DATE], [OWNER_ORG_ID], [VISIBILITY_ORG_ID], [CREATE_EMPLOYEE_ID], [CHANGE_EMPLOYEE_ID], [SOURCE], [FROM_DATE], [TO_DATE])
-	VALUES(<#=content.PermissionId#>, '<#=context.ContextName.ToUpper()#>' ,'<#=entity.Name#>', '<#=description#>' ,GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()));
-	INSERT INTO [SettingsData].dbo.MASTER_DATA_ROLE_PERMISSION_RSP(MASTER_DATA_ROLE_ID ,MASTER_DATA_PERMISSION_ID ,CREATE_DATE ,CHANGE_DATE ,FROM_DATE ,TO_DATE) 
-	VALUES (1 ,<#=content.PermissionId#> ,getdate() ,getdate() ,getdate() ,DATEADD(year, 1, GETDATE()));
-	END;
+		INSERT INTO [SettingsData].[dbo].[MASTER_DATA_PERMISSION] ([ID], [SYSTEM_NAME], [NAME], [DESCRIPTION], [CREATE_DATE], [CHANGE_DATE], [DELETE_DATE], [OWNER_ORG_ID], [VISIBILITY_ORG_ID], [CREATE_EMPLOYEE_ID], [CHANGE_EMPLOYEE_ID], [SOURCE], [FROM_DATE], [TO_DATE])
+		VALUES(<#=content.PermissionId#>, '<#=context.ContextName.ToUpper()#>' ,'<#=entity.Name#>', '<#=description#>' ,GETDATE() ,GETDATE() ,NULL, NULL, NULL, NULL, NULL, NULL, GETDATE(), DATEADD(year, 1, GETDATE()));
+		INSERT INTO [SettingsData].dbo.MASTER_DATA_ROLE_PERMISSION_RSP(MASTER_DATA_ROLE_ID ,MASTER_DATA_PERMISSION_ID ,CREATE_DATE ,CHANGE_DATE ,FROM_DATE ,TO_DATE) 
+		VALUES (1 ,<#=content.PermissionId#> ,getdate() ,getdate() ,getdate() ,DATEADD(year, 1, GETDATE()));
+	END
+	ELSE
+	BEGIN
+		UPDATE [SettingsData].[dbo].[MASTER_DATA_PERMISSION]
+		SET [DESCRIPTION] = '<#=description#>'
+		WHERE ID = <#=content.PermissionId#>
+	END
 <#
 	}
 #>

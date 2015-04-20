@@ -5,10 +5,10 @@ using System.Collections.Generic;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: 5.2.12.5 Class  DE: 5.2.12.5 Fahrerlaubnis - Klassen
+    ///     DE: Klasse  EN: Class
     /// </summary>
     public partial class ExamClass: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -95,15 +95,15 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     DE: FE-Klasse (Primaerschluessel im Altsystem) EN: Class (PK in old system)
+        ///     DE: Kurz-Bezeichnung der FE-Klasse  EN: Class
         /// </summary>
         public string Name{ get; set; }
         /// <summary>
-        ///     EN: Description  DE: Beschreibung
+        ///     DE: Beschreibung  EN: Description
         /// </summary>
         public string Description{ get; set; }
         /// <summary>
-        ///     DE: Angabe, dass es sich um MOFA Prüfbescheinigung handelt EN: Indication that it is MOFA
+        ///     DE: Angabe, ob FE-Klasse eine Mofa-Prüfbescheinigung ist   EN: Indication that it is MOFA
         /// </summary>
         public bool IsMofa{ get; set; }
         /// <summary>
@@ -139,19 +139,19 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         /// <summary>
-        ///     DE: Zeigt an, ob die Klasse als Fuehrerschein-Klasse anzuzeigen ist EN: Indication whether class should be showed as driver licence class
+        ///     DE: Angabe, ob für die FE-Klasse ein Führerschein ausgestellt werden kann  EN: Indication whether class should be showed as driver licence class
         /// </summary>
         public bool IsFsClass{ get; set; }
         /// <summary>
-        ///     DE: Auflistungsreihenfolge EN: Sort order for GUI
+        ///     DE: Sortierreihenfolge  EN: Sort order
         /// </summary>
         public int SortOrder{ get; set; }
         public virtual ICollection<CoreDataProductClassBasis> CoreDataProductClassBases{ get; set; }
@@ -176,7 +176,7 @@ namespace MasterDataModule.Contracts.Entities
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return Name; }
         }

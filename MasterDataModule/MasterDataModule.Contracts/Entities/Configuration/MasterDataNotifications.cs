@@ -8,7 +8,7 @@ namespace MasterDataModule.Contracts.Entities.Configuration
     ///     DE: Überwachungsnachrichten  EN: Notifications
     /// </summary>
     public partial class MasterDataNotifications: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -122,7 +122,7 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return Name; }
         }

@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: OE-Information  EN: Organization information
+    /// </summary>
     public partial class OrgInformation: IHasId<int>
         ,IIntervalFields
         ,IRemovable
@@ -73,7 +76,13 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: OE-Informationsname (Kombobox) mit folgenden möglichen Werten (Verlagerung in eigenen Wertebereich wird empfohlen!): „TAX_NUMBER“, „BANK_NAME“, „BANK_ACCOUNT“, „BANK_CODE“, „AP_DEBITOR_NUMBER“, „AP_CASH_DEBITOR_NUMBER“  EN: Name
+        /// </summary>
         public string Name{ get; set; }
+        /// <summary>
+        ///     DE: Informationswert  EN: Value
+        /// </summary>
         public string Value{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -84,7 +93,13 @@ namespace MasterDataModule.Contracts.Entities
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
         DateTime? IIntervalFields.FromDate
         {

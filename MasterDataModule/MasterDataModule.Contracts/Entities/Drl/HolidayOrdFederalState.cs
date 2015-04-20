@@ -4,7 +4,7 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     -- DE: Feiertage, die fuer Bundesland gueltig sind EN: Holidays for Federal State
+    ///     DE: Zuordnung Bundesland zu einem Feiertag  EN: Holiday to federal state
     /// </summary>
     public partial class HolidayOrdFederalState: IHasId<int>
         ,IRemovable
@@ -72,11 +72,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     DE: Feiertag EN: Holiday
+        ///     DE: Feiertag   EN: Holiday
         /// </summary>
         public int HolidayId{ get; set; }
         /// <summary>
-        ///     DE: Bundesland EN: Federal State
+        ///     DE: zugeordnete Bundesland   EN: Federal State
         /// </summary>
         public int OrdFederalStateId{ get; set; }
         /// <summary>

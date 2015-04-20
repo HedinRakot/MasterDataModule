@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Produktklasse-PFP-Fahrzeugtypen (Silhouetten)  EN: Vehicle type
+    /// </summary>
     public partial class InsPfpVehicleType: IHasId<int>
         ,IIntervalFields
         ,IRemovable
@@ -77,8 +80,17 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: Name des PFP-Fahrzeugtyps (Silhouette)  EN: Description
+        /// </summary>
         public string Description{ get; set; }
+        /// <summary>
+        ///     DE: Dateibezeichnung, in der die Fahrzeug-Silhouette gespeichert ist  EN: Image file name
+        /// </summary>
         public string ImageFileName{ get; set; }
+        /// <summary>
+        ///     DE: Angabe, ob für die Fahrzeug-Silhouette gültige Polygon-Daten existieren  EN: Is polygon data valid
+        /// </summary>
         public bool? IsPolygonDataValid{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -89,7 +101,13 @@ namespace MasterDataModule.Contracts.Entities
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
         public int Id{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
         DateTime? IIntervalFields.FromDate
         {

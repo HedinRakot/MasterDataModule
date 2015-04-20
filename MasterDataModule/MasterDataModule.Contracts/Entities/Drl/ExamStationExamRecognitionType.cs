@@ -4,7 +4,7 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     DE: FE-Pruefort - Anerkennungsgrad EN: Exam Station - Recognition Type
+    ///     DE: Zuordnung FE-Anerkennung zu einem FE-Prüfort  EN: Exam recognition to exam station
     /// </summary>
     public partial class ExamStationExamRecognitionType: IHasId<int>
         ,IIntervalFields
@@ -81,11 +81,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     DE: FE-Pruefort EN: Exam Station (Exam Location)
+        ///     DE: FE-Prüfort  EN: Exam Station
         /// </summary>
         public int ExamStationId{ get; set; }
         /// <summary>
-        ///     DE: Anerkennungsgrad EN: Recognition Type
+        ///     DE: zugeordnete FE-Anerkennung   EN: Recognition Type
         /// </summary>
         public int ExamRecognitionTypeId{ get; set; }
         /// <summary>
@@ -121,11 +121,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         public virtual ExamRecognitionType ExamRecognitionType{ get; set; }

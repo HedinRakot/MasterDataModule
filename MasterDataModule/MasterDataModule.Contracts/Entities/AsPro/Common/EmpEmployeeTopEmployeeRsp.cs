@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Vorgesetzter  EN: Top employee
+    /// </summary>
     public partial class EmpEmployeeTopEmployeeRsp: IHasId<int>
         ,IIntervalFields
         ,IRemovable
@@ -73,7 +76,13 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: Mitarbeiter  EN: Employee
+        /// </summary>
         public int EmpEmployeeId{ get; set; }
+        /// <summary>
+        ///     DE: Vorgesetzter  EN: Top employee
+        /// </summary>
         public int TopEmployeeId{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -83,7 +92,13 @@ namespace MasterDataModule.Contracts.Entities
         public int? CreateEmployeeId{ get; set; }
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
         public int Id{ get; set; }
         DateTime? IIntervalFields.FromDate

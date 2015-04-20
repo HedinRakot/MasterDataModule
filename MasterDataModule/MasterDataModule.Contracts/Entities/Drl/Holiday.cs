@@ -5,10 +5,10 @@ using System.Collections.Generic;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     DE: Feiertage EN: Holidays
+    ///     DE: Feiertag  EN: Holiday
     /// </summary>
     public partial class Holiday: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IRemovable
         ,ISystemFields
     {
@@ -74,11 +74,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     DE: Name des Feiertages EN: Holiday name
+        ///     DE: Beschreibung des Feiertags  EN: Message language
         /// </summary>
         public string Name{ get; set; }
         /// <summary>
-        ///     Date of holiday
+        ///     DE: Datum des Feiertags  EN: Validation error number
         /// </summary>
         public DateTime Date{ get; set; }
         /// <summary>
@@ -114,7 +114,7 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         public virtual ICollection<HolidayOrdFederalState> HolidayOrdFederalStates{ get; set; }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return Name; }
         }

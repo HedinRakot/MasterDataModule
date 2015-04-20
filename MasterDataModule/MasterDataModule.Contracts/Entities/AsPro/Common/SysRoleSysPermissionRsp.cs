@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Zuordnung Rechte zu einer Rolle  EN: Role to permission
+    /// </summary>
     public partial class SysRoleSysPermissionRsp: IHasId<int>
         ,IIntervalFields
         ,IRemovable
@@ -73,7 +76,13 @@ namespace MasterDataModule.Contracts.Entities
           
         }
         #endregion
+        /// <summary>
+        ///     DE: Rolle   EN: Role
+        /// </summary>
         public int SysRoleId{ get; set; }
+        /// <summary>
+        ///     DE: Recht   EN: Permission
+        /// </summary>
         public int SysPermissionId{ get; set; }
         public DateTime? CreateDate{ get; set; }
         public DateTime? ChangeDate{ get; set; }
@@ -83,7 +92,13 @@ namespace MasterDataModule.Contracts.Entities
         public int? CreateEmployeeId{ get; set; }
         public int? ChangeEmployeeId{ get; set; }
         public string Source{ get; set; }
+        /// <summary>
+        ///     DE: Von Datum  EN: From date
+        /// </summary>
         public DateTime FromDate{ get; set; }
+        /// <summary>
+        ///     DE: Bis Datum  EN: To date
+        /// </summary>
         public DateTime ToDate{ get; set; }
         public int Id{ get; set; }
         DateTime? IIntervalFields.FromDate

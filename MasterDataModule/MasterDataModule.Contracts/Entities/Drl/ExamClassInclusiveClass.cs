@@ -4,7 +4,7 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: 5.2.12.8 Assignment Types for Classes (Inclusiv Class)  DE: 5.2.12.8 Fahrerlaubnis - Zuordnungsarten fuer Klassen
+    ///     DE: Inklusivklasse   EN: Inclusiv class
     /// </summary>
     public partial class ExamClassInclusiveClass: IHasId<int>
         ,IIntervalFields
@@ -85,11 +85,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Class  DE: FE - Klasse
+        ///     DE: übergeordnete Klasse   EN: Class
         /// </summary>
         public int ExamClassId{ get; set; }
         /// <summary>
-        ///     DE: Voraussetzungsklasse EN: Required Class
+        ///     DE: Inklusiv-Klasse   EN: inclusiv class
         /// </summary>
         public int ExamClassIdInclusive{ get; set; }
         /// <summary>
@@ -125,15 +125,15 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         /// <summary>
-        ///     DE: Zeigt an, ob zusaetzliche Vorauszetzungen vorhanden sind EN: Indication whether additional condition exists
+        ///     DE: Zeigt an, ob zusaetzliche Vorauszetzungen vorhanden sind  EN: Indication whether additional condition exists
         /// </summary>
         public bool IsConditional{ get; set; }
         public virtual ExamClass ExamClass{ get; set; }

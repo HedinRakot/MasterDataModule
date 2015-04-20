@@ -5,10 +5,10 @@ using System.Collections.Generic;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: 5.2.12.7 Legal Basis  DE: 5.2.12.7 Fahrerlaubnis - Rechtsgruende
+    ///     DE: Rechtsgrund  EN: Legal basis
     /// </summary>
     public partial class LegalBasis: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -107,27 +107,27 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Legal Basis (PK in old system)  DE: Rechtsgrund (Primaerschluessel im Altsystem)
+        ///     DE: Kurz-Bezeichnung des FE-Rechtsgrunds  EN: Legal Basis
         /// </summary>
         public string Name{ get; set; }
         /// <summary>
-        ///     EN: Description  DE: Beschreibung
+        ///     DE: Beschreibung der FE-Rechtsgrunds  EN: Description
         /// </summary>
         public string Description{ get; set; }
         /// <summary>
-        ///     EN: Indication whether Education Certificate is required  DE: Angabe, ob Ausbildungsbescheinigung notwendig ist
+        ///     DE: Angabe, ob eine Ausbildungsbescheinigung notwendig ist   EN: Indication whether Education Certificate is required
         /// </summary>
         public bool EducationCertificateRequired{ get; set; }
         /// <summary>
-        ///     EN: Indication whether it is first assignation of the driver licence  DE: Angabe, ob Ersterteilung
+        ///     DE: Angabe, ob es sich um eine Ersterteilung handelt  EN: Indication whether it is first assignation of the driver licence
         /// </summary>
         public int FirstAssignation{ get; set; }
         /// <summary>
-        ///     EN: Statement regarding Message Reason  DE: Angabe zum Mitteilungsgrund
+        ///     DE: Mitteilungsgrund  EN: Statement regarding Message Reason
         /// </summary>
         public string MessageReason{ get; set; }
         /// <summary>
-        ///     EN: Statement regarding ADMI2 (Type of Message)  DE: Angabe ADMI2 (Art des Miteilungsgrundes)
+        ///     DE: Art der Mitteilung  EN: Statement regarding ADMI2 (Type of Message)
         /// </summary>
         public string MessageReasonStyle{ get; set; }
         /// <summary>
@@ -163,19 +163,19 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         /// <summary>
-        ///     DE: Erzarz-Rechtsgrund die wird beim Wechsel von Ersterteilung nach Erweiterung benutzt (falls eine Theorie bestanden) EN: Legal basis for replacement First assignation on Extending 
+        ///     DE: Erzarz-Rechtsgrund die wird beim Wechsel von Ersterteilung nach Erweiterung benutzt (falls eine Theorie bestanden)  EN: Legal basis for replacement First assignation on Extending
         /// </summary>
         public int? ReplacementId{ get; set; }
         /// <summary>
-        ///     EN: Print name
+        ///     DE: Name auf dem Druckformular  EN: Print name
         /// </summary>
         public string PrintName{ get; set; }
         public virtual ICollection<CoreDataProductClassBasis> CoreDataProductClassBases{ get; set; }
@@ -189,7 +189,7 @@ namespace MasterDataModule.Contracts.Entities
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return Name; }
         }

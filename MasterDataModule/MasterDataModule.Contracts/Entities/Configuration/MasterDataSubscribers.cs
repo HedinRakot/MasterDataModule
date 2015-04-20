@@ -8,7 +8,7 @@ namespace MasterDataModule.Contracts.Entities.Configuration
     ///     DE: Monitor Empfänger  EN: Subscribers
     /// </summary>
     public partial class MasterDataSubscribers: IHasId<int>
-        ,IHasTitle
+        ,IHasTitle<int>
         ,IIntervalFields
         ,IRemovable
         ,ISystemFields
@@ -81,7 +81,7 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             get { return ToDate; }
             set { if(value.HasValue)ToDate = value.Value; else throw new ArgumentNullException("value"); }
         }
-        string IHasTitle.EntityTitle
+        string IHasTitle<int>.EntityTitle
         {
             get { return Email; }
         }

@@ -3,6 +3,9 @@ using System;
 
 namespace MasterDataModule.Contracts.Entities
 {
+    /// <summary>
+    ///     DE: Zuordnung sptrachabhängiger Systemtexte zu einem Systemtext  EN: Available inspection text to language
+    /// </summary>
     public partial class InsAvailableInspectionTextValue: IHasId<int>
         ,IIntervalFields
         ,IRemovable

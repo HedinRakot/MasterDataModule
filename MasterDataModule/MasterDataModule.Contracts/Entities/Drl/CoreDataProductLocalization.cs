@@ -4,7 +4,7 @@ using System;
 namespace MasterDataModule.Contracts.Entities
 {
     /// <summary>
-    ///     EN: Core data product localization
+    ///     DE: Lokalisierung  EN: Localization
     /// </summary>
     public partial class CoreDataProductLocalization: IHasId<int>
         ,IIntervalFields
@@ -89,19 +89,19 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public int Id{ get; set; }
         /// <summary>
-        ///     EN: Core data product id
+        ///     DE: Produkt  EN: Product
         /// </summary>
         public int CoreDataProductId{ get; set; }
         /// <summary>
-        ///     EN: Product description
+        ///     DE: Sprachschlüssel   EN: Language
         /// </summary>
         public int SysLanguageId{ get; set; }
         /// <summary>
-        ///     EN: Product name
+        ///     DE: Name  EN: Name
         /// </summary>
         public string ProductName{ get; set; }
         /// <summary>
-        ///     EN: Product description
+        ///     DE: Bescreibung  EN: Description
         /// </summary>
         public string Description{ get; set; }
         /// <summary>
@@ -137,11 +137,11 @@ namespace MasterDataModule.Contracts.Entities
         /// </summary>
         public string Source{ get; set; }
         /// <summary>
-        ///     VON-DATUM DER GUELTIGKEIT
+        ///     DE: Von Datum  EN: From date
         /// </summary>
         public DateTime FromDate{ get; set; }
         /// <summary>
-        ///     ENDE-DATUM DER GUELTIGKEIT
+        ///     DE: Bis Datum  EN: To date
         /// </summary>
         public DateTime ToDate{ get; set; }
         public virtual CoreDataProduct CoreDataProduct{ get; set; }
