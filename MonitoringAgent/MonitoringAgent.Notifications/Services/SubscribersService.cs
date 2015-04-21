@@ -27,8 +27,10 @@ namespace MonitoringAgent.Notifications.Services
         /// <param name="notificationId">Identifier of notification</param>
         public IList<MasterDataSubscribers> GetSubscribers(int notificationId)
         {
-            var rspManager = ManagersProvider.GetManager<IMasterDataNotificationsMasterDataSubscribersRspManager>();
-            var subscribersManager = ManagersProvider.GetManager<IMasterDataSubscribersManager>();
+            var scope = ManagersProvider.BeginScope();
+            var rspManager = ManagersProvider.GetManager<IMasterDataNotificationsMasterDataSubscribersRspManager>(scope);
+            var subscribersManager = ManagersProvider.GetManager<IMasterDataSubscribersManager>(scope);
+            ManagersProvider.EndScope(scope);
 
             var query = from subscriber in subscribersManager.GetAllEntities()
                 join rsp in rspManager.GetAllEntities() on subscriber.Id equals rsp.MasterDataSubscribersId

@@ -59,10 +59,28 @@
     </Compile>
     <Compile Include="Data\Custom.MasterDataDbContext.cs" />
     <Compile Include="Data\DbContextProvider.cs" />
+    <Compile Include="Data\GetApplicationLogsConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GetJobsStatusConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GetSitesStatusConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\GetWcfServicesStatusConfiguration.cs">
       <DependentUpon>MasterDataContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\GetWinServicesStatusConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\IMasterDataDbContext.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\JobsInfosWithLastResultConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\LogTypeInfoConfiguration.cs">
       <DependentUpon>MasterDataContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Managers\ApplicationLogsManager.cs">
@@ -70,7 +88,25 @@
     </Compile>
     <Compile Include="Data\Managers\BaseManager.cs" />
     <Compile Include="Data\Managers\Custom.ManagersProvider.cs" />
+    <Compile Include="Data\Managers\GetApplicationLogsManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Managers\GetJobsStatusManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Managers\GetSitesStatusManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\Managers\GetWcfServicesStatusManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Managers\GetWinServicesStatusManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Managers\JobsInfosWithLastResultManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Managers\LogTypeInfoManager.cs">
       <DependentUpon>Managers.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Managers\Managers.cs">
@@ -122,6 +158,20 @@
     <Compile Include="Data\Managers\MasterDataWindowsServiceInfoManager.cs">
       <DependentUpon>Managers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\Managers\SiteInfosWithLastResultManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Managers\WcfInfosWithLastResultManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Managers\WinserviceInfosWithLastResultManager.cs">
+      <DependentUpon>Managers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MasterDataContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\MasterDataDbContext.cs">
       <DependentUpon>MasterDataContext.tt</DependentUpon>
     </Compile>
@@ -162,6 +212,15 @@
       <DependentUpon>MasterDataContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\MasterDataWindowsServiceInfoConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SiteInfosWithLastResultConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\WcfInfosWithLastResultConfiguration.cs">
+      <DependentUpon>MasterDataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\WinserviceInfosWithLastResultConfiguration.cs">
       <DependentUpon>MasterDataContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -55,7 +55,19 @@
     <Compile Include="Entities\Custom.MasterDataWindowsServiceInfo.cs" />
     <Compile Include="Entities\Custom.WcfServiceInfoCheckResult.cs" />
     <Compile Include="Entities\Custom.SiteInfoCheckResult.cs" />
+    <Compile Include="Entities\GetApplicationLogs.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetJobsStatus.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetSitesStatus.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\GetWcfServicesStatus.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetWinServicesStatus.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\ICheckResult.cs" />
@@ -67,6 +79,12 @@
     </Compile>
     <Compile Include="Entities\IHasCheckStatus.cs" />
     <Compile Include="Entities\ISystemFields.cs" />
+    <Compile Include="Entities\JobsInfosWithLastResult.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\LogTypeInfo.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\MasterDataJobCheckResults.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
@@ -106,12 +124,40 @@
     <Compile Include="Entities\MasterDataWindowsServiceInfo.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\SiteInfosWithLastResult.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\WcfInfosWithLastResult.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\WinserviceInfosWithLastResult.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Enums\CheckModuleType.cs" />
+    <Compile Include="Managers\ContextScope.cs" />
     <Compile Include="Managers\IApplicationLogsManager.cs">
       <DependentUpon>IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\IBaseManager.cs" />
+    <Compile Include="Managers\IGetApplicationLogsManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\IGetJobsStatusManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\IGetSitesStatusManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Managers\IGetWcfServicesStatusManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\IGetWinServicesStatusManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\IJobsInfosWithLastResultManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\ILogTypeInfoManager.cs">
       <DependentUpon>IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\IManagers.cs">
@@ -157,6 +203,15 @@
       <DependentUpon>IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Managers\IMasterDataWindowsServiceInfoManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\ISiteInfosWithLastResultManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\IWcfInfosWithLastResultManager.cs">
+      <DependentUpon>IManagers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\IWinserviceInfosWithLastResultManager.cs">
       <DependentUpon>IManagers.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

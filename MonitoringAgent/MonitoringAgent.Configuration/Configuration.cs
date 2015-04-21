@@ -3,6 +3,7 @@ using MonitoringAgent.Common.Data.Managers;
 using MonitoringAgent.Data.Interfaces.Managers;
 using MonitoringAgent.Job;
 using MonitoringAgent.Job.Interfaces;
+using MonitoringAgent.Log;
 using MonitoringAgent.Notifications;
 using MonitoringAgent.Notifications.Interfaces;
 using MonitoringAgent.Notifications.Interfaces.Services;
@@ -33,16 +34,18 @@ namespace MonitoringAgent.Configuration
             container.RegisterType<IMailNotificationSendService, MailNotificationSendService>();
 
             container.RegisterType<IWcfPingService, WcfPingService>();
-            container.RegisterType<ICheckingModule, WcfServicePingModule>("wcfPing");
+            container.RegisterType<ITimerModule, WcfServicePingModule>("wcfPing");
 
             container.RegisterType<ISitePingServiceWithLastResult, SitePingServiceWithLastResult>();
-            container.RegisterType<ICheckingModule, SitePingModule>("sitePing");
+            container.RegisterType<ITimerModule, SitePingModule>("sitePing");
 
             container.RegisterType<IJobCheckService, JobCheckService>();
-            container.RegisterType<ICheckingModule, JobCheckingModule>("jobPing");
+            container.RegisterType<ITimerModule, JobCheckingModule>("jobPing");
 
             container.RegisterType<IWindowsServicePingService, WindowsServicePingService>();
-            container.RegisterType<ICheckingModule, WindowsServiceCheckingModule>("winServicePing");
+            container.RegisterType<ITimerModule, WindowsServiceCheckingModule>("winServicePing");
+
+            container.RegisterType<ITimerModule, LogParseModule>("logCheckModule");
         }
 
         public IUnityContainer Container

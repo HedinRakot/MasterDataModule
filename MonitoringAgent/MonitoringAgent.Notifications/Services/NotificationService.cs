@@ -29,8 +29,10 @@ namespace MonitoringAgent.Notifications.Services
         /// <param name="checkModuleType">Module type</param>
         public Dictionary<int, List<MasterDataNotifications>> GetAllNotifications(IList<int> serviceIds, CheckModuleType checkModuleType)
         {
-            var notificationManager = ManagersProvider.GetManager<IMasterDataNotificationsManager>();
-            var rspManager = ManagersProvider.GetManager<IMasterDataMonitorableInfoMasterDataNotificationsRspManager>();
+            var scope = ManagersProvider.BeginScope();
+            var notificationManager = ManagersProvider.GetManager<IMasterDataNotificationsManager>(scope);
+            var rspManager = ManagersProvider.GetManager<IMasterDataMonitorableInfoMasterDataNotificationsRspManager>(scope);
+            ManagersProvider.EndScope(scope);
 
             var query = from notification in notificationManager.GetAllEntities()
                 join rsp in rspManager.GetAllEntities() on notification.Id equals rsp.MasterDataNotificationsId

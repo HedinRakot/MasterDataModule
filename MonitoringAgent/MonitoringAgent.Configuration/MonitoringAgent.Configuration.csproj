@@ -64,6 +64,10 @@
       <Project>{4BB24A9D-23A6-4F80-B27D-12DBC8EC6887}</Project>
       <Name>MonitoringAgent.Job</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MonitoringAgent.Log\MonitoringAgent.Log.csproj">
+      <Project>{89078862-64DE-4666-A7EF-66FC0A60B0C4}</Project>
+      <Name>MonitoringAgent.Log</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MonitoringAgent.Notifications.Interfaces\MonitoringAgent.Notifications.Interfaces.csproj">
       <Project>{3DF8B3E3-0342-4F69-839F-61623E8510C4}</Project>
       <Name>MonitoringAgent.Notifications.Interfaces</Name>
