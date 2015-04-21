@@ -18,7 +18,7 @@
 
         initialize: function () {
             view.__super__.initialize.apply(this, arguments);
-            debugger;
+            
             var self = this;
             this.defaultFiltering = { field: 'logTypeInfoId', operator: 'eq', value: self.options.logTypeId };
 
