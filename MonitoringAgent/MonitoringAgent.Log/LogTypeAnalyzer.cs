@@ -32,13 +32,14 @@ namespace MonitoringAgent.Log
         /// <summary>
         /// Analyze logs
         /// </summary>
-        public void Analyze()
+        public void Analyze(out List<ApplicationLogs> errors)
         {
-            StartAnalyze();
+            StartAnalyze(out errors);
         }
 
-        private void StartAnalyze()
+        private void StartAnalyze(out List<ApplicationLogs> errors)
         {
+            errors = new List<ApplicationLogs>();
             if (Directory.Exists(logTypeInfo.FilePath))
             {
                 var files = Directory.GetFiles(logTypeInfo.FilePath, logTypeInfo.FilePattern).Select(f => new FileInfo(f)).ToList();
@@ -70,6 +71,12 @@ namespace MonitoringAgent.Log
                         {
                             logTypeInfo.LastReadPosition = stream.Position;
                             logTypeInfo.LastProcessedFile = file.Name;
+                        }
+
+                        var errorEntities = newEntities.Where(e => e.LogLevel == (int)LogLevel.Error).ToList();
+                        if (errorEntities.Count > 0)
+                        {
+                            errors.AddRange(errorEntities);
                         }
                     }
                 }
@@ -153,7 +160,7 @@ namespace MonitoringAgent.Log
 
                     if (!string.IsNullOrWhiteSpace(messageType) && !string.IsNullOrWhiteSpace(date) && !string.IsNullOrWhiteSpace(text))
                     {
-                        var appLogEntity = new ApplicationLogs {LogTypeInfoId = logTypeInfo.Id, LogLevel = GetMessageType(messageType)};
+                        var appLogEntity = new ApplicationLogs {LogTypeInfoId = logTypeInfo.Id, LogLevel = (int)GetMessageType(messageType)};
                         //TODO Decide problem with date locale
                         if (date.LastIndexOf('|') != -1)
                         {
@@ -176,24 +183,34 @@ namespace MonitoringAgent.Log
             }
             return null;
         }
-        private int GetMessageType(string messageType)
+        private LogLevel GetMessageType(string messageType)
         {
             switch (messageType.ToUpper())
             {
                 case "INFO":
-                    return 1;
+                    return LogLevel.Info;
                 case "DEBUG":
-                    return 2;
+                    return LogLevel.Debug;
                 case "ERROR":
-                    return 3;
+                    return LogLevel.Error;
                 case "METRICS":
-                    return 4;
+                    return LogLevel.Metrics;
                 default:
-                    return 0;
+                    return LogLevel.None;
             }
         }
 
         #region Nested types
+
+        private enum LogLevel
+        {
+            None = 0,
+            Info = 1,
+            Debug = 2,
+            Error  = 3,
+            Metrics = 4
+        }
+
         private class FileInfoComparer: IComparer<FileInfo>
         {
             public int Compare(FileInfo x, FileInfo y)

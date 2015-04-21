@@ -39,5 +39,15 @@ namespace MonitoringAgent.Notifications.Services
 
             return query.ToList();
         }
+
+        /// <summary>
+        /// Gets list of subscribers who should receive message about error in log
+        /// </summary>
+        /// <returns></returns>
+        public List<MasterDataSubscribers> GetErrorLogSubscribers()
+        {
+            var subscribersManager = ManagersProvider.GetManager<IMasterDataSubscribersManager>();
+            return subscribersManager.GetAllEntities().Where(s => s.ReportAboutErrorLog == true).ToList();
+        }
     }
 }

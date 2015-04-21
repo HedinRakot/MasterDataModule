@@ -13,5 +13,10 @@ namespace MonitoringAgent.Notifications.Interfaces.Services
         /// </summary>
         /// <param name="notificationId">Identifier of notification</param>
         IList<MasterDataSubscribers> GetSubscribers(int notificationId);
+        /// <summary>
+        /// Gets list of subscribers who should receive message about error in log
+        /// </summary>
+        /// <returns></returns>
+        List<MasterDataSubscribers> GetErrorLogSubscribers();
     }
 }

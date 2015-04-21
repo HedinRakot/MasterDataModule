@@ -1,5 +1,8 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
+using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Data.Interfaces.Managers;
+using MonitoringAgent.Notifications.Interfaces;
 using MonitoringAgent.Services.Common.Base;
 
 namespace MonitoringAgent.Log
@@ -9,21 +12,31 @@ namespace MonitoringAgent.Log
     /// </summary>
     public class LogParseModule : BaseTimerModule<LogTypeAnalyzer>
     {
+        private readonly INotificationsModule notificationsModule;
         private readonly IManagersProvider managersProvider;
+        private List<MasterDataSubscribers> errorSubscribers = new List<MasterDataSubscribers>();
+
         /// <summary>
         /// Ctor
         /// </summary>
-        public LogParseModule(IManagersProvider managersProvider)
+        public LogParseModule(INotificationsModule notificationsModule,  IManagersProvider managersProvider)
         {
+            this.notificationsModule = notificationsModule;
             this.managersProvider = managersProvider;
         }
+
         /// <summary>
         /// Action which will be invoked when timer elapsed
         /// </summary>
         /// <param name="info">Info about monitorable object which is associated with current timer</param>
         protected override void TimerAction(LogTypeAnalyzer info)
         {
-            info.Analyze();
+            List<ApplicationLogs> errors;
+            info.Analyze(out errors);
+            if (errors.Count > 0 && errorSubscribers.Count > 0)
+            {
+                notificationsModule.NotifyAboutErrors(errorSubscribers, errors);
+            }
         }
         /// <summary>
         /// Initialize module
@@ -32,6 +45,7 @@ namespace MonitoringAgent.Log
         {
             var logTypeManager = managersProvider.GetManager<ILogTypeInfoManager>();
             var logTypes = logTypeManager.GetAllEntities().ToList();
+            errorSubscribers = notificationsModule.GetAllErrorSubscribers();
             foreach (var logTypeInfo in logTypes)
             {
                 AddService(new LogTypeAnalyzer(logTypeInfo, managersProvider), logTypeInfo.FileName, 10000);

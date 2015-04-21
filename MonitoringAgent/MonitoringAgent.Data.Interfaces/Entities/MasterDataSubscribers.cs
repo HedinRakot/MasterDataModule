@@ -15,5 +15,6 @@ namespace MonitoringAgent.Data.Interfaces.Entities
         public DateTime? DeleteDate { get; set; } // DELETE_DATE
         public DateTime FromDate { get; set; } // FROM_DATE. DE:Von Datum  EN:  Date from
         public DateTime ToDate { get; set; } // TO_DATE. DE:Bis Datum  EN:  Date to
+        public bool? ReportAboutErrorLog { get; set; } // REPORT_ABOUT_ERROR_LOG
 	}
 }

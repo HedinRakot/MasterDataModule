@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Mail;
+using System.Text;
 using MonitoringAgent.Data.Interfaces.Entities;
 using MonitoringAgent.Notifications.Config;
 
@@ -19,14 +20,36 @@ namespace MonitoringAgent.Notifications.Services
         /// <param name="subscribers">List of subscribers</param>
         public void SendNotification(MasterDataNotifications notification, IList<MasterDataSubscribers> subscribers)
         {
+            SendMailToSubscribers(notification.Subject, notification.Message, subscribers);
+        }
+        /// <summary>
+        /// Send report about erros in log files to all subscribers
+        /// </summary>
+        /// <param name="subscribers">Subscribers</param>
+        /// <param name="errors">List of errors</param>
+        public void SendErrorReport(IList<MasterDataSubscribers> subscribers, List<ApplicationLogs> errors)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (var error in errors)
+            {
+                sb.Append("==========================================");
+                sb.AppendLine();
+                sb.AppendFormat("{0} - {1}", error.Date, error.Message);
+                sb.AppendLine();
+            }
+            SendMailToSubscribers("Error report", sb.ToString(), subscribers);
+        }
+
+        private void SendMailToSubscribers(string subject, string body, IList<MasterDataSubscribers> subscribers)
+        {
             foreach (var subscriber in subscribers)
             {
                 SendMail(NotificationServerConfigSection.Instance.SmtpServer,
                     NotificationServerConfigSection.Instance.SmtpServerAccountName,
                     NotificationServerConfigSection.Instance.SmtpServerAccountPassword,
                     subscriber.Email,
-                    notification.Subject,
-                    notification.Message,
+                    subject,
+                    body,
                     NotificationServerConfigSection.Instance.SmtpServerPort,
                     NotificationServerConfigSection.Instance.EnableSsl,
                     NotificationServerConfigSection.Instance.SmtpDeliveryMethod

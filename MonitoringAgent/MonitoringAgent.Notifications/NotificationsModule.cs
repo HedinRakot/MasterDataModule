@@ -46,5 +46,22 @@ namespace MonitoringAgent.Notifications
             var subscribers = subscribersService.GetSubscribers(notification.Id);
             mailNotificationSendService.SendNotification(notification, subscribers);
         }
+        /// <summary>
+        /// Gets list of all subscribers who should receive report about error in log file
+        /// </summary>
+        /// <returns></returns>
+        public List<MasterDataSubscribers> GetAllErrorSubscribers()
+        {
+            return subscribersService.GetErrorLogSubscribers();
+        }
+        /// <summary>
+        /// Notify subscriber about errors in log files
+        /// </summary>
+        /// <param name="subscribers">Subscribers</param>
+        /// <param name="errors">List of errors</param>
+        public void NotifyAboutErrors(List<MasterDataSubscribers> subscribers, List<ApplicationLogs> errors)
+        {
+            mailNotificationSendService.SendErrorReport(subscribers, errors);
+        }
     }
 }
