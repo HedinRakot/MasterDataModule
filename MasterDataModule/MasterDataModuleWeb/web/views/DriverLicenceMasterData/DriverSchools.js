@@ -4,8 +4,7 @@ define([
 'l!t!DriverLicenceMasterData/FilterDriverSchool',
 'l!t!DriverLicenceMasterData/DriverSchoolRelationships'
 ], function (BaseView, Collection, FilterView, DetailView) {
-	'use strict';
-
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
@@ -19,9 +18,8 @@ define([
 		
 
 	    editItemTitle: function () {
-	        return this.resources.edit
+	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return [

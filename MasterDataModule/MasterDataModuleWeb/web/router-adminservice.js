@@ -12,7 +12,10 @@
                 'WinServiceMonitor': _.partial(BaseRouter.showView, baseRouter, 'l!t!AdminService/WinServiceMonitor', { SysLanguage: true }),
                 'WebSiteMonitor': _.partial(BaseRouter.showView, baseRouter, 'l!t!AdminService/WebSiteMonitor', { SysLanguage: true }),
                 'ApplicationLogToShow': _.partial(BaseRouter.showView, baseRouter, 'l!t!AdminService/ApplicationLogToShow', { SysLanguage: true }),
-                'ApplicationLogToShow/:id': _.partial(BaseRouter.showView, baseRouter, 'l!t!AdminService/ApplicationLogToShow', { SysLanguage: true }),
+                'ApplicationLogToShow/:logTypeId': _.partial(function (logTypeId) {
+                    BaseRouter.showView(baseRouter, 'l!t!AdminService/ApplicationLogToShow', 
+                        { SysLanguage: true }, { logTypeId: logTypeId });
+                }),
                 'Monitoring': _.partial(BaseRouter.showView, baseRouter, 'l!t!AdminService/Monitoring')
             }
 

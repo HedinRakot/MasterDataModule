@@ -40,6 +40,6 @@ namespace MasterDataModule.Generation
         public int PermissionId { get; set; }
         public string PermissionDescription { get; set; }
 
-
+        public bool ExcelExport { get; set; }
     }
 }

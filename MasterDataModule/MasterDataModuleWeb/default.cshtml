@@ -17,7 +17,6 @@
     <link href="/css/site.css" rel="stylesheet" />
 </head>
 <body>
-    <script src="../web.libs/jszip.js"></script>
     <script src="/web.libs/require.js"></script>
     <script>
         require.config({
@@ -33,12 +32,17 @@
                 backbone: '../web.libs/backbone',
                 'backbone.stickit': '../web.libs/backbone.stickit',
                 'globalize': '../web.libs/globalize/globalize',
-                'globalize.de': '../web.libs/globalize/cultures/globalize.culture.de', // requirejs modules
+                'globalize.de': '../web.libs/globalize/cultures/globalize.culture.de',
+                jszip: '../web.libs/jszip',
+
+                // requirejs modules
                 text: '../web.libs/require.text',
                 lr: '../web.libs/require.localized.resource',
                 t: '../web.libs/require.templated.view',
                 l: '../web.libs/require.localized.view',
-                lk: '../web.libs/require.localized.kendo.widget', //short paths
+                lk: '../web.libs/require.localized.kendo.widget',
+
+                //short paths
                 base: '../web.components/base',
                 mixins: '../web.components/mixins',
                 kendo: '../web.components/kendo',
@@ -46,6 +50,8 @@
                 'kendo.backbone': '../web.components/kendo.backbone',
                 'kendo.editors': '../web.components/kendo.editors',
                 'kendo.filters': '../web.components/kendo.filters',
+
+
                 errors: 'views/errors',
                 home: 'views/home',
                 Settings: 'views/Settings',

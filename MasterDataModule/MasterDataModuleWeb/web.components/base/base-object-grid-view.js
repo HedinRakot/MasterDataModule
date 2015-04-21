@@ -41,7 +41,11 @@
 	    addNewModelInline: false,
 
 	    initDetailView: initDetailView,
-
+        
+	    excel: {
+	        allPages: true
+	    },
+        
 		toolbar: function () {
 
 		    var self = this;

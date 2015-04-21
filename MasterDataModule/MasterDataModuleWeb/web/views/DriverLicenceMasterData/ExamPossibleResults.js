@@ -2,13 +2,12 @@ define([
 'base/base-object-grid-view',
 'collections/DriverLicenceMasterData/ExamPossibleResults',
 'l!t!DriverLicenceMasterData/FilterExamPossibleResult'
-], function (BaseView, Collection, FilterView, DetailView) {
-	'use strict';
-
+], function (BaseView, Collection, FilterView) {
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'ExamPossibleResult',
         editUrl: '#ExamPossibleResults',
@@ -18,9 +17,8 @@ define([
 		
 
 	    editItemTitle: function () {
-	        return this.resources.edit
+	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return [

@@ -1,13 +1,13 @@
 /*
-* Kendo UI v2014.3.1119 (http://www.telerik.com/kendo-ui)
-* Copyright 2014 Telerik AD. All rights reserved.
+* Kendo UI v2015.1.408 (http://www.telerik.com/kendo-ui)
+* Copyright 2015 Telerik AD. All rights reserved.
 *
 * Kendo UI commercial licenses may be obtained at
 * http://www.telerik.com/purchase/license-agreement/kendo-ui-complete
 * If you do not own a commercial license, this file shall be governed by the trial license terms.
 */
 (function(f, define){
-    define([ "./kendo.core", "./kendo.data" ], f);
+    define([ "./kendo.core", "./kendo.data", "./kendo.ooxml" ], f);
 })(function(){
 
 (function($, kendo){
@@ -16,7 +16,9 @@ kendo.ExcelExporter = kendo.Class.extend({
     init: function(options) {
         options.columns = this._trimColumns(options.columns || []);
 
-        this.columns = $.map(this._leafColumns(options.columns || []), this._prepareColumn);
+        this.allColumns = $.map(this._leafColumns(options.columns || []), this._prepareColumn);
+
+        this.columns = $.grep(this.allColumns, function(column) { return !column.hidden;});
 
         this.options = options;
 
@@ -34,18 +36,22 @@ kendo.ExcelExporter = kendo.Class.extend({
                     group: dataSource.group(),
                     aggregate: dataSource.aggregate()
                 }));
+
+            var data = dataSource.data();
+
+            if (data.length > 0) {
+                // Avoid toJSON() for perf and avoid data() to prevent reparenting.
+                this.dataSource._data = data;
+            }
+
         } else {
             this.dataSource = kendo.data.DataSource.create(dataSource);
-        }
-
-        if (dataSource instanceof kendo.data.TreeListDataSource) {
-            this.dataSource.data(dataSource.view().toJSON());
         }
     },
     _trimColumns: function(columns) {
         var that = this;
         return $.grep(columns, function(column) {
-            var result = !(!column.field || column.hidden);
+            var result = !(!column.field);
             if (!result && column.columns) {
                 result = that._trimColumns(column.columns).length > 0;
             }
@@ -66,25 +72,49 @@ kendo.ExcelExporter = kendo.Class.extend({
         return result;
     },
     workbook: function() {
-        var promise = this.dataSource.fetch();
-
-        return promise.then($.proxy(function() {
-            return {
-                sheets: [ {
-                   columns: this._columns(),
-                   rows: this._rows(),
-                   freezePane: this._freezePane(),
-                   filter: this._filter()
-                } ]
-            };
-        }, this));
+        return $.Deferred($.proxy(function(d) {
+            this.dataSource.fetch()
+                .then($.proxy(function() {
+                    var workbook = {
+                        sheets: [
+                            {
+                               columns: this._columns(),
+                               rows: this._rows(),
+                               freezePane: this._freezePane(),
+                               filter: this._filter()
+                            }
+                        ]
+                    };
+                    d.resolve(workbook, this.dataSource.view());
+                }, this));
+        }, this)).promise();
     },
     _prepareColumn: function(column) {
-        if (!column.field || column.hidden) {
+        if (!column.field) {
             return;
         }
 
+        var value = function(dataItem) {
+            return dataItem.get(column.field);
+        };
+
+        var values = null;
+
+        if (column.values) {
+            values = {};
+
+            $.each(column.values, function(item) {
+               values[this.value] = this.text;
+            });
+
+            value = function(dataItem) {
+                return values[dataItem.get(column.field)];
+            };
+        }
+
         return $.extend({}, column, {
+            value: value,
+            values: values,
             groupHeaderTemplate: kendo.template(column.groupHeaderTemplate || "${title}: ${value}"),
             groupFooterTemplate: column.groupFooterTemplate ? kendo.template(column.groupFooterTemplate) : null,
             footerTemplate: column.footerTemplate ? kendo.template(column.footerTemplate) : null
@@ -102,72 +132,85 @@ kendo.ExcelExporter = kendo.Class.extend({
             to: depth + this.columns.length - 1
         };
     },
-    _dataRows: function(dataItems, level) {
-        var depth = this._depth();
-        var rows = $.map(dataItems, $.proxy(function(dataItem) {
-            if (this._hierarchical()) {
-                level = this.dataSource.level(dataItem) + 1;
+
+    _dataRow: function(dataItem, level, depth) {
+        if (this._hierarchical()) {
+            level = this.dataSource.level(dataItem) + 1;
+        }
+
+        var cells = [];
+
+        for (var li = 0; li < level; li++) {
+            cells[li] = {
+                background: "#dfdfdf",
+                color: "#333"
+            };
+        }
+
+        // grouped
+        if (depth && dataItem.items) {
+            var column = $.grep(this.allColumns, function(column) {
+                return column.field == dataItem.field;
+            })[0];
+
+            var title = column && column.title ? column.title : dataItem.field;
+            var template = column ? column.groupHeaderTemplate : null;
+            var value = title + ": " + dataItem.value;
+            var group = $.extend({
+                    title: title,
+                    field: dataItem.field,
+                    value: column && column.values ? column.values[dataItem.value] : dataItem.value,
+                    aggregates: dataItem.aggregates
+                }, dataItem.aggregates[dataItem.field]);
+
+            if (template) {
+                value = template(group);
             }
 
-            var cells = $.map(new Array(level), function() {
-                return {
-                    background: "#dfdfdf",
-                    color: "#333"
-                };
+            cells.push( {
+                value: value,
+                background: "#dfdfdf",
+                color: "#333",
+                colSpan: this.columns.length + depth - level
+            } );
+
+            var rows = this._dataRows(dataItem.items, level + 1);
+
+            rows.unshift({
+                type: "group-header",
+                cells: cells
             });
 
-            // grouped
-            if (depth && dataItem.items) {
-                var column = $.grep(this.columns, function(column) {
-                    return column.field == dataItem.field;
-                })[0];
+            return rows.concat(this._footer(dataItem));
+        } else {
+            var dataCells = [];
 
-                var title = column && column.title ? column.title : dataItem.field;
-                var template = column ? column.groupHeaderTemplate : null;
-                var value = title + ": " + dataItem.value;
-                var group = $.extend({
-                        title: title,
-                        field: dataItem.field,
-                        value: dataItem.value,
-                        aggregates: dataItem.aggregates
-                    }, dataItem.aggregates[dataItem.field]);
-
-                if (template) {
-                    value = template(group);
-                }
-
-                cells.push( {
-                    value: value,
-                    background: "#dfdfdf",
-                    color: "#333",
-                    colSpan: this.columns.length + depth - level
-                } );
-
-                var rows = this._dataRows(dataItem.items, level + 1);
-
-                rows.unshift({
-                    type: "group-header",
-                    cells: cells
-                });
-
-                return rows.concat(this._footer(dataItem, level+1));
-            } else {
-                var dataCells = $.map(this.columns, $.proxy(this._cell, this, dataItem));
-
-                if (this._hierarchical()) {
-                    dataCells[0].colSpan = depth - level + 1;
-                }
-
-                return {
-                    type: "data",
-                    cells: cells.concat(dataCells)
-                };
+            for (var ci = 0; ci < this.columns.length; ci++) {
+                dataCells[ci] = this._cell(dataItem, this.columns[ci]);
             }
-        }, this));
+
+            if (this._hierarchical()) {
+                dataCells[0].colSpan = depth - level + 1;
+            }
+
+            return [{
+                type: "data",
+                cells: cells.concat(dataCells)
+            }];
+        }
+    },
+
+    _dataRows: function(dataItems, level) {
+        var depth = this._depth();
+        var rows = [];
+
+        for (var i = 0; i < dataItems.length; i++) {
+            rows.push.apply(rows, this._dataRow(dataItems[i], level, depth));
+        }
 
         return rows;
     },
-    _footer: function(dataItem, level) {
+    _footer: function(dataItem) {
         var rows = [];
         var footer = false;
 
@@ -190,7 +233,7 @@ kendo.ExcelExporter = kendo.Class.extend({
         if (footer) {
             rows.push({
                 type: "group-footer",
-                cells: $.map(new Array(level), function() {
+                cells: $.map(new Array(this.dataSource.group().length), function() {
                     return {
                         background: "#dfdfdf",
                         color: "#333"
@@ -295,10 +338,14 @@ kendo.ExcelExporter = kendo.Class.extend({
             var cells = $.map(this.columns, $.proxy(function(column) {
                 if (column.footerTemplate) {
                     footer = true;
+                    var aggregates = this.dataSource.aggregates();
+                    var ctx = aggregates[column.field] || {};
+                    ctx.data = aggregates;
+
                     return {
                         background: "#dfdfdf",
                         color: "#333",
-                        value: column.footerTemplate(this.dataSource.aggregates()[column.field])
+                        value: column.footerTemplate(ctx)
                     };
                 } else {
                     return {
@@ -350,11 +397,9 @@ kendo.ExcelExporter = kendo.Class.extend({
         };
     },
     _cell: function(dataItem, column) {
-        if (column.field) {
-            return {
-                value: dataItem.get(column.field)
-            };
-        }
+        return {
+            value: column.value(dataItem)
+        };
     },
     _hierarchical: function() {
         return this.options.hierarchy && this.dataSource.level;
@@ -420,8 +465,8 @@ kendo.ExcelMixin = {
             hierarchy: excel.hierarchy
         });
 
-        exporter.workbook().then($.proxy(function(book) {
-            if (!this.trigger("excelExport", { workbook: book })) {
+        exporter.workbook().then($.proxy(function(book, data) {
+            if (!this.trigger("excelExport", { workbook: book, data: data })) {
                 var workbook = new kendo.ooxml.Workbook(book);
 
                 kendo.saveAs({

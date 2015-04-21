@@ -14,7 +14,7 @@
 		
 		context.FileManager.StartNewFile(entityContent.CodeNamePlural + ".js");
 		//Model
-		var defines = String.Format("{0}\n{1}\n{2}{3}{4}{5}",
+		var defines = String.Format("{0}\n{1}\n{2}{3}{4}{5}{6}",
 			"'base/base-object-grid-view',",
 			"'collections/" + context.CurrentRelatedWebPath + "/" + entityContent.CodeNamePlural + "',",
 			"'l!t!" + context.CurrentRelatedWebPath + "/Filter" + entityContent.CodeName + "'",
@@ -23,12 +23,14 @@
 			entityContent.ShowExtraFields ? 
 				",\n'" + context.CurrentRelatedWebPath+ "/Custom." + entityContent.CodeName + "'" : "",
 			entityContent.CustomEvents ? 
-				",\n'" + context.CurrentRelatedWebPath+ "/Custom.Events." + entityContent.CodeName + "'" : "");
+				",\n'" + context.CurrentRelatedWebPath+ "/Custom.Events." + entityContent.CodeName + "'" : "",
+			entityContent.ExcelExport ? ",\n'jszip'" : "");
 
-		var defineMembers = String.Format("{0}{1}{2}",
+		var defineMembers = String.Format("{0}{1}{2}{3}",
 				!String.IsNullOrEmpty(entityContent.RelationShips) ? ", DetailView" : "", 
 				entityContent.ShowExtraFields ? ", CustomColumns" : "",
-				entityContent.CustomEvents ? ", CustomEvents" : "");
+				entityContent.CustomEvents ? ", CustomEvents" : "",
+				entityContent.ExcelExport ? ", JSZip" : "");
 
 		var columnsOpenText = entityContent.ShowExtraFields ? "return $.merge( CustomColumns(),\n[" : "return [";
 		var columnsCloseText = entityContent.ShowExtraFields ? "]);" : "];";
@@ -36,8 +38,15 @@
 define([
 <#= defines #>
 ], function (BaseView, Collection, FilterView<#= defineMembers #>) {
-	'use strict';
-
+	'use strict';		
+<#
+		if(entityContent.ExcelExport)
+		{
+#>
+	window.JSZip = JSZip;
+<#
+		}
+#>
 	var view = BaseView.extend({
 
         collectionType: Collection,
@@ -53,7 +62,20 @@ define([
 	    editItemTitle: function () {
 	        return this.resources.edit;
 	    },
+<#
+		if(entityContent.ExcelExport)
+		{
+#>
+		toolbar: function () {
+            var result = view.__super__.toolbar.apply(this, arguments);
 
+            result.push({ template: function () { return '<a class="k-button k-button-icontext k-grid-excel" href="#"><span class="k-icon k-i-excel"></span>Excel</a>'; } });
+
+            return result;
+        },
+<#
+		}
+#>
 		columns: function () {
 			
 			<#= columnsOpenText #>
