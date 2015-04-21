@@ -22,7 +22,7 @@ namespace MonitoringAgent.Services.Common.Base
                 var timer = info.Timer;
                 timer.Change(Timeout.Infinite, Timeout.Infinite);
 
-                TimerAction(info.Info, info.Notifications);
+                TimerAction(info.Info);
     
                lock (info.SyncObject)
                 {
@@ -45,7 +45,6 @@ namespace MonitoringAgent.Services.Common.Base
         {
             var info = new TimerContainer<TObjectInfo>
             {
-                Notifications = notifications ?? new List<MasterDataNotifications>(),
                 Info = objectInfo,
                 Timeout = timeout,
                 Timer = new Timer(TimerElapsed, name, Timeout.Infinite, Timeout.Infinite)
@@ -106,20 +105,18 @@ namespace MonitoringAgent.Services.Common.Base
         /// Action which will be invoked when timer elapsed
         /// </summary>
         /// <param name="info">Info about monitorable object which is associated with current timer</param>
-        /// <param name="notifications">List of notifications for monitorable object</param>
-        protected abstract void TimerAction(TObjectInfo info, List<MasterDataNotifications> notifications);
+        protected abstract void TimerAction(TObjectInfo info);
         /// <summary>
         /// Initialize module
         /// </summary>
         public abstract void Initialize();
 
         #region Nested Types
-        private class TimerContainer<TObjectInfo>
+        private class TimerContainer<TInfo>
         {
             private readonly object syncObject = new object();
 
-            public TObjectInfo Info { get; set; }
-            public List<MasterDataNotifications> Notifications { get; set; }
+            public TInfo Info { get; set; }
             public int Timeout { get; set; }
             public Timer Timer { get; set; }
             public object SyncObject

@@ -19,6 +19,7 @@ namespace MonitoringAgent.Services.Common.Base
     {
         private readonly HubNotificator hubNotificator;
         private readonly INotificationsModule notificationsModule;
+        private Dictionary<string, List<MasterDataNotifications>> notifications = new Dictionary<string, List<MasterDataNotifications>>();
 
         /// <summary>
         /// Ctor
@@ -39,8 +40,7 @@ namespace MonitoringAgent.Services.Common.Base
         /// Action which will be invoked when timer elapsed
         /// </summary>
         /// <param name="info">Info about monitorable object which is associated with current timer</param>
-        /// <param name="notifications">List of notifications for monitorable object</param>
-        protected override void TimerAction(TServiceInfo info, List<MasterDataNotifications> notifications)
+        protected override void TimerAction(TServiceInfo info)
         {
             var checkingResult = CheckService(info);
 
@@ -49,9 +49,10 @@ namespace MonitoringAgent.Services.Common.Base
                 hubNotificator.SendNotification(CheckModuleType, info.Id, checkingResult.CheckStatus);
             }
 
-            if (notifications.Count > 0)
+            List<MasterDataNotifications> serviceNotifications;
+            if (notifications.TryGetValue(info.Name, out serviceNotifications))
             {
-                foreach (var notification in notifications)
+                foreach (var notification in serviceNotifications)
                 {
                     if (NeedNotify(checkingResult, notification))
                     {
@@ -69,14 +70,18 @@ namespace MonitoringAgent.Services.Common.Base
         public override void Initialize()
         {
             var services = ServiceExtractor();
-            var notifications = notificationsModule.GetAllNotifications(services.Select(s => s.Id).ToList(), CheckModuleType);
+            var allNotifications = notificationsModule.GetAllNotifications(services.Select(s => s.Id).ToList(), CheckModuleType);
             hubNotificator.Initialize();
 
             foreach (var service in services)
             {
                 List<MasterDataNotifications> serviceNotifications;
-                notifications.TryGetValue(service.Id, out serviceNotifications);
-                AddService(service, service.Name, service.TimeoutChecking, serviceNotifications);
+                allNotifications.TryGetValue(service.Id, out serviceNotifications);
+                AddService(service, service.Name, service.TimeoutChecking);
+                if (serviceNotifications != null && serviceNotifications.Count > 0)
+                {
+                    notifications.Add(service.Name, serviceNotifications);
+                }
             }
         }
         /// <summary>
