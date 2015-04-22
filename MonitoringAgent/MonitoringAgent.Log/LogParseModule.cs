@@ -10,7 +10,7 @@ namespace MonitoringAgent.Log
     /// <summary>
     /// Module for parse logs
     /// </summary>
-    public class LogParseModule : BaseTimerModule<LogTypeAnalyzer>
+    public sealed class LogParseModule : BaseTimerModule<LogTypeAnalyzer>
     {
         private readonly INotificationsModule notificationsModule;
         private readonly IManagersProvider managersProvider;
@@ -35,7 +35,9 @@ namespace MonitoringAgent.Log
             info.Analyze(out errors);
             if (errors.Count > 0 && errorSubscribers.Count > 0)
             {
-                notificationsModule.NotifyAboutErrors(errorSubscribers, errors);
+                var reportFactory = new LogReportFactory();
+                var report = reportFactory.CreateErrorReport(errors, info.LogTypeInfo);
+                notificationsModule.NotifyAboutErrors(errorSubscribers, report);
             }
         }
         /// <summary>

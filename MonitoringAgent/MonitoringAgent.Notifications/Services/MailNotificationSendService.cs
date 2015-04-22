@@ -20,27 +20,20 @@ namespace MonitoringAgent.Notifications.Services
         /// <param name="subscribers">List of subscribers</param>
         public void SendNotification(MasterDataNotifications notification, IList<MasterDataSubscribers> subscribers)
         {
-            SendMailToSubscribers(notification.Subject, notification.Message, subscribers);
+            SendMailToSubscribers(notification.Subject, notification.Message, subscribers, false);
         }
+
         /// <summary>
         /// Send report about erros in log files to all subscribers
         /// </summary>
         /// <param name="subscribers">Subscribers</param>
-        /// <param name="errors">List of errors</param>
-        public void SendErrorReport(IList<MasterDataSubscribers> subscribers, List<ApplicationLogs> errors)
+        /// <param name="report">Html report</param>
+        public void SendErrorReport(IList<MasterDataSubscribers> subscribers, string report)
         {
-            StringBuilder sb = new StringBuilder();
-            foreach (var error in errors)
-            {
-                sb.Append("==========================================");
-                sb.AppendLine();
-                sb.AppendFormat("{0} - {1}", error.Date, error.Message);
-                sb.AppendLine();
-            }
-            SendMailToSubscribers("Error report", sb.ToString(), subscribers);
+            SendMailToSubscribers("Error report", report, subscribers, true);
         }
 
-        private void SendMailToSubscribers(string subject, string body, IList<MasterDataSubscribers> subscribers)
+        private void SendMailToSubscribers(string subject, string body, IList<MasterDataSubscribers> subscribers, bool isBodyHtml)
         {
             foreach (var subscriber in subscribers)
             {
@@ -52,13 +45,11 @@ namespace MonitoringAgent.Notifications.Services
                     body,
                     NotificationServerConfigSection.Instance.SmtpServerPort,
                     NotificationServerConfigSection.Instance.EnableSsl,
-                    NotificationServerConfigSection.Instance.SmtpDeliveryMethod
-                    );
+                    NotificationServerConfigSection.Instance.SmtpDeliveryMethod, isBodyHtml);
             }
         }
 
-        private void SendMail(string smtpServer, string from, string password, string mailto, string caption,
-            string message, int port, bool enableSsl, SmtpDeliveryMethod smtpDeliveryMethod)
+        private void SendMail(string smtpServer, string @from, string password, string mailto, string caption, string message, int port, bool enableSsl, SmtpDeliveryMethod smtpDeliveryMethod, bool isBodyHtml)
         {
             try
             {
@@ -67,6 +58,7 @@ namespace MonitoringAgent.Notifications.Services
                 mail.To.Add(new MailAddress(mailto));
                 mail.Subject = caption;
                 mail.Body = message;
+                mail.IsBodyHtml = isBodyHtml;
                 SmtpClient client = new SmtpClient
                 {
                     Host = smtpServer,

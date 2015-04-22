@@ -14,11 +14,12 @@ namespace MonitoringAgent.Notifications.Services
         /// <param name="notification">Notification</param>
         /// <param name="subscribers">List of subscribers</param>
         void SendNotification(MasterDataNotifications notification, IList<MasterDataSubscribers> subscribers);
+
         /// <summary>
         /// Send report about erros in log files to all subscribers
         /// </summary>
         /// <param name="subscribers">Subscribers</param>
-        /// <param name="errors">List of errors</param>
-        void SendErrorReport(IList<MasterDataSubscribers> subscribers, List<ApplicationLogs> errors);
+        /// <param name="report">Html report</param>
+        void SendErrorReport(IList<MasterDataSubscribers> subscribers, string report);
     }
 }

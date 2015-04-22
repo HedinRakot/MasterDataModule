@@ -29,7 +29,7 @@ namespace MonitoringAgent.Notifications.Interfaces
         /// Notify subscriber about errors in log files
         /// </summary>
         /// <param name="subscribers">Subscribers</param>
-        /// <param name="errors">List of errors</param>
-        void NotifyAboutErrors(List<MasterDataSubscribers> subscribers, List<ApplicationLogs> errors);
+        /// <param name="report">Html report</param>
+        void NotifyAboutErrors(List<MasterDataSubscribers> subscribers, string report);
     }
 }

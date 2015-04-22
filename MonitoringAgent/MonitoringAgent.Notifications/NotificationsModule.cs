@@ -58,10 +58,10 @@ namespace MonitoringAgent.Notifications
         /// Notify subscriber about errors in log files
         /// </summary>
         /// <param name="subscribers">Subscribers</param>
-        /// <param name="errors">List of errors</param>
-        public void NotifyAboutErrors(List<MasterDataSubscribers> subscribers, List<ApplicationLogs> errors)
+        /// <param name="report">Html report</param>
+        public void NotifyAboutErrors(List<MasterDataSubscribers> subscribers, string report)
         {
-            mailNotificationSendService.SendErrorReport(subscribers, errors);
+            mailNotificationSendService.SendErrorReport(subscribers, report);
         }
     }
 }

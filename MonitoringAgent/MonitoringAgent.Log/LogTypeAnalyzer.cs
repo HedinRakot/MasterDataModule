@@ -12,7 +12,7 @@ namespace MonitoringAgent.Log
     /// <summary>
     /// Class for analyze log
     /// </summary>
-    public class LogTypeAnalyzer
+    public sealed class LogTypeAnalyzer
     {
         private readonly LogTypeInfo logTypeInfo;
         private readonly IManagersProvider managersProvider;
@@ -35,6 +35,11 @@ namespace MonitoringAgent.Log
         public void Analyze(out List<ApplicationLogs> errors)
         {
             StartAnalyze(out errors);
+        }
+
+        public LogTypeInfo LogTypeInfo
+        {
+            get { return logTypeInfo; }
         }
 
         private void StartAnalyze(out List<ApplicationLogs> errors)
