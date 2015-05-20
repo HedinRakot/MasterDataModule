@@ -1,23 +1,24 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/CommonMasterData/System/SysCountries',
-'l!t!CommonMasterData/System/FilterSysCountry',
-'l!t!CommonMasterData/System/SysCountryRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
-	'use strict';
-
+'l!t!CommonMasterData/System/FilterSysCountry'
+], function (BaseView, Collection, FilterView) {
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'SysCountry',
         editUrl: '#SysCountries',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
-	        return this.resources.edit
+	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return [

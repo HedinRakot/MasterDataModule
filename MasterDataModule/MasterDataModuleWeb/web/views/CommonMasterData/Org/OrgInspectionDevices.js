@@ -1,23 +1,24 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/CommonMasterData/Org/OrgInspectionDevices',
-'l!t!CommonMasterData/Org/FilterOrgInspectionDevice',
-'l!t!CommonMasterData/Org/OrgInspectionDeviceRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
-	'use strict';
-
+'l!t!CommonMasterData/Org/FilterOrgInspectionDevice'
+], function (BaseView, Collection, FilterView) {
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'OrgInspectionDevice',
         editUrl: '#OrgInspectionDevices',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
-	        return this.resources.edit
+	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return [

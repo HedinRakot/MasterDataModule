@@ -1,23 +1,24 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/CommonMasterData/Org/OrgInformation',
-'l!t!CommonMasterData/Org/FilterOrgInformation',
-'l!t!CommonMasterData/Org/OrgInformationRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
-	'use strict';
-
+'l!t!CommonMasterData/Org/FilterOrgInformation'
+], function (BaseView, Collection, FilterView) {
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'OrgInformation',
         editUrl: '#OrgInformation',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
-	        return this.resources.edit
+	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return [

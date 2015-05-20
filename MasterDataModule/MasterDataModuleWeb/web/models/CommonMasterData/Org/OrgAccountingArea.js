@@ -6,16 +6,16 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,accountingArea: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('orgAccountingArea', 'accountingArea'), 
+			                        editable: Application.canTableItemBeEdit('OrgAccountingArea', 'accountingArea'), 
 				                    validation: { required: true, maxLength: 4 } }			
 			,maxOrderSum: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('orgAccountingArea', 'maxOrderSum'), 
+			                        editable: Application.canTableItemBeEdit('OrgAccountingArea', 'maxOrderSum'), 
 				                    validation: { required: true } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('orgAccountingArea', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('OrgAccountingArea', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('orgAccountingArea', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('OrgAccountingArea', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

@@ -5,8 +5,7 @@ define([
 'l!t!Settings/SysTableRelationships',
 'Settings/Custom.SysTable'
 ], function (BaseView, Collection, FilterView, DetailView, CustomColumns) {
-	'use strict';
-
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
@@ -22,7 +21,6 @@ define([
 	    editItemTitle: function () {
 	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return $.merge( CustomColumns(),

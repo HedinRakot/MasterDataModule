@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,15 +8,10 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Anerkennung',
 		pleaseSelect: 'Bitte auswählen',
-
 		ordRecognitionTypeId: 'Anerkennungstyp ',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 		orgAccountingAreaId: 'Buchungskreis',	
-
 	};
 
 	return resources;

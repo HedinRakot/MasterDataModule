@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,13 +8,9 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Produkt-Kombinationstypen',
 		pleaseSelect: 'Bitte auswählen',
-
 		description: 'Beschreibung des Kombinationstyps',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

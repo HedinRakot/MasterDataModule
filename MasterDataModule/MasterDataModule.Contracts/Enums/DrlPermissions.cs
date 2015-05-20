@@ -31,6 +31,10 @@ namespace MasterDataModule.Contracts.Enums
     		///</summary>
     		public const int SchoolInfo = 34;
     		///<summary>
+    		/// Grant for edit DRL_ARGE_VERSION table
+    		///</summary>
+    		public const int ArgeVersion = 2;
+    		///<summary>
     		/// Grant for edit DRL_AUTHORITY table
     		///</summary>
     		public const int Authority = 3;
@@ -122,10 +126,6 @@ namespace MasterDataModule.Contracts.Enums
     		/// Grant for edit DRL_EXAM_CLASS_RESTRICTED_CLASS_RSP table
     		///</summary>
     		public const int ExamClassRestrictedClass = 17;
-    		///<summary>
-    		/// Grant for edit DRL_ARGE_VERSION table
-    		///</summary>
-    		public const int ArgeVersion = 2;
     		///<summary>
     		/// Grant for edit DRL_EXAM_CONSTRAINT table
     		///</summary>

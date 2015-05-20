@@ -9,28 +9,38 @@
         var entityContent = model.Table.Content;
         context.FileManager.StartNewFile("Add" + entityContent.CodeName + ".js");
 		
-		//find custom properties
+		//find custom properties		
 		var customDefines = "";
 		var customViews = "";
-		foreach (var property in model.ModelProperties)
+		var tabView = "";
+
+		if(!entityContent.IsRelated)
 		{
-			var customView = property.Column.Content.CustomView;
-			if(!String.IsNullOrEmpty(customView))
+			customDefines = String.Format("'l!t!{0}/{1}Relationships'",
+				context.CurrentRelatedWebPath, entityContent.CodeName);
+			customViews = ", TabView";
+			tabView = "tabView: TabView,";
+
+			foreach (var property in model.ModelProperties)
 			{
-				customDefines += String.Format(",\n    'l!t!{0}/{1}'", context.CurrentRelatedWebPath, customView);
-				customViews += String.Format(", {0}View", customView);
+				var customView = property.Column.Content.CustomView;
+				if(!String.IsNullOrEmpty(customView))
+				{
+					customDefines += String.Format(",\n    'l!t!{0}/{1}'", context.CurrentRelatedWebPath, customView);
+					customViews += String.Format(", {0}View", customView);
+				}
 			}
 		}
 #>
 define([
 	'base/base-object-add-view',
-    'l!t!<#= context.CurrentRelatedWebPath #>/<#= entityContent.CodeName + "Relationships" #>'<#= customDefines #>
-], function (BaseView, TabView<#= customViews #>) {
+    <#= customDefines #>
+], function (BaseView <#= customViews #>) {
     'use strict';
 
     var view = BaseView.extend({
 
-        tabView: TabView,
+        <#= tabView #>
         tableName: '<#= entityContent.CodeName #>',
         actionUrl: '#<#= entityContent.CodeNamePlural #>',
 

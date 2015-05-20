@@ -1,23 +1,24 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/TechnicalInspectionMasterData/InsSeverityTypes',
-'l!t!TechnicalInspectionMasterData/FilterInsSeverityType',
-'l!t!TechnicalInspectionMasterData/InsSeverityTypeRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
-	'use strict';
-
+'l!t!TechnicalInspectionMasterData/FilterInsSeverityType'
+], function (BaseView, Collection, FilterView) {
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'InsSeverityType',
         editUrl: '#InsSeverityTypes',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
-	        return this.resources.edit
+	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return [

@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,15 +8,10 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'FE-Anerkennung',
 		pleaseSelect: 'Bitte auswählen',
-
 		name: 'Beschreibung der Anerkennung',	
-
 		description: 'Beschreibung der Anerkennung',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

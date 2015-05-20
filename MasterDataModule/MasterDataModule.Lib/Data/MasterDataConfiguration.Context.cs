@@ -21,7 +21,6 @@ namespace MasterDataModule.Lib.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Configurations.Add(LogTypeInfoMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataWcfInfoMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataWcfCheckResultsMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataSiteInfoMapping.Instance);
@@ -38,6 +37,7 @@ namespace MasterDataModule.Lib.Data
             modelBuilder.Configurations.Add(JobsInfosWithLastResultMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataWindowsServiceInfoMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataWindowsServiceCheckResultsMapping.Instance);
+            modelBuilder.Configurations.Add(LogTypeInfoMapping.Instance);
             modelBuilder.Configurations.Add(RoleMapping.Instance);
             modelBuilder.Configurations.Add(PermissionMapping.Instance);
             modelBuilder.Configurations.Add(MasterDataRolePermissionRspMapping.Instance);
@@ -53,10 +53,6 @@ namespace MasterDataModule.Lib.Data
             modelBuilder.Configurations.Add(GetWcfServicesStatusMapping.Instance);
         }
 
-        /// <summary>
-        ///     Set of <see cref="LogTypeInfo"/> entities from table dbo.LOG_TYPE_INFO
-        /// </summary>
-        public IQueryable<LogTypeInfo> LogTypeInfo{ get; set; }
         /// <summary>
         ///     Set of <see cref="MasterDataWcfInfo"/> entities from table dbo.MASTER_DATA_WCF_INFO
         /// </summary>
@@ -121,6 +117,10 @@ namespace MasterDataModule.Lib.Data
         ///     Set of <see cref="MasterDataWindowsServiceCheckResults"/> entities from table dbo.MASTER_DATA_WINDOWS_SERVICE_CHECK_RESULTS
         /// </summary>
         public IQueryable<MasterDataWindowsServiceCheckResults> MasterDataWindowsServiceCheckResults{ get; set; }
+        /// <summary>
+        ///     Set of <see cref="LogTypeInfo"/> entities from table dbo.LOG_TYPE_INFO
+        /// </summary>
+        public IQueryable<LogTypeInfo> LogTypeInfo{ get; set; }
         /// <summary>
         ///     Set of <see cref="Role"/> entities from table dbo.MASTER_DATA_ROLE
         /// </summary>

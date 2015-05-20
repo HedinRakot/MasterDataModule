@@ -1,23 +1,24 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/CommonMasterData/System/SysLocations',
-'l!t!CommonMasterData/System/FilterSysLocation',
-'l!t!CommonMasterData/System/SysLocationRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
-	'use strict';
-
+'l!t!CommonMasterData/System/FilterSysLocation'
+], function (BaseView, Collection, FilterView) {
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'SysLocation',
         editUrl: '#SysLocations',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
-	        return this.resources.edit
+	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return [

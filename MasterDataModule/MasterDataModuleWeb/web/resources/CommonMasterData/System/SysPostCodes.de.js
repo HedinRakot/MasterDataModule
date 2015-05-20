@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,17 +8,11 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Postleitzahl',
 		pleaseSelect: 'Bitte auswählen',
-
 		postCode: 'Postleitzahl',	
-
 		city: 'Ort',	
-
 		street: 'Straße',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,13 +8,9 @@ define(function () {
 	    masterData: 'TP Stammdaten',
 	    pageTitle: 'Produktklasse-Ergebnisfeld',
 		pleaseSelect: 'Bitte auswählen',
-
 		description: 'Beschreibung des Ergebnisfelds',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

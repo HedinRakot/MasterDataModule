@@ -3,8 +3,7 @@ define([
 'collections/Settings/WcfInfosWithLastResults',
 'l!t!Settings/FilterWcfInfosWithLastResult'
 ], function (BaseView, Collection, FilterView) {
-	'use strict';
-
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
@@ -20,7 +19,6 @@ define([
 	    editItemTitle: function () {
 	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return [

@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,17 +8,11 @@ define(function () {
 	    masterData: 'TP masterdata',
 	    pageTitle: 'Optical defect',
 		pleaseSelect: 'Please select',
-
 		name: 'Name',	
-
 		description: 'Description',	
-
 		isCustom: 'Is custom',	
-
 		fromDate: 'From date',	
-
 		toDate: 'To date',	
-
 	};
 
 	return resources;

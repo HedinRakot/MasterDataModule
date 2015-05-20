@@ -13,30 +13,6 @@ namespace MasterDataModule.API
     {
         private static void MasterDataConfigurationTableMappings(IDictionary<string, TableMapping> tables)
         {
-            tables.Add("SITE_INFOS_WITH_LAST_RESULT", new TableMapping("SITE_INFOS_WITH_LAST_RESULT", "SiteInfosWithLastResult", 2)
-            {
-                {"NAME", "name"},
-                {"LAST_RESULT", "lastResult"},
-            });
-
-            tables.Add("WCF_INFOS_WITH_LAST_RESULT", new TableMapping("WCF_INFOS_WITH_LAST_RESULT", "WcfInfosWithLastResult", 2)
-            {
-                {"NAME", "name"},
-                {"LAST_RESULT", "lastResult"},
-            });
-
-            tables.Add("WINSERVICE_INFOS_WITH_LAST_RESULT", new TableMapping("WINSERVICE_INFOS_WITH_LAST_RESULT", "WinserviceInfosWithLastResult", 2)
-            {
-                {"NAME", "name"},
-                {"LAST_RESULT", "lastResult"},
-            });
-
-            tables.Add("JOBS_INFOS_WITH_LAST_RESULT", new TableMapping("JOBS_INFOS_WITH_LAST_RESULT", "JobsInfosWithLastResult", 2)
-            {
-                {"NAME", "name"},
-                {"LAST_RESULT", "lastResult"},
-            });
-
             tables.Add("MASTER_DATA_WCF_INFO", new TableMapping("MASTER_DATA_WCF_INFO", "MasterDataWcfInfo", 6)
             {
                 {"NAME", "name"},
@@ -79,20 +55,18 @@ namespace MasterDataModule.API
                 {"TO_DATE", "toDate"},
             });
 
+            tables.Add("SYS_COLUMNS", new TableMapping("SYS_COLUMNS", "SysColumn", 4)
+            {
+                {"SYS_TABLE_ID", "sysTableId"},
+                {"NAME", "name"},
+                {"DESCRIPTION", "description"},
+                {"READ_ONLY", "readOnly"},
+            });
+
             tables.Add("MASTER_DATA_MONITOR_STATE", new TableMapping("MASTER_DATA_MONITOR_STATE", "MasterDataMonitorState", 2)
             {
                 {"RECONFIGURE", "reconfigure"},
                 {"RECONFIGURE_CHECKING_TIMEOUT", "reconfigureCheckingTimeout"},
-            });
-
-            tables.Add("APPLICATION_LOGS", new TableMapping("APPLICATION_LOGS", "ApplicationLogs", 6)
-            {
-                {"LOG_LEVEL", "logLevel"},
-                {"DATE", "date"},
-                {"MESSAGE", "message"},
-                {"FROM_DATE", "fromDate"},
-                {"TO_DATE", "toDate"},
-                {"LOG_TYPE_INFO_ID", "logTypeInfoId"},
             });
 
             tables.Add("MASTER_DATA_JOB_INFO", new TableMapping("MASTER_DATA_JOB_INFO", "MasterDataJobInfo", 8)
@@ -107,6 +81,36 @@ namespace MasterDataModule.API
                 {"LOG_TYPE_INFO_ID", "logTypeInfoId"},
             });
 
+            tables.Add("GET_APPLICATION_LOGS", new TableMapping("GET_APPLICATION_LOGS", "GetApplicationLogs", 5)
+            {
+                {"LOG_LEVEL", "logLevel"},
+                {"MESSAGE_DATE", "messageDate"},
+                {"MESSAGE", "message"},
+                {"FILE_NAME", "fileName"},
+                {"LOG_TYPE_INFO_ID", "logTypeInfoId"},
+            });
+
+            tables.Add("SYS_TABLES", new TableMapping("SYS_TABLES", "SysTable", 5)
+            {
+                {"NAME", "name"},
+                {"DESCRIPTION", "description"},
+                {"EDIT_MODE", "editMode"},
+                {"FROM_DATE", "fromDate"},
+                {"TO_DATE", "toDate"},
+            });
+
+            tables.Add("SITE_INFOS_WITH_LAST_RESULT", new TableMapping("SITE_INFOS_WITH_LAST_RESULT", "SiteInfosWithLastResult", 2)
+            {
+                {"NAME", "name"},
+                {"LAST_RESULT", "lastResult"},
+            });
+
+            tables.Add("WCF_INFOS_WITH_LAST_RESULT", new TableMapping("WCF_INFOS_WITH_LAST_RESULT", "WcfInfosWithLastResult", 2)
+            {
+                {"NAME", "name"},
+                {"LAST_RESULT", "lastResult"},
+            });
+
             tables.Add("MASTER_DATA_JOB_CHECK_RESULTS", new TableMapping("MASTER_DATA_JOB_CHECK_RESULTS", "MasterDataJobCheckResults", 6)
             {
                 {"LAST_RUN_TIME", "lastRunTime"},
@@ -115,6 +119,18 @@ namespace MasterDataModule.API
                 {"MASTER_DATA_JOB_INFO_ID", "masterDataJobInfoId"},
                 {"FROM_DATE", "fromDate"},
                 {"TO_DATE", "toDate"},
+            });
+
+            tables.Add("WINSERVICE_INFOS_WITH_LAST_RESULT", new TableMapping("WINSERVICE_INFOS_WITH_LAST_RESULT", "WinserviceInfosWithLastResult", 2)
+            {
+                {"NAME", "name"},
+                {"LAST_RESULT", "lastResult"},
+            });
+
+            tables.Add("JOBS_INFOS_WITH_LAST_RESULT", new TableMapping("JOBS_INFOS_WITH_LAST_RESULT", "JobsInfosWithLastResult", 2)
+            {
+                {"NAME", "name"},
+                {"LAST_RESULT", "lastResult"},
             });
 
             tables.Add("MASTER_DATA_WINDOWS_SERVICE_INFO", new TableMapping("MASTER_DATA_WINDOWS_SERVICE_INFO", "MasterDataWindowsServiceInfo", 7)
@@ -128,14 +144,6 @@ namespace MasterDataModule.API
                 {"LOG_TYPE_INFO_ID", "logTypeInfoId"},
             });
 
-            tables.Add("SYS_COLUMNS", new TableMapping("SYS_COLUMNS", "SysColumn", 4)
-            {
-                {"SYS_TABLE_ID", "sysTableId"},
-                {"NAME", "name"},
-                {"DESCRIPTION", "description"},
-                {"READ_ONLY", "readOnly"},
-            });
-
             tables.Add("MASTER_DATA_WINDOWS_SERVICE_CHECK_RESULTS", new TableMapping("MASTER_DATA_WINDOWS_SERVICE_CHECK_RESULTS", "MasterDataWindowsServiceCheckResults", 7)
             {
                 {"CHECK_STATUS", "checkStatus"},
@@ -147,13 +155,11 @@ namespace MasterDataModule.API
                 {"TO_DATE", "toDate"},
             });
 
-            tables.Add("SYS_TABLES", new TableMapping("SYS_TABLES", "SysTable", 5)
+            tables.Add("LOG_TYPE_INFO", new TableMapping("LOG_TYPE_INFO", "LogTypeInfo", 3)
             {
-                {"NAME", "name"},
-                {"DESCRIPTION", "description"},
-                {"EDIT_MODE", "editMode"},
-                {"FROM_DATE", "fromDate"},
-                {"TO_DATE", "toDate"},
+                {"FILE_NAME", "fileName"},
+                {"FILE_PATTERN", "filePattern"},
+                {"FILE_PATH", "filePath"},
             });
 
             tables.Add("MASTER_DATA_ROLE", new TableMapping("MASTER_DATA_ROLE", "Role", 3)
@@ -189,9 +195,31 @@ namespace MasterDataModule.API
                 {"TO_DATE", "toDate"},
             });
 
+            tables.Add("APPLICATION_LOGS", new TableMapping("APPLICATION_LOGS", "ApplicationLogs", 6)
+            {
+                {"LOG_LEVEL", "logLevel"},
+                {"DATE", "date"},
+                {"MESSAGE", "message"},
+                {"FROM_DATE", "fromDate"},
+                {"TO_DATE", "toDate"},
+                {"LOG_TYPE_INFO_ID", "logTypeInfoId"},
+            });
+
             tables.Add("MASTER_DATA_SUBSCRIBERS", new TableMapping("MASTER_DATA_SUBSCRIBERS", "MasterDataSubscribers", 3)
             {
                 {"EMAIL", "email"},
+                {"FROM_DATE", "fromDate"},
+                {"TO_DATE", "toDate"},
+            });
+
+            tables.Add("MASTER_DATA_NOTIFICATIONS", new TableMapping("MASTER_DATA_NOTIFICATIONS", "MasterDataNotifications", 8)
+            {
+                {"NOTIFICATION_TYPE", "notificationType"},
+                {"IS_ALERT_ON", "isAlertOn"},
+                {"ALERT_CHECK_STATUS", "alertCheckStatus"},
+                {"ALERT_ATTEMPT_COUNT", "alertAttemptCount"},
+                {"MESSAGE", "message"},
+                {"SUBJECT", "subject"},
                 {"FROM_DATE", "fromDate"},
                 {"TO_DATE", "toDate"},
             });
@@ -213,23 +241,47 @@ namespace MasterDataModule.API
                 {"TO_DATE", "toDate"},
             });
 
-            tables.Add("MASTER_DATA_NOTIFICATIONS", new TableMapping("MASTER_DATA_NOTIFICATIONS", "MasterDataNotifications", 8)
+            tables.Add("GET_WIN_SERVICES_STATUS", new TableMapping("GET_WIN_SERVICES_STATUS", "GetWinServicesStatus", 7)
             {
-                {"NOTIFICATION_TYPE", "notificationType"},
-                {"IS_ALERT_ON", "isAlertOn"},
-                {"ALERT_CHECK_STATUS", "alertCheckStatus"},
-                {"ALERT_ATTEMPT_COUNT", "alertAttemptCount"},
+                {"CHECK_STATUS", "checkStatus"},
+                {"CHECK_DATE", "checkDate"},
                 {"MESSAGE", "message"},
-                {"SUBJECT", "subject"},
-                {"FROM_DATE", "fromDate"},
-                {"TO_DATE", "toDate"},
+                {"ATTEMPT", "attempt"},
+                {"NAME", "name"},
+                {"MACHINE_NAME", "machineName"},
+                {"LOG_TYPE_INFO_ID", "logTypeInfoId"},
             });
 
-            tables.Add("LOG_TYPE_INFO", new TableMapping("LOG_TYPE_INFO", "LogTypeInfo", 3)
+            tables.Add("GET_SITES_STATUS", new TableMapping("GET_SITES_STATUS", "GetSitesStatus", 7)
             {
-                {"FILE_NAME", "fileName"},
-                {"FILE_PATTERN", "filePattern"},
-                {"FILE_PATH", "filePath"},
+                {"CHECK_STATUS", "checkStatus"},
+                {"CHECK_DATE", "checkDate"},
+                {"MESSAGE", "message"},
+                {"ATTEMPT", "attempt"},
+                {"NAME", "name"},
+                {"SITE_PATH", "sitePath"},
+                {"LOG_TYPE_INFO_ID", "logTypeInfoId"},
+            });
+
+            tables.Add("GET_JOBS_STATUS", new TableMapping("GET_JOBS_STATUS", "GetJobsStatus", 6)
+            {
+                {"CHECK_STATUS", "checkStatus"},
+                {"CHECK_DATE", "checkDate"},
+                {"LAST_RUN_TIME", "lastRunTime"},
+                {"NAME", "name"},
+                {"JOB_NAME", "jobName"},
+                {"LOG_TYPE_INFO_ID", "logTypeInfoId"},
+            });
+
+            tables.Add("GET_WCF_SERVICES_STATUS", new TableMapping("GET_WCF_SERVICES_STATUS", "GetWcfServicesStatus", 7)
+            {
+                {"CHECK_STATUS", "checkStatus"},
+                {"CHECK_DATE", "checkDate"},
+                {"MESSAGE", "message"},
+                {"ATTEMPT", "attempt"},
+                {"NAME", "name"},
+                {"WSDL_PATH", "wsdlPath"},
+                {"LOG_TYPE_INFO_ID", "logTypeInfoId"},
             });
 
         }

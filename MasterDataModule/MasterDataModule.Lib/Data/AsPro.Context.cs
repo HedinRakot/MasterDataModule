@@ -19,6 +19,7 @@ namespace MasterDataModule.Lib.Data
     {
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Configurations.Add(InsNextSpIntervalMapping.Instance);
             modelBuilder.Configurations.Add(InsObdStatusMapping.Instance);
             modelBuilder.Configurations.Add(InsOpticalDefectMapping.Instance);

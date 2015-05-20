@@ -2,7 +2,7 @@ define([
 	'base/base-object-add-view',
     'l!t!DriverLicenceMasterData/CoreDataProductRelationships',
     'l!t!DriverLicenceMasterData/SelectProduct'
-], function (BaseView, TabView, SelectProductView) {
+], function (BaseView , TabView, SelectProductView) {
     'use strict';
 
     var view = BaseView.extend({

@@ -6,19 +6,19 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,bankName: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('orgBankInformation', 'bankName'), 
+			                        editable: Application.canTableItemBeEdit('OrgBankInformation', 'bankName'), 
 				                    validation: { required: true, maxLength: 250 } }			
 			,bankCode: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('orgBankInformation', 'bankCode'), 
+			                        editable: Application.canTableItemBeEdit('OrgBankInformation', 'bankCode'), 
 				                    validation: { required: true, maxLength: 250 } }			
 			,bankAccount: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('orgBankInformation', 'bankAccount'), 
+			                        editable: Application.canTableItemBeEdit('OrgBankInformation', 'bankAccount'), 
 				                    validation: { required: true, maxLength: 250 } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('orgBankInformation', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('OrgBankInformation', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('orgBankInformation', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('OrgBankInformation', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

@@ -1,12 +1,12 @@
 define([
 	'base/base-object-add-view',
-    'l!t!DriverLicenceMasterData/ExamClassArgeMapRelationships'
-], function (BaseView, TabView) {
+    
+], function (BaseView ) {
     'use strict';
 
     var view = BaseView.extend({
 
-        tabView: TabView,
+        
         tableName: 'ExamClassArgeMap',
         actionUrl: '#ExamClassArgeMaps',
 

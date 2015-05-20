@@ -6,22 +6,22 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,locationCode: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('sysLocation', 'locationCode'), 
+			                        editable: Application.canTableItemBeEdit('SysLocation', 'locationCode'), 
 				                    validation: { required: true, maxLength: 10 } }			
 			,locationName: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('sysLocation', 'locationName'), 
+			                        editable: Application.canTableItemBeEdit('SysLocation', 'locationName'), 
 				                    validation: { required: false, maxLength: 100 } }			
 			,sysCountryId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('sysLocation', 'sysCountryId'), 
+			                        editable: Application.canTableItemBeEdit('SysLocation', 'sysCountryId'), 
 				                    validation: { required: false } }			
 			,ordFederalStateId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('sysLocation', 'ordFederalStateId'), 
+			                        editable: Application.canTableItemBeEdit('SysLocation', 'ordFederalStateId'), 
 				                    validation: { required: false } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('sysLocation', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('SysLocation', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('sysLocation', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('SysLocation', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

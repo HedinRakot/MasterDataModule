@@ -6,37 +6,37 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,insCoreDataProductId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('orgCostCenterPrice', 'insCoreDataProductId'), 
+			                        editable: Application.canTableItemBeEdit('OrgCostCenterPrice', 'insCoreDataProductId'), 
 				                    validation: { required: true } }			
 			,salesOffice: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('orgCostCenterPrice', 'salesOffice'), 
+			                        editable: Application.canTableItemBeEdit('OrgCostCenterPrice', 'salesOffice'), 
 				                    validation: { required: true, maxLength: 10 } }			
 			,minPrice: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('orgCostCenterPrice', 'minPrice'), 
+			                        editable: Application.canTableItemBeEdit('OrgCostCenterPrice', 'minPrice'), 
 				                    validation: { required: false } }			
 			,maxPrice: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('orgCostCenterPrice', 'maxPrice'), 
+			                        editable: Application.canTableItemBeEdit('OrgCostCenterPrice', 'maxPrice'), 
 				                    validation: { required: false } }			
 			,standartPrice: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('orgCostCenterPrice', 'standartPrice'), 
+			                        editable: Application.canTableItemBeEdit('OrgCostCenterPrice', 'standartPrice'), 
 				                    validation: { required: false } }			
 			,quantity: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('orgCostCenterPrice', 'quantity'), 
+			                        editable: Application.canTableItemBeEdit('OrgCostCenterPrice', 'quantity'), 
 				                    validation: { required: false } }			
 			,unitOfMeasure: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('orgCostCenterPrice', 'unitOfMeasure'), 
+			                        editable: Application.canTableItemBeEdit('OrgCostCenterPrice', 'unitOfMeasure'), 
 				                    validation: { required: false, maxLength: 10 } }			
 			,sysCurrencyId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('orgCostCenterPrice', 'sysCurrencyId'), 
+			                        editable: Application.canTableItemBeEdit('OrgCostCenterPrice', 'sysCurrencyId'), 
 				                    validation: { required: false } }			
 			,changeAbilityType: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('orgCostCenterPrice', 'changeAbilityType'), 
+			                        editable: Application.canTableItemBeEdit('OrgCostCenterPrice', 'changeAbilityType'), 
 				                    validation: { required: false } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('orgCostCenterPrice', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('OrgCostCenterPrice', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('orgCostCenterPrice', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('OrgCostCenterPrice', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

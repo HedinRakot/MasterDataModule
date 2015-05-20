@@ -6,16 +6,16 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('insProductObjectClass', 'description'), 
+			                        editable: Application.canTableItemBeEdit('InsProductObjectClass', 'description'), 
 				                    validation: { required: true, maxLength: 50 } }			
 			,weightFrom: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('insProductObjectClass', 'weightFrom'), 
+			                        editable: Application.canTableItemBeEdit('InsProductObjectClass', 'weightFrom'), 
 				                    validation: { required: false } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insProductObjectClass', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('InsProductObjectClass', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insProductObjectClass', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('InsProductObjectClass', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -10,17 +9,11 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Exam constraints',
 		pleaseSelect: 'Please select',
-
 		name: 'Constraint Name',	
-
 		description: 'Description',	
-
 		constraintType: 'Type of the Contraint',	
-
 		fromDate: 'From date',	
-
 		toDate: 'To date',	
-
 	};
 
 	return resources;

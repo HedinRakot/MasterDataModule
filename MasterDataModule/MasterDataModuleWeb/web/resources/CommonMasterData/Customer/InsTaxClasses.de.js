@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,13 +8,9 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Kunde-Steuerklasse',
 		pleaseSelect: 'Bitte auswählen',
-
 		taxClass: 'SAP-Steuer-Code',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

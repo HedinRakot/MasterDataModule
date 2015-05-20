@@ -106,11 +106,6 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         /// </summary>
         public DateTime ToDate{ get; set; }
         public int? LogTypeInfoId{ get; set; }
-        public virtual LogTypeInfo LogTypeInfo{ get; set; }
-        public bool HasLogTypeInfo
-        {
-            get { return !ReferenceEquals(LogTypeInfo, null); }
-        }
         DateTime? IIntervalFields.FromDate
         {
             get { return FromDate; }

@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -10,13 +9,9 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Error message',
 		pleaseSelect: 'Please select',
-
 		validationErrorNumber: 'Validation error number',	
-
 		sysLanguageId: 'Message language',	
-
 		message: 'Message text',	
-
 	};
 
 	return resources;

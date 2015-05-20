@@ -6,16 +6,16 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,sapId: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('ordContactPersonFunction', 'sapId'), 
+			                        editable: Application.canTableItemBeEdit('OrdContactPersonFunction', 'sapId'), 
 				                    validation: { required: true, maxLength: 10 } }			
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('ordContactPersonFunction', 'description'), 
+			                        editable: Application.canTableItemBeEdit('OrdContactPersonFunction', 'description'), 
 				                    validation: { required: false, maxLength: 50 } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('ordContactPersonFunction', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('OrdContactPersonFunction', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('ordContactPersonFunction', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('OrdContactPersonFunction', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

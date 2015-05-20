@@ -6,16 +6,16 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('orgAccountType', 'name'), 
+			                        editable: Application.canTableItemBeEdit('OrgAccountType', 'name'), 
 				                    validation: { required: true, maxLength: 50 } }			
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('orgAccountType', 'description'), 
+			                        editable: Application.canTableItemBeEdit('OrgAccountType', 'description'), 
 				                    validation: { required: false, maxLength: 250 } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('orgAccountType', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('OrgAccountType', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('orgAccountType', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('OrgAccountType', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

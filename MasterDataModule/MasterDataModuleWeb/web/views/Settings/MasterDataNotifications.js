@@ -4,8 +4,7 @@ define([
 'l!t!Settings/FilterMasterDataNotifications',
 'l!t!Settings/MasterDataNotificationsRelationships'
 ], function (BaseView, Collection, FilterView, DetailView) {
-	'use strict';
-
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
@@ -21,7 +20,6 @@ define([
 	    editItemTitle: function () {
 	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return [

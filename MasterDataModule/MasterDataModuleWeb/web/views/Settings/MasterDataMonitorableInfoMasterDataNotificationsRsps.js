@@ -5,8 +5,7 @@ define([
 'Settings/Custom.MasterDataMonitorableInfoMasterDataNotificationsRsp',
 'Settings/Custom.Events.MasterDataMonitorableInfoMasterDataNotificationsRsp'
 ], function (BaseView, Collection, FilterView, CustomColumns, CustomEvents) {
-	'use strict';
-
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
@@ -22,7 +21,6 @@ define([
 	    editItemTitle: function () {
 	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return $.merge( CustomColumns(),

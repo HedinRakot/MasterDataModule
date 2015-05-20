@@ -6,19 +6,19 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,ordRecognitionId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('ordRecognitionAreaOfWorkRsp', 'ordRecognitionId'), 
+			                        editable: Application.canTableItemBeEdit('OrdRecognitionAreaOfWorkRsp', 'ordRecognitionId'), 
 				                    validation: { required: true } }			
 			,ordAreaOfWorkId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('ordRecognitionAreaOfWorkRsp', 'ordAreaOfWorkId'), 
+			                        editable: Application.canTableItemBeEdit('OrdRecognitionAreaOfWorkRsp', 'ordAreaOfWorkId'), 
 				                    validation: { required: true } }			
 			,priority: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('ordRecognitionAreaOfWorkRsp', 'priority'), 
+			                        editable: Application.canTableItemBeEdit('OrdRecognitionAreaOfWorkRsp', 'priority'), 
 				                    validation: { required: false } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('ordRecognitionAreaOfWorkRsp', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('OrdRecognitionAreaOfWorkRsp', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('ordRecognitionAreaOfWorkRsp', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('OrdRecognitionAreaOfWorkRsp', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

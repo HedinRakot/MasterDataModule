@@ -510,6 +510,21 @@
     <Content Include="web\collections\Settings\ApplicationLogs.js">
       <DependentUpon>web.masterdata.collections.tt</DependentUpon>
     </Content>
+    <Content Include="web\collections\Settings\GetApplicationLogs.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\Settings\GetJobsStatuses.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\Settings\GetSitesStatuses.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\Settings\GetWcfServicesStatuses.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
+    <Content Include="web\collections\Settings\GetWinServicesStatuses.js">
+      <DependentUpon>web.masterdata.collections.tt</DependentUpon>
+    </Content>
     <Content Include="web\collections\Settings\JobsInfosWithLastResults.js">
       <DependentUpon>web.masterdata.collections.tt</DependentUpon>
     </Content>
@@ -1163,6 +1178,21 @@
     <Content Include="web\models\Settings\FilterApplicationLogs.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
+    <Content Include="web\models\Settings\FilterGetApplicationLogs.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\FilterGetJobsStatus.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\FilterGetSitesStatus.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\FilterGetWcfServicesStatus.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\FilterGetWinServicesStatus.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
     <Content Include="web\models\Settings\FilterJobsInfosWithLastResult.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
@@ -1233,6 +1263,21 @@
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\Settings\FilterWinserviceInfosWithLastResult.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\GetApplicationLogs.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\GetJobsStatus.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\GetSitesStatus.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\GetWcfServicesStatus.js">
+      <DependentUpon>web.masterdata.models.tt</DependentUpon>
+    </Content>
+    <Content Include="web\models\Settings\GetWinServicesStatus.js">
       <DependentUpon>web.masterdata.models.tt</DependentUpon>
     </Content>
     <Content Include="web\models\Settings\JobsInfosWithLastResult.js">
@@ -2955,12 +3000,6 @@
     <Content Include="web\resources\DriverLicenceMasterData\Communities.en.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\CommunityParticipantRelationships.de.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\CommunityParticipantRelationships.en.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
     <Content Include="web\resources\DriverLicenceMasterData\CommunityParticipants.de.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
@@ -2978,18 +3017,6 @@
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductClassBases.en.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductClassBasisRelationships.de.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductClassBasisRelationships.en.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductLocalizationRelationships.de.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductLocalizationRelationships.en.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\CoreDataProductLocalizations.de.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
@@ -3017,23 +3044,11 @@
     <Content Include="web\resources\DriverLicenceMasterData\DriverLicenceMasterData.en.js">
       <DependentUpon>web.drl.menu.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\DriverSchoolExamRecognitionTypeRelationships.de.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\DriverSchoolExamRecognitionTypeRelationships.en.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
     <Content Include="web\resources\DriverLicenceMasterData\DriverSchoolExamRecognitionTypes.de.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\DriverSchoolExamRecognitionTypes.en.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\DriverSchoolInfoRelationships.de.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\DriverSchoolInfoRelationships.en.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\DriverSchoolInfos.de.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
@@ -3052,12 +3067,6 @@
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\DriverSchools.en.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\ExamClassArgeMapRelationships.de.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\ExamClassArgeMapRelationships.en.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\ExamClassArgeMaps.de.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
@@ -3079,18 +3088,6 @@
     <Content Include="web\resources\DriverLicenceMasterData\ExamClassInclusiveClasses.en.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\ExamClassInclusiveClassRelationships.de.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\ExamClassInclusiveClassRelationships.en.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\ExamClassMapRelationships.de.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\ExamClassMapRelationships.en.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
     <Content Include="web\resources\DriverLicenceMasterData\ExamClassMaps.de.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
@@ -3109,35 +3106,17 @@
     <Content Include="web\resources\DriverLicenceMasterData\ExamClassRequiredClasses.en.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\ExamClassRequiredClassRelationships.de.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\ExamClassRequiredClassRelationships.en.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
     <Content Include="web\resources\DriverLicenceMasterData\ExamClassRestrictedClasses.de.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\ExamClassRestrictedClasses.en.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\ExamClassRestrictedClassRelationships.de.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\ExamClassRestrictedClassRelationships.en.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
     <Content Include="web\resources\DriverLicenceMasterData\ExamConstraintExamClasses.de.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\ExamConstraintExamClasses.en.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\ExamConstraintExamClassRelationships.de.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\ExamConstraintExamClassRelationships.en.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\ExamConstraintRelationships.de.js">
       <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
@@ -3169,12 +3148,6 @@
     <Content Include="web\resources\DriverLicenceMasterData\ExamRecognitionTypeExamClasses.en.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\ExamRecognitionTypeExamClassRelationships.de.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\ExamRecognitionTypeExamClassRelationships.en.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
     <Content Include="web\resources\DriverLicenceMasterData\ExamRecognitionTypeRelationships.de.js">
       <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
     </Content>
@@ -3198,12 +3171,6 @@
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\ExamRooms.en.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\ExamStationExamRecognitionTypeRelationships.de.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\ExamStationExamRecognitionTypeRelationships.en.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\ExamStationExamRecognitionTypes.de.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
@@ -3423,12 +3390,6 @@
     <Content Include="web\resources\DriverLicenceMasterData\FilterSchoolInfo.en.js">
       <DependentUpon>web.drl.filter.resources.tt</DependentUpon>
     </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\HolidayOrdFederalStateRelationships.de.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\HolidayOrdFederalStateRelationships.en.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
     <Content Include="web\resources\DriverLicenceMasterData\HolidayOrdFederalStates.de.js">
       <DependentUpon>web.drl.resources.tt</DependentUpon>
     </Content>
@@ -3471,12 +3432,6 @@
       <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\LegalBasisRelationships.en.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\MeetingPointOrganizationalUnitRelationships.de.js">
-      <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
-    </Content>
-    <Content Include="web\resources\DriverLicenceMasterData\MeetingPointOrganizationalUnitRelationships.en.js">
       <DependentUpon>web.drl.relationships.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\DriverLicenceMasterData\MeetingPointOrganizationalUnits.de.js">
@@ -3576,6 +3531,36 @@
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\AddApplicationLogs.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddGetApplicationLogs.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddGetApplicationLogs.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddGetJobsStatus.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddGetJobsStatus.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddGetSitesStatus.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddGetSitesStatus.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddGetWcfServicesStatus.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddGetWcfServicesStatus.en.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddGetWinServicesStatus.de.js">
+      <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\AddGetWinServicesStatus.en.js">
       <DependentUpon>web.masterdata.add.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\AddJobsInfosWithLastResult.de.js">
@@ -3752,6 +3737,36 @@
     <Content Include="web\resources\Settings\FilterApplicationLogs.en.js">
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
     </Content>
+    <Content Include="web\resources\Settings\FilterGetApplicationLogs.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterGetApplicationLogs.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterGetJobsStatus.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterGetJobsStatus.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterGetSitesStatus.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterGetSitesStatus.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterGetWcfServicesStatus.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterGetWcfServicesStatus.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterGetWinServicesStatus.de.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\FilterGetWinServicesStatus.en.js">
+      <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
     <Content Include="web\resources\Settings\FilterJobsInfosWithLastResult.de.js">
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
     </Content>
@@ -3897,6 +3912,66 @@
     </Content>
     <Content Include="web\resources\Settings\FilterWinserviceInfosWithLastResult.en.js">
       <DependentUpon>web.masterdata.filter.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetApplicationLogs.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetApplicationLogs.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetApplicationLogsRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetApplicationLogsRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetJobsStatuses.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetJobsStatuses.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetJobsStatusRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetJobsStatusRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetSitesStatuses.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetSitesStatuses.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetSitesStatusRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetSitesStatusRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetWcfServicesStatuses.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetWcfServicesStatuses.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetWcfServicesStatusRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetWcfServicesStatusRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetWinServicesStatuses.de.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetWinServicesStatuses.en.js">
+      <DependentUpon>web.masterdata.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetWinServicesStatusRelationships.de.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
+    </Content>
+    <Content Include="web\resources\Settings\GetWinServicesStatusRelationships.en.js">
+      <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
     </Content>
     <Content Include="web\resources\Settings\JobsInfosWithLastResultRelationships.de.js">
       <DependentUpon>web.masterdata.relationships.resources.tt</DependentUpon>
@@ -5412,9 +5487,6 @@
     <Content Include="web\templates\DriverLicenceMasterData\Communities.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
-    <Content Include="web\templates\DriverLicenceMasterData\CommunityParticipantRelationships.html">
-      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
-    </Content>
     <Content Include="web\templates\DriverLicenceMasterData\CommunityParticipants.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
@@ -5423,12 +5495,6 @@
     </Content>
     <Content Include="web\templates\DriverLicenceMasterData\CoreDataProductClassBases.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
-    </Content>
-    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProductClassBasisRelationships.html">
-      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
-    </Content>
-    <Content Include="web\templates\DriverLicenceMasterData\CoreDataProductLocalizationRelationships.html">
-      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\DriverLicenceMasterData\CoreDataProductLocalizations.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
@@ -5442,14 +5508,8 @@
     <Content Include="web\templates\DriverLicenceMasterData\DriverLicenceMasterData.html">
       <DependentUpon>web.drl.menu.template.tt</DependentUpon>
     </Content>
-    <Content Include="web\templates\DriverLicenceMasterData\DriverSchoolExamRecognitionTypeRelationships.html">
-      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
-    </Content>
     <Content Include="web\templates\DriverLicenceMasterData\DriverSchoolExamRecognitionTypes.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
-    </Content>
-    <Content Include="web\templates\DriverLicenceMasterData\DriverSchoolInfoRelationships.html">
-      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\DriverLicenceMasterData\DriverSchoolInfos.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
@@ -5459,9 +5519,6 @@
     </Content>
     <Content Include="web\templates\DriverLicenceMasterData\DriverSchools.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
-    </Content>
-    <Content Include="web\templates\DriverLicenceMasterData\ExamClassArgeMapRelationships.html">
-      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\DriverLicenceMasterData\ExamClassArgeMaps.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
@@ -5473,12 +5530,6 @@
     <Content Include="web\templates\DriverLicenceMasterData\ExamClassInclusiveClasses.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
-    <Content Include="web\templates\DriverLicenceMasterData\ExamClassInclusiveClassRelationships.html">
-      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
-    </Content>
-    <Content Include="web\templates\DriverLicenceMasterData\ExamClassMapRelationships.html">
-      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
-    </Content>
     <Content Include="web\templates\DriverLicenceMasterData\ExamClassMaps.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
@@ -5488,20 +5539,11 @@
     <Content Include="web\templates\DriverLicenceMasterData\ExamClassRequiredClasses.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
-    <Content Include="web\templates\DriverLicenceMasterData\ExamClassRequiredClassRelationships.html">
-      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
-    </Content>
     <Content Include="web\templates\DriverLicenceMasterData\ExamClassRestrictedClasses.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
-    <Content Include="web\templates\DriverLicenceMasterData\ExamClassRestrictedClassRelationships.html">
-      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
-    </Content>
     <Content Include="web\templates\DriverLicenceMasterData\ExamConstraintExamClasses.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
-    </Content>
-    <Content Include="web\templates\DriverLicenceMasterData\ExamConstraintExamClassRelationships.html">
-      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\DriverLicenceMasterData\ExamConstraintRelationships.html">
       <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
@@ -5518,9 +5560,6 @@
     <Content Include="web\templates\DriverLicenceMasterData\ExamRecognitionTypeExamClasses.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
-    <Content Include="web\templates\DriverLicenceMasterData\ExamRecognitionTypeExamClassRelationships.html">
-      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
-    </Content>
     <Content Include="web\templates\DriverLicenceMasterData\ExamRecognitionTypeRelationships.html">
       <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
     </Content>
@@ -5532,9 +5571,6 @@
     </Content>
     <Content Include="web\templates\DriverLicenceMasterData\ExamRooms.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
-    </Content>
-    <Content Include="web\templates\DriverLicenceMasterData\ExamStationExamRecognitionTypeRelationships.html">
-      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\DriverLicenceMasterData\ExamStationExamRecognitionTypes.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
@@ -5645,9 +5681,6 @@
     <Content Include="web\templates\DriverLicenceMasterData\FilterSchoolInfo.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
-    <Content Include="web\templates\DriverLicenceMasterData\HolidayOrdFederalStateRelationships.html">
-      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
-    </Content>
     <Content Include="web\templates\DriverLicenceMasterData\HolidayOrdFederalStates.html">
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
@@ -5668,9 +5701,6 @@
       <DependentUpon>web.drl.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\DriverLicenceMasterData\LegalBasisRelationships.html">
-      <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
-    </Content>
-    <Content Include="web\templates\DriverLicenceMasterData\MeetingPointOrganizationalUnitRelationships.html">
       <DependentUpon>web.drl.relationships.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\DriverLicenceMasterData\MeetingPointOrganizationalUnits.html">
@@ -5727,6 +5757,21 @@
     <Content Include="web\templates\master-footer.html" />
     <Content Include="web\templates\master.html" />
     <Content Include="web\templates\Settings\AddApplicationLogs.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\AddGetApplicationLogs.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\AddGetJobsStatus.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\AddGetSitesStatus.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\AddGetWcfServicesStatus.html">
+      <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\AddGetWinServicesStatus.html">
       <DependentUpon>web.masterdata.add.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\Settings\AddJobsInfosWithLastResult.html">
@@ -5807,6 +5852,21 @@
     <Content Include="web\templates\Settings\ApplicationLogsRelationships.html">
       <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
     </Content>
+    <Content Include="web\templates\Settings\FilterGetApplicationLogs.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\FilterGetJobsStatus.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\FilterGetSitesStatus.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\FilterGetWcfServicesStatus.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\FilterGetWinServicesStatus.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
     <Content Include="web\templates\Settings\FilterJobsInfosWithLastResult.html">
       <DependentUpon>web.masterdata.templates.tt</DependentUpon>
     </Content>
@@ -5821,6 +5881,36 @@
     </Content>
     <Content Include="web\templates\Settings\FilterWinserviceInfosWithLastResult.html">
       <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\GetApplicationLogs.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\GetApplicationLogsRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\GetJobsStatuses.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\GetJobsStatusRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\GetSitesStatuses.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\GetSitesStatusRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\GetWcfServicesStatuses.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\GetWcfServicesStatusRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\GetWinServicesStatuses.html">
+      <DependentUpon>web.masterdata.templates.tt</DependentUpon>
+    </Content>
+    <Content Include="web\templates\Settings\GetWinServicesStatusRelationships.html">
+      <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
     </Content>
     <Content Include="web\templates\Settings\JobsInfosWithLastResultRelationships.html">
       <DependentUpon>web.masterdata.relationships.templates.tt</DependentUpon>
@@ -7022,9 +7112,6 @@
     <Content Include="web\views\DriverLicenceMasterData\Communities.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
-    <Content Include="web\views\DriverLicenceMasterData\CommunityParticipantRelationships.js">
-      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
-    </Content>
     <Content Include="web\views\DriverLicenceMasterData\CommunityParticipants.js">
       <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
@@ -7033,12 +7120,6 @@
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\CoreDataProductClassBases.js">
       <DependentUpon>web.drl.related.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\DriverLicenceMasterData\CoreDataProductClassBasisRelationships.js">
-      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\DriverLicenceMasterData\CoreDataProductLocalizationRelationships.js">
-      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\CoreDataProductLocalizations.js">
       <DependentUpon>web.drl.related.views.tt</DependentUpon>
@@ -7051,14 +7132,8 @@
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\Custom.CoreDataProduct.js" />
     <Content Include="web\views\DriverLicenceMasterData\DriverLicenceMasterData.js" />
-    <Content Include="web\views\DriverLicenceMasterData\DriverSchoolExamRecognitionTypeRelationships.js">
-      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
-    </Content>
     <Content Include="web\views\DriverLicenceMasterData\DriverSchoolExamRecognitionTypes.js">
       <DependentUpon>web.drl.related.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\DriverLicenceMasterData\DriverSchoolInfoRelationships.js">
-      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\DriverSchoolInfos.js">
       <DependentUpon>web.drl.related.views.tt</DependentUpon>
@@ -7068,9 +7143,6 @@
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\DriverSchools.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\DriverLicenceMasterData\ExamClassArgeMapRelationships.js">
-      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamClassArgeMaps.js">
       <DependentUpon>web.drl.related.views.tt</DependentUpon>
@@ -7082,12 +7154,6 @@
     <Content Include="web\views\DriverLicenceMasterData\ExamClassInclusiveClasses.js">
       <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
-    <Content Include="web\views\DriverLicenceMasterData\ExamClassInclusiveClassRelationships.js">
-      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\DriverLicenceMasterData\ExamClassMapRelationships.js">
-      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
-    </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamClassMaps.js">
       <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
@@ -7097,20 +7163,11 @@
     <Content Include="web\views\DriverLicenceMasterData\ExamClassRequiredClasses.js">
       <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
-    <Content Include="web\views\DriverLicenceMasterData\ExamClassRequiredClassRelationships.js">
-      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
-    </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamClassRestrictedClasses.js">
       <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
-    <Content Include="web\views\DriverLicenceMasterData\ExamClassRestrictedClassRelationships.js">
-      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
-    </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamConstraintExamClasses.js">
       <DependentUpon>web.drl.related.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\DriverLicenceMasterData\ExamConstraintExamClassRelationships.js">
-      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamConstraintRelationships.js">
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
@@ -7127,9 +7184,6 @@
     <Content Include="web\views\DriverLicenceMasterData\ExamRecognitionTypeExamClasses.js">
       <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
-    <Content Include="web\views\DriverLicenceMasterData\ExamRecognitionTypeExamClassRelationships.js">
-      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
-    </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamRecognitionTypeRelationships.js">
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
@@ -7141,9 +7195,6 @@
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamRooms.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\DriverLicenceMasterData\ExamStationExamRecognitionTypeRelationships.js">
-      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\ExamStationExamRecognitionTypes.js">
       <DependentUpon>web.drl.related.views.tt</DependentUpon>
@@ -7209,9 +7260,6 @@
     <Content Include="web\views\DriverLicenceMasterData\FilterSchoolInfo.js">
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
-    <Content Include="web\views\DriverLicenceMasterData\HolidayOrdFederalStateRelationships.js">
-      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
-    </Content>
     <Content Include="web\views\DriverLicenceMasterData\HolidayOrdFederalStates.js">
       <DependentUpon>web.drl.related.views.tt</DependentUpon>
     </Content>
@@ -7232,9 +7280,6 @@
       <DependentUpon>web.drl.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\LegalBasisRelationships.js">
-      <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
-    </Content>
-    <Content Include="web\views\DriverLicenceMasterData\MeetingPointOrganizationalUnitRelationships.js">
       <DependentUpon>web.drl.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\DriverLicenceMasterData\MeetingPointOrganizationalUnits.js">
@@ -7291,6 +7336,21 @@
     <Content Include="web\master-footer.js" />
     <Content Include="web\master.js" />
     <Content Include="web\views\Settings\AddApplicationLogs.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\AddGetApplicationLogs.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\AddGetJobsStatus.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\AddGetSitesStatus.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\AddGetWcfServicesStatus.js">
+      <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\AddGetWinServicesStatus.js">
       <DependentUpon>web.masterdata.add.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\AddJobsInfosWithLastResult.js">
@@ -7371,6 +7431,21 @@
     <Content Include="web\views\Settings\ApplicationLogsRelationships.js">
       <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
     </Content>
+    <Content Include="web\views\Settings\FilterGetApplicationLogs.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\FilterGetJobsStatus.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\FilterGetSitesStatus.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\FilterGetWcfServicesStatus.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\FilterGetWinServicesStatus.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
     <Content Include="web\views\Settings\FilterJobsInfosWithLastResult.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
     </Content>
@@ -7385,6 +7460,36 @@
     </Content>
     <Content Include="web\views\Settings\FilterWinserviceInfosWithLastResult.js">
       <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\GetApplicationLogs.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\GetApplicationLogsRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\GetJobsStatuses.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\GetJobsStatusRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\GetSitesStatuses.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\GetSitesStatusRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\GetWcfServicesStatuses.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\GetWcfServicesStatusRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\GetWinServicesStatuses.js">
+      <DependentUpon>web.masterdata.views.tt</DependentUpon>
+    </Content>
+    <Content Include="web\views\Settings\GetWinServicesStatusRelationships.js">
+      <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>
     </Content>
     <Content Include="web\views\Settings\JobsInfosWithLastResultRelationships.js">
       <DependentUpon>web.masterdata.relationships.views.tt</DependentUpon>

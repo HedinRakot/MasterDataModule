@@ -6,19 +6,19 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,federalStateName: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('ordFederalState', 'federalStateName'), 
+			                        editable: Application.canTableItemBeEdit('OrdFederalState', 'federalStateName'), 
 				                    validation: { required: true, maxLength: 10 } }			
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('ordFederalState', 'description'), 
+			                        editable: Application.canTableItemBeEdit('OrdFederalState', 'description'), 
 				                    validation: { required: false, maxLength: 50 } }			
 			,sysCountryId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('ordFederalState', 'sysCountryId'), 
+			                        editable: Application.canTableItemBeEdit('OrdFederalState', 'sysCountryId'), 
 				                    validation: { required: false } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('ordFederalState', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('OrdFederalState', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('ordFederalState', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('OrdFederalState', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

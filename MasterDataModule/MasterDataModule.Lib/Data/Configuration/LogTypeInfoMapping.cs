@@ -61,6 +61,27 @@ namespace MasterDataModule.Lib.Data.Configuration
                 .HasColumnName(LogTypeInfo.Fields.FilePath)
                 .IsRequired();
 
+            Property(t => t.LastReadDate)
+                .HasColumnName(LogTypeInfo.Fields.LastReadDate);
+
+            Property(t => t.MessagePattern)
+                .HasColumnName(LogTypeInfo.Fields.MessagePattern)
+                .IsUnicode();
+
+            Property(t => t.LastReadPosition)
+                .HasColumnName(LogTypeInfo.Fields.LastReadPosition);
+
+            Property(t => t.StartMessagePattern)
+                .HasColumnName(LogTypeInfo.Fields.StartMessagePattern)
+                .IsUnicode();
+
+            Property(t => t.CheckingTimeout)
+                .HasColumnName(LogTypeInfo.Fields.CheckingTimeout);
+
+            Property(t => t.LastProcessedFile)
+                .HasColumnName(LogTypeInfo.Fields.LastProcessedFile)
+                .IsUnicode();
+
 
             //Relationships
         }

@@ -6,19 +6,19 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('insVatType', 'description'), 
+			                        editable: Application.canTableItemBeEdit('InsVatType', 'description'), 
 				                    validation: { required: false, maxLength: 50 } }			
 			,taxCode: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('insVatType', 'taxCode'), 
+			                        editable: Application.canTableItemBeEdit('InsVatType', 'taxCode'), 
 				                    validation: { required: true, maxLength: 10 } }			
 			,percent: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('insVatType', 'percent'), 
+			                        editable: Application.canTableItemBeEdit('InsVatType', 'percent'), 
 				                    validation: { required: false } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insVatType', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('InsVatType', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insVatType', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('InsVatType', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

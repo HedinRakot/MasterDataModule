@@ -19,6 +19,7 @@ namespace MasterDataModule.Lib.Data
     {
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Configurations.Add(MessageLocalizationMapping.Instance);
             modelBuilder.Configurations.Add(CoreDataProductMapping.Instance);
             modelBuilder.Configurations.Add(ReturnReasonMapping.Instance);

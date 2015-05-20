@@ -11,10 +11,10 @@ namespace MasterDataModule.API.Controllers
         public bool MasterDataSiteInfo { get; set;}
         public bool MasterDataJobInfo { get; set;}
         public bool MasterDataWindowsServiceInfo { get; set;}
+        public bool LogTypeInfo { get; set;}
         public bool Role { get; set;}
         public bool Permission { get; set;}
         public bool MasterDataSubscribers { get; set;}
         public bool MasterDataNotifications { get; set;}
-        public bool LogTypeInfo { get; set;}
     }
 }

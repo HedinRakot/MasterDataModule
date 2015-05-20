@@ -71,9 +71,6 @@ namespace MasterDataModule.Lib.Data.Configuration
 
 
             //Relationships
-            HasOptional(m => m.LogTypeInfo)
-                .WithMany(l => l.MasterDataWindowsServiceInfos)
-                .HasForeignKey(t => t.LogTypeInfoId);
         }
     }
 }

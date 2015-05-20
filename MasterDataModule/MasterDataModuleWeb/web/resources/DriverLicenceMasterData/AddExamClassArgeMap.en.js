@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,11 +8,8 @@ define(function () {
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Arge class map',
 		pleaseSelect: 'Please select',
-
 		examNameArge: 'ARGE exam class',	
-
 		examClassId: 'Class',	
-
 	};
 
 	return resources;

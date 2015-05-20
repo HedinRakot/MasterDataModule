@@ -6,16 +6,16 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,insInspectionStepId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('insAvailableInspectionStep', 'insInspectionStepId'), 
+			                        editable: Application.canTableItemBeEdit('InsAvailableInspectionStep', 'insInspectionStepId'), 
 				                    validation: { required: true } }			
 			,isMandatory: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('insAvailableInspectionStep', 'isMandatory'), 
+			                        editable: Application.canTableItemBeEdit('InsAvailableInspectionStep', 'isMandatory'), 
 				                    validation: { required: true } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insAvailableInspectionStep', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('InsAvailableInspectionStep', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insAvailableInspectionStep', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('InsAvailableInspectionStep', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

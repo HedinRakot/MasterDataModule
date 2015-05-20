@@ -6,49 +6,49 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,personalNumber: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('empEmployee', 'personalNumber'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployee', 'personalNumber'), 
 				                    validation: { required: true, maxLength: 10 } }			
 			,domain: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('empEmployee', 'domain'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployee', 'domain'), 
 				                    validation: { required: false, maxLength: 90 } }			
 			,userName: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('empEmployee', 'userName'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployee', 'userName'), 
 				                    validation: { required: false, maxLength: 50 } }			
 			,windowsUserName: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('empEmployee', 'windowsUserName'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployee', 'windowsUserName'), 
 				                    validation: { required: false, maxLength: 90 } }			
 			,isSsoAllowed: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('empEmployee', 'isSsoAllowed'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployee', 'isSsoAllowed'), 
 				                    validation: { required: false } }			
 			,isEmergencyLoginAllowed: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('empEmployee', 'isEmergencyLoginAllowed'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployee', 'isEmergencyLoginAllowed'), 
 				                    validation: { required: false } }			
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('empEmployee', 'name'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployee', 'name'), 
 				                    validation: { required: false, maxLength: 90 } }			
 			,middleName: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('empEmployee', 'middleName'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployee', 'middleName'), 
 				                    validation: { required: false, maxLength: 90 } }			
 			,lastName: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('empEmployee', 'lastName'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployee', 'lastName'), 
 				                    validation: { required: false, maxLength: 90 } }			
 			,comment: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('empEmployee', 'comment'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployee', 'comment'), 
 				                    validation: { required: false, maxLength: 90 } }			
 			,sexType: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('empEmployee', 'sexType'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployee', 'sexType'), 
 				                    validation: { required: false } }			
 			,title: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('empEmployee', 'title'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployee', 'title'), 
 				                    validation: { required: false, maxLength: 90 } }			
 			,birthdate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('empEmployee', 'birthdate'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployee', 'birthdate'), 
 				                    validation: { required: false, date: true } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('empEmployee', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployee', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('empEmployee', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployee', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

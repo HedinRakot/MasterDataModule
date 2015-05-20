@@ -6,19 +6,19 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('insOpticalDefect', 'name'), 
+			                        editable: Application.canTableItemBeEdit('InsOpticalDefect', 'name'), 
 				                    validation: { required: true, maxLength: 20 } }			
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('insOpticalDefect', 'description'), 
+			                        editable: Application.canTableItemBeEdit('InsOpticalDefect', 'description'), 
 				                    validation: { required: false, maxLength: 50 } }			
 			,isCustom: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('insOpticalDefect', 'isCustom'), 
+			                        editable: Application.canTableItemBeEdit('InsOpticalDefect', 'isCustom'), 
 				                    validation: { required: false } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insOpticalDefect', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('InsOpticalDefect', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insOpticalDefect', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('InsOpticalDefect', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

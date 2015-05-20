@@ -17,7 +17,6 @@ namespace MasterDataModule.Configuration
     {
         private static void InitializeMasterDataConfiguration(IUnityContainer container)
         {
-            container.RegisterType<ILogTypeInfoManager, LogTypeInfoManager>(new PerRequestLifetimeManager());
             container.RegisterType<IMasterDataWcfInfoManager, MasterDataWcfInfoManager>(new PerRequestLifetimeManager());
             container.RegisterType<IMasterDataWcfCheckResultsManager, MasterDataWcfCheckResultsManager>(new PerRequestLifetimeManager());
             container.RegisterType<IMasterDataSiteInfoManager, MasterDataSiteInfoManager>(new PerRequestLifetimeManager());
@@ -34,6 +33,7 @@ namespace MasterDataModule.Configuration
             container.RegisterType<IJobsInfosWithLastResultManager, JobsInfosWithLastResultManager>(new PerRequestLifetimeManager());
             container.RegisterType<IMasterDataWindowsServiceInfoManager, MasterDataWindowsServiceInfoManager>(new PerRequestLifetimeManager());
             container.RegisterType<IMasterDataWindowsServiceCheckResultsManager, MasterDataWindowsServiceCheckResultsManager>(new PerRequestLifetimeManager());
+            container.RegisterType<ILogTypeInfoManager, LogTypeInfoManager>(new PerRequestLifetimeManager());
             container.RegisterType<IRoleManager, RoleManager>(new PerRequestLifetimeManager());
             container.RegisterType<IPermissionManager, PermissionManager>(new PerRequestLifetimeManager());
             container.RegisterType<IMasterDataRolePermissionRspManager, MasterDataRolePermissionRspManager>(new PerRequestLifetimeManager());

@@ -19,5 +19,10 @@ namespace MasterDataModule.Generation
         public string CustomViewBindingProperty { get; set; }
         public string CustomDataBindingProperty { get; set; }
         public bool IsBusinessKey { get; set; }
+
+        public int RowNumber { get; set; }
+        public int ColumnNumber { get; set; }
+        public int GridColumnWidth { get; set; }
+        public int AddViewColumnWidth { get; set; }
     }
 }

@@ -1,12 +1,12 @@
 define([
 	'base/base-object-add-view',
-    'l!t!DriverLicenceMasterData/HolidayOrdFederalStateRelationships'
-], function (BaseView, TabView) {
+    
+], function (BaseView ) {
     'use strict';
 
     var view = BaseView.extend({
 
-        tabView: TabView,
+        
         tableName: 'HolidayOrdFederalState',
         actionUrl: '#HolidayOrdFederalStates',
 

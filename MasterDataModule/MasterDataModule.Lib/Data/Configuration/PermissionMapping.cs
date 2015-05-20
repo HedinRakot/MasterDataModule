@@ -75,6 +75,10 @@ namespace MasterDataModule.Lib.Data.Configuration
                 .HasColumnName(Permission.Fields.ToDate)
                 .IsRequired();
 
+            Property(t => t.Description)
+                .HasColumnName(Permission.Fields.Description)
+                .IsUnicode();
+
 
             //Relationships
         }

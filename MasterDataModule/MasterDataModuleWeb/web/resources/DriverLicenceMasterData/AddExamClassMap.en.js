@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,11 +8,8 @@ define(function () {
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Old class to actual map',
 		pleaseSelect: 'Please select',
-
 		examClassIdOld: 'Actual class',	
-
 		examClassIdActual: 'Class old',	
-
 	};
 
 	return resources;

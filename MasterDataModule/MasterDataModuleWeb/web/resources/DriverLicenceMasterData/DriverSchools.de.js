@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,15 +8,10 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Fahrschule',
 		pleaseSelect: 'Bitte auswählen',
-
 		driverSchoolNumber: 'Fahrschulnummer',	
-
 		ordCustomerId: 'Kunde',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

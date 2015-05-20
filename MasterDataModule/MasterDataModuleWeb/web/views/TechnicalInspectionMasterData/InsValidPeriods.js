@@ -1,23 +1,24 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/TechnicalInspectionMasterData/InsValidPeriods',
-'l!t!TechnicalInspectionMasterData/FilterInsValidPeriod',
-'l!t!TechnicalInspectionMasterData/InsValidPeriodRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
-	'use strict';
-
+'l!t!TechnicalInspectionMasterData/FilterInsValidPeriod'
+], function (BaseView, Collection, FilterView) {
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'InsValidPeriod',
         editUrl: '#InsValidPeriods',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
-	        return this.resources.edit
+	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return [

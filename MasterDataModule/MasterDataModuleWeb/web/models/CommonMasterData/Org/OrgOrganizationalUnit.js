@@ -6,40 +6,40 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,orgNumber: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('orgOrganizationalUnit', 'orgNumber'), 
+			                        editable: Application.canTableItemBeEdit('OrgOrganizationalUnit', 'orgNumber'), 
 				                    validation: { required: true } }			
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('orgOrganizationalUnit', 'name'), 
+			                        editable: Application.canTableItemBeEdit('OrgOrganizationalUnit', 'name'), 
 				                    validation: { required: false, maxLength: 50 } }			
 			,abbr: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('orgOrganizationalUnit', 'abbr'), 
+			                        editable: Application.canTableItemBeEdit('OrgOrganizationalUnit', 'abbr'), 
 				                    validation: { required: false, maxLength: 50 } }			
 			,locationAbbr: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('orgOrganizationalUnit', 'locationAbbr'), 
+			                        editable: Application.canTableItemBeEdit('OrgOrganizationalUnit', 'locationAbbr'), 
 				                    validation: { required: false, maxLength: 50 } }			
 			,sysLocationId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('orgOrganizationalUnit', 'sysLocationId'), 
+			                        editable: Application.canTableItemBeEdit('OrgOrganizationalUnit', 'sysLocationId'), 
 				                    validation: { required: false } }			
 			,orgTypeId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('orgOrganizationalUnit', 'orgTypeId'), 
+			                        editable: Application.canTableItemBeEdit('OrgOrganizationalUnit', 'orgTypeId'), 
 				                    validation: { required: true } }			
 			,emailFrom: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('orgOrganizationalUnit', 'emailFrom'), 
+			                        editable: Application.canTableItemBeEdit('OrgOrganizationalUnit', 'emailFrom'), 
 				                    validation: { required: false, maxLength: 100 } }			
 			,emailTo: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('orgOrganizationalUnit', 'emailTo'), 
+			                        editable: Application.canTableItemBeEdit('OrgOrganizationalUnit', 'emailTo'), 
 				                    validation: { required: false, maxLength: 512 } }			
 			,isEgdokPrintAlways: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('orgOrganizationalUnit', 'isEgdokPrintAlways'), 
+			                        editable: Application.canTableItemBeEdit('OrgOrganizationalUnit', 'isEgdokPrintAlways'), 
 				                    validation: { required: false } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('orgOrganizationalUnit', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('OrgOrganizationalUnit', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('orgOrganizationalUnit', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('OrgOrganizationalUnit', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 			,orgAccountingAreaId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('orgOrganizationalUnit', 'orgAccountingAreaId'), 
+			                        editable: Application.canTableItemBeEdit('OrgOrganizationalUnit', 'orgAccountingAreaId'), 
 				                    validation: { required: false } }			
 		},
 		defaults: function () {

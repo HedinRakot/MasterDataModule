@@ -6,22 +6,22 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,insCoreDataProductId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('insCoreDataProductLocalization', 'insCoreDataProductId'), 
+			                        editable: Application.canTableItemBeEdit('InsCoreDataProductLocalization', 'insCoreDataProductId'), 
 				                    validation: { required: true } }			
 			,sysLanguageId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('insCoreDataProductLocalization', 'sysLanguageId'), 
+			                        editable: Application.canTableItemBeEdit('InsCoreDataProductLocalization', 'sysLanguageId'), 
 				                    validation: { required: true } }			
 			,productName: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('insCoreDataProductLocalization', 'productName'), 
+			                        editable: Application.canTableItemBeEdit('InsCoreDataProductLocalization', 'productName'), 
 				                    validation: { required: true, maxLength: 250 } }			
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('insCoreDataProductLocalization', 'description'), 
+			                        editable: Application.canTableItemBeEdit('InsCoreDataProductLocalization', 'description'), 
 				                    validation: { required: false, maxLength: 250 } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insCoreDataProductLocalization', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('InsCoreDataProductLocalization', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insCoreDataProductLocalization', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('InsCoreDataProductLocalization', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

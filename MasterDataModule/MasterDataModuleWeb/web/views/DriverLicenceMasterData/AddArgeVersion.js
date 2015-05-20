@@ -1,7 +1,7 @@
 define([
 	'base/base-object-add-view',
     'l!t!DriverLicenceMasterData/ArgeVersionRelationships'
-], function (BaseView, TabView) {
+], function (BaseView , TabView) {
     'use strict';
 
     var view = BaseView.extend({
@@ -36,6 +36,8 @@ define([
 
             return this;
         }
+		,events: {
+		}
     });
 
     return view;

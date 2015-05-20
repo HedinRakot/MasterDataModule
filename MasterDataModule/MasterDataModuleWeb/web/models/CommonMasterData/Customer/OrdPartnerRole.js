@@ -6,13 +6,13 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,sapQualifier: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('ordPartnerRole', 'sapQualifier'), 
+			                        editable: Application.canTableItemBeEdit('OrdPartnerRole', 'sapQualifier'), 
 				                    validation: { required: true, maxLength: 50 } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('ordPartnerRole', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('OrdPartnerRole', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('ordPartnerRole', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('OrdPartnerRole', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

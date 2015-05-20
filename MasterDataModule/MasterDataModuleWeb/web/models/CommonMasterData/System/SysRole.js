@@ -6,19 +6,19 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,roleNumber: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('sysRole', 'roleNumber'), 
+			                        editable: Application.canTableItemBeEdit('SysRole', 'roleNumber'), 
 				                    validation: { required: true } }			
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('sysRole', 'name'), 
+			                        editable: Application.canTableItemBeEdit('SysRole', 'name'), 
 				                    validation: { required: false, maxLength: 50 } }			
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('sysRole', 'description'), 
+			                        editable: Application.canTableItemBeEdit('SysRole', 'description'), 
 				                    validation: { required: false, maxLength: 250 } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('sysRole', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('SysRole', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('sysRole', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('SysRole', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

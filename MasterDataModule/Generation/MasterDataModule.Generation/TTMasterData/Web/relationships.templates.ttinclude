@@ -6,6 +6,13 @@
     foreach (var model in context.WebModels)
     {
         var entityContent = model.Table.Content;
+				
+		//skip related objects
+		if(entityContent.IsRelated)
+		{
+			continue;
+		}
+
         context.FileManager.StartNewFile(entityContent.CodeName + "Relationships.html");
 
 		//Model

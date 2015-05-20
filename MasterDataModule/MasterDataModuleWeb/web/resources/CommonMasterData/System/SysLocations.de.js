@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,19 +8,12 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Standortcode',
 		pleaseSelect: 'Bitte auswählen',
-
 		locationCode: 'Standortcode',	
-
 		locationName: 'Ort des Standortcodes',	
-
 		sysCountryId: 'Land des Standortcodes ',	
-
 		ordFederalStateId: 'Bundesland des Standortcodes ',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

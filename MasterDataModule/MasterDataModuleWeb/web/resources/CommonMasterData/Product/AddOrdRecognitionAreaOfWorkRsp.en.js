@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,17 +8,11 @@ define(function () {
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Area of work to recognition',
 		pleaseSelect: 'Please select',
-
 		ordRecognitionId: 'Recognition',	
-
 		ordAreaOfWorkId: 'Area of work',	
-
 		priority: 'Priority',	
-
 		fromDate: 'From date',	
-
 		toDate: 'To date',	
-
 	};
 
 	return resources;

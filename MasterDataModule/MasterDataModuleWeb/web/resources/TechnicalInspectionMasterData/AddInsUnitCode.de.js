@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,19 +8,12 @@ define(function () {
 	    masterData: 'TP Stammdaten',
 	    pageTitle: 'berichtende Stellen',
 		pleaseSelect: 'Bitte auswählen',
-
 		orgAccountingAreaId: 'Buchungskreis ',	
-
 		ordFederalStateId: 'Bundesland',	
-
 		ordAreaOfWorkId: 'Arbeitsgebiet ',	
-
 		unitCode: 'Code für die berichtende Stellen (mit führenden Nullen)',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

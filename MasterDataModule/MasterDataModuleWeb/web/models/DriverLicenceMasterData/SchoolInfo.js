@@ -5,9 +5,12 @@ define(function () {
 	    urlRoot: 'api/SchoolInfos',
 		fields: {
 			id: { type: "number", editable: false }
+			,description: { type: "string", 
+			                        editable: Application.canTableItemBeEdit('SchoolInfo', 'description'), 
+				                    validation: { required: true, maxLength: 250 } }			
 			,text: { type: "string", 
 			                        editable: Application.canTableItemBeEdit('SchoolInfo', 'text'), 
-				                    validation: { required: false, maxLength: 250 } }			
+				                    validation: { required: true, maxLength: 250 } }			
 			,fromDate: { type: "date", 
 			                        editable: Application.canTableItemBeEdit('SchoolInfo', 'fromDate'), 
 				                    validation: { required: true, date: true } }			

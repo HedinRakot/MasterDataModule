@@ -1,12 +1,11 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/CommonMasterData/Product/InsCoreDataProducts',
 'l!t!CommonMasterData/Product/FilterInsCoreDataProduct',
 'l!t!CommonMasterData/Product/InsCoreDataProductRelationships',
 'CommonMasterData/Product/Custom.InsCoreDataProduct'
 ], function (BaseView, Collection, FilterView, DetailView, CustomColumns) {
-	'use strict';
-
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
@@ -14,11 +13,14 @@ define([
         filterView: FilterView,
         tableName: 'InsCoreDataProduct',
         editUrl: '#InsCoreDataProducts',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
-	        return this.resources.edit
+	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return $.merge( CustomColumns(),

@@ -6,22 +6,22 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,sapId: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('sysLanguage', 'sapId'), 
+			                        editable: Application.canTableItemBeEdit('SysLanguage', 'sapId'), 
 				                    validation: { required: true, maxLength: 10 } }			
 			,sapIdIso: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('sysLanguage', 'sapIdIso'), 
+			                        editable: Application.canTableItemBeEdit('SysLanguage', 'sapIdIso'), 
 				                    validation: { required: false, maxLength: 10 } }			
 			,resourceFileName: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('sysLanguage', 'resourceFileName'), 
+			                        editable: Application.canTableItemBeEdit('SysLanguage', 'resourceFileName'), 
 				                    validation: { required: false, maxLength: 10 } }			
 			,isAvailable: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('sysLanguage', 'isAvailable'), 
+			                        editable: Application.canTableItemBeEdit('SysLanguage', 'isAvailable'), 
 				                    validation: { required: false } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('sysLanguage', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('SysLanguage', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('sysLanguage', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('SysLanguage', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,13 +8,9 @@ define(function () {
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Parnter role',
 		pleaseSelect: 'Please select',
-
 		sapQualifier: 'SAP ID',	
-
 		fromDate: 'From date',	
-
 		toDate: 'To date',	
-
 	};
 
 	return resources;

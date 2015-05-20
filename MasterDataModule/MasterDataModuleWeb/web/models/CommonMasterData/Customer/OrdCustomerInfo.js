@@ -6,19 +6,19 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,textValue: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('ordCustomerInfo', 'textValue'), 
+			                        editable: Application.canTableItemBeEdit('OrdCustomerInfo', 'textValue'), 
 				                    validation: { required: true, maxLength: 512 } }			
 			,numberValue: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('ordCustomerInfo', 'numberValue'), 
+			                        editable: Application.canTableItemBeEdit('OrdCustomerInfo', 'numberValue'), 
 				                    validation: { required: false } }			
 			,infoType: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('ordCustomerInfo', 'infoType'), 
+			                        editable: Application.canTableItemBeEdit('OrdCustomerInfo', 'infoType'), 
 				                    validation: { required: false } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('ordCustomerInfo', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('OrdCustomerInfo', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('ordCustomerInfo', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('OrdCustomerInfo', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

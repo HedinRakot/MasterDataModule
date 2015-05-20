@@ -19,6 +19,7 @@ namespace MasterDataModule.API.Controllers
 
         protected override void EntityToModel(SchoolInfo entity, SchoolInfoModel model)
         {
+            model.description = entity.Description;
             model.text = entity.Text;
             model.fromDate = entity.FromDate;
             model.toDate = entity.ToDate;
@@ -27,6 +28,7 @@ namespace MasterDataModule.API.Controllers
         }
         protected override void ModelToEntity(SchoolInfoModel model, SchoolInfo entity, ActionTypes actionType)
         {
+            entity.Description = model.description;
             entity.Text = model.text;
             entity.FromDate = model.fromDate;
             entity.ToDate = model.toDate;

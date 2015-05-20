@@ -4,112 +4,117 @@
 	<a href="#ExamRooms" data-localized="pageTitle"></a> / <%= title %></span>
 
 <form method="post" class="add-model">
-    <div class="inline-block" style="width: 520px;">
-		<div class="editor-label">
-			<label for="roomNumber" data-localized="roomNumber"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" data-role="numerictextbox" id="roomNumber" name="roomNumber" />
-			<input type="hidden" id="duplicateModelName" name="duplicateModelName" />
-            <span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg" data-for="duplicateModelName" role="alert" style="display: none"></span>
-		</div>   
-		<div class="editor-label">
-			<label for="placeAmount" data-localized="placeAmount"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" data-role="numerictextbox" id="placeAmount" name="placeAmount" />
-		</div>   
-		<div class="editor-label">
-			<label for="orgOrganizationalUnitId" data-localized="orgOrganizationalUnitId"></label>
-		</div>
-		<div class="editor-field">
-            <select  id="orgOrganizationalUnitId" name="orgOrganizationalUnitId" />
-		</div>   
-		<div class="editor-label">
-			<label for="fromDate" data-localized="fromDate"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" data-role="datepicker" id="fromDate" name="fromDate" />
-		</div>   
-		<div class="editor-label">
-			<label for="toDate" data-localized="toDate"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" data-role="datepicker" id="toDate" name="toDate" />
-		</div>   
-		<div class="editor-label">
-			<label for="name1" data-localized="name1"></label>
-		</div>
-		<div class="editor-field">
-            <textarea type="text" class="k-textbox" style="width: 362px" id="name1" name="name1" />
-		</div>   
-		<div class="editor-label">
-			<label for="name2" data-localized="name2"></label>
-		</div>
-		<div class="editor-field">
-            <textarea type="text" class="k-textbox" style="width: 362px" id="name2" name="name2" />
-		</div>   
-		<div class="editor-label">
-			<label for="name3" data-localized="name3"></label>
-		</div>
-		<div class="editor-field">
-            <textarea type="text" class="k-textbox" style="width: 362px" id="name3" name="name3" />
-		</div>   
-		<div class="editor-label">
-			<label for="streetHouseNumber" data-localized="streetHouseNumber"></label>
-		</div>
-		<div class="editor-field">
-            <textarea type="text" class="k-textbox" style="width: 362px" id="streetHouseNumber" name="streetHouseNumber" />
-		</div>   
-		<div class="editor-label">
-			<label for="zipCode" data-localized="zipCode"></label>
-		</div>
-		<div class="editor-field">
-            <textarea type="text" class="k-textbox" style="width: 362px" id="zipCode" name="zipCode" />
-		</div>   
-		<div class="editor-label">
-			<label for="zipBox" data-localized="zipBox"></label>
-		</div>
-		<div class="editor-field">
-            <textarea type="text" class="k-textbox" style="width: 362px" id="zipBox" name="zipBox" />
-		</div>   
-		<div class="editor-label">
-			<label for="box" data-localized="box"></label>
-		</div>
-		<div class="editor-field">
-            <textarea type="text" class="k-textbox" style="width: 362px" id="box" name="box" />
-		</div>   
-		<div class="editor-label">
-			<label for="city" data-localized="city"></label>
-		</div>
-		<div class="editor-field">
-            <textarea type="text" class="k-textbox" style="width: 362px" id="city" name="city" />
-		</div>   
-		<div class="editor-label">
-			<label for="phone1" data-localized="phone1"></label>
-		</div>
-		<div class="editor-field">
-            <textarea type="text" class="k-textbox" style="width: 362px" id="phone1" name="phone1" />
-		</div>   
-		<div class="editor-label">
-			<label for="fax" data-localized="fax"></label>
-		</div>
-		<div class="editor-field">
-            <textarea type="text" class="k-textbox" style="width: 362px" id="fax" name="fax" />
-		</div>   
-		<div class="editor-label">
-			<label for="email" data-localized="email"></label>
-		</div>
-		<div class="editor-field">
-            <textarea type="text" class="k-textbox" style="width: 362px" id="email" name="email" />
-		</div>   
-		<div class="editor-label">
-			<label for="sysCountryId" data-localized="sysCountryId"></label>
-		</div>
-		<div class="editor-field">
-            <select  id="sysCountryId" name="sysCountryId" />
-		</div>   
-	</div>
+    <table style="width: 100%; vertical-align: top; padding: 0px; margin: 0px; white-space: nowrap;" cellpadding="0" cellspacing="0">
+		<tr>
+			<td style="padding-right: 25px; vertical-align: top; ">
+				<div class="editor-label">
+					<label for="roomNumber" data-localized="roomNumber"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" data-role="numerictextbox" id="roomNumber" name="roomNumber" />
+					<input type="hidden" id="duplicateModelName" name="duplicateModelName" />
+					<span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg" data-for="duplicateModelName" role="alert" style="display: none"></span>
+				</div> 
+				<div class="editor-label">
+					<label for="placeAmount" data-localized="placeAmount"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" data-role="numerictextbox" id="placeAmount" name="placeAmount" />
+				</div> 
+				<div class="editor-label">
+					<label for="orgOrganizationalUnitId" data-localized="orgOrganizationalUnitId"></label>
+				</div>
+				<div class="editor-field">
+					<select  id="orgOrganizationalUnitId" name="orgOrganizationalUnitId" />
+				</div> 
+				<div class="editor-label">
+					<label for="fromDate" data-localized="fromDate"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" data-role="datepicker" id="fromDate" name="fromDate" />
+				</div> 
+				<div class="editor-label">
+					<label for="toDate" data-localized="toDate"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" data-role="datepicker" id="toDate" name="toDate" />
+				</div> 
+				<div class="editor-label">
+					<label for="name1" data-localized="name1"></label>
+				</div>
+				<div class="editor-field">
+					<textarea type="text" class="k-textbox" rows="5" style="width: 362px" id="name1" name="name1" />
+				</div> 
+				<div class="editor-label">
+					<label for="name2" data-localized="name2"></label>
+				</div>
+				<div class="editor-field">
+					<textarea type="text" class="k-textbox" rows="5" style="width: 362px" id="name2" name="name2" />
+				</div> 
+				<div class="editor-label">
+					<label for="name3" data-localized="name3"></label>
+				</div>
+				<div class="editor-field">
+					<textarea type="text" class="k-textbox" rows="5" style="width: 362px" id="name3" name="name3" />
+				</div> 
+				<div class="editor-label">
+					<label for="streetHouseNumber" data-localized="streetHouseNumber"></label>
+				</div>
+				<div class="editor-field">
+					<textarea type="text" class="k-textbox" rows="5" style="width: 362px" id="streetHouseNumber" name="streetHouseNumber" />
+				</div> 
+				<div class="editor-label">
+					<label for="zipCode" data-localized="zipCode"></label>
+				</div>
+				<div class="editor-field">
+					<textarea type="text" class="k-textbox" rows="5" style="width: 362px" id="zipCode" name="zipCode" />
+				</div> 
+				<div class="editor-label">
+					<label for="zipBox" data-localized="zipBox"></label>
+				</div>
+				<div class="editor-field">
+					<textarea type="text" class="k-textbox" rows="5" style="width: 362px" id="zipBox" name="zipBox" />
+				</div> 
+				<div class="editor-label">
+					<label for="box" data-localized="box"></label>
+				</div>
+				<div class="editor-field">
+					<textarea type="text" class="k-textbox" rows="5" style="width: 362px" id="box" name="box" />
+				</div> 
+				<div class="editor-label">
+					<label for="city" data-localized="city"></label>
+				</div>
+				<div class="editor-field">
+					<textarea type="text" class="k-textbox" rows="5" style="width: 362px" id="city" name="city" />
+				</div> 
+				<div class="editor-label">
+					<label for="phone1" data-localized="phone1"></label>
+				</div>
+				<div class="editor-field">
+					<textarea type="text" class="k-textbox" rows="5" style="width: 362px" id="phone1" name="phone1" />
+				</div> 
+				<div class="editor-label">
+					<label for="fax" data-localized="fax"></label>
+				</div>
+				<div class="editor-field">
+					<textarea type="text" class="k-textbox" rows="5" style="width: 362px" id="fax" name="fax" />
+				</div> 
+				<div class="editor-label">
+					<label for="email" data-localized="email"></label>
+				</div>
+				<div class="editor-field">
+					<textarea type="text" class="k-textbox" rows="5" style="width: 362px" id="email" name="email" />
+				</div> 
+				<div class="editor-label">
+					<label for="sysCountryId" data-localized="sysCountryId"></label>
+				</div>
+				<div class="editor-field">
+					<select  id="sysCountryId" name="sysCountryId" />
+				</div> 
+			</td>
+			<td style="width: 100%;">&nbsp;</td>
+		</tr>
+	</table>
 	<div class="inline-block">        
     </div>      
 

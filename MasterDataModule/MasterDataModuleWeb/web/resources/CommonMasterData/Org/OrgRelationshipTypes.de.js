@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,15 +8,10 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Hierarchietyp',
 		pleaseSelect: 'Bitte auswählen',
-
 		name: 'Kurzbezeichnung des OE-Hierarchietyps',	
-
 		description: 'Beschreibung des OE-Hierarchietyps',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

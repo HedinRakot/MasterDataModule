@@ -1,23 +1,24 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/CommonMasterData/Employee/EmpOrgAssociationTypes',
-'l!t!CommonMasterData/Employee/FilterEmpOrgAssociationType',
-'l!t!CommonMasterData/Employee/EmpOrgAssociationTypeRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
-	'use strict';
-
+'l!t!CommonMasterData/Employee/FilterEmpOrgAssociationType'
+], function (BaseView, Collection, FilterView) {
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'EmpOrgAssociationType',
         editUrl: '#EmpOrgAssociationTypes',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
-	        return this.resources.edit
+	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return [

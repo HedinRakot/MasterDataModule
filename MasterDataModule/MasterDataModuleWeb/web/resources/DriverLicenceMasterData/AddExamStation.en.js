@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,19 +8,12 @@ define(function () {
 	    masterData: 'FE masterdata',
 	    pageTitle: 'FE exam station',
 		pleaseSelect: 'Please select',
-
 		ordFederalStateId: 'Federal State',	
-
 		place: 'Location (Place)',	
-
 		description: 'Description',	
-
 		fromDate: 'From date',	
-
 		toDate: 'To date',	
-
 		sortOrder: 'Sort order',	
-
 	};
 
 	return resources;

@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,19 +8,12 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Rechtsgrund/Klasse',
 		pleaseSelect: 'Bitte auswählen',
-
 		examClassId: 'Klasse ',	
-
 		coreDataProductId: 'Produkt',	
-
 		legalBasisId: 'Rechtsgrund',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 		sortOrder: 'Sortierreihenfolge',	
-
 	};
 
 	return resources;

@@ -4,28 +4,35 @@
 	<a href="#MessageLocalizations" data-localized="pageTitle"></a> / <%= title %></span>
 
 <form method="post" class="add-model">
-    <div class="inline-block" style="width: 520px;">
-		<div class="editor-label">
-			<label for="validationErrorNumber" data-localized="validationErrorNumber"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" data-role="numerictextbox" id="validationErrorNumber" name="validationErrorNumber" />
-			<input type="hidden" id="duplicateModelName" name="duplicateModelName" />
-            <span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg" data-for="duplicateModelName" role="alert" style="display: none"></span>
-		</div>   
-		<div class="editor-label">
-			<label for="sysLanguageId" data-localized="sysLanguageId"></label>
-		</div>
-		<div class="editor-field">
-            <select  id="sysLanguageId" name="sysLanguageId" />
-		</div>   
-		<div class="editor-label">
-			<label for="message" data-localized="message"></label>
-		</div>
-		<div class="editor-field">
-            <textarea type="text" class="k-textbox" style="width: 362px" id="message" name="message" />
-		</div>   
-	</div>
+    <table style="width: 100%; vertical-align: top; padding: 0px; margin: 0px; white-space: nowrap;" cellpadding="0" cellspacing="0">
+		<tr>
+			<td style="padding-right: 25px; vertical-align: top; ">
+				<div class="editor-label">
+					<label for="validationErrorNumber" data-localized="validationErrorNumber"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" data-role="numerictextbox" id="validationErrorNumber" name="validationErrorNumber" />
+					<input type="hidden" id="duplicateModelName" name="duplicateModelName" />
+					<span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg" data-for="duplicateModelName" role="alert" style="display: none"></span>
+				</div> 
+				<div class="editor-label">
+					<label for="sysLanguageId" data-localized="sysLanguageId"></label>
+				</div>
+				<div class="editor-field">
+					<select  id="sysLanguageId" name="sysLanguageId" />
+				</div> 
+			</td>
+			<td style="padding-right: 25px; vertical-align: top; ">
+				<div class="editor-label">
+					<label for="message" data-localized="message"></label>
+				</div>
+				<div class="editor-field">
+					<textarea type="text" class="k-textbox" rows="5" style="width: 362px" id="message" name="message" />
+				</div> 
+			</td>
+			<td style="width: 100%;">&nbsp;</td>
+		</tr>
+	</table>
 	<div class="inline-block">        
     </div>      
 

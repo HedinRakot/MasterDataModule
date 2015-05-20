@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -10,11 +9,8 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Holiday to federal state',
 		pleaseSelect: 'Please select',
-
 		holidayId: 'Holiday',	
-
 		ordFederalStateId: 'Federal State',	
-
 	};
 
 	return resources;

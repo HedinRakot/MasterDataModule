@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,15 +8,10 @@ define(function () {
 	    masterData: 'TP masterdata',
 	    pageTitle: 'PFP inspection type to position',
 		pleaseSelect: 'Please select',
-
 		insPfpPositionId: 'Position',	
-
 		insPfpInspectionTypeId: 'Inspection type',	
-
 		fromDate: 'From date',	
-
 		toDate: 'To date',	
-
 	};
 
 	return resources;

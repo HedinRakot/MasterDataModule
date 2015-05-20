@@ -3,8 +3,7 @@ define([
 'collections/Settings/MasterDataMonitorStates',
 'l!t!Settings/FilterMasterDataMonitorState'
 ], function (BaseView, Collection, FilterView) {
-	'use strict';
-
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
@@ -20,7 +19,6 @@ define([
 	    editItemTitle: function () {
 	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return [

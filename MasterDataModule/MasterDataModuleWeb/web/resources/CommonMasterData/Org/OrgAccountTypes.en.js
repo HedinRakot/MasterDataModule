@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -10,15 +9,10 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Account type',
 		pleaseSelect: 'Please select',
-
 		name: 'Name',	
-
 		description: 'Description',	
-
 		fromDate: 'From date',	
-
 		toDate: 'To date',	
-
 	};
 
 	return resources;

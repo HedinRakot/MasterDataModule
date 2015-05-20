@@ -56,6 +56,30 @@ namespace MasterDataModule.Contracts.Entities.Configuration
             /// Column name 'FILE_PATH' for property <see cref="LogTypeInfo.FilePath"/>
             /// </summary>
             public static readonly string FilePath = "FILE_PATH";
+            /// <summary>
+            /// Column name 'LAST_READ_DATE' for property <see cref="LogTypeInfo.LastReadDate"/>
+            /// </summary>
+            public static readonly string LastReadDate = "LAST_READ_DATE";
+            /// <summary>
+            /// Column name 'MESSAGE_PATTERN' for property <see cref="LogTypeInfo.MessagePattern"/>
+            /// </summary>
+            public static readonly string MessagePattern = "MESSAGE_PATTERN";
+            /// <summary>
+            /// Column name 'LAST_READ_POSITION' for property <see cref="LogTypeInfo.LastReadPosition"/>
+            /// </summary>
+            public static readonly string LastReadPosition = "LAST_READ_POSITION";
+            /// <summary>
+            /// Column name 'START_MESSAGE_PATTERN' for property <see cref="LogTypeInfo.StartMessagePattern"/>
+            /// </summary>
+            public static readonly string StartMessagePattern = "START_MESSAGE_PATTERN";
+            /// <summary>
+            /// Column name 'CHECKING_TIMEOUT' for property <see cref="LogTypeInfo.CheckingTimeout"/>
+            /// </summary>
+            public static readonly string CheckingTimeout = "CHECKING_TIMEOUT";
+            /// <summary>
+            /// Column name 'LAST_PROCESSED_FILE' for property <see cref="LogTypeInfo.LastProcessedFile"/>
+            /// </summary>
+            public static readonly string LastProcessedFile = "LAST_PROCESSED_FILE";
           
         }
         #endregion
@@ -74,10 +98,12 @@ namespace MasterDataModule.Contracts.Entities.Configuration
         public string FileName{ get; set; }
         public string FilePattern{ get; set; }
         public string FilePath{ get; set; }
-        public virtual ICollection<MasterDataWcfInfo> MasterDataWcfInfos{ get; set; }
-        public virtual ICollection<MasterDataSiteInfo> MasterDataSiteInfos{ get; set; }
-        public virtual ICollection<MasterDataJobInfo> MasterDataJobInfos{ get; set; }
-        public virtual ICollection<MasterDataWindowsServiceInfo> MasterDataWindowsServiceInfos{ get; set; }
+        public DateTime? LastReadDate{ get; set; }
+        public string MessagePattern{ get; set; }
+        public long? LastReadPosition{ get; set; }
+        public string StartMessagePattern{ get; set; }
+        public int? CheckingTimeout{ get; set; }
+        public string LastProcessedFile{ get; set; }
         public virtual ICollection<ApplicationLogs> ApplicationLogs{ get; set; }
         DateTime? IIntervalFields.FromDate
         {
@@ -119,6 +145,12 @@ namespace MasterDataModule.Contracts.Entities.Configuration
                        FileName = FileName,
                        FilePattern = FilePattern,
                        FilePath = FilePath,
+                       LastReadDate = LastReadDate,
+                       MessagePattern = MessagePattern,
+                       LastReadPosition = LastReadPosition,
+                       StartMessagePattern = StartMessagePattern,
+                       CheckingTimeout = CheckingTimeout,
+                       LastProcessedFile = LastProcessedFile,
         	           };
         }
     }

@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,15 +8,10 @@ define(function () {
 	    masterData: 'TP Stammdaten',
 	    pageTitle: 'Produktklasse-Produktklassengruppe',
 		pleaseSelect: 'Bitte auswählen',
-
 		description: 'Beschreibung der Produktklassengruppe',	
-
 		sapId: 'Schlüsselwert der Produktklassengruppe',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

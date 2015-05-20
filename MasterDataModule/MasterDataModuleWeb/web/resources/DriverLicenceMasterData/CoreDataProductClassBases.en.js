@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -10,19 +9,12 @@ define(function () {
 		driverLicenceMasterData: 'Driver licence masterdata',
 	    pageTitle: 'Legal basis/class',
 		pleaseSelect: 'Please select',
-
 		examClassId: 'Class',	
-
 		coreDataProductId: 'Product',	
-
 		legalBasisId: 'Legalbasis',	
-
 		fromDate: 'From date',	
-
 		toDate: 'To date',	
-
 		sortOrder: 'Sort order',	
-
 	};
 
 	return resources;

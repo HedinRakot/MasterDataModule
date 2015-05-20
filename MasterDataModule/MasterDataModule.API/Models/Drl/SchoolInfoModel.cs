@@ -14,8 +14,15 @@ namespace MasterDataModule.API.Models
     {
 
         /// <summary>
+        ///     Model property for <see cref="SchoolInfo.Description"/> entity
+        /// </summary>
+        [Required]
+        [DataMember]
+        public string description{ get; set; }
+        /// <summary>
         ///     Model property for <see cref="SchoolInfo.Text"/> entity
         /// </summary>
+        [Required]
         [DataMember]
         public string text{ get; set; }
         /// <summary>

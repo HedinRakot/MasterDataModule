@@ -1,23 +1,24 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/TechnicalInspectionMasterData/InsInspectionSteps',
-'l!t!TechnicalInspectionMasterData/FilterInsInspectionStep',
-'l!t!TechnicalInspectionMasterData/InsInspectionStepRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
-	'use strict';
-
+'l!t!TechnicalInspectionMasterData/FilterInsInspectionStep'
+], function (BaseView, Collection, FilterView) {
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'InsInspectionStep',
         editUrl: '#InsInspectionSteps',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
-	        return this.resources.edit
+	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return [

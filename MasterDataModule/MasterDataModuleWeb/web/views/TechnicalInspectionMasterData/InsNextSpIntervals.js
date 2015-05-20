@@ -1,23 +1,24 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/TechnicalInspectionMasterData/InsNextSpIntervals',
-'l!t!TechnicalInspectionMasterData/FilterInsNextSpInterval',
-'l!t!TechnicalInspectionMasterData/InsNextSpIntervalRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
-	'use strict';
-
+'l!t!TechnicalInspectionMasterData/FilterInsNextSpInterval'
+], function (BaseView, Collection, FilterView) {
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'InsNextSpInterval',
         editUrl: '#InsNextSpIntervals',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
-	        return this.resources.edit
+	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return [

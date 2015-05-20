@@ -41,7 +41,9 @@ define([
                     var dt = new Date(2070, 11, 31);
 		            e.model.toDate = dt;
 		            var numeric = e.container.find("input[name=toDate]");
-		            numeric[0].value = dt.toLocaleDateString();
+					
+					if(numeric != undefined && numeric.length > 0)
+						numeric[0].value = dt.toLocaleDateString();
 		        }
 		    });
 

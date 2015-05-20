@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,17 +8,11 @@ define(function () {
 	    masterData: 'FE masterdata',
 	    pageTitle: 'Inclusiv class',
 		pleaseSelect: 'Please select',
-
 		examClassId: 'Class',	
-
 		examClassIdInclusive: 'inclusiv class',	
-
 		fromDate: 'From date',	
-
 		toDate: 'To date',	
-
 		isConditional: 'Indication whether additional condition exists',	
-
 	};
 
 	return resources;

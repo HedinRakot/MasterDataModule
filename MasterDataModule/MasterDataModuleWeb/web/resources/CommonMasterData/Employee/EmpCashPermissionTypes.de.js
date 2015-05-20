@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,15 +8,10 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Auszahlungsrecht',
 		pleaseSelect: 'Bitte auswählen',
-
 		name: 'Kurzbezeichnung des Auszahlungsgrunds',	
-
 		description: 'Beschreibung des Auszahlungsgrund',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

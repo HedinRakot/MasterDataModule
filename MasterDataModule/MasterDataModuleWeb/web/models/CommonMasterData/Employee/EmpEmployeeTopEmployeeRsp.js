@@ -6,16 +6,16 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,empEmployeeId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('empEmployeeTopEmployeeRsp', 'empEmployeeId'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployeeTopEmployeeRsp', 'empEmployeeId'), 
 				                    validation: { required: true } }			
 			,topEmployeeId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('empEmployeeTopEmployeeRsp', 'topEmployeeId'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployeeTopEmployeeRsp', 'topEmployeeId'), 
 				                    validation: { required: true } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('empEmployeeTopEmployeeRsp', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployeeTopEmployeeRsp', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('empEmployeeTopEmployeeRsp', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('EmpEmployeeTopEmployeeRsp', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,15 +8,10 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Rolle',
 		pleaseSelect: 'Bitte auswählen',
-
 		empEmployeeId: 'Mitarbeiter',	
-
 		sysRoleId: 'Rolle',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

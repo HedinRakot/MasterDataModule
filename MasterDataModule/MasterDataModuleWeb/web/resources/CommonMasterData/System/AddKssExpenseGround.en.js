@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,19 +8,12 @@ define(function () {
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Expense ground',
 		pleaseSelect: 'Please select',
-
 		description: 'Description',	
-
 		account: 'Account',	
-
 		insVatTypeId: 'Vat type',	
-
 		maxAmount: 'Max amount',	
-
 		fromDate: 'From date',	
-
 		toDate: 'To date',	
-
 	};
 
 	return resources;

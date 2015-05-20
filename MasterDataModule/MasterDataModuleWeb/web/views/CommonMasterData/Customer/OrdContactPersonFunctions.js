@@ -1,23 +1,24 @@
 define([
-	'base/base-object-grid-view',
+'base/base-object-grid-view',
 'collections/CommonMasterData/Customer/OrdContactPersonFunctions',
-'l!t!CommonMasterData/Customer/FilterOrdContactPersonFunction',
-'l!t!CommonMasterData/Customer/OrdContactPersonFunctionRelationships'
-], function (BaseView, Collection, FilterView, DetailView) {
-	'use strict';
-
+'l!t!CommonMasterData/Customer/FilterOrdContactPersonFunction'
+], function (BaseView, Collection, FilterView) {
+	'use strict';		
 	var view = BaseView.extend({
 
         collectionType: Collection,
-        detailView: DetailView,
+        
         filterView: FilterView,
         tableName: 'OrdContactPersonFunction',
         editUrl: '#OrdContactPersonFunctions',
+		
+		
+		
+		
 
 	    editItemTitle: function () {
-	        return this.resources.edit
+	        return this.resources.edit;
 	    },
-
 		columns: function () {
 			
 			return [

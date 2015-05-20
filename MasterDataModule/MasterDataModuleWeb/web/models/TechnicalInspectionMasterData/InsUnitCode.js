@@ -6,22 +6,22 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,orgAccountingAreaId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('insUnitCode', 'orgAccountingAreaId'), 
+			                        editable: Application.canTableItemBeEdit('InsUnitCode', 'orgAccountingAreaId'), 
 				                    validation: { required: true } }			
 			,ordFederalStateId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('insUnitCode', 'ordFederalStateId'), 
+			                        editable: Application.canTableItemBeEdit('InsUnitCode', 'ordFederalStateId'), 
 				                    validation: { required: true } }			
 			,ordAreaOfWorkId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('insUnitCode', 'ordAreaOfWorkId'), 
+			                        editable: Application.canTableItemBeEdit('InsUnitCode', 'ordAreaOfWorkId'), 
 				                    validation: { required: true } }			
 			,unitCode: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('insUnitCode', 'unitCode'), 
+			                        editable: Application.canTableItemBeEdit('InsUnitCode', 'unitCode'), 
 				                    validation: { required: false, maxLength: 8 } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insUnitCode', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('InsUnitCode', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insUnitCode', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('InsUnitCode', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

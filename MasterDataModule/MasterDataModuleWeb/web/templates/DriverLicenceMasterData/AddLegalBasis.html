@@ -4,68 +4,73 @@
 	<a href="#LegalBases" data-localized="pageTitle"></a> / <%= title %></span>
 
 <form method="post" class="add-model">
-    <div class="inline-block" style="width: 520px;">
-		<div class="editor-label">
-			<label for="name" data-localized="name"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" class="k-textbox" style="width: 362px" id="name" name="name" />
-			<input type="hidden" id="duplicateModelName" name="duplicateModelName" />
-            <span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg" data-for="duplicateModelName" role="alert" style="display: none"></span>
-		</div>   
-		<div class="editor-label">
-			<label for="description" data-localized="description"></label>
-		</div>
-		<div class="editor-field">
-            <textarea type="text" class="k-textbox" style="width: 362px" id="description" name="description" />
-		</div>   
-		<div class="editor-label">
-			<label for="educationCertificateRequired" data-localized="educationCertificateRequired"></label>
-            <input type="checkbox" id="educationCertificateRequired" name="educationCertificateRequired" />
-		</div>   
-		<div class="editor-label">
-			<label for="firstAssignation" data-localized="firstAssignation"></label>
-		</div>
-		<div class="editor-field">
-            <select  id="firstAssignation" name="firstAssignation" />
-		</div>   
-		<div class="editor-label">
-			<label for="messageReason" data-localized="messageReason"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" class="k-textbox" style="width: 362px" id="messageReason" name="messageReason" />
-		</div>   
-		<div class="editor-label">
-			<label for="messageReasonStyle" data-localized="messageReasonStyle"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" class="k-textbox" style="width: 362px" id="messageReasonStyle" name="messageReasonStyle" />
-		</div>   
-		<div class="editor-label">
-			<label for="fromDate" data-localized="fromDate"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" data-role="datepicker" id="fromDate" name="fromDate" />
-		</div>   
-		<div class="editor-label">
-			<label for="toDate" data-localized="toDate"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" data-role="datepicker" id="toDate" name="toDate" />
-		</div>   
-		<div class="editor-label">
-			<label for="replacementId" data-localized="replacementId"></label>
-		</div>
-		<div class="editor-field">
-            <select  id="replacementId" name="replacementId" />
-		</div>   
-		<div class="editor-label">
-			<label for="printName" data-localized="printName"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" class="k-textbox" style="width: 362px" id="printName" name="printName" />
-		</div>   
-	</div>
+    <table style="width: 100%; vertical-align: top; padding: 0px; margin: 0px; white-space: nowrap;" cellpadding="0" cellspacing="0">
+		<tr>
+			<td style="padding-right: 25px; vertical-align: top; ">
+				<div class="editor-label">
+					<label for="name" data-localized="name"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" class="k-textbox" style="width: 362px" id="name" name="name" />
+					<input type="hidden" id="duplicateModelName" name="duplicateModelName" />
+					<span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg" data-for="duplicateModelName" role="alert" style="display: none"></span>
+				</div> 
+				<div class="editor-label">
+					<label for="description" data-localized="description"></label>
+				</div>
+				<div class="editor-field">
+					<textarea type="text" class="k-textbox" rows="5" style="width: 362px" id="description" name="description" />
+				</div> 
+				<div class="editor-label">
+					<label for="educationCertificateRequired" data-localized="educationCertificateRequired"></label>
+					<input type="checkbox" id="educationCertificateRequired" name="educationCertificateRequired" />
+				</div> 
+				<div class="editor-label">
+					<label for="firstAssignation" data-localized="firstAssignation"></label>
+				</div>
+				<div class="editor-field">
+					<select  id="firstAssignation" name="firstAssignation" />
+				</div> 
+				<div class="editor-label">
+					<label for="messageReason" data-localized="messageReason"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" class="k-textbox" style="width: 362px" id="messageReason" name="messageReason" />
+				</div> 
+				<div class="editor-label">
+					<label for="messageReasonStyle" data-localized="messageReasonStyle"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" class="k-textbox" style="width: 362px" id="messageReasonStyle" name="messageReasonStyle" />
+				</div> 
+				<div class="editor-label">
+					<label for="fromDate" data-localized="fromDate"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" data-role="datepicker" id="fromDate" name="fromDate" />
+				</div> 
+				<div class="editor-label">
+					<label for="toDate" data-localized="toDate"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" data-role="datepicker" id="toDate" name="toDate" />
+				</div> 
+				<div class="editor-label">
+					<label for="replacementId" data-localized="replacementId"></label>
+				</div>
+				<div class="editor-field">
+					<select  id="replacementId" name="replacementId" />
+				</div> 
+				<div class="editor-label">
+					<label for="printName" data-localized="printName"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" class="k-textbox" style="width: 362px" id="printName" name="printName" />
+				</div> 
+			</td>
+			<td style="width: 100%;">&nbsp;</td>
+		</tr>
+	</table>
 	<div class="inline-block">        
     </div>      
 

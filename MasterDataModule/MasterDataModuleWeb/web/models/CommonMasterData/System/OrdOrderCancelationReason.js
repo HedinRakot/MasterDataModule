@@ -6,13 +6,13 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,cancelationReasonText: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('ordOrderCancelationReason', 'cancelationReasonText'), 
+			                        editable: Application.canTableItemBeEdit('OrdOrderCancelationReason', 'cancelationReasonText'), 
 				                    validation: { required: true, maxLength: 1024 } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('ordOrderCancelationReason', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('OrdOrderCancelationReason', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('ordOrderCancelationReason', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('OrdOrderCancelationReason', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

@@ -32,6 +32,10 @@ namespace MasterDataModule.API.Controllers
             	result.Add("MasterDataWindowsServiceInfo", GetViewCollection<MasterDataWindowsServiceInfo, int, IMasterDataWindowsServiceInfoManager>(
             		(IMasterDataWindowsServiceInfoManager)resolver.GetService(typeof(IMasterDataWindowsServiceInfoManager))));
 
+            if (model.LogTypeInfo)
+            	result.Add("LogTypeInfo", GetViewCollection<LogTypeInfo, int, ILogTypeInfoManager>(
+            		(ILogTypeInfoManager)resolver.GetService(typeof(ILogTypeInfoManager))));
+
             if (model.Role)
             	result.Add("Role", GetViewCollection<Role, int, IRoleManager>(
             		(IRoleManager)resolver.GetService(typeof(IRoleManager))));
@@ -47,10 +51,6 @@ namespace MasterDataModule.API.Controllers
             if (model.MasterDataNotifications)
             	result.Add("MasterDataNotifications", GetViewCollection<MasterDataNotifications, int, IMasterDataNotificationsManager>(
             		(IMasterDataNotificationsManager)resolver.GetService(typeof(IMasterDataNotificationsManager))));
-
-            if (model.LogTypeInfo)
-            	result.Add("LogTypeInfo", GetViewCollection<LogTypeInfo, int, ILogTypeInfoManager>(
-            		(ILogTypeInfoManager)resolver.GetService(typeof(ILogTypeInfoManager))));
 
         }
     }

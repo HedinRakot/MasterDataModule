@@ -4,106 +4,160 @@
 	<a href="#CoreDataProducts" data-localized="pageTitle"></a> / <%= title %></span>
 
 <form method="post" class="add-model">
-    <div class="inline-block" style="width: 520px;">
-		<div class="editor-label">
-			<label for="insCoreDataProductId" data-localized="insCoreDataProductId"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" class="k-textbox" style="width: 190px" disabled="disabled" id="insCoreDataProductId_Name" name="insCoreDataProductId_Name" />
+    <table style="width: 100%; vertical-align: top; padding: 0px; margin: 0px; white-space: nowrap;" cellpadding="0" cellspacing="0">
+		<tr>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="insCoreDataProductId" data-localized="insCoreDataProductId"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" class="k-textbox" style="width: 190px" disabled="disabled" id="insCoreDataProductId_Name" name="insCoreDataProductId_Name" />
             <button class="k-primary k-button SelectProduct" style="width: auto;" type="button" data-localized="SelectProduct">Auswählen</button>
             <input type="hidden" id="insCoreDataProductId" name="insCoreDataProductId" />
-		</div>   
-		<div class="editor-label">
-			<label for="minAge" data-localized="minAge"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" data-role="numerictextbox" id="minAge" name="minAge" />
-		</div>   
-		<div class="editor-label">
-			<label for="maxAge" data-localized="maxAge"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" data-role="numerictextbox" id="maxAge" name="maxAge" />
-		</div>   
-		<div class="editor-label">
-			<label for="examType" data-localized="examType"></label>
-		</div>
-		<div class="editor-field">
-            <select  id="examType" name="examType" />
-		</div>   
-		<div class="editor-label">
-			<label for="priorTimeInMonths" data-localized="priorTimeInMonths"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" data-role="numerictextbox" id="priorTimeInMonths" name="priorTimeInMonths" />
-		</div>   
-		<div class="editor-label">
-			<label for="expirationInMonth" data-localized="expirationInMonth"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" data-role="numerictextbox" id="expirationInMonth" name="expirationInMonth" />
-		</div>   
-		<div class="editor-label">
-			<label for="repeatTimeInDays" data-localized="repeatTimeInDays"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" data-role="numerictextbox" id="repeatTimeInDays" name="repeatTimeInDays" />
-		</div>   
-		<div class="editor-label">
-			<label for="trainingCertFlag" data-localized="trainingCertFlag"></label>
-            <input type="checkbox" id="trainingCertFlag" name="trainingCertFlag" />
-		</div>   
-		<div class="editor-label">
-			<label for="resultFlag" data-localized="resultFlag"></label>
-            <input type="checkbox" id="resultFlag" name="resultFlag" />
-		</div>   
-		<div class="editor-label">
-			<label for="multiplyFlag" data-localized="multiplyFlag"></label>
-            <input type="checkbox" id="multiplyFlag" name="multiplyFlag" />
-		</div>   
-		<div class="editor-label">
-			<label for="fromDate" data-localized="fromDate"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" data-role="datepicker" id="fromDate" name="fromDate" />
-		</div>   
-		<div class="editor-label">
-			<label for="toDate" data-localized="toDate"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" data-role="datepicker" id="toDate" name="toDate" />
-		</div>   
-		<div class="editor-label">
-			<label for="isMofaPrint" data-localized="isMofaPrint"></label>
-            <input type="checkbox" id="isMofaPrint" name="isMofaPrint" />
-		</div>   
-		<div class="editor-label">
-			<label for="isAdditionalProduct" data-localized="isAdditionalProduct"></label>
-            <input type="checkbox" id="isAdditionalProduct" name="isAdditionalProduct" />
-		</div>   
-		<div class="editor-label">
-			<label for="isPrepaymentRequired" data-localized="isPrepaymentRequired"></label>
-            <input type="checkbox" id="isPrepaymentRequired" name="isPrepaymentRequired" />
-		</div>   
-		<div class="editor-label">
-			<label for="isMandatory" data-localized="isMandatory"></label>
-            <input type="checkbox" id="isMandatory" name="isMandatory" />
-		</div>   
-		<div class="editor-label">
-			<label for="feProductNumber" data-localized="feProductNumber"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" class="k-textbox" style="width: 362px" id="feProductNumber" name="feProductNumber" />
-			<input type="hidden" id="duplicateModelName" name="duplicateModelName" />
-            <span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg" data-for="duplicateModelName" role="alert" style="display: none"></span>
-		</div>   
-		<div class="editor-label">
-			<label for="repeatTimeInDaysReduced" data-localized="repeatTimeInDaysReduced"></label>
-		</div>
-		<div class="editor-field">
-            <input type="text" data-role="numerictextbox" id="repeatTimeInDaysReduced" name="repeatTimeInDaysReduced" />
-		</div>   
-	</div>
+				</div> 
+			</td>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="minAge" data-localized="minAge"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" data-role="numerictextbox" id="minAge" name="minAge" />
+				</div> 
+			</td>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="fromDate" data-localized="fromDate"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" data-role="datepicker" id="fromDate" name="fromDate" />
+				</div> 
+			</td>
+			<td style="width: 100%;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="examType" data-localized="examType"></label>
+				</div>
+				<div class="editor-field">
+					<select  id="examType" name="examType" />
+				</div> 
+			</td>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="maxAge" data-localized="maxAge"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" data-role="numerictextbox" id="maxAge" name="maxAge" />
+				</div> 
+			</td>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="toDate" data-localized="toDate"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" data-role="datepicker" id="toDate" name="toDate" />
+				</div> 
+			</td>
+			<td style="width: 100%;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="priorTimeInMonths" data-localized="priorTimeInMonths"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" data-role="numerictextbox" id="priorTimeInMonths" name="priorTimeInMonths" />
+				</div> 
+			</td>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="expirationInMonth" data-localized="expirationInMonth"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" data-role="numerictextbox" id="expirationInMonth" name="expirationInMonth" />
+				</div> 
+			</td>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="repeatTimeInDays" data-localized="repeatTimeInDays"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" data-role="numerictextbox" id="repeatTimeInDays" name="repeatTimeInDays" />
+				</div> 
+			</td>
+			<td style="width: 100%;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="trainingCertFlag" data-localized="trainingCertFlag"></label>
+					<input type="checkbox" id="trainingCertFlag" name="trainingCertFlag" />
+				</div> 
+			</td>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="resultFlag" data-localized="resultFlag"></label>
+					<input type="checkbox" id="resultFlag" name="resultFlag" />
+				</div> 
+			</td>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="isPrepaymentRequired" data-localized="isPrepaymentRequired"></label>
+					<input type="checkbox" id="isPrepaymentRequired" name="isPrepaymentRequired" />
+				</div> 
+			</td>
+			<td style="width: 100%;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="isMandatory" data-localized="isMandatory"></label>
+					<input type="checkbox" id="isMandatory" name="isMandatory" />
+				</div> 
+			</td>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="isAdditionalProduct" data-localized="isAdditionalProduct"></label>
+					<input type="checkbox" id="isAdditionalProduct" name="isAdditionalProduct" />
+				</div> 
+			</td>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="multiplyFlag" data-localized="multiplyFlag"></label>
+					<input type="checkbox" id="multiplyFlag" name="multiplyFlag" />
+				</div> 
+			</td>
+			<td style="width: 100%;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="feProductNumber" data-localized="feProductNumber"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" class="k-textbox" style="width: 280px" id="feProductNumber" name="feProductNumber" />
+					<input type="hidden" id="duplicateModelName" name="duplicateModelName" />
+					<span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg" data-for="duplicateModelName" role="alert" style="display: none"></span>
+				</div> 
+			</td>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="repeatTimeInDaysReduced" data-localized="repeatTimeInDaysReduced"></label>
+				</div>
+				<div class="editor-field">
+					<input type="text" data-role="numerictextbox" id="repeatTimeInDaysReduced" name="repeatTimeInDaysReduced" />
+				</div> 
+			</td>
+			<td style="padding-right: 25px; vertical-align: top; width: 280px;">
+				<div class="editor-label">
+					<label for="isMofaPrint" data-localized="isMofaPrint"></label>
+					<input type="checkbox" id="isMofaPrint" name="isMofaPrint" />
+				</div> 
+			</td>
+			<td style="width: 100%;">&nbsp;</td>
+		</tr>
+	</table>
 	<div class="inline-block">        
     </div>      
 

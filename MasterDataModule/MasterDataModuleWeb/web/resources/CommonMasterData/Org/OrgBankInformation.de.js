@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,17 +8,11 @@ define(function () {
 	    masterData: 'Allgemeine Stammdaten',
 	    pageTitle: 'Bankverbindung',
 		pleaseSelect: 'Bitte auswählen',
-
 		bankName: 'Bankname',	
-
 		bankCode: 'Bankleitzahl bzw. BIC',	
-
 		bankAccount: 'Kontonummer bzw. IBAN',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

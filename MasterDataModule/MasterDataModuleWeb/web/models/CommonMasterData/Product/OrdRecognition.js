@@ -6,16 +6,16 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,ordRecognitionTypeId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('ordRecognition', 'ordRecognitionTypeId'), 
+			                        editable: Application.canTableItemBeEdit('OrdRecognition', 'ordRecognitionTypeId'), 
 				                    validation: { required: true } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('ordRecognition', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('OrdRecognition', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('ordRecognition', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('OrdRecognition', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 			,orgAccountingAreaId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('ordRecognition', 'orgAccountingAreaId'), 
+			                        editable: Application.canTableItemBeEdit('OrdRecognition', 'orgAccountingAreaId'), 
 				                    validation: { required: true } }			
 		},
 		defaults: function () {

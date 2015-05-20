@@ -6,19 +6,19 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('insValidPeriod', 'description'), 
+			                        editable: Application.canTableItemBeEdit('InsValidPeriod', 'description'), 
 				                    validation: { required: false, maxLength: 50 } }			
 			,validityPeriod: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('insValidPeriod', 'validityPeriod'), 
+			                        editable: Application.canTableItemBeEdit('InsValidPeriod', 'validityPeriod'), 
 				                    validation: { required: true } }			
 			,isNextTerminPossible: { type: "boolean", 
-			                        editable: Application.canTableItemBeEdit('insValidPeriod', 'isNextTerminPossible'), 
+			                        editable: Application.canTableItemBeEdit('InsValidPeriod', 'isNextTerminPossible'), 
 				                    validation: { required: false } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insValidPeriod', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('InsValidPeriod', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insValidPeriod', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('InsValidPeriod', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

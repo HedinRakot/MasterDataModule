@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,13 +8,10 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Fahrschulinformationstyp',
 		pleaseSelect: 'Bitte auswählen',
-
+		description: 'Kurzbeschreibung des Fahrschulinformationstyps',	
 		text: 'Beschreibung des Fahrschulinformationstyps',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

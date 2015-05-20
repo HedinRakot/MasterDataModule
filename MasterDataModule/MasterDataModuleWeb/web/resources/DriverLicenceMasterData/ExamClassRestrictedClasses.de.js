@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,15 +8,10 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Ausschlussklasse ',
 		pleaseSelect: 'Bitte auswählen',
-
 		examClassId: 'übergeordnete Klasse ',	
-
 		examClassIdRestricted: 'Klasse mit Beschraenkung',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

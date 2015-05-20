@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,17 +8,11 @@ define(function () {
 	    masterData: 'TP Stammdaten',
 	    pageTitle: 'Produktklasse-optische Mängel',
 		pleaseSelect: 'Bitte auswählen',
-
 		name: 'Schlüsselwert des optischen Mangels',	
-
 		description: 'Beschreibung des optischen Mangels',	
-
 		isCustom: 'Angabe, ob Anwender zum optischen Mangel eine Bemerkung angeben kann ',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

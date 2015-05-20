@@ -16,10 +16,6 @@ namespace MasterDataModule.Contracts
     public partial interface IMasterDataConfigurationEntities
     {
         /// <summary>
-        ///     Set of <see cref="LogTypeInfo"/> entities from table dbo.LOG_TYPE_INFO
-        /// </summary>
-        IQueryable<LogTypeInfo> LogTypeInfo{get;}
-        /// <summary>
         ///     Set of <see cref="MasterDataWcfInfo"/> entities from table dbo.MASTER_DATA_WCF_INFO
         /// </summary>
         IQueryable<MasterDataWcfInfo> MasterDataWcfInfo{get;}
@@ -83,6 +79,10 @@ namespace MasterDataModule.Contracts
         ///     Set of <see cref="MasterDataWindowsServiceCheckResults"/> entities from table dbo.MASTER_DATA_WINDOWS_SERVICE_CHECK_RESULTS
         /// </summary>
         IQueryable<MasterDataWindowsServiceCheckResults> MasterDataWindowsServiceCheckResults{get;}
+        /// <summary>
+        ///     Set of <see cref="LogTypeInfo"/> entities from table dbo.LOG_TYPE_INFO
+        /// </summary>
+        IQueryable<LogTypeInfo> LogTypeInfo{get;}
         /// <summary>
         ///     Set of <see cref="Role"/> entities from table dbo.MASTER_DATA_ROLE
         /// </summary>

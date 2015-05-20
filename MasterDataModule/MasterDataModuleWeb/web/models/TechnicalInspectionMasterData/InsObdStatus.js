@@ -6,19 +6,19 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,name: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('insObdStatus', 'name'), 
+			                        editable: Application.canTableItemBeEdit('InsObdStatus', 'name'), 
 				                    validation: { required: true, maxLength: 3 } }			
 			,description: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('insObdStatus', 'description'), 
+			                        editable: Application.canTableItemBeEdit('InsObdStatus', 'description'), 
 				                    validation: { required: false, maxLength: 50 } }			
 			,auView: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('insObdStatus', 'auView'), 
+			                        editable: Application.canTableItemBeEdit('InsObdStatus', 'auView'), 
 				                    validation: { required: true, maxLength: 1 } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insObdStatus', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('InsObdStatus', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insObdStatus', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('InsObdStatus', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,15 +8,10 @@ define(function () {
 	    masterData: 'FE Stammdaten',
 	    pageTitle: 'Zuordnung FE-Anerkennung zu einem FE-Prüfort',
 		pleaseSelect: 'Bitte auswählen',
-
 		examStationId: 'FE-Prüfort',	
-
 		examRecognitionTypeId: 'zugeordnete FE-Anerkennung ',	
-
 		fromDate: 'Von Datum',	
-
 		toDate: 'Bis Datum',	
-
 	};
 
 	return resources;

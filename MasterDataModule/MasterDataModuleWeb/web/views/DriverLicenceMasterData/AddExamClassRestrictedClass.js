@@ -1,12 +1,12 @@
 define([
 	'base/base-object-add-view',
-    'l!t!DriverLicenceMasterData/ExamClassRestrictedClassRelationships'
-], function (BaseView, TabView) {
+    
+], function (BaseView ) {
     'use strict';
 
     var view = BaseView.extend({
 
-        tabView: TabView,
+        
         tableName: 'ExamClassRestrictedClass',
         actionUrl: '#ExamClassRestrictedClasses',
 

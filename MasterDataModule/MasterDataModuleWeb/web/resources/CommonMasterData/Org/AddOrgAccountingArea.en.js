@@ -1,4 +1,3 @@
-
 define(function () {
 	'use strict';
 
@@ -9,15 +8,10 @@ define(function () {
 	    masterData: 'Common masterdata',
 	    pageTitle: 'Accounting area',
 		pleaseSelect: 'Please select',
-
 		accountingArea: 'Number',	
-
 		maxOrderSum: 'Max order sum',	
-
 		fromDate: 'From date',	
-
 		toDate: 'To date',	
-
 	};
 
 	return resources;

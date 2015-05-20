@@ -6,19 +6,19 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,postCode: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('sysPostCode', 'postCode'), 
+			                        editable: Application.canTableItemBeEdit('SysPostCode', 'postCode'), 
 				                    validation: { required: true, maxLength: 10 } }			
 			,city: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('sysPostCode', 'city'), 
+			                        editable: Application.canTableItemBeEdit('SysPostCode', 'city'), 
 				                    validation: { required: false, maxLength: 50 } }			
 			,street: { type: "string", 
-			                        editable: Application.canTableItemBeEdit('sysPostCode', 'street'), 
+			                        editable: Application.canTableItemBeEdit('SysPostCode', 'street'), 
 				                    validation: { required: false, maxLength: 50 } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('sysPostCode', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('SysPostCode', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('sysPostCode', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('SysPostCode', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {

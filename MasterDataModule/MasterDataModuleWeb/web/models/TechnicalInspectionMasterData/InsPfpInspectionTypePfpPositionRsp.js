@@ -6,16 +6,16 @@ define(function () {
 		fields: {
 			id: { type: "number", editable: false }
 			,insPfpPositionId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('insPfpInspectionTypePfpPositionRsp', 'insPfpPositionId'), 
+			                        editable: Application.canTableItemBeEdit('InsPfpInspectionTypePfpPositionRsp', 'insPfpPositionId'), 
 				                    validation: { required: true } }			
 			,insPfpInspectionTypeId: { type: "number", 
-			                        editable: Application.canTableItemBeEdit('insPfpInspectionTypePfpPositionRsp', 'insPfpInspectionTypeId'), 
+			                        editable: Application.canTableItemBeEdit('InsPfpInspectionTypePfpPositionRsp', 'insPfpInspectionTypeId'), 
 				                    validation: { required: true } }			
 			,fromDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insPfpInspectionTypePfpPositionRsp', 'fromDate'), 
+			                        editable: Application.canTableItemBeEdit('InsPfpInspectionTypePfpPositionRsp', 'fromDate'), 
 				                    validation: { required: true, date: true } }			
 			,toDate: { type: "date", 
-			                        editable: Application.canTableItemBeEdit('insPfpInspectionTypePfpPositionRsp', 'toDate'), 
+			                        editable: Application.canTableItemBeEdit('InsPfpInspectionTypePfpPositionRsp', 'toDate'), 
 				                    validation: { required: true, date: true } }			
 		},
 		defaults: function () {
