@@ -78,7 +78,8 @@ namespace MonitoringAgent.Services.Common.Base
                 List<MasterDataNotifications> serviceNotifications;
                 allNotifications.TryGetValue(service.Id, out serviceNotifications);
                 AddService(service, service.Name, service.TimeoutChecking);
-                if (serviceNotifications != null && serviceNotifications.Count > 0)
+                if (serviceNotifications != null && serviceNotifications.Count > 0 &&
+                    !notifications.ContainsKey(service.Name))
                 {
                     notifications.Add(service.Name, serviceNotifications);
                 }
